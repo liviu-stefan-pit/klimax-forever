@@ -1,0 +1,32 @@
+## Interface: 16001
+## Title: Klimax
+## Notes: Relaxed solo leveling guide for WoW Forever (Horde first). Route data is derived from QuestieDB (GPL-3.0); credit to the QuestieDB authors.
+## Version: 0.6.0
+## SavedVariables: KlimaxDB
+## SavedVariablesPerCharacter: KlimaxCharDB
+
+Locale\enUS.lua
+Compat.lua
+Data\Zones.lua
+Routes\Horde\Index.lua
+Routes\Horde\horde_durotar_01-05.lua
+Routes\Horde\horde_durotar_05-10.lua
+Routes\Horde\horde_horde_10-15.lua
+Routes\Horde\horde_horde_15-20.lua
+Routes\Horde\horde_horde_20-25.lua
+Routes\Horde\horde_horde_25-30.lua
+Routes\Horde\horde_horde_30-35.lua
+Routes\Horde\horde_horde_35-40a.lua
+Routes\Horde\horde_horde_35-40b.lua
+Routes\Horde\horde_horde_40-45a.lua
+Routes\Horde\horde_mulgore_01-05.lua
+Routes\Horde\horde_mulgore_05-10.lua
+Routes\Horde\horde_tirisfal_01-05.lua
+Routes\Horde\horde_tirisfal_05-10.lua
+Routes\Horde\horde_tirisfal_10-15.lua
+Routes\Horde\horde_zephras_01-05.lua
+Routes\Horde\horde_zephras_05-10.lua
+Routes\Horde\horde_zephras_10-15.lua
+Core.lua
+Engine.lua
+Sync.lua

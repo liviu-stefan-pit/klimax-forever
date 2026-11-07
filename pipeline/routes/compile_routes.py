@@ -112,6 +112,17 @@ def db_header(db: dict[str, str]) -> str:
     return f"-- QuestieDB {db.get('questieDbVersion', '?')} (commit {db.get('buildCommit', '?')})"
 
 
+def prerequisite_ids(quest_id: int, world: World) -> dict[str, list[int]]:
+    """Return ``{"all": [...], "any": [...]}`` for a quest, as sorted positive ids."""
+    row = world.quests.get(quest_id, {})
+    own = {quest_id, *(int(x) for x in row.get("exclusiveTo", []) or [])}
+
+    def clean(ids: list[Any] | None) -> list[int]:
+        return sorted({int(x) for x in ids or [] if int(x) > 0 and int(x) not in own})
+
+    return {"all": clean(row.get("preQuestGroup")), "any": clean(row.get("preQuestSingle"))}
+
+
 def compile_step(
     route: dict[str, Any], step: dict[str, Any], world: World, ui_maps: dict[str, int],
     used: dict[str, int],
@@ -137,6 +148,14 @@ def compile_step(
         parts.append(f"cl={lua_list(sorted(step['classes']))}")
     if "races" in step:
         parts.append(f"ra={lua_list(sorted(step['races']))}")
+    if step["type"] == "ACCEPT" and "quest" in step:
+        # Prerequisites for the engine's skip cascade (phase 06). Self and exclusive ids are not
+        # real prerequisites, and negative ids are not handled yet (see PROGRESS.md), so drop them.
+        prereqs = prerequisite_ids(step["quest"], world)
+        if prereqs["all"]:
+            parts.append(f"pa={lua_list(prereqs['all'])}")
+        if prereqs["any"]:
+            parts.append(f"po={lua_list(prereqs['any'])}")
     if "minLevel" in step:
         parts.append(f"ml={step['minLevel']}")
     if step.get("bagCheck"):

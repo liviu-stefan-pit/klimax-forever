@@ -50,6 +50,8 @@ read_globals = {
     "hooksecurefunc", "InterfaceOptionsFrame_OpenToCategory", "Settings",
     -- events and frames for the step engine
     "C_Timer",
+    -- phase 06 compatibility wrappers (Klimax/Compat.lua)
+    "IsQuestFlaggedCompleted", "C_AddOns", "GetAddOnMetadata",
 }
 
 -- Files that are generated or vendored are not linted.

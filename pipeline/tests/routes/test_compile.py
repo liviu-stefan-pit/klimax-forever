@@ -152,3 +152,15 @@ def test_index_maps_quests_and_branch_starts(tmp_path: Path) -> None:
     index = result.files[addon / "Routes" / "Horde" / "Index.lua"]
     assert 'durotar = "horde_durotar_01-05"' in index
     assert '[1] = {"horde_durotar_01-05"}' in index
+
+
+def test_prerequisite_ids_drop_self_exclusive_and_negative_ids() -> None:
+    from types import SimpleNamespace
+
+    from pipeline.routes.compile_routes import prerequisite_ids
+
+    world = SimpleNamespace(quests={
+        10: {"preQuestGroup": [5, -4962, 5], "preQuestSingle": [10, 11, 12], "exclusiveTo": [12]},
+    })
+    assert prerequisite_ids(10, world) == {"all": [5], "any": [11]}
+    assert prerequisite_ids(99, world) == {"all": [], "any": []}
