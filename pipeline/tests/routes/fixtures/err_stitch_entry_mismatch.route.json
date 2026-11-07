@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "faction": "horde",
+  "branch": "durotar",
+  "band": [
+    5,
+    10
+  ],
+  "id": "horde_durotar_05-10",
+  "entry": {
+    "zone": "The Barrens",
+    "x": 52.0,
+    "y": 30.0,
+    "hub": "The Crossroads",
+    "level": 7
+  },
+  "exitPoint": {
+    "zone": "The Barrens",
+    "x": 52.0,
+    "y": 30.0,
+    "hub": "The Crossroads",
+    "level": 10
+  },
+  "db": {
+    "questieDbVersion": "1.0.11",
+    "buildCommit": "abc123"
+  },
+  "steps": [
+    {
+      "type": "NOTE",
+      "note": "Placeholder band for the stitching test."
+    }
+  ],
+  "dropped": []
+}

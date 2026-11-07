@@ -1,6 +1,6 @@
 """Klimax pipeline entry point: ``python -m pipeline <command>``.
 
-Every subcommand is a stub for now. Each one is implemented in the phase
+Subcommands that are not implemented yet are stubs. Each one is implemented in the phase
 that owns it (see docs/PROGRESS.md).
 """
 
@@ -62,7 +62,69 @@ def build_parser() -> argparse.ArgumentParser:
                 action="store_true",
                 help="print the report from existing band files, without rebuilding",
             )
+        if name == "validate":
+            sub_parser.add_argument(
+                "files",
+                nargs="*",
+                type=Path,
+                help="route (*.route.json) or curation (*.curated.json) files; "
+                "default: every route in --routes-dir",
+            )
+            sub_parser.add_argument(
+                "--stitched",
+                action="store_true",
+                help="also check the whole path: next links, band continuity, entry/exit",
+            )
+            sub_parser.add_argument("--json", action="store_true", help="machine-readable output")
+            sub_parser.add_argument("--no-stats", action="store_true", help="hide the stats block")
+            _add_route_paths(sub_parser)
+        if name == "compile":
+            sub_parser.add_argument("--addon", type=Path, default=Path("Klimax"))
+            sub_parser.add_argument(
+                "--stitched", action="store_true", help="validate with the stitched-path checks"
+            )
+            _add_route_paths(sub_parser)
     return parser
+
+
+def _add_route_paths(sub_parser: argparse.ArgumentParser) -> None:
+    sub_parser.add_argument("--faction", default="horde", help="faction id (default: horde)")
+    sub_parser.add_argument("--raw", type=Path, default=Path("data/raw"), help="data/raw folder")
+    sub_parser.add_argument("--data", type=Path, default=Path("data"), help="data folder")
+    sub_parser.add_argument(
+        "--routes-dir",
+        type=Path,
+        default=None,
+        help="folder with *.route.json (default: routes/<faction>)",
+    )
+
+
+def _run_validate(args: argparse.Namespace) -> int:
+    from pipeline.routes.cli import run_validate
+
+    return run_validate(
+        args.files,
+        stitched=args.stitched,
+        as_json=args.json,
+        faction=args.faction,
+        raw=args.raw,
+        data=args.data,
+        routes_dir=args.routes_dir or Path("routes") / args.faction,
+        show_stats=not args.no_stats,
+    )
+
+
+def _run_compile(args: argparse.Namespace) -> int:
+    from pipeline.routes.cli import run_compile
+
+    return run_compile(
+        faction=args.faction,
+        raw=args.raw,
+        data=args.data,
+        routes_dir=args.routes_dir or Path("routes") / args.faction,
+        addon_dir=args.addon,
+        stitched=args.stitched,
+    )
 
 
 def _run_shape(args: argparse.Namespace) -> int:
@@ -109,6 +171,10 @@ def main(argv: list[str] | None = None) -> int:
         return _run_extract(args.questiedb, args.out)
     if args.command == "shape":
         return _run_shape(args)
+    if args.command == "validate":
+        return _run_validate(args)
+    if args.command == "compile":
+        return _run_compile(args)
     _help, phase = COMMANDS[args.command]
     print(f"'{args.command}' is not implemented yet (phase {phase}).", file=sys.stderr)
     return 2

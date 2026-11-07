@@ -12,6 +12,8 @@ globals = {
     "KlimaxDB",
     "KlimaxCharDB",
     "Klimax_RegisterRoute",
+    "Klimax_RegisterIndex",
+    "Klimax_RegisterZones",
     "SLASH_KLIMAX1",
     "SLASH_KLIMAX2",
     "SlashCmdList",

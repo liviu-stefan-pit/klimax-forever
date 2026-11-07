@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "faction": "horde",
+  "branch": "durotar",
+  "band": [
+    1,
+    5
+  ],
+  "id": "horde_durotar_01-05",
+  "entry": {
+    "zone": "Durotar",
+    "x": 42.4,
+    "y": 68.7,
+    "hub": "Valley of Trials",
+    "level": 1
+  },
+  "exitPoint": {
+    "zone": "Durotar",
+    "x": 51.5,
+    "y": 41.6,
+    "hub": "Razor Hill",
+    "level": 5
+  },
+  "db": {
+    "questieDbVersion": "1.0.11",
+    "buildCommit": "abc123"
+  },
+  "steps": [
+    {
+      "type": "ACCEPT",
+      "quest": 1,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 43.3,
+      "y": 68.5
+    },
+    {
+      "type": "ACCEPT",
+      "quest": 9,
+      "tag": "optional",
+      "zone": "Durotar",
+      "x": 42.1,
+      "y": 68.3
+    },
+    {
+      "type": "TURNIN",
+      "quest": 1,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 42.1,
+      "y": 68.3
+    },
+    {
+      "type": "TRAINER",
+      "zone": "Durotar",
+      "x": 42.4,
+      "y": 69.0,
+      "note": "Visit your class trainer."
+    },
+    {
+      "type": "ACCEPT",
+      "quest": 2,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 42.1,
+      "y": 68.3
+    },
+    {
+      "type": "COMPLETE",
+      "quest": 2,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 44.2,
+      "y": 65.3
+    },
+    {
+      "type": "TURNIN",
+      "quest": 2,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 42.1,
+      "y": 68.3
+    },
+    {
+      "type": "TRAINER",
+      "zone": "Durotar",
+      "x": 42.4,
+      "y": 69.0,
+      "note": "Visit your class trainer."
+    },
+    {
+      "type": "ACCEPT",
+      "quest": 3,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 42.1,
+      "y": 68.3
+    },
+    {
+      "type": "TURNIN",
+      "quest": 3,
+      "tag": "main",
+      "zone": "Durotar",
+      "x": 42.1,
+      "y": 68.3
+    }
+  ],
+  "dropped": [
+    {
+      "quest": 4,
+      "reason": "exclusive with quest 3, which is the better reward"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/liviu-stefan-pit/klimax-forever/pipeline/routes/curated.schema.json",
+  "title": "Klimax curation decisions (PRD 6.2, step A)",
+  "description": "File data/horde/curated/<route id>.curated.json: one decision per quest of the band pack.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "decisions"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "description": "route id this curation feeds, for example horde_durotar_05-10"},
+    "decisions": {"type": "array", "items": {"$ref": "#/$defs/decision"}}
+  },
+  "$defs": {
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quest", "decision", "reason"],
+      "properties": {
+        "quest": {"type": "integer", "minimum": 1},
+        "decision": {"enum": ["main", "optional", "optional-elite", "class", "drop"]},
+        "reason": {"type": "string", "minLength": 3, "maxLength": 200},
+        "keyReward": {"type": "boolean"},
+        "revisitAt": {"type": "integer", "minimum": 1, "maximum": 60}
+      },
+      "allOf": [
+        {
+          "if": {"required": ["revisitAt"]},
+          "then": {"properties": {"decision": {"const": "optional-elite"}}}
+        }
+      ]
+    }
+  }
+}

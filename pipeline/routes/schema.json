@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/liviu-stefan-pit/klimax-forever/pipeline/routes/schema.json",
+  "title": "Klimax route (PRD 6.5)",
+  "description": "One band of a leveling route. The JSON is the source of truth; Lua is compiled from it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "faction", "branch", "band", "id", "entry", "exitPoint", "db", "steps", "dropped"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "faction": {"enum": ["horde", "alliance"]},
+    "branch": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$", "description": "durotar | mulgore | tirisfal | zephras | horde (shared track)"},
+    "band": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"type": "integer", "minimum": 1, "maximum": 60},
+      "description": "[lo, hi] level range; hi must be greater than lo"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+_[a-z0-9]+_[0-9]{2}-[0-9]{2}[a-z]?$",
+      "description": "<faction>_<branch>_<lo>-<hi>[part], for example horde_durotar_05-10 or horde_horde_40-45a"
+    },
+    "next": {"type": ["string", "null"], "description": "id of the route that follows this one (stitching)"},
+    "entry": {"$ref": "#/$defs/place"},
+    "exitPoint": {"$ref": "#/$defs/place"},
+    "db": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questieDbVersion", "buildCommit"],
+      "properties": {
+        "questieDbVersion": {"type": "string", "minLength": 1},
+        "buildCommit": {"type": "string", "minLength": 1}
+      }
+    },
+    "sample": {"type": "boolean", "description": "true for a hand-made toolchain sample; later phases replace it"},
+    "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}},
+    "dropped": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["quest", "reason"],
+        "properties": {
+          "quest": {"type": "integer", "minimum": 1},
+          "reason": {"type": "string", "minLength": 3, "maxLength": 200}
+        }
+      }
+    },
+    "_review": {"$ref": "#/$defs/review"}
+  },
+  "$defs": {
+    "review": {
+      "description": "Free-text justification for a warning the author accepted.",
+      "oneOf": [
+        {"type": "string"},
+        {"type": "array", "items": {"type": "string"}}
+      ]
+    },
+    "place": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["zone", "x", "y", "level"],
+      "properties": {
+        "zone": {"type": "string", "minLength": 1},
+        "x": {"type": "number", "minimum": 0, "maximum": 100},
+        "y": {"type": "number", "minimum": 0, "maximum": 100},
+        "hub": {"type": "string", "minLength": 1},
+        "level": {"type": "integer", "minimum": 1, "maximum": 60}
+      }
+    },
+    "class": {
+      "enum": ["WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID"]
+    },
+    "race": {
+      "enum": ["Human", "Dwarf", "NightElf", "Gnome", "Orc", "Undead", "Tauren", "Troll"]
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": [
+            "ACCEPT", "COMPLETE", "TURNIN", "TRAVEL", "FLY", "FP_DISCOVER",
+            "HEARTH_BIND", "HEARTH_USE", "BUY", "TRAINER", "VENDOR_REPAIR", "NOTE"
+          ]
+        },
+        "quest": {"type": "integer", "minimum": 1},
+        "title": {"type": "string", "minLength": 1},
+        "tag": {"enum": ["main", "optional", "optional-elite"]},
+        "zone": {"type": "string", "minLength": 1},
+        "x": {"type": "number", "minimum": 0, "maximum": 100},
+        "y": {"type": "number", "minimum": 0, "maximum": 100},
+        "npc": {"type": "integer", "minimum": 1, "description": "optional NPC id; checked against the DB and the coordinates"},
+        "to": {"type": "string", "minLength": 1, "description": "destination name for TRAVEL / FLY"},
+        "note": {"type": "string", "minLength": 1, "maxLength": 140},
+        "classes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/class"}},
+        "races": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/race"}},
+        "minLevel": {"type": "integer", "minimum": 1, "maximum": 60},
+        "bagCheck": {"type": "boolean"},
+        "reward": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["preferItem", "why"],
+          "properties": {
+            "preferItem": {"type": "integer", "minimum": 1},
+            "why": {"type": "string", "minLength": 3, "maxLength": 140}
+          }
+        },
+        "revisitAt": {"type": "integer", "minimum": 1, "maximum": 60},
+        "objectiveIndex": {"type": "integer", "minimum": 1},
+        "_review": {"$ref": "#/$defs/review"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"type": {"enum": ["ACCEPT", "COMPLETE", "TURNIN"]}}},
+          "then": {"required": ["quest", "tag"]},
+          "else": {"not": {"anyOf": [{"required": ["quest"]}, {"required": ["tag"]}, {"required": ["objectiveIndex"]}]}}
+        },
+        {
+          "if": {"properties": {"type": {"enum": ["ACCEPT", "TURNIN"]}}},
+          "then": {"not": {"required": ["objectiveIndex"]}}
+        },
+        {
+          "if": {"properties": {"type": {"enum": ["ACCEPT", "TURNIN", "FP_DISCOVER", "HEARTH_BIND", "BUY", "TRAINER", "VENDOR_REPAIR"]}}},
+          "then": {"required": ["zone", "x", "y"]}
+        },
+        {
+          "if": {"properties": {"type": {"enum": ["TRAVEL", "FLY", "HEARTH_USE", "NOTE", "BUY"]}}},
+          "then": {"required": ["note"]}
+        },
+        {
+          "dependentRequired": {"x": ["zone", "y"], "y": ["zone", "x"]}
+        }
+      ]
+    }
+  }
+}

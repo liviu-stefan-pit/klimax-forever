@@ -31,6 +31,9 @@ packages = [
     "pipeline.routes",
 ]
 
+[tool.setuptools.package-data]
+"pipeline.routes" = ["*.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["pipeline/tests"]
 pythonpath = ["."]

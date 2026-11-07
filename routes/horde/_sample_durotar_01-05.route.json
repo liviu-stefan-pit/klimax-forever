@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "faction": "horde",
+  "branch": "durotar",
+  "band": [1, 5],
+  "id": "horde_durotar_01-05",
+  "next": "horde_durotar_05-10",
+  "sample": true,
+  "entry": {"zone": "Durotar", "x": 42.4, "y": 68.7, "hub": "Valley of Trials", "level": 1},
+  "exitPoint": {"zone": "Durotar", "x": 51.5, "y": 41.6, "hub": "Razor Hill", "level": 5},
+  "db": {
+    "questieDbVersion": "1.0.11",
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95"
+  },
+  "steps": [
+    {
+      "type": "NOTE",
+      "note": "Sample route: a short route to prove the toolchain. Phase 04 replaces it."
+    },
+    {
+      "type": "ACCEPT", "quest": 4641, "title": "Your Place In The World", "tag": "main",
+      "zone": "Durotar", "x": 43.3, "y": 68.5,
+      "note": "Kaltunk stands at the Valley of Trials entrance. Say hello and take the quest."
+    },
+    {
+      "type": "TURNIN", "quest": 4641, "title": "Your Place In The World", "tag": "main",
+      "zone": "Durotar", "x": 42.1, "y": 68.3,
+      "note": "Gornek is just inside the Den, a few steps away."
+    },
+    {
+      "type": "ACCEPT", "quest": 788, "title": "Cutting Teeth", "tag": "main",
+      "zone": "Durotar", "x": 42.1, "y": 68.3
+    },
+    {
+      "type": "COMPLETE", "quest": 788, "tag": "main",
+      "zone": "Durotar", "x": 44.2, "y": 65.3,
+      "note": "Mottled Boars roam just north-east of the Den. Easy first kills."
+    },
+    {
+      "type": "TURNIN", "quest": 788, "title": "Cutting Teeth", "tag": "main",
+      "zone": "Durotar", "x": 42.1, "y": 68.3
+    },
+    {
+      "type": "ACCEPT", "quest": 789, "title": "Sting of the Scorpid", "tag": "main",
+      "zone": "Durotar", "x": 42.1, "y": 68.3
+    },
+    {
+      "type": "ACCEPT", "quest": 4402, "title": "Galgar's Cactus Apple Surprise", "tag": "optional",
+      "zone": "Durotar", "x": 42.7, "y": 67.2,
+      "note": "Galgar's cooking stall is next to the Den. Same area as the scorpids."
+    },
+    {
+      "type": "ACCEPT", "quest": 790, "title": "Sarkoth", "tag": "main",
+      "zone": "Durotar", "x": 40.6, "y": 62.6, "bagCheck": true,
+      "note": "Hana'zua is north-west of the Den. Take this before the scorpid hunt."
+    },
+    {
+      "type": "COMPLETE", "quest": 789, "tag": "main",
+      "zone": "Durotar", "x": 42.6, "y": 63.6,
+      "note": "Scorpid Workers cover the hills here. Sarkoth himself lurks to the south-west."
+    },
+    {
+      "type": "COMPLETE", "quest": 4402, "tag": "optional",
+      "zone": "Durotar", "x": 43.7, "y": 63.0,
+      "note": "Cactus Apples grow on the cactuses in the same hills."
+    },
+    {
+      "type": "COMPLETE", "quest": 790, "tag": "main",
+      "zone": "Durotar", "x": 40.5, "y": 66.8,
+      "note": "Sarkoth is a little tougher than the others. Take your time."
+    },
+    {
+      "type": "TURNIN", "quest": 790, "title": "Sarkoth", "tag": "main",
+      "zone": "Durotar", "x": 40.6, "y": 62.6
+    },
+    {
+      "type": "ACCEPT", "quest": 804, "title": "Sarkoth", "tag": "main",
+      "zone": "Durotar", "x": 40.6, "y": 62.6
+    },
+    {
+      "type": "TURNIN", "quest": 4402, "title": "Galgar's Cactus Apple Surprise", "tag": "optional",
+      "zone": "Durotar", "x": 42.7, "y": 67.2
+    },
+    {
+      "type": "TURNIN", "quest": 789, "title": "Sting of the Scorpid", "tag": "main",
+      "zone": "Durotar", "x": 42.1, "y": 68.3
+    },
+    {
+      "type": "TURNIN", "quest": 804, "title": "Sarkoth", "tag": "main",
+      "zone": "Durotar", "x": 42.1, "y": 68.3,
+      "note": "Hand it to Gornek, then leave the Valley for Razor Hill."
+    },
+    {
+      "type": "TRAVEL", "to": "Razor Hill", "zone": "Durotar", "x": 51.5, "y": 41.6,
+      "note": "Follow the road north out of the Valley of Trials to Razor Hill."
+    },
+    {
+      "type": "HEARTH_BIND", "npc": 6928, "zone": "Durotar", "x": 51.5, "y": 41.6,
+      "note": "Make Razor Hill your home at Innkeeper Grosk."
+    }
+  ],
+  "dropped": []
+}
