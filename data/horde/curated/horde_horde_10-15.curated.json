@@ -1,0 +1,1043 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 27,
+      "reason": "Tauren druid Moonglade chain. Starts at level 16 and needs Moonglade trips."
+    },
+    {
+      "decision": "drop",
+      "quest": 28,
+      "reason": "Tauren druid Moonglade trial; requires level 16."
+    },
+    {
+      "decision": "drop",
+      "quest": 30,
+      "reason": "Tauren druid Moonglade trial; requires level 16."
+    },
+    {
+      "decision": "drop",
+      "quest": 31,
+      "reason": "Aquatic Form: level 16 and Moonglade trials."
+    },
+    {
+      "decision": "drop",
+      "quest": 103,
+      "reason": "Keeper of the Flame: Westfall lighthouse, far from this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 136,
+      "reason": "Captain Sanders' treasure hunt in Westfall; far from the path."
+    },
+    {
+      "decision": "drop",
+      "quest": 138,
+      "reason": "Captain Sanders' treasure hunt in Westfall; far from the path."
+    },
+    {
+      "decision": "drop",
+      "quest": 139,
+      "reason": "Captain Sanders' treasure hunt in Westfall; far from the path."
+    },
+    {
+      "decision": "drop",
+      "quest": 140,
+      "reason": "Captain Sanders' treasure hunt in Westfall; far from the path."
+    },
+    {
+      "decision": "drop",
+      "quest": 743,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 744,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 745,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 746,
+      "reason": "Dwarven Digging: no DB source for the Prospector's Picks; cannot place honestly."
+    },
+    {
+      "decision": "optional",
+      "quest": 749,
+      "reason": "The Ravaged Caravan: Venture Co. documents from the Mulgore crate. Prerequisite for 765; Orc/Troll only."
+    },
+    {
+      "decision": "optional",
+      "quest": 751,
+      "reason": "The Ravaged Caravan: return the documents to Morin. Prerequisite for 765; Orc/Troll only."
+    },
+    {
+      "decision": "drop",
+      "quest": 758,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 759,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 760,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 764,
+      "reason": "Venture Co. kills for Morin in Mulgore. Not on the Orc/Troll path; 765 needs only 751."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 765,
+      "reason": "Supervisor Fizsprocket: lvl 12 elite-level job in the Venture Co. mine. Handed over from horde_mulgore_05-10. Revisit at 15.",
+      "revisitAt": 15
+    },
+    {
+      "decision": "drop",
+      "quest": 766,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 768,
+      "reason": "Gathering Leather: profession-gated (Skinning)."
+    },
+    {
+      "decision": "drop",
+      "quest": 769,
+      "reason": "Kodo Hide Bag: profession-gated (Leatherworking)."
+    },
+    {
+      "decision": "drop",
+      "quest": 770,
+      "reason": "The Demon Scarred Cloak: no objective rows and no placeable drop NPC."
+    },
+    {
+      "decision": "drop",
+      "quest": 773,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 775,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 776,
+      "reason": "Needs 775, the Tauren Mulgore chain. Horn of Arra'chea is in Mulgore; Orc/Troll skip it."
+    },
+    {
+      "decision": "drop",
+      "quest": 786,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 806,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 808,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "main",
+      "quest": 809,
+      "reason": "Ak'Zeloth lead from Neeru Fireblade in Orgrimmar: 455 XP. Orc and Troll only (needs 829)."
+    },
+    {
+      "decision": "drop",
+      "quest": 812,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 813,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 815,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 816,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 817,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "main",
+      "quest": 819,
+      "reason": "Chen's Empty Keg chain head (item start). Brewmaster Drohn in Ratchet; 1050 XP, unlocks 821."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 821,
+      "reason": "Chen's Empty Keg: the Thunder Lizard horn is lvl 18-24. Skip the horn until 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 825,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 826,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 827,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 828,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 829,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 832,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 833,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 834,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 835,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 837,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 840,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 842,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 844,
+      "reason": "Done by Orc/Troll in horde_durotar_05-10. Exclusive with 854 and 861, which the Tauren band took."
+    },
+    {
+      "decision": "main",
+      "quest": 845,
+      "reason": "The Zhevra: 910 XP at the Crossroads. Needs 844 from the Durotar band, so Orc and Troll only."
+    },
+    {
+      "decision": "main",
+      "quest": 848,
+      "reason": "Fungal Spores for Apothecary Helbrim at the Crossroads: 1050 XP, next to the hub."
+    },
+    {
+      "decision": "main",
+      "quest": 850,
+      "reason": "Barak's Head (Kolkar leader, lvl 16) for Regthar Deathgate. 880 XP; done late, at 14-15."
+    },
+    {
+      "decision": "main",
+      "quest": 853,
+      "reason": "Apothecary Zamah in Thunder Bluff, with a time limit. 800 XP; done on the Thunder Bluff visit."
+    },
+    {
+      "decision": "drop",
+      "quest": 854,
+      "reason": "Tauren escort, done in horde_mulgore_05-10. Exclusive with 844."
+    },
+    {
+      "decision": "main",
+      "quest": 855,
+      "reason": "Centaur Bracers for Regthar Deathgate: 1250 XP on the west plains."
+    },
+    {
+      "decision": "drop",
+      "quest": 860,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 861,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 866,
+      "reason": "Root Samples requires Herbalism (requiredSkill 182): profession-gated."
+    },
+    {
+      "decision": "main",
+      "quest": 867,
+      "reason": "Witchwing Talons for Darsok at the Crossroads: 1050 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 869,
+      "reason": "Raptor Thieves for Gazrog at the Crossroads: 910 XP, raptors next to the hub."
+    },
+    {
+      "decision": "main",
+      "quest": 870,
+      "reason": "The Forgotten Pools: explore trigger at (45,22). Chain head for 877 and 880. 680 XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 871,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "main",
+      "quest": 872,
+      "reason": "The Disruption Ends for Thork: 1050 XP in the Razormane camp, after 871."
+    },
+    {
+      "decision": "main",
+      "quest": 875,
+      "reason": "Harpy Lieutenants for Darsok: 1150 XP. Harpy lvl 16-17; done late, at 14-15."
+    },
+    {
+      "decision": "main",
+      "quest": 877,
+      "reason": "The Stagnant Oasis for Tonga: 1150 XP, the fissure is south-east of the Crossroads."
+    },
+    {
+      "decision": "main",
+      "quest": 880,
+      "reason": "Altered Beings for Tonga: 1150 XP, Snapjaws at (47,40) and (56,43)."
+    },
+    {
+      "decision": "main",
+      "quest": 881,
+      "reason": "Echeyakee for Sergra: 1450 XP. Hide from a lvl 16 mob; done late, at 14-15. Orc/Troll only."
+    },
+    {
+      "decision": "drop",
+      "quest": 886,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "main",
+      "quest": 887,
+      "reason": "Southsea Freebooters for Gazlowe in Ratchet: 740 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 888,
+      "reason": "Stolen Booty for Gazlowe: 1150 XP, after the 890/892 ledger chain."
+    },
+    {
+      "decision": "main",
+      "quest": 890,
+      "reason": "The Missing Shipment (ledger to Dizzywig): 100 XP, chain link for 888."
+    },
+    {
+      "decision": "main",
+      "quest": 892,
+      "reason": "The Missing Shipment (ledger back to Gazlowe): 100 XP, chain link for 888."
+    },
+    {
+      "decision": "main",
+      "quest": 894,
+      "reason": "Samophlange, first valve task at the control console north of Ratchet: 740 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 895,
+      "reason": "WANTED: Baron Longshore (lvl 16 head) for Gazlowe: 1150 XP. Done late, at 14-15."
+    },
+    {
+      "decision": "main",
+      "quest": 900,
+      "reason": "Samophlange: close the valves at the console (north Barrens): 490 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 901,
+      "reason": "Samophlange: console key from Tinkerer Sniggles: 740 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 902,
+      "reason": "Samophlange: return to Sputtervalve in Ratchet: 1150 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 903,
+      "reason": "Prowlers of the Barrens for Sergra: 1050 XP. Orc and Troll only (needs 845)."
+    },
+    {
+      "decision": "main",
+      "quest": 905,
+      "reason": "The Angry Scytheclaws for Sergra: 1250 XP at the raptor nests. Orc and Troll only."
+    },
+    {
+      "decision": "main",
+      "quest": 924,
+      "reason": "The Demon Seed for Ak'Zeloth: 1250 XP. Orc and Troll only (needs 809)."
+    },
+    {
+      "decision": "main",
+      "quest": 926,
+      "reason": "Flawed Power Stone: child quest of 924, from the Ak'Zeloth stone spot. Orc and Troll only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1061,
+      "reason": "Stonetalon breadcrumb; Stonetalon is outside this band."
+    },
+    {
+      "decision": "drop",
+      "quest": 1464,
+      "reason": "Fire Sapta: Shaman chain needs 1525, which is blocked."
+    },
+    {
+      "decision": "optional-elite",
+      "keyReward": true,
+      "quest": 1486,
+      "reason": "Deviate Hides for Nalpak (Wailing Caverns): elite, bag reward. Never dropped. Revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "optional",
+      "quest": 1489,
+      "reason": "Hamuul Runetotem: talk in Thunder Bluff on the Tauren visit. Dungeon-flagged talk only."
+    },
+    {
+      "decision": "optional",
+      "quest": 1490,
+      "reason": "Nara Wildmane: talk-only follow-up of 1489 in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 1492,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1498,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1501,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 1502,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1503,
+      "reason": "Done in both start bands (horde_durotar_05-10 and horde_mulgore_05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1504,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 1505,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 1506,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 1522,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 1523,
+      "reason": "Call of Fire breadcrumb; exclusive with the Shaman route through 1522."
+    },
+    {
+      "decision": "class",
+      "quest": 1524,
+      "reason": "Call of Fire part 2 (Shaman, Telf Joolam in Durotar). Handed over from the Durotar and Mulgore bands. Optional."
+    },
+    {
+      "decision": "drop",
+      "quest": 1525,
+      "reason": "Fire Tar needs lvl 23 Razormane Seers and a Reagent Pouch in zone 38. Chain stops here; data gap."
+    },
+    {
+      "decision": "drop",
+      "quest": 1526,
+      "reason": "Call of Fire: needs 1525, which is blocked by lvl 23 mobs."
+    },
+    {
+      "decision": "drop",
+      "quest": 1527,
+      "reason": "Call of Fire: needs 1526, which is blocked by 1525."
+    },
+    {
+      "decision": "drop",
+      "quest": 1858,
+      "reason": "Orc/Troll rogue chain: turn-ins need two Orgrimmar trips around lvl 13 Tazan in the Barrens."
+    },
+    {
+      "decision": "drop",
+      "quest": 1859,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 1883,
+      "reason": "Mage-only chain: pick up in Orgrimmar, hand in at Sen'jin. Long backtrack for one class."
+    },
+    {
+      "decision": "drop",
+      "quest": 1884,
+      "reason": "Mage-only Ju-Ju Heaps in Sen'jin. Dropped with 1883."
+    },
+    {
+      "decision": "drop",
+      "quest": 1963,
+      "reason": "Orc/Troll rogue chain: Tazan in the Barrens and turn-in in Orgrimmar. Not worth two trips."
+    },
+    {
+      "decision": "drop",
+      "quest": 2379,
+      "reason": "Rogue chain at level 16."
+    },
+    {
+      "decision": "drop",
+      "quest": 2380,
+      "reason": "Rogue chain at level 16."
+    },
+    {
+      "decision": "drop",
+      "quest": 2382,
+      "reason": "Rogue chain at level 16."
+    },
+    {
+      "decision": "drop",
+      "quest": 2983,
+      "reason": "Swart's Call of Fire breadcrumb: exclusive with 1522, which the Orc/Troll Shamans took."
+    },
+    {
+      "decision": "drop",
+      "quest": 2984,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 3741,
+      "reason": "Hilary's Necklace in Redridge; far from this band's path."
+    },
+    {
+      "decision": "main",
+      "quest": 3921,
+      "reason": "Wenikee Boltbucket broken Samophlange: 490 XP, after the console chain."
+    },
+    {
+      "decision": "main",
+      "quest": 3922,
+      "reason": "Nugget Slugs for Wenikee: 1050 XP in the north Barrens."
+    },
+    {
+      "decision": "main",
+      "quest": 5041,
+      "reason": "Crossroads' Supplies for Thork: 980 XP, supply crates near the hub."
+    },
+    {
+      "decision": "drop",
+      "quest": 5652,
+      "reason": "Hex of Weakness: exclusive Troll priest variants at 210 XP each; Ur'kyo is in Orgrimmar."
+    },
+    {
+      "decision": "drop",
+      "quest": 5654,
+      "reason": "Hex of Weakness variant (exclusive alternatives); see 5652."
+    },
+    {
+      "decision": "drop",
+      "quest": 5655,
+      "reason": "Hex of Weakness variant (exclusive alternatives); see 5652."
+    },
+    {
+      "decision": "drop",
+      "quest": 5656,
+      "reason": "Hex of Weakness variant (exclusive alternatives); see 5652."
+    },
+    {
+      "decision": "drop",
+      "quest": 5657,
+      "reason": "Hex of Weakness variant (exclusive alternatives); see 5652."
+    },
+    {
+      "decision": "drop",
+      "quest": 5722,
+      "reason": "Ragefire Chasm dungeon chain (Rahauro); dungeon quests are notes only."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5723,
+      "reason": "Testing an Enemy's Strength: Ragefire Chasm elites (lvl 13-15), dungeon. Never dropped. Revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 5724,
+      "reason": "Ragefire Chasm dungeon chain; needs 5722."
+    },
+    {
+      "decision": "drop",
+      "quest": 5726,
+      "reason": "Hidden Enemies start, done by Orc/Troll in horde_durotar_05-10. Orc/Troll-only chain continues in 5728."
+    },
+    {
+      "decision": "drop",
+      "quest": 5727,
+      "reason": "Hidden Enemies, done by Orc/Troll in horde_durotar_05-10. Chain continues in 5728 for Orc/Troll."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5728,
+      "reason": "Hidden Enemies: Bazzalan and Jergosh, lvl 16 elites. Never dropped. Orc and Troll; revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5729,
+      "reason": "Hidden Enemies: speak to Neeru after 5728. Revisit at 18 with 5728.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5730,
+      "reason": "Hidden Enemies: the Orgrimmaril weapons (il18) are a real upgrade. Revisit at 18 with 5728.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 5761,
+      "reason": "Ragefire Chasm dungeon (Slaying the Beast): dungeon quest."
+    },
+    {
+      "decision": "drop",
+      "quest": 5922,
+      "reason": "Tauren druid Moonglade teleport chain; not on this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 5926,
+      "reason": "Heeding the Call, Tauren druid Moonglade chain; not on this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 5927,
+      "reason": "Heeding the Call, Tauren druid Moonglade chain; not on this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 5928,
+      "reason": "Heeding the Call, Tauren druid Moonglade chain; not on this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 5930,
+      "reason": "Great Bear Spirit: Moonglade druid chain, not on this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 5932,
+      "reason": "Tauren druid Moonglade chain; needs 5930 in Moonglade."
+    },
+    {
+      "decision": "drop",
+      "quest": 6002,
+      "reason": "Body and Heart: Moonglade druid chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 6061,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6062,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6065,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6066,
+      "reason": "Hunter's Path variant from another city, exclusive with 6065."
+    },
+    {
+      "decision": "drop",
+      "quest": 6067,
+      "reason": "Hunter's Path variant from another city, exclusive with 6065."
+    },
+    {
+      "decision": "drop",
+      "quest": 6068,
+      "reason": "Hunter's Path breadcrumb (Orgrimmar start, 85 XP): not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 6069,
+      "reason": "Hunter's Path breadcrumb (Sen'jin start, 85 XP): not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 6070,
+      "reason": "Hunter's Path breadcrumb (Thunder Bluff start, 85 XP): not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 6081,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6082,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6083,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6087,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6088,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6089,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6126,
+      "reason": "Tauren druid Moonglade chain (Lessons Anew): travel to Moonglade."
+    },
+    {
+      "decision": "drop",
+      "quest": 6127,
+      "reason": "Tauren druid Moonglade chain: Dreadmist Peak water sample and Moonglade."
+    },
+    {
+      "decision": "drop",
+      "quest": 6128,
+      "reason": "Tauren druid Barrens chain; its prerequisite 6127 needs Moonglade."
+    },
+    {
+      "decision": "drop",
+      "quest": 6129,
+      "reason": "Tauren druid chain; its prerequisite 6128 needs Moonglade."
+    },
+    {
+      "decision": "drop",
+      "quest": 6130,
+      "reason": "Tauren druid chain that follows the Moonglade trips."
+    },
+    {
+      "decision": "drop",
+      "quest": 6361,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6362,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6363,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6364,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6365,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6384,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6385,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6386,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 8803,
+      "reason": "A Festive Gift: holiday item, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 9263,
+      "reason": "Scourge investigation: objectives in zones 12 and 215. Data gap."
+    },
+    {
+      "decision": "drop",
+      "quest": 9264,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 76156,
+      "reason": "Stalk With The Earthmother: item errands with no XP rows."
+    },
+    {
+      "decision": "drop",
+      "quest": 76160,
+      "reason": "Stalk With The Earthmother: item errands with no XP rows."
+    },
+    {
+      "decision": "drop",
+      "quest": 76240,
+      "reason": "Stalk With The Earthmother: item errands with no XP rows."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 93739,
+      "reason": "Talk tour of the Horde leaders; elite flag is a heuristic false positive (talk-only). Optional tail block.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 94911,
+      "reason": "Forever druid side quest (Child of Nature): no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 94913,
+      "reason": "Forever druid teleport quest: no XP row."
+    },
+    {
+      "decision": "optional",
+      "quest": 95350,
+      "reason": "Forever intro that starts at the Mulgore zeppelin and unlocks 93739; Zephra's Isle arrivals only."
+    },
+    {
+      "decision": "drop",
+      "quest": 96873,
+      "reason": "Profession quest (Enchanting): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 96874,
+      "reason": "Profession quest (Blacksmithing): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 96875,
+      "reason": "Profession quest (Leatherworking): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 96876,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 96877,
+      "reason": "Halikor's Hoof: elite lead for the Kamari profession chain; profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 97223,
+      "reason": "Bloodtalon Matriarch eggs: one lvl 9 spawn, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 97225,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 97242,
+      "reason": "Forever Orgrimmar cooking errand: no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 97246,
+      "reason": "Forever Orgrimmar errand: no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 97249,
+      "reason": "Forever Orgrimmar errand: no XP row."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 97253,
+      "reason": "Parts and Pieces for Wrenix: the Scuffed Shipping Crate is a bag reward. Keep it."
+    },
+    {
+      "decision": "drop",
+      "quest": 97275,
+      "reason": "Forever Orgrimmar errand: no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 97281,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 97282,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    },
+    {
+      "decision": "drop",
+      "quest": 97326,
+      "reason": "Forever Orgrimmar errand (Friendship bracers): no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 97485,
+      "reason": "Traditions of the Bluff: vendor purchases for a junk reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 98024,
+      "reason": "Forever intro escort (Thrall to Thork); no XP row."
+    },
+    {
+      "decision": "optional",
+      "quest": 98424,
+      "reason": "Fizsprocket's Notes in the Venture Co. mine. Prerequisite for elite 98427; Orc/Troll only."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 98427,
+      "reason": "Clearcutter Key: elite in the Venture Co. mine. Never dropped. Orc/Troll only, revisit at 15.",
+      "revisitAt": 15
+    },
+    {
+      "decision": "drop",
+      "quest": 98430,
+      "reason": "Longwalker errand chain in Mulgore (no XP rows; ends in a lvl 11 Herak fight)."
+    },
+    {
+      "decision": "drop",
+      "quest": 98435,
+      "reason": "Tauren chain already done in horde_mulgore_05-10; Orc/Troll do not walk to Mulgore for it."
+    },
+    {
+      "decision": "optional",
+      "quest": 99048,
+      "reason": "Threat from Below chain start (Durotar coast). Needed for elite 99052; Tauren only."
+    },
+    {
+      "decision": "optional",
+      "quest": 99049,
+      "reason": "Threat from Below chain. Needed for elite 99052; Tauren only."
+    },
+    {
+      "decision": "optional",
+      "quest": 99051,
+      "reason": "Threat from Below chain: nine Naga Spinefins. Needed for elite 99052; Tauren only."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 99052,
+      "reason": "Aggor the Young, elite sea giant on the Durotar coast. Never dropped. Tauren only, revisit at 14.",
+      "revisitAt": 14
+    },
+    {
+      "decision": "drop",
+      "quest": 99079,
+      "reason": "Longwalker errand chain in Mulgore (no XP rows; ends in a lvl 11 Herak fight)."
+    },
+    {
+      "decision": "drop",
+      "quest": 99080,
+      "reason": "Longwalker errand chain in Mulgore (no XP rows; ends in a lvl 11 Herak fight)."
+    },
+    {
+      "decision": "drop",
+      "quest": 99081,
+      "reason": "Longwalker errand chain in Mulgore (no XP rows; ends in a lvl 11 Herak fight)."
+    },
+    {
+      "decision": "drop",
+      "quest": 99082,
+      "reason": "Longwalker errand chain in Mulgore (no XP rows; ends in a lvl 11 Herak fight)."
+    },
+    {
+      "decision": "drop",
+      "quest": 99101,
+      "reason": "Longwalker errand chain in Mulgore (no XP rows; ends in a lvl 11 Herak fight)."
+    },
+    {
+      "decision": "drop",
+      "quest": 99123,
+      "reason": "Orc/Troll chain already done in horde_durotar_05-10; Tauren do not walk back to Durotar for it."
+    }
+  ],
+  "id": "horde_horde_10-15",
+  "schemaVersion": 1
+}

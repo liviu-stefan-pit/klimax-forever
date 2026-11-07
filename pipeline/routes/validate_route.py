@@ -94,6 +94,9 @@ class PathState:
     used: set[int] = field(default_factory=set)
     fps: list[tuple[int, float, float]] = field(default_factory=list)
     complete: bool = True  # False if the chain back to level 1 is not fully loaded
+    # Races that can follow this chain (the start branch's races). Steps limited to other races
+    # never happen on this path. None means unknown: every step counts.
+    races: frozenset[str] | None = None
 
 
 # ---- route store ---------------------------------------------------------------------------
@@ -305,8 +308,11 @@ class RouteValidator:
         for chain in self._chains_before(route):
             state = PathState(label=" > ".join(r["id"] for r in chain) or "(start)")
             state.complete = (chain[0]["band"][0] if chain else route["band"][0]) <= 1
+            state.races = self._chain_races(chain[0] if chain else route)
             for prior in chain:
                 for step in prior["steps"]:
+                    if not self._step_on_path(step, state):
+                        continue
                     quest = step.get("quest")
                     if step["type"] == "ACCEPT":
                         state.accepted.add(quest)
@@ -322,6 +328,21 @@ class RouteValidator:
                     state.dropped.add(dropped["quest"])
             states.append(state)
         return states
+
+    def _chain_races(self, first: dict[str, Any]) -> frozenset[str] | None:
+        """Races that follow a chain, from the start branch of its oldest route."""
+        try:
+            return frozenset(self.world.faction.branch(first["branch"]).races)
+        except KeyError:
+            return None  # the shared track or an unknown branch: every race
+
+    @staticmethod
+    def _step_on_path(step: dict[str, Any], state: PathState) -> bool:
+        """False for a step limited to races that never take this path."""
+        races = step.get("races")
+        if not races or state.races is None:
+            return True
+        return bool(state.races & set(races))
 
     # ---- hubs and zones ----------------------------------------------------------------
 
@@ -787,6 +808,8 @@ class RouteValidator:
         fps = list(state.fps)
         passed_fm: set[int] = set()
         for i, step in enumerate(steps):
+            if not self._step_on_path(step, state):
+                continue
             kind = step["type"]
             q = step.get("quest")
             quest = world.quests.get(q) if q else None

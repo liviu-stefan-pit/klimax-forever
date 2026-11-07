@@ -326,3 +326,17 @@ def test_unknown_xp_does_not_trigger_mob_level_warnings() -> None:
     report = validate_route(route, world)
     assert not report.stats["xp"]["known"]
     assert "W_MOB_LEVEL" not in codes(report)
+
+
+def test_paths_are_scoped_to_the_races_of_their_start_branch() -> None:
+    from pipeline.routes.validate_route import PathState, RouteValidator
+
+    validator = RouteValidator(build_world())
+    assert validator._chain_races({"branch": "durotar"}) == {"Orc", "Troll"}
+    assert validator._chain_races({"branch": "mulgore"}) == {"Tauren"}
+    assert validator._chain_races({"branch": "horde"}) is None  # shared track: every race
+    durotar = PathState(label="d", races=frozenset({"Orc", "Troll"}))
+    assert validator._step_on_path({"type": "ACCEPT", "races": ["Orc"]}, durotar)
+    assert not validator._step_on_path({"type": "ACCEPT", "races": ["Tauren"]}, durotar)
+    assert validator._step_on_path({"type": "ACCEPT"}, durotar)
+    assert validator._step_on_path({"type": "ACCEPT", "races": ["Tauren"]}, PathState(label="x"))
