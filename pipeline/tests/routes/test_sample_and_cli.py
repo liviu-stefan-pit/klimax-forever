@@ -32,7 +32,11 @@ def test_sample_route_validates(world: World) -> None:
 
 
 def test_sample_route_compiles(world: World, tmp_path: Path) -> None:
-    result = compile_faction("horde", SAMPLE.parent, tmp_path / "Klimax", world)
+    # Compile the sample alone: a real route with the same id would shadow it in routes/horde.
+    only_sample = tmp_path / "routes"
+    only_sample.mkdir()
+    (only_sample / SAMPLE.name).write_text(SAMPLE.read_text(encoding="utf-8"), encoding="utf-8")
+    result = compile_faction("horde", only_sample, tmp_path / "Klimax", world)
     text = next(t for p, t in result.files.items() if p.name == "horde_durotar_01-05.lua")
     assert "sample = true" in text
     assert "z=1411" in text  # Durotar's uiMapID

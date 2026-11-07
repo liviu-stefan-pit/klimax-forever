@@ -1,0 +1,1190 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_durotar_05-10 is the next band to be written.",
+    "W_XP_RANGE: the validator counts only unfiltered quests with XP data. It leaves out Vile Familiars (445 XP, non-Warlock), the class intro quests (40 XP each) and 5 Forever quests that have no XP rows (97279, 96821, 96825, 96652, 96604). Adding the known ones gives about 4100 XP (85% of the budget); the 5 Forever quests and all kill XP come on top. Level 6-8 Tiragarde Keep and Sen'jin quests (784, 791, 818, 96822) were moved to 05-10 on purpose: their mobs are 3+ levels above a level 4-5 solo player."
+  ],
+  "band": [
+    1,
+    5
+  ],
+  "branch": "durotar",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 784,
+      "reason": "Level 7 Tiragarde Keep quest (mobs lvl 5-8, Lt. Benedict 8): too tough at 4-5. Opens the Razor Hill loop in 05-10."
+    },
+    {
+      "quest": 787,
+      "reason": "Starts in Orgrimmar for players arriving from the city; Valley starters get Your Place In The World instead."
+    },
+    {
+      "quest": 791,
+      "reason": "Handmade Leather Bag reward, but Tiragarde sailors are lvl 5-6. Moved to 05-10 (Razor Hill loop); do not lose the bag."
+    },
+    {
+      "quest": 818,
+      "reason": "Needs level 5; Surf Crawlers and Makrura are lvl 6-8. Left for the start of 05-10 at Sen'jin."
+    },
+    {
+      "quest": 830,
+      "reason": "Aged Envelope drops from Tiragarde sailors and ends in Orgrimmar: a 05-10 detour."
+    },
+    {
+      "quest": 831,
+      "reason": "Second half of The Admiral's Orders: delivery to Nazgrel in Orgrimmar, handled in 05-10."
+    },
+    {
+      "quest": 1463,
+      "reason": "Replacement quest to re-get a lost Earth Sapta; not part of the Call of Earth chain."
+    },
+    {
+      "quest": 1516,
+      "reason": "Shaman Call of Earth 1: DB lists 1516 as its own prerequisite, so it can never unlock. Data gap; re-add once fixed."
+    },
+    {
+      "quest": 1517,
+      "reason": "Shaman Call of Earth 2: follows 1516, blocked by the same prerequisite data bug. Re-add with the chain."
+    },
+    {
+      "quest": 1518,
+      "reason": "Shaman Call of Earth 3 (Earth Totem): follows 1517, blocked by the same data bug. Re-add with the chain."
+    },
+    {
+      "quest": 5648,
+      "reason": "Troll Priest quest: needs level 5 and Tai'jin in Razor Hill; handled at the start of 05-10."
+    },
+    {
+      "quest": 5649,
+      "reason": "Troll Priest breadcrumb: needs level 5 (Valley exit), so it joins 5648 in 05-10."
+    },
+    {
+      "quest": 5843,
+      "reason": "Promotional gift voucher that never reaches the player; no XP, pets only."
+    },
+    {
+      "quest": 7660,
+      "reason": "Level 60 mount swap quest (needs a horn from a lost mount); not leveling content."
+    },
+    {
+      "quest": 7661,
+      "reason": "Level 60 mount swap quest (needs a horn from a lost mount); not leveling content."
+    },
+    {
+      "quest": 7664,
+      "reason": "Level 60 mount swap quest (needs a raptor whistle); not leveling content."
+    },
+    {
+      "quest": 7665,
+      "reason": "Level 60 mount swap quest (needs a raptor whistle); not leveling content."
+    },
+    {
+      "quest": 8828,
+      "reason": "Seasonal Winter Veil quest in Orgrimmar; not leveling content."
+    },
+    {
+      "quest": 96102,
+      "reason": "Profession-gated Camping 101 quest (Tailoring, Orgrimmar trip)."
+    },
+    {
+      "quest": 96655,
+      "reason": "Profession-gated Camping 101 quest (Cooking)."
+    },
+    {
+      "quest": 96822,
+      "reason": "Tiragarde Keep loot quest with lvl 5-8 mobs; goes with Vanquish and Carry Your Weight in 05-10."
+    },
+    {
+      "quest": 97899,
+      "reason": "Profession-gated Camping 101 quest (Alchemy, Orgrimmar trip)."
+    },
+    {
+      "quest": 97900,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing)."
+    },
+    {
+      "quest": 97901,
+      "reason": "Profession-gated Camping 101 quest (Enchanting, Orgrimmar trip)."
+    },
+    {
+      "quest": 97902,
+      "reason": "Profession-gated Camping 101 quest (Engineering)."
+    },
+    {
+      "quest": 97903,
+      "reason": "Profession-gated Camping 101 quest (First Aid)."
+    },
+    {
+      "quest": 97904,
+      "reason": "Profession-gated Camping 101 quest (Fishing)."
+    },
+    {
+      "quest": 97905,
+      "reason": "Profession-gated Camping 101 quest (Herbalism, Orgrimmar trip)."
+    },
+    {
+      "quest": 97906,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking, Orgrimmar trip)."
+    },
+    {
+      "quest": 97907,
+      "reason": "Profession-gated Camping 101 quest (Mining)."
+    },
+    {
+      "quest": 97908,
+      "reason": "Profession-gated Camping 101 quest (Skinning, Orgrimmar trip)."
+    }
+  ],
+  "entry": {
+    "hub": "Valley of Trials",
+    "level": 1,
+    "x": 42.4,
+    "y": 68.7,
+    "zone": "Durotar"
+  },
+  "exitPoint": {
+    "hub": "Razor Hill",
+    "level": 5,
+    "x": 51.5,
+    "y": 41.6,
+    "zone": "Durotar"
+  },
+  "faction": "horde",
+  "id": "horde_durotar_01-05",
+  "next": "horde_durotar_05-10",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Kaltunk stands at the Valley of Trials entrance. Say hello and take the quest.",
+      "npc": 10176,
+      "quest": 4641,
+      "tag": "main",
+      "title": "Your Place In The World",
+      "type": "ACCEPT",
+      "x": 43.3,
+      "y": 68.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gornek is just inside the Den, a few steps west.",
+      "quest": 4641,
+      "tag": "main",
+      "title": "Your Place In The World",
+      "type": "TURNIN",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 788,
+      "tag": "main",
+      "title": "Cutting Teeth",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Extra errand: abandoned training weapons lie on the ground right outside the Den.",
+      "quest": 97279,
+      "tag": "optional",
+      "title": "Wayward Weapons",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Mottled Boars roam just north-east of the Den. Easy first kills.",
+      "quest": 788,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.2,
+      "y": 65.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Pick up 6 training weapons from the same patch while you fight.",
+      "quest": 97279,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 43.8,
+      "y": 66.1,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 788,
+      "tag": "main",
+      "title": "Cutting Teeth",
+      "type": "TURNIN",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Kzan Thornslash is inside the Den, just west of Gornek.",
+      "npc": 3159,
+      "quest": 97279,
+      "tag": "optional",
+      "title": "Wayward Weapons",
+      "type": "TURNIN",
+      "x": 40.5,
+      "y": 68.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 2383,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Simple Parchment",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3153,
+      "quest": 2383,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Simple Parchment",
+      "type": "TURNIN",
+      "x": 42.9,
+      "y": 69.4,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3065,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Simple Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3153,
+      "quest": 3065,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Simple Tablet",
+      "type": "TURNIN",
+      "x": 42.9,
+      "y": 69.4,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3087,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Etched Parchment",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3154,
+      "quest": 3087,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Etched Parchment",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 69.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3082,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Etched Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3154,
+      "quest": 3082,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Etched Tablet",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 69.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3088,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Encrypted Parchment",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3155,
+      "quest": 3088,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Encrypted Parchment",
+      "type": "TURNIN",
+      "x": 41.3,
+      "y": 68.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3083,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Encrypted Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3155,
+      "quest": 3083,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Encrypted Tablet",
+      "type": "TURNIN",
+      "x": 41.3,
+      "y": 68.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3089,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Rune-Inscribed Parchment",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3157,
+      "quest": 3089,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Rune-Inscribed Parchment",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3084,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Rune-Inscribed Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3157,
+      "quest": 3084,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Rune-Inscribed Tablet",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3085,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Hallowed Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3707,
+      "quest": 3085,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Hallowed Tablet",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 68.8,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 98576,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Glyphic Parchment",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 5884,
+      "quest": 98576,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Glyphic Parchment",
+      "type": "TURNIN",
+      "x": 42.5,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3086,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Glyphic Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 5884,
+      "quest": 3086,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Glyphic Tablet",
+      "type": "TURNIN",
+      "x": 42.5,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 3090,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Tainted Parchment",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3156,
+      "quest": 3090,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Tainted Parchment",
+      "type": "TURNIN",
+      "x": 40.6,
+      "y": 68.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Your first class quest. Gornek gives you the item to read.",
+      "quest": 98575,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Tainted Tablet",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Your class trainer is in the Den. Hand it in and learn your first skills.",
+      "npc": 3156,
+      "quest": 98575,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Tainted Tablet",
+      "type": "TURNIN",
+      "x": 40.6,
+      "y": 68.5,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 789,
+      "tag": "main",
+      "title": "Sting of the Scorpid",
+      "type": "ACCEPT",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Galgar's cooking stall is next to the Den. The apples grow in the same hills as the scorpids.",
+      "quest": 4402,
+      "tag": "optional",
+      "title": "Galgar's Cactus Apple Surprise",
+      "type": "ACCEPT",
+      "x": 42.7,
+      "y": 67.2,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Hana'zua is north-west of the Den. Take this before the scorpid hunt.",
+      "quest": 790,
+      "tag": "main",
+      "title": "Sarkoth",
+      "type": "ACCEPT",
+      "x": 40.6,
+      "y": 62.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Scorpid Workers cover the hills north of the Den. Their tails drop as you fight.",
+      "quest": 789,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 42.6,
+      "y": 63.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Cactus Apples grow on the cactuses in the same hills.",
+      "quest": 4402,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 43.7,
+      "y": 63.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Sarkoth is a little tougher than the others, a lvl 4. Take your time.",
+      "quest": 790,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 40.5,
+      "y": 66.8,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 790,
+      "tag": "main",
+      "title": "Sarkoth",
+      "type": "TURNIN",
+      "x": 40.6,
+      "y": 62.6,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 804,
+      "tag": "main",
+      "title": "Sarkoth",
+      "type": "ACCEPT",
+      "x": 40.6,
+      "y": 62.6,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 4402,
+      "tag": "optional",
+      "title": "Galgar's Cactus Apple Surprise",
+      "type": "TURNIN",
+      "x": 42.7,
+      "y": 67.2,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 789,
+      "tag": "main",
+      "title": "Sting of the Scorpid",
+      "type": "TURNIN",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gornek is happy to hear about Hana'zua. Next up: the north end of the Valley.",
+      "quest": 804,
+      "tag": "main",
+      "title": "Sarkoth",
+      "type": "TURNIN",
+      "x": 42.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "About level 3 now. Class trainers stand around the Den: learn what you can afford.",
+      "type": "TRAINER",
+      "x": 42.6,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Duokna sells food and water. Buy a few for the trip; Hunters: check your ammo count.",
+      "type": "BUY",
+      "x": 42.6,
+      "y": 67.3,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "classes": [
+        "DRUID",
+        "HUNTER",
+        "MAGE",
+        "PALADIN",
+        "PRIEST",
+        "ROGUE",
+        "SHAMAN",
+        "WARRIOR"
+      ],
+      "note": "Zureetha is outside the Den. The familiars live at the north end of the Valley.",
+      "quest": 792,
+      "tag": "main",
+      "title": "Vile Familiars",
+      "type": "ACCEPT",
+      "x": 42.9,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Warlock version: bring heads from the same familiars. Ruzan stands by the Den.",
+      "quest": 1485,
+      "tag": "main",
+      "title": "Vile Familiars",
+      "type": "ACCEPT",
+      "x": 42.6,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "minLevel": 3,
+      "note": "Foreman Thazz'ril is east of the Den. He hands you a blackjack for waking sleeping peons.",
+      "quest": 5441,
+      "tag": "main",
+      "title": "Lazy Peons",
+      "type": "ACCEPT",
+      "x": 44.6,
+      "y": 68.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Peons sleep in the sand right beside the foreman. Use the blackjack on 5 of them.",
+      "quest": 5441,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.8,
+      "y": 69.8,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 5441,
+      "tag": "main",
+      "title": "Lazy Peons",
+      "type": "TURNIN",
+      "x": 44.6,
+      "y": 68.7,
+      "zone": "Durotar"
+    },
+    {
+      "minLevel": 3,
+      "note": "He lost his pick in the north end of the Valley. Look for it near the familiars.",
+      "quest": 6394,
+      "tag": "main",
+      "title": "Thazz'ril's Pick",
+      "type": "ACCEPT",
+      "x": 44.6,
+      "y": 68.7,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "DRUID",
+        "HUNTER",
+        "MAGE",
+        "PALADIN",
+        "PRIEST",
+        "ROGUE",
+        "SHAMAN",
+        "WARRIOR"
+      ],
+      "note": "Vile Familiars hang around the north end of the Valley. Kill 12.",
+      "quest": 792,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.4,
+      "y": 55.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Warlocks: collect 6 Familiar Heads from the same familiars.",
+      "quest": 1485,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.4,
+      "y": 55.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "The pick lies on the ground a little further north-west. Look for the glint.",
+      "quest": 6394,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 43.7,
+      "y": 53.8,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "DRUID",
+        "HUNTER",
+        "MAGE",
+        "PALADIN",
+        "PRIEST",
+        "ROGUE",
+        "SHAMAN",
+        "WARRIOR"
+      ],
+      "quest": 792,
+      "tag": "main",
+      "title": "Vile Familiars",
+      "type": "TURNIN",
+      "x": 42.9,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "quest": 1485,
+      "tag": "main",
+      "title": "Vile Familiars",
+      "type": "TURNIN",
+      "x": 42.6,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "quest": 1499,
+      "tag": "main",
+      "title": "Vile Familiars",
+      "type": "ACCEPT",
+      "x": 42.6,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Zureetha is outside the Den.",
+      "quest": 1499,
+      "tag": "main",
+      "title": "Vile Familiars",
+      "type": "TURNIN",
+      "x": 42.9,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 6394,
+      "tag": "main",
+      "title": "Thazz'ril's Pick",
+      "type": "TURNIN",
+      "x": 44.6,
+      "y": 68.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Yarrog Baneshadow hides in the Burning Blade cave in the north. He is lvl 5: be ready.",
+      "quest": 794,
+      "tag": "main",
+      "title": "Burning Blade Medallion",
+      "type": "ACCEPT",
+      "x": 42.9,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Yarrog Baneshadow is in the Burning Blade cave in the north. He carries the medallion.",
+      "quest": 794,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 42.7,
+      "y": 53.0,
+      "zone": "Durotar"
+    },
+    {
+      "_review": "Burning Blade Medallion cannot be accepted until Vile Familiars is turned in, and both targets sit in the same patch 12 map-% north. Two short trips are unavoidable; the third visit is the final return.",
+      "note": "Back to the Den. Zureetha sends you to Sen'jin Village next.",
+      "quest": 794,
+      "tag": "main",
+      "title": "Burning Blade Medallion",
+      "type": "TURNIN",
+      "x": 42.9,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 805,
+      "tag": "main",
+      "title": "Report to Sen'jin Village",
+      "type": "ACCEPT",
+      "x": 42.9,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "minLevel": 4,
+      "note": "Pick up the Lost Journal next to Zureetha. It goes to Brakk in Razor Hill, on your way.",
+      "quest": 96652,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 69.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Level 4 spells are ready. Visit your class trainer in the Den once more before you leave.",
+      "type": "TRAINER",
+      "x": 42.6,
+      "y": 69.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Ukor is a peon by the road, east of the Valley. His burden goes to the Razor Hill innkeeper.",
+      "quest": 2161,
+      "tag": "optional",
+      "title": "A Peon's Burden",
+      "type": "ACCEPT",
+      "x": 52.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Follow the road east and south to Sen'jin Village. It is a quiet trip.",
+      "to": "Sen'jin Village",
+      "type": "TRAVEL",
+      "x": 55.9,
+      "y": 74.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Master Gadrin is by the main huts in Sen'jin Village.",
+      "quest": 805,
+      "tag": "main",
+      "title": "Report to Sen'jin Village",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "minLevel": 4,
+      "note": "He sends you to Orgnil in Razor Hill. You are done in Sen'jin.",
+      "quest": 823,
+      "tag": "main",
+      "title": "Report to Orgnil",
+      "type": "ACCEPT",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Vel'rin Fang stands next to Gadrin. The Ridgeshade mobs are on the road north.",
+      "quest": 96821,
+      "tag": "optional",
+      "title": "Legging It",
+      "type": "ACCEPT",
+      "x": 56.0,
+      "y": 73.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Ridgeshade Creepers and Lurkers (lvl 5-6) are beside the road north. Kill 6 of each.",
+      "quest": 96821,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 52.3,
+      "y": 57.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil Soulscar is in the big hut in Razor Hill. His next quests start the next leg.",
+      "quest": 823,
+      "tag": "main",
+      "title": "Report to Orgnil",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok is next to Orgnil.",
+      "quest": 96821,
+      "tag": "optional",
+      "title": "Legging It",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Innkeeper Grosk takes Ukor's burden. You get water and bread.",
+      "quest": 2161,
+      "tag": "optional",
+      "title": "A Peon's Burden",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 41.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Make Razor Hill your home at Innkeeper Grosk.",
+      "npc": 6928,
+      "type": "HEARTH_BIND",
+      "x": 51.5,
+      "y": 41.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Sell grey items at the general goods vendor here. Repair if your gear is damaged.",
+      "type": "VENDOR_REPAIR",
+      "x": 54.4,
+      "y": 42.2,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Cook Torka wants prickly pears from the grounds west of town. Needs level 3.",
+      "quest": 96825,
+      "tag": "optional",
+      "title": "This Fruit Could Bite Back",
+      "type": "ACCEPT",
+      "x": 51.1,
+      "y": 42.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Brakk stands just south of town. He takes the journal.",
+      "quest": 96652,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 47.3,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 96604,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 47.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Sit down next to Brakk's campfire until you get the Boosted Rest buff.",
+      "quest": 96604,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 52.0,
+      "y": 47.3,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 96604,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 47.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Prickly pears grow on the cactus patch west of town. Collect 8.",
+      "quest": 96825,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 46.7,
+      "y": 49.3,
+      "zone": "Durotar"
+    },
+    {
+      "quest": 96825,
+      "tag": "optional",
+      "title": "This Fruit Could Bite Back",
+      "type": "TURNIN",
+      "x": 51.1,
+      "y": 42.5,
+      "zone": "Durotar"
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 784,
+      "reason": "Level 7 Tiragarde Keep quest (mobs lvl 5-8, Lt. Benedict 8): too tough at 4-5. Opens the Razor Hill loop in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 787,
+      "reason": "Starts in Orgrimmar for players arriving from the city; Valley starters get Your Place In The World instead."
+    },
+    {
+      "decision": "main",
+      "quest": 788,
+      "reason": "Gornek's first kill quest; opens the whole Valley chain."
+    },
+    {
+      "decision": "main",
+      "quest": 789,
+      "reason": "Scorpid tails: 250 XP, same hills as Sarkoth and the cactus apples."
+    },
+    {
+      "decision": "main",
+      "quest": 790,
+      "reason": "Sarkoth: 450 XP and the head of the Hana'zua chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 791,
+      "reason": "Handmade Leather Bag reward, but Tiragarde sailors are lvl 5-6. Moved to 05-10 (Razor Hill loop); do not lose the bag."
+    },
+    {
+      "decision": "class",
+      "quest": 792,
+      "reason": "Vile Familiars (all classes but Warlock): 445 XP, prerequisite of Burning Blade Medallion."
+    },
+    {
+      "decision": "main",
+      "quest": 794,
+      "reason": "Burning Blade Medallion: 670 XP, the biggest Valley quest; leads to Sen'jin."
+    },
+    {
+      "decision": "main",
+      "quest": 804,
+      "reason": "Sarkoth follow-up: short walk back to Gornek, 110 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 805,
+      "reason": "Sends you on to Sen'jin Village, which unlocks the Razor Hill chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 818,
+      "reason": "Needs level 5; Surf Crawlers and Makrura are lvl 6-8. Left for the start of 05-10 at Sen'jin."
+    },
+    {
+      "decision": "main",
+      "quest": 823,
+      "reason": "Master Gadrin's hand-off to Orgnil; unlocks Razor Hill and the next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 830,
+      "reason": "Aged Envelope drops from Tiragarde sailors and ends in Orgrimmar: a 05-10 detour."
+    },
+    {
+      "decision": "drop",
+      "quest": 831,
+      "reason": "Second half of The Admiral's Orders: delivery to Nazgrel in Orgrimmar, handled in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 1463,
+      "reason": "Replacement quest to re-get a lost Earth Sapta; not part of the Call of Earth chain."
+    },
+    {
+      "decision": "class",
+      "quest": 1485,
+      "reason": "Warlock version of Vile Familiars (heads from the same familiars); needed for 1499."
+    },
+    {
+      "decision": "class",
+      "quest": 1499,
+      "reason": "Warlock hand-off to Zureetha; the Warlock way into Burning Blade Medallion."
+    },
+    {
+      "decision": "drop",
+      "quest": 1516,
+      "reason": "Shaman Call of Earth 1: DB lists 1516 as its own prerequisite, so it can never unlock. Data gap; re-add once fixed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1517,
+      "reason": "Shaman Call of Earth 2: follows 1516, blocked by the same prerequisite data bug. Re-add with the chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 1518,
+      "reason": "Shaman Call of Earth 3 (Earth Totem): follows 1517, blocked by the same data bug. Re-add with the chain."
+    },
+    {
+      "decision": "optional",
+      "quest": 2161,
+      "reason": "Ukor stands beside the road to Sen'jin; water and bread reward, hand-in at the Razor Hill inn."
+    },
+    {
+      "decision": "class",
+      "quest": 2383,
+      "reason": "Orc Warrior first class quest (read the parchment, speak to Frang)."
+    },
+    {
+      "decision": "class",
+      "quest": 3065,
+      "reason": "Troll Warrior first class quest (read the tablet, speak to Frang)."
+    },
+    {
+      "decision": "class",
+      "quest": 3082,
+      "reason": "Troll Hunter first class quest (speak to Jen'shan)."
+    },
+    {
+      "decision": "class",
+      "quest": 3083,
+      "reason": "Troll Rogue first class quest (speak to Rwag)."
+    },
+    {
+      "decision": "class",
+      "quest": 3084,
+      "reason": "Troll Shaman first class quest (speak to Shikrik)."
+    },
+    {
+      "decision": "class",
+      "quest": 3085,
+      "reason": "Troll Priest first class quest (speak to Ken'jai)."
+    },
+    {
+      "decision": "class",
+      "quest": 3086,
+      "reason": "Troll Mage first class quest (speak to Mai'ah)."
+    },
+    {
+      "decision": "class",
+      "quest": 3087,
+      "reason": "Orc Hunter first class quest (speak to Jen'shan)."
+    },
+    {
+      "decision": "class",
+      "quest": 3088,
+      "reason": "Orc Rogue first class quest (speak to Rwag)."
+    },
+    {
+      "decision": "class",
+      "quest": 3089,
+      "reason": "Orc Shaman first class quest (speak to Shikrik)."
+    },
+    {
+      "decision": "class",
+      "quest": 3090,
+      "reason": "Orc Warlock first class quest (speak to Nartok)."
+    },
+    {
+      "decision": "optional",
+      "quest": 4402,
+      "reason": "Galgar's apples grow in the scorpid hills; 380 XP and bread/food for the trip."
+    },
+    {
+      "decision": "main",
+      "quest": 4641,
+      "reason": "Breadcrumb from Kaltunk to Gornek; first stop of the Valley and 40 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 5441,
+      "reason": "Lazy Peons: 445 XP, peons sleep right beside the foreman."
+    },
+    {
+      "decision": "drop",
+      "quest": 5648,
+      "reason": "Troll Priest quest: needs level 5 and Tai'jin in Razor Hill; handled at the start of 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 5649,
+      "reason": "Troll Priest breadcrumb: needs level 5 (Valley exit), so it joins 5648 in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 5843,
+      "reason": "Promotional gift voucher that never reaches the player; no XP, pets only."
+    },
+    {
+      "decision": "main",
+      "quest": 6394,
+      "reason": "Thazz'ril's Pick: 445 XP, the item is in the same north patch as the familiars."
+    },
+    {
+      "decision": "drop",
+      "quest": 7660,
+      "reason": "Level 60 mount swap quest (needs a horn from a lost mount); not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 7661,
+      "reason": "Level 60 mount swap quest (needs a horn from a lost mount); not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 7664,
+      "reason": "Level 60 mount swap quest (needs a raptor whistle); not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 7665,
+      "reason": "Level 60 mount swap quest (needs a raptor whistle); not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 8828,
+      "reason": "Seasonal Winter Veil quest in Orgrimmar; not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 96102,
+      "reason": "Profession-gated Camping 101 quest (Tailoring, Orgrimmar trip)."
+    },
+    {
+      "decision": "optional",
+      "quest": 96604,
+      "reason": "Forever camping quest: sit by Brakk's campfire for Boosted Rest; trivial and at the exit town."
+    },
+    {
+      "decision": "optional",
+      "quest": 96652,
+      "reason": "Forever camping quest: Lost Journal in the Valley, hand-in at Brakk in Razor Hill."
+    },
+    {
+      "decision": "drop",
+      "quest": 96655,
+      "reason": "Profession-gated Camping 101 quest (Cooking)."
+    },
+    {
+      "decision": "optional",
+      "quest": 96821,
+      "reason": "Forever quest: Ridgeshade mobs (lvl 5-6) sit on the road from Sen'jin to Razor Hill."
+    },
+    {
+      "decision": "drop",
+      "quest": 96822,
+      "reason": "Tiragarde Keep loot quest with lvl 5-8 mobs; goes with Vanquish and Carry Your Weight in 05-10."
+    },
+    {
+      "decision": "optional",
+      "quest": 96825,
+      "reason": "Forever quest: prickly pears 5 map-% west of Razor Hill; harmless gatherer errand."
+    },
+    {
+      "decision": "optional",
+      "quest": 97279,
+      "reason": "Forever quest: training weapons lie right outside the Den. No XP data, cheap and close."
+    },
+    {
+      "decision": "drop",
+      "quest": 97899,
+      "reason": "Profession-gated Camping 101 quest (Alchemy, Orgrimmar trip)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97900,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97901,
+      "reason": "Profession-gated Camping 101 quest (Enchanting, Orgrimmar trip)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97902,
+      "reason": "Profession-gated Camping 101 quest (Engineering)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97903,
+      "reason": "Profession-gated Camping 101 quest (First Aid)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97904,
+      "reason": "Profession-gated Camping 101 quest (Fishing)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97905,
+      "reason": "Profession-gated Camping 101 quest (Herbalism, Orgrimmar trip)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97906,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking, Orgrimmar trip)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97907,
+      "reason": "Profession-gated Camping 101 quest (Mining)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97908,
+      "reason": "Profession-gated Camping 101 quest (Skinning, Orgrimmar trip)."
+    },
+    {
+      "decision": "class",
+      "quest": 98575,
+      "reason": "Troll Warlock first class quest (speak to Nartok)."
+    },
+    {
+      "decision": "class",
+      "quest": 98576,
+      "reason": "Orc Mage first class quest (speak to Mai'ah)."
+    }
+  ],
+  "id": "horde_durotar_01-05",
+  "schemaVersion": 1
+}
