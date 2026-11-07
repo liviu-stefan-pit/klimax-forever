@@ -1,0 +1,3205 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_horde_25-30 is written in a later phase. This band exits at Tarren Mill (Hillsbrad), where 25-30 begins.",
+    "W_NOT_IN_PACK: 444, 446 and 448 are DB quests outside this pack (QL16-17). They are the prerequisite chain of the elite 442 (Assault on Fenris Isle), which may not be dropped. They are routed for every race.",
+    "W_XP_RANGE: quest XP is 80% of the budget (109,005 of 136,800). Structural: the 20-25 pool outside dungeons, raids, battlegrounds, class-only chains and Teldrassil festivals is about 110k of quest XP. The Jorn chain (about 9k) is dropped because it cannot be routed for every path (905 is race-gated in horde_horde_10-15). Kills supply the rest."
+  ],
+  "band": [
+    20,
+    25
+  ],
+  "branch": "horde",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 63,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 96,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 100,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 104,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 152,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 220,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 235,
+      "reason": "Exclusive with 742 (Orgrimmar breadcrumb to 6383). The route takes 742 from Thunder Bluff."
+    },
+    {
+      "quest": 451,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 461,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 491,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 493,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 530,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 862,
+      "reason": "Profession-gated (Cooking 15): Dig Rat Stew."
+    },
+    {
+      "quest": 868,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "quest": 873,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "quest": 874,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "quest": 882,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "quest": 889,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "quest": 907,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "quest": 913,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "quest": 914,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 962,
+      "reason": "Handed to horde_horde_25-30: Serpentbloom is in the Barrens near the Crossroads; turn-in is in Thunder Bluff."
+    },
+    {
+      "quest": 972,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1013,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 1014,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 1058,
+      "reason": "Malaka'jin start far south-east in Stonetalon; the objectives are in the north-west. Two long walks."
+    },
+    {
+      "quest": 1067,
+      "reason": "Handed to horde_horde_25-30: its turn-in is Zamah in Thunder Bluff, after the Hillsbrad block; this band ends at Tarren Mill."
+    },
+    {
+      "quest": 1068,
+      "reason": "Seereth turn-in is about 40 map-% from the XT shredders in Stonetalon, with no return on the route. Handed to 25-30."
+    },
+    {
+      "quest": 1086,
+      "reason": "Handed to horde_horde_25-30: needs 1067 first, then a fogger trip to the Venture Co sky port and back to Zamah."
+    },
+    {
+      "quest": 1087,
+      "reason": "Cenarius' Legacy: objectives at (36, 12) far north-west, turn-in at Sun Rock. Not on this route."
+    },
+    {
+      "quest": 1098,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 1103,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1198,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 1472,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1474,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1476,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1507,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1508,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1509,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1510,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1511,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1512,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1513,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1515,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 1528,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1529,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1530,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1534,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1535,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1536,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 1740,
+      "reason": "Warlock class; the Soran'ruk fragments have no objective positions in the DB."
+    },
+    {
+      "quest": 1823,
+      "reason": "Breadcrumb to 1824 (done in horde_horde_15-20)."
+    },
+    {
+      "quest": 1943,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "quest": 1944,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "quest": 1945,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "quest": 1946,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "quest": 1999,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "quest": 2381,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "quest": 2479,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "quest": 2480,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "quest": 2985,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 2986,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 3261,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "quest": 3369,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 3567,
+      "reason": "To the Top (Feralas): no XP row, far south-east."
+    },
+    {
+      "quest": 5042,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "quest": 5043,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "quest": 5044,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "quest": 5045,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "quest": 5046,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "quest": 5421,
+      "reason": "Fish in a Bucket (Desolace): no XP row, off route."
+    },
+    {
+      "quest": 5642,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "quest": 5643,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "quest": 5644,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "quest": 5646,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "quest": 5679,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "quest": 5680,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "quest": 6382,
+      "reason": "Jorn-side start of The Ashenvale Hunt needs 882 (Jorn chain, not routable for all races). The TB breadcrumb 742 is used instead."
+    },
+    {
+      "quest": 6541,
+      "reason": "Breadcrumbs for 6543, which is dropped."
+    },
+    {
+      "quest": 6542,
+      "reason": "Breadcrumbs for 6543, which is dropped."
+    },
+    {
+      "quest": 6543,
+      "reason": "Warsong Reports: runner deliveries in Ashenvale and a return to Kadrak in the north Barrens. Two long walks."
+    },
+    {
+      "quest": 6545,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "quest": 6546,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "quest": 6547,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "quest": 6561,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 6581,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "quest": 6681,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "quest": 6921,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 6981,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 8171,
+      "reason": "Battleground quest (Arathi Basin / Warsong Gulch): not a leveling quest for this route."
+    },
+    {
+      "quest": 8368,
+      "reason": "Battleground quest (Arathi Basin / Warsong Gulch): not a leveling quest for this route."
+    },
+    {
+      "quest": 8389,
+      "reason": "Battleground quest (Arathi Basin / Warsong Gulch): not a leveling quest for this route."
+    },
+    {
+      "quest": 8768,
+      "reason": "Holiday or PvP token quest with no XP row. Off route."
+    },
+    {
+      "quest": 8851,
+      "reason": "Holiday or PvP token quest with no XP row. Off route."
+    },
+    {
+      "quest": 9388,
+      "reason": "Flickering Flames: starts in Teldrassil (Alliance zone). Not reachable for Horde leveling."
+    },
+    {
+      "quest": 9389,
+      "reason": "Flickering Flames: starts in Teldrassil (Alliance zone). Not reachable for Horde leveling."
+    },
+    {
+      "quest": 65593,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 65597,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 65601,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 65604,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 65610,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "quest": 78124,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78127,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78132,
+      "reason": "Dragonslayer gear turn-ins: no XP rows and no reward data."
+    },
+    {
+      "quest": 78133,
+      "reason": "Dragonslayer gear turn-ins: no XP rows and no reward data."
+    },
+    {
+      "quest": 78134,
+      "reason": "Dragonslayer gear turn-ins: no XP rows and no reward data."
+    },
+    {
+      "quest": 78142,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78143,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78145,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78146,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78147,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78148,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78149,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78150,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 78261,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "quest": 78270,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "quest": 79007,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "quest": 79091,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79092,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79093,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79094,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79095,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79096,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79097,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 79192,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "quest": 79362,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 79363,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "quest": 79980,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "quest": 86576,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "quest": 91858,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 91859,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 91860,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 91861,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 91862,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 92401,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 92421,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 92422,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 95034,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 95036,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 95111,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 95125,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 95126,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 95140,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 95204,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 95216,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 95494,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "quest": 95495,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "quest": 95507,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "quest": 95508,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "quest": 95621,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "quest": 95883,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "quest": 95884,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "quest": 95885,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "quest": 95981,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "quest": 96204,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "quest": 96779,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "quest": 97286,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "quest": 97288,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 97289,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 97290,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 97291,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 97292,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "quest": 97538,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98093,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98094,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98095,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98251,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98252,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98299,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "quest": 98340,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98341,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98342,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98362,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98404,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98405,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98738,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "quest": 98739,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    }
+  ],
+  "entry": {
+    "hub": "Sun Rock Retreat",
+    "level": 20,
+    "x": 47.3,
+    "y": 62.0,
+    "zone": "Stonetalon Mountains"
+  },
+  "exitPoint": {
+    "hub": "Tarren Mill",
+    "level": 25,
+    "x": 62.8,
+    "y": 19.0,
+    "zone": "Hillsbrad Foothills"
+  },
+  "faction": "horde",
+  "id": "horde_horde_20-25",
+  "next": "horde_horde_25-30",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Stonetalon: Ziz Fizziks at Windshear Crag, a short walk from Sun Rock. Accept the envelope.",
+      "to": "Windshear Crag",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Ziz Fizziks: the Sealed Envelope to Sputtervalve in Ratchet.",
+      "npc": 4201,
+      "quest": 1094,
+      "tag": "main",
+      "title": "Further Instructions",
+      "type": "ACCEPT",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Walk back to Sun Rock for Tharm's flight point.",
+      "to": "Sun Rock Retreat",
+      "type": "TRAVEL"
+    },
+    {
+      "bagCheck": true,
+      "note": "Tharm at Sun Rock to Bragok at Ratchet. Bind at the Ratchet inn on arrival.",
+      "to": "Ratchet",
+      "type": "FLY"
+    },
+    {
+      "note": "Hearth to Innkeeper Wiley at Ratchet before the south loop.",
+      "type": "HEARTH_BIND",
+      "x": 62.0,
+      "y": 39.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Sputtervalve in Ratchet.",
+      "npc": 3442,
+      "quest": 1094,
+      "tag": "main",
+      "title": "Further Instructions",
+      "type": "TURNIN",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sputtervalve: new orders for Ziz Fizziks in Stonetalon.",
+      "npc": 3442,
+      "quest": 1095,
+      "tag": "main",
+      "title": "Further Instructions",
+      "type": "ACCEPT",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sputtervalve's breadcrumb: speak with Ziz Fizziks at Windshear Crag.",
+      "npc": 3442,
+      "quest": 1483,
+      "tag": "main",
+      "title": "Ziz Fizziks",
+      "type": "ACCEPT",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mebok Mizzyrix at Ratchet: crate, Snufflenose manual and command stick are all here.",
+      "npc": 3446,
+      "quest": 1221,
+      "tag": "main",
+      "title": "Blueleaf Tubers",
+      "type": "ACCEPT",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect the crate with holes and the Snufflenose items beside Mebok.",
+      "quest": 1221,
+      "tag": "main",
+      "title": "Blueleaf Tubers",
+      "type": "COMPLETE",
+      "x": 62.3,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mebok Mizzyrix at Ratchet.",
+      "npc": 3446,
+      "quest": 1221,
+      "tag": "main",
+      "title": "Blueleaf Tubers",
+      "type": "TURNIN",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mebok: 15 Deepmoss Eggs from Stonetalon. Turn in here after the eggs.",
+      "npc": 3446,
+      "quest": 1069,
+      "tag": "main",
+      "title": "Deepmoss Spider Eggs",
+      "type": "ACCEPT",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Drohn at Ratchet: Chen's Empty Keg. Parts come from the south Barrens loop.",
+      "npc": 3292,
+      "quest": 822,
+      "tag": "optional",
+      "title": "Chen's Empty Keg",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 38.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Repair at Ratchet before the south loop.",
+      "type": "VENDOR_REPAIR",
+      "x": 62.8,
+      "y": 37.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Jazzik at Ratchet: food and water for the south loop.",
+      "type": "BUY",
+      "x": 61.9,
+      "y": 38.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "South from Ratchet to Camp Taurajo: Mangletooth, Tatternack, Logmar and Jorn are here.",
+      "to": "Camp Taurajo",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Mangletooth at Camp Taurajo: Kuz, Nak and Lok skulls from the south camps.",
+      "npc": 3430,
+      "quest": 879,
+      "tag": "main",
+      "title": "Betrayal from Within",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Tatternack Steelforge: Razormane Backstabber, Charred Wand and War Shield.",
+      "npc": 3433,
+      "quest": 893,
+      "tag": "main",
+      "title": "Weapons of Choice",
+      "type": "ACCEPT",
+      "x": 45.1,
+      "y": 57.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Grunt Logmar: Outraged Pillagers, elite. Optional; come back at 22.",
+      "npc": 5911,
+      "quest": 97250,
+      "revisitAt": 22,
+      "tag": "optional-elite",
+      "title": "Wrongly Blamed, Justly Corrected",
+      "type": "ACCEPT",
+      "x": 44.6,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Owatanka's Tailspike starts this quest. Jorn wants it back at Camp Taurajo.",
+      "quest": 884,
+      "tag": "main",
+      "title": "Owatanka",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 62.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Washte Pawne's Feather starts this quest. Jorn wants it back at Camp Taurajo.",
+      "quest": 885,
+      "tag": "main",
+      "title": "Washte Pawne",
+      "type": "ACCEPT",
+      "x": 44.8,
+      "y": 74.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "The Harvester's Head starts this quest. Jorn wants it back at Camp Taurajo.",
+      "quest": 897,
+      "tag": "main",
+      "title": "The Harvester",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 70.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gann Stonespire at his camp south of Camp Taurajo: Bael'dun excavators and foremen.",
+      "npc": 3341,
+      "quest": 843,
+      "tag": "main",
+      "title": "Gann's Reclamation",
+      "type": "ACCEPT",
+      "x": 45.9,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bael'dun excavators, foremen and Khazgorm's Journal at (47-48, 85).",
+      "quest": 843,
+      "tag": "main",
+      "title": "Gann's Reclamation",
+      "type": "COMPLETE",
+      "x": 47.0,
+      "y": 85.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gann Stonespire.",
+      "npc": 3341,
+      "quest": 843,
+      "tag": "main",
+      "title": "Gann's Reclamation",
+      "type": "TURNIN",
+      "x": 45.9,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gann: Nitroglycerin, Wood Pulp and Sodium Nitrate from the Bael'dun camp.",
+      "npc": 3341,
+      "quest": 846,
+      "tag": "main",
+      "title": "Revenge of Gann",
+      "type": "ACCEPT",
+      "x": 45.9,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Nitroglycerin, Wood Pulp and Sodium Nitrate at (49, 84).",
+      "quest": 846,
+      "tag": "main",
+      "title": "Revenge of Gann",
+      "type": "COMPLETE",
+      "x": 49.0,
+      "y": 84.0,
+      "zone": "The Barrens"
+    },
+    {
+      "_review": "W_BACKTRACK: Gann's three quests are a serial chain. All turn-ins are at Gann's camp, 2-5 map-% from the objectives, so the walk is trivial.",
+      "note": "Turn in to Gann Stonespire.",
+      "npc": 3341,
+      "quest": 846,
+      "tag": "main",
+      "title": "Revenge of Gann",
+      "type": "TURNIN",
+      "x": 45.9,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gann: destroy the Bael Modan flying machine.",
+      "npc": 3341,
+      "quest": 849,
+      "tag": "main",
+      "title": "Revenge of Gann",
+      "type": "ACCEPT",
+      "x": 45.9,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bael Modan flying machine at (47, 86).",
+      "quest": 849,
+      "tag": "main",
+      "title": "Revenge of Gann",
+      "type": "COMPLETE",
+      "x": 47.0,
+      "y": 86.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gann Stonespire.",
+      "npc": 3341,
+      "quest": 849,
+      "tag": "main",
+      "title": "Revenge of Gann",
+      "type": "TURNIN",
+      "x": 45.9,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Runed Scroll on the ground at (46, 70). Carry it north to Kadrak at the north watch tower.",
+      "quest": 3513,
+      "tag": "optional",
+      "title": "The Runed Scroll",
+      "type": "ACCEPT",
+      "x": 46.0,
+      "y": 70.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Razormane Backstabber, Charred Razormane Wand and War Shield at (42, 81).",
+      "quest": 893,
+      "tag": "main",
+      "title": "Weapons of Choice",
+      "type": "COMPLETE",
+      "x": 42.0,
+      "y": 81.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kuz, Nak and Lok skulls from the orc camps at (40-46, 80-83).",
+      "quest": 879,
+      "tag": "main",
+      "title": "Betrayal from Within",
+      "type": "COMPLETE",
+      "x": 44.0,
+      "y": 81.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Lightning Glands, Thunderhawk Saliva and Kodo Liver around (46, 67-77).",
+      "quest": 822,
+      "tag": "optional",
+      "title": "Chen's Empty Keg",
+      "type": "COMPLETE",
+      "x": 46.0,
+      "y": 70.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Encroaching soldiers at the Dustwallow border near (48, 77). Elite.",
+      "quest": 97250,
+      "tag": "optional-elite",
+      "title": "Wrongly Blamed, Justly Corrected",
+      "type": "COMPLETE",
+      "x": 48.0,
+      "y": 77.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Jorn Skyseer at Camp Taurajo.",
+      "npc": 3387,
+      "quest": 884,
+      "tag": "main",
+      "title": "Owatanka",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 59.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Jorn Skyseer at Camp Taurajo.",
+      "npc": 3387,
+      "quest": 885,
+      "tag": "main",
+      "title": "Washte Pawne",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 59.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Jorn Skyseer at Camp Taurajo.",
+      "npc": 3387,
+      "quest": 897,
+      "tag": "main",
+      "title": "The Harvester",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 59.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mangletooth at Camp Taurajo.",
+      "npc": 3430,
+      "quest": 879,
+      "tag": "main",
+      "title": "Betrayal from Within",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mangletooth: Lok's Skull goes to Thork at the Crossroads.",
+      "npc": 3430,
+      "quest": 906,
+      "tag": "main",
+      "title": "Betrayal from Within",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Tatternack Steelforge at Camp Taurajo.",
+      "npc": 3433,
+      "quest": 893,
+      "tag": "main",
+      "title": "Weapons of Choice",
+      "type": "TURNIN",
+      "x": 45.1,
+      "y": 57.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Grunt Logmar at Camp Taurajo.",
+      "npc": 5911,
+      "quest": 97250,
+      "tag": "optional-elite",
+      "title": "Wrongly Blamed, Justly Corrected",
+      "type": "TURNIN",
+      "x": 44.6,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "North to the Crossroads for Thork. Then Doras' flight to Orgrimmar.",
+      "to": "The Crossroads",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Thork at the Crossroads.",
+      "npc": 3429,
+      "quest": 906,
+      "tag": "main",
+      "title": "Betrayal from Within",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "note": "Crossroads flight to Orgrimmar (Doras). Rogue and warlock trainers, and Shenthul's rogue chain.",
+      "to": "Orgrimmar",
+      "type": "FLY"
+    },
+    {
+      "note": "Orgrimmar class trainers at level 22. Learn everything your level allows.",
+      "type": "TRAINER",
+      "x": 48.0,
+      "y": 45.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Repair and sell greys before the north Barrens.",
+      "type": "VENDOR_REPAIR",
+      "x": 49.0,
+      "y": 48.0,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Shenthul in Orgrimmar: the Shattered Salute. Rogues only.",
+      "npc": 3401,
+      "quest": 2460,
+      "tag": "optional",
+      "title": "The Shattered Salute",
+      "type": "ACCEPT",
+      "x": 43.0,
+      "y": 53.7,
+      "zone": "Orgrimmar"
+    },
+    {
+      "_review": "W_MOB_LEVEL: Shenthul is a level 60 Orgrimmar city NPC. The Shattered Salute is an emote, not a fight.",
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Perform the Shattered Salute on Shenthul.",
+      "quest": 2460,
+      "tag": "optional",
+      "title": "The Shattered Salute",
+      "type": "COMPLETE",
+      "x": 43.0,
+      "y": 54.0,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Turn in to Shenthul in Orgrimmar.",
+      "npc": 3401,
+      "quest": 2460,
+      "tag": "optional",
+      "title": "The Shattered Salute",
+      "type": "TURNIN",
+      "x": 43.0,
+      "y": 53.7,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Shenthul: Deep Cover. Travel to the Venture Co. tower in the north Barrens. Rogues only.",
+      "npc": 3401,
+      "quest": 2458,
+      "tag": "optional",
+      "title": "Deep Cover",
+      "type": "ACCEPT",
+      "x": 43.0,
+      "y": 53.7,
+      "zone": "Orgrimmar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Orgrimmar flight back to the Crossroads, then walk north to the Venture Co. camp.",
+      "to": "The Crossroads",
+      "type": "FLY"
+    },
+    {
+      "note": "North of the Crossroads: Taskmaster Fizzule's Venture Co. tower (north Barrens).",
+      "to": "Venture Co. camp",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Turn in to Taskmaster Fizzule in the north Barrens. Rogues only.",
+      "npc": 7233,
+      "quest": 2458,
+      "tag": "optional",
+      "title": "Deep Cover",
+      "type": "TURNIN",
+      "x": 55.4,
+      "y": 5.6,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Fizzule: Mission Possible. Elite Venture Co. camp. Rogues only.",
+      "npc": 7233,
+      "quest": 2478,
+      "tag": "optional-elite",
+      "title": "Mission: Possible But Not Probable",
+      "type": "ACCEPT",
+      "x": 55.4,
+      "y": 5.6,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Silixiz's Tower Key, two drones and two patrols at the Venture Co. camp (54-55, 5-6).",
+      "quest": 2478,
+      "tag": "optional-elite",
+      "title": "Mission: Possible But Not Probable",
+      "type": "COMPLETE",
+      "x": 55.0,
+      "y": 6.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Short walk to Kadrak at the north watch tower with the Runed Scroll.",
+      "to": "Kadrak",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Kadrak at the north watch tower: the Runed Scroll.",
+      "npc": 8582,
+      "quest": 3513,
+      "tag": "optional",
+      "title": "The Runed Scroll",
+      "type": "TURNIN",
+      "x": 48.1,
+      "y": 5.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "South through the Crossroads road to Windshear Crag (Ziz) in Stonetalon.",
+      "to": "Windshear Crag",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Ziz Fizziks at Windshear Crag.",
+      "npc": 4201,
+      "quest": 1095,
+      "tag": "main",
+      "title": "Further Instructions",
+      "type": "TURNIN",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Speak with Ziz Fizziks at Windshear Crag.",
+      "npc": 4201,
+      "quest": 1483,
+      "tag": "main",
+      "title": "Ziz Fizziks",
+      "type": "TURNIN",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Ziz: Gerenzo Wrenchwhistle's mechanical arm, east of the Windshear road.",
+      "npc": 4201,
+      "quest": 1096,
+      "tag": "main",
+      "title": "Gerenzo Wrenchwhistle",
+      "type": "ACCEPT",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Gerenzo's mechanical arm at (64, 40).",
+      "quest": 1096,
+      "tag": "main",
+      "title": "Gerenzo Wrenchwhistle",
+      "type": "COMPLETE",
+      "x": 64.0,
+      "y": 40.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Ziz Fizziks at Windshear Crag.",
+      "npc": 4201,
+      "quest": 1096,
+      "tag": "main",
+      "title": "Gerenzo Wrenchwhistle",
+      "type": "TURNIN",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Deepmoss Eggs around (53-62, 61-74) in Stonetalon, south of Ziz.",
+      "quest": 1069,
+      "tag": "main",
+      "title": "Deepmoss Spider Eggs",
+      "type": "COMPLETE",
+      "x": 57.0,
+      "y": 67.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "bagCheck": true,
+      "note": "East from Sun Rock to Splintertree Post in Ashenvale. Discover the flight point on arrival.",
+      "to": "Splintertree Post",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Vhulgra at Splintertree Post: discover on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 73.2,
+      "y": 61.6,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Hearth to Innkeeper Kaylisk at Splintertree Post. The Zoram'gar block returns here.",
+      "type": "HEARTH_BIND",
+      "x": 74.0,
+      "y": 60.6,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Burkrum at Splintertree Post: food and water before the Ashenvale block.",
+      "type": "BUY",
+      "x": 73.5,
+      "y": 60.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Pixel at Splintertree Post: 16 Satyr Horns from the hills around (67-80, 47-55).",
+      "npc": 12724,
+      "quest": 6441,
+      "tag": "main",
+      "title": "Satyr Horns",
+      "type": "ACCEPT",
+      "x": 73.1,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Satyr Horns around (74, 51).",
+      "quest": 6441,
+      "tag": "main",
+      "title": "Satyr Horns",
+      "type": "COMPLETE",
+      "x": 74.0,
+      "y": 51.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Pixel at Splintertree Post.",
+      "npc": 12724,
+      "quest": 6441,
+      "tag": "main",
+      "title": "Satyr Horns",
+      "type": "TURNIN",
+      "x": 73.1,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Kuray'bin at Splintertree Outpost: 9 Ashenvale Outrunners.",
+      "npc": 12867,
+      "quest": 6503,
+      "tag": "main",
+      "title": "Ashenvale Outrunners",
+      "type": "ACCEPT",
+      "x": 71.1,
+      "y": 68.1,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Ashenvale Outrunners around (73, 72).",
+      "quest": 6503,
+      "tag": "main",
+      "title": "Ashenvale Outrunners",
+      "type": "COMPLETE",
+      "x": 73.0,
+      "y": 72.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Kuray'bin at Splintertree Outpost.",
+      "npc": 12867,
+      "quest": 6503,
+      "tag": "main",
+      "title": "Ashenvale Outrunners",
+      "type": "TURNIN",
+      "x": 71.1,
+      "y": 68.1,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Locke Okarr: Warsong supplies (saw blades, rope, oil, axes) around Splintertree.",
+      "npc": 11820,
+      "quest": 6571,
+      "tag": "main",
+      "title": "Warsong Supplies",
+      "type": "ACCEPT",
+      "x": 71.4,
+      "y": 67.6,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Warsong supplies: oil and blades near (66-78, 45-62).",
+      "quest": 6571,
+      "tag": "main",
+      "title": "Warsong Supplies",
+      "type": "COMPLETE",
+      "x": 67.0,
+      "y": 56.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Locke Okarr at Splintertree Outpost.",
+      "npc": 11820,
+      "quest": 6571,
+      "tag": "main",
+      "title": "Warsong Supplies",
+      "type": "TURNIN",
+      "x": 71.4,
+      "y": 67.6,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Befouled Water Globe: the item is on the ground at (46, 70) in Ashenvale.",
+      "quest": 1918,
+      "tag": "main",
+      "title": "The Befouled Element",
+      "type": "ACCEPT",
+      "x": 46.0,
+      "y": 70.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Mastok Wrilehiss: dispatch 12 Befouled Water Elementals at Mystral Lake.",
+      "npc": 12737,
+      "quest": 25,
+      "tag": "main",
+      "title": "Stonetalon Standstill",
+      "type": "ACCEPT",
+      "x": 73.7,
+      "y": 60.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Befouled Water Elementals at Mystral Lake (49, 70).",
+      "quest": 25,
+      "tag": "main",
+      "title": "Stonetalon Standstill",
+      "type": "COMPLETE",
+      "x": 49.0,
+      "y": 70.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "_review": "W_BACKTRACK: Mastok's globe (1918), the Mystral Lake elementals (25) and Torek's escort are three separate Ashenvale spots. The hub is the turn-in each time.",
+      "note": "Turn in to Mastok Wrilehiss at Splintertree Post.",
+      "npc": 12737,
+      "quest": 25,
+      "tag": "main",
+      "title": "Stonetalon Standstill",
+      "type": "TURNIN",
+      "x": 73.7,
+      "y": 60.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Mastok Wrilehiss at Splintertree Post.",
+      "npc": 12737,
+      "quest": 1918,
+      "tag": "main",
+      "title": "The Befouled Element",
+      "type": "TURNIN",
+      "x": 73.7,
+      "y": 60.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Mastok: take the Befouled Water Globe to Je'neu at Zoram'gar.",
+      "npc": 12737,
+      "quest": 824,
+      "tag": "main",
+      "title": "Je'neu of the Earthen Ring",
+      "type": "ACCEPT",
+      "x": 73.7,
+      "y": 60.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Back to Sun Rock: Maggran, Tammra and Tsunaman are the hub quests for this stop.",
+      "to": "Sun Rock Retreat",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Maggran Earthbinder at Sun Rock: harpies in the hills west of the hub.",
+      "npc": 11860,
+      "quest": 6282,
+      "tag": "main",
+      "title": "Harpies Threaten",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 61.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "_review": "W_MOB_LEVEL: a few Bloodfury Slayers (level 25) are in the harpy flock. The harpies here are 22-23 and the XP-scaled expected level is 21. Skip the Slayers if under 22.",
+      "note": "Bloodfury Harpies, Ambushers and Slayers in the hills west of Sun Rock.",
+      "quest": 6282,
+      "tag": "main",
+      "title": "Harpies Threaten",
+      "type": "COMPLETE",
+      "x": 32.0,
+      "y": 62.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Maggran at Sun Rock.",
+      "npc": 11860,
+      "quest": 6282,
+      "tag": "main",
+      "title": "Harpies Threaten",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 61.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Bloodfury Ripper is an elite. Optional; come back at 22.",
+      "npc": 11860,
+      "quest": 6283,
+      "revisitAt": 22,
+      "tag": "optional-elite",
+      "title": "Bloodfury Bloodline",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 61.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Bloodfury Ripper (elite) in the harpy hills.",
+      "quest": 6283,
+      "tag": "optional-elite",
+      "title": "Bloodfury Bloodline",
+      "type": "COMPLETE",
+      "x": 31.0,
+      "y": 62.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "_review": "W_BACKTRACK: Maggran's elite is a serial link after 6282. Both are in the harpy hills next to Sun Rock (about 36 map-% from the hub).",
+      "note": "Turn in to Maggran at Sun Rock.",
+      "npc": 11860,
+      "quest": 6283,
+      "tag": "optional-elite",
+      "title": "Bloodfury Bloodline",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 61.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Tsunaman at Sun Rock: Trouble in the Deeps. Speak to Je'neu at Zoram'gar later.",
+      "npc": 11862,
+      "quest": 6562,
+      "tag": "optional",
+      "title": "Trouble in the Deeps",
+      "type": "ACCEPT",
+      "x": 47.4,
+      "y": 64.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Tammra Windfield at Sun Rock: 10 Gaea Seeds.",
+      "npc": 11864,
+      "quest": 6301,
+      "tag": "main",
+      "title": "Cycle of Rebirth",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 58.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Gaea Seeds around (49, 41), north of Sun Rock.",
+      "quest": 6301,
+      "tag": "main",
+      "title": "Cycle of Rebirth",
+      "type": "COMPLETE",
+      "x": 48.0,
+      "y": 41.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Tammra at Sun Rock.",
+      "npc": 11864,
+      "quest": 6301,
+      "tag": "main",
+      "title": "Cycle of Rebirth",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 58.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Tammra: plant the seeds in the Gaea Dirt Mounds west of the hub.",
+      "npc": 11864,
+      "quest": 6381,
+      "tag": "main",
+      "title": "New Life",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 58.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Gaea Dirt Mounds at (33, 68); the spare seeds go back to Tammra.",
+      "quest": 6381,
+      "tag": "main",
+      "title": "New Life",
+      "type": "COMPLETE",
+      "x": 33.0,
+      "y": 68.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Tammra at Sun Rock.",
+      "npc": 11864,
+      "quest": 6381,
+      "tag": "main",
+      "title": "New Life",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 58.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Tsunaman at Sun Rock: 10 Incendrites in the west hills.",
+      "npc": 11862,
+      "quest": 6393,
+      "tag": "main",
+      "title": "Elemental War",
+      "type": "ACCEPT",
+      "x": 47.4,
+      "y": 64.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Incendrites around (32-35, 62-70), in the same hills as the Gaea mounds.",
+      "quest": 6393,
+      "tag": "main",
+      "title": "Elemental War",
+      "type": "COMPLETE",
+      "x": 33.0,
+      "y": 67.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "_review": "W_BACKTRACK: Tammra's and Tsunaman's chains are serial, with the Sun Rock hub as the only turn-in. The hills are a short walk from the hub.",
+      "note": "Turn in to Tsunaman at Sun Rock.",
+      "npc": 11862,
+      "quest": 6393,
+      "tag": "main",
+      "title": "Elemental War",
+      "type": "TURNIN",
+      "x": 47.4,
+      "y": 64.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "bagCheck": true,
+      "note": "Tharm at Sun Rock to Ratchet: turn in the eggs (1069) and Chen's Keg (822).",
+      "to": "Ratchet",
+      "type": "FLY"
+    },
+    {
+      "note": "Turn in to Mebok Mizzyrix at Ratchet.",
+      "npc": 3446,
+      "quest": 1069,
+      "tag": "main",
+      "title": "Deepmoss Spider Eggs",
+      "type": "TURNIN",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Drohn at Ratchet.",
+      "npc": 3292,
+      "quest": 822,
+      "tag": "optional",
+      "title": "Chen's Empty Keg",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 38.4,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "note": "Ratchet flight to Orgrimmar: Shenthul is the turn-in for Mission: Possible.",
+      "to": "Orgrimmar",
+      "type": "FLY"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Turn in to Shenthul in Orgrimmar. Rogues only.",
+      "npc": 3401,
+      "quest": 2478,
+      "tag": "optional-elite",
+      "title": "Mission: Possible But Not Probable",
+      "type": "TURNIN",
+      "x": 43.0,
+      "y": 53.7,
+      "zone": "Orgrimmar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Orgrimmar flight to Thunder Bluff for Zamah, Zangen and Windstrid.",
+      "to": "Thunder Bluff",
+      "type": "FLY"
+    },
+    {
+      "note": "Apothecary Zamah in Thunder Bluff: Zamah's Note to Lydon in Tarren Mill.",
+      "npc": 3419,
+      "quest": 1065,
+      "tag": "main",
+      "title": "Journey to Tarren Mill",
+      "type": "ACCEPT",
+      "x": 22.8,
+      "y": 20.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Zangen Stonehoof in Thunder Bluff: fill the Etched Phial in Ashenvale at (60, 73).",
+      "npc": 4721,
+      "quest": 1195,
+      "tag": "main",
+      "title": "The Sacred Flame",
+      "type": "ACCEPT",
+      "x": 55.0,
+      "y": 51.4,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Bluff Runner Windstrid in Thunder Bluff: breadcrumb to Senani at Splintertree (The Ashenvale Hunt).",
+      "npc": 10881,
+      "quest": 742,
+      "tag": "main",
+      "title": "The Ashenvale Hunt",
+      "type": "ACCEPT",
+      "x": 44.3,
+      "y": 58.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "bagCheck": true,
+      "note": "Thunder Bluff flight to Splintertree Post for Senani and the phial.",
+      "to": "Splintertree Post",
+      "type": "FLY"
+    },
+    {
+      "note": "Speak with Senani Thunderheart at Splintertree Post.",
+      "npc": 12696,
+      "quest": 742,
+      "tag": "main",
+      "title": "The Ashenvale Hunt",
+      "type": "TURNIN",
+      "x": 73.8,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Senani Thunderheart: The Ashenvale Hunt, second part.",
+      "npc": 12696,
+      "quest": 6383,
+      "tag": "main",
+      "title": "The Ashenvale Hunt",
+      "type": "ACCEPT",
+      "x": 73.8,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Senani Thunderheart at Splintertree Post.",
+      "npc": 12696,
+      "quest": 6383,
+      "tag": "main",
+      "title": "The Ashenvale Hunt",
+      "type": "TURNIN",
+      "x": 73.8,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Ursangous's Paw: the item is on the ground near (40, 65). Senani wants it.",
+      "quest": 23,
+      "tag": "main",
+      "title": "Ursangous's Paw",
+      "type": "ACCEPT",
+      "x": 39.8,
+      "y": 65.2,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Senani Thunderheart at Splintertree Post.",
+      "npc": 12696,
+      "quest": 23,
+      "tag": "main",
+      "title": "Ursangous's Paw",
+      "type": "TURNIN",
+      "x": 73.8,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Shadumbra's Head: the item is near (58, 56). Senani wants it.",
+      "quest": 24,
+      "tag": "main",
+      "title": "Shadumbra's Head",
+      "type": "ACCEPT",
+      "x": 57.5,
+      "y": 56.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Senani Thunderheart at Splintertree Post.",
+      "npc": 12696,
+      "quest": 24,
+      "tag": "main",
+      "title": "Shadumbra's Head",
+      "type": "TURNIN",
+      "x": 73.8,
+      "y": 61.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Filled Etched Phial at (60, 73), east Ashenvale.",
+      "quest": 1195,
+      "tag": "main",
+      "title": "The Sacred Flame",
+      "type": "COMPLETE",
+      "x": 60.0,
+      "y": 73.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Torek at (68, 75): the short escort to Silverwing Outpost and Ertog at Splintertree.",
+      "npc": 12858,
+      "quest": 6544,
+      "tag": "optional",
+      "title": "Torek's Assault",
+      "type": "ACCEPT",
+      "x": 68.3,
+      "y": 75.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Escort Torek to Silverwing Outpost (65, 75).",
+      "quest": 6544,
+      "tag": "optional",
+      "title": "Torek's Assault",
+      "type": "COMPLETE",
+      "x": 65.0,
+      "y": 75.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "_review": "W_BACKTRACK: the Splintertree hub is the turn-in for Torek's short escort, Senani's items and Mastok's chain. These are batched on one visit.",
+      "note": "Turn in to Ertog Ragetusk at Splintertree Post.",
+      "npc": 12877,
+      "quest": 6544,
+      "tag": "optional",
+      "title": "Torek's Assault",
+      "type": "TURNIN",
+      "x": 73.0,
+      "y": 62.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "bagCheck": true,
+      "note": "West along the Ashenvale road to Zoram'gar Outpost, about 60 map-% away. Discover the flight point on arrival.",
+      "to": "Zoram'gar Outpost",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Andruk at Zoram'gar Outpost: discover on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 12.2,
+      "y": 33.8,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Karang Amakkar at Zoram'gar: Thistlefur Avengers and Shamans.",
+      "npc": 12757,
+      "quest": 216,
+      "tag": "main",
+      "title": "Between a Rock and a Thistlefur",
+      "type": "ACCEPT",
+      "x": 11.9,
+      "y": 34.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Thistlefur Avengers and Shaman around (35, 38).",
+      "quest": 216,
+      "tag": "main",
+      "title": "Between a Rock and a Thistlefur",
+      "type": "COMPLETE",
+      "x": 35.0,
+      "y": 38.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Karang Amakkar at Zoram'gar.",
+      "npc": 12757,
+      "quest": 216,
+      "tag": "main",
+      "title": "Between a Rock and a Thistlefur",
+      "type": "TURNIN",
+      "x": 11.9,
+      "y": 34.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Karang: King of the Foulweald. Place the banner on the Foulweald totem.",
+      "npc": 12757,
+      "quest": 6621,
+      "tag": "main",
+      "title": "King of the Foulweald",
+      "type": "ACCEPT",
+      "x": 11.9,
+      "y": 34.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "_review": "W_EXCURSION: the Foulweald totem is 45-50 map-% from Zoram'gar. Karang turns in at Zoram'gar, so this is one out-and-back on the Ashenvale road, followed by Zoram'gar's other stops.",
+      "note": "Foulweald totem mound at (56, 63), with Chief Murgut.",
+      "quest": 6621,
+      "tag": "main",
+      "title": "King of the Foulweald",
+      "type": "COMPLETE",
+      "x": 56.0,
+      "y": 63.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Karang Amakkar at Zoram'gar.",
+      "npc": 12757,
+      "quest": 6621,
+      "tag": "main",
+      "title": "King of the Foulweald",
+      "type": "TURNIN",
+      "x": 11.9,
+      "y": 34.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Marukai on the Zoram Strand: 20 Wrathtail Heads.",
+      "npc": 12719,
+      "quest": 6442,
+      "tag": "main",
+      "title": "Naga at the Zoram Strand",
+      "type": "ACCEPT",
+      "x": 11.7,
+      "y": 34.9,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Wrathtail Heads on the Zoram Strand around (10, 21).",
+      "quest": 6442,
+      "tag": "main",
+      "title": "Naga at the Zoram Strand",
+      "type": "COMPLETE",
+      "x": 10.0,
+      "y": 21.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Marukai at Zoram'gar.",
+      "npc": 12719,
+      "quest": 6442,
+      "tag": "main",
+      "title": "Naga at the Zoram Strand",
+      "type": "TURNIN",
+      "x": 11.7,
+      "y": 34.9,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Mitsuwa at Zoram'gar: 8 Troll Charms from the forest east of the outpost.",
+      "npc": 12721,
+      "quest": 6462,
+      "tag": "main",
+      "title": "Troll Charm",
+      "type": "ACCEPT",
+      "x": 11.7,
+      "y": 34.9,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Troll Charms around (41, 34).",
+      "quest": 6462,
+      "tag": "main",
+      "title": "Troll Charm",
+      "type": "COMPLETE",
+      "x": 41.0,
+      "y": 34.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Mitsuwa at Zoram'gar.",
+      "npc": 12721,
+      "quest": 6462,
+      "tag": "main",
+      "title": "Troll Charm",
+      "type": "TURNIN",
+      "x": 11.7,
+      "y": 34.9,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Muglash at Zoram'gar: escort to the brazier and keep him safe.",
+      "npc": 12717,
+      "quest": 6641,
+      "tag": "optional",
+      "title": "Vorsha the Lasher",
+      "type": "ACCEPT",
+      "x": 12.1,
+      "y": 34.6,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Put out the brazier at (10, 28), then guard Muglash to the Warsong Runner.",
+      "quest": 6641,
+      "tag": "optional",
+      "title": "Vorsha the Lasher",
+      "type": "COMPLETE",
+      "x": 10.0,
+      "y": 28.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to the Warsong Runner at Zoram'gar.",
+      "npc": 12863,
+      "quest": 6641,
+      "tag": "optional",
+      "title": "Vorsha the Lasher",
+      "type": "TURNIN",
+      "x": 12.2,
+      "y": 34.2,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Je'neu Sancrea at Zoram'gar.",
+      "npc": 12736,
+      "quest": 824,
+      "tag": "main",
+      "title": "Je'neu of the Earthen Ring",
+      "type": "TURNIN",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Je'neu Sancrea at Zoram'gar.",
+      "npc": 12736,
+      "quest": 6562,
+      "tag": "optional",
+      "title": "Trouble in the Deeps",
+      "type": "TURNIN",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Je'neu Sancrea: 20 Sapphires of Aku'Mai. Ashenvale spawns; Darkshore spawns are off route.",
+      "npc": 12736,
+      "quest": 6563,
+      "tag": "optional",
+      "title": "The Essence of Aku'Mai",
+      "type": "ACCEPT",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Je'neu Sancrea: the Damp Note from the cave near (13, 12).",
+      "quest": 6564,
+      "tag": "optional",
+      "title": "Allegiance to the Old Gods",
+      "type": "ACCEPT",
+      "x": 13.6,
+      "y": 12.1,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Sapphires of Aku'Mai at the Ashenvale spawns near (13, 12).",
+      "quest": 6563,
+      "tag": "optional",
+      "title": "The Essence of Aku'Mai",
+      "type": "COMPLETE",
+      "x": 13.0,
+      "y": 12.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Damp Note in the cave near (13, 12).",
+      "quest": 6564,
+      "tag": "optional",
+      "title": "Allegiance to the Old Gods",
+      "type": "COMPLETE",
+      "x": 13.0,
+      "y": 12.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Je'neu Sancrea at Zoram'gar.",
+      "npc": 12736,
+      "quest": 6563,
+      "tag": "optional",
+      "title": "The Essence of Aku'Mai",
+      "type": "TURNIN",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "_review": "W_BACKTRACK: the Je'neu chain is batched. Both 6563 and 6564 are collected in one trip to (13, 12) and turned in on one return.",
+      "note": "Turn in to Je'neu Sancrea at Zoram'gar.",
+      "npc": 12736,
+      "quest": 6564,
+      "tag": "optional",
+      "title": "Allegiance to the Old Gods",
+      "type": "TURNIN",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Je'neu: Allegiance to the Old Gods. Lorgus Jett is in Blackfathom Deeps (elite). Group only.",
+      "npc": 12736,
+      "quest": 6565,
+      "revisitAt": 26,
+      "tag": "optional-elite",
+      "title": "Allegiance to the Old Gods",
+      "type": "ACCEPT",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Lorgus Jett in Blackfathom Deeps (dungeon elite). Group or come back at 26.",
+      "quest": 6565,
+      "tag": "optional-elite",
+      "title": "Allegiance to the Old Gods",
+      "type": "COMPLETE",
+      "x": 13.0,
+      "y": 12.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "_review": "W_BACKTRACK: the Blackfathom Deeps boss (elite, optional) is the last link of the Je'neu chain. It is a dungeon trip, taken only as an optional-elite with a group, revisit at 26.",
+      "note": "Turn in to Je'neu Sancrea at Zoram'gar.",
+      "npc": 12736,
+      "quest": 6565,
+      "tag": "optional-elite",
+      "title": "Allegiance to the Old Gods",
+      "type": "TURNIN",
+      "x": 11.6,
+      "y": 34.3,
+      "zone": "Ashenvale"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Ulric Frostveil at Zoram'gar: a Kor Gem for the paladin. Paladins only.",
+      "npc": 259649,
+      "quest": 95042,
+      "tag": "optional",
+      "title": "Seeking the Kor Gem",
+      "type": "ACCEPT",
+      "x": 11.9,
+      "y": 34.4,
+      "zone": "Ashenvale"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Corrupted Kor Gem near (13.6, 12.1) in Ashenvale. Paladins only.",
+      "quest": 95042,
+      "tag": "optional",
+      "title": "Seeking the Kor Gem",
+      "type": "COMPLETE",
+      "x": 13.6,
+      "y": 12.1,
+      "zone": "Ashenvale"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Turn in to Ulric Frostveil at Zoram'gar. Paladins only.",
+      "npc": 259649,
+      "quest": 95042,
+      "tag": "optional",
+      "title": "Seeking the Kor Gem",
+      "type": "TURNIN",
+      "x": 11.9,
+      "y": 34.4,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Ruul Snowhoof: a long escort east to Yama at Splintertree. Optional.",
+      "npc": 12818,
+      "quest": 6482,
+      "tag": "optional",
+      "title": "Freedom to Ruul",
+      "type": "ACCEPT",
+      "x": 41.5,
+      "y": 34.5,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Escort Ruul from Ashenvale centre toward Splintertree (38, 37).",
+      "quest": 6482,
+      "tag": "optional",
+      "title": "Freedom to Ruul",
+      "type": "COMPLETE",
+      "x": 38.0,
+      "y": 37.0,
+      "zone": "Ashenvale"
+    },
+    {
+      "note": "Turn in to Yama Snowhoof at Splintertree Post.",
+      "npc": 12837,
+      "quest": 6482,
+      "tag": "optional",
+      "title": "Freedom to Ruul",
+      "type": "TURNIN",
+      "x": 74.1,
+      "y": 60.9,
+      "zone": "Ashenvale"
+    },
+    {
+      "bagCheck": true,
+      "note": "Splintertree flight to Camp Taurajo, then south-east to Freewind Post.",
+      "to": "Camp Taurajo",
+      "type": "FLY"
+    },
+    {
+      "note": "East of Freewind to Dorn Plainstalker (54, 41): Test of Faith. The leap is on the way west.",
+      "to": "Dorn Plainstalker",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Dorn Plainstalker: Test of Faith. Leap from the planks overlooking Thousand Needles.",
+      "npc": 2986,
+      "quest": 1149,
+      "tag": "optional",
+      "title": "Test of Faith",
+      "type": "ACCEPT",
+      "x": 54.0,
+      "y": 41.5,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Leap from the planks at (26, 33), on the way to Motega.",
+      "quest": 1149,
+      "tag": "optional",
+      "title": "Test of Faith",
+      "type": "COMPLETE",
+      "x": 26.4,
+      "y": 32.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Dorn Plainstalker in Thousand Needles.",
+      "npc": 2986,
+      "quest": 1149,
+      "tag": "optional",
+      "title": "Test of Faith",
+      "type": "TURNIN",
+      "x": 54.0,
+      "y": 41.5,
+      "zone": "Thousand Needles"
+    },
+    {
+      "bagCheck": true,
+      "note": "Back to Freewind Post, Thousand Needles. Discover the flight point on arrival.",
+      "to": "Freewind Post",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Nyse at Freewind Post: discover on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 45.1,
+      "y": 49.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Starn at Freewind Post: food and water before the Thousand Needles loop.",
+      "type": "BUY",
+      "x": 44.9,
+      "y": 50.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Brave Moonhorn at (32, 22): carry the urgent message to Cliffwatcher Longhorn at Freewind.",
+      "npc": 10079,
+      "quest": 4542,
+      "tag": "main",
+      "title": "Message to Freewind Post",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 22.2,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Cliffwatcher Longhorn at Freewind Post.",
+      "npc": 10537,
+      "quest": 4542,
+      "tag": "main",
+      "title": "Message to Freewind Post",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 50.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Cliffwatcher Longhorn: Pacify the Centaur. Galak Scouts, Wranglers and Windchasers.",
+      "npc": 10537,
+      "quest": 4841,
+      "tag": "main",
+      "title": "Pacify the Centaur",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 50.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Galak Scouts, Wranglers and Windchasers around (43, 39).",
+      "quest": 4841,
+      "tag": "main",
+      "title": "Pacify the Centaur",
+      "type": "COMPLETE",
+      "x": 43.0,
+      "y": 39.0,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Cliffwatcher Longhorn at Freewind Post.",
+      "npc": 10537,
+      "quest": 4841,
+      "tag": "main",
+      "title": "Pacify the Centaur",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 50.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Hagar Lightninghoof at Freewind Post: return the Alien Egg.",
+      "npc": 10539,
+      "quest": 4821,
+      "tag": "main",
+      "title": "Alien Egg",
+      "type": "ACCEPT",
+      "x": 44.6,
+      "y": 50.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Alien Eggs around (45, 56), between Freewind and the Camp Taurajo road.",
+      "quest": 4821,
+      "tag": "main",
+      "title": "Alien Egg",
+      "type": "COMPLETE",
+      "x": 45.0,
+      "y": 56.0,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Hagar Lightninghoof at Freewind Post.",
+      "npc": 10539,
+      "quest": 4821,
+      "tag": "main",
+      "title": "Alien Egg",
+      "type": "TURNIN",
+      "x": 44.6,
+      "y": 50.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Hagar: Serpent Wild. Report your findings to Motega Firemane.",
+      "npc": 10539,
+      "quest": 4865,
+      "tag": "main",
+      "title": "Serpent Wild",
+      "type": "ACCEPT",
+      "x": 44.6,
+      "y": 50.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Motega Firemane in Thousand Needles.",
+      "npc": 10428,
+      "quest": 4865,
+      "tag": "main",
+      "title": "Serpent Wild",
+      "type": "TURNIN",
+      "x": 21.5,
+      "y": 32.4,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Motega Firemane: Sacred Fire. Gather Incendia Agave, then Magatha in Thunder Bluff.",
+      "npc": 10428,
+      "quest": 5062,
+      "tag": "main",
+      "title": "Sacred Fire",
+      "type": "ACCEPT",
+      "x": 21.5,
+      "y": 32.4,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Incendia Agave around (35, 35) in Thousand Needles.",
+      "quest": 5062,
+      "tag": "main",
+      "title": "Sacred Fire",
+      "type": "COMPLETE",
+      "x": 35.0,
+      "y": 35.0,
+      "zone": "Thousand Needles"
+    },
+    {
+      "bagCheck": true,
+      "note": "Freewind flight to Thunder Bluff. Magatha and Zangen are on the Elder Rise.",
+      "to": "Thunder Bluff",
+      "type": "FLY"
+    },
+    {
+      "note": "Turn in to Magatha Grimtotem on the Elder Rise.",
+      "npc": 4046,
+      "quest": 5062,
+      "tag": "main",
+      "title": "Sacred Fire",
+      "type": "TURNIN",
+      "x": 69.8,
+      "y": 30.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Turn in to Zangen Stonehoof in Thunder Bluff.",
+      "npc": 4721,
+      "quest": 1195,
+      "tag": "main",
+      "title": "The Sacred Flame",
+      "type": "TURNIN",
+      "x": 55.0,
+      "y": 51.4,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Thunder Bluff trainers at level 24: druid, hunter, mage, paladin, priest, shaman, warrior.",
+      "type": "TRAINER",
+      "x": 47.2,
+      "y": 63.1,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "bagCheck": true,
+      "note": "Thunder Bluff flight to the Sepulcher (Karos Razok) in Silverpine Forest.",
+      "to": "The Sepulcher",
+      "type": "FLY"
+    },
+    {
+      "note": "Apothecary Renferrel at the Sepulcher: Rot Hide Origins. Prerequisite of the elite 442.",
+      "npc": 1937,
+      "quest": 444,
+      "tag": "main",
+      "title": "Rot Hide Origins",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Rot Hide ichor from the gnolls near the Sepulcher. No DB position; use the Sepulcher area.",
+      "quest": 444,
+      "tag": "main",
+      "title": "Rot Hide Origins",
+      "type": "COMPLETE",
+      "x": 46.0,
+      "y": 42.0,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "Sepulcher bat to Undercity (Michael Garrett). Bethor Iceshard is in the Magic Quarter.",
+      "to": "Undercity",
+      "type": "FLY"
+    },
+    {
+      "note": "Turn in to Bethor Iceshard in the Undercity.",
+      "npc": 1498,
+      "quest": 444,
+      "tag": "main",
+      "title": "Rot Hide Origins",
+      "type": "TURNIN",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Bethor Iceshard: Thule Ravenclaw. Bring the scroll to Renferrel at the Sepulcher.",
+      "npc": 1498,
+      "quest": 446,
+      "tag": "main",
+      "title": "Thule Ravenclaw",
+      "type": "ACCEPT",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Undercity trainers at level 24: rogue, warlock, priest, mage, paladin, warrior. Central city.",
+      "type": "TRAINER",
+      "x": 47.0,
+      "y": 17.0,
+      "zone": "Undercity"
+    },
+    {
+      "bagCheck": true,
+      "note": "Undercity bat back to the Sepulcher.",
+      "to": "The Sepulcher",
+      "type": "FLY"
+    },
+    {
+      "note": "Turn in to Apothecary Renferrel at the Sepulcher.",
+      "npc": 1937,
+      "quest": 446,
+      "tag": "main",
+      "title": "Thule Ravenclaw",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Renferrel: Report to Hadrec at the Sepulcher.",
+      "npc": 1937,
+      "quest": 448,
+      "tag": "main",
+      "title": "Report to Hadrec",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to High Executor Hadrec at the Sepulcher.",
+      "npc": 1952,
+      "quest": 448,
+      "tag": "main",
+      "title": "Report to Hadrec",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Hadrec: Assault on Fenris Isle. Thule Ravenclaw elites on Fenris Isle. Optional.",
+      "npc": 1952,
+      "quest": 442,
+      "revisitAt": 24,
+      "tag": "optional-elite",
+      "title": "Assault on Fenris Isle",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Thule's Head from the Thule Ravenclaw elites on Fenris Isle (65, 24).",
+      "quest": 442,
+      "tag": "optional-elite",
+      "title": "Assault on Fenris Isle",
+      "type": "COMPLETE",
+      "x": 65.7,
+      "y": 23.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to High Executor Hadrec at the Sepulcher.",
+      "npc": 1952,
+      "quest": 442,
+      "tag": "optional-elite",
+      "title": "Assault on Fenris Isle",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "Road east from the Sepulcher to Tarren Mill in Hillsbrad. Discover the bat flight point on arrival.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Zarise at Tarren Mill: discover on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 60.1,
+      "y": 18.6,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Hearth to Innkeeper Shay at Tarren Mill: the exit for band 25-30.",
+      "type": "HEARTH_BIND",
+      "x": 62.8,
+      "y": 19.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Apothecary Lydon at Tarren Mill.",
+      "npc": 2216,
+      "quest": 1065,
+      "tag": "main",
+      "title": "Journey to Tarren Mill",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Lydon: Blood of Innocents. Five vials from the Hillsbrad east.",
+      "npc": 2216,
+      "quest": 1066,
+      "tag": "main",
+      "title": "Blood of Innocents",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "WANTED poster at Tarren Mill: Syndicate rogues and watchmen in the east Hillsbrad.",
+      "quest": 549,
+      "tag": "main",
+      "title": "WANTED: Syndicate Personnel",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 20.6,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Krusk at Tarren Mill: free Drull and Tog'thar from Durnholde Keep.",
+      "npc": 2229,
+      "quest": 498,
+      "tag": "main",
+      "title": "The Rescue",
+      "type": "ACCEPT",
+      "x": 63.2,
+      "y": 20.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "One east loop: vials, Syndicate rogues and Durnholde Keep (75-80, 39-42).",
+      "to": "Hillsbrad east",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Vials of Innocent Blood east of Tarren Mill (66-80, 42-48).",
+      "quest": 1066,
+      "tag": "main",
+      "title": "Blood of Innocents",
+      "type": "COMPLETE",
+      "x": 72.0,
+      "y": 45.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Syndicate rogues and watchmen around (66-79, 42-48).",
+      "quest": 549,
+      "tag": "main",
+      "title": "WANTED: Syndicate Personnel",
+      "type": "COMPLETE",
+      "x": 72.0,
+      "y": 46.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Locked balls in Durnholde Keep (75-80, 39-42).",
+      "quest": 498,
+      "tag": "main",
+      "title": "The Rescue",
+      "type": "COMPLETE",
+      "x": 77.0,
+      "y": 40.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to Tarren Mill to turn in the east quests.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Apothecary Lydon at Tarren Mill.",
+      "npc": 2216,
+      "quest": 1066,
+      "tag": "main",
+      "title": "Blood of Innocents",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to High Executor Darthalia at Tarren Mill.",
+      "npc": 2215,
+      "quest": 549,
+      "tag": "main",
+      "title": "WANTED: Syndicate Personnel",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "_review": "W_BACKTRACK: Krusk, the Syndicate and the vials are batched on one east loop from Tarren Mill (about 74 map-%). This is the only east trip.",
+      "note": "Turn in to Krusk at Tarren Mill.",
+      "npc": 2229,
+      "quest": 498,
+      "tag": "main",
+      "title": "The Rescue",
+      "type": "TURNIN",
+      "x": 63.2,
+      "y": 20.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Lydon: Elixir of Suffering. Gray Bear Tongues and Creeper Ichor in west-central Hillsbrad.",
+      "npc": 2216,
+      "quest": 496,
+      "tag": "main",
+      "title": "Elixir of Suffering",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Lydon: Elixir of Pain. Mountain Lion Blood from the Hillsbrad lions.",
+      "npc": 2216,
+      "quest": 501,
+      "tag": "main",
+      "title": "Elixir of Pain",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "West to Deathstalker Lesh (21, 47), then the Gray Bear Tongues (40, 49) on the way back.",
+      "to": "Far west Hillsbrad (Lesh)",
+      "type": "TRAVEL"
+    },
+    {
+      "_review": "W_EXCURSION: Lesh is the far-west outlier, about 50 map-% from Tarren Mill. The walk is on the west loop with the Gray Bear Tongues. Drop it if the walk is not wanted.",
+      "note": "Deathstalker Lesh in the far west Hillsbrad (21, 47): a message for Darthalia.",
+      "npc": 2214,
+      "quest": 494,
+      "tag": "optional",
+      "title": "Time To Strike",
+      "type": "ACCEPT",
+      "x": 20.8,
+      "y": 47.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Gray Bear Tongues and Creeper Ichor in west-central Hillsbrad (33-40, 49-58).",
+      "quest": 496,
+      "tag": "main",
+      "title": "Elixir of Suffering",
+      "type": "COMPLETE",
+      "x": 36.0,
+      "y": 53.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Mountain Lion Blood around (53, 37).",
+      "quest": 501,
+      "tag": "main",
+      "title": "Elixir of Pain",
+      "type": "COMPLETE",
+      "x": 53.0,
+      "y": 37.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to Tarren Mill: Lydon's elixirs and Darthalia for Lesh's message.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Apothecary Lydon at Tarren Mill.",
+      "npc": 2216,
+      "quest": 496,
+      "tag": "main",
+      "title": "Elixir of Suffering",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Apothecary Lydon at Tarren Mill.",
+      "npc": 2216,
+      "quest": 501,
+      "tag": "main",
+      "title": "Elixir of Pain",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to High Executor Darthalia at Tarren Mill.",
+      "npc": 2215,
+      "quest": 494,
+      "tag": "optional",
+      "title": "Time To Strike",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Umpi at Tarren Mill: give him the Elixir of Suffering.",
+      "npc": 2216,
+      "quest": 499,
+      "tag": "main",
+      "title": "Elixir of Suffering",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Umpi at Tarren Mill.",
+      "npc": 2230,
+      "quest": 499,
+      "tag": "main",
+      "title": "Elixir of Suffering",
+      "type": "TURNIN",
+      "x": 61.5,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Lydon: take the Elixir of Pain to Stanley in Hillsbrad.",
+      "npc": 2216,
+      "quest": 502,
+      "tag": "main",
+      "title": "Elixir of Pain",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "High Executor Darthalia at Tarren Mill: Battle of Hillsbrad (farmers, Ray and Getz).",
+      "npc": 2215,
+      "quest": 527,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "West to the farms at (33, 39); Stanley is at (33, 35), on the same stop.",
+      "to": "Hillsbrad farms",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Hillsbrad farmers, Farmer Ray and Farmer Getz around (33, 39).",
+      "quest": 527,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "COMPLETE",
+      "x": 33.0,
+      "y": 39.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Feed the Elixir of Pain to Stanley in Hillsbrad (33, 35).",
+      "npc": 2274,
+      "quest": 502,
+      "tag": "main",
+      "title": "Elixir of Pain",
+      "type": "TURNIN",
+      "x": 32.7,
+      "y": 35.3,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to Tarren Mill to turn in Battle of Hillsbrad part 1.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "_review": "W_BACKTRACK: Darthalia's Battle of Hillsbrad is a serial four-part chain, each part turned in at Tarren Mill. Samsa, Stanley, the east loop and the west loop are batched between them.",
+      "note": "Turn in to High Executor Darthalia at Tarren Mill.",
+      "npc": 2215,
+      "quest": 527,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Darthalia: Battle of Hillsbrad, part 2 (15 Hillsbrad Peasants).",
+      "npc": 2215,
+      "quest": 528,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Deathguard Samsa at Tarren Mill: 30 Hillsbrad Human Skulls.",
+      "npc": 2418,
+      "quest": 546,
+      "tag": "main",
+      "title": "Souvenirs of Death",
+      "type": "ACCEPT",
+      "x": 62.1,
+      "y": 19.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to the farms: peasants (33, 44) and human skulls (32, 46) on one loop.",
+      "to": "Hillsbrad farms",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Hillsbrad Peasants around (33, 44).",
+      "quest": 528,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "COMPLETE",
+      "x": 33.0,
+      "y": 44.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Hillsbrad human skulls around (32, 46), near the farms.",
+      "quest": 546,
+      "tag": "main",
+      "title": "Souvenirs of Death",
+      "type": "COMPLETE",
+      "x": 32.0,
+      "y": 46.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to Tarren Mill: Darthalia and Samsa.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to High Executor Darthalia at Tarren Mill.",
+      "npc": 2215,
+      "quest": 528,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Deathguard Samsa at Tarren Mill.",
+      "npc": 2418,
+      "quest": 546,
+      "tag": "main",
+      "title": "Souvenirs of Death",
+      "type": "TURNIN",
+      "x": 62.1,
+      "y": 19.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Darthalia: Battle of Hillsbrad, part 3 (Verringtan and the iron shipment).",
+      "npc": 2215,
+      "quest": 529,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Walk to the centre of Hillsbrad (32, 45): Verringtan, the apprentices and the iron shipment.",
+      "to": "Hillsbrad centre",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Blacksmith Verringtan, apprentices and the iron shipment around (32, 45).",
+      "quest": 529,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "COMPLETE",
+      "x": 32.0,
+      "y": 45.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to Tarren Mill to turn in part 3 and take part 4.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "_review": "W_BACKTRACK: part 3 of the Battle of Hillsbrad is a serial chain that must return to Tarren between parts. The walk is 34 map-%.",
+      "note": "Turn in to High Executor Darthalia at Tarren Mill.",
+      "npc": 2215,
+      "quest": 529,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Darthalia: Battle of Hillsbrad, part 4 (Magistrate Burnside and the councilmen).",
+      "npc": 2215,
+      "quest": 532,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Walk to the proclamation hall at (30, 42): Burnside, councilmen and the proclamation.",
+      "to": "Hillsbrad proclamation hall",
+      "type": "TRAVEL"
+    },
+    {
+      "_review": "W_MOB_LEVEL: Magistrate Burnside is level 30 in the DB and the expected level here is 24. He is the last named target. If under 25, skip him: the councilmen and the proclamation are lower.",
+      "note": "Burnside, councilmen and the Hillsbrad proclamation around (30, 42).",
+      "quest": 532,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "COMPLETE",
+      "x": 30.0,
+      "y": 42.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back to Tarren Mill to finish the Battle of Hillsbrad.",
+      "to": "Tarren Mill",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to High Executor Darthalia at Tarren Mill.",
+      "npc": 2215,
+      "quest": 532,
+      "tag": "main",
+      "title": "Battle of Hillsbrad",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Kayren Soothallow at Tarren Mill: food, water and ammo before the exit.",
+      "type": "BUY",
+      "x": 62.6,
+      "y": 19.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Repair at Tarren Mill before the band ends. Next band starts here.",
+      "type": "VENDOR_REPAIR",
+      "x": 62.6,
+      "y": 19.9,
+      "zone": "Hillsbrad Foothills"
+    }
+  ]
+}

@@ -1,0 +1,1460 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 23,
+      "reason": "The Ashenvale Hunt second part and the Senani item quests at Splintertree: 4.5k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 24,
+      "reason": "The Ashenvale Hunt second part and the Senani item quests at Splintertree: 4.5k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 25,
+      "reason": "Mastok Wrilehiss and the Befouled Water chain: Mystral Lake elementals and the globe to Je'neu."
+    },
+    {
+      "decision": "drop",
+      "quest": 63,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 96,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 100,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 104,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "drop",
+      "quest": 152,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "main",
+      "quest": 216,
+      "reason": "Karang Amakkar at Zoram'gar: Thistlefur (216) then the Foulweald banner (6621)."
+    },
+    {
+      "decision": "drop",
+      "quest": 220,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 235,
+      "reason": "Exclusive with 742 (Orgrimmar breadcrumb to 6383). The route takes 742 from Thunder Bluff."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 442,
+      "reason": "Assault on Fenris Isle: Thule Ravenclaw elites on Fenris Isle. Optional; come back at 24.",
+      "revisitAt": 24
+    },
+    {
+      "decision": "drop",
+      "quest": 451,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "drop",
+      "quest": 461,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "drop",
+      "quest": 480,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 491,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "drop",
+      "quest": 493,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "optional",
+      "quest": 494,
+      "reason": "Deathstalker Lesh in the far west Hillsbrad: 780 XP, on the west loop with the Gray Bear Tongues."
+    },
+    {
+      "decision": "main",
+      "quest": 496,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 498,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 499,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 501,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 502,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "drop",
+      "quest": 516,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 527,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 528,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 529,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "drop",
+      "quest": 530,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "main",
+      "quest": 532,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 546,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 549,
+      "reason": "Hillsbrad block around Tarren Mill: Battle of Hillsbrad chain, Elixirs, Krusk, Syndicate, Samsa."
+    },
+    {
+      "decision": "main",
+      "quest": 742,
+      "reason": "Breadcrumb to The Ashenvale Hunt (Senani). Used by every race: the Jorn-side start (6382) is not routable."
+    },
+    {
+      "decision": "optional",
+      "quest": 822,
+      "reason": "Chen's Empty Keg (Drohn): 970 XP, objectives on the south Barrens loop."
+    },
+    {
+      "decision": "main",
+      "quest": 824,
+      "reason": "Mastok Wrilehiss and the Befouled Water chain: Mystral Lake elementals and the globe to Je'neu."
+    },
+    {
+      "decision": "main",
+      "quest": 843,
+      "reason": "Gann Stonespire chain: the Bael'dun camp south of Camp Taurajo."
+    },
+    {
+      "decision": "main",
+      "quest": 846,
+      "reason": "Gann Stonespire chain: the Bael'dun camp south of Camp Taurajo."
+    },
+    {
+      "decision": "main",
+      "quest": 849,
+      "reason": "Gann Stonespire chain: the Bael'dun camp south of Camp Taurajo."
+    },
+    {
+      "decision": "drop",
+      "quest": 851,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 852,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 858,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 862,
+      "reason": "Profession-gated (Cooking 15): Dig Rat Stew."
+    },
+    {
+      "decision": "drop",
+      "quest": 863,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 865,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 868,
+      "reason": "Not routed on this band: off-path or low value for the time."
+    },
+    {
+      "decision": "drop",
+      "quest": 873,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "decision": "drop",
+      "quest": 874,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "decision": "drop",
+      "quest": 876,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 878,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 879,
+      "reason": "Mangletooth / Thork / Tatternack: Betrayal from Within and Weapons of Choice on the south loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 882,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "decision": "drop",
+      "quest": 883,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 884,
+      "reason": "Camp Taurajo item quests (no prerequisite): Owatanka's Tailspike, Washte Pawne's Feather, Harvester's Head."
+    },
+    {
+      "decision": "main",
+      "quest": 885,
+      "reason": "Camp Taurajo item quests (no prerequisite): Owatanka's Tailspike, Washte Pawne's Feather, Harvester's Head."
+    },
+    {
+      "decision": "drop",
+      "quest": 889,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 891,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 893,
+      "reason": "Mangletooth / Thork / Tatternack: Betrayal from Within and Weapons of Choice on the south loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 896,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 897,
+      "reason": "Camp Taurajo item quests (no prerequisite): Owatanka's Tailspike, Washte Pawne's Feather, Harvester's Head."
+    },
+    {
+      "decision": "drop",
+      "quest": 898,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 899,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 906,
+      "reason": "Mangletooth / Thork / Tatternack: Betrayal from Within and Weapons of Choice on the south loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 907,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "decision": "drop",
+      "quest": 913,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "decision": "drop",
+      "quest": 914,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 959,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "drop",
+      "quest": 962,
+      "reason": "Handed to horde_horde_25-30: Serpentbloom is in the Barrens near the Crossroads; turn-in is in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 972,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1013,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1014,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1058,
+      "reason": "Malaka'jin start far south-east in Stonetalon; the objectives are in the north-west. Two long walks."
+    },
+    {
+      "decision": "drop",
+      "quest": 1060,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1062,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1063,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1064,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 1065,
+      "reason": "Zamah's Note and Blood of Innocents: Tarren Mill (Lydon), turned in on the exit block."
+    },
+    {
+      "decision": "main",
+      "quest": 1066,
+      "reason": "Zamah's Note and Blood of Innocents: Tarren Mill (Lydon), turned in on the exit block."
+    },
+    {
+      "decision": "drop",
+      "quest": 1067,
+      "reason": "Handed to horde_horde_25-30: its turn-in is Zamah in Thunder Bluff, after the Hillsbrad block; this band ends at Tarren Mill."
+    },
+    {
+      "decision": "drop",
+      "quest": 1068,
+      "reason": "Seereth turn-in is about 40 map-% from the XT shredders in Stonetalon, with no return on the route. Handed to 25-30."
+    },
+    {
+      "decision": "main",
+      "quest": 1069,
+      "reason": "Ziz Fizziks / Sputtervalve / Mebok chain: Stonetalon eggs and the Ratchet turn-ins."
+    },
+    {
+      "decision": "drop",
+      "quest": 1086,
+      "reason": "Handed to horde_horde_25-30: needs 1067 first, then a fogger trip to the Venture Co sky port and back to Zamah."
+    },
+    {
+      "decision": "drop",
+      "quest": 1087,
+      "reason": "Cenarius' Legacy: objectives at (36, 12) far north-west, turn-in at Sun Rock. Not on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1090,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1092,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1093,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 1094,
+      "reason": "Ziz Fizziks / Sputtervalve / Mebok chain: Stonetalon eggs and the Ratchet turn-ins."
+    },
+    {
+      "decision": "main",
+      "quest": 1095,
+      "reason": "Ziz Fizziks / Sputtervalve / Mebok chain: Stonetalon eggs and the Ratchet turn-ins."
+    },
+    {
+      "decision": "main",
+      "quest": 1096,
+      "reason": "Ziz Fizziks / Sputtervalve / Mebok chain: Stonetalon eggs and the Ratchet turn-ins."
+    },
+    {
+      "decision": "drop",
+      "quest": 1098,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1103,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "optional",
+      "quest": 1149,
+      "reason": "Test of Faith: accept at Dorn, leap from the planks near Motega, turn in at Dorn. 1050 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 1195,
+      "reason": "The Sacred Flame: Zangen in Thunder Bluff, phial at (60, 73) in Ashenvale: 2550 XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 1198,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "main",
+      "quest": 1221,
+      "reason": "Mebok's Blueleaf Tubers: 2100 XP, all objectives at Ratchet."
+    },
+    {
+      "decision": "drop",
+      "quest": 1472,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1474,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1476,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 1483,
+      "reason": "Ziz Fizziks / Sputtervalve / Mebok chain: Stonetalon eggs and the Ratchet turn-ins."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1487,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1491,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1507,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1508,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1509,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1510,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1511,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1512,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1513,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1515,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1528,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1529,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1530,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1534,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1535,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1536,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1740,
+      "reason": "Warlock class; the Soran'ruk fragments have no objective positions in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 1823,
+      "reason": "Breadcrumb to 1824 (done in horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1824,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1825,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 1918,
+      "reason": "Mastok Wrilehiss and the Befouled Water chain: Mystral Lake elementals and the globe to Je'neu."
+    },
+    {
+      "decision": "drop",
+      "quest": 1943,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1944,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1945,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1946,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs for class-only XP. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1999,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2381,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "decision": "class",
+      "quest": 2458,
+      "reason": "Rogue chain start (Shenthul in Orgrimmar, Taskmaster Fizzule). Class-only; kept and routed for rogues."
+    },
+    {
+      "decision": "class",
+      "quest": 2460,
+      "reason": "Rogue chain start (Shenthul in Orgrimmar, Taskmaster Fizzule). Class-only; kept and routed for rogues."
+    },
+    {
+      "decision": "class",
+      "quest": 2478,
+      "reason": "Mission: Possible But Not Probable (elite Venture Co). Class-only; kept for rogues. Elite, so not dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 2479,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2480,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2985,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2986,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 3261,
+      "reason": "Jorn chain: needs 905 on the path, which horde_horde_10-15 gives to Orc/Troll only and the Zephra and Tirisfal paths never complete. Not routable for all races."
+    },
+    {
+      "decision": "drop",
+      "quest": 3281,
+      "reason": "Done in an earlier band (horde_horde_10-15 Durotar route)."
+    },
+    {
+      "decision": "drop",
+      "quest": 3369,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "optional",
+      "quest": 3513,
+      "reason": "Runed Scroll picked up south of Gann and delivered to Kadrak in the north Barrens: 2550 XP on the north leg."
+    },
+    {
+      "decision": "drop",
+      "quest": 3567,
+      "reason": "To the Top (Feralas): no XP row, far south-east."
+    },
+    {
+      "decision": "drop",
+      "quest": 3923,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 3924,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 4021,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "main",
+      "quest": 4542,
+      "reason": "Thousand Needles quests (Freewind, Motega). Sacred Fire turns in at Magatha in Thunder Bluff."
+    },
+    {
+      "decision": "main",
+      "quest": 4821,
+      "reason": "Thousand Needles quests (Freewind, Motega). Sacred Fire turns in at Magatha in Thunder Bluff."
+    },
+    {
+      "decision": "main",
+      "quest": 4841,
+      "reason": "Thousand Needles quests (Freewind, Motega). Sacred Fire turns in at Magatha in Thunder Bluff."
+    },
+    {
+      "decision": "main",
+      "quest": 4865,
+      "reason": "Thousand Needles quests (Freewind, Motega). Sacred Fire turns in at Magatha in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 4921,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 5042,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5043,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5044,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5045,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5046,
+      "reason": "Mangletooth/Agamaggan boons: no XP rows, pick-one buffs. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5052,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 5062,
+      "reason": "Thousand Needles quests (Freewind, Motega). Sacred Fire turns in at Magatha in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 5421,
+      "reason": "Fish in a Bucket (Desolace): no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5642,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5643,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5644,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5646,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5679,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5680,
+      "reason": "Priest Shadowguard / Devouring Plague chain (class-only). Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 6282,
+      "reason": "Sun Rock quests from Maggran, Tammra and Tsunaman: good XP in the hills next to the hub."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6283,
+      "reason": "Bloodfury Ripper is an elite. Optional; come back at 22.",
+      "revisitAt": 22
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6284,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "main",
+      "quest": 6301,
+      "reason": "Sun Rock quests from Maggran, Tammra and Tsunaman: good XP in the hills next to the hub."
+    },
+    {
+      "decision": "main",
+      "quest": 6381,
+      "reason": "Sun Rock quests from Maggran, Tammra and Tsunaman: good XP in the hills next to the hub."
+    },
+    {
+      "decision": "drop",
+      "quest": 6382,
+      "reason": "Jorn-side start of The Ashenvale Hunt needs 882 (Jorn chain, not routable for all races). The TB breadcrumb 742 is used instead."
+    },
+    {
+      "decision": "main",
+      "quest": 6383,
+      "reason": "The Ashenvale Hunt second part and the Senani item quests at Splintertree: 4.5k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 6393,
+      "reason": "Sun Rock quests from Maggran, Tammra and Tsunaman: good XP in the hills next to the hub."
+    },
+    {
+      "decision": "drop",
+      "quest": 6401,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6421,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 6441,
+      "reason": "Satyr Horns, Ashenvale Outrunners and Warsong Supplies around Splintertree."
+    },
+    {
+      "decision": "main",
+      "quest": 6442,
+      "reason": "Marukai and Mitsuwa at Zoram'gar: wrathtail heads and troll charms."
+    },
+    {
+      "decision": "drop",
+      "quest": 6461,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "main",
+      "quest": 6462,
+      "reason": "Marukai and Mitsuwa at Zoram'gar: wrathtail heads and troll charms."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6481,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "optional",
+      "quest": 6482,
+      "reason": "Freedom to Ruul: long escort from Ashenvale centre to Splintertree. Optional."
+    },
+    {
+      "decision": "main",
+      "quest": 6503,
+      "reason": "Satyr Horns, Ashenvale Outrunners and Warsong Supplies around Splintertree."
+    },
+    {
+      "decision": "drop",
+      "quest": 6523,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6541,
+      "reason": "Breadcrumbs for 6543, which is dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 6542,
+      "reason": "Breadcrumbs for 6543, which is dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 6543,
+      "reason": "Warsong Reports: runner deliveries in Ashenvale and a return to Kadrak in the north Barrens. Two long walks."
+    },
+    {
+      "decision": "optional",
+      "quest": 6544,
+      "reason": "Torek's Assault: short escort from Torek to Ertog at Splintertree."
+    },
+    {
+      "decision": "drop",
+      "quest": 6545,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 6546,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 6547,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 6548,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6561,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "optional",
+      "quest": 6562,
+      "reason": "Tsunaman's Trouble in the Deeps: breadcrumb to Je'neu. The route passes Je'neu at Zoram'gar."
+    },
+    {
+      "decision": "optional",
+      "quest": 6563,
+      "reason": "Sapphires of Aku'Mai: the Ashenvale spawns are on route; the Darkshore spawns are not."
+    },
+    {
+      "decision": "optional",
+      "quest": 6564,
+      "reason": "Damp Note from the Ashenvale cave near (13, 12). Needed to unlock the elite 6565."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6565,
+      "reason": "Lorgus Jett in Blackfathom Deeps (dungeon boss, elite). Optional; group or come back at 26.",
+      "revisitAt": 26
+    },
+    {
+      "decision": "main",
+      "quest": 6571,
+      "reason": "Satyr Horns, Ashenvale Outrunners and Warsong Supplies around Splintertree."
+    },
+    {
+      "decision": "drop",
+      "quest": 6581,
+      "reason": "Warsong runner updates: no XP rows in the DB."
+    },
+    {
+      "decision": "main",
+      "quest": 6621,
+      "reason": "Karang Amakkar at Zoram'gar: Thistlefur (216) then the Foulweald banner (6621)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6629,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "optional",
+      "quest": 6641,
+      "reason": "Muglash's brazier escort at Zoram'gar: short escort, Warsong Runner turn-in."
+    },
+    {
+      "decision": "drop",
+      "quest": 6681,
+      "reason": "Rogue class quest (chain or breadcrumb). Not routed; rogues have 2460/2458/2478 on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6921,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6981,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 8171,
+      "reason": "Battleground quest (Arathi Basin / Warsong Gulch): not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8368,
+      "reason": "Battleground quest (Arathi Basin / Warsong Gulch): not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8389,
+      "reason": "Battleground quest (Arathi Basin / Warsong Gulch): not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8768,
+      "reason": "Holiday or PvP token quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8851,
+      "reason": "Holiday or PvP token quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 9388,
+      "reason": "Flickering Flames: starts in Teldrassil (Alliance zone). Not reachable for Horde leveling."
+    },
+    {
+      "decision": "drop",
+      "quest": 9389,
+      "reason": "Flickering Flames: starts in Teldrassil (Alliance zone). Not reachable for Horde leveling."
+    },
+    {
+      "decision": "drop",
+      "quest": 65593,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 65597,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 65601,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 65604,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 65610,
+      "reason": "Warlock chain (class-only, Undercity/Orgrimmar/Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 78124,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78127,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78132,
+      "reason": "Dragonslayer gear turn-ins: no XP rows and no reward data."
+    },
+    {
+      "decision": "drop",
+      "quest": 78133,
+      "reason": "Dragonslayer gear turn-ins: no XP rows and no reward data."
+    },
+    {
+      "decision": "drop",
+      "quest": 78134,
+      "reason": "Dragonslayer gear turn-ins: no XP rows and no reward data."
+    },
+    {
+      "decision": "drop",
+      "quest": 78142,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78143,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78145,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78146,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78147,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78148,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78149,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78150,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 78261,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78270,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79007,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79091,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79092,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79093,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79094,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79095,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79096,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79097,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 79192,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79362,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79363,
+      "reason": "Shaman Call of Water chain (class-only, scattered over three zones). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79980,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 86576,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 91858,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 91859,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 91860,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 91861,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 91862,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 92401,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92421,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92422,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92706,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "drop",
+      "quest": 95034,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95036,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "class",
+      "quest": 95042,
+      "reason": "Seeking the Kor Gem: paladin-only, Ashenvale spawn. Kept as class and routed for paladins."
+    },
+    {
+      "decision": "drop",
+      "quest": 95111,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95125,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95126,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95140,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95204,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 95216,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 95494,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95495,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95507,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95508,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95621,
+      "reason": "Walton / Kul Tiras marines chain: no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95774,
+      "reason": "Done in an earlier band (horde_horde_15-20)."
+    },
+    {
+      "decision": "drop",
+      "quest": 95883,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95884,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95885,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95981,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96204,
+      "reason": "Silverpine follow-ups (Beren's Peril, Watching the Roads): no XP rows, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96779,
+      "reason": "Paladin Undead chain or rogue class quest (class-only). Not routed."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 97003,
+      "reason": "Elite; done in horde_horde_15-20. Kept as optional-elite for the record (not dropped)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 97250,
+      "reason": "Grunt Logmar's Outraged Pillagers (elite). Optional; come back at 22.",
+      "revisitAt": 22
+    },
+    {
+      "decision": "drop",
+      "quest": 97286,
+      "reason": "Forever library book chain: no XP rows, books scattered across the world."
+    },
+    {
+      "decision": "drop",
+      "quest": 97288,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97289,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97290,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97291,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97292,
+      "reason": "Dungeon quest; not in this band's route (5-man, not soloable for this profile)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97538,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98093,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98094,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98095,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98251,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98252,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98299,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98340,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98341,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98342,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98362,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98404,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98405,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98738,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98739,
+      "reason": "Druid Moonglade chain (Tauren class-only). Moonglade is far off route."
+    }
+  ],
+  "id": "horde_horde_20-25",
+  "schemaVersion": 1
+}
