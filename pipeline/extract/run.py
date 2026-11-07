@@ -163,6 +163,9 @@ def run_extract(
     progress("inventorying corrections")
     correction_report = corrections_mod.inventory(questiedb)
 
+    progress("reading objective-first hints")
+    hints = corrections_mod.objective_hints(questiedb)
+
     progress("parsing support data")
     support_report = support_mod.SupportReport()
     xp = support_mod.parse_xp(questiedb / "support" / "Forever" / "QuestXP" / "xpDB-classic.lua")
@@ -175,17 +178,17 @@ def run_extract(
         "objects.json": entities["Object"],
         "items.json": entities["Item"],
         "xp.json": xp,
+        "objective_hints.json": hints,
         "zones.json": zones,
     }
     outputs: dict[str, dict[str, Any]] = {}
     for filename, data in datasets.items():
         path = out_dir / filename
         path.write_text(dumps(data), encoding="utf-8", newline="\n")
-        entries = (
-            sum(len(section) for section in data.values())
-            if filename == "zones.json"
-            else len(data)
-        )
+        if filename in ("zones.json", "objective_hints.json"):
+            entries = sum(len(section) for section in data.values())
+        else:
+            entries = len(data)
         outputs[filename] = {"sha256": sha256_file(path), "entries": entries}
 
     counts = {
@@ -195,6 +198,7 @@ def run_extract(
         "items": len(entities["Item"]),
         "xp": len(xp),
         "zones": sum(support_report.zone_sections.values()),
+        "objective_hints": sum(len(ids) for ids in hints.values()),
     }
 
     manifest = {

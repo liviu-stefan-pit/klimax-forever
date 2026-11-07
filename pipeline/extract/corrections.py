@@ -107,3 +107,23 @@ def inventory(questiedb: Path) -> CorrectionReport:
     report.runtime_only.sort(key=lambda item: item["file"])
     report.skipped.sort(key=lambda item: item["file"])
     return report
+
+
+OBJECTIVE_HINT = re.compile(
+    r"^QuestieCorrections\.(\w*ObjectiveFirst)\[(\d+)\]\s*=\s*true", re.MULTILINE
+)
+
+
+def objective_hints(questiedb: Path) -> dict[str, list[int]]:
+    """Top-level ``QuestieCorrections.<kind>ObjectiveFirst[id] = true`` hints.
+
+    QuestieDB runs these at load time, outside ``Load()``, so they are not in the TOC. They
+    decide which objective of a quest comes first. Only unconditional, column-0 assignments
+    are read; that is what the Forever files contain.
+    """
+    root = questiedb / "src" / "corrections" / "Forever"
+    hints: dict[str, set[int]] = {}
+    for path in sorted(root.rglob("*.lua")):
+        for kind, quest_id in OBJECTIVE_HINT.findall(path.read_text(encoding="utf-8")):
+            hints.setdefault(kind, set()).add(int(quest_id))
+    return {kind: sorted(ids) for kind, ids in sorted(hints.items())}

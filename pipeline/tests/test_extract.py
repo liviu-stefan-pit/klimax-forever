@@ -113,3 +113,9 @@ def test_running_twice_is_byte_identical(tmp_path: Path, extract_once: Path) -> 
     run_extract(out_dir=second)
     for path in sorted(extract_once.iterdir()):
         assert (second / path.name).read_bytes() == path.read_bytes(), path.name
+
+
+def test_objective_hints_match_forever_files(extract_once: Path) -> None:
+    hints = json.loads((extract_once / "objective_hints.json").read_text(encoding="utf-8"))
+    assert hints["itemObjectiveFirst"] == [503, 5088, 91317, 92682, 97277, 97485]
+    assert hints["killCreditObjectiveFirst"] == [94489, 98386]
