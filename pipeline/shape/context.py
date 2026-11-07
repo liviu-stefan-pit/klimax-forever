@@ -167,9 +167,19 @@ class ShapeContext:
         known_all = 0
         for bit in known_bits:
             known_all |= bit
+        # The DB often leaves startedBy empty and links the starting item the other way round
+        # (items.startQuest, or the quest's sourceItemId). Those items are kind-"i" starters.
+        item_starters: dict[int, list[int]] = {}
+        for item_id, item in raw.items.items():
+            if item.get("startQuest"):
+                item_starters.setdefault(int(item["startQuest"]), []).append(item_id)
         for qid in sorted(raw.quests):
             quest = raw.quests[qid]
             starters = refs(quest.get("startedBy"))
+            if not starters:
+                source = int(quest.get("sourceItemId") or 0)
+                ids = item_starters.get(qid) or ([source] if source in raw.items else [])
+                starters = [("i", i) for i in sorted(ids)]
             if not starters:
                 st.no_starter_all_db += 1
             if quest.get("placeholder"):

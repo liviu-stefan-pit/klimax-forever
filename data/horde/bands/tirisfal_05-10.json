@@ -7,7 +7,7 @@
 "hubs":[
 {"h":1,"n":17,"name":"Tirisfal Glades (22, 45)","svc":["stable"],"x":21.8,"y":45.4,"z":85},
 {"h":2,"n":13,"name":"Deathknell","x":31.2,"y":66.1,"z":85},
-{"h":3,"n":60,"name":"Brill","svc":["inn","stable"],"x":60.9,"y":51.9,"z":85},
+{"h":3,"n":61,"name":"Brill","svc":["inn","stable"],"x":60.9,"y":52.0,"z":85},
 {"h":4,"n":10,"name":"Tirisfal Glades (66, 60)","svc":["zep"],"x":65.6,"y":60.4,"z":85},
 {"h":5,"n":14,"name":"The Sepulcher","svc":["fm","inn","stable"],"x":43.9,"y":41.2,"z":130}
 ],
@@ -21,6 +21,7 @@
 {"f":"s","i":358,"l":8,"n":"Graverobbers","o":[{"c":[{"n":26,"r":3.6,"x":55.9,"y":42.6,"z":85}],"i":1941,"k":"c","lv":[6,7],"n":"Rot Hide Graverobber","rk":0,"sp":26},{"c":[{"n":21,"r":4.8,"x":59.0,"y":34.3,"z":85}],"i":1675,"k":"c","lv":[7,8],"n":"Rot Hide Mongrel","rk":0,"sp":21},{"c":[{"n":64,"r":7.9,"x":57.6,"y":38.8,"z":85}],"i":2834,"k":"i","lv":[6,8],"n":"Embalming Ichor","rk":0,"sp":64,"src":[[1941,"Rot Hide Graverobber"],[1675,"Rot Hide Mongrel"],[1674,"Rot Hide Gnoll"]]}],"rl":4,"rw":[{"c":4,"i":3439,"il":8,"n":"Zombie Skin Boots","rl":0,"s":2},{"c":4,"i":6063,"il":8,"n":"Cold Steel Gauntlets","rl":0,"s":3}],"s":{"h":3,"i":1499,"k":"n","n":"Magistrate Sevren","x":61.3,"y":50.8,"z":85},"t":"Kill Rot Hide Graverobbers and Rot Hide Mongrels. Bring 8 Embalming Ichors to Magistrate Sevren in Brill.","xp":700,"z":85},
 {"f":{"h":4,"i":1495,"k":"n","n":"Deathguard Linnea","x":65.5,"y":60.2,"z":85},"i":359,"l":9,"n":"Forsaken Duties","nx":360,"ps":[358],"rl":6,"s":{"h":3,"i":1499,"k":"n","n":"Magistrate Sevren","x":61.3,"y":50.8,"z":85},"t":"Speak with Deathguard Linnea.","xp":195,"z":85},
 {"f":{"h":3,"i":1499,"k":"n","n":"Magistrate Sevren","x":61.3,"y":50.8,"z":85},"i":360,"l":9,"n":"Return to the Magistrate","ps":[359],"rl":6,"s":{"h":4,"i":1495,"k":"n","n":"Deathguard Linnea","x":65.5,"y":60.2,"z":85},"t":"Return to Magistrate Sevren in Brill.","xp":390,"z":85},
+{"f":{"h":3,"i":1560,"k":"n","n":"Yvette Farthing","x":61.6,"y":52.6,"z":85},"i":361,"l":7,"n":"A Letter Undelivered","rl":4,"s":{"i":2839,"k":"i","n":"A Letter to Yvette","x":50.7,"y":44.0,"z":85},"si":2837,"t":"Find Yvette Farthing, and deliver to her the letter from Thurman Agamand.","xp":475,"z":85},
 {"f":"s","i":362,"l":10,"n":"The Haunted Mills","o":[{"c":[{"n":1,"r":0.0,"x":47.2,"y":40.0,"z":85}],"i":2831,"k":"i","lv":[9,9],"n":"Devlin's Remains","rk":0,"sp":1,"src":[[1657,"Devlin Agamand"]]}],"rl":7,"s":{"h":3,"i":1500,"k":"n","n":"Coleman Farthing","x":61.7,"y":52.3,"z":85},"t":"Slay Devlin Agamand, and bring Devlin's Remains to Coleman Farthing in Brill.","xp":420,"z":85},
 {"f":{"h":3,"i":1518,"k":"n","n":"Apothecary Johaan","x":59.5,"y":52.4,"z":85},"i":365,"l":7,"n":"Fields of Grief","nx":407,"o":[{"c":[{"n":34,"r":5.1,"x":35.6,"y":50.3,"z":85}],"i":2846,"k":"i","n":"Tirisfal Pumpkin","ns":1,"sp":34}],"rl":4,"s":{"i":1519,"k":"n","n":"Deathguard Simmer","x":40.9,"y":54.2,"z":85},"t":"Steal 10 pumpkins from the farm to the west, just north of Deathknell and take them to Apothecary Johaan in Brill.","xp":630,"z":85},
 {"f":{"i":1497,"k":"n","n":"Gunther Arcanus","x":68.2,"y":41.9,"z":85},"i":366,"l":8,"n":"Return the Book","nx":409,"ps":[357],"rl":5,"s":{"i":1498,"k":"n","n":"Bethor Iceshard","x":84.1,"y":17.4,"z":1497},"si":3016,"t":"Return Gunther's Spellbook to him, on the island of Gunther's Retreat.","xp":350,"z":1497},
@@ -137,5 +138,5 @@
 {"f":"s","i":99153,"l":12,"n":"The One That Got Away","o":[{"c":[{"n":1,"r":0.0,"x":9.7,"y":69.4,"z":85}],"i":286269,"k":"i","n":"Glowing Crystal Fragment","ns":1,"sp":1}],"ps":[96896],"rl":7,"s":{"h":1,"i":259190,"k":"n","n":"Ephram Barbaro","x":20.2,"y":46.5,"z":85},"t":"Find the Hidden Crystal Fragment beneath Shadowvale for Ephram Barbaro.","z":85}
 ],
 "xpBudget":22800,
-"zones":[{"i":85,"lv":[3,12],"n":"Tirisfal Glades","q":93},{"i":130,"lv":[10,12],"n":"Silverpine Forest","q":14},{"i":1497,"lv":[8,12],"n":"Undercity","q":11},{"i":14,"lv":[10,10],"n":"Durotar","q":1},{"i":215,"lv":[10,10],"n":"Mulgore","q":1},{"i":1637,"lv":[10,10],"n":"Orgrimmar","q":1},{"i":1638,"lv":[10,10],"n":"Thunder Bluff","q":1}]
+"zones":[{"i":85,"lv":[3,12],"n":"Tirisfal Glades","q":94},{"i":130,"lv":[10,12],"n":"Silverpine Forest","q":14},{"i":1497,"lv":[8,12],"n":"Undercity","q":11},{"i":14,"lv":[10,10],"n":"Durotar","q":1},{"i":215,"lv":[10,10],"n":"Mulgore","q":1},{"i":1637,"lv":[10,10],"n":"Orgrimmar","q":1},{"i":1638,"lv":[10,10],"n":"Thunder Bluff","q":1}]
 }

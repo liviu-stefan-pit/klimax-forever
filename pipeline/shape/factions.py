@@ -141,8 +141,9 @@ HORDE = FactionConfig(
             races=("Orc", "Troll", "Tauren", "Undead"),
             start_hub="Zephra's Isle",
             home_zones=("ZEPHRAS_ISLE",),
-            # Assumed hand-off (user: "Orgrimmar or the Barrens"), unconfirmed.
-            reach_zones=("ORGRIMMAR", "THE_BARRENS"),
+            # Hand-off from the game data (phase 03b): the only Horde link is the zeppelin
+            # between Zephra's Isle and Mulgore (Leatrix_Maps; Windshaper NPCs at both docks).
+            reach_zones=("MULGORE", "THUNDER_BLUFF"),
         ),
     ),
     shared_track="horde",

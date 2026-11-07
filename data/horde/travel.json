@@ -3913,7 +3913,7 @@
     57
    ],
    "name": "Tirisfal Glades",
-   "quests": 137
+   "quests": 140
   },
   {
    "enum": "UNDERCITY",
@@ -3927,7 +3927,7 @@
     60
    ],
    "name": "Undercity",
-   "quests": 159
+   "quests": 166
   },
   {
    "enum": "SILVERPINE_FOREST",
@@ -3941,7 +3941,7 @@
     25
    ],
    "name": "Silverpine Forest",
-   "quests": 62
+   "quests": 64
   },
   {
    "enum": "WESTERN_PLAGUELANDS",
@@ -3969,7 +3969,7 @@
     60
    ],
    "name": "Eastern Plaguelands",
-   "quests": 189
+   "quests": 224
   },
   {
    "enum": "HILLSBRAD_FOOTHILLS",
@@ -3993,11 +3993,11 @@
     60
    ],
    "levelRange": [
-    33,
+    34,
     60
    ],
    "name": "Alterac Mountains",
-   "quests": 33
+   "quests": 36
   },
   {
    "enum": "ARATHI_HIGHLANDS",
@@ -4008,10 +4008,10 @@
    ],
    "levelRange": [
     34,
-    45
+    60
    ],
    "name": "Arathi Highlands",
-   "quests": 47
+   "quests": 50
   },
   {
    "enum": "THE_HINTERLANDS",
@@ -4025,7 +4025,7 @@
     51
    ],
    "name": "The Hinterlands",
-   "quests": 27
+   "quests": 28
   },
   {
    "enum": "SEARING_GORGE",
@@ -4039,7 +4039,7 @@
     60
    ],
    "name": "Searing Gorge",
-   "quests": 27
+   "quests": 29
   },
   {
    "enum": "BURNING_STEPPES",
@@ -4067,7 +4067,7 @@
     59
    ],
    "name": "Badlands",
-   "quests": 52
+   "quests": 53
   },
   {
    "enum": "SWAMP_OF_SORROWS",
@@ -4081,7 +4081,7 @@
     58
    ],
    "name": "Swamp of Sorrows",
-   "quests": 32
+   "quests": 35
   },
   {
    "enum": "BLASTED_LANDS",
@@ -4109,7 +4109,7 @@
     60
    ],
    "name": "Stranglethorn Vale",
-   "quests": 181
+   "quests": 187
   },
   {
    "enum": "WINTERSPRING",
@@ -4123,7 +4123,7 @@
     60
    ],
    "name": "Winterspring",
-   "quests": 54
+   "quests": 58
   },
   {
    "enum": "FELWOOD",
@@ -4134,10 +4134,10 @@
    ],
    "levelRange": [
     52,
-    60
+    59
    ],
    "name": "Felwood",
-   "quests": 84
+   "quests": 86
   },
   {
    "enum": "AZSHARA",
@@ -4161,11 +4161,11 @@
     60
    ],
    "levelRange": [
-    21,
-    27
+    22,
+    60
    ],
    "name": "Ashenvale",
-   "quests": 29
+   "quests": 39
   },
   {
    "enum": "DUROTAR",
@@ -4179,7 +4179,7 @@
     13
    ],
    "name": "Durotar",
-   "quests": 107
+   "quests": 113
   },
   {
    "enum": "ORGRIMMAR",
@@ -4193,21 +4193,21 @@
     60
    ],
    "name": "Orgrimmar",
-   "quests": 218
+   "quests": 220
   },
   {
    "enum": "STONETALON_MOUNTAINS",
    "id": 406,
    "levelMinMax": [
     18,
-    32
+    60
    ],
    "levelRange": [
     19,
     30
    ],
    "name": "Stonetalon Mountains",
-   "quests": 30
+   "quests": 32
   },
   {
    "enum": "THE_BARRENS",
@@ -4221,7 +4221,7 @@
     59
    ],
    "name": "The Barrens",
-   "quests": 212
+   "quests": 221
   },
   {
    "enum": "MULGORE",
@@ -4232,10 +4232,10 @@
    ],
    "levelRange": [
     3,
-    13
+    30
    ],
    "name": "Mulgore",
-   "quests": 86
+   "quests": 92
   },
   {
    "enum": "THUNDER_BLUFF",
@@ -4249,7 +4249,7 @@
     60
    ],
    "name": "Thunder Bluff",
-   "quests": 90
+   "quests": 91
   },
   {
    "enum": "DESOLACE",
@@ -4263,7 +4263,7 @@
     48
    ],
    "name": "Desolace",
-   "quests": 52
+   "quests": 56
   },
   {
    "enum": "DUSTWALLOW_MARSH",
@@ -4287,11 +4287,11 @@
     60
    ],
    "levelRange": [
-    27,
+    28,
     44
    ],
    "name": "Thousand Needles",
-   "quests": 53
+   "quests": 57
   },
   {
    "enum": "FERALAS",
@@ -4305,13 +4305,13 @@
     55
    ],
    "name": "Feralas",
-   "quests": 48
+   "quests": 51
   },
   {
    "enum": "UN_GORO_CRATER",
    "id": 490,
    "levelMinMax": [
-    51,
+    50,
     60
    ],
    "levelRange": [
@@ -4319,7 +4319,7 @@
     55
    ],
    "name": "Un'Goro Crater",
-   "quests": 43
+   "quests": 44
   },
   {
    "enum": "TANARIS",
@@ -4333,7 +4333,7 @@
     60
    ],
    "name": "Tanaris",
-   "quests": 124
+   "quests": 129
   },
   {
    "enum": "SILITHUS",
@@ -4343,11 +4343,11 @@
     60
    ],
    "levelRange": [
-    58,
+    59,
     60
    ],
    "name": "Silithus",
-   "quests": 99
+   "quests": 137
   },
   {
    "enum": "MOONGLADE",
@@ -4395,7 +4395,7 @@
     12
    ],
    "name": "Zephra's Isle",
-   "quests": 120
+   "quests": 121
   }
  ]
 }
