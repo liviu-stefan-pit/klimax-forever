@@ -155,7 +155,7 @@ def format_report(result: ShapeResult, raw: RawData | None = None) -> str:
         lines += [
             f"Faction filter ({result.faction}): {st.total} quests in DB -> {st.kept} kept",
             f"  dropped: {st.wrong_faction} other faction, {st.placeholder} placeholder, "
-            f"{st.hostile_starters} hostile starters, {st.no_starter} no starter "
+            f"{st.raid} raid, {st.hostile_starters} hostile starters, {st.no_starter} no starter "
             f"({st.no_starter_all_db} with no starter in the whole DB)",
             f"  class quests kept (tagged class:<TOKEN>): {st.class_quests}",
             f"  unexpected requiredRaces bits: {st.unusual_race_bits or 'none'}; "

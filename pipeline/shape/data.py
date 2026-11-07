@@ -49,6 +49,10 @@ class RawData:
     dungeon_ids: set[int] = field(default_factory=set)
     dungeon_names: dict[int, str] = field(default_factory=dict)
 
+    @property
+    def raid_ids(self) -> set[int]:
+        return {zid for zid, name in self.dungeon_names.items() if name in RAID_NAMES}
+
     def zone_name(self, zone_id: int) -> str:
         if zone_id in self.zone_by_id:
             return pretty_zone(self.zone_by_id[zone_id])
@@ -61,6 +65,23 @@ class RawData:
             return self.zone_by_name[enum_name]
         except KeyError:
             raise KeyError(f"zone '{enum_name}' is not in zones.json zoneIDs") from None
+
+
+# Raid instances (any expansion in the Forever zone table). Raids add nothing to leveling to 60,
+# so shape drops quests that belong to them. 5-man dungeons are kept as optional content.
+RAID_NAMES = frozenset(
+    {
+        "Molten Core", "Blackwing Lair", "Onyxia's Lair", "Zul'Gurub",
+        "Ruins of Ahn'Qiraj", "Temple of Ahn'Qiraj", "Naxxramas", "Gruul's Lair",
+        "Magtheridon's Lair", "Karazhan", "Hyjal Summit", "Black Temple", "Tempest Keep",
+        "Sunwell Plateau", "Zul'Aman", "Ulduar", "The Eye of Eternity", "The Obsidian Sanctum",
+        "Vault of Archavon", "Icecrown Citadel", "Trial of the Crusader", "The Ruby Sanctum",
+        "Baradin Hold", "Blackwing Descent", "The Bastion of Twilight",
+        "Throne of the Four Winds", "Firelands", "Dragon Soul", "Mogu'shan Vaults",
+        "Heart of Fear", "Terrace of Endless Spring", "Throne of Thunder",
+        "Siege of Orgrimmar",
+    }
+)  # fmt: skip
 
 
 def _dungeon_info(dungeons: dict[str, Any]) -> tuple[set[int], dict[int, str]]:

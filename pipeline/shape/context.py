@@ -56,6 +56,7 @@ class FilterStats:
     hostile_starters: int = 0
     no_starter: int = 0
     no_starter_all_db: int = 0
+    raid: int = 0
     kept: int = 0
     class_quests: int = 0
     unusual_race_bits: dict[int, int] = field(default_factory=dict)
@@ -225,10 +226,21 @@ class ShapeContext:
                 classes=tokens,
             )
             self._place(info)
+            if self._is_raid(info):
+                st.raid += 1
+                continue
             self.quests[qid] = info
         st.kept = len(self.quests)
         st.unusual_race_bits = dict(sorted(unusual.items()))
         st.unknown_class_bits = dict(sorted(unknown_cls.items()))
+
+    def _is_raid(self, info: QuestInfo) -> bool:
+        """Quest belongs to a raid instance (its zone, or an objective zone, is a raid)."""
+        raids = self.raw.raid_ids
+        if not raids:
+            return False
+        zos = int(info.raw.get("zoneOrSort", 0))
+        return zos in raids or bool(self.objective_zones(info.id) & raids)
 
     def _place(self, info: QuestInfo) -> None:
         for refs_, attr in ((info.starters, "start_zone"), (info.finishers, "finish_zone")):

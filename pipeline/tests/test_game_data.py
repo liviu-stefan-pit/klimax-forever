@@ -187,3 +187,12 @@ def test_real_trainer_spells_cover_nine_classes() -> None:
     assert sorted(data["classes"]) == sorted(trainer_spells.CLASS_FILES)
     for rows in data["classes"].values():
         assert rows and rows[0]["level"] == 1 and rows[-1]["level"] == 60
+
+
+def test_raid_ids_come_from_raid_names_only() -> None:
+    from pipeline.shape.data import RAID_NAMES, RawData
+
+    raw = RawData({}, {}, {}, {}, {}, {}, {}, {})
+    raw.dungeon_names = {1: "Molten Core", 2: "Blackrock Depths", 3: "Zul'Gurub"}
+    assert raw.raid_ids == {1, 3}
+    assert "Blackrock Spire" not in RAID_NAMES and "Stratholme" not in RAID_NAMES

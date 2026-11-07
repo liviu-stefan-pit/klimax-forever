@@ -3941,7 +3941,7 @@
     25
    ],
    "name": "Silverpine Forest",
-   "quests": 64
+   "quests": 63
   },
   {
    "enum": "WESTERN_PLAGUELANDS",
@@ -3965,11 +3965,11 @@
     60
    ],
    "levelRange": [
-    58,
+    56,
     60
    ],
    "name": "Eastern Plaguelands",
-   "quests": 224
+   "quests": 133
   },
   {
    "enum": "HILLSBRAD_FOOTHILLS",
@@ -4039,7 +4039,7 @@
     60
    ],
    "name": "Searing Gorge",
-   "quests": 29
+   "quests": 28
   },
   {
    "enum": "BURNING_STEPPES",
@@ -4102,14 +4102,14 @@
    "id": 33,
    "levelMinMax": [
     30,
-    61
+    60
    ],
    "levelRange": [
-    36,
+    35,
     60
    ],
    "name": "Stranglethorn Vale",
-   "quests": 187
+   "quests": 119
   },
   {
    "enum": "WINTERSPRING",
@@ -4277,7 +4277,7 @@
     60
    ],
    "name": "Dustwallow Marsh",
-   "quests": 45
+   "quests": 44
   },
   {
    "enum": "THOUSAND_NEEDLES",
@@ -4333,7 +4333,7 @@
     60
    ],
    "name": "Tanaris",
-   "quests": 129
+   "quests": 126
   },
   {
    "enum": "SILITHUS",
@@ -4343,11 +4343,11 @@
     60
    ],
    "levelRange": [
-    59,
+    58,
     60
    ],
    "name": "Silithus",
-   "quests": 137
+   "quests": 111
   },
   {
    "enum": "MOONGLADE",
