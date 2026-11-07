@@ -44,7 +44,44 @@ def build_parser() -> argparse.ArgumentParser:
                 default=DEFAULT_OUT,
                 help="output folder for data/raw (default: %(default)s)",
             )
+        if name == "shape":
+            sub_parser.add_argument(
+                "--faction", default="horde", help="faction id (default: horde)"
+            )
+            sub_parser.add_argument(
+                "--raw", type=Path, default=Path("data/raw"), help="data/raw folder"
+            )
+            sub_parser.add_argument(
+                "--data", type=Path, default=Path("data"), help="output data folder"
+            )
+            sub_parser.add_argument(
+                "--report", action="store_true", help="print the sanity report after building"
+            )
+            sub_parser.add_argument(
+                "--report-only",
+                action="store_true",
+                help="print the report from existing band files, without rebuilding",
+            )
     return parser
+
+
+def _run_shape(args: argparse.Namespace) -> int:
+    from pipeline.shape.run import format_report, load_report_from_disk, run_shape
+
+    if args.report_only:
+        print(format_report(load_report_from_disk(args.faction, args.data)))
+        return 0
+
+    def progress(message: str) -> None:
+        print(f"[shape] {message}", file=sys.stderr)
+
+    try:
+        result = run_shape(args.faction, args.raw, args.data, progress=progress)
+    except FileNotFoundError as exc:
+        print(f"shape: {exc} (run `python -m pipeline extract` first)", file=sys.stderr)
+        return 1
+    print(format_report(result) if args.report else f"{len(result.packs)} packs written")
+    return 0
 
 
 def _run_extract(questiedb: Path, out_dir: Path) -> int:
@@ -70,6 +107,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "extract":
         return _run_extract(args.questiedb, args.out)
+    if args.command == "shape":
+        return _run_shape(args)
     _help, phase = COMMANDS[args.command]
     print(f"'{args.command}' is not implemented yet (phase {phase}).", file=sys.stderr)
     return 2

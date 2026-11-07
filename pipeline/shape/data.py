@@ -1,0 +1,117 @@
+"""Load ``data/raw/*.json`` into int-keyed indexes for the shape step."""
+
+from __future__ import annotations
+
+import json
+import re
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any
+
+DEFAULT_RAW = Path("data/raw")
+
+# Zone enum names whose title-casing needs help.
+_ZONE_NAME_OVERRIDES = {
+    "UN_GORO_CRATER": "Un'Goro Crater",
+    "ZUL_FARRAK": "Zul'Farrak",
+    "ZUL_GURUB": "Zul'Gurub",
+    "ZEPHRAS_ISLE": "Zephra's Isle",
+}
+_SMALL_WORDS = {"OF", "THE", "AND", "IN"}
+
+
+def pretty_zone(enum_name: str) -> str:
+    if enum_name in _ZONE_NAME_OVERRIDES:
+        return _ZONE_NAME_OVERRIDES[enum_name]
+    words = enum_name.split("_")
+    out = []
+    for i, word in enumerate(words):
+        out.append(word.lower() if (i and word in _SMALL_WORDS) else word.capitalize())
+    return " ".join(out)
+
+
+def _int_keys(table: dict[str, Any]) -> dict[int, Any]:
+    return {int(k): v for k, v in table.items()}
+
+
+@dataclass
+class RawData:
+    quests: dict[int, dict[str, Any]]
+    npcs: dict[int, dict[str, Any]]
+    objects: dict[int, dict[str, Any]]
+    items: dict[int, dict[str, Any]]
+    xp: dict[int, tuple[int, int]]
+    zones: dict[str, Any]
+    manifest: dict[str, Any]
+    objective_hints: dict[str, list[int]]
+    zone_by_name: dict[str, int] = field(default_factory=dict)
+    zone_by_id: dict[int, str] = field(default_factory=dict)
+    dungeon_ids: set[int] = field(default_factory=set)
+    dungeon_names: dict[int, str] = field(default_factory=dict)
+
+    def zone_name(self, zone_id: int) -> str:
+        if zone_id in self.zone_by_id:
+            return pretty_zone(self.zone_by_id[zone_id])
+        if zone_id in self.dungeon_names:
+            return self.dungeon_names[zone_id]
+        return f"Zone {zone_id}"
+
+    def zone_id(self, enum_name: str) -> int:
+        try:
+            return self.zone_by_name[enum_name]
+        except KeyError:
+            raise KeyError(f"zone '{enum_name}' is not in zones.json zoneIDs") from None
+
+
+def _dungeon_info(dungeons: dict[str, Any]) -> tuple[set[int], dict[int, str]]:
+    """``dungeons.lua`` rows are either ``{"1": name, ...}`` or ``[name, ...]``."""
+    ids: set[int] = set()
+    names: dict[int, str] = {}
+    for key, row in dungeons.items():
+        zid = int(key)
+        ids.add(zid)
+        if isinstance(row, dict):
+            name = row.get("1")
+        elif isinstance(row, list) and row:
+            name = row[0]
+        else:
+            name = None
+        if isinstance(name, str):
+            names[zid] = name
+    return ids, names
+
+
+def load_raw(raw_dir: Path = DEFAULT_RAW) -> RawData:
+    def read(name: str) -> Any:
+        with (raw_dir / name).open(encoding="utf-8") as fh:
+            return json.load(fh)
+
+    zones = read("zones.json")
+    by_name = {name: int(zid) for name, zid in zones["zoneIDs"].items()}
+    by_id: dict[int, str] = {}
+    for name in sorted(by_name):  # sorted: first (alphabetical) name wins on collisions
+        by_id.setdefault(by_name[name], name)
+    dungeon_ids, dungeon_names = _dungeon_info(zones.get("dungeons", {}))
+    hints_path = raw_dir / "objective_hints.json"
+    hints = read("objective_hints.json") if hints_path.exists() else {}
+    return RawData(
+        quests=_int_keys(read("quests.json")),
+        npcs=_int_keys(read("npcs.json")),
+        objects=_int_keys(read("objects.json")),
+        items=_int_keys(read("items.json")),
+        xp={int(k): (int(v[0]), int(v[1])) for k, v in read("xp.json").items()},
+        zones=zones,
+        manifest=read("manifest.json"),
+        objective_hints=hints,
+        zone_by_name=by_name,
+        zone_by_id=by_id,
+        dungeon_ids=dungeon_ids,
+        dungeon_names=dungeon_names,
+    )
+
+
+_WORD = re.compile(r"[a-z0-9']+")
+
+
+def words(text: str) -> set[str]:
+    return set(_WORD.findall(text.lower()))

@@ -114,10 +114,34 @@ def _pad_tuples(entries: Any, slot: int) -> Any:
     return padded
 
 
+def _slots(value: Any) -> list[Any]:
+    """Positional slots of a Lua array, whether CBOR stored it as an array or a sparse map.
+
+    A Lua table with holes (for example only the ``item`` slot set) is stored as a map with
+    integer keys, ``{3: [...]}``; a dense one is a plain array. Both read back the same.
+    """
+    if isinstance(value, list):
+        return value
+    if isinstance(value, dict):
+        positions: dict[int, Any] = {}
+        for key, entry in value.items():
+            try:
+                positions[int(key)] = entry
+            except (TypeError, ValueError):
+                continue
+        if positions:
+            slots: list[Any] = [None] * max(positions)
+            for pos, entry in positions.items():
+                if pos >= 1:
+                    slots[pos - 1] = entry
+            return slots
+    return []
+
+
 def normalize_objectives(value: Any) -> dict[str, Any]:
     """``[creature, object, item, reputation, killCredit, spell]`` -> named, padded dict."""
     out: dict[str, Any] = {}
-    slots = value if isinstance(value, list) else []
+    slots = _slots(value)
     for index, name in enumerate(_OBJECTIVE_NAMES, start=1):
         if index > len(slots) or slots[index - 1] is None:
             continue
