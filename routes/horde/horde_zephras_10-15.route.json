@@ -1,0 +1,637 @@
+{
+  "_review": [
+    "W_XP_RANGE: data gap. The pack has 74 quests. zephras_05-10 turned in 66 of them (4 elite, kept as optional-elite), and 94493 is exclusive to a quest already done, so 7 quests are left for this band. Zephra's Isle has no XP rows, so the XP check cannot run. The 50800 budget is far from met (by estimate under 10 percent). Expect the player near level 11 at the Crossroads, not 15. The exit level is 15 as specified; decide the stitch before phase 05.",
+    "Mulgore and Thunder Bluff quests that zephras_05-10 dropped for this band (for example 743, 744, 745, 5922, 6061, 76156, 94911, 98424) are in the horde_10-15 pack, not this one. The 05-10 curation expected this band to take them, but its pack does not hold them, so they cannot be taken here.",
+    "Zeppelin ends: zephras_05-10 walks back to a Thunder Bluff zeppelin tower at (57.7, 88.5). travel.json (verified, Leatrix) puts the isle zeppelin's Mulgore end at (34.3, 26.1), and Alaana Stormwalker is at (33.4, 22.6) in Mulgore. This route follows travel.json. Check in game which tower the isle zeppelin lands at.",
+    "Flight: Zephra's Isle has no flight master. FP_DISCOVER at Thunder Bluff (Tal) and the Crossroads (Devrak) are new on this path. Camp Taurajo is not visited: the verified Tal to Crossroads flight is direct, and no pack quest is on that road.",
+    "Trainers: the level 10 visit was done in Valanaar by zephras_05-10. Level 12 trainers: druid and shaman at the Mulgore landing, mage, priest and paladin on the west side of Thunder Bluff, warrior and hunter on the south ridge. The Crossroads has no class trainer, so level 13-15 has no trainer on this path (W_TRAINER_GAP expected). Rogue and warlock trainers are not on this path.",
+    "Gear: none of the 7 kept quests has an upgradeCandidate flag. The level 11 armour rewards of Mercy Falls on Deaf Ears and Free the Hollows are compared at runtime.",
+    "93459 More Al'Aketh Ears has no objective text in the pack, so its ear count is unknown. Kept as optional.",
+    "The Earthen Ring text says skycutter. travel.json lists the Zephra's Isle zeppelin to Mulgore (verified), so the step uses the zeppelin.",
+    "Mob levels: every objective mob is level 8-11, at or below the expected level of 10-11 on this path.",
+    "Hunters' ammo and food come from Donaal and Antelariaa on the isle and Barg at the Crossroads. Thunder Bluff has no food vendor in travel.json, so the isle purchase is the last food stop before the Barrens."
+  ],
+  "band": [
+    10,
+    15
+  ],
+  "branch": "zephras",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 92528,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92529,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92550,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92551,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92579,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92642,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92643,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92644,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92645,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92679,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92682,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92683,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92684,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92685,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92693,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92698,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92700,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92703,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92871,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92880,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92881,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92947,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93036,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93065,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93317,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93320,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93735,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93736,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93737,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93738,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93740,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93746,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93836,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93926,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93927,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93948,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93949,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93958,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94003,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94006,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94007,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94013,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94050,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94484,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94485,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94486,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94487,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94488,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94489,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94490,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94491,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94493,
+      "reason": "Exclusive alternative to Unnerving Silence (94484), which zephras_05-10 turned in. Only one of the two can be done."
+    },
+    {
+      "quest": 94568,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94638,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94896,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94897,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94978,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94979,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 97243,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 97244,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 97245,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 97257,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 98512,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    }
+  ],
+  "entry": {
+    "hub": "Valanaar",
+    "level": 10,
+    "x": 61.2,
+    "y": 74.9,
+    "zone": "Zephra's Isle"
+  },
+  "exitPoint": {
+    "hub": "The Crossroads",
+    "level": 15,
+    "x": 52.0,
+    "y": 30.0,
+    "zone": "The Barrens"
+  },
+  "faction": "horde",
+  "id": "horde_zephras_10-15",
+  "next": "horde_horde_15-20",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Talaanis Shadowsong: What Comes Next. Turn it in with Ayessa only when you leave the isle.",
+      "npc": 252476,
+      "quest": 93090,
+      "tag": "main",
+      "title": "What Comes Next",
+      "type": "ACCEPT",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "bagCheck": true,
+      "note": "Walk north to Shadowgale Forest, a long way. The hermit, Vayn and the Hollows are all here. Check bags.",
+      "to": "Shadowgale Forest",
+      "type": "TRAVEL",
+      "x": 61.2,
+      "y": 74.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Strange Hermit: speak with him. Two follow-up quests come from him after this.",
+      "npc": 251684,
+      "quest": 93159,
+      "tag": "main",
+      "title": "The Strange Hermit",
+      "type": "ACCEPT",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Talk to the Strange Hermit again to finish the conversation.",
+      "quest": 93159,
+      "tag": "main",
+      "title": "The Strange Hermit",
+      "type": "COMPLETE",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Strange Hermit: the talk is done. Take his two bounties now.",
+      "npc": 251684,
+      "quest": 93159,
+      "tag": "main",
+      "title": "The Strange Hermit",
+      "type": "TURNIN",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hermit's bounty: gather Shadowgale Acorns just east of him, around (58.6, 38.8).",
+      "npc": 251684,
+      "quest": 93160,
+      "tag": "optional",
+      "title": "The Forest's Bounty",
+      "type": "ACCEPT",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hermit's bounty: destroy 10 Wind Hollows to the north-east, around (58.2, 32.1).",
+      "npc": 251684,
+      "quest": 93172,
+      "tag": "main",
+      "title": "Free the Hollows",
+      "type": "ACCEPT",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Acorn patch at (58.6, 38.8), east of the hermit. Gather 8, then move north to the Hollows.",
+      "quest": 93160,
+      "tag": "optional",
+      "title": "The Forest's Bounty",
+      "type": "COMPLETE",
+      "x": 58.6,
+      "y": 38.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Wind Hollows around (58.2, 32.1). Ten kills at level 10-11, the same as you.",
+      "quest": 93172,
+      "tag": "main",
+      "title": "Free the Hollows",
+      "type": "COMPLETE",
+      "x": 58.2,
+      "y": 32.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to the Strange Hermit: the acorns are in.",
+      "npc": 251684,
+      "quest": 93160,
+      "tag": "optional",
+      "title": "The Forest's Bounty",
+      "type": "TURNIN",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Strange Hermit: the Hollows are cleared.",
+      "npc": 251684,
+      "quest": 93172,
+      "tag": "main",
+      "title": "Free the Hollows",
+      "type": "TURNIN",
+      "x": 54.0,
+      "y": 38.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Vayn Moongaze: five Al'Aketh Cultist's Ears from the cultists right beside him.",
+      "npc": 254151,
+      "quest": 93165,
+      "tag": "main",
+      "title": "Mercy Falls on Deaf Ears",
+      "type": "ACCEPT",
+      "x": 63.8,
+      "y": 36.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh cultists around (63.5, 37.3), next to Vayn. Loot five ears. Preachers and Pillagers.",
+      "quest": 93165,
+      "tag": "main",
+      "title": "Mercy Falls on Deaf Ears",
+      "type": "COMPLETE",
+      "x": 63.5,
+      "y": 37.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Vayn Moongaze: five ears handed in. The gear rewards are level 11 armour.",
+      "npc": 254151,
+      "quest": 93165,
+      "tag": "main",
+      "title": "Mercy Falls on Deaf Ears",
+      "type": "TURNIN",
+      "x": 63.8,
+      "y": 36.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Vayn again: more ears. No reward, only XP from the same cultists. Skip it if you are short on time.",
+      "npc": 254151,
+      "quest": 93459,
+      "tag": "optional",
+      "title": "More Al'Aketh Ears",
+      "type": "ACCEPT",
+      "x": 63.8,
+      "y": 36.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Loot more ears from the same cultists by Vayn. The count is not in the pack, so loot what you pass.",
+      "quest": 93459,
+      "tag": "optional",
+      "title": "More Al'Aketh Ears",
+      "type": "COMPLETE",
+      "x": 63.5,
+      "y": 37.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Vayn Moongaze: the extra ears are in.",
+      "npc": 254151,
+      "quest": 93459,
+      "tag": "optional",
+      "title": "More Al'Aketh Ears",
+      "type": "TURNIN",
+      "x": 63.8,
+      "y": 36.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hearthstone to Donaal's inn in Valanaar. The walk back south is long.",
+      "type": "HEARTH_USE",
+      "x": 63.8,
+      "y": 36.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger: What Comes Next. You are ready to leave the isle.",
+      "npc": 251968,
+      "quest": 93090,
+      "tag": "main",
+      "title": "What Comes Next",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa: The Earthen Ring. Take the zeppelin at (57.7, 81.0) to Mulgore.",
+      "npc": 251968,
+      "quest": 95349,
+      "tag": "main",
+      "title": "The Earthen Ring",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Sell greys and repair in Valanaar before the ride.",
+      "type": "VENDOR_REPAIR",
+      "x": 62.2,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Donaal Downbreeze: food and water for the road. Mana users: extra water. Hunters: Antelariaa at (63.0, 77.8).",
+      "type": "BUY",
+      "x": 62.2,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "bagCheck": true,
+      "note": "Zeppelin from the isle to Mulgore (Thunder Bluff). Gold cost only.",
+      "to": "Thunder Bluff",
+      "type": "FLY",
+      "x": 57.7,
+      "y": 81.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Alaana Stormwalker at the zeppelin landing: The Earthen Ring is done.",
+      "npc": 259119,
+      "quest": 95349,
+      "tag": "main",
+      "title": "The Earthen Ring",
+      "type": "TURNIN",
+      "x": 33.4,
+      "y": 22.6,
+      "zone": "Mulgore"
+    },
+    {
+      "_review": "W_TRAINER_GAP: the Crossroads has no class trainer, so levels 12-15 have no visit on this path. Expected; the 15-20 band must open with a trainer visit.",
+      "classes": [
+        "DRUID",
+        "SHAMAN"
+      ],
+      "note": "About level 12: Hana Lighthoof (druid) and Palah Thunderhoof (shaman) are at this landing. Learn what you can afford.",
+      "type": "TRAINER",
+      "x": 33.5,
+      "y": 22.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Up the Thunder Bluff elevator. The mage, priest and paladin trainers are on the west side.",
+      "to": "Thunder Bluff",
+      "type": "TRAVEL",
+      "x": 33.5,
+      "y": 22.2,
+      "zone": "Mulgore"
+    },
+    {
+      "_review": "W_TRAINER_GAP: the Crossroads has no class trainer, so levels 12-15 have no visit on this path. Expected; the 15-20 band must open with a trainer visit.",
+      "classes": [
+        "MAGE",
+        "PRIEST",
+        "PALADIN"
+      ],
+      "note": "Thunder Bluff west side: mage, priest and paladin trainers. Learn what you can afford at level 12.",
+      "type": "TRAINER",
+      "x": 24.5,
+      "y": 19.0,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "_review": "W_TRAINER_GAP: the Crossroads has no class trainer, so levels 12-15 have no visit on this path. Expected; the 15-20 band must open with a trainer visit.",
+      "classes": [
+        "WARRIOR",
+        "HUNTER"
+      ],
+      "note": "South ridge of Thunder Bluff: warrior and hunter trainers. A walk east and south, then back north to Tal.",
+      "type": "TRAINER",
+      "x": 57.8,
+      "y": 88.0,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Walk back north to Tal, the wind rider master, at the top of the town.",
+      "to": "Tal the wind rider master",
+      "type": "TRAVEL",
+      "x": 57.8,
+      "y": 88.0,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Tal the wind rider master: discover the Thunder Bluff flight point on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 47.0,
+      "y": 49.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "bagCheck": true,
+      "note": "Buy the wind rider from Tal to the Crossroads. Gold cost only.",
+      "to": "The Barrens",
+      "type": "FLY",
+      "x": 47.0,
+      "y": 49.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Devrak the wind rider master at the Crossroads: discover the flight point.",
+      "type": "FP_DISCOVER",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sell greys and repair near the Boorand inn at the Crossroads.",
+      "type": "VENDOR_REPAIR",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Crossroads: bread and water for the next leg. Hunters: arrows and bullets from Barg.",
+      "type": "BUY",
+      "x": 51.7,
+      "y": 29.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bind your hearthstone to Boorand Plainswind at the Crossroads inn. The next band starts here.",
+      "type": "HEARTH_BIND",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    }
+  ]
+}

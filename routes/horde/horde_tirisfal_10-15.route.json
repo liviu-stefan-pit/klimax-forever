@@ -1,0 +1,1535 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_horde_15-20 is written in a later phase.",
+    "W_XP_RANGE: pack gap, not a pacing choice. Counted XP (main and optional, non-class, not done in 05-10) is about 12.2k of the 50.8k budget (24%). Class chains add about 5.2k and elite steps (99, 452, 95328, 99156) about 2.7k, both excluded by the validator. The 05-10 band already consumed most Brill and Undercity quests. The 443 Rot Hide chain (about 2.4k) waits for horde_horde_15-20 (mobs 17-19). The rest of the budget has to come from kills, which are not modelled. Needs a pipeline or band-pack decision."
+  ],
+  "band": [
+    10,
+    15
+  ],
+  "branch": "tirisfal",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 264,
+      "reason": "Starter Clarice Foster sits far west at (27, 24) for 540 XP. Off this route."
+    },
+    {
+      "quest": 410,
+      "reason": "Candle quests exclusive with 431, which 05-10 turned in. 411 is unreachable."
+    },
+    {
+      "quest": 411,
+      "reason": "Candle quests exclusive with 431, which 05-10 turned in. 411 is unreachable."
+    },
+    {
+      "quest": 443,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "quest": 444,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "quest": 446,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "quest": 447,
+      "reason": "Grizzled Bear Hearts spawn in zone 12 (outside this band). 450 needs 447. Data gap."
+    },
+    {
+      "quest": 448,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "quest": 450,
+      "reason": "Grizzled Bear Hearts spawn in zone 12 (outside this band). 450 needs 447. Data gap."
+    },
+    {
+      "quest": 460,
+      "reason": "Item-started (A Talking Head) with no NPC or object starter in the DB. Data gap."
+    },
+    {
+      "quest": 1998,
+      "reason": "Rogue Fenwick's Head needs level 16 and a Silverpine trip. The band ends at 15."
+    },
+    {
+      "quest": 2378,
+      "reason": "Rogue Shenthul trip to the Cleft of Shadow for 115 XP. Off the route."
+    },
+    {
+      "quest": 3301,
+      "reason": "Needs quest 880 (not in this pack and not done). Data gap."
+    },
+    {
+      "quest": 5660,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "quest": 5661,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "quest": 5662,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "quest": 5663,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "quest": 5725,
+      "reason": "Dungeon quest (Scholomance books). Reward is not famous enough for an optional note."
+    },
+    {
+      "quest": 9265,
+      "reason": "Dim Necrotic Stone spawns are in zones 12 and 215 per the DB. Not routable here. Data gap."
+    },
+    {
+      "quest": 91920,
+      "reason": "Second Quinn/Renferrel murloc-eye loop duplicating 429 and 430 (done in 05-10)."
+    },
+    {
+      "quest": 91921,
+      "reason": "Second Quinn/Renferrel murloc-eye loop duplicating 429 and 430 (done in 05-10)."
+    },
+    {
+      "quest": 94427,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 94434,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 94435,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 94436,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 94438,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 94440,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 94441,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 95314,
+      "reason": "Shadowvale elixir: no XP data, far west from the route."
+    },
+    {
+      "quest": 95803,
+      "reason": "Paladin turn-in at Lady Sylvanas (58, 92), a long walk. No XP data."
+    },
+    {
+      "quest": 96895,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 96896,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 96897,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 96898,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 96899,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 97558,
+      "reason": "No XP data. The Vile Fin Murloc Skin spawns are off the route."
+    },
+    {
+      "quest": 97891,
+      "reason": "Timed delivery with no XP data."
+    },
+    {
+      "quest": 98298,
+      "reason": "Moonrage Bloodhowler worgen bits: lvl 15-16 mobs, 3+ above the band midpoint. Data gap on XP."
+    },
+    {
+      "quest": 98545,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 99142,
+      "reason": "Tomb Weed: no XP data, a detour for one turn-in. Dropped as in 05-10."
+    },
+    {
+      "quest": 99152,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "quest": 99153,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    }
+  ],
+  "entry": {
+    "hub": "The Sepulcher",
+    "level": 10,
+    "x": 43.2,
+    "y": 41.3,
+    "zone": "Silverpine Forest"
+  },
+  "exitPoint": {
+    "hub": "The Crossroads",
+    "level": 15,
+    "x": 52.0,
+    "y": 30.0,
+    "zone": "The Barrens"
+  },
+  "faction": "horde",
+  "id": "horde_tirisfal_10-15",
+  "next": "horde_horde_15-20",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "minLevel": 10,
+      "note": "Allister at the Sepulcher: Border Crossings. The crate at Pyrewood is the first stop.",
+      "npc": 2121,
+      "quest": 477,
+      "tag": "main",
+      "title": "Border Crossings",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "South to the Dalaran crate, between the Sepulcher and Pyrewood Village.",
+      "type": "TRAVEL",
+      "x": 49.9,
+      "y": 60.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Use the Dalaran crate to turn in Border Crossings.",
+      "quest": 477,
+      "tag": "main",
+      "title": "Border Crossings",
+      "type": "TURNIN",
+      "x": 49.9,
+      "y": 60.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Same crate: Maps and Runes. Pick it up before walking back.",
+      "quest": 478,
+      "tag": "main",
+      "title": "Maps and Runes",
+      "type": "ACCEPT",
+      "x": 49.9,
+      "y": 60.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Back north to Shadow Priest Allister at the Sepulcher.",
+      "type": "TRAVEL",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister at the Sepulcher.",
+      "npc": 2121,
+      "quest": 478,
+      "tag": "main",
+      "title": "Maps and Runes",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Allister: Dalar's Analysis, to hand to Dalar.",
+      "npc": 2121,
+      "quest": 481,
+      "tag": "main",
+      "title": "Dalar's Analysis",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver at the Sepulcher, next to Allister.",
+      "npc": 1938,
+      "quest": 481,
+      "tag": "main",
+      "title": "Dalar's Analysis",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Dalar: Dalaran's Intentions, to take back to Allister.",
+      "npc": 1938,
+      "quest": 482,
+      "tag": "main",
+      "title": "Dalaran's Intentions",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Allister at the Sepulcher.",
+      "npc": 2121,
+      "quest": 482,
+      "tag": "main",
+      "title": "Dalaran's Intentions",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Renferrel at the Sepulcher: Zinge's Delivery to the Undercity.",
+      "npc": 1937,
+      "quest": 1359,
+      "tag": "main",
+      "title": "Zinge's Delivery",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Bat ride from Karos Razok at the Sepulcher to the Undercity.",
+      "to": "Undercity",
+      "type": "FLY"
+    },
+    {
+      "note": "South-west to Apothecary Zinge in the Undercity.",
+      "type": "TRAVEL",
+      "x": 50.1,
+      "y": 68.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Deliver the Wolf Heart Sample to Apothecary Zinge.",
+      "npc": 5204,
+      "quest": 1359,
+      "tag": "main",
+      "title": "Zinge's Delivery",
+      "type": "TURNIN",
+      "x": 50.1,
+      "y": 68.0,
+      "zone": "Undercity"
+    },
+    {
+      "minLevel": 10,
+      "note": "Zinge: Sample for Helbrim. Carry it to the Crossroads for the exit turn-in.",
+      "npc": 5204,
+      "quest": 1358,
+      "tag": "main",
+      "title": "Sample for Helbrim",
+      "type": "ACCEPT",
+      "x": 50.1,
+      "y": 68.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Rogues' Quarter: Mennet Carkad starts the rogue chain.",
+      "type": "TRAVEL",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "minLevel": 10,
+      "note": "Rogue: Mennet Carkad. Astor's Letter is at Astor Hadren in Silverpine.",
+      "npc": 6467,
+      "quest": 1886,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "ACCEPT",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Walk to Brill from the Undercity. Inn is at the north-west corner of the square.",
+      "type": "TRAVEL",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Buy 2 bread and 2 water for the Silverpine stretch.",
+      "type": "BUY",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Hearth set to Brill. The Shadowvale trip returns here.",
+      "type": "HEARTH_BIND",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 7,
+      "note": "Magistrate Sevren in Brill: The Family Crypt, at the Agamand Mills north of town.",
+      "npc": 1499,
+      "quest": 408,
+      "tag": "main",
+      "title": "The Family Crypt",
+      "type": "ACCEPT",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to the Agamand Mills: ancestors and Captain Dargol's skull.",
+      "type": "TRAVEL",
+      "x": 52.6,
+      "y": 28.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Wailing and Rotting Ancestors around (52, 28). Captain Dargol drops the skull near (53, 26).",
+      "quest": 408,
+      "tag": "main",
+      "title": "The Family Crypt",
+      "type": "COMPLETE",
+      "x": 52.6,
+      "y": 28.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Sevren in Brill.",
+      "type": "TRAVEL",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Magistrate Sevren in Brill.",
+      "npc": 1499,
+      "quest": 408,
+      "tag": "main",
+      "title": "The Family Crypt",
+      "type": "TURNIN",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 10,
+      "note": "Level 10: trainers in Brill. Learn new ranks.",
+      "type": "TRAINER",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Repair before the Silverpine trip.",
+      "type": "VENDOR_REPAIR",
+      "x": 61.5,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Walk to Michael Garrett, the Undercity bat handler.",
+      "type": "TRAVEL",
+      "x": 63.2,
+      "y": 48.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Bat ride from Michael Garrett to the Sepulcher.",
+      "to": "The Sepulcher",
+      "type": "FLY"
+    },
+    {
+      "minLevel": 12,
+      "note": "Dalar at the Sepulcher: Prove Your Worth. Requires level 12. Opens the Arugal chain.",
+      "npc": 1938,
+      "quest": 421,
+      "tag": "main",
+      "title": "Prove Your Worth",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Allister: Ambermill Investigations. Dalaran Conjurors are high level: kill Protectors and Mages.",
+      "npc": 2121,
+      "quest": 479,
+      "tag": "optional",
+      "title": "Ambermill Investigations",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "North-east: Moonrage Whitescalps around (54, 23) and (51, 40).",
+      "type": "TRAVEL",
+      "x": 54.3,
+      "y": 23.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Five Moonrage Whitescalps around (54, 23).",
+      "quest": 421,
+      "tag": "main",
+      "title": "Prove Your Worth",
+      "type": "COMPLETE",
+      "x": 54.3,
+      "y": 23.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver at the Sepulcher.",
+      "npc": 1938,
+      "quest": 421,
+      "tag": "main",
+      "title": "Prove Your Worth",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 9,
+      "note": "Dalar: Arugal's Folly. The Remedy of Arugal is a few steps north.",
+      "npc": 1938,
+      "quest": 422,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Remedy of Arugal north of the Sepulcher (about 53, 29).",
+      "type": "TRAVEL",
+      "x": 52.8,
+      "y": 28.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Remedy of Arugal at (53, 29).",
+      "quest": 422,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 52.8,
+      "y": 28.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "_review": "The Arugal chain (421-424) is strictly sequential: each quest needs the previous turn-in at Dalar, so the Sepulcher returns are unavoidable. Each leg is one batched objective cluster.",
+      "note": "Dalar Dawnweaver at the Sepulcher.",
+      "npc": 1938,
+      "quest": 422,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 9,
+      "note": "Dalar: Glutton and Darksoul shackles. Moonrage camps north-west (about 42, 28).",
+      "npc": 1938,
+      "quest": 423,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "Moonrage Glutton and Darksoul camps, north-west of the Sepulcher.",
+      "type": "TRAVEL",
+      "x": 42.4,
+      "y": 27.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Six Glutton Shackles and three Darksoul Shackles. Lvl 12-14 mobs.",
+      "quest": 423,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 42.4,
+      "y": 27.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver at the Sepulcher.",
+      "npc": 1938,
+      "quest": 423,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 9,
+      "note": "Dalar: kill Grimson the Pale for his head.",
+      "npc": 1938,
+      "quest": 424,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "East of the Sepulcher to Grimson the Pale (58, 45).",
+      "type": "TRAVEL",
+      "x": 58.6,
+      "y": 44.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Grimson the Pale, lvl 15. Take the head back to Dalar.",
+      "quest": 424,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 58.6,
+      "y": 44.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver at the Sepulcher.",
+      "npc": 1938,
+      "quest": 424,
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 9,
+      "note": "Dalar: Arugal's Folly (elite shackles). Pyrewood is south. Optional-elite.",
+      "npc": 1938,
+      "quest": 99,
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "South to Pyrewood Village: Deathstalker Faerleia and the Dalaran crate area.",
+      "type": "TRAVEL",
+      "x": 46.5,
+      "y": 74.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 12,
+      "note": "Faerleia: Pyrewood Ambush. Elite council fight; skip if it is too hard. Optional-elite.",
+      "npc": 2058,
+      "quest": 452,
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Pyrewood Ambush",
+      "type": "ACCEPT",
+      "x": 46.5,
+      "y": 74.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "The Pyrewood Council, elite group. Revisit at level 18.",
+      "quest": 452,
+      "tag": "optional-elite",
+      "title": "Pyrewood Ambush",
+      "type": "COMPLETE",
+      "x": 46.5,
+      "y": 74.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Pyrewood Shackles from Sentries, Watchers and Elders (elite). Optional-elite.",
+      "quest": 99,
+      "tag": "optional-elite",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 45.5,
+      "y": 73.2,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Deathstalker Faerleia in Pyrewood.",
+      "npc": 2058,
+      "quest": 452,
+      "tag": "optional-elite",
+      "title": "Pyrewood Ambush",
+      "type": "TURNIN",
+      "x": 46.5,
+      "y": 74.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "East of Pyrewood to the Dalaran mage camp (about 60, 64).",
+      "type": "TRAVEL",
+      "x": 59.9,
+      "y": 64.1,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Eight Dalaran Pendants from Protectors and Mages. Skip the Conjurors.",
+      "quest": 479,
+      "tag": "optional",
+      "title": "Ambermill Investigations",
+      "type": "COMPLETE",
+      "x": 59.9,
+      "y": 64.1,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Back to the Sepulcher: Allister and Dalar.",
+      "type": "TRAVEL",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister at the Sepulcher.",
+      "npc": 2121,
+      "quest": 479,
+      "tag": "optional",
+      "title": "Ambermill Investigations",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver at the Sepulcher.",
+      "npc": 1938,
+      "quest": 99,
+      "tag": "optional-elite",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Hadrec at the Sepulcher: The Dead Fields. Nightlash lives in the Dead Fields.",
+      "npc": 1952,
+      "quest": 437,
+      "tag": "main",
+      "title": "The Dead Fields",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to the Dead Fields. Rot hide gnolls, then Nightlash.",
+      "type": "TRAVEL",
+      "x": 44.7,
+      "y": 20.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Rot hide gnolls and Nightlash (lvl 14). Essence of Nightlash for Hadrec.",
+      "quest": 437,
+      "tag": "main",
+      "title": "The Dead Fields",
+      "type": "COMPLETE",
+      "x": 44.7,
+      "y": 20.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "High Executor Hadrec at the Sepulcher.",
+      "npc": 1952,
+      "quest": 437,
+      "tag": "main",
+      "title": "The Dead Fields",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Hadrec: The Decrepit Ferry. The Corpse Laden Boat is east of the Sepulcher.",
+      "npc": 1952,
+      "quest": 438,
+      "tag": "main",
+      "title": "The Decrepit Ferry",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "East to the Corpse Laden Boat in the Dead Fields.",
+      "type": "TRAVEL",
+      "x": 58.4,
+      "y": 34.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Corpse Laden Boat: investigate it to finish the ferry search.",
+      "quest": 438,
+      "tag": "main",
+      "title": "The Decrepit Ferry",
+      "type": "TURNIN",
+      "x": 58.4,
+      "y": 34.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Corpse Laden Boat: Rot Hide Clues. Deliah's Ring comes from the boat.",
+      "quest": 439,
+      "tag": "main",
+      "title": "Rot Hide Clues",
+      "type": "ACCEPT",
+      "x": 58.4,
+      "y": 34.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Back to High Executor Hadrec at the Sepulcher.",
+      "type": "TRAVEL",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "High Executor Hadrec at the Sepulcher.",
+      "npc": 1952,
+      "quest": 439,
+      "tag": "main",
+      "title": "Rot Hide Clues",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Hadrec: The Engraved Ring. The turn-in is in Brill, with Sevren.",
+      "npc": 1952,
+      "quest": 440,
+      "tag": "main",
+      "title": "The Engraved Ring",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to Astor Hadren for the rogue's letter (about 50, 32).",
+      "type": "TRAVEL",
+      "x": 49.7,
+      "y": 32.2,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Astor Hadren drops Astor's Letter of Introduction. Rogue only.",
+      "quest": 1886,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "COMPLETE",
+      "x": 49.7,
+      "y": 32.2,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Bat ride from Karos Razok back to the Undercity.",
+      "to": "Undercity",
+      "type": "FLY"
+    },
+    {
+      "note": "Back to Mennet Carkad in the Rogues' Quarter.",
+      "type": "TRAVEL",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Mennet Carkad: turn in Astor's Letter. Rogue only.",
+      "npc": 6467,
+      "quest": 1886,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "TURNIN",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "minLevel": 10,
+      "note": "Mennet: The Deathstalkers. Andron Gant is south of the Rogues' Quarter.",
+      "npc": 6467,
+      "quest": 1898,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "ACCEPT",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "note": "South-west to Andron Gant in the Undercity.",
+      "type": "TRAVEL",
+      "x": 54.8,
+      "y": 76.3,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Andron Gant in the Undercity.",
+      "npc": 6522,
+      "quest": 1898,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 76.3,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "minLevel": 10,
+      "note": "Andron: deliver Andron's Ledger back to Mennet.",
+      "npc": 6522,
+      "quest": 1899,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "ACCEPT",
+      "x": 54.8,
+      "y": 76.3,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Andron's Ledger at (55, 77).",
+      "quest": 1899,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "COMPLETE",
+      "x": 55.4,
+      "y": 77.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Back to Mennet in the Rogues' Quarter.",
+      "type": "TRAVEL",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Mennet Carkad in the Rogues' Quarter.",
+      "npc": 6467,
+      "quest": 1899,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "TURNIN",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "minLevel": 10,
+      "note": "Mennet: deliver the ledger to Varimathras in the Hall of the Dark Lady.",
+      "npc": 6467,
+      "quest": 1978,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "ACCEPT",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Varimathras in the Hall of the Dark Lady, south of Andron.",
+      "type": "TRAVEL",
+      "x": 56.2,
+      "y": 92.2,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Varimathras in the Undercity.",
+      "npc": 2425,
+      "quest": 1978,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Deathstalkers",
+      "type": "TURNIN",
+      "x": 56.2,
+      "y": 92.2,
+      "zone": "Undercity"
+    },
+    {
+      "bagCheck": true,
+      "note": "East to Deathguard Linnea's camp for Riptear.",
+      "type": "TRAVEL",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Linnea: Rear Guard Patrol follow-up, Riptear's Heart. Elite (lvl 13). Optional-elite.",
+      "npc": 1495,
+      "quest": 99156,
+      "revisitAt": 16,
+      "tag": "optional-elite",
+      "title": "Rear Guard Patrol",
+      "type": "ACCEPT",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "East to Riptear (about 83, 45). Solo at level 13 or above.",
+      "type": "TRAVEL",
+      "x": 83.2,
+      "y": 45.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Riptear the elite, about (83, 45). Bring the heart to Linnea.",
+      "quest": 99156,
+      "tag": "optional-elite",
+      "title": "Rear Guard Patrol",
+      "type": "COMPLETE",
+      "x": 83.2,
+      "y": 45.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Linnea's camp.",
+      "type": "TRAVEL",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Linnea at her camp.",
+      "npc": 1495,
+      "quest": 99156,
+      "tag": "optional-elite",
+      "title": "Rear Guard Patrol",
+      "type": "TURNIN",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill: Sevren for The Engraved Ring.",
+      "type": "TRAVEL",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Magistrate Sevren in Brill.",
+      "npc": 1499,
+      "quest": 440,
+      "tag": "main",
+      "title": "The Engraved Ring",
+      "type": "TURNIN",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 10,
+      "note": "Sevren: Raleigh and the Undercity, to be delivered in the Undercity.",
+      "npc": 1499,
+      "quest": 441,
+      "tag": "main",
+      "title": "Raleigh and the Undercity",
+      "type": "ACCEPT",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 12,
+      "note": "Level 12: trainers in Brill. Learn new ranks.",
+      "type": "TRAINER",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Top up bread and water for the Shadowvale trip.",
+      "type": "BUY",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "West to Shadowvale: Whispering Horror residue. Elite, optional.",
+      "type": "TRAVEL",
+      "x": 9.5,
+      "y": 59.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 13,
+      "note": "Shadowvale: the Whispering Horror residue. Elite (lvl 13). Optional-elite.",
+      "quest": 95328,
+      "revisitAt": 16,
+      "tag": "optional-elite",
+      "title": "Whispering Horror Residue",
+      "type": "ACCEPT",
+      "x": 9.5,
+      "y": 59.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Whispering Horror at (9.5, 61.4). Elite.",
+      "quest": 95328,
+      "tag": "optional-elite",
+      "title": "Whispering Horror Residue",
+      "type": "COMPLETE",
+      "x": 9.5,
+      "y": 61.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Hearthstone back to Brill: the Shadowvale trip is far from the inn.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Walk to Father Lankester in the War Quarter of the Undercity.",
+      "type": "TRAVEL",
+      "x": 49.1,
+      "y": 14.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Father Lankester in the War Quarter. Optional-elite.",
+      "npc": 4607,
+      "quest": 95328,
+      "tag": "optional-elite",
+      "title": "Whispering Horror Residue",
+      "type": "TURNIN",
+      "x": 49.1,
+      "y": 14.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Raleigh Andrean in the Undercity, north of the Magic Quarter.",
+      "type": "TRAVEL",
+      "x": 62.0,
+      "y": 42.8,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Raleigh Andrean in the Undercity.",
+      "npc": 2050,
+      "quest": 441,
+      "tag": "main",
+      "title": "Raleigh and the Undercity",
+      "type": "TURNIN",
+      "x": 62.0,
+      "y": 42.8,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Brill: Cain Firesong starts the mage chain (level 15).",
+      "type": "TRAVEL",
+      "x": 62.0,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "minLevel": 15,
+      "note": "Cain Firesong in Brill: Report to Anastasia. Mage only, level 15.",
+      "npc": 2128,
+      "quest": 1959,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Report to Anastasia",
+      "type": "ACCEPT",
+      "x": 62.0,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Mage Quarter of the Undercity: Anastasia Hartwell.",
+      "type": "TRAVEL",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Anastasia Hartwell in the Mage Quarter.",
+      "npc": 4568,
+      "quest": 1959,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Report to Anastasia",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "minLevel": 15,
+      "note": "Anastasia: Investigate the Alchemist Shop. Mage only, level 15.",
+      "npc": 4568,
+      "quest": 1960,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Investigate the Alchemist Shop",
+      "type": "ACCEPT",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Rift Spawn in the Undercity: stun with the Cantation, then use the coffer.",
+      "quest": 1960,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Investigate the Alchemist Shop",
+      "type": "COMPLETE",
+      "x": 53.0,
+      "y": 74.7,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Anastasia Hartwell in the Mage Quarter.",
+      "npc": 4568,
+      "quest": 1960,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Investigate the Alchemist Shop",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "minLevel": 15,
+      "note": "Anastasia: Gathering Materials. Mana gems come from the Dalaran mages in Silverpine.",
+      "npc": 4568,
+      "quest": 1961,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Gathering Materials",
+      "type": "ACCEPT",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Walk back to Michael Garrett for the bat ride to the Sepulcher.",
+      "type": "TRAVEL",
+      "x": 63.2,
+      "y": 48.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Bat ride from Michael Garrett to the Sepulcher.",
+      "to": "The Sepulcher",
+      "type": "FLY"
+    },
+    {
+      "bagCheck": true,
+      "note": "South-east of the Sepulcher to the Dalaran mages (about 59, 66).",
+      "type": "TRAVEL",
+      "x": 58.8,
+      "y": 65.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Six Dalaran Mana Gems from the Dalaran mages. Linen Cloth has no local spawn in the DB (data gap).",
+      "quest": 1961,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Gathering Materials",
+      "type": "COMPLETE",
+      "x": 58.8,
+      "y": 65.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Bat ride from Karos Razok back to the Undercity.",
+      "to": "Undercity",
+      "type": "FLY"
+    },
+    {
+      "note": "North-east to Josef Gregorian in the Undercity.",
+      "type": "TRAVEL",
+      "x": 70.8,
+      "y": 30.7,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Josef Gregorian in the Undercity.",
+      "npc": 4576,
+      "quest": 1961,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Gathering Materials",
+      "type": "TURNIN",
+      "x": 70.8,
+      "y": 30.7,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "minLevel": 15,
+      "note": "Rhiannon Davis: Spellfire Robes. Mage only, level 15. Gear upgrade.",
+      "npc": 11049,
+      "quest": 1962,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Spellfire Robes",
+      "type": "ACCEPT",
+      "x": 70.0,
+      "y": 30.6,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Rhiannon Davis in the Undercity. Take the Lesser Spellfire Robes if you are a mage.",
+      "npc": 11049,
+      "quest": 1962,
+      "races": [
+        "Undead"
+      ],
+      "reward": {
+        "preferItem": 7510,
+        "why": "Lesser Spellfire Robes (il20), a cloth chest upgrade for mages at level 15"
+      },
+      "tag": "main",
+      "title": "Spellfire Robes",
+      "type": "TURNIN",
+      "x": 70.0,
+      "y": 30.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Back to Brill for the level 14 trainer and the zeppelin.",
+      "type": "TRAVEL",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 14,
+      "note": "Level 14: trainers in Brill. Last trainer before the Crossroads.",
+      "type": "TRAINER",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Repair and sell greys before the zeppelin.",
+      "type": "VENDOR_REPAIR",
+      "x": 61.5,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "Brill zeppelin tower: the zeppelin to Orgrimmar.",
+      "type": "TRAVEL",
+      "x": 60.7,
+      "y": 58.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Zeppelin to Orgrimmar, Durotar. Then follow the road south to the Crossroads.",
+      "to": "Orgrimmar",
+      "type": "FLY"
+    },
+    {
+      "bagCheck": true,
+      "note": "Road south from Orgrimmar and Durotar into The Barrens, to the Crossroads.",
+      "type": "TRAVEL",
+      "x": 52.0,
+      "y": 30.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Discover the Crossroads wind rider, Devrak.",
+      "type": "FP_DISCOVER",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Apothecary Helbrim at the Crossroads. Band exit.",
+      "npc": 3390,
+      "quest": 1358,
+      "tag": "main",
+      "title": "Sample for Helbrim",
+      "type": "TURNIN",
+      "x": 51.4,
+      "y": 30.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Make the Crossroads your hearth at Innkeeper Boorand Plainswind. The next band starts here.",
+      "type": "HEARTH_BIND",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    }
+  ]
+}

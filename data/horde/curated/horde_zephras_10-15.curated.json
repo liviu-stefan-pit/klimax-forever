@@ -1,0 +1,376 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 92528,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92529,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92550,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92551,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92579,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92640,
+      "reason": "Turned in during zephras_05-10 (elite). Kept as optional-elite, since elite quests are never dropped; nothing left to do."
+    },
+    {
+      "decision": "drop",
+      "quest": 92642,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92643,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92644,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92645,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92646,
+      "reason": "Turned in during zephras_05-10 (elite). Kept as optional-elite, since elite quests are never dropped; nothing left to do."
+    },
+    {
+      "decision": "drop",
+      "quest": 92679,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92682,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92683,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92684,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92685,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92693,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92698,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92700,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92703,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92708,
+      "reason": "Turned in during zephras_05-10 (elite). Kept as optional-elite, since elite quests are never dropped; nothing left to do."
+    },
+    {
+      "decision": "drop",
+      "quest": 92871,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92880,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92881,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92947,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93036,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93065,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "main",
+      "quest": 93090,
+      "reason": "What Comes Next: Ayessa's send-off. Turn in here when you leave the isle; it opens The Earthen Ring."
+    },
+    {
+      "decision": "main",
+      "quest": 93159,
+      "reason": "The Strange Hermit: chain head in Shadowgale Forest. Opens The Forest's Bounty and Free the Hollows."
+    },
+    {
+      "decision": "optional",
+      "quest": 93160,
+      "reason": "The Forest's Bounty: eight acorns from the patch beside the hermit. Small XP, on the same loop."
+    },
+    {
+      "decision": "main",
+      "quest": 93165,
+      "reason": "Mercy Falls on Deaf Ears: five cultist ears by Vayn Moongaze. Gear rewards at level 11 for the runtime advisor."
+    },
+    {
+      "decision": "main",
+      "quest": 93172,
+      "reason": "Free the Hollows: ten Wind Hollows at level 10-11 next to the hermit. Real XP for the band."
+    },
+    {
+      "decision": "drop",
+      "quest": 93317,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 93318,
+      "reason": "Turned in during zephras_05-10 (elite). Kept as optional-elite, since elite quests are never dropped; nothing left to do."
+    },
+    {
+      "decision": "drop",
+      "quest": 93320,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "optional",
+      "quest": 93459,
+      "reason": "More Al'Aketh Ears: follow-up to Mercy Falls, no reward, same mobs. Turn in while you are at Vayn."
+    },
+    {
+      "decision": "drop",
+      "quest": 93735,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93736,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93737,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93738,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93740,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93746,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93836,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93926,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93927,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93948,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93949,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 93958,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94003,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94006,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94007,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94013,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94050,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94484,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94485,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94486,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94487,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94488,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94489,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94490,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94491,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94493,
+      "reason": "Exclusive alternative to Unnerving Silence (94484), which zephras_05-10 turned in. Only one of the two can be done."
+    },
+    {
+      "decision": "drop",
+      "quest": 94568,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94638,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94896,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94897,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94978,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94979,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "main",
+      "quest": 95349,
+      "reason": "The Earthen Ring: the skycutter/zeppelin to Mulgore. Turned in at the Mulgore landing; the way off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97243,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97244,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97245,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97257,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 98512,
+      "reason": "Already turned in during zephras_05-10 (its route has the ACCEPT and TURNIN)."
+    }
+  ],
+  "id": "horde_zephras_10-15",
+  "schemaVersion": 1
+}

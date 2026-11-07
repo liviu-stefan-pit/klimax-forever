@@ -1,0 +1,621 @@
+{
+  "decisions": [
+    {
+      "decision": "optional-elite",
+      "quest": 99,
+      "reason": "Pyrewood Shackles from elite Sentries, Watchers and Elders (lvl 13-15): 1350 XP. Revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 264,
+      "reason": "Starter Clarice Foster sits far west at (27, 24) for 540 XP. Off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 354,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 355,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 356,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 357,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 358,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 359,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 360,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 362,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 366,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 368,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 369,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 370,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 371,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 372,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 375,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 398,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 405,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 408,
+      "reason": "The Family Crypt: 910 XP at the Agamand Mills north of Brill. Ancestors lvl 9-11."
+    },
+    {
+      "decision": "drop",
+      "quest": 409,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 410,
+      "reason": "Candle quests exclusive with 431, which 05-10 turned in. 411 is unreachable."
+    },
+    {
+      "decision": "drop",
+      "quest": 411,
+      "reason": "Candle quests exclusive with 431, which 05-10 turned in. 411 is unreachable."
+    },
+    {
+      "decision": "main",
+      "quest": 421,
+      "reason": "Prove Your Worth: 840 XP, Moonrage Whitescalps lvl 10-11. Opens the Arugal chain at level 12."
+    },
+    {
+      "decision": "main",
+      "quest": 422,
+      "reason": "Arugal's Folly: 880 XP, Remedy of Arugal north of the Sepulcher. Chain step after 421."
+    },
+    {
+      "decision": "main",
+      "quest": 423,
+      "reason": "Arugal's Folly: 980 XP, Moonrage Glutton and Darksoul shackles lvl 12-14."
+    },
+    {
+      "decision": "main",
+      "quest": 424,
+      "reason": "Arugal's Folly: 1050 XP, Grimson the Pale (lvl 15) at the Sepulcher's east edge."
+    },
+    {
+      "decision": "drop",
+      "quest": 425,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 426,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 427,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 428,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 429,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 430,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 431,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 435,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 437,
+      "reason": "The Dead Fields: 980 XP. Nightlash is lvl 14, so the route takes it at level 12 or above."
+    },
+    {
+      "decision": "main",
+      "quest": 438,
+      "reason": "The Decrepit Ferry: 880 XP, Corpse Laden Boat in the Silverpine Dead Fields chain."
+    },
+    {
+      "decision": "main",
+      "quest": 439,
+      "reason": "Rot Hide Clues: 290 XP, boat-started step that returns to Hadrec."
+    },
+    {
+      "decision": "main",
+      "quest": 440,
+      "reason": "The Engraved Ring: 580 XP, turn-in at Magistrate Sevren in Brill."
+    },
+    {
+      "decision": "main",
+      "quest": 441,
+      "reason": "Raleigh and the Undercity: 580 XP, ends the Hadrec chain in the Undercity."
+    },
+    {
+      "decision": "drop",
+      "quest": 443,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "decision": "drop",
+      "quest": 444,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "decision": "drop",
+      "quest": 445,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 446,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "decision": "drop",
+      "quest": 447,
+      "reason": "Grizzled Bear Hearts spawn in zone 12 (outside this band). 450 needs 447. Data gap."
+    },
+    {
+      "decision": "drop",
+      "quest": 448,
+      "reason": "Rot Hide Ichor mobs are lvl 17-19, 3+ above the band end (15). Chain 443/444/446/448 is left for horde_horde_15-20."
+    },
+    {
+      "decision": "drop",
+      "quest": 449,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 450,
+      "reason": "Grizzled Bear Hearts spawn in zone 12 (outside this band). 450 needs 447. Data gap."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 452,
+      "reason": "Pyrewood Council elite group with Deathstalker Faerleia: 1350 XP. Revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 460,
+      "reason": "Item-started (A Talking Head) with no NPC or object starter in the DB. Data gap."
+    },
+    {
+      "decision": "main",
+      "quest": 477,
+      "reason": "Border Crossings: 980 XP, crate-started chain opener with no mob fights."
+    },
+    {
+      "decision": "main",
+      "quest": 478,
+      "reason": "Maps and Runes: 740 XP, crate delivery to Allister at the Sepulcher."
+    },
+    {
+      "decision": "optional",
+      "quest": 479,
+      "reason": "Ambermill Investigations: 1150 XP. Dalaran Conjurors are lvl 17-18, so kill the Protectors and Mages."
+    },
+    {
+      "decision": "main",
+      "quest": 481,
+      "reason": "Dalar's Analysis: 100 XP, short chain step between the Sepulcher NPCs."
+    },
+    {
+      "decision": "main",
+      "quest": 482,
+      "reason": "Dalaran's Intentions: 100 XP, short step that opens Ambermill Investigations."
+    },
+    {
+      "decision": "drop",
+      "quest": 492,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1358,
+      "reason": "Sample for Helbrim: 1050 XP, gloves and cape. Turned in at Helbrim, the Crossroads exit."
+    },
+    {
+      "decision": "main",
+      "quest": 1359,
+      "reason": "Zinge's Delivery: 105 XP, opens 1358 for the exit turn-in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1471,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1473,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1478,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1818,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1819,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1820,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1821,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1822,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1881,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1882,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1885,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "class",
+      "quest": 1886,
+      "reason": "Rogue: Astor's Letter from Astor Hadren in Silverpine, 680 XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1898,
+      "reason": "Rogue: The Deathstalkers, 230 XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1899,
+      "reason": "Rogue: Andron's Ledger, 230 XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1959,
+      "reason": "Mage: Report to Anastasia, 105 XP. Opens the mage chain at level 15."
+    },
+    {
+      "decision": "class",
+      "quest": 1960,
+      "reason": "Mage: Investigate the Alchemist Shop, 1150 XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1961,
+      "reason": "Mage: Gathering Materials, 800 XP. Dalaran mana gems at the Sepulcher's south."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1962,
+      "reason": "Mage: Spellfire Robes, 1050 XP and a cloth chest upgrade (il20)."
+    },
+    {
+      "decision": "class",
+      "quest": 1978,
+      "reason": "Rogue: deliver the ledger to Varimathras, 910 XP and a Blade of Cunning."
+    },
+    {
+      "decision": "drop",
+      "quest": 1998,
+      "reason": "Rogue Fenwick's Head needs level 16 and a Silverpine trip. The band ends at 15."
+    },
+    {
+      "decision": "drop",
+      "quest": 2378,
+      "reason": "Rogue Shenthul trip to the Cleft of Shadow for 115 XP. Off the route."
+    },
+    {
+      "decision": "drop",
+      "quest": 3221,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 3301,
+      "reason": "Needs quest 880 (not in this pack and not done). Data gap."
+    },
+    {
+      "decision": "drop",
+      "quest": 5658,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 5660,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "decision": "drop",
+      "quest": 5661,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "decision": "drop",
+      "quest": 5662,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "decision": "drop",
+      "quest": 5663,
+      "reason": "Racial alternatives of 5658 (turned in in 05-10). Exclusive with 5658."
+    },
+    {
+      "decision": "drop",
+      "quest": 5725,
+      "reason": "Dungeon quest (Scholomance books). Reward is not famous enough for an optional note."
+    },
+    {
+      "decision": "drop",
+      "quest": 6321,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 6322,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 6323,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 6324,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 9265,
+      "reason": "Dim Necrotic Stone spawns are in zones 12 and 215 per the DB. Not routable here. Data gap."
+    },
+    {
+      "decision": "drop",
+      "quest": 91282,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 91285,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 91294,
+      "reason": "Turned in during horde_tirisfal_05-10 (Touring the Grounds). Elite, so never dropped; no step here."
+    },
+    {
+      "decision": "drop",
+      "quest": 91316,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 91317,
+      "reason": "Turned in during horde_tirisfal_05-10, so it is not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 91920,
+      "reason": "Second Quinn/Renferrel murloc-eye loop duplicating 429 and 430 (done in 05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 91921,
+      "reason": "Second Quinn/Renferrel murloc-eye loop duplicating 429 and 430 (done in 05-10)."
+    },
+    {
+      "decision": "drop",
+      "quest": 94427,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 94434,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 94435,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 94436,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 94438,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 94440,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 94441,
+      "reason": "Paladin Lesson in Divinity chain: no XP data and Undercity/Venomweb trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 95314,
+      "reason": "Shadowvale elixir: no XP data, far west from the route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 95328,
+      "reason": "Whispering Horror elite (lvl 13) at Shadowvale. Solo at 13 or above. Revisit at 16.",
+      "revisitAt": 16
+    },
+    {
+      "decision": "drop",
+      "quest": 95803,
+      "reason": "Paladin turn-in at Lady Sylvanas (58, 92), a long walk. No XP data."
+    },
+    {
+      "decision": "drop",
+      "quest": 96895,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 96896,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 96897,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 96898,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 96899,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 97558,
+      "reason": "No XP data. The Vile Fin Murloc Skin spawns are off the route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97891,
+      "reason": "Timed delivery with no XP data."
+    },
+    {
+      "decision": "drop",
+      "quest": 98298,
+      "reason": "Moonrage Bloodhowler worgen bits: lvl 15-16 mobs, 3+ above the band midpoint. Data gap on XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 98545,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 99142,
+      "reason": "Tomb Weed: no XP data, a detour for one turn-in. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 99152,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 99153,
+      "reason": "Argent Dawn and Hilda chain: no XP data, with Bandarion Keep trips. Dropped as in 05-10."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 99156,
+      "reason": "Riptear elite (lvl 13) in east Tirisfal. Its heart is the follow-up to 356. Revisit at 16.",
+      "revisitAt": 16
+    }
+  ],
+  "id": "horde_tirisfal_10-15",
+  "schemaVersion": 1
+}
