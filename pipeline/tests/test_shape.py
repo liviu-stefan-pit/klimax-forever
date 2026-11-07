@@ -354,3 +354,15 @@ def test_horde_shape_is_deterministic_and_packs_fit(tmp_path: Path) -> None:
     ids = {p.pack["id"] for p in first.packs}
     assert {"horde_durotar_01-05", "horde_mulgore_01-05", "horde_tirisfal_01-05"} <= ids
     assert len(first.packs) >= 12
+
+
+def test_zephras_home_quests_get_their_own_10_15_pack() -> None:
+    raw = _raw(
+        {1: _quest(10, level=12), 2: _quest(50, level=12), 3: _quest(60, level=12)},
+        {10: _npc("H", zone=9000), 50: _npc("H", zone=17), 60: _npc("H", zone=85)},
+    )
+    ctx = ShapeContext(raw, HORDE)
+    ctx.build_quests()
+    plan = plan_tracks(ctx, 10, 15)
+    assert plan.quests["zephras"] == [1]
+    assert 1 not in plan.quests.get("horde", [])

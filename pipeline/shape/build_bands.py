@@ -130,6 +130,15 @@ def plan_tracks(ctx: ShapeContext, lo: int, hi: int) -> TrackPlan:
     window.sort(key=lambda i: i.id)
     plan = TrackPlan()
 
+    for branch_id, band in cfg.home_split_bands:
+        if band != (lo, hi):
+            continue
+        home = {raw.zone_id(z) for z in cfg.branch(branch_id).home_zones}
+        own = [i for i in window if (i.start_zone or i.zone) in home]
+        if own:
+            plan.quests[branch_id] = [i.id for i in own]
+            window = [i for i in window if i not in own]
+
     if (lo, hi) in cfg.split_bands:
         for b in cfg.branches:
             plan.quests[b.id] = []

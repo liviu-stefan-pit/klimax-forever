@@ -77,6 +77,9 @@ class FactionConfig:
     zone_order: tuple[str, ...]
     # Subnames (flight masters etc.) used to generate the travel graph candidates.
     flight_master_subnames: tuple[str, ...]
+    # (branch id, band): in these bands the branch's home-zone quests get their own pack and
+    # are left out of the shared pack (Zephra's Isle runs to about level 13-15).
+    home_split_bands: tuple[tuple[str, tuple[int, int]], ...] = ()
     levels: tuple[int, int] = (1, 60)
     band_width: int = 5
     overlap: int = 2
@@ -184,6 +187,7 @@ HORDE = FactionConfig(
         "TANARIS",
         "SILITHUS",
     ),  # fmt: skip
+    home_split_bands=(("zephras", (10, 15)),),
     flight_master_subnames=(
         "Flight Master",
         "Wind Rider Master",
