@@ -102,7 +102,15 @@ local QUEST_STEP = { A = true, C = true, T = true }
 -- Effective state of a quest step from the reconciler's quest state (phase 20). m is the stored
 -- state (nil when none). hasAccept: the loaded route has an ACCEPT step for the quest. Returns the
 -- effective state and true when the step is held back only by its level (shown, never cursor).
+local function questSkipped(q)
+    return q ~= nil and K.cdb ~= nil and K.cdb.skipQuests ~= nil and K.cdb.skipQuests[q] == true
+end
+E.QuestSkipped = questSkipped
+
 local function questEff(s, m, qs, why, hasAccept)
+    if questSkipped(s.q) then
+        return qs == "completed" and "done" or "skipped"
+    end
     if m == "skipped" then
         return "skipped"
     end
@@ -279,7 +287,7 @@ function E:Recompute()
             self.levelHeld[i] = held or nil
         else
             e = (m == "done" or m == "skipped" or m == "archived") and m or "pending"
-            if m == "hidden" then
+            if m == "hidden" or (e ~= "done" and questSkipped(s.q)) then
                 e = "skipped"
             end
         end
@@ -309,6 +317,16 @@ function E:Recompute()
     local here = self.cursor and E.ReadyTurnInHere(self)
     if here then
         self.cursor = here
+    end
+    -- Phase 22: a pinned step comes first while it is pending; a pin that is done is dropped.
+    local pin = K.cdb and K.cdb.pin
+    if pin and pin.k then
+        local i = self.byKey[pin.k]
+        if i and self.eff[i] == "pending" and not gated(self.steps[i]) and not self.levelHeld[i] then
+            self.cursor = i
+        elseif i and self.eff[i] ~= "pending" then
+            K.cdb.pin = nil
+        end
     end
     K.cdb = K.cdb or {}
     K.cdb.routeId = self.routeId
@@ -644,6 +662,77 @@ function E:Next()
     return self:MarkDone(self.cursor)
 end
 
+-- True when the game state says a quest step is not done, so storing "done" would not stick
+-- (phase 22: the step menu asks before hiding such a step).
+function E.Contradicts(step)
+    local State = K.State
+    if not (State and State:Ready() and step and step.q and QUEST_STEP[step.t]) then
+        return false
+    end
+    local qs, why = State:Get(step.q)
+    if qs == "unknown" then
+        return false
+    end
+    return questEff(step, "done", qs, why, true) ~= "done"
+end
+
+-- Phase 22 step menu: skip a whole quest (every step, in every band, and the planner), restore it,
+-- and pin a step so it comes first.
+local function refreshAfterChoice(self)
+    if K.State and K.State:Ready() then
+        K.State:Refresh("choice")
+    else
+        self:Recompute()
+    end
+end
+
+function E:SkipQuest(q)
+    if not q then
+        return false
+    end
+    K.cdb.skipQuests = K.cdb.skipQuests or {}
+    K.cdb.skipQuests[q] = true
+    noteMark("skip-quest", { k = "quest:" .. q, q = q, t = "Q" }, "skipped")
+    refreshAfterChoice(self)
+    return true
+end
+
+-- Clears the quest skip and every stored skip or hide of the quest's steps in the loaded band.
+function E:RestoreQuest(q)
+    if not q then
+        return false
+    end
+    if K.cdb.skipQuests then
+        K.cdb.skipQuests[q] = nil
+    end
+    if self.routeId then
+        local st = charState(self.routeId)
+        for _, s in ipairs(self.steps) do
+            if s.q == q and (st[s.k] == "skipped" or st[s.k] == "hidden" or st[s.k] == "archived") then
+                st[s.k] = nil
+            end
+        end
+    end
+    refreshAfterChoice(self)
+    return true
+end
+
+-- Pins the step with key k (nil clears the pin). The planner puts the pinned quest first too.
+function E:Pin(k)
+    if k then
+        local i = self.byKey[k]
+        local s = i and self.steps[i]
+        K.cdb.pin = s and { k = k, q = s.q } or nil
+    else
+        K.cdb.pin = nil
+    end
+    if K.Planner then
+        K.Planner.dirty = true
+    end
+    self:Recompute()
+    return K.cdb.pin ~= nil
+end
+
 -- Marks the step at index i and its hub batch done (phase 07: the UI can act on a focused step
 -- that is not the cursor). Returns the number of steps marked.
 function E:MarkDone(i)
@@ -653,13 +742,10 @@ function E:MarkDone(i)
     end
     local st = charState(self.routeId)
     local marked = 0
-    local State = K.State
-    local truth = State and State:Ready()
     for _, j in ipairs(self:Batch(i)) do
         local step = self.steps[j]
         if self.eff[j] == "pending" then
-            local qs = truth and step.q and QUEST_STEP[step.t] and State:Get(step.q) or nil
-            local contradicts = qs == "available" or qs == "abandoned" or qs == "unavailable"
+            local contradicts = E.Contradicts(step)
             if not contradicts then
                 st[step.k] = "done"
                 noteMark(j == i and "next" or "next-batch", step, "done")

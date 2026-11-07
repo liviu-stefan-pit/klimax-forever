@@ -72,6 +72,9 @@ end
 -- ---- Building -------------------------------------------------------------------------------------
 
 local function profile()
+    if K.Profile then
+        return K.Profile.Get()
+    end
     return (K.cdb and K.cdb.profile) or {}
 end
 
@@ -123,11 +126,13 @@ function P:Replan(why)
     local wt = Wt.For(profile(), snap.class)
     local W = P.World()
     local state = stateFn()
-    local steps = P.Build(W, state, snap, wt)
+    local pin = K.cdb and K.cdb.pin
+    local pinned = pin and pin.q and state(pin.q) ~= "completed" and pin.q or nil
+    local steps = P.Build(W, state, snap, wt, pinned)
     -- Stability: keep the old first step unless the new one beats it clearly, or it is locked.
     local old = self.plan and self.plan.steps[1]
     local new = steps[1]
-    if old and new and old.k ~= new.k and old.q and old.t ~= "V" then
+    if not pinned and old and new and old.k ~= new.k and old.q and old.t ~= "V" then
         local keep = P.Locked(old, snap)
         if not keep then
             local forced = P.Build(W, state, snap, wt, old.q)

@@ -710,28 +710,83 @@ end
 
 -- ---- Steps page -------------------------------------------------------------------------------
 
+-- Rows of the "Skipped" list (phase 22): one per skipped quest, click to restore.
+function U.SkippedRows()
+    local rows = {}
+    for _, item in ipairs(K.StepMenu and K.StepMenu.SkippedQuests() or {}) do
+        rows[#rows + 1] = { q = item.q, text = string.format(L.SKIPPED_ROW, item.name, item.q) }
+    end
+    return rows
+end
+
 local function onStepClick(row, mouseButton)
+    if row.skippedQuest then
+        K.Engine:RestoreQuest(row.skippedQuest)
+        U.Refresh()
+        return
+    end
     local idx = row.index
     if not idx then
         return
     end
     local E = K.Engine
-    local step = E.steps[idx]
     local state = E.eff[idx]
     if mouseButton == "RightButton" then
-        if state == "skipped" or state == "archived" then
-            E:Unskip(step.k)
+        -- Phase 22: the step menu (skip quest or step, mark done, restore, pin, why, NPC, arrow).
+        if K.StepMenu then
+            K.StepMenu.Open(idx, row)
         end
+        return
     elseif state == "pending" then
-        U.focusKey = step.k
+        U.focusKey = E.steps[idx].k
     end
     U.Refresh()
+end
+
+-- Toggles the Steps page between the band's steps and the list of skipped quests.
+function U.ToggleSkipped()
+    U.showSkipped = not U.showSkipped
+    U.Refresh()
+end
+
+local function refreshSkipped(pg)
+    local rows = U.SkippedRows()
+    local y = 0
+    for n, data in ipairs(rows) do
+        local r = pg.rows[n]
+        if not r then
+            r = newRow(pg.scroll, onStepClick)
+            pg.rows[n] = r
+        end
+        r.index, r.skippedQuest = false, data.q
+        y = y + fillRow(r, y, data.text, { 0.9, 0.35, 0.35 }, SHADE[n % 2 + 1])
+    end
+    if #rows == 0 then
+        local r = pg.rows[1] or newRow(pg.scroll, onStepClick)
+        pg.rows[1] = r
+        r.index, r.skippedQuest = false, false
+        y = fillRow(r, 0, L.SKIPPED_NONE, { 0.6, 0.6, 0.6 }, SHADE[1])
+        rows = { false }
+    end
+    for n = #rows + 1, #pg.rows do
+        pg.rows[n].index, pg.rows[n].skippedQuest = false, false
+        pg.rows[n]:Hide()
+    end
+    pg.scroll:SetContentHeight(y)
 end
 
 function U.RefreshSteps()
     local pg = U.pages.steps
     local E = K.Engine
     if not pg or U.tab ~= "steps" or not E.routeId then
+        return
+    end
+    if pg.skipped then
+        local n = #U.SkippedRows()
+        pg.skipped.label:SetText(U.showSkipped and L.BTN_STEPS or string.format(L.BTN_SKIPPED, n))
+    end
+    if U.showSkipped then
+        refreshSkipped(pg)
         return
     end
     local rows = U.ListRows(E)
@@ -743,7 +798,7 @@ function U.RefreshSteps()
             r = newRow(pg.scroll, onStepClick)
             pg.rows[n] = r
         end
-        r.index = data.index
+        r.index, r.skippedQuest = data.index, false
         local shade = SHADE[n % 2 + 1]
         if data.index == E.cursor then
             shade = SHADE_CURRENT
@@ -774,6 +829,11 @@ local function buildSteps(parent)
     pg.hint:SetWidth(PAGE_W)
     pg.hint:SetTextColor(0.6, 0.6, 0.6)
     pg.hint:SetText(L.LIST_HINT)
+    pg.hint:SetWidth(PAGE_W - 130)
+    if K.Theme then
+        pg.skipped = K.Theme.Button(pg, "", 120, 20, function() U.ToggleSkipped() end)
+        pg.skipped:SetPoint("TOPRIGHT", pg, "TOPRIGHT", 0, 0)
+    end
     pg.scroll = scroller(pg, PAGE_W, PAGE_H - 36)
     pg.scroll:SetPoint("TOPLEFT", pg, "TOPLEFT", 0, -36)
     pg.rows, pg.follow = {}, true

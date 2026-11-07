@@ -176,7 +176,7 @@ function Ca.Collect(W, state, snap, wt, wide)
     local seen = {}
     for _, m in ipairs(Ca.Zones(W, snap, wt, wide)) do
         for _, q in ipairs(W.zoneQuests(m)) do
-            if not seen[q] then
+            if not seen[q] and not (snap.skipped and snap.skipped[q]) then
                 seen[q] = true
                 local rec = W.quest(q)
                 local st, reason = state(q)

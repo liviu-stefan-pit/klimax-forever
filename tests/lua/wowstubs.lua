@@ -412,8 +412,25 @@ end
 -- Loads the add-on, then runs ADDON_LOADED so SavedVariables are initialised.
 function W.start(opts)
     W.reset(opts)
+    if opts and opts.charDB then
+        KlimaxCharDB = opts.charDB
+    end
     local K = W.loadAddon(opts)
     W.fire("ADDON_LOADED", "Klimax")
+    return K
+end
+
+-- Simulates /reload (phase 22): keeps the game state and both saved-variable tables, loads the
+-- add-on again, logs in and runs every queued timer.
+function W.reload(opts)
+    local db, cdb, state = KlimaxDB, KlimaxCharDB, W.state
+    W.reset(opts)
+    W.state = state
+    KlimaxDB, KlimaxCharDB = db, cdb
+    local K = W.loadAddon(opts)
+    W.fire("ADDON_LOADED", "Klimax")
+    W.fire("PLAYER_LOGIN")
+    W.flushTimers()
     return K
 end
 

@@ -138,7 +138,22 @@ local function migrateCharacter(cdb)
         cdb.stepState = cdb.stepState or {}
         cdb.version = 1
     end
+    if cdb.version < 2 then
+        -- Phase 22: a skipped ACCEPT meant "skip this quest"; it becomes a quest-level skip, which
+        -- the reconciler and the planner also honour. Step states are kept as they are.
+        cdb.skipQuests = cdb.skipQuests or {}
+        for _, states in pairs(cdb.stepState or {}) do
+            for key, v in pairs(states) do
+                local q = v == "skipped" and key:match(":A:(%d+):")
+                if q then
+                    cdb.skipQuests[tonumber(q)] = true
+                end
+            end
+        end
+        cdb.version = 2
+    end
     cdb.stepState = cdb.stepState or {}
+    cdb.skipQuests = cdb.skipQuests or {}
     cdb.ignoredSuggestions = cdb.ignoredSuggestions or {}
     cdb.elitePending = cdb.elitePending or {}
     return cdb
@@ -195,6 +210,8 @@ function K.Command(msg)
         K.DebugDump()
     elseif cmd == "sync" or cmd == "resync" then
         K.Sync:RunAndReport()
+    elseif cmd == "profile" then
+        K.Profile.Command(rest)
     elseif cmd == "plan" then
         K.Planner.PrintPlan(tonumber(rest))
     elseif cmd == "why" then

@@ -7,6 +7,7 @@
 
 Locale\enUS.lua
 Compat.lua
+Theme.lua
 Data\Zones.lua
 Data\ClassWeights.lua
 Data\TrainerFilters.lua
@@ -52,6 +53,7 @@ Plan\Transitions.lua
 Plan\Candidates.lua
 Plan\Sequence.lua
 Plan\Planner.lua
+Profile.lua
 Engine.lua
 Sync.lua
 Arrow.lua
@@ -64,3 +66,5 @@ Opportunities.lua
 Elite.lua
 Audit.lua
 Diag.lua
+StepMenu.lua
+Wizard.lua

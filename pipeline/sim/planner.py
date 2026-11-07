@@ -417,7 +417,7 @@ def collect(W: World, state: StateFn, snap: dict[str, Any], wt: dict[str, Any], 
     seen: set[int] = set()
     for m in zones(W, snap, wt, wide):
         for q in W.zone_quests(m):
-            if q in seen:
+            if q in seen or (snap.get("skipped") or {}).get(q):
                 continue
             seen.add(q)
             rec = W.quest(q)

@@ -71,7 +71,7 @@ Wt.PROFILE = {
         speed = { leaveZone = 1.0, near = 3.0, colour = { green = 0.4, orange = 1.0 } },
     },
     group = {
-        solo = { risk = { group = 0, elite = 0.3 } },
+        solo = { risk = { group = 0 } },
         open = {},
         group = { risk = { group = 0.9, elite = 0.9 } },
     },
