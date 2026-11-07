@@ -39,9 +39,23 @@ function Sv.Read()
         hasMail = C.HasNewMail(),
         trainedAt = cdb.trainedAt, profTrained = cdb.profTrained or {}, visited = cdb.visited or {},
         rangedSubclass = cls and cls.classID == 2 and cls.subclassID or nil,
+        talentPoints = C.GetTalentPoints(),
+        items = Sv.CountItems(K.Class.Items(p.class)),
         taxiKnown = cdb.taxiKnown or {},
         bind = GetBindLocation and GetBindLocation() or nil,
     }
+end
+
+-- Bag counts of the given item ids ({[id] = count}); ids the client cannot count are left out.
+function Sv.CountItems(ids)
+    local out = {}
+    for _, id in ipairs(ids or {}) do
+        local n = C.GetItemCount(id)
+        if n then
+            out[id] = n
+        end
+    end
+    return out
 end
 
 -- ---- Providers -----------------------------------------------------------------------------------
@@ -197,13 +211,21 @@ function Sv.BestGap(steps, from, p, wt, path)
     return bestGap or 0, bestDetour or 0
 end
 
-local function note(reason, arg)
+local function note(reason, arg, beat)
+    if reason == "beat" and beat then
+        return L[beat] or beat
+    end
     local text = L["SVC_" .. reason] or reason
+    if arg and reason == "reagent" then
+        local info = C.GetItemInfo(arg)
+        arg = (info and info.name) or ("#" .. tostring(arg))
+    end
     if arg then
         text = string.format(text, arg)
     end
     return text
 end
+Sv.Note = note
 
 -- Inserts the service stops. steps: the quest plan; x: services snapshot; from: {m, x, y}.
 -- Returns the new list (the input list is not changed).
@@ -221,9 +243,9 @@ function Sv.Apply(steps, x, W, wt, path, from, profile)
         if need.hint and not need.role then
             -- a reminder with no place (Feed Pet): first in the list, no arrow
             front = front + 1
-            table.insert(out, front, { t = "S", k = "svc:" .. need.reason, reason = need.reason,
-                reasons = { need.reason }, hint = true, note = note(need.reason), n = note(need.reason),
-                why = { urgency = need.urgency } })
+            local text = note(need.reason, nil, need.beat)
+            table.insert(out, front, { t = "S", k = "svc:" .. (need.beat or need.reason), reason = need.reason,
+                reasons = { need.reason }, hint = true, note = text, n = text, why = { urgency = need.urgency } })
         else
             -- a provider that already serves a stop in the plan, when it has the role (plan order)
             local merged = false

@@ -8,7 +8,8 @@ local K
 
 local function x(over)
     local t = { level = 12, class = "WARRIOR", money = 0, freeSlots = 10, durability = 1,
-        supplies = { food = 3, water = 3, ammo = 1000 }, visited = {}, profTrained = {}, taxiKnown = {} }
+        supplies = { food = 3, water = 3, ammo = 1000 }, visited = { weapon10 = true }, profTrained = {},
+        taxiKnown = {} }
     for k, v in pairs(over or {}) do
         t[k] = v
     end
@@ -77,7 +78,7 @@ describe("service rules", function()
         local Ru = K.Services.Rules
         assert.are.same({ "food" }, reasons(Ru.Needs(x({ supplies = { food = 0, water = 0 } }))))
         assert.are.same({ "food", "water" },
-            reasons(Ru.Needs(x({ class = "MAGE", supplies = { food = 0, water = 0 } }))))
+            reasons(Ru.Needs(x({ class = "PRIEST", supplies = { food = 0, water = 0 } }))))
     end)
 
     it("the class trainer at even levels, when the gold covers it", function()
@@ -113,9 +114,9 @@ describe("Hunter module", function()
     it("reminds to feed an unhappy pet, and visits the stable once at 10 and 20", function()
         local Ru = K.Services.Rules
         local needs = Ru.Needs(x({ class = "HUNTER", level = 10, hasPet = true, petHappiness = 1 }))
-        assert.are.same({ "feedpet", "pettrainer", "stable" }, reasons(needs))
-        needs = Ru.Needs(x({ class = "HUNTER", level = 10, hasPet = true, petHappiness = 3,
-            visited = { stable10 = true, pettrainer = true } }))
+        assert.are.same({ "feedpet", "beat", "pettrainer", "stable" }, reasons(needs))
+        needs = Ru.Needs(x({ class = "HUNTER", level = 11, hasPet = true, petHappiness = 3,
+            visited = { stable10 = true, pettrainer = true, weapon10 = true } }))
         assert.are.same({}, reasons(needs))
     end)
 end)

@@ -5,6 +5,13 @@ local _, K = ...
 
 local H = {}
 
+H.beats = {
+    { lv = 1, kind = "train" }, { lv = 4, kind = "train" }, { lv = 6, kind = "train" },
+    { lv = 8, kind = "train" }, { lv = 10, kind = "quest", remind = true }, { lv = 10, n = 2, kind = "pet" },
+    { lv = 10, n = 3, kind = "talent" }, { lv = 12, kind = "train" }, { lv = 18, kind = "train" },
+    { lv = 20, kind = "train" }, { lv = 20, n = 2, kind = "pet" }, { lv = 40, kind = "mount", remind = true },
+}
+
 H.AMMO_LOW = 200       -- arrows or bullets: below this, buy on the way
 H.AMMO_CRITICAL = 60   -- below this, buy now
 -- Ranged weapon subclasses (item class 2): bows and crossbows fire arrows, guns fire bullets.

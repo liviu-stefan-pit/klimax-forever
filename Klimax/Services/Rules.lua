@@ -19,6 +19,11 @@ Ru.BAGS_SOON = 2
 Ru.MANA = { PALADIN = true, HUNTER = true, PRIEST = true, SHAMAN = true, MAGE = true, WARLOCK = true,
     DRUID = true }
 
+-- Food and water stacks worth carrying at a level (phase 24): one early, two from level 20.
+function Ru.Stacks(level)
+    return (level or 1) >= 20 and 2 or 1
+end
+
 -- Rough cost in copper of a class trainer visit at a level (new ranks come at even levels).
 function Ru.TrainCost(level)
     return 10 * level * level
@@ -46,11 +51,15 @@ function Ru.Base(x, profile)
         end
     end
     local supplies = x.supplies or {}
-    if level >= 4 and (supplies.food or 0) < 1 then
-        add(out, { role = "food", reason = "food", urgency = 0.3, maxDetour = 60 })
+    local makes = K.Class.Makes(x.class, level)
+    local stacks = Ru.Stacks(level)
+    if level >= 4 and not makes.food and (supplies.food or 0) < stacks then
+        add(out, { role = "food", reason = "food", urgency = (supplies.food or 0) == 0 and 0.4 or 0.2,
+            maxDetour = 60 })
     end
-    if level >= 4 and Ru.MANA[x.class or ""] and (supplies.water or 0) < 1 then
-        add(out, { role = "water", reason = "water", urgency = 0.3, maxDetour = 60 })
+    if level >= 4 and Ru.MANA[x.class or ""] and not makes.water and (supplies.water or 0) < stacks then
+        add(out, { role = "water", reason = "water", urgency = (supplies.water or 0) == 0 and 0.4 or 0.2,
+            maxDetour = 60 })
     end
     local trained = x.trainedAt or 1
     if x.class and level >= 4 and level % 2 == 0 and trained < level and (x.money or 0) >= Ru.TrainCost(level) then

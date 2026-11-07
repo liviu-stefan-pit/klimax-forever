@@ -446,6 +446,24 @@ function C.HasNewMail()
     return ok and mail and true or false
 end
 
+-- Unspent talent points (Classic: first return of UnitCharacterPoints), or nil.
+function C.GetTalentPoints()
+    if type(UnitCharacterPoints) ~= "function" then
+        return nil
+    end
+    local ok, points = pcall(UnitCharacterPoints, "player")
+    return ok and points or nil
+end
+
+-- How many of an item the bags hold, or nil.
+function C.GetItemCount(itemID)
+    if type(GetItemCount) ~= "function" or not itemID then
+        return nil
+    end
+    local ok, n = pcall(GetItemCount, itemID)
+    return ok and n or nil
+end
+
 function C.IsTradeskillTrainer()
     if type(IsTradeskillTrainer) ~= "function" then
         return false

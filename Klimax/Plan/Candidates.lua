@@ -132,7 +132,8 @@ function Ca.Packet(W, q, rec, stage, locked, snap, wt)
         q = q, n = rec.n, lv = rec.lv or snap.level, stage = stage, locked = locked or nil,
         pa = rec.pa, po = rec.po, rl = math.max(rec.rl or 1, rec.re or 1),
         xp = rec.xp or (W.xpl and W.xpl[rec.lv or 1]) or 0,
-        flags = rec.f, classQuest = rec.cl ~= nil, upgrade = rec.ru ~= nil and #rec.ru > 0,
+        flags = rec.f, classQuest = rec.cl ~= nil,
+        upgrade = (W.upgrade and W.upgrade(q, rec)) or (rec.ru ~= nil and #rec.ru > 0),
         chain = rec.nx ~= nil, elite = hasFlag(rec, "elite"),
     }
     if stage == "A" then

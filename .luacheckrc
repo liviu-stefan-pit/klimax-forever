@@ -67,7 +67,7 @@ read_globals = {
     "debugprofilestop", "UnitAffectingCombat",
     -- phase 23 services
     "GetInventoryItemDurability", "UnitExists", "GetPetHappiness", "HasNewMail", "IsTradeskillTrainer",
-    "GetBindLocation",
+    "GetBindLocation", "UnitCharacterPoints",
 }
 
 -- Files that are generated or vendored are not linted.

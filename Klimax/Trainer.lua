@@ -12,19 +12,42 @@ local SHOW_TEXT = 4     -- essentials named in the window hint
 local SHOW_SKIP = 2
 local LIST_ROWS = 9
 
--- The filter band in force for a class at a level: the last band with from <= level.
+-- The filter in force for a class at a level. Bands accumulate (phase 24 review): every band with
+-- from <= level adds its essentials (earlier bands first, so the buying order keeps the basics
+-- first) and its skips; a spell essential in any applying band is never listed as a skip. Returns
+-- {from = the last applying band's level, essential = {...}, skipForNow = {...}} or nil.
 function T.Band(class, level)
     local bands = K.TrainerFilters and K.TrainerFilters[class]
     if not bands then
         return nil
     end
-    local best
+    local out = { essential = {}, skipForNow = {} }
+    local isEssential, seen = {}, {}
     for _, band in ipairs(bands) do
         if band.from <= (level or 1) then
-            best = band
+            out.from = band.from
+            for _, name in ipairs(band.essential or {}) do
+                if not isEssential[name] then
+                    isEssential[name] = true
+                    out.essential[#out.essential + 1] = name
+                end
+            end
         end
     end
-    return best
+    if not out.from then
+        return nil
+    end
+    for _, band in ipairs(bands) do
+        if band.from <= (level or 1) then
+            for _, name in ipairs(band.skipForNow or {}) do
+                if not isEssential[name] and not seen[name] then
+                    seen[name] = true
+                    out.skipForNow[#out.skipForNow + 1] = name
+                end
+            end
+        end
+    end
+    return out
 end
 
 -- Plans a trainer visit. services: list of {name, category, cost(copper)}. band: a Band result.

@@ -56,6 +56,7 @@ Plan\Planner.lua
 Profile.lua
 Class\Class.lua
 Class\Hunter.lua
+Class\Classes.lua
 Services\Rules.lua
 Services\Services.lua
 Engine.lua

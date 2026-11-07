@@ -77,8 +77,44 @@ function P.World()
     end
     W.xpl = index.xpl
     W.travel = DB and DB.travel or {}
+    -- Phase 24 gear advisor: a reward that is an upgrade for this character right now.
+    function W.upgrade(_, rec)
+        return P.RewardUpgrade(rec)
+    end
     return W
 end
+
+-- Upgrade cache: item id -> true/false for the current level and gear (cleared on changes). An item
+-- the client has not cached yet counts as no upgrade until it is.
+P.upgradeCache = {}
+function P.RewardUpgrade(rec)
+    if not (rec and rec.rw and K.Audit and K.Audit.Useful) then
+        return false
+    end
+    local p = K.player or {}
+    for _, item in ipairs(rec.rw) do
+        local known = P.upgradeCache[item]
+        if known == nil then
+            local ok, useful = pcall(K.Audit.Useful, item, p.class, p.level or 1, 99)
+            known = ok and useful and true or false
+            local data = K.Rewards and K.Rewards.ReadItem and K.Rewards.ReadItem(item)
+            if data then
+                P.upgradeCache[item] = known
+            end
+        end
+        if known then
+            return true
+        end
+    end
+    return false
+end
+
+local function clearUpgrades()
+    P.upgradeCache = {}
+    P.dirty = true
+end
+K.On("PLAYER_EQUIPMENT_CHANGED", clearUpgrades)
+K.On("PLAYER_LEVEL_UP", clearUpgrades)
 
 -- ---- Building -------------------------------------------------------------------------------------
 

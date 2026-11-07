@@ -13,7 +13,9 @@
 --
 -- Mail and plate rules follow the phase 08 brief: mail at 40 for Hunter and Shaman, plate at 40
 -- for Warrior and Paladin. Paladin mail at 40 is the same rule as Hunter and Shaman.
--- REVIEW: the stat weights and weapon lists are a first pass. Sanity-check them per class.
+-- Reviewed in phase 24 (offline, against Classic weapon skills): Paladins gain two-handed axes and
+-- polearms, Hunters fist weapons and staves, Warriors staves; Shaman weights lean to Enhancement
+-- (Strength) for leveling. Still to confirm on the Forever server (phase 24 in-game checklist).
 local _, K = ...
 
 local CLOTH, LEATHER, MAIL, PLATE, SHIELD = 1, 2, 3, 4, 6
@@ -29,6 +31,7 @@ K.ClassWeights = {
             [6] = true,
             [7] = true,
             [8] = true,
+            [10] = true,
             [13] = true,
             [15] = true,
         },
@@ -36,7 +39,7 @@ K.ClassWeights = {
     },
     PALADIN = {
         armor = { [LEATHER] = 1, [MAIL] = 40, [PLATE] = 40, [SHIELD] = 1 },
-        weapons = { [0] = true, [4] = true, [5] = true, [7] = true, [8] = true },
+        weapons = { [0] = true, [1] = true, [4] = true, [5] = true, [6] = true, [7] = true, [8] = true },
         stats = { Str = 1.0, Sta = 0.6, Int = 0.3, Spi = 0.2 },
     },
     HUNTER = {
@@ -49,6 +52,8 @@ K.ClassWeights = {
             [6] = true,
             [7] = true,
             [8] = true,
+            [10] = true,
+            [13] = true,
             [15] = true,
             [18] = true,
         },
@@ -76,7 +81,7 @@ K.ClassWeights = {
     SHAMAN = {
         armor = { [LEATHER] = 1, [MAIL] = 40, [SHIELD] = 1 },
         weapons = { [0] = true, [4] = true, [10] = true, [13] = true, [15] = true },
-        stats = { Int = 0.8, Sta = 0.6, Str = 0.4, Agi = 0.4 },
+        stats = { Str = 0.8, Int = 0.6, Sta = 0.6, Agi = 0.5, Spi = 0.2 },
     },
     MAGE = {
         armor = { [CLOTH] = 1 },
