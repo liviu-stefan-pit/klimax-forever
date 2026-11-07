@@ -158,6 +158,7 @@ def _raw(quests: dict[int, dict[str, Any]], npcs: dict[int, dict[str, Any]]) -> 
         "UNDERCITY": 1497,
         "THE_BARRENS": 17,
         "SILVERPINE_FOREST": 130,
+        "ZEPHRAS_ISLE": 9000,
     }
     return RawData(
         quests=quests,
