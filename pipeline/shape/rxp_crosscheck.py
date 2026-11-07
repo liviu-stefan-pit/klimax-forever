@@ -272,7 +272,8 @@ def _findings(
         lines.append(
             f"  - Across the whole DB, {total} Horde-available quests are dropped for having "
             f"no starter; {by_item} of those have an item that starts them. "
-            "`ShapeContext.build_quests` now uses `items.startQuest` / `sourceItemId` as item starters (kind `i`) when "
+            "`ShapeContext.build_quests` now uses `items.startQuest` / `sourceItemId` as item "
+            "starters (kind `i`) when "
             "`startedBy` is empty, so these should be near zero."
         )
     unplaced = [r for r in reasons if r.startswith("kept by filters")]
