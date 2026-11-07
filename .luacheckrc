@@ -53,7 +53,7 @@ read_globals = {
     -- events and frames for the step engine
     "C_Timer",
     -- phase 07 UI and arrow: world positions, popups, combat and tooltips
-    "CreateVector2D", "GameTooltip", "GetPlayerFacing", "UIParent",
+    "CreateVector2D", "GameTooltip", "GetPlayerFacing", "UIParent", "GetCursorPosition",
     -- phase 06 compatibility wrappers (Klimax/Compat.lua)
     "IsQuestFlaggedCompleted", "C_AddOns", "GetAddOnMetadata",
     -- phase 08 smart features (Klimax/Compat.lua wrappers, helpers, rewards, trainer, elites)

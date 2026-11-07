@@ -15,7 +15,7 @@ K.Arrow = A
 
 A.UPDATE_INTERVAL = 0.1                       -- 10 Hz (PRD 8)
 A.TEXTURE = "Interface\\Minimap\\ROTATING-MINIMAPGUIDEARROW"
-A.SIZE = 56
+A.SIZE = 128                                 -- TomTom-style: big enough to read at a glance
 local TWO_PI = 2 * math.pi
 
 -- Wraps an angle into (-pi, pi].
@@ -81,16 +81,21 @@ function A.Read()
     local res = A.Compute(me, { cont = cont, x = tx, y = ty }, facing)
     local zone = K.zones and K.zones[s.z]
     res.zone = zone and zone[1] or "?"
+    res.name = s.n or ""
     return res
 end
 
 -- ---- Frame -----------------------------------------------------------------------------------
 
 A.frame = nil
-A.allowed = true          -- set by the main window: false when the window is hidden or in combat
+A.allowed = true          -- set by the main window: false while it is hidden by combat
 
--- Anchors the arrow above the main window, or places it at its saved position when detached.
-function A.Place(parent)
+local FONT = "Fonts\\FRIZQT__.TTF"
+local NEAR = 20           -- yards; the arrow turns green inside this distance
+
+-- Places the arrow at its saved position, or top-centre of the screen. It is its own frame, so it
+-- stays put whether the main window is open or not.
+function A.Place()
     local f = A.frame
     if not f then
         return
@@ -98,54 +103,62 @@ function A.Place(parent)
     f:ClearAllPoints()
     local ui = K.cdb and K.cdb.ui
     local pos = ui and ui.arrowPos
-    if K.Option("arrowDetached") and pos then
+    if pos and pos.point then
         f:SetPoint(pos.point, UIParent, pos.rel, pos.x, pos.y)
-    elseif parent then
-        f:SetPoint("BOTTOM", parent, "TOP", 0, 2)
     else
-        f:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+        f:SetPoint("TOP", UIParent, "TOP", 0, -60)
     end
-    local draggable = K.Option("arrowDetached") and not K.Option("locked") or false
+    local draggable = not K.Option("locked")
     f:SetMovable(draggable)
     f:EnableMouse(draggable)
-    f:SetScale(K.Option("scale") or 1)
+    f:SetScale((K.Option("scale") or 1) * (K.Option("arrowScale") or 1))
 end
 
--- Builds the arrow frame once. parent is the main window (used when the arrow is attached).
-function A.Build(parent)
+-- Builds the arrow frame once.
+function A.Build()
     if A.frame then
         return
     end
     local f = CreateFrame("Frame", nil, UIParent)
-    f:SetSize(160, A.SIZE + 20)
+    f:SetSize(260, A.SIZE + 66)
     f:SetFrameStrata("MEDIUM")
+    f:SetClampedToScreen(true)
     f:RegisterForDrag("LeftButton")
     f:SetScript("OnDragStart", function()
-        if K.Option("arrowDetached") and not K.Option("locked") then
+        if not K.Option("locked") then
             f:StartMoving()
         end
     end)
     f:SetScript("OnDragStop", function()
         f:StopMovingOrSizing()
         local point, _, rel, x, y = f:GetPoint()
+        K.cdb = K.cdb or {}
         K.cdb.ui = K.cdb.ui or {}
         K.cdb.ui.arrowPos = { point = point, rel = rel, x = x, y = y }
     end)
 
     local tex = f:CreateTexture(nil, "ARTWORK")
     tex:SetSize(A.SIZE, A.SIZE)
-    tex:SetPoint("BOTTOM", f, "BOTTOM", 0, 0)   -- the picture sits on the window edge
+    tex:SetPoint("TOP", f, "TOP", 0, 0)
     tex:SetTexture(A.TEXTURE)
     f.tex = tex
 
-    local text = f:CreateFontString(nil, "OVERLAY")
-    text:SetFont("Fonts\\FRIZQT__.TTF", 13, "OUTLINE")
-    text:SetPoint("TOP", f, "TOP", 0, 0)
-    text:SetTextColor(1, 1, 1)
-    f.text = text
+    local dist = f:CreateFontString(nil, "OVERLAY")
+    dist:SetFont(FONT, 24, "OUTLINE")
+    dist:SetPoint("TOP", tex, "BOTTOM", 0, -2)
+    dist:SetTextColor(1, 1, 1)
+    f.text = dist
+
+    local label = f:CreateFontString(nil, "OVERLAY")
+    label:SetFont(FONT, 13, "OUTLINE")
+    label:SetPoint("TOP", dist, "BOTTOM", 0, -2)
+    label:SetWidth(250)
+    label:SetJustifyH("CENTER")
+    label:SetTextColor(0.9, 0.9, 0.9)
+    f.label = label
 
     A.frame = f
-    A.Place(parent)
+    A.Place()
     f:Hide()
     return f
 end
@@ -159,12 +172,19 @@ function A.Update()
     local r = A.Read()
     if r.kind == "arrow" then
         f.tex:SetRotation(r.rot)
+        if r.dist < NEAR then
+            f.tex:SetVertexColor(0.3, 1, 0.3)
+        else
+            f.tex:SetVertexColor(1, 1, 1)
+        end
         f.tex:Show()
         f.text:SetText(string.format(L.ARROW_YARDS, math.floor(r.dist + 0.5)))
+        f.label:SetText(r.name ~= "" and r.name or r.zone)
         f:Show()
     elseif r.kind == "travel" then
         f.tex:Hide()
         f.text:SetText(string.format(L.ARROW_TRAVEL, r.zone))
+        f.label:SetText(r.name)
         f:Show()
     else
         f:Hide()

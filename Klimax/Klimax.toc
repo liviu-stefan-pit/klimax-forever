@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Klimax
 ## Notes: Relaxed solo leveling guide for WoW Forever (Horde first). Route data is derived from QuestieDB (GPL-3.0); credit to the QuestieDB authors.
-## Version: 0.6.0
+## Version: 0.7.0
 ## SavedVariables: KlimaxDB
 ## SavedVariablesPerCharacter: KlimaxCharDB
 

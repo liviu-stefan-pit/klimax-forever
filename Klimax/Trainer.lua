@@ -136,6 +136,16 @@ local function build()
         fs:SetJustifyH("LEFT")
         f.rows[n] = fs
     end
+    local x = CreateFrame("Button", nil, f)
+    x:SetSize(16, 14)
+    x:SetPoint("TOPRIGHT", f, "TOPRIGHT", -4, -4)
+    x.text = x:CreateFontString(nil, "OVERLAY")
+    x.text:SetFont("Fonts\\FRIZQT__.TTF", 10, "")
+    x.text:SetAllPoints()
+    x.text:SetText("X")
+    x:SetScript("OnClick", function()
+        f:Hide()
+    end)
     f:Hide()
     return f
 end
