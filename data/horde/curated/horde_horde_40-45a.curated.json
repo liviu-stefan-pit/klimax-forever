@@ -1,0 +1,822 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 192,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 193,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "class",
+      "quest": 196,
+      "reason": "Raptor Mastery: hunter pet quest (no XP for other classes). Jungle Stalkers lv 40-41 are fine at 40. Routed with HUNTER."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 197,
+      "reason": "Talon of Tethis: elite lv 43 for hunters. Routed with HUNTER; revisit at 44.",
+      "revisitAt": 44
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 208,
+      "reason": "Head of Bangalash: elite lv 43 that needs 197. Revisit at 44 for a safe solo kill.",
+      "revisitAt": 44
+    },
+    {
+      "decision": "drop",
+      "quest": 209,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional",
+      "quest": 232,
+      "reason": "Errand for Apothecary Zinge: 390 XP purchase order to Luca in Undercity, close to Sharlindra."
+    },
+    {
+      "decision": "optional",
+      "quest": 238,
+      "reason": "Second Zinge errand: field kit back to Zinge in Undercity (390 XP). Chain stops here (243 is Kalimdor)."
+    },
+    {
+      "decision": "drop",
+      "quest": 243,
+      "reason": "Into the Field ends with Bilgewhizzle in Gadgetzan (Tanaris, Kalimdor). Left to 40-45b."
+    },
+    {
+      "decision": "drop",
+      "quest": 338,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 339,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 340,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 341,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 342,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 348,
+      "reason": "Stranglethorn Fever: Mokk the Savage is lv 44 (+2 at 42). Placed after level 42 with a Booty Bay turn-in."
+    },
+    {
+      "decision": "optional",
+      "quest": 349,
+      "reason": "Gorilla Fang: child of 348 (no XP row). Gorillas lv 40-43 near Unbagwa."
+    },
+    {
+      "decision": "drop",
+      "quest": 495,
+      "reason": "Crown of Will breadcrumb: the elite 518 it leads to is already turned in (35-40a)."
+    },
+    {
+      "decision": "main",
+      "quest": 507,
+      "reason": "Lord Aliden Perenolde (lv 41) in Alterac: now within 0-1 level (35-40a dropped it at 4 above)."
+    },
+    {
+      "decision": "main",
+      "quest": 508,
+      "reason": "Taretha's Gift: follows 507 (Elysa in Alterac), turn-in to Krusk in Tarren Mill. 3900 XP."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 518,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 519,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 520,
+      "reason": "The Crown of Will: Mug'thol elite lv 43 in Alterac, 1 above the route. Revisit at 44.",
+      "revisitAt": 44
+    },
+    {
+      "decision": "main",
+      "quest": 521,
+      "reason": "Deliver the Crown of Will to Sharlindra in Undercity; Ethereal Talisman (ilvl 43) reward."
+    },
+    {
+      "decision": "main",
+      "quest": 566,
+      "reason": "WANTED: Baron Vardus (lv 40 mobs) in Alterac, now at the expected level (35-40a dropped it at 3 above)."
+    },
+    {
+      "decision": "drop",
+      "quest": 570,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 571,
+      "reason": "Aged Gorilla Sinew from lv 40-41 gorillas at Mistvale: within 1 level now (35-40a dropped it at 37)."
+    },
+    {
+      "decision": "main",
+      "quest": 572,
+      "reason": "Jungle Stalker feathers (lv 40-41) next to the Nesingwary camp: within 1 level now (35-40a dropped it)."
+    },
+    {
+      "decision": "main",
+      "quest": 573,
+      "reason": "Naga Explorers (lv 43-44) and Holy Spring Water: kept for the end of the Grom'gol loop at 41-42."
+    },
+    {
+      "decision": "drop",
+      "quest": 576,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 584,
+      "reason": "Bloodscalp heads: Gan'zulah lv 41 and Nezzliok lv 40 north of Grom'gol, within range now."
+    },
+    {
+      "decision": "main",
+      "quest": 585,
+      "reason": "Balia'mah, Ziata'jai and Zul'Mamwe trophies from the ground near Grom'gol; quest level 40."
+    },
+    {
+      "decision": "main",
+      "quest": 586,
+      "reason": "Skullsplitter hunters, headhunters and berserkers (lv 41-44) at (46, 43), 1-3 levels above; Ana'thek armor last."
+    },
+    {
+      "decision": "drop",
+      "quest": 587,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional",
+      "quest": 588,
+      "reason": "The Fate of Yenniku: 390 XP turn-in to Kin'weelay after 585 and 586."
+    },
+    {
+      "decision": "main",
+      "quest": 589,
+      "reason": "Pulsing Blue Shards from Ironjaw Basilisks (lv 43-44) at (43, 48) near Grom'gol."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 591,
+      "reason": "Mind's Eye: Mai'Zoth is lv 47, 5 above the route. Kept as the last Grom'gol step as a flagged exception.",
+      "revisitAt": 47
+    },
+    {
+      "decision": "optional",
+      "quest": 592,
+      "reason": "Saving Yenniku: 5050 XP turn-in to Nimboya after 591 and the soul gem chain."
+    },
+    {
+      "decision": "optional",
+      "quest": 593,
+      "reason": "Filling the Soul Gem: child step of 592 (no XP row), Yenniku at (39, 58)."
+    },
+    {
+      "decision": "drop",
+      "quest": 594,
+      "reason": "Message in a Bottle needs level 45 (requiredLevel 45); this part ends at 42-43."
+    },
+    {
+      "decision": "drop",
+      "quest": 595,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 597,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 598,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 599,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 600,
+      "reason": "Venture Co. crystals from lv 40-42 mobs at the centre: dropped in 35-40a for 3+ levels, now in range."
+    },
+    {
+      "decision": "main",
+      "quest": 604,
+      "reason": "Bloodsail Swashbucklers (lv 41-43) and their charts at the Booty Bay cove; Seahorn is the finisher."
+    },
+    {
+      "decision": "optional",
+      "quest": 606,
+      "reason": "Scaring Shaky: Mistvale giblets (lv 40-41), short and close to Booty Bay. 35-40a dropped it at 37."
+    },
+    {
+      "decision": "optional",
+      "quest": 607,
+      "reason": "Return to MacKinley: second half of the Shaky chain (2450 XP), short."
+    },
+    {
+      "decision": "drop",
+      "quest": 608,
+      "reason": "Captains Stillwater, Keelhaul and Firallon are lv 45-48, 3+ above this route."
+    },
+    {
+      "decision": "optional",
+      "quest": 609,
+      "reason": "Voodoo Dues: Maury, Jon-Jon and Chucky (lv 43-44), 1-2 above the route, short Booty Bay turn-in."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 613,
+      "reason": "Maury's Key: Mosh'Ogg Warmonger elite (lv 41-45) in NE Stranglethorn. Revisit at 44.",
+      "revisitAt": 44
+    },
+    {
+      "decision": "main",
+      "quest": 617,
+      "reason": "Akiris Reed from the Naga Explorers (lv 43-44) at (26, 62): Privateer Bloads is in Booty Bay."
+    },
+    {
+      "decision": "main",
+      "quest": 621,
+      "reason": "Zanzil's Mixture from the Zanzil nagas and zombies (lv 41-46): close to Booty Bay, Crank turn-in."
+    },
+    {
+      "decision": "drop",
+      "quest": 624,
+      "reason": "Cortello's Riddle: its second scroll (625) is an object in Dustwallow Marsh (Kalimdor). Chain belongs to 40-45b."
+    },
+    {
+      "decision": "drop",
+      "quest": 625,
+      "reason": "Musty Scroll is an object in Dustwallow Marsh (Kalimdor), so the chain cannot be finished in this part."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 628,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 640,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 641,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 643,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 644,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 645,
+      "reason": "Trol'kalar: Trollbane's tomb in Stromgarde; 644 (Trollbane sigil) is turned in, so the chain is open now."
+    },
+    {
+      "decision": "main",
+      "quest": 646,
+      "reason": "Trol'kalar delivery to Zengu in Hammerfall: 4300 XP plus Pit Fighter's Shield or Blood-tinged Armor."
+    },
+    {
+      "decision": "drop",
+      "quest": 651,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 652,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 662,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 664,
+      "reason": "Daggerspine Raiders (lv 38-39) and Sorceresses (lv 39-40) at Faldir's Cove: 35-40a dropped it at 37, now in range."
+    },
+    {
+      "decision": "drop",
+      "quest": 665,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 666,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional",
+      "quest": 667,
+      "reason": "Death From Below: escort at the cannon near Shakes O'Breen. Short and on the Faldir's Cove leg."
+    },
+    {
+      "decision": "drop",
+      "quest": 668,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 669,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 670,
+      "reason": "Seahorn's Letter to Shakes O'Breen: 3150 XP, last leg of Sunken Treasure. 35-40a dropped it for routing only."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 673,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 678,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 679,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 680,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 688,
+      "reason": "Myzrael's Allies: Keystone object in Stromgarde; 652 (Fozruk elite) is turned in, so the chain is open."
+    },
+    {
+      "decision": "main",
+      "quest": 692,
+      "reason": "The Lost Fragments: Enraged Rock Elementals (lv 42-43) in the Badlands; follows 687."
+    },
+    {
+      "decision": "drop",
+      "quest": 698,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 699,
+      "reason": "Sawtooth Snapper claws (lv 41-42) in Swamp of Sorrows: 35-40a dropped it at 5 above, now 0-1 above."
+    },
+    {
+      "decision": "drop",
+      "quest": 703,
+      "reason": "Barbecued Buzzard Wings drop in Tanaris and Desolace (Kalimdor). Not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 709,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 711,
+      "reason": "Study of the Elements: Rock: slabs from lv 39-40 rock elementals in the Badlands, now within 1 level."
+    },
+    {
+      "decision": "main",
+      "quest": 712,
+      "reason": "Bracers of Rock Binding from Greater Rock Elementals (lv 42-44) in the south-west Badlands. Follows 711."
+    },
+    {
+      "decision": "drop",
+      "quest": 716,
+      "reason": "Patterned Bronze Bracers have no source position in the DB, so the step cannot be placed."
+    },
+    {
+      "decision": "drop",
+      "quest": 728,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 734,
+      "reason": "This Is Going to Be Hard needs 714, which has no DB source. The chain cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 736,
+      "reason": "Star, Hand and Heart elite: Hand of Dagun and Seaworn Altar are in Dustwallow Marsh (Kalimdor), no position on this path.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 777,
+      "reason": "This Is Going to Be Hard: needs 734, which cannot start (714 has no source)."
+    },
+    {
+      "decision": "drop",
+      "quest": 778,
+      "reason": "Lotwil's Shackles: Fam'retor Guardian is lv 45, 3+ above this part. Chain also needs 777."
+    },
+    {
+      "decision": "optional",
+      "quest": 782,
+      "reason": "Broken Alliances: Boss Tho'grun (Badlands) drops the Sign of the Earth; turn in to Gorn in Kargath. Next step 793 is not in pack."
+    },
+    {
+      "decision": "drop",
+      "quest": 1048,
+      "reason": "Into The Scarlet Monastery: instanced bosses with no map positions; group dungeon elite (dropped in 35-40a).",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1108,
+      "reason": "Indurium: needs 1106, which starts with Fizzle Brassbolts in Thousand Needles (Kalimdor). Not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 1119,
+      "reason": "Needs 1118 (Kravel's Scheme), which needs the Thousand Needles chain. Kalimdor, not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 1127,
+      "reason": "Fool's Stout needs 1122 (Kravel chain in Thousand Needles, Kalimdor)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1137,
+      "reason": "News for Fizzle: turn-in in Thousand Needles (Kalimdor) after 1108. Not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 1261,
+      "reason": "Marg Speaks: Jeweled Pendant from Muckshell mobs in Dustwallow Marsh (Kalimdor)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1392,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1393,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1419,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1420,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1422,
+      "reason": "Threat From the Sea: start of the Katar murloc chain in the Swamp of Sorrows. No XP row; needed for 1426 and 1427."
+    },
+    {
+      "decision": "main",
+      "quest": 1424,
+      "reason": "Atal'ai Artifacts from Atal'ai mobs in the Swamp of Sorrows (70, 53), 10 pieces. Fel'zerul in Stonard."
+    },
+    {
+      "decision": "main",
+      "quest": 1426,
+      "reason": "Marsh murlocs, inkspewers and flesheaters (lv 41-44) on the Swamp coast; kept at 42."
+    },
+    {
+      "decision": "main",
+      "quest": 1427,
+      "reason": "Threat From the Sea: turn-in to Tok'Kar, with the Tok'kar murloc weapons as rewards."
+    },
+    {
+      "decision": "drop",
+      "quest": 1428,
+      "reason": "Continued Threat: Marsh Oracles are lv 44-45, 3+ above this part. The chain stops at 1427."
+    },
+    {
+      "decision": "main",
+      "quest": 1429,
+      "reason": "The Atal'ai Exile: bundle to the Atal'ai Exile in the Hinterlands (33.8, 75.2)."
+    },
+    {
+      "decision": "main",
+      "quest": 1430,
+      "reason": "Fresh Meat: Monstrous Crawler Legs from lv 43-44 crawlers at (95, 66). Big XP for 10 legs."
+    },
+    {
+      "decision": "main",
+      "quest": 1444,
+      "reason": "Return to Fel'Zerul in Stonard after the Atal'ai Exile."
+    },
+    {
+      "decision": "drop",
+      "quest": 1712,
+      "reason": "The Cyclonian chain needs 1791 (not in pack); the class-only warrior chain cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 1713,
+      "reason": "The Summoning elite needs 1712, which is blocked by 1791 (not in pack).",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1792,
+      "reason": "Whirlwind Weapon: class-only warrior chain blocked by 1713."
+    },
+    {
+      "decision": "drop",
+      "quest": 2202,
+      "reason": "Uldaman Reagent Run: most Magenta Fungus Caps spawn in Loch Modan (zone 38), off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2203,
+      "reason": "Badlands Reagent Run II is an elite that needs Alchemy 210 (skill 171). Profession-gated, cannot be routed.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 2258,
+      "reason": "Turned in by horde_horde_35-40a; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 2318,
+      "reason": "Translating the Journal: starter Remains of a Paladin has no map position."
+    },
+    {
+      "decision": "drop",
+      "quest": 2338,
+      "reason": "Translating the Journal: needs 2318, which has no map position."
+    },
+    {
+      "decision": "drop",
+      "quest": 2339,
+      "reason": "Find the Gems and Power Source: needs 2338, which cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 2340,
+      "reason": "Deliver the Gems: needs 2339, which cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 2342,
+      "reason": "Garrett Family Treasure is in the Uldaman dungeon chest, no open-world position."
+    },
+    {
+      "decision": "optional",
+      "quest": 2742,
+      "reason": "Rin'ji is Trapped: escort in the Hinterlands (requiredLevel 42), finishes at Rin'ji's Secret."
+    },
+    {
+      "decision": "drop",
+      "quest": 2760,
+      "reason": "The Mithril Order: Blacksmithing (210) gated, profession chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 2761,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 2762,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 2763,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 2764,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 2765,
+      "reason": "Expert Blacksmith! profession chain: profession-gated."
+    },
+    {
+      "decision": "optional",
+      "quest": 2782,
+      "reason": "Rin'ji's Secret: the tablet is read by Oran Snakewrithe in Undercity. Object start at Overlook Cliffs."
+    },
+    {
+      "decision": "drop",
+      "quest": 2861,
+      "reason": "Tabetha's Task: breadcrumb to Tabetha in Dustwallow Marsh (Kalimdor)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2864,
+      "reason": "Tran'rek breadcrumb: Tran'rek is in Gadgetzan (Tanaris, Kalimdor)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2872,
+      "reason": "Stoley's Debt breadcrumb: Stoley is in Steamwheedle Port (Tanaris, Kalimdor)."
+    },
+    {
+      "decision": "optional",
+      "quest": 2932,
+      "reason": "Grim Message: accept at Nimboya, place the message near Witherbark (23, 58) in the Hinterlands, return to Nimboya."
+    },
+    {
+      "decision": "optional",
+      "quest": 2933,
+      "reason": "Venom Bottles: pick up the bottle at the Witherbark camp in the Hinterlands; turn in to Lydon in Tarren Mill on the way."
+    },
+    {
+      "decision": "drop",
+      "quest": 2934,
+      "reason": "Undamaged Venom Sac: needs 2933 at Lydon, then a second Hinterlands trip for the broodguard sac. Not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 2935,
+      "reason": "Consult Master Gadrin is in Sen'jin Village (Durotar, Kalimdor). Handed to 40-45b from Orgrimmar."
+    },
+    {
+      "decision": "drop",
+      "quest": 2995,
+      "reason": "Lines of Communication is accepted from Oran in Undercity; this part does not visit Undercity before the Hinterlands."
+    },
+    {
+      "decision": "drop",
+      "quest": 3341,
+      "reason": "Bring the End: instanced boss (Amnennar) with no map position.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 3526,
+      "reason": "Goblin Engineering profession chain: profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 3635,
+      "reason": "Gnome Engineering profession chain: profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 3642,
+      "reason": "Engineering profession chain (Pledge of Secrecy): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 3643,
+      "reason": "Engineering profession chain (Show Your Work): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 3645,
+      "reason": "Engineering profession chain (Membership Card Renewal): profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 4449,
+      "reason": "Caught!: requires level 43; the Searing Gorge outhouse chain does not fit before this part's exit at 42-43."
+    },
+    {
+      "decision": "drop",
+      "quest": 4450,
+      "reason": "Ledger from Tanaris: turn-in with Krinkle Goodsteel in Tanaris (Kalimdor), and needs 4449."
+    },
+    {
+      "decision": "drop",
+      "quest": 4451,
+      "reason": "The Key to Freedom: requires level 43 and follows the Searing Gorge outhouse, not reached before exit."
+    },
+    {
+      "decision": "drop",
+      "quest": 4489,
+      "reason": "Summon Felsteed (warlock mount): finishes in Ratchet (The Barrens, Kalimdor). Left to 40-45b."
+    },
+    {
+      "decision": "drop",
+      "quest": 6622,
+      "reason": "Triage: First Aid (225) gated escort, profession chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 8169,
+      "reason": "The Battle for Arathi Basin: battleground group quest, not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 8264,
+      "reason": "Defiler's Standard Care Package: reputation and dungeon gated."
+    },
+    {
+      "decision": "main",
+      "quest": 8273,
+      "reason": "Oran's Gratitude: 4200 XP turn-in to Oran Snakewrithe in Undercity after 2782."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 8551,
+      "reason": "Smotts' Chest: Gorlash is lv 47 elite, 5 above the route. Kept as an elite, placed last, as a flagged exception to the mob-level rule.",
+      "revisitAt": 47
+    },
+    {
+      "decision": "drop",
+      "quest": 79358,
+      "reason": "Storm, Earth, and Fire (shaman): totems from Dustwallow and Desolace (Kalimdor). Class quest, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79361,
+      "reason": "Storm, Earth, and Fire (shaman): totems from Dustwallow and Desolace (Kalimdor). Class quest, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 81947,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81949,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81951,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81952,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81953,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81954,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81955,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 81956,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "decision": "drop",
+      "quest": 82208,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    }
+  ],
+  "id": "horde_horde_40-45a",
+  "schemaVersion": 1
+}

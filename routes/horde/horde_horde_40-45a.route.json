@@ -1,0 +1,1985 @@
+{
+  "_review": [
+    "Part a of 40-45 (Eastern Kingdoms). Entry is Grom'gol, Stranglethorn Vale (31.4, 29.9), level 40: the exact exit of 35-40b. Exit is the Grom'gol zeppelin to Orgrimmar (Durotar, verified in travel.json) at level 42; 40-45b must start at Orgrimmar.",
+    "Exit level 42 is the honest estimate. Quest XP alone is 149,550, which reaches 41.6 on the validator curve (40 to 41 is 90,700 XP, 40 to 42 is 186,500). Kill XP is not counted, so 42 is the expected in-game level at Orgrimmar.",
+    "W_XP_RANGE (80% of the 40 to 42 budget): not padded. Pack quests left out are Kalimdor (Tanaris, Thousand Needles, Dustwallow, Desolace, Feralas, Durotar), profession-gated (Blacksmithing, Engineering), instanced (Uldaman, Scarlet Monastery, Arathi Basin), level 43 to 47 only, reputation or battleground, or have no XP row.",
+    "W_NEXT_NOT_LOADED is expected: horde_horde_40-45b is written in the next phase.",
+    "W_NOT_IN_PACK for quest 687 (Theldurin the Lost): handed over from 35-40b. It starts with Zaruk in Hammerfall (2787) and turns in to Theldurin in the Badlands; it is needed for 692. The 35-40b drop reason (needs 653 or 688) is now satisfied because 688 is turned in here.",
+    "Elite quests are never dropped. 197 and 208 (Nesingwary, lv 43) are routed with revisitAt 44; 197 is hunter-only. 520 (Mug'thol, lv 43, Alterac), 613 (Mosh'Ogg Warmonger, lv 41-45) are optional-elite with revisitAt 44.",
+    "Conflict for main-session decision: 591 (Mai'Zoth, Mind's Eye, lv 47) and 8551 (Gorlash, Smotts' Chest, lv 47) are elites 5 levels above the route. Elite quests must not be dropped and the 'no mobs 3+ above' rule conflicts with that. Both are placed last (Grom'gol and Booty Bay at about level 42) with revisitAt 47 and are flagged here; the mob-level validator does not warn on them.",
+    "Quest 348 (Stranglethorn Fever, Mokk the Savage lv 44) is placed after level 42 (+2). Its child 349 has no XP row.",
+    "Hunter-only quests 196 and 197 carry classes HUNTER (no XP for other classes). 208 is not class-limited in the DB and is kept for everyone.",
+    "Trainers: Booty Bay rogue (about 41), Stonard hunter, shaman, warlock, warrior (42), Undercity paladin, priest, warrior and mage, warlock (42). No druid trainer is on this path (Thunder Bluff only), so druid has a gap from 40 to exit.",
+    "Hearth binds: Booty Bay (Skindle), Hammerfall (Adegwa), Stonard (Karakul), Tarren Mill (Shay). HEARTH_USE is used for the Mosh'Ogg to Booty Bay, Stromgarde to Hammerfall and Swamp coast to Stonard returns.",
+    "Transport not verified in game: Booty Bay to Hammerfall and Hammerfall to Kargath and Stonard (wind riders Urda, Gorrik, Breyk, all discovered). The Tarren Mill and Undercity legs are walks; the Undercity to Grom'gol zeppelin and the Grom'gol to Orgrimmar zeppelin are verified.",
+    "Dropped for the next band (Kalimdor, 40-45b): 243 and 4450 (Tanaris), 1108, 1119, 1127, 1137 (Thousand Needles chain from Fizzle and Kravel), 2935 (Sen'jin Village, Durotar), 2861, 2864, 2872 (Tanaris and Dustwallow breadcrumbs), 703 (wings, Tanaris and Desolace), 1261 (Dustwallow pendant), 624 and 625 (Dustwallow scroll), 736 (Dagun in Dustwallow), 4489 (Ratchet), 79358 and 79361 (totems, Dustwallow and Desolace).",
+    "Searing Gorge quests 4449 and 4451 need level 43 and sit in Eastern Kingdoms; they are not reached before the 42 exit. Left for the main session to decide whether 40-45b or a later band takes them.",
+    "Stale notes in the 35-40b handoff: 1190 to 1194, 1948, 1951, 1952, 1956 to 1958, 1262, 7541, 1372, 1388, 1391, 3631, 4781 to 4786, 1203, 1136, 2862, 2283, 2284, 737, 635 and 6134 are not in this pack. The DB checks show Kalimdor (Thousand Needles, Dustwallow, Desolace, Ratchet), Duskwood, Uldaman or class and profession chains, so none are routed here.",
+    "Data gaps: 349, 593 and 1422 have no XP row (child or start steps). 2934 (Undamaged Venom Sac) needs a second Hinterlands trip after the Lydon turn-in and is dropped. 2995 is accepted only from Oran in Undercity, which this route visits after the Hinterlands; dropped.",
+    "Quest 4964 (negative preQuestGroup id -4962) is not in this pack; the 35-40b question is still open for the main session."
+  ],
+  "band": [
+    40,
+    45
+  ],
+  "branch": "horde",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 243,
+      "reason": "Into the Field ends with Bilgewhizzle in Gadgetzan (Tanaris, Kalimdor). Left to 40-45b."
+    },
+    {
+      "quest": 594,
+      "reason": "Message in a Bottle needs level 45 (requiredLevel 45); this part ends at 42-43."
+    },
+    {
+      "quest": 608,
+      "reason": "Captains Stillwater, Keelhaul and Firallon are lv 45-48, 3+ above this route."
+    },
+    {
+      "quest": 624,
+      "reason": "Cortello's Riddle: its second scroll (625) is an object in Dustwallow Marsh (Kalimdor). Chain belongs to 40-45b."
+    },
+    {
+      "quest": 625,
+      "reason": "Musty Scroll is an object in Dustwallow Marsh (Kalimdor), so the chain cannot be finished in this part."
+    },
+    {
+      "quest": 736,
+      "reason": "Star, Hand and Heart elite: Hand of Dagun and Seaworn Altar are in Dustwallow Marsh (Kalimdor), no position on this path.",
+      "unroutable": true
+    },
+    {
+      "quest": 778,
+      "reason": "Lotwil's Shackles: Fam'retor Guardian is lv 45, 3+ above this part. Chain also needs 777."
+    },
+    {
+      "quest": 1119,
+      "reason": "Needs 1118 (Kravel's Scheme), which needs the Thousand Needles chain. Kalimdor, not on this path."
+    },
+    {
+      "quest": 1127,
+      "reason": "Fool's Stout needs 1122 (Kravel chain in Thousand Needles, Kalimdor)."
+    },
+    {
+      "quest": 1428,
+      "reason": "Continued Threat: Marsh Oracles are lv 44-45, 3+ above this part. The chain stops at 1427."
+    },
+    {
+      "quest": 2203,
+      "reason": "Badlands Reagent Run II is an elite that needs Alchemy 210 (skill 171). Profession-gated, cannot be routed.",
+      "unroutable": true
+    },
+    {
+      "quest": 2339,
+      "reason": "Find the Gems and Power Source: needs 2338, which cannot start."
+    },
+    {
+      "quest": 2340,
+      "reason": "Deliver the Gems: needs 2339, which cannot start."
+    },
+    {
+      "quest": 2342,
+      "reason": "Garrett Family Treasure is in the Uldaman dungeon chest, no open-world position."
+    },
+    {
+      "quest": 2761,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "quest": 2762,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "quest": 2763,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "quest": 2764,
+      "reason": "Blacksmithing profession chain (Galvan the Ancient): profession-gated."
+    },
+    {
+      "quest": 2765,
+      "reason": "Expert Blacksmith! profession chain: profession-gated."
+    },
+    {
+      "quest": 2861,
+      "reason": "Tabetha's Task: breadcrumb to Tabetha in Dustwallow Marsh (Kalimdor)."
+    },
+    {
+      "quest": 2864,
+      "reason": "Tran'rek breadcrumb: Tran'rek is in Gadgetzan (Tanaris, Kalimdor)."
+    },
+    {
+      "quest": 2872,
+      "reason": "Stoley's Debt breadcrumb: Stoley is in Steamwheedle Port (Tanaris, Kalimdor)."
+    },
+    {
+      "quest": 2934,
+      "reason": "Undamaged Venom Sac: needs 2933 at Lydon, then a second Hinterlands trip for the broodguard sac. Not on this path."
+    },
+    {
+      "quest": 2935,
+      "reason": "Consult Master Gadrin is in Sen'jin Village (Durotar, Kalimdor). Handed to 40-45b from Orgrimmar."
+    },
+    {
+      "quest": 2995,
+      "reason": "Lines of Communication is accepted from Oran in Undercity; this part does not visit Undercity before the Hinterlands."
+    },
+    {
+      "quest": 3526,
+      "reason": "Goblin Engineering profession chain: profession-gated."
+    },
+    {
+      "quest": 3635,
+      "reason": "Gnome Engineering profession chain: profession-gated."
+    },
+    {
+      "quest": 3642,
+      "reason": "Engineering profession chain (Pledge of Secrecy): profession-gated."
+    },
+    {
+      "quest": 3643,
+      "reason": "Engineering profession chain (Show Your Work): profession-gated."
+    },
+    {
+      "quest": 3645,
+      "reason": "Engineering profession chain (Membership Card Renewal): profession-gated."
+    },
+    {
+      "quest": 4449,
+      "reason": "Caught!: requires level 43; the Searing Gorge outhouse chain does not fit before this part's exit at 42-43."
+    },
+    {
+      "quest": 4450,
+      "reason": "Ledger from Tanaris: turn-in with Krinkle Goodsteel in Tanaris (Kalimdor), and needs 4449."
+    },
+    {
+      "quest": 4451,
+      "reason": "The Key to Freedom: requires level 43 and follows the Searing Gorge outhouse, not reached before exit."
+    },
+    {
+      "quest": 6622,
+      "reason": "Triage: First Aid (225) gated escort, profession chain."
+    },
+    {
+      "quest": 8169,
+      "reason": "The Battle for Arathi Basin: battleground group quest, not a leveling stop."
+    },
+    {
+      "quest": 8264,
+      "reason": "Defiler's Standard Care Package: reputation and dungeon gated."
+    },
+    {
+      "quest": 81947,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81949,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81951,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81952,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81953,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81954,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81955,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 81956,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    },
+    {
+      "quest": 82208,
+      "reason": "Owen Thadd book collection: no XP rows, books scattered across Kalimdor and outdoor zones."
+    }
+  ],
+  "entry": {
+    "hub": "Grom'gol",
+    "level": 40,
+    "x": 31.4,
+    "y": 29.9,
+    "zone": "Stranglethorn Vale"
+  },
+  "exitPoint": {
+    "hub": "Orgrimmar",
+    "level": 42,
+    "x": 50.5,
+    "y": 12.7,
+    "zone": "Durotar"
+  },
+  "faction": "horde",
+  "id": "horde_horde_40-45a",
+  "next": "horde_horde_40-45b",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Nimboya at Grom'gol: Bloodscalp heads north at (23, 8). Turn in at the cauldron.",
+      "quest": 584,
+      "tag": "main",
+      "title": "Bloodscalp Clan Heads",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mok'thardin at Grom'gol: Jungle Stalker feathers. The 571 chain follows here.",
+      "quest": 572,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 29.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Nimboya's Laden Pike: place the grim message in the Hinterlands and return here at the end.",
+      "quest": 2932,
+      "tag": "optional",
+      "title": "Grim Message",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Gan'zulah and Nezzliok heads at the Bloodscalp camp, north of Grom'gol.",
+      "quest": 584,
+      "tag": "main",
+      "title": "Bloodscalp Clan Heads",
+      "type": "COMPLETE",
+      "x": 23.4,
+      "y": 8.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Nesingwary's Raptor Mastery: hunters only. Other classes skip the hunter steps (no XP).",
+      "quest": 196,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "ACCEPT",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Walk south to the Bubbling Cauldron at Grom'gol.",
+      "to": "Grom'gol Base Camp, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Bubbling Cauldron at Grom'gol: Bloodscalp heads.",
+      "quest": 584,
+      "tag": "main",
+      "title": "Bloodscalp Clan Heads",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Jungle Stalkers at (29, 45). Hunters also finish 196 here.",
+      "quest": 572,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "COMPLETE",
+      "x": 28.9,
+      "y": 44.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hunters: Jungle Stalkers (29, 45) for Raptor Mastery.",
+      "quest": 196,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "COMPLETE",
+      "x": 28.9,
+      "y": 44.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mok'thardin at Grom'gol: Jungle Stalker feathers.",
+      "quest": 572,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "TURNIN",
+      "x": 32.1,
+      "y": 29.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mok'thardin: Aged Gorilla Sinew from the Mistvale gorillas.",
+      "quest": 571,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 29.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mistvale gorillas near (33, 65).",
+      "quest": 571,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "COMPLETE",
+      "x": 32.9,
+      "y": 64.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mok'thardin at Grom'gol: Aged Gorilla Sinew.",
+      "quest": 571,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "TURNIN",
+      "x": 32.1,
+      "y": 29.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to Nesingwary's camp for the hunter chain (196, 197, 208).",
+      "to": "Nesingwary camp, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hemet Nesingwary: Raptor Mastery, hunters only.",
+      "quest": 196,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hemet Nesingwary: Talon of Tethis, hunters only.",
+      "quest": 197,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Raptor Mastery",
+      "type": "ACCEPT",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "South to Tethis (31.9, 42.0) for the 197 elite.",
+      "to": "Tethis at Stranglethorn Vale (31, 42)",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Tethis (elite) at (32, 42). Hunters only.",
+      "quest": 197,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Raptor Mastery",
+      "type": "COMPLETE",
+      "x": 31.9,
+      "y": 42.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "North again to Nesingwary for 197 and 208.",
+      "to": "Nesingwary camp, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hemet Nesingwary: Talon of Tethis.",
+      "quest": 197,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Raptor Mastery",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Hemet Nesingwary: Head of Bangalash, after 197.",
+      "quest": 208,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Big Game Hunter",
+      "type": "ACCEPT",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "South to Bangalash (38.2, 35.6), the elite for 208.",
+      "to": "King Bangalash at Stranglethorn Vale (38, 36)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "King Bangalash (elite, lv 43) at (38, 36). Revisit at 44 if it is too hard.",
+      "quest": 208,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Big Game Hunter",
+      "type": "COMPLETE",
+      "x": 38.2,
+      "y": 35.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Last north trip to Nesingwary for 208.",
+      "to": "Nesingwary camp, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Hemet Nesingwary: Head of Bangalash.",
+      "quest": 208,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Big Game Hunter",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Thysta at Grom'gol to Gringer at Booty Bay. Walk if the flight is not in game.",
+      "to": "Booty Bay, Stranglethorn Vale",
+      "type": "FLY"
+    },
+    {
+      "note": "Hearth to Innkeeper Skindle in Booty Bay.",
+      "type": "HEARTH_BIND",
+      "x": 27.0,
+      "y": 77.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Rogue trainer at Booty Bay, about level 41.",
+      "type": "TRAINER",
+      "x": 26.8,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Sea Wolf MacKinley: Scaring Shaky. Mistvale giblets from the gorillas north of Booty Bay.",
+      "quest": 606,
+      "tag": "optional",
+      "title": "Scaring Shaky",
+      "type": "ACCEPT",
+      "x": 27.8,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mistvale giblets from gorillas at (33, 65).",
+      "quest": 606,
+      "tag": "optional",
+      "title": "Scaring Shaky",
+      "type": "COMPLETE",
+      "x": 32.9,
+      "y": 64.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Shaky Phillipe in Booty Bay: five giblets.",
+      "quest": 606,
+      "tag": "optional",
+      "title": "Scaring Shaky",
+      "type": "TURNIN",
+      "x": 26.9,
+      "y": 73.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Shaky Phillipe: Shaky's Payment.",
+      "quest": 607,
+      "tag": "optional",
+      "title": "Return to MacKinley",
+      "type": "ACCEPT",
+      "x": 26.9,
+      "y": 73.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Sea Wolf MacKinley: return to MacKinley in Booty Bay.",
+      "quest": 607,
+      "tag": "optional",
+      "title": "Return to MacKinley",
+      "type": "TURNIN",
+      "x": 27.8,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Sea Wolf MacKinley: Voodoo Dues, three named mobs north of Booty Bay.",
+      "quest": 609,
+      "tag": "optional",
+      "title": "Voodoo Dues",
+      "type": "ACCEPT",
+      "x": 27.8,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Maury, Jon-Jon and Chucky around (35-40, 51-58).",
+      "quest": 609,
+      "tag": "optional",
+      "title": "Voodoo Dues",
+      "type": "COMPLETE",
+      "x": 35.3,
+      "y": 51.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Sea Wolf MacKinley in Booty Bay.",
+      "quest": 609,
+      "tag": "optional",
+      "title": "Voodoo Dues",
+      "type": "TURNIN",
+      "x": 27.8,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Sea Wolf MacKinley: Cracking Maury's Foot (elite). Revisit at 44.",
+      "quest": 613,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Cracking Maury's Foot",
+      "type": "ACCEPT",
+      "x": 27.8,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mosh'Ogg Warmonger (elite) at (50, 28). Revisit at 44.",
+      "quest": 613,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Cracking Maury's Foot",
+      "type": "COMPLETE",
+      "x": 50.4,
+      "y": 28.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Hearth from the Mosh'Ogg camp to Booty Bay (bound at Skindle).",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Sea Wolf MacKinley in Booty Bay.",
+      "quest": 613,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "Cracking Maury's Foot",
+      "type": "TURNIN",
+      "x": 27.8,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Crank Fizzlebub in Booty Bay: Zanzil's Secret.",
+      "quest": 621,
+      "tag": "main",
+      "title": "Zanzil's Secret",
+      "type": "ACCEPT",
+      "x": 27.1,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Zanzil nagas and zombies at (40, 58).",
+      "quest": 621,
+      "tag": "main",
+      "title": "Zanzil's Secret",
+      "type": "COMPLETE",
+      "x": 39.7,
+      "y": 58.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Crank Fizzlebub in Booty Bay.",
+      "quest": 621,
+      "tag": "main",
+      "title": "Zanzil's Secret",
+      "type": "TURNIN",
+      "x": 27.1,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Crank Fizzlebub in Booty Bay: Venture Company Mining.",
+      "quest": 600,
+      "tag": "main",
+      "title": "Venture Company Mining",
+      "type": "ACCEPT",
+      "x": 27.1,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Venture Co. mobs at (42, 44) for the Singing Blue Crystals.",
+      "quest": 600,
+      "tag": "main",
+      "title": "Venture Company Mining",
+      "type": "COMPLETE",
+      "x": 41.7,
+      "y": 43.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Crank Fizzlebub in Booty Bay.",
+      "quest": 600,
+      "tag": "main",
+      "title": "Venture Company Mining",
+      "type": "TURNIN",
+      "x": 27.1,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Privateer Bloads in Booty Bay: Akiris by the Bundle.",
+      "quest": 617,
+      "tag": "main",
+      "title": "Akiris by the Bundle",
+      "type": "ACCEPT",
+      "x": 26.8,
+      "y": 76.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Naga Explorers at (26, 62) for Akiris Reed.",
+      "quest": 617,
+      "tag": "main",
+      "title": "Akiris by the Bundle",
+      "type": "COMPLETE",
+      "x": 26.2,
+      "y": 62.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Privateer Bloads in Booty Bay.",
+      "quest": 617,
+      "tag": "main",
+      "title": "Akiris by the Bundle",
+      "type": "TURNIN",
+      "x": 26.8,
+      "y": 76.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Fleet Master Seahorn in Booty Bay: The Bloodsail Buccaneers.",
+      "quest": 604,
+      "tag": "main",
+      "title": "The Bloodsail Buccaneers",
+      "type": "ACCEPT",
+      "x": 27.2,
+      "y": 77.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Bloodsail Swashbucklers at (28, 82) and their charts on the cove.",
+      "quest": 604,
+      "tag": "main",
+      "title": "The Bloodsail Buccaneers",
+      "type": "COMPLETE",
+      "x": 28.5,
+      "y": 82.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Fleet Master Seahorn in Booty Bay.",
+      "quest": 604,
+      "tag": "main",
+      "title": "The Bloodsail Buccaneers",
+      "type": "TURNIN",
+      "x": 27.2,
+      "y": 77.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Fleet Master Seahorn: Seahorn's Letter to Shakes O'Breen.",
+      "quest": 670,
+      "tag": "main",
+      "title": "Sunken Treasure",
+      "type": "ACCEPT",
+      "x": 27.2,
+      "y": 77.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Walk south to Faldir's Cove: O'Breen, Steelgut and the cannon.",
+      "to": "Faldir's Cove, Arathi Highlands",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Shakes O'Breen: deliver Seahorn's Letter.",
+      "quest": 670,
+      "tag": "main",
+      "title": "Sunken Treasure",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 81.4,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Shakes O'Breen: Death From Below, escort at the cannon.",
+      "quest": 667,
+      "tag": "optional",
+      "title": "Death From Below",
+      "type": "ACCEPT",
+      "x": 32.3,
+      "y": 81.4,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Cannon at (32, 81) with Shakes O'Breen.",
+      "quest": 667,
+      "tag": "optional",
+      "title": "Death From Below",
+      "type": "COMPLETE",
+      "x": 32.1,
+      "y": 80.8,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Shakes O'Breen at Faldir's Cove.",
+      "quest": 667,
+      "tag": "optional",
+      "title": "Death From Below",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 81.4,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Captain Steelgut at Faldir's Cove: Drowned Sorrows.",
+      "quest": 664,
+      "tag": "main",
+      "title": "Drowned Sorrows",
+      "type": "ACCEPT",
+      "x": 34.0,
+      "y": 80.8,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Daggerspine Raiders and Sorceresses around (21, 86).",
+      "quest": 664,
+      "tag": "main",
+      "title": "Drowned Sorrows",
+      "type": "COMPLETE",
+      "x": 22.1,
+      "y": 87.1,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Captain Steelgut at Faldir's Cove.",
+      "quest": 664,
+      "tag": "main",
+      "title": "Drowned Sorrows",
+      "type": "TURNIN",
+      "x": 34.0,
+      "y": 80.8,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Wind rider Urda at Hammerfall (discovered in 30-35). Walk if not in game.",
+      "to": "Hammerfall, Arathi Highlands",
+      "type": "FLY"
+    },
+    {
+      "note": "Hearth to Innkeeper Adegwa at Hammerfall.",
+      "type": "HEARTH_BIND",
+      "x": 73.8,
+      "y": 32.5,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Zengu in Hammerfall: Trol'kalar. Turn in at Trollbane's tomb in Stromgarde.",
+      "quest": 645,
+      "tag": "main",
+      "title": "Trol'kalar",
+      "type": "ACCEPT",
+      "x": 73.8,
+      "y": 34.0,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "West to Stromgarde: Trollbane's tomb and the Keystone.",
+      "to": "Stromgarde Keep, Arathi Highlands",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Trollbane's tomb in Stromgarde: Trol'kalar.",
+      "quest": 645,
+      "tag": "main",
+      "title": "Trol'kalar",
+      "type": "TURNIN",
+      "x": 28.9,
+      "y": 59.6,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Trollbane's tomb: Trol'kalar is delivered to Zengu.",
+      "quest": 646,
+      "tag": "main",
+      "title": "Trol'kalar",
+      "type": "ACCEPT",
+      "x": 28.9,
+      "y": 59.6,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Stone Keystone object: Myzrael's Allies, then Zaruk in Hammerfall.",
+      "quest": 688,
+      "tag": "main",
+      "title": "Myzrael's Allies",
+      "type": "ACCEPT",
+      "x": 36.1,
+      "y": 58.1,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Hearth from Stromgarde to Hammerfall (bound at Adegwa) for the Zengu and Zaruk turn-ins.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Zengu in Hammerfall: Trol'kalar.",
+      "quest": 646,
+      "tag": "main",
+      "title": "Trol'kalar",
+      "type": "TURNIN",
+      "x": 73.8,
+      "y": 34.0,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Zaruk in Hammerfall: Myzrael's Allies.",
+      "quest": 688,
+      "tag": "main",
+      "title": "Myzrael's Allies",
+      "type": "TURNIN",
+      "x": 74.5,
+      "y": 35.6,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Zaruk in Hammerfall: Theldurin the Lost (out of this pack; needed for 692).",
+      "quest": 687,
+      "tag": "main",
+      "title": "Theldurin the Lost",
+      "type": "ACCEPT",
+      "x": 74.5,
+      "y": 35.6,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "bagCheck": true,
+      "note": "Wind rider Gorrik at Kargath (discovered in 30-35). Walk if not in game.",
+      "to": "Kargath, Badlands",
+      "type": "FLY"
+    },
+    {
+      "note": "Gorn in Kargath: Broken Alliances. Boss Tho'grun is south of Kargath.",
+      "quest": 782,
+      "tag": "optional",
+      "title": "Broken Alliances",
+      "type": "ACCEPT",
+      "x": 2.9,
+      "y": 45.6,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Boss Tho'grun at (13, 76): the Sign of the Earth.",
+      "quest": 782,
+      "tag": "optional",
+      "title": "Broken Alliances",
+      "type": "COMPLETE",
+      "x": 12.6,
+      "y": 75.5,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Gorn in Kargath: Broken Alliances.",
+      "quest": 782,
+      "tag": "optional",
+      "title": "Broken Alliances",
+      "type": "TURNIN",
+      "x": 2.9,
+      "y": 45.6,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Lotwil Veriatus in the Badlands: Study of the Elements: Rock.",
+      "quest": 711,
+      "tag": "main",
+      "title": "Study of the Elements: Rock",
+      "type": "ACCEPT",
+      "x": 25.9,
+      "y": 44.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Rock elementals at (15, 35) for the Large Stone Slabs.",
+      "quest": 711,
+      "tag": "main",
+      "title": "Study of the Elements: Rock",
+      "type": "COMPLETE",
+      "x": 14.5,
+      "y": 34.5,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Lotwil Veriatus in the Badlands.",
+      "quest": 711,
+      "tag": "main",
+      "title": "Study of the Elements: Rock",
+      "type": "TURNIN",
+      "x": 25.9,
+      "y": 44.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Lotwil Veriatus: Bracers of Rock Binding from Greater Rock Elementals.",
+      "quest": 712,
+      "tag": "main",
+      "title": "Study of the Elements: Rock",
+      "type": "ACCEPT",
+      "x": 25.9,
+      "y": 44.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Greater Rock Elementals at (4, 80) and (15, 87).",
+      "quest": 712,
+      "tag": "main",
+      "title": "Study of the Elements: Rock",
+      "type": "COMPLETE",
+      "x": 4.0,
+      "y": 79.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Lotwil Veriatus in the Badlands.",
+      "quest": 712,
+      "tag": "main",
+      "title": "Study of the Elements: Rock",
+      "type": "TURNIN",
+      "x": 25.9,
+      "y": 44.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "East to Theldurin in the Badlands for 687 and 692.",
+      "to": "Theldurin's camp, Badlands",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Theldurin the Lost in the Badlands: Theldurin.",
+      "quest": 687,
+      "tag": "main",
+      "title": "Theldurin the Lost",
+      "type": "TURNIN",
+      "x": 51.4,
+      "y": 76.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Theldurin the Lost: The Lost Fragments.",
+      "quest": 692,
+      "tag": "main",
+      "title": "The Lost Fragments",
+      "type": "ACCEPT",
+      "x": 51.4,
+      "y": 76.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Enraged Rock Elementals at (55, 84) for three scroll fragments.",
+      "quest": 692,
+      "tag": "main",
+      "title": "The Lost Fragments",
+      "type": "COMPLETE",
+      "x": 54.7,
+      "y": 83.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Theldurin the Lost in the Badlands.",
+      "quest": 692,
+      "tag": "main",
+      "title": "The Lost Fragments",
+      "type": "TURNIN",
+      "x": 51.4,
+      "y": 76.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Wind rider Gorrik to Breyk at Stonard. Walk if the flight is not in game.",
+      "to": "Stonard, Swamp of Sorrows",
+      "type": "FLY"
+    },
+    {
+      "note": "Hearth to Innkeeper Karakul at Stonard.",
+      "type": "HEARTH_BIND",
+      "x": 45.2,
+      "y": 56.7,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Fel'zerul in Stonard: Pool of Tears, ten Atal'ai artifacts.",
+      "quest": 1424,
+      "tag": "main",
+      "title": "Pool of Tears",
+      "type": "ACCEPT",
+      "x": 47.9,
+      "y": 54.8,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Atal'ai mobs at (70, 53) for the Atal'ai artifacts.",
+      "quest": 1424,
+      "tag": "main",
+      "title": "Pool of Tears",
+      "type": "COMPLETE",
+      "x": 70.4,
+      "y": 53.5,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Fel'zerul in Stonard.",
+      "quest": 1424,
+      "tag": "main",
+      "title": "Pool of Tears",
+      "type": "TURNIN",
+      "x": 47.9,
+      "y": 54.8,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Fel'zerul in Stonard: The Atal'ai Exile. Bundle goes to the Exile in the Hinterlands.",
+      "quest": 1429,
+      "tag": "main",
+      "title": "The Atal'ai Exile",
+      "type": "ACCEPT",
+      "x": 47.9,
+      "y": 54.8,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "classes": [
+        "HUNTER",
+        "SHAMAN",
+        "WARLOCK",
+        "WARRIOR"
+      ],
+      "note": "Stonard trainers at about 42: hunter, shaman, warlock, warrior.",
+      "type": "TRAINER",
+      "x": 47.3,
+      "y": 53.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "bagCheck": true,
+      "note": "Walk to the Hinterlands (Atal'ai Exile near (34, 75)).",
+      "to": "Atal'ai Exile, The Hinterlands",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Atal'ai Exile in the Hinterlands.",
+      "quest": 1429,
+      "tag": "main",
+      "title": "The Atal'ai Exile",
+      "type": "TURNIN",
+      "x": 33.8,
+      "y": 75.2,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Atal'ai Exile: Return to Fel'Zerul in Stonard.",
+      "quest": 1444,
+      "tag": "main",
+      "title": "Return to Fel'Zerul",
+      "type": "ACCEPT",
+      "x": 33.8,
+      "y": 75.2,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Rin'ji in the Hinterlands (requires level 42): escort out of the Quel'Danil Lodge.",
+      "quest": 2742,
+      "tag": "optional",
+      "title": "Rin'ji is Trapped!",
+      "type": "ACCEPT",
+      "x": 30.7,
+      "y": 46.9,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Escort Rin'ji to safety at (35, 56). Short walk.",
+      "quest": 2742,
+      "tag": "optional",
+      "title": "Rin'ji is Trapped!",
+      "type": "COMPLETE",
+      "x": 34.6,
+      "y": 56.3,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Place Nimboya's Laden Pike with the grim message at (23, 58).",
+      "quest": 2932,
+      "tag": "optional",
+      "title": "Grim Message",
+      "type": "COMPLETE",
+      "x": 23.4,
+      "y": 58.1,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Witherbark Venom Bottle: take it to Apothecary Lydon in Tarren Mill.",
+      "quest": 2933,
+      "tag": "optional",
+      "title": "Venom Bottles",
+      "type": "ACCEPT",
+      "x": 23.5,
+      "y": 58.8,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "East to the Overlook Cliffs for Rin'ji's Secret (86, 59).",
+      "to": "Rin'ji's Secret, The Hinterlands",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Rin'ji's Secret at the Overlook Cliffs.",
+      "quest": 2742,
+      "tag": "optional",
+      "title": "Rin'ji is Trapped!",
+      "type": "TURNIN",
+      "x": 86.3,
+      "y": 59.0,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Rin'ji's Secret: the tablet goes to Oran Snakewrithe in Undercity.",
+      "quest": 2782,
+      "tag": "optional",
+      "title": "Rin'ji's Secret",
+      "type": "ACCEPT",
+      "x": 86.3,
+      "y": 59.0,
+      "zone": "The Hinterlands"
+    },
+    {
+      "note": "Back west to Stonard for Fel'Zerul.",
+      "to": "Fel'Zerul, Swamp of Sorrows",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Fel'Zerul in Stonard.",
+      "quest": 1444,
+      "tag": "main",
+      "title": "Return to Fel'Zerul",
+      "type": "TURNIN",
+      "x": 47.9,
+      "y": 54.8,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Dar in the Swamp: Fresh Meat, ten Monstrous Crawler Legs. Turn in here after the coast.",
+      "quest": 1430,
+      "tag": "main",
+      "title": "Fresh Meat",
+      "type": "ACCEPT",
+      "x": 44.7,
+      "y": 57.2,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Monstrous crawlers at (95, 66) on the east coast.",
+      "quest": 1430,
+      "tag": "main",
+      "title": "Fresh Meat",
+      "type": "COMPLETE",
+      "x": 95.0,
+      "y": 66.5,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Tok'Kar in the Swamp: Lack of Surplus, six Sawtooth Snapper Claws.",
+      "quest": 699,
+      "tag": "main",
+      "title": "Lack of Surplus",
+      "type": "ACCEPT",
+      "x": 81.3,
+      "y": 81.0,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Sawtooth Snappers at (81, 28).",
+      "quest": 699,
+      "tag": "main",
+      "title": "Lack of Surplus",
+      "type": "COMPLETE",
+      "x": 80.8,
+      "y": 27.5,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Tok'Kar in the Swamp.",
+      "quest": 699,
+      "tag": "main",
+      "title": "Lack of Surplus",
+      "type": "TURNIN",
+      "x": 81.3,
+      "y": 81.0,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Tok'Kar: Threat From the Sea. Turn in to Katar.",
+      "quest": 1422,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "ACCEPT",
+      "x": 81.3,
+      "y": 81.0,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Katar in the Swamp.",
+      "quest": 1422,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "TURNIN",
+      "x": 83.8,
+      "y": 80.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Katar: murlocs, inkspewers and flesheaters on the coast.",
+      "quest": 1426,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "ACCEPT",
+      "x": 83.8,
+      "y": 80.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Marsh murlocs and inkspewers on the coast at (85, 85).",
+      "quest": 1426,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "COMPLETE",
+      "x": 85.8,
+      "y": 85.2,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Katar in the Swamp.",
+      "quest": 1426,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "TURNIN",
+      "x": 83.8,
+      "y": 80.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Katar: Tok'Kar's murloc weapons.",
+      "quest": 1427,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "ACCEPT",
+      "x": 83.8,
+      "y": 80.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Tok'Kar in the Swamp.",
+      "quest": 1427,
+      "tag": "main",
+      "title": "Threat From the Sea",
+      "type": "TURNIN",
+      "x": 81.3,
+      "y": 81.0,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Hearth from the Swamp coast to Stonard (bound at Karakul).",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Dar in the Swamp of Sorrows: Fresh Meat.",
+      "quest": 1430,
+      "tag": "main",
+      "title": "Fresh Meat",
+      "type": "TURNIN",
+      "x": 44.7,
+      "y": 57.2,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "bagCheck": true,
+      "note": "Long walk north to Tarren Mill. Verify the road: no flight link in travel.json.",
+      "to": "Tarren Mill, Hillsbrad Foothills",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Krusk in Tarren Mill: Taretha's Gift chain starts with Lord Aliden Perenolde.",
+      "quest": 507,
+      "tag": "main",
+      "title": "Lord Aliden Perenolde",
+      "type": "ACCEPT",
+      "x": 63.2,
+      "y": 20.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "WANTED board in Tarren Mill: Baron Vardus.",
+      "quest": 566,
+      "tag": "main",
+      "title": "WANTED: Baron Vardus",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 20.8,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Melisara in Tarren Mill: The Crown of Will. Mug'thol (elite) in Alterac, revisit at 44.",
+      "quest": 520,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "The Crown of Will",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 20.6,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "West into Alterac: Elysa, Lord Aliden and Vardus.",
+      "to": "Alterac Mountains (Elysa at 39, 14)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Lord Aliden Perenolde at (39, 15).",
+      "quest": 507,
+      "tag": "main",
+      "title": "Lord Aliden Perenolde",
+      "type": "COMPLETE",
+      "x": 39.3,
+      "y": 14.6,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Elysa in Alterac: Lord Aliden Perenolde.",
+      "quest": 507,
+      "tag": "main",
+      "title": "Lord Aliden Perenolde",
+      "type": "TURNIN",
+      "x": 39.3,
+      "y": 14.3,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Elysa in Alterac: Taretha's Gift.",
+      "quest": 508,
+      "tag": "main",
+      "title": "Taretha's Gift",
+      "type": "ACCEPT",
+      "x": 39.3,
+      "y": 14.3,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Baron Vardus at (48, 17) and (57, 28).",
+      "quest": 566,
+      "tag": "main",
+      "title": "WANTED: Baron Vardus",
+      "type": "COMPLETE",
+      "x": 47.8,
+      "y": 17.1,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Mug'thol (elite, lv 43) at (36, 54). Revisit at 44.",
+      "quest": 520,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "The Crown of Will",
+      "type": "COMPLETE",
+      "x": 35.7,
+      "y": 54.2,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Back to Tarren Mill for the turn-ins.",
+      "to": "Tarren Mill, Hillsbrad Foothills",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Krusk in Tarren Mill: Taretha's Gift.",
+      "quest": 508,
+      "tag": "main",
+      "title": "Taretha's Gift",
+      "type": "TURNIN",
+      "x": 63.2,
+      "y": 20.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "High Executor Darthalia in Tarren Mill.",
+      "quest": 566,
+      "tag": "main",
+      "title": "WANTED: Baron Vardus",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 20.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Melisara in Tarren Mill.",
+      "quest": 520,
+      "revisitAt": 44,
+      "tag": "optional-elite",
+      "title": "The Crown of Will",
+      "type": "TURNIN",
+      "x": 62.6,
+      "y": 20.6,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Apothecary Lydon in Tarren Mill: Venom Bottles.",
+      "quest": 2933,
+      "tag": "optional",
+      "title": "Venom Bottles",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 19.1,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Melisara in Tarren Mill: Crown of Will delivery to Sharlindra in Undercity.",
+      "quest": 521,
+      "tag": "main",
+      "title": "The Crown of Will",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 20.6,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Hearth to Innkeeper Shay in Tarren Mill.",
+      "type": "HEARTH_BIND",
+      "x": 62.8,
+      "y": 19.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "bagCheck": true,
+      "note": "Walk to Undercity (Tarren Mill road). Verify the route in game.",
+      "to": "Undercity, Tirisfal Glades",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "PALADIN",
+        "PRIEST",
+        "WARRIOR"
+      ],
+      "note": "Undercity trainers at about 42: paladin, priest, warrior.",
+      "type": "TRAINER",
+      "x": 47.0,
+      "y": 17.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE",
+        "WARLOCK"
+      ],
+      "note": "Undercity trainers in the north-east: mage, warlock.",
+      "type": "TRAINER",
+      "x": 85.5,
+      "y": 14.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Apothecary Zinge in Undercity: Errand for Apothecary Zinge (purchase order).",
+      "quest": 232,
+      "tag": "optional",
+      "title": "Errand for Apothecary Zinge",
+      "type": "ACCEPT",
+      "x": 50.1,
+      "y": 68.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Alessandro Luca in Undercity: the purchase order.",
+      "quest": 232,
+      "tag": "optional",
+      "title": "Errand for Apothecary Zinge",
+      "type": "TURNIN",
+      "x": 58.6,
+      "y": 54.7,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Alessandro Luca: Field Sampling Kit back to Zinge.",
+      "quest": 238,
+      "tag": "optional",
+      "title": "Errand for Apothecary Zinge",
+      "type": "ACCEPT",
+      "x": 58.6,
+      "y": 54.7,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Apothecary Zinge in Undercity.",
+      "quest": 238,
+      "tag": "optional",
+      "title": "Errand for Apothecary Zinge",
+      "type": "TURNIN",
+      "x": 50.1,
+      "y": 68.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Sharlindra in Undercity: the Crown of Will and the Ethereal Talisman.",
+      "quest": 521,
+      "tag": "main",
+      "title": "The Crown of Will",
+      "type": "TURNIN",
+      "x": 57.6,
+      "y": 93.8,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Oran Snakewrithe in Undercity: Rin'ji's Secret.",
+      "quest": 2782,
+      "tag": "optional",
+      "title": "Rin'ji's Secret",
+      "type": "TURNIN",
+      "x": 73.1,
+      "y": 32.9,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Oran Snakewrithe: Oran's Gratitude.",
+      "quest": 8273,
+      "tag": "main",
+      "title": "Oran's Gratitude",
+      "type": "ACCEPT",
+      "x": 73.1,
+      "y": 32.9,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Oran Snakewrithe in Undercity.",
+      "quest": 8273,
+      "tag": "main",
+      "title": "Oran's Gratitude",
+      "type": "TURNIN",
+      "x": 73.1,
+      "y": 32.9,
+      "zone": "Undercity"
+    },
+    {
+      "bagCheck": true,
+      "note": "Undercity zeppelin to Grom'gol Base Camp (verified in travel.json).",
+      "to": "Grom'gol Base Camp, Stranglethorn Vale",
+      "type": "FLY"
+    },
+    {
+      "note": "Cauldron at Grom'gol: Balia'mah, Ziata'jai and Zul'Mamwe trophies.",
+      "quest": 585,
+      "tag": "main",
+      "title": "Speaking with Nezzliok",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Cauldron at Grom'gol: Skullsplitters around (46, 43). Ana'thek's armor drops there too.",
+      "quest": 586,
+      "tag": "main",
+      "title": "Speaking with Gan'zulah",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Skullsplitter Hunters, Headhunters and Berserkers around (46, 43).",
+      "quest": 586,
+      "tag": "main",
+      "title": "Speaking with Gan'zulah",
+      "type": "COMPLETE",
+      "x": 45.8,
+      "y": 41.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Trophies on the ground at (46, 32), (42, 36) and (48, 40).",
+      "quest": 585,
+      "tag": "main",
+      "title": "Speaking with Nezzliok",
+      "type": "COMPLETE",
+      "x": 46.1,
+      "y": 32.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in the trophies at the cauldron.",
+      "quest": 585,
+      "tag": "main",
+      "title": "Speaking with Nezzliok",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in the Skullsplitter kills and Ana'thek's armor at the cauldron.",
+      "quest": 586,
+      "tag": "main",
+      "title": "Speaking with Gan'zulah",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Fate of Yenniku: picked up at the cauldron after the two turn-ins.",
+      "quest": 588,
+      "tag": "optional",
+      "title": "The Fate of Yenniku",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Speak with Kin'weelay at Grom'gol.",
+      "quest": 588,
+      "tag": "optional",
+      "title": "The Fate of Yenniku",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kin'weelay: Singing Crystals, three Pulsing Blue Shards from Ironjaw Basilisks.",
+      "quest": 589,
+      "tag": "main",
+      "title": "The Singing Crystals",
+      "type": "ACCEPT",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Ironjaw Basilisks around (43, 48).",
+      "quest": 589,
+      "tag": "main",
+      "title": "The Singing Crystals",
+      "type": "COMPLETE",
+      "x": 43.1,
+      "y": 47.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Back to Kin'weelay at Grom'gol.",
+      "quest": 589,
+      "tag": "main",
+      "title": "The Singing Crystals",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kin'weelay at Grom'gol: The Mind's Eye. Elite lv 47 (flagged), done as the last exception.",
+      "quest": 591,
+      "revisitAt": 47,
+      "tag": "optional-elite",
+      "title": "The Mind's Eye",
+      "type": "ACCEPT",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mai'Zoth at (53, 28): the Mind's Eye. Elite lv 47, flagged in _review.",
+      "quest": 591,
+      "revisitAt": 47,
+      "tag": "optional-elite",
+      "title": "The Mind's Eye",
+      "type": "COMPLETE",
+      "x": 52.9,
+      "y": 27.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kin'weelay at Grom'gol.",
+      "quest": 591,
+      "revisitAt": 47,
+      "tag": "optional-elite",
+      "title": "The Mind's Eye",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kin'weelay at Grom'gol: Saving Yenniku. Take the soul gem to Yenniku.",
+      "quest": 592,
+      "tag": "optional",
+      "title": "Saving Yenniku",
+      "type": "ACCEPT",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "South to Yenniku at (39, 58) for the soul gem.",
+      "to": "Yenniku, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Yenniku: Filling the Soul Gem.",
+      "quest": 593,
+      "tag": "optional",
+      "title": "Filling the Soul Gem",
+      "type": "ACCEPT",
+      "x": 39.0,
+      "y": 58.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Yenniku: Filling the Soul Gem.",
+      "quest": 593,
+      "tag": "optional",
+      "title": "Filling the Soul Gem",
+      "type": "TURNIN",
+      "x": 39.0,
+      "y": 58.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Back to Grom'gol: Nimboya for 592 and the grim message.",
+      "to": "Grom'gol Base Camp, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Nimboya at Grom'gol: Saving Yenniku.",
+      "quest": 592,
+      "tag": "optional",
+      "title": "Saving Yenniku",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Nimboya at Grom'gol: Grim Message.",
+      "quest": 2932,
+      "tag": "optional",
+      "title": "Grim Message",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mok'thardin at Grom'gol: Naga Explorers and Holy Spring Water (lv 43-44 mobs, done at 42).",
+      "quest": 573,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 29.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Naga Explorers at (26, 62); Holy Spring Water on the ground at (29, 62).",
+      "quest": 573,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "COMPLETE",
+      "x": 26.2,
+      "y": 62.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mok'thardin at Grom'gol: Naga chain.",
+      "quest": 573,
+      "tag": "main",
+      "title": "Mok'thardin's Enchantment",
+      "type": "TURNIN",
+      "x": 32.1,
+      "y": 29.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Thysta to Gringer at Booty Bay for the last Stranglethorn turn-ins.",
+      "to": "Booty Bay, Stranglethorn Vale",
+      "type": "FLY"
+    },
+    {
+      "note": "Smotts in Booty Bay: Smotts' Chest. Gorlash (elite lv 47) is the source; flagged in _review.",
+      "quest": 8551,
+      "revisitAt": 47,
+      "tag": "optional-elite",
+      "title": "The Captain's Chest",
+      "type": "ACCEPT",
+      "x": 26.7,
+      "y": 73.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Fin Fizracket in Booty Bay: Stranglethorn Fever. Mokk the Savage is lv 44.",
+      "quest": 348,
+      "tag": "main",
+      "title": "Stranglethorn Fever",
+      "type": "ACCEPT",
+      "x": 27.6,
+      "y": 76.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Gorlash (elite) at (37, 70). Revisit at 47.",
+      "quest": 8551,
+      "revisitAt": 47,
+      "tag": "optional-elite",
+      "title": "The Captain's Chest",
+      "type": "COMPLETE",
+      "x": 37.0,
+      "y": 69.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Witch Doctor Unbagwa at (35, 60): Gorilla Fang, child of 348.",
+      "quest": 349,
+      "tag": "optional",
+      "title": "Stranglethorn Fever",
+      "type": "ACCEPT",
+      "x": 35.3,
+      "y": 60.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Elder Mistvale gorillas at (34, 64) for Gorilla Fangs.",
+      "quest": 349,
+      "tag": "optional",
+      "title": "Stranglethorn Fever",
+      "type": "COMPLETE",
+      "x": 33.9,
+      "y": 63.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Witch Doctor Unbagwa at (35, 60).",
+      "quest": 349,
+      "tag": "optional",
+      "title": "Stranglethorn Fever",
+      "type": "TURNIN",
+      "x": 35.3,
+      "y": 60.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mokk the Savage, summoned by Unbagwa at (35, 61). Heart of Mokk. Lv 44.",
+      "quest": 348,
+      "tag": "main",
+      "title": "Stranglethorn Fever",
+      "type": "COMPLETE",
+      "x": 35.0,
+      "y": 60.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Walk back south to Booty Bay for the Fin and Smotts turn-ins.",
+      "to": "Booty Bay, Stranglethorn Vale",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Fin Fizracket in Booty Bay.",
+      "quest": 348,
+      "tag": "main",
+      "title": "Stranglethorn Fever",
+      "type": "TURNIN",
+      "x": 27.6,
+      "y": 76.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Hecklebury Smotts in Booty Bay.",
+      "quest": 8551,
+      "revisitAt": 47,
+      "tag": "optional-elite",
+      "title": "The Captain's Chest",
+      "type": "TURNIN",
+      "x": 26.7,
+      "y": 73.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Gringer back to Thysta at Grom'gol. Walk if not in game.",
+      "to": "Grom'gol Base Camp, Stranglethorn Vale",
+      "type": "FLY"
+    },
+    {
+      "note": "Repair at Grom'gol before the zeppelin.",
+      "type": "VENDOR_REPAIR",
+      "x": 31.5,
+      "y": 29.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "bagCheck": true,
+      "note": "Grom'gol zeppelin to Orgrimmar (verified). Exit for 40-45b.",
+      "to": "Orgrimmar, Durotar",
+      "type": "FLY"
+    }
+  ]
+}
