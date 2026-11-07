@@ -290,7 +290,7 @@ function U.MenuItems(page)
         { text = L.MENU_BANDS, fn = function() U.SetMenuPage("bands") end },
         { text = L.MENU_STEPS, fn = function() U.CloseMenu(); U.ShowSteps() end },
         { text = L.MENU_OPTIONS, fn = function() U.CloseMenu(); U.ShowOptions() end },
-        { text = L.MENU_AUDIT, fn = function() K.Print(L.AUDIT_LATER) end },
+        { text = L.MENU_AUDIT, fn = function() U.CloseMenu(); K.Audit.Run(true) end },
         { text = L.MENU_CLOSE, fn = function() U.CloseMenu() end },
     }
 end

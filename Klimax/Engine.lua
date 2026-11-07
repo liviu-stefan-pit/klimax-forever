@@ -211,6 +211,15 @@ function E:Recompute()
     notify(self)
 end
 
+-- Rebuilds stable key -> index for a step list.
+local function keyIndex(list)
+    local out = {}
+    for i, s in ipairs(list) do
+        out[s.k] = i
+    end
+    return out
+end
+
 -- ---- Loading ----------------------------------------------------------------------------------
 
 -- Loads a registered route, filtered to the current player. Returns true or false, reason.
@@ -230,8 +239,108 @@ function E:Load(routeId)
             self.byKey[s.k] = #self.steps
         end
     end
+    self.byKey = keyIndex(self.steps)
+    self:ReplayDetours()
     self:Recompute()
     return true
+end
+
+-- Steps of quest `quest` in route `srcRoute` that a detour needs: accept, complete, turn in,
+-- in route order, filtered to this character. The original step tables are reused, so their
+-- stable keys (and saved states) do not change.
+function E:DetourSteps(quest, srcRoute)
+    local raw = K.routes[srcRoute]
+    local out = {}
+    for _, s in ipairs(raw and raw.steps or {}) do
+        if s.q == quest and (s.t == "A" or s.t == "C" or s.t == "T") and applies(s, K.player or {}) then
+            out[#out + 1] = s
+        end
+    end
+    return out
+end
+
+-- Index of the first step with no stored state (where a new detour goes).
+local function firstOpen(self)
+    local st = charState(self.routeId)
+    for i, s in ipairs(self.steps) do
+        if st[s.k] == nil then
+            return i
+        end
+    end
+    return #self.steps + 1
+end
+
+-- Splices a detour's steps in at `index`, skipping keys already present. Returns the count.
+local function splice(self, index, quest, srcRoute)
+    local added = 0
+    for _, s in ipairs(self:DetourSteps(quest, srcRoute)) do
+        if not self.byKey[s.k] then
+            table.insert(self.steps, index + added, s)
+            added = added + 1
+        end
+    end
+    self.byKey = keyIndex(self.steps)
+    return added
+end
+
+-- Re-inserts the detours saved for this route (called from Load, so they survive a reload).
+function E:ReplayDetours()
+    local saved = K.cdb and K.cdb.detours and K.cdb.detours[self.routeId] or {}
+    for _, d in ipairs(saved) do
+        splice(self, firstOpen(self), d.q, d.src)
+    end
+end
+
+-- "Go there" (PRD 7.10): inserts the accept, complete and turn-in steps of a quest from an
+-- earlier band at the cursor. Saved per route, so it is replayed on the next load.
+-- Returns the number of steps inserted; 0 when the quest is already detoured or unknown.
+function E:GoThere(quest, srcRoute)
+    if not self.routeId or not quest then
+        return 0
+    end
+    K.cdb.detours = K.cdb.detours or {}
+    local list = K.cdb.detours[self.routeId] or {}
+    for _, d in ipairs(list) do
+        if d.q == quest then
+            return 0
+        end
+    end
+    local index = self.cursor or firstOpen(self)
+    local added = splice(self, index, quest, srcRoute)
+    if added == 0 then
+        return 0
+    end
+    list[#list + 1] = { q = quest, src = srcRoute }
+    K.cdb.detours[self.routeId] = list
+    self:Recompute()
+    return added
+end
+
+-- True when a quest already has a detour in the loaded route.
+function E:HasDetour(quest)
+    for _, d in ipairs((K.cdb.detours or {})[self.routeId] or {}) do
+        if d.q == quest then
+            return true
+        end
+    end
+    return false
+end
+
+-- Archives every pending step of a quest (PRD 7.9). Done and skipped steps keep their state.
+-- Returns the number of steps archived.
+function E:ArchiveQuest(quest)
+    local st = charState(self.routeId)
+    local n = 0
+    for i, s in ipairs(self.steps) do
+        if s.q == quest and self.eff[i] == "pending" then
+            st[s.k] = "archived"
+            n = n + 1
+        end
+    end
+    if n > 0 then
+        self:Recompute()
+    end
+    return n
 end
 
 -- Route id for a band spec: a route id, or "lo-hi". For a shared band the player's branch wins,
@@ -278,7 +387,12 @@ function E:JumpToBand(spec)
 end
 
 -- Band for a branch and level. A band with level < hi wins; a boundary level falls to the next band.
-local function bandFor(branch, level)
+-- Start branch that owns a race (nil for shared-only races).
+function E.BranchFor(race)
+    return RACE_BRANCH[race]
+end
+
+function E.BandFor(branch, level)
     local best, bestLo
     for _, id in ipairs(sortedRouteIds()) do
         local r = K.routes[id]
@@ -306,11 +420,11 @@ function E.ChooseRoute(player)
     end
     local level = player.level or 1
     local branch = RACE_BRANCH[player.race] or RACE_BRANCH[player.raceToken]
-    local id = branch and bandFor(branch, level)
+    local id = branch and E.BandFor(branch, level)
     if id then
         return id, "branch"
     end
-    id = bandFor("horde", level)
+    id = E.BandFor("horde", level)
     if id then
         return id, "shared"
     end
