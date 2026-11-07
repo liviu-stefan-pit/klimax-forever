@@ -181,6 +181,58 @@ function C.GetQuestLogLines(withObjectives)
     return lines, numQuests
 end
 
+-- True while the player has the quest log window open (then its headers are left alone).
+local function questLogShown()
+    return QuestLogFrame ~= nil and type(QuestLogFrame.IsShown) == "function" and QuestLogFrame:IsShown() and true
+        or false
+end
+
+local function countQuests(lines)
+    local n = 0
+    for _, line in ipairs(lines) do
+        if not line.header and line.questID then
+            n = n + 1
+        end
+    end
+    return n
+end
+
+-- Phase 20: the whole quest log, including quests under collapsed headers. When the client hides
+-- quests (its count is larger than the visible quests), every header is expanded, the log is read,
+-- and the headers that were collapsed are collapsed again (bottom-up, so indices stay valid). This
+-- is skipped while the quest log window is open. Returns lines, numQuests, hidden (quests still
+-- not visible after the read: 0 unless the expand was not possible).
+C.expanding = false
+function C.GetFullQuestLogLines(withObjectives)
+    local lines, numQuests = C.GetQuestLogLines(withObjectives)
+    local hidden = math.max(0, (tonumber(numQuests) or 0) - countQuests(lines))
+    if hidden == 0 or C.expanding or type(ExpandQuestHeader) ~= "function" or questLogShown() then
+        return lines, numQuests, hidden
+    end
+    local collapsed = {}
+    for _, line in ipairs(lines) do
+        if line.header and line.collapsed and line.title then
+            collapsed[line.title] = true
+        end
+    end
+    C.expanding = true
+    C.lastExpand = GetTime and GetTime() or 0
+    pcall(ExpandQuestHeader, 0)
+    local full, fullCount = C.GetQuestLogLines(withObjectives)
+    if type(CollapseQuestHeader) == "function" then
+        for i = #full, 1, -1 do
+            local line = full[i]
+            if line.header and line.title and collapsed[line.title] then
+                pcall(CollapseQuestHeader, line.index)
+                line.collapsed = true
+            end
+        end
+    end
+    C.expanding = false
+    local stillHidden = math.max(0, (tonumber(fullCount) or 0) - countQuests(full))
+    return full, fullCount, stillHidden
+end
+
 -- Current XP, XP to the next level, and rested XP (each nil when unknown).
 function C.GetXP()
     return call2(UnitXP, "player"), call2(UnitXPMax, "player"), call2(GetXPExhaustion)

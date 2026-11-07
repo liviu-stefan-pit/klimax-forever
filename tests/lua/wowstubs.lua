@@ -224,6 +224,31 @@ function W.reset(opts)
         }
     end
 
+    -- Header expand/collapse (Classic globals, both API shapes). index is a visible line index;
+    -- 0 means every header. W.state.expandCalls counts the calls for the specs.
+    W.state.expandCalls = 0
+    ExpandQuestHeader = function(i)
+        W.state.expandCalls = W.state.expandCalls + 1
+        if i == 0 then
+            for _, e in ipairs(W.state.logList) do
+                if e.isHeader then
+                    e.isCollapsed = false
+                end
+            end
+            return
+        end
+        local e = logEntries()[i]
+        if e and e.isHeader then
+            e.isCollapsed = false
+        end
+    end
+    CollapseQuestHeader = function(i)
+        local e = logEntries()[i]
+        if e and e.isHeader then
+            e.isCollapsed = true
+        end
+    end
+
     C_AddOns = {
         GetAddOnMetadata = function(_, field)
             if field == "Version" then

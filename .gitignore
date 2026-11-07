@@ -20,3 +20,4 @@ Thumbs.db
 # Build metadata
 *.egg-info/
 build/
+.scratch/

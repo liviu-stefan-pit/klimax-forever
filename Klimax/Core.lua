@@ -193,7 +193,7 @@ function K.Command(msg)
         end
     elseif cmd == "debug" then
         K.DebugDump()
-    elseif cmd == "sync" then
+    elseif cmd == "sync" or cmd == "resync" then
         K.Sync:RunAndReport()
     elseif cmd == "reset" then
         if rest:lower() == "all" then

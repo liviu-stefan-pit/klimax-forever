@@ -2,9 +2,17 @@
 -- event-driven auto-advance and route choice (PRD 7.1 and 7.3).
 --
 -- Step state is stored per character by stable step key k, never by index:
---   KlimaxCharDB.stepState[routeId][k] = "done" | "skipped" | "archived"
+--   KlimaxCharDB.stepState[routeId][k] = "done" | "skipped" | "archived" | "hidden"
 -- Cascaded skips are derived from the stored states on every Recompute, so unskipping a step
 -- restores the steps it had hidden. Nothing about cascades is saved.
+--
+-- Phase 20: for ACCEPT, COMPLETE and TURNIN steps the game is the truth. Once K.State is ready,
+-- a quest step's effective state is derived from the reconciler's quest state (questEff below);
+-- the stored state only counts for player choices (skip, hide) and for quests the game cannot
+-- decide (untracked, no completed-quest API, scan not finished). Effective states are:
+--   pending | done | skipped | archived | cascade | blocked
+-- "blocked" means the quest cannot be done right now (prerequisite, exclusive, failed, needs an
+-- accept that is not in this band); it is never the cursor and comes back when the game changes.
 local _, K = ...
 local L = K.L
 
@@ -88,6 +96,63 @@ local function gated(step)
     local level = (K.player and K.player.level) or 1
     return step.ml ~= nil and level < step.ml
 end
+
+local QUEST_STEP = { A = true, C = true, T = true }
+
+-- Effective state of a quest step from the reconciler's quest state (phase 20). m is the stored
+-- state (nil when none). hasAccept: the loaded route has an ACCEPT step for the quest. Returns the
+-- effective state and true when the step is held back only by its level (shown, never cursor).
+local function questEff(s, m, qs, why, hasAccept)
+    if m == "skipped" then
+        return "skipped"
+    end
+    if qs == "broken" then
+        return "cascade"
+    elseif qs == "ignored" then
+        return "skipped"
+    elseif qs == "completed" then
+        return "done"
+    elseif qs == "objectives-done" then
+        return s.t == "T" and "pending" or "done"
+    elseif qs == "active" then
+        return s.t == "A" and "done" or "pending"
+    elseif qs == "failed" then
+        return s.t == "A" and "done" or "blocked"
+    end
+    if m == "hidden" then
+        return "skipped"
+    end
+    if qs == "unknown" then
+        if why == "no-completed-api" and s.t ~= "A" then
+            -- accepted earlier, not in the log, and the game cannot say it was handed in
+            return "blocked"
+        end
+        return (m == "done" or m == "archived") and m or "pending"
+    end
+    if qs == "available" or qs == "abandoned" then
+        if m == "archived" then
+            return "archived"
+        end
+        if s.t ~= "A" and not hasAccept then
+            return "blocked"
+        end
+        local level = (K.player and K.player.level) or 1
+        local gear = K.cdb and K.cdb.gearChoice
+        local choice = gear and gear[tostring(E.routeId) .. "|" .. tostring(s.q)]
+        if K.Sync and K.Sync.Verdict(s, level, nil, false, choice) == "archive" then
+            return "archived"
+        end
+        return "pending"
+    end
+    if qs == "unavailable" then
+        if why == "level" then
+            return "pending", true
+        end
+        return "blocked"
+    end
+    return (m == "done" or m == "archived") and m or "pending"
+end
+E.QuestEff = questEff
 
 -- True when no prerequisite of an ACCEPT can be met: all of `pa` are unreachable, or all of `po`.
 local function prereqsUnreachable(step, dead)
@@ -186,16 +251,38 @@ end
 --   * a done step proves its quest reachable again.
 function E:Recompute()
     self.eff = {}
+    self.levelHeld = {}
     self.cursor = nil
     if not self.routeId then
         notify(self)
         return
     end
     local st = charState(self.routeId)
+    local State = K.State
+    local truth = State and State:Ready()
+    local hasAccept = {}
+    if truth then
+        for _, s in ipairs(self.steps) do
+            if s.t == "A" and s.q then
+                hasAccept[s.q] = true
+            end
+        end
+    end
     local dead = {}
     for i, s in ipairs(self.steps) do
         local m = st[s.k]
-        local e = (m == "done" or m == "skipped" or m == "archived") and m or "pending"
+        local e
+        if truth and s.q and QUEST_STEP[s.t] then
+            local qs, why = State:Get(s.q)
+            local held
+            e, held = questEff(s, m, qs, why, hasAccept[s.q])
+            self.levelHeld[i] = held or nil
+        else
+            e = (m == "done" or m == "skipped" or m == "archived") and m or "pending"
+            if m == "hidden" then
+                e = "skipped"
+            end
+        end
         if e == "pending" and s.q and dead[s.q] then
             e = "cascade"
         elseif e == "pending" and s.t == "A" and prereqsUnreachable(s, dead) then
@@ -213,7 +300,7 @@ function E:Recompute()
         self.eff[i] = e
     end
     for i, s in ipairs(self.steps) do
-        if self.eff[i] == "pending" and not gated(s) then
+        if self.eff[i] == "pending" and not gated(s) and not self.levelHeld[i] then
             self.cursor = i
             break
         end
@@ -369,7 +456,7 @@ function E:FindBand(spec)
         return nil
     end
     lo, hi = tonumber(lo), tonumber(hi)
-    local preferred = RACE_BRANCH[(K.player or {}).race] or "horde"
+    local preferred = E.BranchForPlayer(K.player) or "horde"
     local best, bestRank
     for _, id in ipairs(sortedRouteIds()) do
         local r = K.routes[id]
@@ -406,6 +493,34 @@ function E.BranchFor(race)
     return RACE_BRANCH[race]
 end
 
+E.ZEPHRAS_MAP = 2521
+
+-- Start branch of this character (phase 20, KF10): Zephra's Isle when the character stands there
+-- or has handed in a Zephra's Isle quest (any race can start there), else the race's branch.
+function E.BranchForPlayer(player)
+    player = player or K.player or {}
+    local mapID = K.Compat.GetBestMapForPlayer()
+    if mapID == E.ZEPHRAS_MAP then
+        return "zephras"
+    end
+    local cache = K.Snapshot and K.Snapshot.completed or {}
+    local checked = 0
+    for _, id in ipairs(sortedRouteIds()) do
+        local r = K.routes[id]
+        if r.branch == "zephras" then
+            for _, s in ipairs(r.steps or {}) do
+                if s.t == "T" and s.q and checked < 60 then
+                    checked = checked + 1
+                    if cache[s.q] or K.Compat.IsQuestCompleted(s.q) then
+                        return "zephras"
+                    end
+                end
+            end
+        end
+    end
+    return RACE_BRANCH[player.race] or RACE_BRANCH[player.raceToken]
+end
+
 function E.BandFor(branch, level)
     local best, bestLo
     for _, id in ipairs(sortedRouteIds()) do
@@ -433,7 +548,7 @@ function E.ChooseRoute(player)
         return cdb.routeId, "resume"
     end
     local level = player.level or 1
-    local branch = RACE_BRANCH[player.race] or RACE_BRANCH[player.raceToken]
+    local branch = E.BranchForPlayer(player)
     local id = branch and E.BandFor(branch, level)
     if id then
         return id, "branch"
@@ -494,11 +609,24 @@ function E:MarkDone(i)
     end
     local st = charState(self.routeId)
     local marked = 0
+    local State = K.State
+    local truth = State and State:Ready()
     for _, j in ipairs(self:Batch(i)) do
+        local step = self.steps[j]
         if self.eff[j] == "pending" then
-            st[self.steps[j].k] = "done"
-            noteMark(j == i and "next" or "next-batch", self.steps[j], "done")
-            marked = marked + 1
+            local qs = truth and step.q and QUEST_STEP[step.t] and State:Get(step.q) or nil
+            local contradicts = qs == "available" or qs == "abandoned" or qs == "unavailable"
+            if not contradicts then
+                st[step.k] = "done"
+                noteMark(j == i and "next" or "next-batch", step, "done")
+                marked = marked + 1
+            elseif j == i then
+                -- Phase 20: the game says this quest is not in the log. Next never claims it done;
+                -- it hides the step instead (restorable like a skip). Batch members are left alone.
+                st[step.k] = "hidden"
+                noteMark("next-hidden", step, "hidden")
+                marked = marked + 1
+            end
         end
     end
     self:Recompute()
@@ -525,7 +653,7 @@ end
 -- Clears a manual skip or archive by stable key. Cascaded steps come back on their own.
 function E:Unskip(k)
     local st = charState(self.routeId)
-    if st[k] == "skipped" or st[k] == "archived" then
+    if st[k] == "skipped" or st[k] == "archived" or st[k] == "hidden" then
         st[k] = nil
         self:Recompute()
         return true
@@ -664,8 +792,10 @@ end
 -- Throttled quest log checks: many QUEST_LOG_UPDATE events collapse into one check per second.
 local logCheckQueued = false
 
-K.On("QUEST_ACCEPTED", function(a, b)
-    local questID = tonumber(b) or tonumber(a)
+-- Classic sends (logIndex, questID); a lone argument is a log index, not a quest id (phase 18 H1h),
+-- and the state refresh reads the log anyway.
+K.On("QUEST_ACCEPTED", function(_, b)
+    local questID = tonumber(b)
     if questID then
         markWhere(E, function(s) return s.q == questID and s.t == "A" end, "accepted-event")
     end
@@ -742,6 +872,15 @@ end)
 K.Every(1, function()
     E:CheckPosition()
 end)
+
+-- Phase 20: every refresh of the game state re-derives the quest steps.
+if K.State then
+    K.State:OnChange(function()
+        if E.routeId then
+            E:Recompute()
+        end
+    end)
+end
 
 -- Only the selected engine starts (phase 18 flag). Today "legacy" is the only one registered.
 K.On("PLAYER_LOGIN", function()

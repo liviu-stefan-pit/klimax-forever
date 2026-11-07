@@ -61,6 +61,8 @@ read_globals = {
     -- phase 18 diagnostics (Klimax/Compat.lua, Klimax/Diag.lua)
     "UnitXP", "UnitXPMax", "GetXPExhaustion", "GetRealZoneText", "GetSubZoneText", "GetRealmName",
     "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard",
+    -- phase 20 snapshot (Klimax/Compat.lua: full quest log read)
+    "ExpandQuestHeader", "CollapseQuestHeader", "QuestLogFrame",
 }
 
 -- Files that are generated or vendored are not linted.

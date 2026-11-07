@@ -113,7 +113,7 @@ end
 -- A raw complete value of -1 (Classic) means failed, 1 or true complete. Objectives are read only
 -- when withObjectives is true (the dump); the per-mark check skips them.
 function D.ReadLog(withObjectives)
-    local lines, numQuests = C.GetQuestLogLines(withObjectives)
+    local lines, numQuests = C.GetFullQuestLogLines(withObjectives)
     local log = {}
     local visible = 0
     for _, line in ipairs(lines) do

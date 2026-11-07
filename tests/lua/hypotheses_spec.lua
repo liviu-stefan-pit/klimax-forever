@@ -1,7 +1,9 @@
 -- Phase 18 hypothesis evidence. Each spec shows, on the legacy engine, one mechanism that can
 -- produce a symptom from the level 15 Hunter report (docs/DYNAMIC_GUIDE_PLAN.md s1). They PASS
--- because they assert what the legacy engine does today; the verdicts are in docs/PROGRESS.md
--- (phase 18). The correct behaviour is encoded in known_failing_spec.lua.
+-- because they assert what the legacy engine does; the verdicts are in docs/PROGRESS.md (phase 18).
+-- Specs marked "FIXED (phase 20)" assert the corrected behaviour now that the reconciler derives
+-- quest steps from the game state; the rest still describe mechanisms the planner (phase 21)
+-- replaces.
 --
 --   H1  wrong "done" marks come from event/sync heuristics, not from the game's quest state
 --   H2  stale turn-ins to places that do not make sense
@@ -109,12 +111,12 @@ describe("H1 wrong done marks", function()
         assert.are.equal(1, K.Engine.cursor)
     end)
 
-    it("H1h: QUEST_ACCEPTED with only a log index would be read as a quest id", function()
+    it("H1h FIXED (phase 20): QUEST_ACCEPTED with only a log index is not read as a quest id", function()
         local K = start({
             { t = "A", k = "A2", q = 2, g = "m", z = 1, x = 1, y = 1, npc = 1 },
         })
         W.fire("QUEST_ACCEPTED", 2)     -- (questLogIndex) only, if a client sent that
-        assert.are.equal("done", state(K, "A2"))
+        assert.are.equal("pending", state(K, "A2"))
     end)
 end)
 
@@ -134,18 +136,19 @@ describe("H2 stale turn-ins", function()
         assert.are.equal("pending", state(K, "T870"))
     end)
 
-    it("H2b: a turn-in's place is fixed at compile time and never checked against the game", function()
+    it("H2b: a turn-in's place is fixed at compile time; FIXED (phase 20): a failed quest's turn-in is blocked", function()
         local fx = Fx.load("hunter15_synthetic")
         local K = Fx.start(fx)
         local i = K.Engine.byKey["horde_horde_10-15:T:853:0"]
         local s = K.Engine.steps[i]
-        -- 853 failed in the log, yet its turn-in in Thunder Bluff is still pending, with fixed coordinates.
-        assert.are.equal("pending", K.Engine.eff[i])
+        -- 853 failed in the log: its turn-in in Thunder Bluff is no longer offered. The coordinates
+        -- are still the compiled ones (the phase 28 telemetry checks them against the game).
+        assert.are.equal("blocked", K.Engine.eff[i])
         assert.are.equal(1456, s.z)
         assert.are.same({ 22.8, 20.9 }, { s.x, s.y })
     end)
 
-    it("H2c: the missed-reward audit ignores the start branch, race and class", function()
+    it("H2c FIXED (phase 20): the missed-reward audit keeps to the start branch, race and class", function()
         local fx = Fx.load("hunter15_synthetic")
         local K = Fx.start(fx)
         K.Audit.Useful = function() return true, 1, "item" end
@@ -153,27 +156,22 @@ describe("H2 stale turn-ins", function()
         for _, c in ipairs(K.Audit.Scan(15)) do
             offered[c.quest] = c.route
         end
-        assert.are.equal("horde_zephras_05-10", offered[92880])   -- Zephra's Isle, never visited by this Orc
-        assert.are.equal("horde_mulgore_05-10", offered[744])      -- Mulgore/Thunder Bluff branch
-        assert.are.equal("horde_mulgore_05-10", offered[760])      -- Tauren only
-        assert.are.equal("horde_tirisfal_05-10", offered[1822])    -- Warrior only
-        -- Go there inserts the Zephra's Isle accept and turn-in into the Barrens band.
-        local added = K.Engine:GoThere(92880, "horde_zephras_05-10")
-        assert.are.equal(2, added)
-        local _, cursor = K.Engine:Current()
-        assert.are.equal(2521, cursor.z)
+        assert.is_nil(offered[92880])   -- Zephra's Isle, never visited by this Orc
+        assert.is_nil(offered[744])     -- Mulgore/Thunder Bluff branch
+        assert.is_nil(offered[760])     -- Tauren only
+        assert.is_nil(offered[1822])    -- Warrior only
     end)
 end)
 
 describe("H2 start branch", function()
-    it("H2d: the start branch comes from the race, so a Zephra's Isle Orc is sent to Durotar", function()
+    it("H2d FIXED (phase 20): a Zephra's Isle Orc keeps the Zephra's Isle branch", function()
         local K = W.start()
         W.state.level = 6
         W.state.mapID, W.state.pos = 2521, { x = 0.45, y = 0.44 }   -- standing on Zephra's Isle
         W.state.completed[92460] = true                              -- first Zephra's Isle quests done
         W.state.completed[92461] = true
         local id = K.Engine.ChooseRoute(K.Detect())
-        assert.are.equal("horde_durotar_05-10", id)
+        assert.are.equal("horde_zephras_05-10", id)
     end)
 end)
 
@@ -194,7 +192,7 @@ describe("H3 fixed order", function()
         local fx = Fx.load("hunter15_synthetic")
         local K = Fx.start(fx)
         local _, step = K.Engine:Current()
-        assert.are.equal(10, step.el)   -- level-10 content while the player is 15
+        assert.is_true(step.el <= 11)   -- level 10-11 content while the player is 15
         assert.are.equal(15, K.cdb.declined["horde_horde_15-20"])
     end)
 end)

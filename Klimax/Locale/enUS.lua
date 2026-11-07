@@ -12,8 +12,10 @@ K.L = {
     RESET_ALL = "All Klimax progress reset.",
     SKIPPED = "Skipped 1 step (%d dependent step(s) skipped too).",
     UNKNOWN_BAND = "Unknown band %s. Try a route id like horde_horde_10-15, or a band like 10-15.",
-    HELP = "Commands: /klimax (show or hide) | debug | sync | reset [all] | band <lo-hi> | dev level <1-60>"
-        .. " | audit [state] | dump | engine [name]",
+    HELP = "Commands: /klimax (show or hide) | debug | sync | resync | reset [all] | band <lo-hi>"
+        .. " | dev level <1-60> | audit [state] | dump | engine [name]",
+    RESYNC_REPORT = "Resync: %d step(s) changed: %d completed, %d hidden, %d now available.",
+    RESYNC_NONE = "Resync: the guide already matches the game.",
     DEV_USAGE = "Dev: /klimax dev level <1-60> fakes the level for the engine.",
     DEV_LEVEL = "Dev: level faked to %d (your real character is unchanged).",
 

@@ -109,6 +109,35 @@ function A.Useful(itemID, class, level, freeSlots)
     return rec ~= nil and rec.kind == "upgrade", score, data.name
 end
 
+-- Phase 20 (KF8): a step limited to other classes or races is never offered.
+local function contains(list, value)
+    for _, v in ipairs(list or {}) do
+        if v == value then
+            return true
+        end
+    end
+    return false
+end
+
+function A.Applies(step, player)
+    if step.cl and not contains(step.cl, player.class) then
+        return false
+    end
+    if step.ra and not (contains(step.ra, player.race) or contains(step.ra, player.raceToken)) then
+        return false
+    end
+    return true
+end
+
+-- Phase 20: with the game state known, only a quest the character can take now is offered.
+function A.StillOffered(q)
+    if not (K.State and K.State:Ready()) then
+        return true
+    end
+    local state = K.State:Get(q)
+    return state == "available" or state == "abandoned" or state == nil
+end
+
 local function sortedRouteIds()
     local ids = {}
     for id in pairs(K.routes) do
@@ -130,12 +159,14 @@ function A.Scan(level)
     local player = K.player or {}
     local free = K.Helpers and K.Helpers.FreeSlots and K.Helpers.FreeSlots() or 0
     local seen, cands = {}, {}
+    local branch = E.BranchForPlayer and E.BranchForPlayer(player) or nil
     for _, routeId in ipairs(sortedRouteIds()) do
         local r = K.routes[routeId]
-        if r.lo and cur.lo and r.lo < cur.lo then
+        local onPath = r.branch == "horde" or r.branch == branch
+        if onPath and r.lo and cur.lo and r.lo < cur.lo then
             for _, s in ipairs(r.steps or {}) do
-                if s.q and not seen[s.q] and A.Obtainable(s, level, completed, ignored)
-                    and not E:HasDetour(s.q) then
+                if s.q and not seen[s.q] and A.Applies(s, player) and A.StillOffered(s.q)
+                    and A.Obtainable(s, level, completed, ignored) and not E:HasDetour(s.q) then
                     seen[s.q] = true
                     local useful, score, name = A.Useful(s.rw.item, player.class, level, free)
                     if useful then

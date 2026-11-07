@@ -104,12 +104,15 @@ describe("raw quest log reader", function()
             assert.is_true(lines[1].header)
             assert.are.equal("Boars: 4/4", lines[2].objectives[1].text)
             assert.is_true(lines[2].objectives[1].finished)
+            -- Phase 20: the full read expands the collapsed header, reads quest 12 and collapses
+            -- the header again.
             local log, _, _, hidden = K.Diag.ReadLog()
             assert.is_true(log[10].complete)
             assert.is_true(log[11].failed)
             assert.is_false(log[11].complete)
-            assert.is_nil(log[12])
-            assert.are.equal(1, hidden)
+            assert.is_table(log[12])
+            assert.are.equal(0, hidden)
+            assert.is_true(W.state.logList[4].isCollapsed)
         end)
     end
 
@@ -208,7 +211,9 @@ describe("mark provenance", function()
         end
         assert.are.equal("next", srcs.A1)
         assert.are.equal("next-batch", srcs.A2)
-        assert.are.equal("turnedin-event", srcs.T1)
+        -- Phase 20: the turn-in is derived from the game (completed flag), nothing is stored.
+        assert.is_nil(srcs.T1)
+        assert.are.equal("done", K.Engine.eff[K.Engine.byKey.T1])
         assert.are.equal("absent", K.cdb.markLog[2].g)
     end)
 
@@ -267,8 +272,8 @@ describe("fixture loader", function()
         assert.are.equal("horde_horde_10-15", K.Engine.routeId)
         local log, _, numQuests, hidden = K.Diag.ReadLog()
         assert.are.equal(4, numQuests)
-        assert.are.equal(1, hidden)        -- 751 sits under the collapsed Mulgore header
-        assert.is_nil(log[751])
+        assert.are.equal(0, hidden)        -- 751 sits under the collapsed Mulgore header; read anyway
+        assert.is_true(log[751].complete)
         assert.is_true(log[853].failed)
         assert.is_true(K.Compat.IsQuestCompleted(870))
         assert.are.equal("done", Fx.stateOf(K, "horde_horde_10-15:T:845:0"))

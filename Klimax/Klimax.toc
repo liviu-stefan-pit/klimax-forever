@@ -43,6 +43,9 @@ Routes\Horde\horde_zephras_01-05.lua
 Routes\Horde\horde_zephras_05-10.lua
 Routes\Horde\horde_zephras_10-15.lua
 Core.lua
+State\Snapshot.lua
+State\Reconciler.lua
+State\State.lua
 Engine.lua
 Sync.lua
 Arrow.lua

@@ -1,9 +1,11 @@
 -- Completed-quest sync (PRD 7.2) and level sync (PRD 7.9).
 --
--- A sync checks every quest the routes reference, in slices of frames, marks the matching steps of
--- the loaded route done, then runs the level sync:
+-- Phase 20: a sync is a resync of K.State (every completed flag rescanned in slices of frames, the
+-- whole quest log read). The engine derives its quest steps from that state, so a sync stores
+-- nothing. Then the level sync runs:
 --   1. a band jump proposal when the level is ahead of the cursor (Jump / Stay),
---   2. archive outgrown steps (grey at the current level),
+--   2. outgrown steps (grey at the current level) are shown as archived; this is derived on every
+--      Recompute (Engine questEff), never stored, so a quest in the log is never archived,
 --   3. gear exception: an outgrown key reward asks "Do it or skip?",
 --   4. a chat hint when the cursor step is in another zone.
 --
@@ -98,8 +100,8 @@ function S:QuestIds()
     return ids
 end
 
--- Coroutine body: checks completion for each id, yielding every S.BATCH checks. Returns
--- {completed = {[id] = true}, log = <Compat.GetQuestLog>, scanned = n} when finished.
+-- Legacy scan (used only when K.State is missing): checks completion for each id, yielding every
+-- S.BATCH checks. Returns {completed = {[id] = true}, log = <Compat.GetQuestLog>, scanned = n}.
 local function scanner(ids)
     return coroutine.create(function()
         local flagged = K.Compat.HasFlaggedCompletedApi()
@@ -123,13 +125,24 @@ local function scanner(ids)
     end)
 end
 
--- Marks steps of the loaded route done from a scan result. Only steps still pending (no stored
--- state) are touched, so skips and archives survive. Then runs the level sync and the hooks.
--- Returns the number of steps marked.
-function S:Apply(result)
+-- Applies a scan result. With K.State ready the engine derives its steps from the game state, so
+-- nothing is stored and `marked` counts the steps that turned done since `before` (an E.eff copy
+-- taken when the sync started). Without K.State (legacy), steps still pending are marked done.
+-- Then runs the level sync and the hooks. Returns the number of steps marked.
+function S:Apply(result, before)
     local E = K.Engine
     if not E.routeId then
         return 0
+    end
+    if K.State and K.State:Ready() then
+        E:Recompute()
+        local marked = 0
+        for i = 1, #E.steps do
+            if E.eff[i] == "done" and (before or {})[E.steps[i].k] ~= "done" then
+                marked = marked + 1
+            end
+        end
+        return S:Finish(result, marked)
     end
     K.cdb.stepState = K.cdb.stepState or {}
     local st = K.cdb.stepState[E.routeId] or {}
@@ -155,6 +168,11 @@ function S:Apply(result)
         end
     end
     E:Recompute()
+    return S:Finish(result, marked)
+end
+
+-- Level sync and afterSync hooks after a scan. Returns marked.
+function S:Finish(result, marked)
     S.lastResult = result
     S:LevelSync(result)
     for _, fn in ipairs(self.afterSync) do
@@ -169,11 +187,30 @@ end
 -- Runs a sync for the loaded route. onDone(result, marked) runs when it has been applied.
 -- A newer Run supersedes an older one still in progress.
 function S:Run(onDone)
-    if not K.Engine.routeId then
+    local E = K.Engine
+    if not E.routeId then
         return false
     end
     self.generation = self.generation + 1
     local gen = self.generation
+    if K.State then
+        local before = {}
+        for i, s in ipairs(E.steps) do
+            before[s.k] = E.eff[i]
+        end
+        K.State:Resync(function(snap)
+            if gen ~= S.generation then
+                return
+            end
+            local result = { completed = snap.completed, log = snap.log, scanned = #K.Snapshot.QuestIds() }
+            local marked = S:Apply(result, before)
+            K.Log("sync", result.scanned, "quests checked,", marked, "steps now done")
+            if onDone then
+                onDone(result, marked)
+            end
+        end)
+        return true
+    end
     local co = scanner(self:QuestIds())
     local function pump()
         if gen ~= S.generation then
@@ -296,18 +333,24 @@ function S:LevelSync(result)
         return
     end
 
-    -- Steps 3 and 4: archive outgrown steps, and ask about key rewards among them.
+    -- Steps 3 and 4: outgrown steps are archived by the engine's derivation (phase 20: nothing is
+    -- stored, so a quest that is in the log is never archived); ask about key rewards among them.
     local st = cdb.stepState[E.routeId] or {}
     cdb.stepState[E.routeId] = st
     cdb.gearChoice = cdb.gearChoice or {}
     local log = result and result.log or {}
+    local derived = K.State and K.State:Ready()
     local asked = {}
     local gear
-    for _, s in ipairs(E.steps) do
+    for i, s in ipairs(E.steps) do
         if s.q then
-            local verdict = S.Verdict(s, level, st[s.k], log[s.q] ~= nil,
+            local stored = st[s.k]
+            if derived and stored == nil and E.eff[i] ~= "pending" then
+                stored = E.eff[i]  -- done, blocked or skipped by the game state: nothing to ask
+            end
+            local verdict = S.Verdict(s, level, stored, log[s.q] ~= nil,
                 cdb.gearChoice[choiceKey(E.routeId, s.q)])
-            if verdict == "archive" then
+            if verdict == "archive" and not derived then
                 st[s.k] = "archived"
                 E.NoteMark("levelsync-archive", s, "archived")
             elseif verdict == "ask" and not asked[s.q] then
@@ -336,9 +379,50 @@ function S:OnLevelUp(level)
     end
 end
 
--- Manual sync: prints how many steps it marked.
+-- Counts how the effective states changed between two {key = state} maps (phase 20 report):
+-- completed (now done), hidden (now skipped, archived, cascaded or blocked), available (now
+-- pending after being something else). Returns changed, completed, hidden, available.
+local HIDDEN = { skipped = true, archived = true, cascade = true, blocked = true }
+function S.ChangeReport(before, after)
+    local changed, completed, hidden, available = 0, 0, 0, 0
+    for k, now in pairs(after) do
+        local was = before[k]
+        if was ~= nil and was ~= now then
+            changed = changed + 1
+            if now == "done" then
+                completed = completed + 1
+            elseif HIDDEN[now] then
+                hidden = hidden + 1
+            elseif now == "pending" then
+                available = available + 1
+            end
+        end
+    end
+    return changed, completed, hidden, available
+end
+
+local function effByKey()
+    local E = K.Engine
+    local out = {}
+    for i, s in ipairs(E.steps or {}) do
+        out[s.k] = E.eff[i]
+    end
+    return out
+end
+
+-- Manual sync and /klimax resync: rebuilds everything from the game and reports what changed.
 function S:RunAndReport()
+    local before = effByKey()
     return self:Run(function(_, marked)
-        K.Print(string.format(L.SYNCED, marked))
+        if not (K.State and K.State:Ready()) then
+            K.Print(string.format(L.SYNCED, marked))
+            return
+        end
+        local changed, completed, hidden, available = S.ChangeReport(before, effByKey())
+        if changed == 0 then
+            K.Print(L.RESYNC_NONE)
+        else
+            K.Print(string.format(L.RESYNC_REPORT, changed, completed, hidden, available))
+        end
     end)
 end
