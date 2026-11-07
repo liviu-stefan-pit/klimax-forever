@@ -9,6 +9,7 @@ Steps are numbered from 1 in all output (the same position the add-on uses at ru
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -345,14 +346,18 @@ class RouteValidator:
     def _hub_of(
         self, route: dict[str, Any], zone: int, x: float, y: float
     ) -> tuple[str, float] | None:
-        best: tuple[str, float] | None = None
+        best: tuple[str, float, tuple[bool, float]] | None = None
         for hub_zone, hx, hy, name in self._hubs(route):
             if hub_zone != zone:
                 continue
             d = distance(x, y, hx, hy)
-            if d <= HUB_RADIUS and (best is None or d < best[1]):
-                best = (name, d)
-        return best
+            if d > HUB_RADIUS:
+                continue
+            # a generated name like "Zephra's Isle (44, 45)" loses to a real settlement name
+            rank = (bool(re.search(r"\(\d", name)), d)
+            if best is None or rank < best[2]:
+                best = (name, d, rank)
+        return (best[0], best[1]) if best else None
 
     def _step_place(self, step: dict[str, Any]) -> tuple[int, float, float] | None:
         if "x" not in step:
@@ -1154,6 +1159,7 @@ class RouteValidator:
         lo, hi = route["band"]
         budget = xp_budget(lo, hi)
         gained: list[int] = []
+        steps_count = len(route["steps"])
         counted: set[int] = set()
         missing: list[int] = []
         by_tag: Counter[str] = Counter()
@@ -1163,7 +1169,6 @@ class RouteValidator:
                 step["type"] == "TURNIN"
                 and step["quest"] not in counted
                 and not step.get("classes")
-                and not step.get("races")
             ):
                 counted.add(step["quest"])
                 value = world.quest_xp(step["quest"])
@@ -1179,7 +1184,12 @@ class RouteValidator:
         for xp in gained:
             running += xp
             levels.append(level_at_xp(lo, budget * running / total) if total else float(lo))
+        known = bool(total)
+        if not known and steps_count:
+            # No XP data at all (e.g. Forever-only quests): spread the band evenly over the steps.
+            levels = [lo + (hi - lo) * (i + 1) / steps_count for i in range(steps_count)]
         info = {
+            "known": known,
             "budget": budget,
             "total": total,
             "main": by_tag["main"],
@@ -1216,6 +1226,8 @@ class RouteValidator:
             )
         # mobs far above the expected level
         for i, step in enumerate(steps):
+            if not xp["known"]:
+                break  # expected levels are only a guess without XP data
             if step["type"] != "COMPLETE" or step["tag"] == "optional-elite":
                 continue
             quest = world.quests.get(step["quest"])

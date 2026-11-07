@@ -27,11 +27,11 @@
     },
     {
       "quest": 1883,
-      "reason": "Mage chain starts with Thurston Xane in Thunder Bluff; the Orgrimmar alternate starter is not in the route data."
+      "reason": "Mage-only chain: pick up from Uthel'nay (npc 7311, Orgrimmar), hand in at Un'thuwa in Sen'jin. A long backtrack for one class; revisit in phase 05."
     },
     {
       "quest": 1884,
-      "reason": "Ju-Ju Heaps is gated by the 1883 breadcrumb, whose start is off this route. Data gap, see the report."
+      "reason": "Mage-only follow-up of 1883 (Ju-Ju Heaps, 840 XP, at Sen'jin); dropped with 1883, revisit in phase 05."
     },
     {
       "quest": 2983,
@@ -506,6 +506,7 @@
       "zone": "Durotar"
     },
     {
+      "_review": "Open for phase 05: Echo Isles trolls (lvl 8-9) come early in this draft (expected level ~5). Consider moving the Sen'jin block after Razor Hill level 7.",
       "note": "Hexed and Voodoo Trolls (lvl 8-9) on the Echo Isles. Kill 8 of each. Zalazane (lvl 10) is at (67.5,87.8).",
       "quest": 826,
       "tag": "main",

@@ -305,3 +305,24 @@ def test_self_and_exclusive_prerequisites_are_ignored() -> None:
         {"type": "ACCEPT", "quest": 4, "tag": "optional", "zone": "Durotar", "x": 42.1, "y": 68.3}
     ]
     assert "E_PREREQ" not in codes(validate_route(nxt, world))
+
+
+def test_race_limited_steps_still_count_for_xp() -> None:
+    route = load("stitch_prev")
+    base = validate_route(route, build_world()).stats["xp"]["total"]
+    for step in route["steps"]:
+        if step["type"] == "TURNIN":
+            step["races"] = ["Orc"]
+    raced = validate_route(route, build_world()).stats["xp"]["total"]
+    assert raced == base > 0
+
+
+def test_unknown_xp_does_not_trigger_mob_level_warnings() -> None:
+    route = load("stitch_prev")
+    world = build_world()
+    for quest in world.quests.values():
+        quest.pop("xp", None)
+    world.xp.clear()
+    report = validate_route(route, world)
+    assert not report.stats["xp"]["known"]
+    assert "W_MOB_LEVEL" not in codes(report)

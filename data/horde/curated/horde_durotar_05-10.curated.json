@@ -255,12 +255,12 @@
     {
       "decision": "drop",
       "quest": 1883,
-      "reason": "Mage chain starts with Thurston Xane in Thunder Bluff; the Orgrimmar alternate starter is not in the route data."
+      "reason": "Mage-only chain, pickup in Orgrimmar and hand-in in Sen'jin: long backtrack for one class; revisit in phase 05."
     },
     {
       "decision": "drop",
       "quest": 1884,
-      "reason": "Ju-Ju Heaps is gated by the 1883 breadcrumb, whose start is off this route. Data gap, see the report."
+      "reason": "Mage-only follow-up of 1883; dropped with it; revisit in phase 05."
     },
     {
       "decision": "optional",
