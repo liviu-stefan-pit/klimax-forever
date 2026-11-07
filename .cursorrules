@@ -30,7 +30,7 @@ Python (run from the repo root, using `.venv`):
 .venv/Scripts/python.exe -m pipeline --help            # list pipeline subcommands
 ```
 
-Lua (not installed yet, see `docs/PROGRESS.md`):
+Lua (Lua 5.1 via Scoop, luacheck 1.2.0, busted 2.1.2; see `docs/PROGRESS.md`):
 
 ```bash
 luacheck Klimax          # lint; must report zero warnings
