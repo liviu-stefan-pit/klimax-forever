@@ -34,7 +34,7 @@ Lua (not installed yet, see `docs/PROGRESS.md`):
 
 ```bash
 luacheck Klimax          # lint; must report zero warnings
-busted tests/lua         # unit specs (phase 06 onward)
+tests/lua/busted.cmd tests/lua   # unit specs (phase 06 onward); wrapper sets LUA_PATH
 ```
 
 ## Style
