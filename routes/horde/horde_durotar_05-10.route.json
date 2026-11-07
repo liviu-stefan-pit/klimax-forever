@@ -1,0 +1,2095 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_horde_10-15 is the next band; it is written in a later phase.",
+    "W_XP_RANGE: the validator counts only unfiltered quests (no class or race gate): 19755 XP, 87% of the budget. Race-gated Orc/Troll wind-rider chain (1890 XP for every Durotar Horde character) and class chains are excluded; with them a typical character lands at about 96-108%: Orc Warlock ~103%, Orc Hunter ~108%, Troll Priest ~96%, Orc Warrior ~100%. Kill XP is not modelled. The 5 Forever quests without XP rows are counted at 0."
+  ],
+  "band": [
+    5,
+    10
+  ],
+  "branch": "durotar",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 1463,
+      "reason": "Earth Sapta replacement. Dropped in horde_durotar_01-05 too; not part of the Call of Earth chain."
+    },
+    {
+      "quest": 1524,
+      "reason": "Call of Fire part 2 ends at Telf Joolam in south Durotar. Left for the next band; not on the exit path."
+    },
+    {
+      "quest": 1525,
+      "reason": "Fire Tar needs Razormane Seers (lvl 23) and a Reagent Pouch in zone 38. Mobs too high; data gap."
+    },
+    {
+      "quest": 1883,
+      "reason": "Mage chain starts with Thurston Xane in Thunder Bluff; the Orgrimmar alternate starter is not in the route data."
+    },
+    {
+      "quest": 1884,
+      "reason": "Ju-Ju Heaps is gated by the 1883 breadcrumb, whose start is off this route. Data gap, see the report."
+    },
+    {
+      "quest": 2983,
+      "reason": "Swart's Call of Fire breadcrumb is exclusive with 1522. The route takes 1522."
+    },
+    {
+      "quest": 5652,
+      "reason": "Hex of Weakness variant. 5654 and 5655-5657 are exclusive alternatives; none is routed."
+    },
+    {
+      "quest": 5654,
+      "reason": "Hex of Weakness: turn-in is Ur'kyo in south Orgrimmar, 210 XP. Left out to keep the Orgrimmar stop short."
+    },
+    {
+      "quest": 5655,
+      "reason": "Hex of Weakness variant: exclusive alternative, not routed."
+    },
+    {
+      "quest": 5656,
+      "reason": "Hex of Weakness variant: exclusive alternative, not routed."
+    },
+    {
+      "quest": 5657,
+      "reason": "Hex of Weakness variant: exclusive alternative, not routed."
+    },
+    {
+      "quest": 6068,
+      "reason": "Hunter's Path breadcrumb: Orgrimmar start, 85 XP. Three trips for 85 XP each is not worth it."
+    },
+    {
+      "quest": 6069,
+      "reason": "Hunter's Path breadcrumb: Sen'jin start, 85 XP. Not worth the trip; see 6068."
+    },
+    {
+      "quest": 6070,
+      "reason": "Hunter's Path breadcrumb: Thunder Bluff start, 85 XP. Not worth the trip; see 6068."
+    },
+    {
+      "quest": 9263,
+      "reason": "Scourge investigation: the objective spawns sit in zones 12 and 215, not Durotar or Orgrimmar. Data gap; 630 XP."
+    },
+    {
+      "quest": 96102,
+      "reason": "Profession-gated Camping 101 quest (Tailoring). Same as 01-05."
+    },
+    {
+      "quest": 96655,
+      "reason": "Profession-gated Camping 101 quest (Cooking). Same as 01-05."
+    },
+    {
+      "quest": 96873,
+      "reason": "Profession quest (Enchanting, Pa'zula). Profession-gated; not leveling content."
+    },
+    {
+      "quest": 96874,
+      "reason": "Profession quest (Blacksmithing, Ug'thok). Profession-gated; Thunder Ridge spines."
+    },
+    {
+      "quest": 96875,
+      "reason": "Profession quest (Leatherworking, Kamari). Profession-gated; Thunder Ridge hides."
+    },
+    {
+      "quest": 96877,
+      "reason": "Halikor's Hoof: Halikor is an elite (lvl 12) and the hand-in belongs to the Kamari profession chain."
+    },
+    {
+      "quest": 97223,
+      "reason": "Bloodtalon Matriarch eggs: single lvl 9 spawn with no XP. Too high for the Sen'jin window."
+    },
+    {
+      "quest": 97899,
+      "reason": "Profession-gated Camping 101 quest (Alchemy). Same as 01-05."
+    },
+    {
+      "quest": 97900,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing). Same as 01-05."
+    },
+    {
+      "quest": 97901,
+      "reason": "Profession-gated Camping 101 quest (Enchanting). Same as 01-05."
+    },
+    {
+      "quest": 97902,
+      "reason": "Profession-gated Camping 101 quest (Engineering). Same as 01-05."
+    },
+    {
+      "quest": 97903,
+      "reason": "Profession-gated Camping 101 quest (First Aid). Same as 01-05."
+    },
+    {
+      "quest": 97904,
+      "reason": "Profession-gated Camping 101 quest (Fishing). Same as 01-05."
+    },
+    {
+      "quest": 97905,
+      "reason": "Profession-gated Camping 101 quest (Herbalism). Same as 01-05."
+    },
+    {
+      "quest": 97906,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking). Same as 01-05."
+    },
+    {
+      "quest": 97907,
+      "reason": "Profession-gated Camping 101 quest (Mining). Same as 01-05."
+    },
+    {
+      "quest": 97908,
+      "reason": "Profession-gated Camping 101 quest (Skinning). Same as 01-05."
+    }
+  ],
+  "entry": {
+    "hub": "Razor Hill",
+    "level": 5,
+    "x": 51.5,
+    "y": 41.6,
+    "zone": "Durotar"
+  },
+  "exitPoint": {
+    "hub": "The Crossroads",
+    "level": 10,
+    "x": 52.0,
+    "y": 30.0,
+    "zone": "The Barrens"
+  },
+  "faction": "horde",
+  "id": "horde_durotar_05-10",
+  "next": "horde_horde_10-15",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Gar'Thok in Razor Hill. Tiragarde Keep is south-east on the beach, with sailors and marines.",
+      "npc": 3139,
+      "quest": 784,
+      "tag": "main",
+      "title": "Vanquish the Betrayers",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Furl Scornbrow in the Razor Hill watchtower. The Canvas Scraps drop from the same beach sailors.",
+      "npc": 3147,
+      "quest": 791,
+      "tag": "main",
+      "title": "Carry Your Weight",
+      "type": "ACCEPT",
+      "x": 49.9,
+      "y": 40.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Turroc wants three raider weapons from the Tiragarde outskirts. They lie on the same beach.",
+      "npc": 266940,
+      "quest": 96822,
+      "tag": "optional",
+      "title": "For Honor",
+      "type": "ACCEPT",
+      "x": 54.0,
+      "y": 42.6,
+      "zone": "Durotar"
+    },
+    {
+      "_review": "Lt. Benedict is a single boss kill at the keep; skip him if the level is too low.",
+      "bagCheck": true,
+      "note": "Sailors (lvl 5-6) on the beach first, then marines. Lt. Benedict (lvl 8) is inside the keep: take him last.",
+      "quest": 784,
+      "tag": "main",
+      "title": "Vanquish the Betrayers",
+      "type": "COMPLETE",
+      "x": 57.7,
+      "y": 56.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Canvas Scraps drop from the sailors on the beach. Collect 8.",
+      "quest": 791,
+      "tag": "main",
+      "title": "Carry Your Weight",
+      "type": "COMPLETE",
+      "x": 58.3,
+      "y": 56.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Raider's Bow, Battleaxe and Shield lie at (56-59, 53-56) on the beach.",
+      "quest": 96822,
+      "tag": "optional",
+      "title": "For Honor",
+      "type": "COMPLETE",
+      "x": 57.4,
+      "y": 56.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "A beach sailor carries the Aged Envelope. Use it to start The Admiral's Orders.",
+      "quest": 830,
+      "tag": "main",
+      "title": "The Admiral's Orders",
+      "type": "ACCEPT",
+      "x": 57.7,
+      "y": 56.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok takes the sailor trophies. Ask him for the next job on the wreck.",
+      "npc": 3139,
+      "quest": 784,
+      "tag": "main",
+      "title": "Vanquish the Betrayers",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Furl Scornbrow pays for the scraps with a Handmade Leather Bag. Keep the bag.",
+      "npc": 3147,
+      "quest": 791,
+      "tag": "main",
+      "title": "Carry Your Weight",
+      "type": "TURNIN",
+      "x": 49.9,
+      "y": 40.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Turroc takes the raider weapons and pays in coin.",
+      "npc": 266940,
+      "quest": 96822,
+      "tag": "optional",
+      "title": "For Honor",
+      "type": "TURNIN",
+      "x": 54.0,
+      "y": 42.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok takes the Admiral's first order.",
+      "npc": 3139,
+      "quest": 830,
+      "tag": "main",
+      "title": "The Admiral's Orders",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok passes on the Admiral's second order. Its delivery is in Orgrimmar.",
+      "npc": 3139,
+      "quest": 831,
+      "tag": "main",
+      "title": "The Admiral's Orders",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok wants Gnomish Tools from the wreckage off the east coast.",
+      "npc": 3139,
+      "quest": 825,
+      "tag": "main",
+      "title": "From The Wreckage....",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Wreckage off the coast south-east of Razor Hill. Gnomish Tools bob near the wrecks. Need 3.",
+      "quest": 825,
+      "tag": "main",
+      "title": "From The Wreckage....",
+      "type": "COMPLETE",
+      "x": 63.2,
+      "y": 55.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok has the tools. The wreck rewards are beach gear.",
+      "npc": 3139,
+      "quest": 825,
+      "tag": "main",
+      "title": "From The Wreckage....",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Level 6 now. Razor Hill has trainers for six classes. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 54.2,
+      "y": 42.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Sell greys and repair at the Razor Hill general goods vendor.",
+      "type": "VENDOR_REPAIR",
+      "x": 54.4,
+      "y": 42.2,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Hunters: top up arrows or bullets. Everyone: stock food and water before the south.",
+      "type": "BUY",
+      "x": 54.4,
+      "y": 42.2,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Cook Torka wants 3 Taillasher Eggs from the coast east of Sen'jin. The nests are south-east.",
+      "npc": 3191,
+      "quest": 815,
+      "tag": "main",
+      "title": "Break a Few Eggs",
+      "type": "ACCEPT",
+      "x": 51.1,
+      "y": 42.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Ukor's Lost Pack lies on the road south of Razor Hill. Pick it up and carry it to Ukor.",
+      "quest": 96876,
+      "tag": "optional",
+      "title": "Ukor's Lost Pack",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 51.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Ukor is on the road into Sen'jin. He takes the pack back.",
+      "npc": 6786,
+      "quest": 96876,
+      "tag": "optional",
+      "title": "Ukor's Lost Pack",
+      "type": "TURNIN",
+      "x": 52.1,
+      "y": 68.3,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Lar Prowltusk at the Sen'jin gate. The Attack Plans are in the Kolkar Crag, just south of the village.",
+      "npc": 3140,
+      "quest": 786,
+      "tag": "main",
+      "title": "Thwarting Kolkar Aggression",
+      "type": "ACCEPT",
+      "x": 54.4,
+      "y": 74.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Master Vornal wants 4 Makrura Eyes and 8 Crawler Mucus from the south-east coast. Mobs are lvl 6-8.",
+      "npc": 3304,
+      "quest": 818,
+      "tag": "main",
+      "title": "A Solvent Spirit",
+      "type": "ACCEPT",
+      "x": 55.9,
+      "y": 74.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Vel'rin Fang wants 4 Durotar Tiger Furs. Tigers roam the south-east hills, lvl 7-8.",
+      "npc": 3194,
+      "quest": 817,
+      "tag": "main",
+      "title": "Practical Prey",
+      "type": "ACCEPT",
+      "x": 56.0,
+      "y": 73.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Master Gadrin sends you to the Echo Isles for Minshina's Skull, held in a circle of power.",
+      "npc": 3188,
+      "quest": 808,
+      "tag": "main",
+      "title": "Minshina's Skull",
+      "type": "ACCEPT",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gadrin also sends you to the Echo Isles for Zalazane's Head. Zalazane himself is lvl 10: take him last.",
+      "npc": 3188,
+      "quest": 826,
+      "tag": "main",
+      "title": "Zalazane",
+      "type": "ACCEPT",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gadrin wants 8 Forgotten Loa Idols from the Echo Isles. No XP, but it is on the same loop.",
+      "npc": 3304,
+      "quest": 97225,
+      "tag": "optional",
+      "title": "Forgotten Loa Idols",
+      "type": "ACCEPT",
+      "x": 55.9,
+      "y": 74.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Pal'juh needs an escort out of Kolkar Crag to Master Vornal. Keep her alive; skip it if short on time.",
+      "npc": 275811,
+      "quest": 99123,
+      "tag": "optional",
+      "title": "Lost in the Shadows",
+      "type": "ACCEPT",
+      "x": 46.3,
+      "y": 78.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Destroy the 3 Attack Plans: Sen'jin (47.7,77.3), Valley (49.8,81.3), Orgrimmar (46.2,78.9) in the Kolkar Crag.",
+      "quest": 786,
+      "tag": "main",
+      "title": "Thwarting Kolkar Aggression",
+      "type": "COMPLETE",
+      "x": 47.7,
+      "y": 77.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Tigers on the south-east coast. Collect 4 furs; they are lvl 7-8, so pull them one at a time.",
+      "quest": 817,
+      "tag": "main",
+      "title": "Practical Prey",
+      "type": "COMPLETE",
+      "x": 62.5,
+      "y": 90.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Makrura Clackers and Shellhides on the coast (lvl 6-7). Crawler Mucus from the Surf Crawlers at (62,82).",
+      "quest": 818,
+      "tag": "main",
+      "title": "A Solvent Spirit",
+      "type": "COMPLETE",
+      "x": 61.7,
+      "y": 78.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Taillasher eggs in the nests north-east of the beach. Collect 3; a second nest is at (64.3,82.6).",
+      "quest": 815,
+      "tag": "main",
+      "title": "Break a Few Eggs",
+      "type": "COMPLETE",
+      "x": 67.4,
+      "y": 72.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Minshina's Skull lies in the circle of power on the Echo Isles. Clear the trolls around it first.",
+      "quest": 808,
+      "tag": "main",
+      "title": "Minshina's Skull",
+      "type": "COMPLETE",
+      "x": 67.4,
+      "y": 87.8,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Hexed and Voodoo Trolls (lvl 8-9) on the Echo Isles. Kill 8 of each. Zalazane (lvl 10) is at (67.5,87.8).",
+      "quest": 826,
+      "tag": "main",
+      "title": "Zalazane",
+      "type": "COMPLETE",
+      "x": 67.5,
+      "y": 85.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Forgotten Loa Idols sit among the Echo Isles trolls. Collect 8.",
+      "quest": 97225,
+      "tag": "optional",
+      "title": "Forgotten Loa Idols",
+      "type": "COMPLETE",
+      "x": 66.7,
+      "y": 84.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Escort trigger at the Kolkar Crag exit. Walk Pal'juh to Sen'jin with her.",
+      "quest": 99123,
+      "tag": "optional",
+      "title": "Lost in the Shadows",
+      "type": "COMPLETE",
+      "x": 51.4,
+      "y": 79.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Master Vornal takes the eyes and mucus.",
+      "npc": 3304,
+      "quest": 818,
+      "tag": "main",
+      "title": "A Solvent Spirit",
+      "type": "TURNIN",
+      "x": 55.9,
+      "y": 74.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Master Vornal takes Pal'juh. Her thanks are the Kolkar gear.",
+      "npc": 3304,
+      "quest": 99123,
+      "tag": "optional",
+      "title": "Lost in the Shadows",
+      "type": "TURNIN",
+      "x": 55.9,
+      "y": 74.4,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Vel'rin Fang takes the furs and gives you the tiger tooth reward.",
+      "npc": 3194,
+      "quest": 817,
+      "tag": "main",
+      "title": "Practical Prey",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 73.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Lar Prowltusk closes the Attack Plans.",
+      "npc": 3140,
+      "quest": 786,
+      "tag": "main",
+      "title": "Thwarting Kolkar Aggression",
+      "type": "TURNIN",
+      "x": 54.4,
+      "y": 74.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gadrin takes the skull. Walk back up the hill to his hut.",
+      "npc": 3188,
+      "quest": 808,
+      "tag": "main",
+      "title": "Minshina's Skull",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gadrin takes Zalazane's head.",
+      "npc": 3188,
+      "quest": 826,
+      "tag": "main",
+      "title": "Zalazane",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gadrin takes the idols.",
+      "npc": 3188,
+      "quest": 97225,
+      "tag": "optional",
+      "title": "Forgotten Loa Idols",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 74.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Valley of Trials has trainers for every class. Level 8 is close: learn what you can afford.",
+      "type": "TRAINER",
+      "x": 42.9,
+      "y": 69.4,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Troll priests: Ken'jai sends you to Tai'jin at Razor Hill. Other classes can skip this.",
+      "npc": 3707,
+      "quest": 5649,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "In Favor of Spirituality",
+      "type": "ACCEPT",
+      "x": 42.4,
+      "y": 68.8,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Tai'jin in Razor Hill takes the breadcrumb.",
+      "npc": 3706,
+      "quest": 5649,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "In Favor of Spirituality",
+      "type": "TURNIN",
+      "x": 54.3,
+      "y": 42.9,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Tai'jin: heal Grunt Kor'ja with Lesser Heal, then buff her with Power Word: Fortitude.",
+      "npc": 3706,
+      "quest": 5648,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Garments of Spirituality",
+      "type": "ACCEPT",
+      "x": 54.3,
+      "y": 42.9,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Grunt Kor'ja is just south of Razor Hill. Lesser Heal her, then cast Power Word: Fortitude on her.",
+      "quest": 5648,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Garments of Spirituality",
+      "type": "COMPLETE",
+      "x": 53.1,
+      "y": 46.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Back to Tai'jin with the news of Grunt Kor'ja.",
+      "npc": 3706,
+      "quest": 5648,
+      "races": [
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Garments of Spirituality",
+      "type": "TURNIN",
+      "x": 54.3,
+      "y": 42.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Cook Torka cooks the eggs and gives you food for the road.",
+      "npc": 3191,
+      "quest": 815,
+      "tag": "main",
+      "title": "Break a Few Eggs",
+      "type": "TURNIN",
+      "x": 51.1,
+      "y": 42.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Razormane camps west of town. Quilboar and scouts first, then dustrunners and battleguards (lvl 8-10).",
+      "npc": 3139,
+      "quest": 837,
+      "tag": "main",
+      "title": "Encroachment",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Quilboar and scouts at (47,49). Dustrunners and Battleguards (lvl 8-10) sit at (43,39): take them at level 8+.",
+      "quest": 837,
+      "tag": "main",
+      "title": "Encroachment",
+      "type": "COMPLETE",
+      "x": 47.4,
+      "y": 49.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Gar'Thok pays for the Razormane camps.",
+      "npc": 3139,
+      "quest": 837,
+      "tag": "main",
+      "title": "Encroachment",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Misha Tor'kren wants a sign of Kron. The crocs are on the lake west of Hana'zua.",
+      "npc": 3193,
+      "quest": 816,
+      "tag": "main",
+      "title": "Lost But Not Forgotten",
+      "type": "ACCEPT",
+      "x": 43.1,
+      "y": 30.2,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Dreadmaw Crocolisks (lvl 9-11) on the lake west of Hana'zua. Collect Kron's Amulets from the crocs.",
+      "quest": 816,
+      "tag": "main",
+      "title": "Lost But Not Forgotten",
+      "type": "COMPLETE",
+      "x": 35.4,
+      "y": 55.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Misha Tor'kren at the farmstead. He hands over the Handsewn Cloak.",
+      "npc": 3193,
+      "quest": 816,
+      "tag": "main",
+      "title": "Lost But Not Forgotten",
+      "type": "TURNIN",
+      "x": 43.1,
+      "y": 30.2,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Rhinag near the north-west border wants Kor'ghan's antidote. The antidote comes from Orgrimmar.",
+      "npc": 3190,
+      "quest": 812,
+      "tag": "main",
+      "title": "Need for a Cure",
+      "type": "ACCEPT",
+      "x": 41.5,
+      "y": 18.6,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Orgnil sends you after Fizzle Darkstorm's claw north-west. Fizzle is lvl 12: take it with care.",
+      "npc": 3142,
+      "quest": 806,
+      "tag": "main",
+      "title": "Dark Storms",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Fizzle Darkstorm (lvl 12) at (42,27) drops the claw. Take him at level 9+ or with a buff.",
+      "quest": 806,
+      "tag": "main",
+      "title": "Dark Storms",
+      "type": "COMPLETE",
+      "x": 42.1,
+      "y": 26.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil takes the claw and sends you north to Margoz.",
+      "npc": 3142,
+      "quest": 806,
+      "tag": "main",
+      "title": "Dark Storms",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil sends you to Margoz at his camp north of Razor Hill, on the Burning Blade trail.",
+      "npc": 3142,
+      "quest": 828,
+      "tag": "main",
+      "title": "Margoz",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Margoz takes the message and gives you the collar task.",
+      "npc": 3208,
+      "quest": 828,
+      "tag": "main",
+      "title": "Margoz",
+      "type": "TURNIN",
+      "x": 56.4,
+      "y": 20.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Margoz needs searing collars from the Burning Blade cultists on Skull Rock. Level 9+ advised.",
+      "npc": 3208,
+      "quest": 827,
+      "tag": "main",
+      "title": "Skull Rock",
+      "type": "ACCEPT",
+      "x": 56.4,
+      "y": 20.0,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Thrall in Orgrimmar sends you to Skull Rock for Burning Blade insignias. Needs level 9.",
+      "npc": 4949,
+      "quest": 5726,
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Kor'ghan in Orgrimmar starts the antidote errand: 4 Venomtail Poison Sacs from the scorpids near Rhinag.",
+      "npc": 3189,
+      "quest": 813,
+      "tag": "main",
+      "title": "Finding the Antidote",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 53.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Nazgrel in Thrall's chamber takes the Admiral's second order.",
+      "npc": 3230,
+      "quest": 831,
+      "tag": "main",
+      "title": "The Admiral's Orders",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 35.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Burning Blade Fanatics, Apprentices and Cultists on Skull Rock (lvl 9-11). Collect the searing collars.",
+      "quest": 827,
+      "tag": "main",
+      "title": "Skull Rock",
+      "type": "COMPLETE",
+      "x": 52.9,
+      "y": 9.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Lieutenant's Insignias drop from the Fanatics on Skull Rock. One insignia is enough.",
+      "quest": 5726,
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "COMPLETE",
+      "x": 52.9,
+      "y": 9.3,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Eye of Burning Shadow lies at Skull Rock. Pick it up for Neeru Fireblade.",
+      "quest": 832,
+      "tag": "main",
+      "title": "Burning Shadows",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 8.8,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Margoz takes the collars and gives you the Neeru errand.",
+      "npc": 3208,
+      "quest": 827,
+      "tag": "main",
+      "title": "Skull Rock",
+      "type": "TURNIN",
+      "x": 56.4,
+      "y": 20.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Neeru Fireblade in Orgrimmar gets the Margoz chain's last turn-in. Take it now.",
+      "npc": 3208,
+      "quest": 829,
+      "tag": "main",
+      "title": "Neeru Fireblade",
+      "type": "ACCEPT",
+      "x": 56.4,
+      "y": 20.0,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Rezlak wants 5 sacks of supplies from the north-west hills. The sacks are around (49,29).",
+      "npc": 3293,
+      "quest": 834,
+      "tag": "main",
+      "title": "Winds in the Desert",
+      "type": "ACCEPT",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Sacks of Supplies lie on the ground around (49,29), near the Crossroads road.",
+      "quest": 834,
+      "tag": "main",
+      "title": "Winds in the Desert",
+      "type": "COMPLETE",
+      "x": 49.2,
+      "y": 28.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Rezlak takes the sacks. Dustwind mobs are next.",
+      "npc": 3293,
+      "quest": 834,
+      "tag": "main",
+      "title": "Winds in the Desert",
+      "type": "TURNIN",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Securing the Lines: Dustwind Savages and Storm Witches (lvl 9-11) north-east of Rezlak.",
+      "npc": 3293,
+      "quest": 835,
+      "tag": "main",
+      "title": "Securing the Lines",
+      "type": "ACCEPT",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "A Simmering Storm: pick up the Dull Stormy Orb at (53,25) while you are at the Dustwind camp.",
+      "quest": 97281,
+      "tag": "optional",
+      "title": "A Simmering Storm",
+      "type": "ACCEPT",
+      "x": 53.2,
+      "y": 24.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Dustwind Savages at (53,24) and Storm Witches at (52,22). Kill 12 savages and 8 witches.",
+      "quest": 835,
+      "tag": "main",
+      "title": "Securing the Lines",
+      "type": "COMPLETE",
+      "x": 53.2,
+      "y": 23.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Rezlak has the Dustwind report.",
+      "npc": 3293,
+      "quest": 835,
+      "tag": "main",
+      "title": "Securing the Lines",
+      "type": "TURNIN",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Rezlak takes the orb.",
+      "npc": 3293,
+      "quest": 97281,
+      "tag": "optional",
+      "title": "A Simmering Storm",
+      "type": "TURNIN",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Stormy Potential: Rezlak wants 5 charged organs from the Thunder Lizards at the lizard field.",
+      "npc": 3293,
+      "quest": 97282,
+      "tag": "optional",
+      "title": "Stormy Potential",
+      "type": "ACCEPT",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Thunder Lizards (lvl 9-10) on the lizard field at (41,27). Five charged organs from them.",
+      "quest": 97282,
+      "tag": "optional",
+      "title": "Stormy Potential",
+      "type": "COMPLETE",
+      "x": 41.1,
+      "y": 26.8,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Rezlak takes the charged organs.",
+      "npc": 3293,
+      "quest": 97282,
+      "tag": "optional",
+      "title": "Stormy Potential",
+      "type": "TURNIN",
+      "x": 46.4,
+      "y": 22.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Venomtail Scorpids (lvl 9-10) around (40,22), north-west of Rhinag. Collect 4 Venomtail Poison Sacs. Skip the rare Death Flayers.",
+      "quest": 813,
+      "tag": "main",
+      "title": "Finding the Antidote",
+      "type": "COMPLETE",
+      "x": 40.2,
+      "y": 21.9,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Kor'ghan takes the sacks and gives you the Venomtail Antidote.",
+      "npc": 3189,
+      "quest": 813,
+      "tag": "main",
+      "title": "Finding the Antidote",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 53.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Neeru Fireblade takes the Margoz chain's eyes.",
+      "npc": 3216,
+      "quest": 829,
+      "tag": "main",
+      "title": "Neeru Fireblade",
+      "type": "TURNIN",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Neeru Fireblade takes the Eye of Burning Shadow.",
+      "npc": 3216,
+      "quest": 832,
+      "tag": "main",
+      "title": "Burning Shadows",
+      "type": "TURNIN",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Thrall takes the insignia.",
+      "npc": 4949,
+      "quest": 5726,
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Hidden Enemies part 2: take the insignia to Neeru Fireblade and speak to him, then back to Thrall.",
+      "npc": 4949,
+      "quest": 5727,
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "_review": "Talk objective: Neeru is a quest NPC (lvl 37), not a fight.",
+      "note": "Speak to Neeru Fireblade in Orgrimmar (49.5,50.6). He has to believe you are a Burning Blade member.",
+      "quest": 5727,
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "COMPLETE",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Back to Thrall with Neeru's verdict.",
+      "npc": 4949,
+      "quest": 5727,
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Rhinag takes the Venomtail Antidote. Need for a Cure is done.",
+      "npc": 3190,
+      "quest": 812,
+      "tag": "main",
+      "title": "Need for a Cure",
+      "type": "TURNIN",
+      "x": 41.5,
+      "y": 18.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil sends you to Heglan Shadeeye north of Tiragarde. Threat from Below is a short chain.",
+      "npc": 3142,
+      "quest": 99048,
+      "tag": "optional",
+      "title": "A Missing Hand",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Heglan Shadeeye has found the signs of the attack.",
+      "npc": 275657,
+      "quest": 99048,
+      "tag": "optional",
+      "title": "A Missing Hand",
+      "type": "TURNIN",
+      "x": 58.6,
+      "y": 45.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Heglan: find the signs of what attacked him around the Tiragarde outskirts.",
+      "npc": 275657,
+      "quest": 99049,
+      "tag": "optional",
+      "title": "Threat from Below",
+      "type": "ACCEPT",
+      "x": 58.6,
+      "y": 45.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Signs lie at (58.9,44.4), (60.1,42.5) and (60.1,44.8): orcish dagger, banner scrap and a broken trident.",
+      "quest": 99049,
+      "tag": "optional",
+      "title": "Threat from Below",
+      "type": "COMPLETE",
+      "x": 60.1,
+      "y": 42.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil takes the signs. Naga Spinefins are next, north of the Razor Hill road.",
+      "npc": 3142,
+      "quest": 99049,
+      "tag": "optional",
+      "title": "Threat from Below",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Collect 9 Naga Spinefins from the Spitelash naga north of Razor Hill.",
+      "npc": 3142,
+      "quest": 99051,
+      "tag": "optional",
+      "title": "Threat from Below",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Spitelash Scouts and Attendants (lvl 9-11) at (59,26). Collect 9 spinefins.",
+      "quest": 99051,
+      "tag": "optional",
+      "title": "Threat from Below",
+      "type": "COMPLETE",
+      "x": 58.8,
+      "y": 26.2,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil takes the spinefins.",
+      "npc": 3142,
+      "quest": 99051,
+      "tag": "optional",
+      "title": "Threat from Below",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Aggor the Young is an elite sea giant (lvl 11) on the north coast. Revisit at level 14 if needed.",
+      "npc": 3142,
+      "quest": 99052,
+      "tag": "optional-elite",
+      "title": "Threat from Below",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Aggor the Young (elite, lvl 11) on the north coast. Fight only with a buddy, or come back at level 14.",
+      "quest": 99052,
+      "tag": "optional-elite",
+      "title": "Threat from Below",
+      "type": "COMPLETE",
+      "x": 59.2,
+      "y": 17.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Orgnil takes Aggor's belt. The belt and dagger are gear for the next band.",
+      "npc": 3142,
+      "quest": 99052,
+      "tag": "optional-elite",
+      "title": "Threat from Below",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 43.1,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Level 10 now. Learn your spells before the Orgrimmar and Crossroads leg.",
+      "type": "TRAINER",
+      "x": 54.2,
+      "y": 42.5,
+      "zone": "Durotar"
+    },
+    {
+      "bagCheck": true,
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Ophek in Razor Hill sends you to Gan'rul in Orgrimmar. Warlock only.",
+      "npc": 3294,
+      "quest": 1506,
+      "tag": "main",
+      "title": "Gan'rul's Summons",
+      "type": "ACCEPT",
+      "x": 54.4,
+      "y": 41.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Kaplak in Razor Hill: Therzok in Orgrimmar. Orc rogues only.",
+      "npc": 3170,
+      "quest": 1859,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Therzok",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 43.7,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Takrin Pathseeker sends you west over the bridge to Kargal's Far Watch in the Barrens.",
+      "npc": 3336,
+      "quest": 840,
+      "tag": "main",
+      "title": "Conscript of the Horde",
+      "type": "ACCEPT",
+      "x": 50.8,
+      "y": 43.6,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Thotar wants a Dire Mottled Boar tamed with the Taming Rod. Orc and Troll hunters.",
+      "npc": 3171,
+      "quest": 6062,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Dire Mottled Boars (lvl 6-7) south-west of Razor Hill. Tame one with the Taming Rod.",
+      "quest": 6062,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 49.3,
+      "y": 47.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Thotar takes the rod back and sends you to the next tame.",
+      "npc": 3171,
+      "quest": 6062,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Tame a Surf Crawler with the rod, then return to Thotar.",
+      "npc": 3171,
+      "quest": 6083,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Surf Crawlers (lvl 7-8) at the north-east edge of Durotar. Tame one.",
+      "quest": 6083,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 60.0,
+      "y": 25.3,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Thotar takes the rod back. Next is the scorpid tame.",
+      "npc": 3171,
+      "quest": 6083,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Tame an Armored Scorpid, then return to Thotar.",
+      "npc": 3171,
+      "quest": 6082,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Armored Scorpids (lvl 7-8) between Razor Hill and Misha. Tame one.",
+      "quest": 6082,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 46.2,
+      "y": 35.4,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Thotar takes the rod back.",
+      "npc": 3171,
+      "quest": 6082,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Training the Beast: Thotar sends you to Ormak Grimshot in Orgrimmar.",
+      "npc": 3171,
+      "quest": 6081,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Training the Beast",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 43.5,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Devrak's flight point at the Crossroads. Discover it on arrival.",
+      "npc": 3615,
+      "type": "FP_DISCOVER",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "note": "Zargh at the Crossroads wants his meat taken to Devrak. Orc and Troll only.",
+      "npc": 3489,
+      "quest": 6365,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Meats to Orgrimmar",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 29.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Devrak takes Zargh's meat. Next: a wind rider to Orgrimmar.",
+      "npc": 3615,
+      "quest": 6365,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Meats to Orgrimmar",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Devrak: buy a wind rider to Orgrimmar, then bring the meat to Gryshka. Orc and Troll only.",
+      "npc": 3615,
+      "quest": 6384,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Ride to Orgrimmar",
+      "type": "ACCEPT",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Pay Devrak for the wind rider to Orgrimmar. Gold cost only. Orc and Troll only.",
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "to": "Orgrimmar",
+      "type": "FLY"
+    },
+    {
+      "note": "Doras the wind rider in Orgrimmar. Discover this flight point on arrival.",
+      "npc": 3310,
+      "type": "FP_DISCOVER",
+      "x": 45.1,
+      "y": 63.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Innkeeper Gryshka takes Zargh's meat.",
+      "npc": 6929,
+      "quest": 6384,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Ride to Orgrimmar",
+      "type": "TURNIN",
+      "x": 54.1,
+      "y": 68.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Gryshka's letter goes to Doras, the wind rider master in Orgrimmar.",
+      "npc": 6929,
+      "quest": 6385,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Doras the Wind Rider Master",
+      "type": "ACCEPT",
+      "x": 54.1,
+      "y": 68.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Doras takes Gryshka's letter.",
+      "npc": 3310,
+      "quest": 6385,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Doras the Wind Rider Master",
+      "type": "TURNIN",
+      "x": 45.1,
+      "y": 63.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Doras: buy a wind rider back to the Crossroads and bring the letter to Zargh.",
+      "npc": 3310,
+      "quest": 6386,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Return to the Crossroads.",
+      "type": "ACCEPT",
+      "x": 45.1,
+      "y": 63.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Gan'rul Bloodeye in Orgrimmar takes the summons message.",
+      "npc": 5875,
+      "quest": 1506,
+      "tag": "main",
+      "title": "Gan'rul's Summons",
+      "type": "TURNIN",
+      "x": 48.2,
+      "y": 45.3,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Creature of the Void: Gan'rul sends you north for the Tablet of Verga.",
+      "npc": 5875,
+      "quest": 1501,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Creature of the Void",
+      "type": "ACCEPT",
+      "x": 48.2,
+      "y": 45.3,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Tablet of Verga lies at (51.6,9.8), north of Skull Rock. Pick it up, then return to Gan'rul.",
+      "quest": 1501,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Creature of the Void",
+      "type": "COMPLETE",
+      "x": 51.6,
+      "y": 9.8,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Gan'rul takes the tablet.",
+      "npc": 5875,
+      "quest": 1501,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Creature of the Void",
+      "type": "TURNIN",
+      "x": 48.2,
+      "y": 45.3,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "The Binding: summon and subdue a voidwalker at the Orgrimmar circle.",
+      "npc": 5875,
+      "quest": 1504,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "The Binding",
+      "type": "ACCEPT",
+      "x": 48.2,
+      "y": 45.3,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Summoning Circle in Orgrimmar (49,50). Summon and subdue the voidwalker, then return the glyphs to Gan'rul.",
+      "quest": 1504,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "The Binding",
+      "type": "COMPLETE",
+      "x": 49.4,
+      "y": 50.0,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Gan'rul takes the glyphs of summoning back.",
+      "npc": 5875,
+      "quest": 1504,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "The Binding",
+      "type": "TURNIN",
+      "x": 48.2,
+      "y": 45.3,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Searn Firewarder in Orgrimmar sends you to Kranal Fiss in the Barrens. Shaman only.",
+      "npc": 5892,
+      "quest": 1522,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "ACCEPT",
+      "x": 38.0,
+      "y": 37.7,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Therzok in Orgrimmar takes the Cleft of Shadow message.",
+      "npc": 6446,
+      "quest": 1859,
+      "races": [
+        "Orc"
+      ],
+      "tag": "main",
+      "title": "Therzok",
+      "type": "TURNIN",
+      "x": 42.7,
+      "y": 53.5,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Ormak Grimshot in Orgrimmar: the scorpid is your new pet. Next, the Crossroads.",
+      "npc": 3352,
+      "quest": 6081,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Training the Beast",
+      "type": "TURNIN",
+      "x": 66.0,
+      "y": 18.5,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Take Doras's wind rider back to the Crossroads. Gold cost; Orc and Troll only.",
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "to": "The Crossroads",
+      "type": "FLY"
+    },
+    {
+      "note": "Zargh takes the letter. The Crossroads is back in reach.",
+      "npc": 3489,
+      "quest": 6386,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "main",
+      "title": "Return to the Crossroads.",
+      "type": "TURNIN",
+      "x": 52.6,
+      "y": 29.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Last stop before the Barrens: top up ammo and water at the Crossroads vendors.",
+      "type": "BUY",
+      "x": 51.7,
+      "y": 29.9,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Path of Defense: Uzzek at Far Watch sends you to the Thunder Lizards for Singed Scales.",
+      "npc": 5810,
+      "quest": 1498,
+      "tag": "main",
+      "title": "Path of Defense",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Apothecary Helbrim at the Crossroads gives you a Secure Crate for Wharfmaster Dizzywig in Ratchet.",
+      "npc": 3390,
+      "quest": 1492,
+      "tag": "optional",
+      "title": "Wharfmaster Dizzywig",
+      "type": "ACCEPT",
+      "x": 51.4,
+      "y": 30.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kargal Battlescar at the Far Watch: the conscription paperwork is done.",
+      "npc": 3337,
+      "quest": 840,
+      "tag": "main",
+      "title": "Conscript of the Horde",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 19.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kargal sends you on to Sergra Darkthorn at the crossing of roads in the Crossroads.",
+      "npc": 3337,
+      "quest": 842,
+      "tag": "main",
+      "title": "Crossroads Conscription",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 19.4,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Kranal Fiss in the Barrens takes the Call of Fire message.",
+      "npc": 5907,
+      "quest": 1522,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 19.9,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Thunder Lizards (lvl 9-10) on the lizard field at (40,27). Collect 5 Singed Scales.",
+      "quest": 1498,
+      "tag": "main",
+      "title": "Path of Defense",
+      "type": "COMPLETE",
+      "x": 40.5,
+      "y": 26.8,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Uzzek takes the scales.",
+      "npc": 5810,
+      "quest": 1498,
+      "tag": "main",
+      "title": "Path of Defense",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Uzzek sends you to Thun'grim Firegaze at the Crossroads forge.",
+      "npc": 5810,
+      "quest": 1502,
+      "tag": "main",
+      "title": "Thun'grim Firegaze",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Thun'grim Firegaze at the Crossroads: he wants the forged steel.",
+      "npc": 5878,
+      "quest": 1502,
+      "tag": "main",
+      "title": "Thun'grim Firegaze",
+      "type": "TURNIN",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Forged Steel: Thun'grim wants the forged bars from the Crossroads forge.",
+      "npc": 5878,
+      "quest": 1503,
+      "tag": "main",
+      "title": "Forged Steel",
+      "type": "ACCEPT",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Forged Steel Bars lie near the Crossroads forge (55,27). Pick them up, then return to Thun'grim.",
+      "quest": 1503,
+      "tag": "main",
+      "title": "Forged Steel",
+      "type": "COMPLETE",
+      "x": 55.0,
+      "y": 26.6,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Thun'grim Firegaze takes the forged bars and gives you a weapon.",
+      "npc": 5878,
+      "quest": 1503,
+      "reward": {
+        "preferItem": 7329,
+        "why": "Thun'grim's Sword (il 15): a large upgrade for a warrior at level 10."
+      },
+      "tag": "main",
+      "title": "Forged Steel",
+      "type": "TURNIN",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sergra Darkthorn at the Crossroads: the conscription is done.",
+      "npc": 3338,
+      "quest": 842,
+      "tag": "main",
+      "title": "Crossroads Conscription",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 31.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Plainstrider Menace: Sergra wants 7 Plainstrider Beaks from the plains west of the Crossroads.",
+      "npc": 3338,
+      "quest": 844,
+      "tag": "main",
+      "title": "Plainstrider Menace",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 31.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Plainstriders (lvl 11-13) on the plains. Skip the Ornery Plainstriders (lvl 16-17). Collect 7 beaks.",
+      "quest": 844,
+      "tag": "main",
+      "title": "Plainstrider Menace",
+      "type": "COMPLETE",
+      "x": 51.1,
+      "y": 26.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sergra Darkthorn takes the beaks.",
+      "npc": 3338,
+      "quest": 844,
+      "tag": "main",
+      "title": "Plainstrider Menace",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 31.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Disrupt the Attacks: Thork at the Crossroads wants Razormane water seekers, thornweavers and hunters.",
+      "npc": 3429,
+      "quest": 871,
+      "tag": "main",
+      "title": "Disrupt the Attacks",
+      "type": "ACCEPT",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Razormane Water Seekers and Thornweavers (lvl 10-11) at (55,26). Hunters (lvl 11-12) at (57,25).",
+      "quest": 871,
+      "tag": "main",
+      "title": "Disrupt the Attacks",
+      "type": "COMPLETE",
+      "x": 54.8,
+      "y": 26.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Thork takes the Razormane report.",
+      "npc": 3429,
+      "quest": 871,
+      "tag": "main",
+      "title": "Disrupt the Attacks",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bragok's flight point at Ratchet. Discover it before Dizzywig.",
+      "npc": 16227,
+      "type": "FP_DISCOVER",
+      "x": 63.1,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wharfmaster Dizzywig in Ratchet takes the crate.",
+      "npc": 3453,
+      "quest": 1492,
+      "tag": "optional",
+      "title": "Wharfmaster Dizzywig",
+      "type": "TURNIN",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bind your hearthstone to the Crossroads inn. The next band starts here.",
+      "npc": 3934,
+      "type": "HEARTH_BIND",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    }
+  ]
+}

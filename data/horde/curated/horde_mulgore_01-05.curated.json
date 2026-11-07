@@ -1,0 +1,245 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 747,
+      "reason": "Camp starter hunt: 170 XP, plainstriders by the well, and it opens the class notes and 750."
+    },
+    {
+      "decision": "main",
+      "quest": 748,
+      "reason": "Tauren-only: 450 XP, prairie wolf paws north of Bloodhoof (lvl 5-6). Opens 754."
+    },
+    {
+      "decision": "main",
+      "quest": 750,
+      "reason": "Cougar pelts south of camp (lvl 3): 250 XP, and it unlocks the Battleboars."
+    },
+    {
+      "decision": "main",
+      "quest": 752,
+      "reason": "Breadcrumb from Chief Hawkwind to the pitcher errand (753): 85 XP, no mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 753,
+      "reason": "Water pitcher from the camp well: 250 XP, and it opens Rites of the Earthmother."
+    },
+    {
+      "decision": "main",
+      "quest": 754,
+      "reason": "Tauren-only cleansing at the Winterhoof well: 540 XP, no mobs. The chain continues in 05-10."
+    },
+    {
+      "decision": "main",
+      "quest": 755,
+      "reason": "Rites of the Earthmother: 250 XP and a short walk to Seer Graytongue. Opens 757 and Grace."
+    },
+    {
+      "decision": "drop",
+      "quest": 756,
+      "reason": "Handed to 05-10: Prairie Stalkers and Flatland Cougars are lvl 7-8, 3+ above a level 4-5 Tauren. 630 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 757,
+      "reason": "Bristleback belts (lvl 3-4): 445 XP and a weapon reward. Turn-in at Chief unlocks the Rites chain."
+    },
+    {
+      "decision": "main",
+      "quest": 761,
+      "reason": "Trophy Swoop Quills north of Bloodhoof: 680 XP. Swoops span lvl 5-10, so pull the small ones first."
+    },
+    {
+      "decision": "main",
+      "quest": 763,
+      "reason": "Breadcrumb to Baine Bloodhoof: 335 XP, opens the Rite of Vision chain."
+    },
+    {
+      "decision": "main",
+      "quest": 767,
+      "reason": "Speak with Zarlman Two-Moons: 55 XP, a short step in the Rite of Vision chain."
+    },
+    {
+      "decision": "main",
+      "quest": 771,
+      "reason": "Well Stones and Ambercorn near town (no mob risk): 630 XP."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 772,
+      "reason": "Rite of Vision: 475 XP and a cloak-or-boots reward. Chain continues in 05-10 (773)."
+    },
+    {
+      "decision": "main",
+      "quest": 780,
+      "reason": "Battleboars (lvl 3-5) east of camp: 445 XP. Turn-in at Grull after 750."
+    },
+    {
+      "decision": "drop",
+      "quest": 781,
+      "reason": "Starter is a Dirt-stained Map item with no spawn or drop coordinates in the DB. Reward is a shield only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1462,
+      "reason": "Replacement Earth Sapta re-get, not part of the Call of Earth chain (same call as Durotar 1463)."
+    },
+    {
+      "decision": "class",
+      "quest": 1519,
+      "reason": "Shaman: Call of Earth part 1. Two Ritual Salve from the bristleback shamans east of camp."
+    },
+    {
+      "decision": "class",
+      "quest": 1520,
+      "reason": "Shaman: Call of Earth part 2. Drink the Earth Sapta at Kodo Rock (no coordinates in the DB)."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1521,
+      "reason": "Shaman: Call of Earth part 3, rewards the Earth Totem. Key reward for Mulgore Shamans."
+    },
+    {
+      "decision": "optional",
+      "quest": 1656,
+      "reason": "Antur Fallow's bundle for Innkeeper Kauth: 110 XP and a food and water reward, close to camp."
+    },
+    {
+      "decision": "class",
+      "quest": 3091,
+      "reason": "Warrior class note (Tauren only): 40 XP, speak to Harutt Thunderhorn in camp."
+    },
+    {
+      "decision": "class",
+      "quest": 3092,
+      "reason": "Hunter class note (Tauren only): 60 XP, speak to Lanka Farshot in camp."
+    },
+    {
+      "decision": "class",
+      "quest": 3093,
+      "reason": "Shaman class note (Tauren only): 60 XP, speak to Meela Dawnstrider in camp."
+    },
+    {
+      "decision": "class",
+      "quest": 3094,
+      "reason": "Druid class note (Tauren only): 60 XP, speak to Gart Mistrunner in camp."
+    },
+    {
+      "decision": "main",
+      "quest": 3376,
+      "reason": "Chief Sharptusk Thornmantle (lvl 5) head: 670 XP, east of camp beside the bristlebacks."
+    },
+    {
+      "decision": "drop",
+      "quest": 5844,
+      "reason": "Gift voucher item pays out pets only, no XP. Same call as Durotar 5843."
+    },
+    {
+      "decision": "drop",
+      "quest": 7662,
+      "reason": "Level 60 mount quest (new Kodo): not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 7663,
+      "reason": "Level 60 mount quest (new Kodo): not leveling content."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 95805,
+      "reason": "Bag reward (Scorched Leather Pouch). Short run from Graytongue to the Ritual Fire on a 10-minute timer."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 96130,
+      "reason": "Chakuyak (lvl 5-6): belt upgrade, Furred Belt item level 8. No XP data in the DB, gear only."
+    },
+    {
+      "decision": "optional",
+      "quest": 96605,
+      "reason": "Forever camp quest: sit at Kaga's campfire for Boosted Rest. Trivial, no XP data, in Bloodhoof."
+    },
+    {
+      "decision": "optional",
+      "quest": 96659,
+      "reason": "Breadcrumb for 96605 from Chief Hawkwind to Kaga. Cheap errand, no XP data."
+    },
+    {
+      "decision": "optional",
+      "quest": 96661,
+      "reason": "Forever camp quest: Cooking, spoken to Pyall in Bloodhoof. No skill gate, no XP data."
+    },
+    {
+      "decision": "drop",
+      "quest": 97927,
+      "reason": "Profession-gated Camping 101 quest (Alchemy): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97928,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97929,
+      "reason": "Profession-gated Camping 101 quest (Enchanting): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97930,
+      "reason": "Profession-gated Camping 101 quest (Engineering): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97931,
+      "reason": "Profession-gated Camping 101 quest (First Aid): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97932,
+      "reason": "Profession-gated Camping 101 quest (Fishing): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97933,
+      "reason": "Profession-gated Camping 101 quest (Herbalism): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97934,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97935,
+      "reason": "Profession-gated Camping 101 quest (Mining): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97936,
+      "reason": "Profession-gated Camping 101 quest (Skinning): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "drop",
+      "quest": 97937,
+      "reason": "Profession-gated Camping 101 quest (Tailoring): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "decision": "optional",
+      "quest": 99108,
+      "reason": "Sparring Match: Novice Warriors (lvl 5) by Krang in Bloodhoof. Cheap, no XP data."
+    },
+    {
+      "decision": "drop",
+      "quest": 99411,
+      "reason": "Kyle the Frenzied is a lvl 12 pet and the Tender Strider Meat has no source in the pack. No XP data."
+    }
+  ],
+  "id": "horde_mulgore_01-05",
+  "schemaVersion": 1
+}

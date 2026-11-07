@@ -1,0 +1,243 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 92460,
+      "reason": "Ailee's tutorial hand-off to Rorian; opens the whole Thendal Grove chain."
+    },
+    {
+      "decision": "main",
+      "quest": 92461,
+      "reason": "Eight Juvenile Vuldrens beside the watchtower; opens the class quests. Leather bracers reward."
+    },
+    {
+      "decision": "main",
+      "quest": 92462,
+      "reason": "Pesky Cirrusflies beside the Vuldrens; first half of the Cirrusfly Queen chain."
+    },
+    {
+      "decision": "main",
+      "quest": 92463,
+      "reason": "Cirrusfly Queen, a lone level 3 mob; the three armour rewards are the first real gear choice."
+    },
+    {
+      "decision": "main",
+      "quest": 92464,
+      "reason": "Elemental Unrest: speak to Yala Windwatcher; opens Agitators and the Al'Aketh chain."
+    },
+    {
+      "decision": "main",
+      "quest": 92465,
+      "reason": "Agitators: Roiling Winds and Al'Aketh Converts beside Yala, levels 2-3; leads to Return to Rorian."
+    },
+    {
+      "decision": "class",
+      "quest": 92466,
+      "reason": "Shaman Call of Earth part 1: Signet of Akir drops from the Al'Aketh Converts that Agitators already clears."
+    },
+    {
+      "decision": "class",
+      "quest": 92467,
+      "reason": "Shaman Call of Earth part 2: drink the Earth Sapta at the Minor Manifestation of Earth."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 92468,
+      "reason": "Shaman Call of Earth part 3: rewards the Earth Totem, a core Shaman tool."
+    },
+    {
+      "decision": "main",
+      "quest": 92469,
+      "reason": "Return to Rorian closes the Yala chain; the belt and cloak are small armour rewards."
+    },
+    {
+      "decision": "main",
+      "quest": 92470,
+      "reason": "Foul Matriarch: 8 Ursera Scavengers and Urs'anah's head, five weapon rewards; unlocks The Next Step."
+    },
+    {
+      "decision": "main",
+      "quest": 92471,
+      "reason": "Aetheen of the Gales: speaking quest that gates the Ursera chain (Foul Matriarch, Aggressive Encroachment)."
+    },
+    {
+      "decision": "main",
+      "quest": 92472,
+      "reason": "The Next Step: report to Constable Aonda in Shen'dar Village, the second hub, which opens the Highlands."
+    },
+    {
+      "decision": "main",
+      "quest": 92473,
+      "reason": "Scrawny Ursera claws at levels 3-4 beside the Ursera den; three Thendal Ranger armour pieces."
+    },
+    {
+      "decision": "optional",
+      "quest": 92474,
+      "reason": "Stunt quest at the Thendal watchtower with no mobs. Needs the Walk on Air ability; no XP data."
+    },
+    {
+      "decision": "class",
+      "quest": 92482,
+      "reason": "Hunter first class quest (read the Scribbled Note, speak to Tai'ree Farsight)."
+    },
+    {
+      "decision": "class",
+      "quest": 92483,
+      "reason": "Rogue first class quest (read the Simple Note, speak to Akeri Duskblade)."
+    },
+    {
+      "decision": "class",
+      "quest": 92484,
+      "reason": "Shaman first class quest (examine the Humming Recall Crystal, speak to Windshaper Boro)."
+    },
+    {
+      "decision": "class",
+      "quest": 92485,
+      "reason": "Druid first class quest (read the Folded Parchment, speak to Xyton Silverwind)."
+    },
+    {
+      "decision": "main",
+      "quest": 92514,
+      "reason": "Welcome to Shen'dar Village: speak to Illaya and Coriella; gate for the Highlands quests and the inn."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 92515,
+      "reason": "10 Prideclaw Pelts from the level 5-6 Prideclaws; reward is the Simple Leather Satchel, the first bag."
+    },
+    {
+      "decision": "drop",
+      "quest": 92516,
+      "reason": "Hippogryph Protectors and the Matriarch are level 6-7, two to three above a level 4-5 player. Handed to zephras_05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 92517,
+      "reason": "Highlands Bandits and Badwind Bennic are level 7, too high at the level 5 exit. Handed to zephras_05-10 with the bandit camp."
+    },
+    {
+      "decision": "class",
+      "quest": 92532,
+      "reason": "Warrior first class quest (read the Crumpled Note, seek out Blademaster Ren)."
+    },
+    {
+      "decision": "main",
+      "quest": 92544,
+      "reason": "Al'Aketh Thugs: 6 Brutes, 4 Neophytes and Malduko (level 4-5) in the west camp beside Hanaa Nightwind."
+    },
+    {
+      "decision": "optional",
+      "quest": 92553,
+      "reason": "Galestrider eggs and strider meat on the south patch with the Prideclaws; food reward on the way."
+    },
+    {
+      "decision": "drop",
+      "quest": 92595,
+      "reason": "Chain head of Meddlesome Mages. The mage rewards need level 10 and 16. Handed to zephras_05-10."
+    },
+    {
+      "decision": "optional",
+      "quest": 92598,
+      "reason": "Skysight racial ability at the Elemental Convergence beside Yala. Only if you have Skysight; no XP data."
+    },
+    {
+      "decision": "drop",
+      "quest": 93319,
+      "reason": "Pilfered Windstones drop from the same level 7 bandit camp as The Criminal Element. Handed to zephras_05-10."
+    },
+    {
+      "decision": "optional",
+      "quest": 93552,
+      "reason": "Gather Windstone Clusters beside the Vuldren patch; cheap and on the way. Low-value rewards."
+    },
+    {
+      "decision": "drop",
+      "quest": 93951,
+      "reason": "Hippogryph Down from the level 6-7 hippogryphs in the south-west. Handed to zephras_05-10 with Hippogryph Harassment."
+    },
+    {
+      "decision": "drop",
+      "quest": 94411,
+      "reason": "High Order Apprentices (levels 5-6) with Idol (needs level 16) and Totem (needs level 10) rewards. Handed to zephras_05-10."
+    },
+    {
+      "decision": "optional",
+      "quest": 94414,
+      "reason": "Halaan's gift to view the anchor pylon: a quick talk at the watchtower; no rewards, no XP data."
+    },
+    {
+      "decision": "optional",
+      "quest": 96101,
+      "reason": "Camping quest from Raan: sit at his campfire for Boosted Rest. The DB campfire positions are off the isle."
+    },
+    {
+      "decision": "optional",
+      "quest": 96638,
+      "reason": "Breadcrumb from Aetheen to Raan in Shen'dar Village, after Foul Matriarch. Leads to The Great Outdoors."
+    },
+    {
+      "decision": "drop",
+      "quest": 96646,
+      "reason": "Profession-gated Camping 101 quest (Cooking): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97963,
+      "reason": "Profession-gated Camping 101 quest (Alchemy): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97964,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97965,
+      "reason": "Profession-gated Camping 101 quest (First Aid): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97967,
+      "reason": "Profession-gated Camping 101 quest (Fishing): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97968,
+      "reason": "Profession-gated Camping 101 quest (Herbalism): trainer trip to Valanaar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97969,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97970,
+      "reason": "Profession-gated Camping 101 quest (Mining): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97971,
+      "reason": "Profession-gated Camping 101 quest (Skinning): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97972,
+      "reason": "Profession-gated Camping 101 quest (Tailoring): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 98284,
+      "reason": "Profession-gated Camping 101 quest (Enchanting): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 98285,
+      "reason": "Profession-gated Camping 101 quest (Engineering): Strange Hermit in Shadowgale, not leveling content."
+    }
+  ],
+  "id": "horde_zephras_01-05",
+  "schemaVersion": 1
+}

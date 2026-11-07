@@ -1,0 +1,554 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 784,
+      "reason": "Vanquish the Betrayers: 630 XP on the Tiragarde beach, moved from 01-05 as the Razor Hill opener."
+    },
+    {
+      "decision": "main",
+      "quest": 786,
+      "reason": "Attack Plans in the Kolkar Crag: 700 XP, all three objects within reach of Sen'jin."
+    },
+    {
+      "decision": "main",
+      "quest": 789,
+      "reason": "Done in horde_durotar_01-05: Sting of the Scorpid."
+    },
+    {
+      "decision": "main",
+      "quest": 790,
+      "reason": "Done in horde_durotar_01-05: Sarkoth."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 791,
+      "reason": "Handmade Leather Bag reward for 8 Canvas Scraps from the Tiragarde sailors. Keep the bag."
+    },
+    {
+      "decision": "class",
+      "quest": 792,
+      "reason": "Done in horde_durotar_01-05: Vile Familiars (all classes but Warlock)."
+    },
+    {
+      "decision": "main",
+      "quest": 794,
+      "reason": "Done in horde_durotar_01-05: Burning Blade Medallion."
+    },
+    {
+      "decision": "main",
+      "quest": 804,
+      "reason": "Done in horde_durotar_01-05: Sarkoth follow-up."
+    },
+    {
+      "decision": "main",
+      "quest": 805,
+      "reason": "Done in horde_durotar_01-05: Report to Sen'jin Village."
+    },
+    {
+      "decision": "main",
+      "quest": 806,
+      "reason": "Dark Storms: 910 XP. Fizzle is lvl 12, so the claw is a level 9 job; it opens Margoz and Skull Rock."
+    },
+    {
+      "decision": "main",
+      "quest": 808,
+      "reason": "Minshina's Skull: 780 XP from the Echo Isles circle, on the same south-east loop as Zalazane."
+    },
+    {
+      "decision": "main",
+      "quest": 812,
+      "reason": "Need for a Cure: 980 XP, the biggest Rhinag quest. Needs the antidote from Kor'ghan."
+    },
+    {
+      "decision": "main",
+      "quest": 813,
+      "reason": "Finding the Antidote: 4 Venomtail sacs for Kor'ghan. No XP itself, but 812 cannot finish without it."
+    },
+    {
+      "decision": "main",
+      "quest": 815,
+      "reason": "Break a Few Eggs: 700 XP, Torka's Taillasher eggs on the Sen'jin coast."
+    },
+    {
+      "decision": "main",
+      "quest": 816,
+      "reason": "Kron's Amulet: 880 XP from Dreadmaw crocs (lvl 9-11) south-west of Hana'zua. Turned in at Misha."
+    },
+    {
+      "decision": "main",
+      "quest": 817,
+      "reason": "Practical Prey: 700 XP from Durotar tigers (lvl 7-8) on the south-east coast."
+    },
+    {
+      "decision": "main",
+      "quest": 818,
+      "reason": "A Solvent Spirit: 630 XP, moved from 01-05. Makrura and crawler coast, Sen'jin turn-in."
+    },
+    {
+      "decision": "main",
+      "quest": 823,
+      "reason": "Done in horde_durotar_01-05: Report to Orgnil."
+    },
+    {
+      "decision": "main",
+      "quest": 825,
+      "reason": "From The Wreckage: 700 XP, gnomish tools off the east coast. Follows 784."
+    },
+    {
+      "decision": "main",
+      "quest": 826,
+      "reason": "Zalazane: 840 XP. Hexed and Voodoo trolls (lvl 8-9) are the bulk; Zalazane (lvl 10) is taken last."
+    },
+    {
+      "decision": "main",
+      "quest": 827,
+      "reason": "Skull Rock searing collars: 910 XP from Burning Blade cultists (lvl 9-11). Level 9 job."
+    },
+    {
+      "decision": "main",
+      "quest": 828,
+      "reason": "Margoz: 90 XP, the link between Dark Storms and Skull Rock."
+    },
+    {
+      "decision": "main",
+      "quest": 829,
+      "reason": "Neeru Fireblade: 455 XP, the Orgrimmar turn-in for the Margoz chain."
+    },
+    {
+      "decision": "main",
+      "quest": 830,
+      "reason": "The Admiral's Orders: 630 XP. Aged Envelope from the Tiragarde beach, moved from 01-05."
+    },
+    {
+      "decision": "main",
+      "quest": 831,
+      "reason": "The Admiral's Orders part 2: 630 XP, delivered to Nazgrel in Orgrimmar."
+    },
+    {
+      "decision": "main",
+      "quest": 832,
+      "reason": "Burning Shadows: 680 XP. The eye lies at Skull Rock, so it fits that stop."
+    },
+    {
+      "decision": "main",
+      "quest": 834,
+      "reason": "Winds in the Desert: 780 XP, sacks of supplies north-west of the Crossroads road."
+    },
+    {
+      "decision": "main",
+      "quest": 835,
+      "reason": "Securing the Lines: 880 XP, Dustwind mobs (lvl 9-11) next to Rezlak."
+    },
+    {
+      "decision": "main",
+      "quest": 837,
+      "reason": "Encroachment: 630 XP, Razormane camps west of Razor Hill."
+    },
+    {
+      "decision": "main",
+      "quest": 840,
+      "reason": "Conscript of the Horde: 455 XP, the Crossroads conscription chain starts at Razor Hill."
+    },
+    {
+      "decision": "main",
+      "quest": 842,
+      "reason": "Crossroads Conscription: 910 XP, the Far Watch to Crossroads leg."
+    },
+    {
+      "decision": "main",
+      "quest": 844,
+      "reason": "Plainstrider Menace: 910 XP, beaks from the Crossroads plains. Skip the lvl 16-17 Ornery ones."
+    },
+    {
+      "decision": "main",
+      "quest": 871,
+      "reason": "Disrupt the Attacks: 910 XP, Razormane near the Crossroads. Thork is the turn-in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1463,
+      "reason": "Earth Sapta replacement. Dropped in horde_durotar_01-05 too; not part of the Call of Earth chain."
+    },
+    {
+      "decision": "class",
+      "quest": 1485,
+      "reason": "Done in horde_durotar_01-05: Warlock Vile Familiars."
+    },
+    {
+      "decision": "optional",
+      "quest": 1492,
+      "reason": "Wharfmaster Dizzywig: 440 XP, Crossroads crate to Ratchet. Ratchet is a short hop, so optional."
+    },
+    {
+      "decision": "class",
+      "quest": 1498,
+      "reason": "Path of Defense (Warrior): Singed Scales from the Thunder Lizards. Starts the Thun'grim weapon chain."
+    },
+    {
+      "decision": "class",
+      "quest": 1499,
+      "reason": "Done in horde_durotar_01-05: Warlock Vile Familiars hand-in."
+    },
+    {
+      "decision": "class",
+      "quest": 1501,
+      "reason": "Creature of the Void (Orc Warlock): Tablet of Verga north of Skull Rock, 880 XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1502,
+      "reason": "Thun'grim Firegaze (Warrior): 210 XP, second link of the Thun'grim chain."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1503,
+      "reason": "Forged Steel (Warrior): 840 XP and a Thun'grim weapon upgrade (il 15). Gear detour for warriors."
+    },
+    {
+      "decision": "class",
+      "quest": 1504,
+      "reason": "The Binding (Orc Warlock): 660 XP. Summon the voidwalker at the Orgrimmar circle."
+    },
+    {
+      "decision": "class",
+      "quest": 1506,
+      "reason": "Gan'rul's Summons (Warlock breadcrumb): 210 XP, starts with Ophek in Razor Hill."
+    },
+    {
+      "decision": "class",
+      "quest": 1516,
+      "reason": "Done in horde_durotar_01-05: Call of Earth."
+    },
+    {
+      "decision": "class",
+      "quest": 1517,
+      "reason": "Done in horde_durotar_01-05: Call of Earth."
+    },
+    {
+      "decision": "class",
+      "quest": 1518,
+      "reason": "Done in horde_durotar_01-05: Call of Earth, Earth Totem reward."
+    },
+    {
+      "decision": "class",
+      "quest": 1522,
+      "reason": "Call of Fire (Shaman): Searn Firewarder in Orgrimmar, 420 XP. Hand-in at Kranal Fiss in the Barrens."
+    },
+    {
+      "decision": "drop",
+      "quest": 1524,
+      "reason": "Call of Fire part 2 ends at Telf Joolam in south Durotar. Left for the next band; not on the exit path."
+    },
+    {
+      "decision": "drop",
+      "quest": 1525,
+      "reason": "Fire Tar needs Razormane Seers (lvl 23) and a Reagent Pouch in zone 38. Mobs too high; data gap."
+    },
+    {
+      "decision": "class",
+      "quest": 1859,
+      "reason": "Therzok (Orc Rogue breadcrumb): 210 XP, Kaplak in Razor Hill to Therzok in Orgrimmar."
+    },
+    {
+      "decision": "drop",
+      "quest": 1883,
+      "reason": "Mage chain starts with Thurston Xane in Thunder Bluff; the Orgrimmar alternate starter is not in the route data."
+    },
+    {
+      "decision": "drop",
+      "quest": 1884,
+      "reason": "Ju-Ju Heaps is gated by the 1883 breadcrumb, whose start is off this route. Data gap, see the report."
+    },
+    {
+      "decision": "optional",
+      "quest": 2161,
+      "reason": "Done in horde_durotar_01-05: A Peon's Burden."
+    },
+    {
+      "decision": "drop",
+      "quest": 2983,
+      "reason": "Swart's Call of Fire breadcrumb is exclusive with 1522. The route takes 1522."
+    },
+    {
+      "decision": "optional",
+      "quest": 4402,
+      "reason": "Done in horde_durotar_01-05: Galgar's Cactus Apple Surprise."
+    },
+    {
+      "decision": "main",
+      "quest": 5441,
+      "reason": "Done in horde_durotar_01-05: Lazy Peons."
+    },
+    {
+      "decision": "class",
+      "quest": 5648,
+      "reason": "Garments of Spirituality (Troll Priest): 270 XP. Heal and buff Grunt Kor'ja south of Razor Hill."
+    },
+    {
+      "decision": "class",
+      "quest": 5649,
+      "reason": "In Favor of Spirituality (Troll Priest breadcrumb): 90 XP, Ken'jai in the Valley to Tai'jin."
+    },
+    {
+      "decision": "drop",
+      "quest": 5652,
+      "reason": "Hex of Weakness variant. 5654 and 5655-5657 are exclusive alternatives; none is routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5654,
+      "reason": "Hex of Weakness: turn-in is Ur'kyo in south Orgrimmar, 210 XP. Left out to keep the Orgrimmar stop short."
+    },
+    {
+      "decision": "drop",
+      "quest": 5655,
+      "reason": "Hex of Weakness variant: exclusive alternative, not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5656,
+      "reason": "Hex of Weakness variant: exclusive alternative, not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5657,
+      "reason": "Hex of Weakness variant: exclusive alternative, not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 5726,
+      "reason": "Hidden Enemies: 910 XP. Insignias from the Skull Rock Burning Blade, turned in to Thrall."
+    },
+    {
+      "decision": "main",
+      "quest": 5727,
+      "reason": "Hidden Enemies part 2: 455 XP. Talk to Neeru Fireblade and return to Thrall."
+    },
+    {
+      "decision": "class",
+      "quest": 6062,
+      "reason": "Taming the Beast (Hunter, Orc and Troll): 840 XP. Tame a Dire Mottled Boar near Razor Hill."
+    },
+    {
+      "decision": "drop",
+      "quest": 6068,
+      "reason": "Hunter's Path breadcrumb: Orgrimmar start, 85 XP. Three trips for 85 XP each is not worth it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6069,
+      "reason": "Hunter's Path breadcrumb: Sen'jin start, 85 XP. Not worth the trip; see 6068."
+    },
+    {
+      "decision": "drop",
+      "quest": 6070,
+      "reason": "Hunter's Path breadcrumb: Thunder Bluff start, 85 XP. Not worth the trip; see 6068."
+    },
+    {
+      "decision": "class",
+      "quest": 6081,
+      "reason": "Training the Beast (Hunter): 420 XP, turn-in to Ormak Grimshot in Orgrimmar."
+    },
+    {
+      "decision": "class",
+      "quest": 6082,
+      "reason": "Taming the Beast (Hunter): 840 XP. Tame an Armored Scorpid near Razor Hill."
+    },
+    {
+      "decision": "class",
+      "quest": 6083,
+      "reason": "Taming the Beast (Hunter): 840 XP. Tame a Surf Crawler at the north-east edge of Durotar."
+    },
+    {
+      "decision": "class",
+      "quest": 6365,
+      "reason": "Meats to Orgrimmar (Orc and Troll): 210 XP, Zargh's meat to Devrak at the Crossroads."
+    },
+    {
+      "decision": "class",
+      "quest": 6384,
+      "reason": "Ride to Orgrimmar (Orc and Troll): 420 XP, wind rider from Devrak to Gryshka."
+    },
+    {
+      "decision": "class",
+      "quest": 6385,
+      "reason": "Doras the Wind Rider Master (Orc and Troll): 210 XP, Gryshka's letter to Doras."
+    },
+    {
+      "decision": "class",
+      "quest": 6386,
+      "reason": "Return to the Crossroads (Orc and Troll): 1050 XP, wind rider back to Zargh."
+    },
+    {
+      "decision": "main",
+      "quest": 6394,
+      "reason": "Done in horde_durotar_01-05: Thazz'ril's Pick."
+    },
+    {
+      "decision": "drop",
+      "quest": 9263,
+      "reason": "Scourge investigation: the objective spawns sit in zones 12 and 215, not Durotar or Orgrimmar. Data gap; 630 XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 96102,
+      "reason": "Profession-gated Camping 101 quest (Tailoring). Same as 01-05."
+    },
+    {
+      "decision": "optional",
+      "quest": 96604,
+      "reason": "Done in horde_durotar_01-05: The Great Outdoors (Boosted Rest)."
+    },
+    {
+      "decision": "optional",
+      "quest": 96652,
+      "reason": "Done in horde_durotar_01-05: The Adventurer."
+    },
+    {
+      "decision": "drop",
+      "quest": 96655,
+      "reason": "Profession-gated Camping 101 quest (Cooking). Same as 01-05."
+    },
+    {
+      "decision": "optional",
+      "quest": 96821,
+      "reason": "Done in horde_durotar_01-05: Legging It."
+    },
+    {
+      "decision": "optional",
+      "quest": 96822,
+      "reason": "For Honor: three raider weapons on the Tiragarde beach. No XP, on the same loop as 784."
+    },
+    {
+      "decision": "optional",
+      "quest": 96825,
+      "reason": "Done in horde_durotar_01-05: This Fruit Could Bite Back."
+    },
+    {
+      "decision": "drop",
+      "quest": 96873,
+      "reason": "Profession quest (Enchanting, Pa'zula). Profession-gated; not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 96874,
+      "reason": "Profession quest (Blacksmithing, Ug'thok). Profession-gated; Thunder Ridge spines."
+    },
+    {
+      "decision": "drop",
+      "quest": 96875,
+      "reason": "Profession quest (Leatherworking, Kamari). Profession-gated; Thunder Ridge hides."
+    },
+    {
+      "decision": "optional",
+      "quest": 96876,
+      "reason": "Ukor's Lost Pack: item on the road south of Razor Hill, delivered to Ukor. No XP, on the way."
+    },
+    {
+      "decision": "drop",
+      "quest": 96877,
+      "reason": "Halikor's Hoof: Halikor is an elite (lvl 12) and the hand-in belongs to the Kamari profession chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 97223,
+      "reason": "Bloodtalon Matriarch eggs: single lvl 9 spawn with no XP. Too high for the Sen'jin window."
+    },
+    {
+      "decision": "optional",
+      "quest": 97225,
+      "reason": "Forgotten Loa Idols on the Echo Isles, Gadrin turn-in. No XP; the Echo Isles trolls are on the way."
+    },
+    {
+      "decision": "optional",
+      "quest": 97281,
+      "reason": "A Simmering Storm: Dull Stormy Orb from the Rezlak area. No XP; leads to 97282."
+    },
+    {
+      "decision": "optional",
+      "quest": 97282,
+      "reason": "Stormy Potential: Thunder Lizard organs at the lizard field by Misha. Staff reward, no XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 97899,
+      "reason": "Profession-gated Camping 101 quest (Alchemy). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97900,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97901,
+      "reason": "Profession-gated Camping 101 quest (Enchanting). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97902,
+      "reason": "Profession-gated Camping 101 quest (Engineering). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97903,
+      "reason": "Profession-gated Camping 101 quest (First Aid). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97904,
+      "reason": "Profession-gated Camping 101 quest (Fishing). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97905,
+      "reason": "Profession-gated Camping 101 quest (Herbalism). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97906,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97907,
+      "reason": "Profession-gated Camping 101 quest (Mining). Same as 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97908,
+      "reason": "Profession-gated Camping 101 quest (Skinning). Same as 01-05."
+    },
+    {
+      "decision": "optional",
+      "quest": 99048,
+      "reason": "Threat from Below (chain start): no XP, Heglan Shadeeye north of Tiragarde. Chain to the elite."
+    },
+    {
+      "decision": "optional",
+      "quest": 99049,
+      "reason": "Threat from Below: signs near Heglan's search site. No XP; turn-in Orgnil."
+    },
+    {
+      "decision": "optional",
+      "quest": 99051,
+      "reason": "Threat from Below: 9 naga spinefins at the Spitelash camp north of Razor Hill. No XP."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 99052,
+      "reason": "Aggor the Young (elite, lvl 11) on the north coast. Belt and dagger rewards; revisit at lvl 14.",
+      "revisitAt": 14
+    },
+    {
+      "decision": "optional",
+      "quest": 99123,
+      "reason": "Escort Pal'juh out of Kolkar Crag. No XP; kept because it is on the Sen'jin loop."
+    }
+  ],
+  "id": "horde_durotar_05-10",
+  "schemaVersion": 1
+}

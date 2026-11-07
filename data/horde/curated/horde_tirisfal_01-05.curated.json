@@ -1,0 +1,271 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 8,
+      "reason": "Calvin Montague's letter to Innkeeper Renee in Brill: 110 XP, and it opens the 590 follow-up."
+    },
+    {
+      "decision": "main",
+      "quest": 361,
+      "reason": "Letter to Yvette Farthing: 475 XP for one delivery in Brill. Needs level 4."
+    },
+    {
+      "decision": "main",
+      "quest": 363,
+      "reason": "Undead breadcrumb from Mordo to Sarvis; required before 364."
+    },
+    {
+      "decision": "main",
+      "quest": 364,
+      "reason": "Zombies north of Deathknell: 170 XP, and it opens the Sarvis chain and the class scrolls."
+    },
+    {
+      "decision": "main",
+      "quest": 365,
+      "reason": "10 pumpkins from the farm west of the road, 630 XP, delivered to Johaan in Brill. Needs level 4."
+    },
+    {
+      "decision": "drop",
+      "quest": 367,
+      "reason": "Requires level 6, and the Darkhound mobs run lvl 5-10 (Ravenous Darkhound 9-10). Handed to 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 374,
+      "reason": "Scarlet Zealots are lvl 8-11 and the preQuestSingle 427 is outside this band. Handed to 05-10."
+    },
+    {
+      "decision": "main",
+      "quest": 376,
+      "reason": "Novice Elreth's first kill quest, 170 XP. Unlocks the Scavenging, Marla and Night Web chain."
+    },
+    {
+      "decision": "main",
+      "quest": 380,
+      "reason": "Night Web spiders just west of Deathknell: 355 XP and it starts the Arren chain."
+    },
+    {
+      "decision": "main",
+      "quest": 381,
+      "reason": "Scarlet Armbands from the camp east of Deathknell: 355 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 382,
+      "reason": "Meven Korgal (lvl 5, rank normal) at the Scarlet camp: 670 XP. Taken at level 3, two levels under him: a judgment call."
+    },
+    {
+      "decision": "main",
+      "quest": 383,
+      "reason": "Scarlet Crusade documents to Executor Zygand in Brill: 335 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 404,
+      "reason": "7 Putrid Claws from the dead west of Brill: 405 XP. Mobs lvl 5-7, so do it at level 4-5."
+    },
+    {
+      "decision": "main",
+      "quest": 407,
+      "reason": "Second half of the pumpkin chain: 160 XP, short hand-in at the Gallows' End Tavern in Brill."
+    },
+    {
+      "decision": "main",
+      "quest": 590,
+      "reason": "Calvin Montague (lvl 5) on the road: 110 XP, follow-up to quest 8."
+    },
+    {
+      "decision": "class",
+      "quest": 1470,
+      "reason": "Warlock intro: 3 Rattlecage Skulls for Venya, same skeletons as Rattling the Rattlecages."
+    },
+    {
+      "decision": "class",
+      "quest": 3095,
+      "reason": "Undead Warrior intro: read the scroll from Sarvis, turn in to Dannal Stern."
+    },
+    {
+      "decision": "class",
+      "quest": 3096,
+      "reason": "Undead Rogue intro: scroll from Sarvis, turn in to David Trias in Deathknell."
+    },
+    {
+      "decision": "class",
+      "quest": 3097,
+      "reason": "Undead Priest intro: scroll from Sarvis, turn in to Dark Cleric Duesten in the Deathknell church."
+    },
+    {
+      "decision": "class",
+      "quest": 3098,
+      "reason": "Undead Mage intro: scroll from Sarvis, turn in to Isabella in Deathknell."
+    },
+    {
+      "decision": "class",
+      "quest": 3099,
+      "reason": "Undead Warlock intro: scroll from Sarvis, turn in to Maximillion in Deathknell."
+    },
+    {
+      "decision": "main",
+      "quest": 3901,
+      "reason": "12 Rattlecage Skeletons north of Deathknell: 250 XP, same patch as the warlock skulls."
+    },
+    {
+      "decision": "main",
+      "quest": 3902,
+      "reason": "Six Scavenged Goods around Deathknell: 315 XP, no fighting needed."
+    },
+    {
+      "decision": "main",
+      "quest": 5481,
+      "reason": "Gordo's Gloom Weed errand on the road to Brill: 225 XP, needs level 5."
+    },
+    {
+      "decision": "main",
+      "quest": 5482,
+      "reason": "Doom Weed hills north of Brill: 540 XP, the second half of the Gordo chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 5650,
+      "reason": "Priest chain (needs 5651 first): starts at Duesten in Deathknell at level 5 and ends near Brill. Handed to 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 5651,
+      "reason": "Priest breadcrumb from Duesten in Deathknell: needs level 5, and this band ends in Brill. Handed to 05-10."
+    },
+    {
+      "decision": "drop",
+      "quest": 5847,
+      "reason": "Deathknell gift voucher: pets only, no XP, and the voucher never reaches the player."
+    },
+    {
+      "decision": "main",
+      "quest": 6395,
+      "reason": "Samuel Fipps' remains at Marla's Grave in Deathknell: 450 XP for a short task, needs level 3."
+    },
+    {
+      "decision": "main",
+      "quest": 86784,
+      "reason": "Six Dry Branches near Brill for Eleanor. The reward is a Collecting Basket (bag)."
+    },
+    {
+      "decision": "class",
+      "quest": 90902,
+      "reason": "Undead Paladin intro: heal 5 Injured Deathguard with Holy Light, just outside Deathknell."
+    },
+    {
+      "decision": "class",
+      "quest": 91208,
+      "reason": "Undead Paladin: find the Frightened Paladin west of Deathknell. Needs 90902 and level 4."
+    },
+    {
+      "decision": "class",
+      "quest": 91209,
+      "reason": "Undead Paladin: report to Shari Stilwell in Brill to continue your training. Needs level 4."
+    },
+    {
+      "decision": "optional",
+      "quest": 96607,
+      "reason": "Forever camping quest: sit by Eleanor's campfire for Boosted Rest. Trivial, in Brill."
+    },
+    {
+      "decision": "optional",
+      "quest": 96656,
+      "reason": "Forever breadcrumb from Arren to Eleanor, unlocks 96607. Trivial, on the Brill path."
+    },
+    {
+      "decision": "drop",
+      "quest": 96658,
+      "reason": "Profession-gated Camping 101 quest (Cooking)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97583,
+      "reason": "Undercity pet quest (Excitable Slime): no XP, and it lies in Undercity, off this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 97951,
+      "reason": "Profession-gated Camping 101 quest (Alchemy)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97952,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97953,
+      "reason": "Profession-gated Camping 101 quest (Enchanting)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97954,
+      "reason": "Profession-gated Camping 101 quest (Engineering)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97955,
+      "reason": "Profession-gated Camping 101 quest (First Aid)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97956,
+      "reason": "Profession-gated Camping 101 quest (Fishing)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97957,
+      "reason": "Profession-gated Camping 101 quest (Herbalism)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97958,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97959,
+      "reason": "Profession-gated Camping 101 quest (Mining)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97960,
+      "reason": "Profession-gated Camping 101 quest (Skinning)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97961,
+      "reason": "Profession-gated Camping 101 quest (Tailoring)."
+    },
+    {
+      "decision": "optional",
+      "quest": 98389,
+      "reason": "Forever quest: free 6 webbed victims in Night's Web Hollow. No XP data, same spiders as 380."
+    },
+    {
+      "decision": "class",
+      "quest": 98601,
+      "reason": "Undead Paladin intro: Novice Elreth starts it, Aramis in Deathknell finishes it."
+    },
+    {
+      "decision": "drop",
+      "quest": 99134,
+      "reason": "Punish 5 Deathguards for Zygand: no objective or XP data in the DB, so it cannot be routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 99141,
+      "reason": "Reports from Dillinger, Kristof and Gordo: no XP data, and the Kristof source is listed at level 55."
+    },
+    {
+      "decision": "drop",
+      "quest": 99144,
+      "reason": "Escort out of Crusader's Outpost (quest lvl 7, rl 5): long walk and escort risk. Handed to 05-10."
+    }
+  ],
+  "id": "horde_tirisfal_01-05",
+  "schemaVersion": 1
+}

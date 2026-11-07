@@ -1,0 +1,1024 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_zephras_05-10 is written next, as the second band of this isle. Its entry starts at this exitPoint (Shen'dar Village, level 5) and it takes over the dropped Highlands quests.",
+    "W_TRAINER_GAP: the expected-level simulation has no XP for these Forever quests, so every trainer sits at level 1 and the gap runs to the band end. Real trainer visits are level 2 (Thendal), level 4 (Thendal) and level 5 (Shen'dar), so the real gap is at most 2 levels.",
+    "W_XP_RANGE: no XP row exists in data/raw for any quest in zephras_01-05 (PROGRESS phase 02 and 03b notes), so the validator counts 0 of the 4800 budget. The band is paced by steps and level ranges, not measured XP; re-check in game."
+  ],
+  "band": [
+    1,
+    5
+  ],
+  "branch": "zephras",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 92516,
+      "reason": "Hippogryph Protectors and the Matriarch are level 6-7, two to three above a level 4-5 player. Handed to zephras_05-10."
+    },
+    {
+      "quest": 92517,
+      "reason": "Highlands Bandits and Badwind Bennic are level 7, too high at the level 5 exit. Handed to zephras_05-10 with the bandit camp."
+    },
+    {
+      "quest": 92595,
+      "reason": "Chain head of Meddlesome Mages. The mage rewards need level 10 and 16. Handed to zephras_05-10."
+    },
+    {
+      "quest": 93319,
+      "reason": "Pilfered Windstones drop from the same level 7 bandit camp as The Criminal Element. Handed to zephras_05-10."
+    },
+    {
+      "quest": 93951,
+      "reason": "Hippogryph Down from the level 6-7 hippogryphs in the south-west. Handed to zephras_05-10 with Hippogryph Harassment."
+    },
+    {
+      "quest": 94411,
+      "reason": "High Order Apprentices (levels 5-6) with Idol (needs level 16) and Totem (needs level 10) rewards. Handed to zephras_05-10."
+    },
+    {
+      "quest": 96646,
+      "reason": "Profession-gated Camping 101 quest (Cooking): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97963,
+      "reason": "Profession-gated Camping 101 quest (Alchemy): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97964,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97965,
+      "reason": "Profession-gated Camping 101 quest (First Aid): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97967,
+      "reason": "Profession-gated Camping 101 quest (Fishing): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97968,
+      "reason": "Profession-gated Camping 101 quest (Herbalism): trainer trip to Valanaar, not leveling content."
+    },
+    {
+      "quest": 97969,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97970,
+      "reason": "Profession-gated Camping 101 quest (Mining): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97971,
+      "reason": "Profession-gated Camping 101 quest (Skinning): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 97972,
+      "reason": "Profession-gated Camping 101 quest (Tailoring): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 98284,
+      "reason": "Profession-gated Camping 101 quest (Enchanting): trainer trip in Shen'dar, not leveling content."
+    },
+    {
+      "quest": 98285,
+      "reason": "Profession-gated Camping 101 quest (Engineering): Strange Hermit in Shadowgale, not leveling content."
+    }
+  ],
+  "entry": {
+    "hub": "Thendal Grove",
+    "level": 1,
+    "x": 42.8,
+    "y": 23.4,
+    "zone": "Zephra's Isle"
+  },
+  "exitPoint": {
+    "hub": "Shen'dar Village",
+    "level": 5,
+    "x": 43.0,
+    "y": 43.2,
+    "zone": "Zephra's Isle"
+  },
+  "faction": "horde",
+  "id": "horde_zephras_01-05",
+  "next": "horde_zephras_05-10",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Ailee Farheart starts you in Thendal Grove. A short intro, then report to Rorian.",
+      "npc": 251362,
+      "quest": 92460,
+      "tag": "main",
+      "title": "Coming of Age",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 23.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Rorian the Dayseeker is the hub for the first Thendal quests.",
+      "npc": 251361,
+      "quest": 92460,
+      "tag": "main",
+      "title": "Coming of Age",
+      "type": "TURNIN",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Eight Juvenile Vuldrens sit east of the watchtower. Rorian gives you this one.",
+      "npc": 251361,
+      "quest": 92461,
+      "tag": "main",
+      "title": "Harmony in Balance",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elemental Unrest is a speaking quest: Yala Windwatcher, east of Rorian.",
+      "npc": 251361,
+      "quest": 92464,
+      "tag": "main",
+      "title": "Elemental Unrest",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Pesky Cirrusflies are just south-east of Elatrell Featherlight.",
+      "npc": 251368,
+      "quest": 92462,
+      "tag": "main",
+      "title": "Infestation Investigation",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 24.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Slay 8 Juvenile Vuldrens east of the watchtower, close to the Cirrusflies.",
+      "quest": 92461,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 45.2,
+      "y": 25.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Pesky Cirrusflies on the same patch. Kill 8 of them.",
+      "quest": 92462,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 45.9,
+      "y": 26.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Elatrell Featherlight for the Cirrusfly Queen next.",
+      "npc": 251368,
+      "quest": 92462,
+      "tag": "main",
+      "title": "Infestation Investigation",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 24.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Cirrusfly Queen is a lone level 3 mob south-east of Elatrell.",
+      "npc": 251368,
+      "quest": 92463,
+      "tag": "main",
+      "title": "The Cirrusfly Queen",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 24.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Cirrusfly Queen, alone in the hills south-east of the watchtower.",
+      "quest": 92463,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 48.4,
+      "y": 28.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hand in at Elatrell. Watcher's Mail Chest is the armour pick for mail wearers.",
+      "npc": 251368,
+      "quest": 92463,
+      "reward": {
+        "preferItem": 263410,
+        "why": "Warriors and Paladins: mail is the first big armour step (il 5). Leather users: Exterminator's Vest."
+      },
+      "tag": "main",
+      "title": "The Cirrusfly Queen",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 24.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Rorian. Vuldren Hide Bracers are the first leather upgrade.",
+      "npc": 251361,
+      "quest": 92461,
+      "reward": {
+        "preferItem": 257280,
+        "why": "Leather bracers: the first armour step here (il 5). Fur-Lined Shoes are the alternative."
+      },
+      "tag": "main",
+      "title": "Harmony in Balance",
+      "type": "TURNIN",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 2,
+      "note": "Dalia the Collector wants Windstone Clusters from the raw windstones by the Vuldrens.",
+      "npc": 251363,
+      "quest": 93552,
+      "tag": "optional",
+      "title": "Harvesting Windstones",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 24.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Raw Windstone spawns just east of the watchtower, beside the Vuldren patch.",
+      "quest": 93552,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 44.5,
+      "y": 25.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Dalia the Collector.",
+      "npc": 251363,
+      "quest": 93552,
+      "tag": "optional",
+      "title": "Harvesting Windstones",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 24.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Stunt quest: jump from the watchtower top with Walk on Air. Skip it if you lack the ability.",
+      "npc": 263113,
+      "quest": 92474,
+      "tag": "optional",
+      "title": "Falling With Style",
+      "type": "ACCEPT",
+      "x": 43.7,
+      "y": 24.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Jump from the top of the Thendal watchtower and use Walk on Air to slow the fall.",
+      "quest": 92474,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 43.7,
+      "y": 24.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Rorian once you have made the jump.",
+      "npc": 251361,
+      "quest": 92474,
+      "tag": "optional",
+      "title": "Falling With Style",
+      "type": "TURNIN",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Halaan Hawk-Eye lends you a gift to view the anchor pylon. Only a quick talk, no mobs.",
+      "npc": 257554,
+      "quest": 94414,
+      "tag": "optional",
+      "title": "The Anchors of Zephras",
+      "type": "ACCEPT",
+      "x": 43.8,
+      "y": 24.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Look at the anchor pylon with Halaan's gift, then hand the quest back to Halaan here.",
+      "npc": 257554,
+      "quest": 94414,
+      "tag": "optional",
+      "title": "The Anchors of Zephras",
+      "type": "TURNIN",
+      "x": 43.8,
+      "y": 24.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Use your Skysight racial ability at the Elemental Convergence beside Yala. Skip if no Skysight.",
+      "npc": 251487,
+      "quest": 92598,
+      "tag": "optional",
+      "title": "The Gift of Skysight",
+      "type": "ACCEPT",
+      "x": 42.6,
+      "y": 24.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hunters: read the Scribbled Note Rorian gives you, then see Tai'ree Farsight.",
+      "npc": 251361,
+      "quest": 92482,
+      "tag": "main",
+      "title": "The Way of the Hunter",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Rogues: read the Simple Note, then find Akeri Duskblade inside the watchtower.",
+      "npc": 251361,
+      "quest": 92483,
+      "tag": "main",
+      "title": "At Home in the Shadows",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Shamans: take Embracing the Elements here. Examine the crystal, then Windshaper Boro.",
+      "npc": 251361,
+      "quest": 92484,
+      "tag": "main",
+      "title": "Embracing the Elements",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Druids: read the Folded Parchment, then speak with Xyton Silverwind.",
+      "npc": 251361,
+      "quest": 92485,
+      "tag": "main",
+      "title": "A Student of Nature",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Warriors: read the Crumpled Note, then seek out Blademaster Ren in the watchtower.",
+      "npc": 251361,
+      "quest": 92532,
+      "tag": "main",
+      "title": "The Warrior's Path",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Tai'ree Farsight is the Hunter trainer here. Learn your first skills.",
+      "npc": 251376,
+      "quest": 92482,
+      "tag": "main",
+      "title": "The Way of the Hunter",
+      "type": "TURNIN",
+      "x": 42.5,
+      "y": 23.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Akeri Duskblade is in the watchtower. Learn your first Rogue skills.",
+      "npc": 251389,
+      "quest": 92483,
+      "tag": "main",
+      "title": "At Home in the Shadows",
+      "type": "TURNIN",
+      "x": 43.7,
+      "y": 24.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Examine the Humming Recall Crystal in the grove first, then speak with Windshaper Boro.",
+      "npc": 251374,
+      "quest": 92484,
+      "tag": "main",
+      "title": "Embracing the Elements",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 23.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Xyton Silverwind is the Druid trainer here. Learn your first skills.",
+      "npc": 251373,
+      "quest": 92485,
+      "tag": "main",
+      "title": "A Student of Nature",
+      "type": "TURNIN",
+      "x": 41.7,
+      "y": 23.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Blademaster Ren is the Warrior trainer here. Learn your first skills.",
+      "npc": 251964,
+      "quest": 92532,
+      "tag": "main",
+      "title": "The Warrior's Path",
+      "type": "TURNIN",
+      "x": 43.6,
+      "y": 24.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "About level 2: visit your class trainer here. Mages: Shen'dar. Priests, Paladins: Thunder Bluff. Warlocks: Razor Hill.",
+      "type": "TRAINER",
+      "x": 42.6,
+      "y": 24.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 3,
+      "note": "Shamans: Call of Earth needs a Signet of Akir from the Al'Aketh Converts just east of here.",
+      "npc": 251374,
+      "quest": 92466,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 23.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Yala Windwatcher, east of Rorian. Then the Agitators.",
+      "npc": 249363,
+      "quest": 92464,
+      "tag": "main",
+      "title": "Elemental Unrest",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 22.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Slay 6 Roiling Winds and 7 Al'Aketh Converts right beside Yala.",
+      "npc": 249363,
+      "quest": 92465,
+      "tag": "main",
+      "title": "Agitators",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 22.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Converts and Roiling Winds share the patch north of Yala. Kill both groups.",
+      "quest": 92465,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.2,
+      "y": 20.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Signet of Akir drops from these converts. Brutes and Neophytes in the west camp drop it too.",
+      "quest": 92466,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.2,
+      "y": 20.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Yala for the follow-up quest.",
+      "npc": 249363,
+      "quest": 92465,
+      "tag": "main",
+      "title": "Agitators",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 22.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 3,
+      "note": "Bring word of the Al'Aketh back to Rorian. This closes the Yala chain.",
+      "npc": 249363,
+      "quest": 92469,
+      "tag": "main",
+      "title": "Return to Rorian",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 22.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Use your Skysight racial ability at the Elemental Convergence, right beside this patch.",
+      "quest": 92598,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 48.3,
+      "y": 20.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Ventaari Brightwish near the watchtower.",
+      "npc": 251487,
+      "quest": 92598,
+      "tag": "optional",
+      "title": "The Gift of Skysight",
+      "type": "TURNIN",
+      "x": 42.6,
+      "y": 24.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Hand the Signet of Akir to Windshaper Boro. Call of Earth continues.",
+      "npc": 251374,
+      "quest": 92466,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 23.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 3,
+      "note": "Aetheen hands out the Earth Sapta. Follow the quest to the Minor Manifestation of Earth.",
+      "npc": 251366,
+      "quest": 92467,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Drink the Earth Sapta at the Rise of Spirits, then return to the Minor Manifestation.",
+      "npc": 251166,
+      "quest": 92467,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 49.7,
+      "y": 23.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 3,
+      "note": "Bring the Rough Quartz back to Windshaper Boro in the grove.",
+      "npc": 251166,
+      "quest": 92468,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 49.7,
+      "y": 23.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Windshaper Boro: this earns your Earth Totem, a core Shaman tool.",
+      "npc": 251374,
+      "quest": 92468,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 23.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Rorian: Skychain Belt or the Windblown Short Cloak, both small armour rewards.",
+      "npc": 251361,
+      "quest": 92469,
+      "tag": "main",
+      "title": "Return to Rorian",
+      "type": "TURNIN",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aetheen of the Gales: Rorian's next step, then the Foul Matriarch.",
+      "npc": 251361,
+      "quest": 92471,
+      "tag": "main",
+      "title": "Aetheen of the Gales",
+      "type": "ACCEPT",
+      "x": 42.0,
+      "y": 23.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aetheen sends you after the Ursera Scavengers and the Urs'anah den.",
+      "npc": 251366,
+      "quest": 92471,
+      "tag": "main",
+      "title": "Aetheen of the Gales",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "bagCheck": true,
+      "minLevel": 4,
+      "note": "Foul Matriarch: Ursera Scavengers and Urs'anah are west of Aetheen. Long walk, bag check.",
+      "npc": 251366,
+      "quest": 92470,
+      "tag": "main",
+      "title": "Foul Matriarch",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 3,
+      "note": "Scrawny Ursera claws: Valreaa sends you to the Ursera patch west of her.",
+      "npc": 257551,
+      "quest": 92473,
+      "tag": "main",
+      "title": "Aggressive Encroachment",
+      "type": "ACCEPT",
+      "x": 42.4,
+      "y": 25.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh Thugs: Hanaa Nightwind sits in the west camp, with Brutes and Neophytes beside her.",
+      "npc": 252095,
+      "quest": 92544,
+      "tag": "main",
+      "title": "Al'Aketh Thugs",
+      "type": "ACCEPT",
+      "x": 38.3,
+      "y": 30.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "_review": "W_MOB_LEVEL: the no-XP simulation reads the player as level 1 here. Ursera Scavengers are level 4, and the player is about level 3-4 at this point after the Thendal and Yala steps. Accepted.",
+      "note": "Kill 8 Ursera Scavengers around the den, south-west of Aetheen.",
+      "objectiveIndex": 1,
+      "quest": 92470,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 38.3,
+      "y": 26.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Scrawny Ursera beside the den. Collect 6 claws from them.",
+      "quest": 92473,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 39.8,
+      "y": 28.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "_review": "W_MOB_LEVEL: same no-XP simulation artefact. Urs'anah is level 5 and sits at the far end of the Ursera den; the player is about level 4 here. Accepted, with the boss kept as the last objective.",
+      "note": "Urs'anah, the den mother, is further west. Her head completes the Foul Matriarch.",
+      "objectiveIndex": 2,
+      "quest": 92470,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 35.6,
+      "y": 26.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "_review": "W_MOB_LEVEL: the no-XP simulation reads level 1. Al'Aketh Brutes are level 4 and Malduko Cloudcrush level 5; the player is about level 4 here. Accepted, and Malduko is the one to skip if it is too hard.",
+      "note": "Brutes and Neophytes just south of the den; Malduko Cloudcrush is west of them.",
+      "quest": 92544,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 37.4,
+      "y": 33.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Hanaa Nightwind.",
+      "npc": 252095,
+      "quest": 92544,
+      "tag": "main",
+      "title": "Al'Aketh Thugs",
+      "type": "TURNIN",
+      "x": 38.3,
+      "y": 30.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valreaa Valewind: Thendal Ranger's Gloves are the armour pick here.",
+      "npc": 257551,
+      "quest": 92473,
+      "reward": {
+        "preferItem": 257264,
+        "why": "Leather gloves: best early armour slot here (il 5). Belt and shoes are the alternatives."
+      },
+      "tag": "main",
+      "title": "Aggressive Encroachment",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 25.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Aetheen. Scout Ranger's Dagger is the weapon pick (Hunters: Refined Shortbow).",
+      "npc": 251366,
+      "quest": 92470,
+      "reward": {
+        "preferItem": 257283,
+        "why": "Dagger for most melee: the clearest weapon step of the five. Hunters: Refined Shortbow instead."
+      },
+      "tag": "main",
+      "title": "Foul Matriarch",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "About level 4: the Thendal trainers are on the way out. Learn what you can afford.",
+      "type": "TRAINER",
+      "x": 42.6,
+      "y": 24.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 3,
+      "note": "The Next Step: walk south to Shen'dar Village and report to Constable Aonda.",
+      "npc": 251366,
+      "quest": 92472,
+      "tag": "main",
+      "title": "The Next Step",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 4,
+      "note": "The Adventurer: a breadcrumb to Raan Wildwind at the Shen'dar camp.",
+      "npc": 251366,
+      "quest": 96638,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "bagCheck": true,
+      "note": "Head south to Shen'dar Village, the second hub with the inn. Long walk, so check your bags first.",
+      "to": "Shen'dar Village",
+      "type": "TRAVEL",
+      "x": 42.8,
+      "y": 23.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Constable Aonda: report in. The Highlands work starts from here.",
+      "npc": 251523,
+      "quest": 92472,
+      "tag": "main",
+      "title": "The Next Step",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 4,
+      "note": "Speak with Illaya Amberwind and Coriella Calmbreeze in the village, then return to Aonda.",
+      "npc": 251523,
+      "quest": 92514,
+      "tag": "main",
+      "title": "Welcome to Shen'dar Village",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Constable Aonda for the village welcome.",
+      "npc": 251523,
+      "quest": 92514,
+      "tag": "main",
+      "title": "Welcome to Shen'dar Village",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 4,
+      "note": "Collect 10 Prideclaw Pelts from the Prideclaws on the south patch. Bag reward.",
+      "npc": 251993,
+      "quest": 92515,
+      "tag": "main",
+      "title": "The Problem With Prideclaws",
+      "type": "ACCEPT",
+      "x": 44.7,
+      "y": 44.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 4,
+      "note": "Restocking the Larders: Galestrider eggs and meat on the same south patch as the Prideclaws.",
+      "npc": 251905,
+      "quest": 92553,
+      "tag": "optional",
+      "title": "Restocking the Larders",
+      "type": "ACCEPT",
+      "x": 43.9,
+      "y": 43.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hunters: Veena Vericloud sells arrows and bullets here. Top up before the south patch.",
+      "type": "BUY",
+      "x": 44.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Buy food and water from Coriella here. Mana users: extra water. Inn is here too.",
+      "type": "BUY",
+      "x": 43.0,
+      "y": 43.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Bind your hearthstone to Coriella's inn before the south patch.",
+      "npc": 254089,
+      "type": "HEARTH_BIND",
+      "x": 43.0,
+      "y": 43.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Raan Wildwind: hand in the breadcrumb at the Shen'dar camp.",
+      "npc": 263664,
+      "quest": 96638,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "TURNIN",
+      "x": 41.7,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "minLevel": 4,
+      "note": "Sit near Raan's campfire until you get the Boosted Rest buff.",
+      "npc": 263664,
+      "quest": 96101,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "ACCEPT",
+      "x": 41.7,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Sit at Raan's campfire until you get Boosted Rest. Use Raan's camp; DB spot is off.",
+      "quest": 96101,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 41.7,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Raan Wildwind.",
+      "npc": 263664,
+      "quest": 96101,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "TURNIN",
+      "x": 41.7,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Prideclaws roam the south patch; their pelts are the drop you need.",
+      "quest": 92515,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.6,
+      "y": 52.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Galestriders and Strider Meat south of the village. Eggs are close by.",
+      "quest": 92553,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 44.1,
+      "y": 51.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Indari Sunseam. The Simple Leather Satchel is your first bag. Keep it.",
+      "npc": 251993,
+      "quest": 92515,
+      "tag": "main",
+      "title": "The Problem With Prideclaws",
+      "type": "TURNIN",
+      "x": 44.7,
+      "y": 44.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Zerril Softbreeze. Skywall Souffle is food for the trip.",
+      "npc": 251905,
+      "quest": 92553,
+      "tag": "optional",
+      "title": "Restocking the Larders",
+      "type": "TURNIN",
+      "x": 43.9,
+      "y": 43.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "About level 5: the Shen'dar trainers are here, including the Mage trainer Shenaan Spellwind.",
+      "type": "TRAINER",
+      "x": 44.7,
+      "y": 44.5,
+      "zone": "Zephra's Isle"
+    }
+  ]
+}

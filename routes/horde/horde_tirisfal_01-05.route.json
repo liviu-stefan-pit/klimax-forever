@@ -1,0 +1,1203 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_tirisfal_05-10 is the next band to be written."
+  ],
+  "band": [
+    1,
+    5
+  ],
+  "branch": "tirisfal",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 367,
+      "reason": "Requires level 6, and the Darkhound mobs run lvl 5-10 (Ravenous Darkhound 9-10). Handed to 05-10."
+    },
+    {
+      "quest": 374,
+      "reason": "Scarlet Zealots are lvl 8-11 and the preQuestSingle 427 is outside this band. Handed to 05-10."
+    },
+    {
+      "quest": 5650,
+      "reason": "Priest chain (needs 5651 first): starts at Duesten in Deathknell at level 5 and ends near Brill. Handed to 05-10."
+    },
+    {
+      "quest": 5651,
+      "reason": "Priest breadcrumb from Duesten in Deathknell: needs level 5, and this band ends in Brill. Handed to 05-10."
+    },
+    {
+      "quest": 5847,
+      "reason": "Deathknell gift voucher: pets only, no XP, and the voucher never reaches the player."
+    },
+    {
+      "quest": 96658,
+      "reason": "Profession-gated Camping 101 quest (Cooking)."
+    },
+    {
+      "quest": 97583,
+      "reason": "Undercity pet quest (Excitable Slime): no XP, and it lies in Undercity, off this band's path."
+    },
+    {
+      "quest": 97951,
+      "reason": "Profession-gated Camping 101 quest (Alchemy)."
+    },
+    {
+      "quest": 97952,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing)."
+    },
+    {
+      "quest": 97953,
+      "reason": "Profession-gated Camping 101 quest (Enchanting)."
+    },
+    {
+      "quest": 97954,
+      "reason": "Profession-gated Camping 101 quest (Engineering)."
+    },
+    {
+      "quest": 97955,
+      "reason": "Profession-gated Camping 101 quest (First Aid)."
+    },
+    {
+      "quest": 97956,
+      "reason": "Profession-gated Camping 101 quest (Fishing)."
+    },
+    {
+      "quest": 97957,
+      "reason": "Profession-gated Camping 101 quest (Herbalism)."
+    },
+    {
+      "quest": 97958,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking)."
+    },
+    {
+      "quest": 97959,
+      "reason": "Profession-gated Camping 101 quest (Mining)."
+    },
+    {
+      "quest": 97960,
+      "reason": "Profession-gated Camping 101 quest (Skinning)."
+    },
+    {
+      "quest": 97961,
+      "reason": "Profession-gated Camping 101 quest (Tailoring)."
+    },
+    {
+      "quest": 99134,
+      "reason": "Punish 5 Deathguards for Zygand: no objective or XP data in the DB, so it cannot be routed."
+    },
+    {
+      "quest": 99141,
+      "reason": "Reports from Dillinger, Kristof and Gordo: no XP data, and the Kristof source is listed at level 55."
+    },
+    {
+      "quest": 99144,
+      "reason": "Escort out of Crusader's Outpost (quest lvl 7, rl 5): long walk and escort risk. Handed to 05-10."
+    }
+  ],
+  "entry": {
+    "hub": "Deathknell",
+    "level": 1,
+    "x": 31.5,
+    "y": 66.1,
+    "zone": "Tirisfal Glades"
+  },
+  "exitPoint": {
+    "hub": "Brill",
+    "level": 5,
+    "x": 60.4,
+    "y": 51.8,
+    "zone": "Tirisfal Glades"
+  },
+  "faction": "horde",
+  "id": "horde_tirisfal_01-05",
+  "next": "horde_tirisfal_05-10",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Undertaker Mordo, south end of Deathknell. Breadcrumb to Sarvis.",
+      "npc": 1568,
+      "quest": 363,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Rude Awakening",
+      "type": "ACCEPT",
+      "x": 30.2,
+      "y": 71.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Shadow Priest Sarvis in Deathknell. He sends you to the zombies.",
+      "npc": 1569,
+      "quest": 363,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Rude Awakening",
+      "type": "TURNIN",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Sarvis wants 8 Mindless and 8 Wretched Zombies from the field just north.",
+      "npc": 1569,
+      "quest": 364,
+      "tag": "main",
+      "title": "The Mindless Ones",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Warlocks: Venya wants 3 Rattlecage Skulls from the skeletons north of town.",
+      "npc": 5667,
+      "quest": 1470,
+      "tag": "main",
+      "title": "Piercing the Veil",
+      "type": "ACCEPT",
+      "x": 31.0,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Mindless and Wretched Zombies stand just north of Deathknell. Kill 8 of each.",
+      "quest": 364,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 32.7,
+      "y": 63.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Sarvis. More of his quests open now.",
+      "npc": 1569,
+      "quest": 364,
+      "tag": "main",
+      "title": "The Mindless Ones",
+      "type": "TURNIN",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Twelve Rattlecage Skeletons north of town. Same patch as the warlock skulls.",
+      "npc": 1569,
+      "quest": 3901,
+      "tag": "main",
+      "title": "Rattling the Rattlecages",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Warrior intro: Sarvis hands you the scroll. Read it, then speak to Dannal Stern.",
+      "npc": 1569,
+      "quest": 3095,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Simple Scroll",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Dannal Stern, one of the Deathknell trainers. Learn your first skills.",
+      "npc": 2119,
+      "quest": 3095,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Simple Scroll",
+      "type": "TURNIN",
+      "x": 32.7,
+      "y": 65.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Rogue intro: the same scroll from Sarvis.",
+      "npc": 1569,
+      "quest": 3096,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Encrypted Scroll",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "David Trias, Deathknell. Learn your first skills.",
+      "npc": 2122,
+      "quest": 3096,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Encrypted Scroll",
+      "type": "TURNIN",
+      "x": 32.5,
+      "y": 65.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Priest intro: the same scroll from Sarvis.",
+      "npc": 1569,
+      "quest": 3097,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hallowed Scroll",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Dark Cleric Duesten, in the Deathknell church.",
+      "npc": 2123,
+      "quest": 3097,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hallowed Scroll",
+      "type": "TURNIN",
+      "x": 31.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Mage intro: the same scroll from Sarvis.",
+      "npc": 1569,
+      "quest": 3098,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Glyphic Scroll",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Isabella, Deathknell. Learn your first skills.",
+      "npc": 2124,
+      "quest": 3098,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Glyphic Scroll",
+      "type": "TURNIN",
+      "x": 30.9,
+      "y": 66.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Warlock intro: the same scroll from Sarvis.",
+      "npc": 1569,
+      "quest": 3099,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Tainted Scroll",
+      "type": "ACCEPT",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Maximillion, Deathknell.",
+      "npc": 2126,
+      "quest": 3099,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Tainted Scroll",
+      "type": "TURNIN",
+      "x": 30.9,
+      "y": 66.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Paladin intro: Novice Elreth starts the path. Aramis is next.",
+      "npc": 1661,
+      "quest": 98601,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "A Difficult Path",
+      "type": "ACCEPT",
+      "x": 30.9,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Aramis Hammerhand, in Deathknell.",
+      "npc": 244808,
+      "quest": 98601,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "A Difficult Path",
+      "type": "TURNIN",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "12 Rattlecage Skeletons north of Deathknell. The warlock skulls drop here too.",
+      "quest": 3901,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 33.0,
+      "y": 61.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Warlocks: collect 3 Rattlecage Skulls from the same skeletons.",
+      "quest": 1470,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 33.0,
+      "y": 61.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Sarvis.",
+      "npc": 1569,
+      "quest": 3901,
+      "tag": "main",
+      "title": "Rattling the Rattlecages",
+      "type": "TURNIN",
+      "x": 30.8,
+      "y": 66.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Venya Marthand, in Deathknell.",
+      "npc": 5667,
+      "quest": 1470,
+      "tag": "main",
+      "title": "Piercing the Veil",
+      "type": "TURNIN",
+      "x": 31.0,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 2,
+      "note": "Novice Elreth wants Scavenger Paws and Duskbat Wings from the hills north of town.",
+      "npc": 1661,
+      "quest": 376,
+      "tag": "main",
+      "title": "The Damned",
+      "type": "ACCEPT",
+      "x": 30.9,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Scavenger Paws and Duskbat Wings in the same patch, north of town.",
+      "quest": 376,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 33.8,
+      "y": 61.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Novice Elreth, Deathknell.",
+      "npc": 1661,
+      "quest": 376,
+      "tag": "main",
+      "title": "The Damned",
+      "type": "TURNIN",
+      "x": 30.9,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Aramis sends you to heal the wounded just outside town.",
+      "npc": 244808,
+      "quest": 90902,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Rediscovering the Light",
+      "type": "ACCEPT",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Heal 5 Injured Deathguard with Holy Light. They lie in the field just north of Deathknell.",
+      "quest": 90902,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 31.9,
+      "y": 63.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Aramis Hammerhand, Deathknell.",
+      "npc": 244808,
+      "quest": 90902,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Rediscovering the Light",
+      "type": "TURNIN",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Saltain wants Scavenged Goods picked up around town.",
+      "npc": 1740,
+      "quest": 3902,
+      "tag": "main",
+      "title": "Scavenging Deathknell",
+      "type": "ACCEPT",
+      "x": 31.6,
+      "y": 65.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Search the edge of Deathknell for 6 Scavenged Goods, then return to Saltain.",
+      "quest": 3902,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 32.9,
+      "y": 63.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Saltain, Deathknell.",
+      "npc": 1740,
+      "quest": 3902,
+      "tag": "main",
+      "title": "Scavenging Deathknell",
+      "type": "TURNIN",
+      "x": 31.6,
+      "y": 65.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Level 2: Deathknell's class trainers stand together. Learn what you can afford.",
+      "type": "TRAINER",
+      "x": 32.7,
+      "y": 65.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 2,
+      "note": "Optional: Aramis asks you to free webbed victims in Night's Web Hollow. No XP data in the DB.",
+      "npc": 244808,
+      "quest": 98389,
+      "tag": "optional",
+      "title": "A Light in the Darkness",
+      "type": "ACCEPT",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 2,
+      "note": "Executor Arren wants spiders dead in the hollow west of Deathknell.",
+      "npc": 1570,
+      "quest": 380,
+      "tag": "main",
+      "title": "Night Web's Hollow",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Young and regular Night Web Spiders, north-west of town. The deeper nest is around 24.7,59.7.",
+      "quest": 380,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 28.5,
+      "y": 57.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Free 6 webbed victims in this hollow. The DB has no exact spot, so search around the spiders.",
+      "quest": 98389,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 28.5,
+      "y": 57.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Aramis.",
+      "npc": 244808,
+      "quest": 98389,
+      "tag": "optional",
+      "title": "A Light in the Darkness",
+      "type": "TURNIN",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Arren, Deathknell.",
+      "npc": 1570,
+      "quest": 380,
+      "tag": "main",
+      "title": "Night Web's Hollow",
+      "type": "TURNIN",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Arren's next job: Scarlet Armbands from the camp east of town.",
+      "npc": 1570,
+      "quest": 381,
+      "tag": "main",
+      "title": "The Scarlet Crusade",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Scarlet Converts and Initiates east of Deathknell carry the armbands. Collect 12.",
+      "quest": 381,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 37.5,
+      "y": 67.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Arren, Deathknell.",
+      "npc": 1570,
+      "quest": 381,
+      "tag": "main",
+      "title": "The Scarlet Crusade",
+      "type": "TURNIN",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Meven Korgal (lvl 5, not elite) at the Scarlet camp, beside the armband spot.",
+      "npc": 1570,
+      "quest": 382,
+      "tag": "main",
+      "title": "The Red Messenger",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Meven Korgal is level 5 and not an elite. Loot the Scarlet Crusade Documents.",
+      "quest": 382,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 36.6,
+      "y": 68.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Arren, Deathknell.",
+      "npc": 1570,
+      "quest": 382,
+      "tag": "main",
+      "title": "The Red Messenger",
+      "type": "TURNIN",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Arren gives you the documents for Executor Zygand in Brill.",
+      "npc": 1570,
+      "quest": 383,
+      "tag": "main",
+      "title": "Vital Intelligence",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 3,
+      "note": "Novice Elreth: Samuel Fipps' remains go to Marla's Grave, right in town.",
+      "npc": 1661,
+      "quest": 6395,
+      "tag": "main",
+      "title": "Marla's Last Wish",
+      "type": "ACCEPT",
+      "x": 30.9,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Marla's Grave, in Deathknell. Bury Samuel Fipps' remains, then return to Elreth.",
+      "quest": 6395,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 31.2,
+      "y": 65.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Novice Elreth, Deathknell.",
+      "npc": 1661,
+      "quest": 6395,
+      "tag": "main",
+      "title": "Marla's Last Wish",
+      "type": "TURNIN",
+      "x": 30.9,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 4,
+      "note": "Optional breadcrumb: Arren sends you to Eleanor in Brill. Trivial.",
+      "npc": 1570,
+      "quest": 96656,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "ACCEPT",
+      "x": 32.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 4,
+      "note": "Paladins: Aramis sends you after the Frightened Paladin, west of town.",
+      "npc": 244808,
+      "quest": 91208,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Coming to Terms",
+      "type": "ACCEPT",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Find the Frightened Paladin west of Deathknell and talk to him.",
+      "quest": 91208,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 27.7,
+      "y": 63.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Aramis Hammerhand, Deathknell.",
+      "npc": 244808,
+      "quest": 91208,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Coming to Terms",
+      "type": "TURNIN",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 4,
+      "note": "Paladins: report to Shari Stilwell in Brill to continue your training.",
+      "npc": 244808,
+      "quest": 91209,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Continue Your Training",
+      "type": "ACCEPT",
+      "x": 31.1,
+      "y": 66.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Level 4: last Deathknell trainer visit. Learn your new ranks before the road to Brill.",
+      "type": "TRAINER",
+      "x": 32.7,
+      "y": 65.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "Long walk east along the road to Brill. Check your bags before you leave Deathknell.",
+      "to": "Brill",
+      "type": "TRAVEL",
+      "x": 38.2,
+      "y": 56.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Calvin Montague on the road to Brill. He hands you the letter for Innkeeper Renee.",
+      "npc": 6784,
+      "quest": 8,
+      "tag": "main",
+      "title": "A Rogue's Deal",
+      "type": "ACCEPT",
+      "x": 38.2,
+      "y": 56.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 4,
+      "note": "Deathguard Simmer, on the road. Ten pumpkins from the farm just west.",
+      "npc": 1519,
+      "quest": 365,
+      "tag": "main",
+      "title": "Fields of Grief",
+      "type": "ACCEPT",
+      "x": 40.9,
+      "y": 54.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Pick 10 Tirisfal Pumpkins from the farm west of the road. They lie on the ground.",
+      "quest": 365,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 35.6,
+      "y": 50.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Follow the road east to Brill with the pumpkins.",
+      "to": "Brill",
+      "type": "TRAVEL",
+      "x": 60.4,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Apothecary Johaan in Brill. The pumpkins go here.",
+      "npc": 1518,
+      "quest": 365,
+      "tag": "main",
+      "title": "Fields of Grief",
+      "type": "TURNIN",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Johaan's second errand: deliver a laced pumpkin to the captured Scarlet Zealot.",
+      "npc": 1518,
+      "quest": 407,
+      "tag": "main",
+      "title": "Fields of Grief",
+      "type": "ACCEPT",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Captured Scarlet Zealot, held in the cellar of the Gallows' End Tavern.",
+      "npc": 1931,
+      "quest": 407,
+      "tag": "main",
+      "title": "Fields of Grief",
+      "type": "TURNIN",
+      "x": 62.0,
+      "y": 51.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Innkeeper Renee in Brill. Deliver the letter.",
+      "npc": 5688,
+      "quest": 8,
+      "tag": "main",
+      "title": "A Rogue's Deal",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand delivers the Scarlet Crusade documents here.",
+      "npc": 1515,
+      "quest": 383,
+      "tag": "main",
+      "title": "Vital Intelligence",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 4,
+      "note": "Pick up A Letter to Yvette at this spot (DB item point). Deliver it in Brill.",
+      "quest": 361,
+      "tag": "main",
+      "title": "A Letter Undelivered",
+      "type": "ACCEPT",
+      "x": 50.7,
+      "y": 44.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Yvette Farthing in Brill.",
+      "npc": 1560,
+      "quest": 361,
+      "tag": "main",
+      "title": "A Letter Undelivered",
+      "type": "TURNIN",
+      "x": 61.6,
+      "y": 52.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 4,
+      "note": "Deathguard Dillinger in Brill: seven Putrid Claws from the dead west of town.",
+      "npc": 1496,
+      "quest": 404,
+      "tag": "main",
+      "title": "A Putrid Task",
+      "type": "ACCEPT",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Rotting Dead and Ravaged Corpses (lvl 5-7) west of Brill. Collect 7 Putrid Claws.",
+      "quest": 404,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 53.2,
+      "y": 52.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Dillinger, Brill.",
+      "npc": 1496,
+      "quest": 404,
+      "tag": "main",
+      "title": "A Putrid Task",
+      "type": "TURNIN",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 4,
+      "note": "Deathguard Bartholomew: Eleanor needs dry branches. The reward is a bag.",
+      "npc": 1742,
+      "quest": 86784,
+      "tag": "main",
+      "title": "Sticks and Bones",
+      "type": "ACCEPT",
+      "x": 58.5,
+      "y": 51.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Dry Branches lie near Eleanor. Collect 6.",
+      "quest": 86784,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 56.8,
+      "y": 53.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Eleanor Shackleton. Take the Collecting Basket reward.",
+      "npc": 265812,
+      "quest": 86784,
+      "tag": "main",
+      "title": "Sticks and Bones",
+      "type": "TURNIN",
+      "x": 57.3,
+      "y": 55.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Eleanor: the breadcrumb ends here.",
+      "npc": 265812,
+      "quest": 96656,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "TURNIN",
+      "x": 57.3,
+      "y": 55.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Eleanor unlocks the camping quest. Trivial.",
+      "npc": 265812,
+      "quest": 96607,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "ACCEPT",
+      "x": 57.3,
+      "y": 55.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Sit near Eleanor's campfire until you receive the Boosted Rest buff.",
+      "quest": 96607,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 57.3,
+      "y": 55.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Eleanor Shackleton, Brill.",
+      "npc": 265812,
+      "quest": 96607,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "TURNIN",
+      "x": 57.3,
+      "y": 55.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Shari Stilwell in Brill. Your paladin training is done at this point.",
+      "npc": 246152,
+      "quest": 91209,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Continue Your Training",
+      "type": "TURNIN",
+      "x": 60.2,
+      "y": 52.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Buy 2 bread and 2 water from Innkeeper Renee. Hunters: top up your arrows too.",
+      "type": "BUY",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 5,
+      "note": "Gordo, west of Brill: three Gloom Weed, delivered to Holland in the Brill graveyard.",
+      "npc": 10666,
+      "quest": 5481,
+      "tag": "main",
+      "title": "Gordo's Task",
+      "type": "ACCEPT",
+      "x": 43.1,
+      "y": 54.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Calvin Montague again, on the road. Follow-up to the letter you delivered.",
+      "npc": 6784,
+      "quest": 590,
+      "tag": "main",
+      "title": "A Rogue's Deal",
+      "type": "ACCEPT",
+      "x": 38.2,
+      "y": 56.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Calvin Montague is a level 5 rogue. Fight him here on the road.",
+      "quest": 590,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 38.2,
+      "y": 56.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Calvin Montague, on the road.",
+      "npc": 6784,
+      "quest": 590,
+      "tag": "main",
+      "title": "A Rogue's Deal",
+      "type": "TURNIN",
+      "x": 38.2,
+      "y": 56.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Gloom Weed grows on the road east of Gordo. Collect 3.",
+      "quest": 5481,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.9,
+      "y": 55.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Junior Apothecary Holland, in the Brill graveyard.",
+      "npc": 10665,
+      "quest": 5481,
+      "tag": "main",
+      "title": "Gordo's Task",
+      "type": "TURNIN",
+      "x": 57.4,
+      "y": 48.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 5,
+      "note": "Holland again: 10 Doom Weed from the hills north of Brill.",
+      "npc": 10665,
+      "quest": 5482,
+      "tag": "main",
+      "title": "Doom Weed",
+      "type": "ACCEPT",
+      "x": 57.4,
+      "y": 48.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Doom Weed grows north of Brill, around this spot. Collect 10.",
+      "quest": 5482,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 57.1,
+      "y": 38.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Junior Apothecary Holland, Brill.",
+      "npc": 10665,
+      "quest": 5482,
+      "tag": "main",
+      "title": "Doom Weed",
+      "type": "TURNIN",
+      "x": 57.4,
+      "y": 48.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Make Brill your home at Innkeeper Renee. The next band starts here.",
+      "npc": 5688,
+      "type": "HEARTH_BIND",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Undercity flight master, a short walk from Brill. Discover the flight path.",
+      "npc": 4551,
+      "type": "FP_DISCOVER",
+      "x": 63.2,
+      "y": 48.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Sell greys and repair in Brill before the next band. Vendor spot is the hub centre, not a DB point.",
+      "type": "VENDOR_REPAIR",
+      "x": 60.4,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    }
+  ]
+}

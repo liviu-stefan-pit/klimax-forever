@@ -1,0 +1,1024 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_mulgore_05-10 is the next band to be written."
+  ],
+  "band": [
+    1,
+    5
+  ],
+  "branch": "mulgore",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 756,
+      "reason": "Handed to 05-10: Prairie Stalkers and Flatland Cougars are lvl 7-8, 3+ above a level 4-5 Tauren. 630 XP."
+    },
+    {
+      "quest": 781,
+      "reason": "Starter is a Dirt-stained Map item with no spawn or drop coordinates in the DB. Reward is a shield only."
+    },
+    {
+      "quest": 1462,
+      "reason": "Replacement Earth Sapta re-get, not part of the Call of Earth chain (same call as Durotar 1463)."
+    },
+    {
+      "quest": 5844,
+      "reason": "Gift voucher item pays out pets only, no XP. Same call as Durotar 5843."
+    },
+    {
+      "quest": 7662,
+      "reason": "Level 60 mount quest (new Kodo): not leveling content."
+    },
+    {
+      "quest": 7663,
+      "reason": "Level 60 mount quest (new Kodo): not leveling content."
+    },
+    {
+      "quest": 97927,
+      "reason": "Profession-gated Camping 101 quest (Alchemy): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97928,
+      "reason": "Profession-gated Camping 101 quest (Blacksmithing): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97929,
+      "reason": "Profession-gated Camping 101 quest (Enchanting): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97930,
+      "reason": "Profession-gated Camping 101 quest (Engineering): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97931,
+      "reason": "Profession-gated Camping 101 quest (First Aid): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97932,
+      "reason": "Profession-gated Camping 101 quest (Fishing): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97933,
+      "reason": "Profession-gated Camping 101 quest (Herbalism): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97934,
+      "reason": "Profession-gated Camping 101 quest (Leatherworking): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97935,
+      "reason": "Profession-gated Camping 101 quest (Mining): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97936,
+      "reason": "Profession-gated Camping 101 quest (Skinning): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 97937,
+      "reason": "Profession-gated Camping 101 quest (Tailoring): needs the skill and a Thunder Bluff trip. Dropped as in Durotar."
+    },
+    {
+      "quest": 99411,
+      "reason": "Kyle the Frenzied is a lvl 12 pet and the Tender Strider Meat has no source in the pack. No XP data."
+    }
+  ],
+  "entry": {
+    "hub": "Camp Narache",
+    "level": 1,
+    "x": 44.2,
+    "y": 76.8,
+    "zone": "Mulgore"
+  },
+  "exitPoint": {
+    "hub": "Bloodhoof Village",
+    "level": 5,
+    "x": 45.9,
+    "y": 64.2,
+    "zone": "Mulgore"
+  },
+  "faction": "horde",
+  "id": "horde_mulgore_01-05",
+  "next": "horde_mulgore_05-10",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Grull Hawkwind in the middle of camp. Take The Hunt Begins.",
+      "npc": 2980,
+      "quest": 747,
+      "tag": "main",
+      "title": "The Hunt Begins",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Chief Hawkwind sends you to look for his mother by the well.",
+      "npc": 2981,
+      "quest": 752,
+      "tag": "main",
+      "title": "A Humble Task",
+      "type": "ACCEPT",
+      "x": 43.9,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Greatmother Hawkwind is by the water well, south-east of camp.",
+      "npc": 2991,
+      "quest": 752,
+      "tag": "main",
+      "title": "A Humble Task",
+      "type": "TURNIN",
+      "x": 48.8,
+      "y": 80.9,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "She sends you for a water pitcher from the same well.",
+      "npc": 2991,
+      "quest": 753,
+      "tag": "main",
+      "title": "A Humble Task",
+      "type": "ACCEPT",
+      "x": 48.8,
+      "y": 80.9,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Plainstriders by the well: 7 feathers and 7 meat. Stay close to the well.",
+      "quest": 747,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.5,
+      "y": 81.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Fill the Water Pitcher at the well. The plainstriders are right beside it.",
+      "quest": 753,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 49.0,
+      "y": 81.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Hand the pitcher back to Chief Hawkwind in camp.",
+      "npc": 2981,
+      "quest": 753,
+      "tag": "main",
+      "title": "A Humble Task",
+      "type": "TURNIN",
+      "x": 43.9,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Chief Hawkwind: next stop is Seer Graytongue, in the hills south of camp.",
+      "npc": 2981,
+      "quest": 755,
+      "tag": "main",
+      "title": "Rites of the Earthmother",
+      "type": "ACCEPT",
+      "x": 43.9,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Grull for the reward and the next hunt.",
+      "npc": 2980,
+      "quest": 747,
+      "tag": "main",
+      "title": "The Hunt Begins",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Grull: ten Mountain Cougar pelts, south of camp.",
+      "npc": 2980,
+      "quest": 750,
+      "tag": "main",
+      "title": "The Hunt Continues",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Your first class quest. Grull hands you the note to read.",
+      "npc": 2980,
+      "quest": 3091,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Simple Note",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Your first class quest. Grull hands you the note to read.",
+      "npc": 2980,
+      "quest": 3092,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Etched Note",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Your first class quest. Grull hands you the note to read.",
+      "npc": 2980,
+      "quest": 3093,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Rune-Inscribed Note",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Your first class quest. Grull hands you the note to read.",
+      "npc": 2980,
+      "quest": 3094,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Verdant Note",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Harutt Thunderhorn is your class trainer. Hand in the note.",
+      "npc": 3059,
+      "quest": 3091,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Simple Note",
+      "type": "TURNIN",
+      "x": 43.8,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Lanka Farshot is your class trainer. Hand in the note.",
+      "npc": 3061,
+      "quest": 3092,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Etched Note",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 76.3,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Meela Dawnstrider is your class trainer. Hand in the note.",
+      "npc": 3062,
+      "quest": 3093,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Rune-Inscribed Note",
+      "type": "TURNIN",
+      "x": 44.6,
+      "y": 76.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Gart Mistrunner is your class trainer. Hand in the note.",
+      "npc": 3060,
+      "quest": 3094,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Verdant Note",
+      "type": "TURNIN",
+      "x": 44.6,
+      "y": 76.5,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 2,
+      "note": "Level 2 now: your class trainers stand here. Learn what you can afford.",
+      "type": "TRAINER",
+      "x": 43.8,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Antur Fallow, west of camp, gives you a bundle of furs for Kauth in Bloodhoof.",
+      "npc": 6775,
+      "quest": 1656,
+      "tag": "optional",
+      "title": "A Task Unfinished",
+      "type": "ACCEPT",
+      "x": 39.2,
+      "y": 81.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Seer Graytongue, in the hills south of camp.",
+      "npc": 2982,
+      "quest": 755,
+      "tag": "main",
+      "title": "Rites of the Earthmother",
+      "type": "TURNIN",
+      "x": 42.5,
+      "y": 90.1,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Twelve Bristleback Belts from the bristlebacks in Brambleblade Ravine, east of camp.",
+      "npc": 2982,
+      "quest": 757,
+      "tag": "main",
+      "title": "Rite of Strength",
+      "type": "ACCEPT",
+      "x": 42.5,
+      "y": 90.1,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Ten-minute timer. Carry the incense straight to the Ritual Fire.",
+      "npc": 2982,
+      "quest": 95805,
+      "tag": "main",
+      "title": "Grace of An'she and Mu'sha",
+      "type": "ACCEPT",
+      "x": 42.5,
+      "y": 90.1,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Shrine of An'she and Mu'sha: hand in at the Ritual Fire before the incense burns.",
+      "quest": 95805,
+      "tag": "main",
+      "title": "Grace of An'she and Mu'sha",
+      "type": "TURNIN",
+      "x": 56.6,
+      "y": 88.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mountain Cougars around here. Ten pelts needed.",
+      "quest": 750,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.6,
+      "y": 88.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Grull with the pelts.",
+      "npc": 2980,
+      "quest": 750,
+      "tag": "main",
+      "title": "The Hunt Continues",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Grull: kill Battleboars and bring back 8 snouts and 8 flanks.",
+      "npc": 2980,
+      "quest": 780,
+      "tag": "main",
+      "title": "The Battleboars",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 3,
+      "note": "Brave Windfeather: Chief Sharptusk Thornmantle (lvl 5) east of camp.",
+      "npc": 3209,
+      "quest": 3376,
+      "tag": "main",
+      "title": "Break Sharptusk!",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 77.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Battleboars around the east ridge. Snouts and flanks drop together.",
+      "quest": 780,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 54.8,
+      "y": 81.9,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Bristleback Belts from the quilboar and shamans in Brambleblade Ravine. 12 needed.",
+      "quest": 757,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 58.6,
+      "y": 79.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Chief Sharptusk Thornmantle, lvl 5. Pull him alone and bring back his head.",
+      "quest": 3376,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 61.0,
+      "y": 78.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Grull with the snouts and flanks.",
+      "npc": 2980,
+      "quest": 780,
+      "tag": "main",
+      "title": "The Battleboars",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 77.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Sell grey items and repair at Kawnie Softbreeze before the north trip.",
+      "type": "VENDOR_REPAIR",
+      "x": 44.8,
+      "y": 77.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Chief Hawkwind: pick the best weapon for your class from the reward list.",
+      "npc": 2981,
+      "quest": 757,
+      "tag": "main",
+      "title": "Rite of Strength",
+      "type": "TURNIN",
+      "x": 43.9,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Brave Windfeather: hand in the head. Pick the reward you can wear.",
+      "npc": 3209,
+      "quest": 3376,
+      "tag": "main",
+      "title": "Break Sharptusk!",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 77.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Chief Hawkwind: a breadcrumb. Take the Totem of Hawkwind to Baine Bloodhoof.",
+      "npc": 2981,
+      "quest": 763,
+      "tag": "main",
+      "title": "Rites of the Earthmother",
+      "type": "ACCEPT",
+      "x": 43.9,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Breadcrumb for the Forever campfire quest. Deliver the supply bundle to Kaga in Bloodhoof.",
+      "npc": 2981,
+      "quest": 96659,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "ACCEPT",
+      "x": 43.9,
+      "y": 76.7,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 4,
+      "note": "Shamans: two applications of Ritual Salve from the bristleback shamans east of camp.",
+      "npc": 5888,
+      "quest": 1519,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 44.4,
+      "y": 76.8,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Bristleback Shamans drop Ritual Salve. Two applications needed.",
+      "quest": 1519,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 59.4,
+      "y": 78.0,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Back to Seer Ravenfeather with the salve.",
+      "npc": 5888,
+      "quest": 1519,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 44.4,
+      "y": 76.8,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 4,
+      "note": "Shamans: take the Earth Sapta. Drink it at Kodo Rock in Mulgore.",
+      "npc": 5888,
+      "quest": 1520,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 44.4,
+      "y": 76.8,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Minor Manifestation of Earth, just east of camp. Drink the Sapta first.",
+      "npc": 5891,
+      "quest": 1520,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 80.4,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 4,
+      "note": "Shamans: the Rough Quartz comes with the quest.",
+      "npc": 5891,
+      "quest": 1521,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 80.4,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Shamans: the Earth Totem is your first real class tool.",
+      "npc": 5888,
+      "quest": 1521,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 44.4,
+      "y": 76.8,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Level 4 now: the class trainers stand around the inn. Learn your new spells here.",
+      "type": "TRAINER",
+      "x": 47.5,
+      "y": 63.0,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Mull Thunderhorn: six Prairie Wolf Paws and four Plainstrider Talons.",
+      "npc": 2948,
+      "quest": 748,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Poison Water",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Harken Windtotem: eight Trophy Swoop Quills from the hills north of town.",
+      "npc": 2947,
+      "quest": 761,
+      "tag": "main",
+      "title": "Swoop Hunting",
+      "type": "ACCEPT",
+      "x": 47.7,
+      "y": 62.7,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Yaw Sharpmane: kill Chakuyak in the west and bring back her pelt.",
+      "npc": 3065,
+      "quest": 96130,
+      "tag": "main",
+      "title": "Chakuyak",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Make Bloodhoof Village your home at Innkeeper Kauth before the north trip.",
+      "npc": 6747,
+      "type": "HEARTH_BIND",
+      "x": 45.9,
+      "y": 64.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Bread and water for the north trip. Hunters: arrows from Moorat Longstride.",
+      "type": "BUY",
+      "x": 45.3,
+      "y": 61.3,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Krang Stonehoof: defeat three Novice Warriors. Cheap and right here.",
+      "npc": 3063,
+      "quest": 99108,
+      "tag": "optional",
+      "title": "Sparring Match",
+      "type": "ACCEPT",
+      "x": 48.4,
+      "y": 63.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Kaga Wildhoof: deliver the supply bundle. Next is the campfire.",
+      "npc": 265810,
+      "quest": 96659,
+      "tag": "optional",
+      "title": "The Adventurer",
+      "type": "TURNIN",
+      "x": 46.2,
+      "y": 67.3,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Kaga: next, sit by the campfire until the Boosted Rest buff appears.",
+      "npc": 265810,
+      "quest": 96605,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "ACCEPT",
+      "x": 46.2,
+      "y": 67.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Sit at Kaga's Basic Campfire and wait for Boosted Rest. Takes a minute.",
+      "quest": 96605,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 44.9,
+      "y": 63.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Kaga once you have the Boosted Rest buff.",
+      "npc": 265810,
+      "quest": 96605,
+      "tag": "optional",
+      "title": "The Great Outdoors",
+      "type": "TURNIN",
+      "x": 46.2,
+      "y": 67.3,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Kaga: the cooking camp quest. Pyall is next door.",
+      "npc": 265810,
+      "quest": 96661,
+      "tag": "optional",
+      "title": "Camping 101: Cooking",
+      "type": "ACCEPT",
+      "x": 46.2,
+      "y": 67.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Pyall Silentstride: speak to him to learn the cooking camp item.",
+      "npc": 3067,
+      "quest": 96661,
+      "tag": "optional",
+      "title": "Camping 101: Cooking",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 61.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Novice Warriors right here. Players in duels also count.",
+      "quest": 99108,
+      "tag": "optional",
+      "type": "COMPLETE",
+      "x": 48.7,
+      "y": 63.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Krang Stonehoof for the errand.",
+      "npc": 3063,
+      "quest": 99108,
+      "tag": "optional",
+      "title": "Sparring Match",
+      "type": "TURNIN",
+      "x": 48.4,
+      "y": 63.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Chakuyak is lvl 5-6, west of town. Pull her carefully.",
+      "quest": 96130,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 39.5,
+      "y": 66.2,
+      "zone": "Mulgore"
+    },
+    {
+      "bagCheck": true,
+      "note": "Prairie Wolf Paws north of town. Plainstrider talons are nearby.",
+      "quest": 748,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.4,
+      "y": 55.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Swoops in the hills north of Bloodhoof. Pick off the small ones first.",
+      "quest": 761,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 47.2,
+      "y": 49.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Yaw Sharpmane: Chakuyak's pelt handed in.",
+      "npc": 3065,
+      "quest": 96130,
+      "reward": {
+        "preferItem": 281266,
+        "why": "Furred Belt, item level 8 (leather): a clear belt upgrade at this level."
+      },
+      "tag": "main",
+      "title": "Chakuyak",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mull Thunderhorn: paws and talons handed in.",
+      "npc": 2948,
+      "quest": 748,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Poison Water",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Harken Windtotem: quills handed in.",
+      "npc": 2947,
+      "quest": 761,
+      "tag": "main",
+      "title": "Swoop Hunting",
+      "type": "TURNIN",
+      "x": 47.7,
+      "y": 62.7,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Mull: use the cleansing totem at the Winterhoof Water Well, south-east of town.",
+      "npc": 2948,
+      "quest": 754,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Winterhoof Cleansing",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Use the Winterhoof Cleansing Totem at the Winterhoof Water Well, then go back.",
+      "quest": 754,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 51.8,
+      "y": 68.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Mull. The next Tauren link in the chain is in the next band.",
+      "npc": 2948,
+      "quest": 754,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Winterhoof Cleansing",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Innkeeper Kauth: the bundle of furs goes here. Food and water reward.",
+      "npc": 6747,
+      "quest": 1656,
+      "tag": "optional",
+      "title": "A Task Unfinished",
+      "type": "TURNIN",
+      "x": 45.9,
+      "y": 64.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Baine Bloodhoof: the Totem of Hawkwind is handed over.",
+      "npc": 2993,
+      "quest": 763,
+      "tag": "main",
+      "title": "Rites of the Earthmother",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 63.4,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 3,
+      "note": "Baine Bloodhoof: your next vision starts with Zarlman Two-Moons.",
+      "npc": 2993,
+      "quest": 767,
+      "tag": "main",
+      "title": "Rite of Vision",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 63.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Zarlman Two-Moons in Bloodhoof. A quick talk.",
+      "npc": 3054,
+      "quest": 767,
+      "tag": "main",
+      "title": "Rite of Vision",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 61.2,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 3,
+      "note": "Zarlman: collect 2 Well Stones and 2 Ambercorn for the vision.",
+      "npc": 3054,
+      "quest": 771,
+      "tag": "main",
+      "title": "Rite of Vision",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 61.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Well Stones at the north well. Ambercorn lies west of town.",
+      "quest": 771,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.1,
+      "y": 50.8,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Zarlman Two-Moons: stones and corn handed in.",
+      "npc": 3054,
+      "quest": 771,
+      "tag": "main",
+      "title": "Rite of Vision",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 61.2,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 3,
+      "note": "Drink the Water of the Seers at the tribal fire, then follow the vision north-west.",
+      "npc": 3054,
+      "quest": 772,
+      "tag": "main",
+      "title": "Rite of Vision",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 61.2,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Seer Wiserunner: the vision ends here. Pick the cloak or the boots.",
+      "npc": 2984,
+      "quest": 772,
+      "reward": {
+        "preferItem": 4958,
+        "why": "Sun-beaten Cloak, item level 8: the cloak slot is usually empty at this level."
+      },
+      "tag": "main",
+      "title": "Rite of Vision",
+      "type": "TURNIN",
+      "x": 34.3,
+      "y": 43.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Hearth back to Bloodhoof Village and Innkeeper Kauth. This is the band exit.",
+      "type": "HEARTH_USE"
+    }
+  ]
+}
