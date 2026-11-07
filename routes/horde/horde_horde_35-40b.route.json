@@ -1,0 +1,1359 @@
+{
+  "_review": [
+    "Part b of 35-40. Entry is the Booty Bay dock (exit of 35-40a). The first step accepts Goblin Sponsorship from Baron Revilgaz (1183) before the boat, since he is only in Booty Bay.",
+    "Stale: 35-40a ends with the same Booty Bay to Ratchet boat as a TRAVEL step. Both the 35-40a last step and this route's boat step describe one crossing; keep one of them when stitching.",
+    "Pack state: 45 of the 163 pack quests were already turned in by horde_horde_30-35 (see the curated reasons), so they are not repeated. 5741 (Sceptre of Light) is in this pack and was turned in by 30-35, so the handoff note saying it is in neither pack is stale.",
+    "Handoffs: 692 (needs 687) and 1108 (needs 1106) are not in this pack. 687 needs 653 or 688, both behind the 652 elite (revisit 42 in 40-45a), so 692 is dropped. 1108 is a Badlands turn-in with 1106, which is also dropped; 40-45a should pick up the Martek chain if it passes the Badlands.",
+    "1183 is outside this pack (it was dropped in 30-35 and 35-40a). It is routed here as a W_NOT_IN_PACK quest so that 1186, 1187 and the Razzeric booster can continue. 1188 and 1189 (Tanaris, Gadgetzan) are dropped as a second Shimmering loop for 820 XP each.",
+    "Revisit chains 193, 518, 519, 628, 640, 643, 644, 652, 673, 679 and 680 are not in this pack; they are routed as optional-elite steps in 35-40a. 645, 646, 670 and 688 are dropped there as well.",
+    "Elite decisions: 1488, 96222, 4961 and 1955 are optional-elite with revisitAt (40, 42, 40, 40). 1380, 1381, 1383, 2283 and 7068 are unroutable (blocked prerequisites, Eastern Kingdoms, or instanced Maraudon); the reasons are in dropped[].",
+    "Reputation: the Gelkis and Magram line (1367 to 1375, 1380 and 1381, plus the Forever clan quests 92743 to 93196) is dropped as reputation-gated, as 30-35 dropped it. This is the largest XP loss in the pack (about 25k).",
+    "Trainer gaps: no Stonard visit (shaman, warlock, hunter, warrior, druid-free), so Stonard is not reachable on this path. Warlock and rogue have no trainer at 38; their next visit is Orgrimmar at 40 (gap 3, within the limit). Druid, shaman, priest, paladin are covered at Thunder Bluff.",
+    "Class quests: warlock Orb of Orahil (1799, 4962, 4961, 4976) and mage chains (1947, 1953, 1949, 1954, 1955) run through Tabetha and Menara. Warlock Felsteed (3631, 4490) is dropped because it starts in Orgrimmar and turns in at Ratchet. Shaman 79364 is kept as a talk quest. Class XP is not counted by the validator.",
+    "Validator question: quest 4964 (Completed Orb of Dar'Orahil) has preQuestGroup [-4962, 4976] in the DB. The negative id is read literally, so the validator reports E_PREREQ for -4962. Dropped here; check whether negative preQuestGroup ids are a convention the validator should accept.",
+    "Hearth: the bind moves from Ratchet to Shadowprey (Sikewa) in the middle of Desolace, so the Desolace north loop (Ethel Rethor, Thunder Axe) can return by hearth. After that the route walks from Dustwallow back to Ratchet.",
+    "Trainers: Thunder Bluff at level 38 (druid, hunter, mage, paladin, priest, shaman, warrior). Orgrimmar at 40 is the last stop before the zeppelin to Grom'gol.",
+    "Exit: the Orgrimmar zeppelin to Grom'gol Base Camp (Stranglethorn, Nez'raz platform at 31.4, 29.9). This is the entry for 40-45a in Stranglethorn. The 40-45a route is not written yet, so W_NEXT_NOT_LOADED is expected.",
+    "XP: quest XP from main and optional quests is far below the 242,600 budget for 37 to 40 (the pack has about 205k open XP in total, but most is in dungeons, reputation, professions, class-only chains, elites and Eastern Kingdoms zones). Expected to read as W_XP_RANGE; not padded with dungeon or reputation content, per the brief.",
+    "Flights used: Thalon (Shadowprey), Nyse (Freewind Post), Shardi (Brackenwall) and Bragok (Ratchet) are discovered; Gadgetzan (Tanaris) is not, and it is not on this route. Flight connectivity between these masters is assumed; walk if a flight is not in game."
+  ],
+  "band": [
+    35,
+    40
+  ],
+  "branch": "horde",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 635,
+      "reason": "Pendant starter in Dustwallow, but the Shards of Myzrael finisher and the Myzrael chain (656) are in Arathi (40-45a)."
+    },
+    {
+      "quest": 687,
+      "reason": "Theldurin: needs 653 or 688, both behind 652 (elite Fozruk, lv 42, revisit in 40-45a). 653 is in no pack."
+    },
+    {
+      "quest": 737,
+      "reason": "Forbidden Knowledge: needs 735 or 736, neither in any pack. Badlands and Ironforge chain for 40-45a."
+    },
+    {
+      "quest": 1049,
+      "reason": "Compendium of the Fallen: Scarlet Monastery dungeon, instanced; not a solo stop."
+    },
+    {
+      "quest": 1102,
+      "reason": "A Vengeful Fate: Razorflank's Heart is a Razorfen Kraul boss drop (dungeon) with no map position in the DB."
+    },
+    {
+      "quest": 1106,
+      "reason": "Martek the Exiled: turn-in is Martek in the Badlands (40-45a). The chain 1106, 1108 and 1137 belongs there."
+    },
+    {
+      "quest": 1136,
+      "reason": "Frostmaw: single lv 37 boss in Alterac Mountains with a summon object. Far from the route; 30-35 dropped it too."
+    },
+    {
+      "quest": 1188,
+      "reason": "Safety First: Gadgetzan (Tanaris) turn-in and a second Shimmering loop for 820 XP. Not routed."
+    },
+    {
+      "quest": 1189,
+      "reason": "Safety First: return leg of 1188, which is not routed."
+    },
+    {
+      "quest": 1190,
+      "reason": "Keeping Pace: needs 1137, dropped in 35-40a (its next step 1108 is a Badlands turn-in). Chain cannot start."
+    },
+    {
+      "quest": 1191,
+      "reason": "Zamek's Distraction: part of the 1190 chain, which cannot start (needs 1137)."
+    },
+    {
+      "quest": 1192,
+      "reason": "Indurium Ore: end of the 1190 chain, which cannot start."
+    },
+    {
+      "quest": 1194,
+      "reason": "Rizzle's Schematics: part of the 1190 chain, which cannot start."
+    },
+    {
+      "quest": 1203,
+      "reason": "Jarl Needs a Blade: the Moonsteel Broadsword has no source position in the DB (3450 XP without drop data)."
+    },
+    {
+      "quest": 1262,
+      "reason": "Report to Zor: needs 1261, which 35-40a dropped (Kalimdor turn-in), so the Zor chain cannot start."
+    },
+    {
+      "quest": 1367,
+      "reason": "Magram Alliance: the objective is a Friendly Magram reputation. Reputation-gated line dropped (same as 30-35)."
+    },
+    {
+      "quest": 1368,
+      "reason": "Gelkis Alliance: reputation-gated line (Gelkis), dropped with 1369."
+    },
+    {
+      "quest": 1369,
+      "reason": "Broken Tears: Magram reputation gate (Friendly). Gelkis and Magram reputation line dropped (30-35 dropped it too)."
+    },
+    {
+      "quest": 1370,
+      "reason": "Stealing Supplies: Gelkis reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "quest": 1371,
+      "reason": "Gizmo for Warug: Magram reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "quest": 1372,
+      "reason": "Nothing But The Truth: starts at Beggar's Haunt in Duskwood (Eastern Kingdoms), outside this path."
+    },
+    {
+      "quest": 1373,
+      "reason": "Ongeku: Gelkis reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "quest": 1374,
+      "reason": "Khan Jehn: Gelkis reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "quest": 1375,
+      "reason": "Khan Shaka: Magram reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "quest": 1380,
+      "reason": "Khan Hratha elite: needs 1374 (Gelkis reputation gate), which is dropped, so it cannot start.",
+      "unroutable": true
+    },
+    {
+      "quest": 1381,
+      "reason": "Khan Hratha elite: needs 1375 (Magram reputation gate), which is dropped, so it cannot start.",
+      "unroutable": true
+    },
+    {
+      "quest": 1383,
+      "reason": "Shadow panther elite in Duskwood (Eastern Kingdoms, Alliance side) after 1372. No Horde route or flight here.",
+      "unroutable": true
+    },
+    {
+      "quest": 1388,
+      "reason": "Nothing But The Truth: Duskwood start, part of the 1372 chain (not routed)."
+    },
+    {
+      "quest": 1391,
+      "reason": "Nothing But The Truth: Stonard turn-in after the Duskwood chain (1372 to 1388), not routed."
+    },
+    {
+      "quest": 1948,
+      "reason": "Items of Power: Bolt Charged Bramble is only in Arathi (zone 45), outside this path."
+    },
+    {
+      "quest": 1951,
+      "reason": "Rituals of Power: needs 1950, dropped in an earlier band; not routed."
+    },
+    {
+      "quest": 1952,
+      "reason": "Mage's Wand: needs 1948 and 1951; neither is routed."
+    },
+    {
+      "quest": 1956,
+      "reason": "Power in Uldaman: the Obsidian Power Source has no map position (Uldaman instance)."
+    },
+    {
+      "quest": 1957,
+      "reason": "Mana Surges: needs 1956, which is not routed."
+    },
+    {
+      "quest": 1958,
+      "reason": "Celestial Power: end of the 1956 chain, not routed."
+    },
+    {
+      "quest": 2283,
+      "reason": "Necklace Recovery elite: the Uldaman dig site is in the Badlands (40-45a) and the next step 2284 has no map position.",
+      "unroutable": true
+    },
+    {
+      "quest": 2284,
+      "reason": "Necklace Recovery, Take 2: clue from Uldaman with no map position; follows the unroutable elite 2283."
+    },
+    {
+      "quest": 2753,
+      "reason": "Trampled Under Foot: Blacksmithing-gated (profession, skill 164). Profession quests are dropped."
+    },
+    {
+      "quest": 2754,
+      "reason": "Horns of Frenzy: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "quest": 2755,
+      "reason": "Joys of Omosh: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "quest": 2756,
+      "reason": "The Old Ways: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "quest": 2757,
+      "reason": "Booty Bay or Bust!: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "quest": 2841,
+      "reason": "Rig Wars: blueprints and safe from Gnomeregan (dungeon) for Nogg in Orgrimmar."
+    },
+    {
+      "quest": 2862,
+      "reason": "War on the Woodpaw: Feralas detour (Camp Mojache) for 10 lv 40-44 gnoll manes. Not on this path."
+    },
+    {
+      "quest": 2945,
+      "reason": "Grime-Encrusted Ring: item start and Sparklematic finisher have no map position (Gnomeregan)."
+    },
+    {
+      "quest": 2949,
+      "reason": "Return of the Ring: follows 2945 (no map position). Gnomeregan chain."
+    },
+    {
+      "quest": 2950,
+      "reason": "Nogg's Ring Redo: follows 2949. Gnomeregan chain."
+    },
+    {
+      "quest": 3523,
+      "reason": "Scourge of the Downs: Razorfen Downs dungeon; the starter Belnistrasz has no map position."
+    },
+    {
+      "quest": 3525,
+      "reason": "Extinguishing the Idol: escort inside Razorfen Downs (dungeon). Not a solo stop."
+    },
+    {
+      "quest": 3631,
+      "reason": "Summon Felsteed: starts at Zevrost in Orgrimmar and turns in at Ratchet. The route passes Orgrimmar only at the exit."
+    },
+    {
+      "quest": 4490,
+      "reason": "Summon Felsteed (learn): needs 3631, dropped with it."
+    },
+    {
+      "quest": 4781,
+      "reason": "Components for the Enchanted Gold: needs 1796, dropped in 30-35. The Menara gold chain cannot start."
+    },
+    {
+      "quest": 4783,
+      "reason": "Components for the Enchanted Gold: needs 4782, dropped earlier. Chain cannot start."
+    },
+    {
+      "quest": 4784,
+      "reason": "Components for the Enchanted Gold: needs 4783, which cannot start."
+    },
+    {
+      "quest": 4786,
+      "reason": "The Completed Robe: end of the 4781 chain, which cannot start."
+    },
+    {
+      "quest": 4963,
+      "reason": "Shard of an Infernal: exclusive with 4962. The felhound path is routed."
+    },
+    {
+      "quest": 4964,
+      "reason": "Completed Orb of Dar'Orahil: the DB lists its prerequisite 4962 as -4962 (negative id). The validator reads that as a missing quest (E_PREREQ), so it is not routed until the data question is settled."
+    },
+    {
+      "quest": 4967,
+      "reason": "Knowledge of the Orb of Orahil: Orgrimmar breadcrumb (Zevrost). 1799 starts at Menara in Ratchet without it. Not routed."
+    },
+    {
+      "quest": 4975,
+      "reason": "The Completed Orb of Noh'Orahil: the infernal path, exclusive with 4962."
+    },
+    {
+      "quest": 5301,
+      "reason": "The Art of the Armorsmith: profession-gated (Blacksmithing 200). Dropped."
+    },
+    {
+      "quest": 5302,
+      "reason": "The Way of the Weaponsmith: profession-gated (Blacksmithing 200). Dropped."
+    },
+    {
+      "quest": 6134,
+      "reason": "Ghost-o-plasm Round Up: eight drops from a single lv 38-39 Magrami Spectre spawn (sp 1). Not realistic on this timer."
+    },
+    {
+      "quest": 7068,
+      "reason": "Shadowshard Fragments elite: Maraudon (instanced) group content with lv 40-42 mobs.",
+      "unroutable": true
+    },
+    {
+      "quest": 7541,
+      "reason": "Service to the Horde: follows 1262, which is not routed."
+    },
+    {
+      "quest": 7866,
+      "reason": "Outrider Basic Care Package: dungeon and reputation-gated (Outrider)."
+    },
+    {
+      "quest": 8427,
+      "reason": "Battle of Warsong Gulch: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "quest": 8432,
+      "reason": "Battle of Warsong Gulch: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "quest": 8436,
+      "reason": "Conquering Arathi Basin: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "quest": 8440,
+      "reason": "Conquering Arathi Basin: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "quest": 8769,
+      "reason": "A Ticking Present: holiday or event gift item with no XP row."
+    },
+    {
+      "quest": 8853,
+      "reason": "Fifteen Signets for War Supplies: war-effort turn-in with no XP row."
+    },
+    {
+      "quest": 79229,
+      "reason": "Highway Robbery: Forever-only talk quest with no XP row and no finisher position."
+    },
+    {
+      "quest": 79360,
+      "reason": "Elemental Aid: starts with Charlga Razorflank in Razorfen Kraul (dungeon boss)."
+    },
+    {
+      "quest": 79366,
+      "reason": "Heed My Call: the Twisted Totems have no map position. Forever-only quest with no XP row."
+    },
+    {
+      "quest": 79442,
+      "reason": "The Tempest's Weapons: race-limited, Alterac Mountains turn-in, no XP row."
+    },
+    {
+      "quest": 92743,
+      "reason": "A Conqueror's Crown: Magram reputation-gated Forever line. Dropped (see 1369)."
+    },
+    {
+      "quest": 92873,
+      "reason": "Proof of Concept: Magram reputation-gated Forever line (necromancy). No XP row."
+    },
+    {
+      "quest": 92894,
+      "reason": "Bone Raising: Magram reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93034,
+      "reason": "Valley of Bones: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93035,
+      "reason": "Ravaging Ravagers: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93037,
+      "reason": "Outing Outcasts: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93041,
+      "reason": "Facing the Truth: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93062,
+      "reason": "Bone Burying: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93128,
+      "reason": "Khan Jehn: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93196,
+      "reason": "Khan Jehn (necromancy): Magram reputation-gated Forever line. No XP row."
+    },
+    {
+      "quest": 93225,
+      "reason": "Carved Centaur Totems: Forever-only kill count with no XP row. Not worth a Ghost Walker detour."
+    },
+    {
+      "quest": 93678,
+      "reason": "Abridged Notes on Draenethyst: returns to Magtoor in the Swamp of Sorrows. Forever-only item chain."
+    },
+    {
+      "quest": 96774,
+      "reason": "Ancient Gurubashi Idol: Drowned City objective with no map position. Forever-only."
+    },
+    {
+      "quest": 96784,
+      "reason": "Master of Disguise: Stromgarde Keep (Arathi) rogue chain. The object start has no map position."
+    },
+    {
+      "quest": 96785,
+      "reason": "Ain't No Telling: Stromgarde Keep (Arathi) rogue chain. Not on this path."
+    },
+    {
+      "quest": 97265,
+      "reason": "Hate the Hatefury: Forever-only repeat of the Hatefury line (1434 and 1435 are done). No XP row."
+    },
+    {
+      "quest": 98887,
+      "reason": "Conflict at Darkspear Islands: battleground marks. Not a leveling stop."
+    },
+    {
+      "quest": 98888,
+      "reason": "Conflict at Darkspear Islands: battleground marks. Not a leveling stop."
+    },
+    {
+      "quest": 98906,
+      "reason": "The Battle for Darkspear Islands: battleground win. Not a leveling stop."
+    }
+  ],
+  "entry": {
+    "hub": "Booty Bay",
+    "level": 37,
+    "x": 25.7,
+    "y": 73.1,
+    "zone": "Stranglethorn Vale"
+  },
+  "exitPoint": {
+    "hub": "Grom'gol",
+    "level": 40,
+    "x": 31.4,
+    "y": 29.9,
+    "zone": "Stranglethorn Vale"
+  },
+  "faction": "horde",
+  "id": "horde_horde_35-40b",
+  "next": "horde_horde_40-45a",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Baron Revilgaz in Booty Bay: last Goblin Sponsorship leg. Accept before the boat.",
+      "npc": 2496,
+      "quest": 1183,
+      "tag": "main",
+      "title": "Goblin Sponsorship",
+      "type": "ACCEPT",
+      "x": 27.2,
+      "y": 76.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "bagCheck": true,
+      "note": "Boat from the Booty Bay dock to Ratchet in The Barrens. Bag check before the crossing.",
+      "to": "Ratchet, The Barrens (boat from Booty Bay)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Hearth to Innkeeper Wiley at Ratchet. The warlock and Thunder Bluff legs return here.",
+      "type": "HEARTH_BIND",
+      "x": 62.0,
+      "y": 39.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Repair at Ratchet before the Thousand Needles trip.",
+      "type": "VENDOR_REPAIR",
+      "x": 62.8,
+      "y": 37.4,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Menara Voidrender in the Ratchet tower: Fragments of the Orb of Orahil. Infernal Orb from Desolace.",
+      "npc": 6266,
+      "quest": 1799,
+      "tag": "optional",
+      "title": "Fragments of the Orb of Orahil",
+      "type": "ACCEPT",
+      "x": 62.5,
+      "y": 35.5,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Acolyte Wytula in the same tower: Shard of a Felhound. The felhound is in Desolace.",
+      "npc": 6254,
+      "quest": 4962,
+      "tag": "main",
+      "title": "Shard of a Felhound",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 35.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wind rider Nyse at Freewind Post (discovered in 20-25). Walk if the flight is not in game.",
+      "to": "Freewind Post, Thousand Needles",
+      "type": "FLY"
+    },
+    {
+      "note": "Cliffwatcher Longhorn at Freewind: Family Tree. Deliver the report to Nataka Longhorn in Desolace.",
+      "npc": 10537,
+      "quest": 5361,
+      "tag": "main",
+      "title": "Family Tree",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 50.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Rau Cliffrunner in Thousand Needles: Eyes on the Sky (shaman). Prate Cloudseer is just north.",
+      "npc": 4722,
+      "quest": 79364,
+      "tag": "optional",
+      "title": "Eyes on the Sky",
+      "type": "ACCEPT",
+      "x": 46.1,
+      "y": 51.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Prate Cloudseer, Thousand Needles: turn in Eyes on the Sky.",
+      "npc": 5905,
+      "quest": 79364,
+      "tag": "optional",
+      "title": "Eyes on the Sky",
+      "type": "TURNIN",
+      "x": 53.5,
+      "y": 42.6,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Use a Cracked Silithid Carapace from the mounds to accept. Silithid parts come next.",
+      "quest": 1148,
+      "tag": "main",
+      "title": "Parts of the Swarm",
+      "type": "ACCEPT",
+      "x": 71.7,
+      "y": 83.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Silithid Heart, Talons and Intact Carapaces from the silithids at (68, 85). Turn in to Korran at the Crossroads.",
+      "quest": 1148,
+      "tag": "main",
+      "title": "Parts of the Swarm",
+      "type": "COMPLETE",
+      "x": 68.3,
+      "y": 85.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Pozzik on the Shimmering Flats: deliver the Fuel Regulator Blueprints.",
+      "npc": 4630,
+      "quest": 1183,
+      "tag": "main",
+      "title": "Goblin Sponsorship",
+      "type": "TURNIN",
+      "x": 80.2,
+      "y": 75.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Pozzik on the Shimmering Flats: The Eighteenth Pilot. Razzeric is the next stop.",
+      "npc": 4630,
+      "quest": 1186,
+      "tag": "main",
+      "title": "The Eighteenth Pilot",
+      "type": "ACCEPT",
+      "x": 80.2,
+      "y": 75.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Speak with Razzeric on the Shimmering Flats.",
+      "npc": 4706,
+      "quest": 1186,
+      "tag": "main",
+      "title": "The Eighteenth Pilot",
+      "type": "TURNIN",
+      "x": 80.3,
+      "y": 76.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Razzeric: retrieve the Seaforium Booster from the Dustwallow booster spot, then turn it in here.",
+      "npc": 4706,
+      "quest": 1187,
+      "tag": "main",
+      "title": "Razzeric's Tweaking",
+      "type": "ACCEPT",
+      "x": 80.3,
+      "y": 76.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Walk back to Freewind Post for the flight to Brackenwall.",
+      "to": "Freewind Post, Thousand Needles",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Wind rider Shardi at Brackenwall (discovered in 30-35). Walk if the flight is not in game.",
+      "to": "Brackenwall Village, Dustwallow Marsh",
+      "type": "FLY"
+    },
+    {
+      "note": "Krog in Brackenwall: The Black Shield. Turn in to Mosarn in Thunder Bluff.",
+      "npc": 4926,
+      "quest": 1276,
+      "tag": "main",
+      "title": "The Black Shield",
+      "type": "ACCEPT",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Seaforium Booster on the ground east of Tabetha in Dustwallow Marsh.",
+      "quest": 1187,
+      "tag": "main",
+      "title": "Razzeric's Tweaking",
+      "type": "COMPLETE",
+      "x": 54.1,
+      "y": 56.5,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha in Dustwallow: The Infernal Orb (mage). Orbs drop from Desolace infernals; turn in on the second visit.",
+      "npc": 6546,
+      "quest": 1954,
+      "tag": "optional",
+      "title": "The Infernal Orb",
+      "type": "ACCEPT",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Hearth from Dustwallow to Ratchet (bound at Wiley). The Thunder Bluff leg starts here.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Walk north from Ratchet along the Barrens road into Mulgore to Thunder Bluff.",
+      "to": "Thunder Bluff (Barrens and Mulgore road from Ratchet)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Mosarn in Thunder Bluff: The Black Shield. Shield from Krog in Brackenwall.",
+      "npc": 4943,
+      "quest": 1276,
+      "tag": "main",
+      "title": "The Black Shield",
+      "type": "TURNIN",
+      "x": 54.0,
+      "y": 80.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "DRUID",
+        "HUNTER",
+        "MAGE",
+        "PALADIN",
+        "PRIEST",
+        "SHAMAN",
+        "WARRIOR"
+      ],
+      "note": "Thunder Bluff trainers at 38. Mage, priest, paladin, shaman here; druid NE (77, 27); hunter and warrior SE (58, 88).",
+      "type": "TRAINER",
+      "x": 24.0,
+      "y": 18.0,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Ursyn Ghull in Thunder Bluff: Journey to the Marsh (mage escort). Turn in to Tabetha in Dustwallow.",
+      "npc": 3048,
+      "quest": 1947,
+      "tag": "optional",
+      "title": "Journey to the Marsh",
+      "type": "ACCEPT",
+      "x": 25.7,
+      "y": 14.2,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Ursyn Ghull in Thunder Bluff: Return to the Marsh (mage breadcrumb). Turn in to Tabetha.",
+      "npc": 3048,
+      "quest": 1953,
+      "tag": "optional",
+      "title": "Return to the Marsh",
+      "type": "ACCEPT",
+      "x": 25.7,
+      "y": 14.2,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Hearth from Thunder Bluff to Ratchet (bound at Wiley).",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Wind rider Shardi at Brackenwall. Tabetha is a short walk east.",
+      "to": "Brackenwall Village, Dustwallow Marsh",
+      "type": "FLY"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha in Dustwallow: Journey to the Marsh (mage).",
+      "npc": 6546,
+      "quest": 1947,
+      "tag": "optional",
+      "title": "Journey to the Marsh",
+      "type": "TURNIN",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha in Dustwallow: Return to the Marsh (mage).",
+      "npc": 6546,
+      "quest": 1953,
+      "tag": "optional",
+      "title": "Return to the Marsh",
+      "type": "TURNIN",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha: Hidden Secrets (mage). Magus Tirth is on the Shimmering Flats.",
+      "npc": 6546,
+      "quest": 1949,
+      "tag": "optional",
+      "title": "Hidden Secrets",
+      "type": "ACCEPT",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Wind rider Nyse at Freewind Post for the Shimmering Flats.",
+      "to": "Freewind Post, Thousand Needles",
+      "type": "FLY"
+    },
+    {
+      "note": "Walk south-east to the Shimmering Flats: Magus Tirth and Razzeric.",
+      "to": "Shimmering Flats (Thousand Needles)",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Magus Tirth on the Shimmering Flats: Hidden Secrets (mage).",
+      "npc": 6548,
+      "quest": 1949,
+      "tag": "optional",
+      "title": "Hidden Secrets",
+      "type": "TURNIN",
+      "x": 78.3,
+      "y": 75.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Razzeric on the Shimmering Flats: turn in the Seaforium Booster (Razzeric's Tweaking).",
+      "npc": 4706,
+      "quest": 1187,
+      "tag": "main",
+      "title": "Razzeric's Tweaking",
+      "type": "TURNIN",
+      "x": 80.3,
+      "y": 76.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Walk back to Freewind Post for the flight to Desolace.",
+      "to": "Freewind Post, Thousand Needles",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Wind rider Thalon at Shadowprey Village (discovered in 30-35). Hearth stays bound at Ratchet until the bind below.",
+      "to": "Shadowprey Village, Desolace",
+      "type": "FLY"
+    },
+    {
+      "note": "Hearth to Innkeeper Sikewa at Shadowprey Village. The north loop returns here by hearth.",
+      "type": "HEARTH_BIND",
+      "x": 24.1,
+      "y": 68.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Taiga Wisemane at Shadowprey: Hand of Iruxos. The Demon Box is in Thunder Axe Fortress.",
+      "npc": 11624,
+      "quest": 5381,
+      "tag": "main",
+      "title": "Hand of Iruxos",
+      "type": "ACCEPT",
+      "x": 25.8,
+      "y": 68.2,
+      "zone": "Desolace"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Imprisoned Felhound Spirit: use the Felhas Ruby on a felhound near (52, 68).",
+      "quest": 4962,
+      "tag": "main",
+      "title": "Shard of a Felhound",
+      "type": "COMPLETE",
+      "x": 52.2,
+      "y": 68.1,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Umarak in south-west Desolace: Khan Hratha. Elite key holder at (30, 52). Revisit at 42.",
+      "npc": 253066,
+      "quest": 96222,
+      "tag": "optional-elite",
+      "title": "Khan Hratha",
+      "type": "ACCEPT",
+      "x": 42.6,
+      "y": 77.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Khan Hratha (elite, lv 42) at (30, 52) drops the Maraudine Key Fragment. Revisit at 42.",
+      "quest": 96222,
+      "tag": "optional-elite",
+      "title": "Khan Hratha",
+      "type": "COMPLETE",
+      "x": 29.6,
+      "y": 52.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Umarak in Desolace: turn in the Maraudine Key Fragment. Revisit at 42.",
+      "quest": 96222,
+      "tag": "optional-elite",
+      "title": "Khan Hratha",
+      "type": "TURNIN",
+      "x": 42.6,
+      "y": 77.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Rigger Gizelton at (45, 75): Gizelton Caravan escort past Mannoroc Coven. Short and on the way.",
+      "npc": 11626,
+      "quest": 5943,
+      "tag": "optional",
+      "title": "Gizelton Caravan",
+      "type": "ACCEPT",
+      "x": 45.4,
+      "y": 75.3,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Escort the caravan past Mannoroc Coven to (56, 68).",
+      "quest": 5943,
+      "tag": "optional",
+      "title": "Gizelton Caravan",
+      "type": "COMPLETE",
+      "x": 55.7,
+      "y": 67.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Smeed Scrabblescrew at Scrabblescrew's Camp: escort reward.",
+      "npc": 11596,
+      "quest": 5943,
+      "tag": "optional",
+      "title": "Gizelton Caravan",
+      "type": "TURNIN",
+      "x": 60.9,
+      "y": 61.9,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Takata Steelblade at (52.6, 54.4): The Corrupter. Elite Lord Azrethoc and Jugkar. Revisit at 40.",
+      "npc": 5641,
+      "quest": 1488,
+      "tag": "optional-elite",
+      "title": "The Corrupter",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Two Infernal Orbs from the infernals at (53, 80): one for Tabetha's Fragments (1799), one for the mage 1954.",
+      "quest": 1799,
+      "tag": "optional",
+      "title": "Fragments of the Orb of Orahil",
+      "type": "COMPLETE",
+      "x": 52.7,
+      "y": 80.2,
+      "zone": "Desolace"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Second Infernal Orb from the infernals at (53, 80), for Tabetha (mage).",
+      "quest": 1954,
+      "tag": "optional",
+      "title": "The Infernal Orb",
+      "type": "COMPLETE",
+      "x": 52.7,
+      "y": 80.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Lord Azrethoc (elite) and Jugkar Grim'rod at (56, 76). Revisit at 40.",
+      "quest": 1488,
+      "tag": "optional-elite",
+      "title": "The Corrupter",
+      "type": "COMPLETE",
+      "x": 57.0,
+      "y": 75.7,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Takata Steelblade in Desolace: The Corrupter. Revisit at 40.",
+      "npc": 5641,
+      "quest": 1488,
+      "tag": "optional-elite",
+      "title": "The Corrupter",
+      "type": "TURNIN",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Bibbly F'utzbuckle at Kormek's Hut: Bone Collector. Kodo bones are in the Kodo Graveyard.",
+      "npc": 11438,
+      "quest": 5501,
+      "tag": "main",
+      "title": "Bone Collector",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 39.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Kodo Bones from the kodos at the Kodo Graveyard (51, 60).",
+      "quest": 5501,
+      "tag": "main",
+      "title": "Bone Collector",
+      "type": "COMPLETE",
+      "x": 51.5,
+      "y": 59.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Bibbly F'utzbuckle at Kormek's Hut: Bone Collector.",
+      "npc": 11438,
+      "quest": 5501,
+      "tag": "main",
+      "title": "Bone Collector",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 39.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Demon Box in Thunder Axe Fortress at (55, 27). Then back to Taiga Wisemane at Shadowprey.",
+      "quest": 5381,
+      "tag": "main",
+      "title": "Hand of Iruxos",
+      "type": "COMPLETE",
+      "x": 55.0,
+      "y": 26.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Azore Aldamort in Ethel Rethor: Book of the Ancients. The Serpent Statue summons Lord Kragaru (lv 38).",
+      "npc": 11863,
+      "quest": 6027,
+      "tag": "main",
+      "title": "Book of the Ancients",
+      "type": "ACCEPT",
+      "x": 38.9,
+      "y": 27.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Serpent Statue at (28, 7): summon Lord Kragaru (lv 38) and take the Book of the Ancients.",
+      "quest": 6027,
+      "tag": "main",
+      "title": "Book of the Ancients",
+      "type": "COMPLETE",
+      "x": 28.2,
+      "y": 6.7,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Azore Aldamort at the tower in Ethel Rethor: Book of the Ancients.",
+      "npc": 11863,
+      "quest": 6027,
+      "tag": "main",
+      "title": "Book of the Ancients",
+      "type": "TURNIN",
+      "x": 38.9,
+      "y": 27.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Hearth from the north of Desolace to Shadowprey (bound at Sikewa). Taiga is the next turn-in.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Taiga Wisemane at Shadowprey Village: Hand of Iruxos.",
+      "npc": 11624,
+      "quest": 5381,
+      "tag": "main",
+      "title": "Hand of Iruxos",
+      "type": "TURNIN",
+      "x": 25.8,
+      "y": 68.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Taiga Wisemane at Shadowprey: Portals of the Legion. Banish the portals at Mannoroc Coven.",
+      "npc": 11624,
+      "quest": 5581,
+      "tag": "main",
+      "title": "Portals of the Legion",
+      "type": "ACCEPT",
+      "x": 25.8,
+      "y": 68.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Demon Portal Guardians at Mannoroc Coven (52, 77): banish six portals.",
+      "quest": 5581,
+      "tag": "main",
+      "title": "Portals of the Legion",
+      "type": "COMPLETE",
+      "x": 52.0,
+      "y": 77.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Taiga Wisemane at Shadowprey Village: Portals of the Legion.",
+      "npc": 11624,
+      "quest": 5581,
+      "tag": "main",
+      "title": "Portals of the Legion",
+      "type": "TURNIN",
+      "x": 25.8,
+      "y": 68.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Melizza Brimbuzzle at (34, 53.5): escort to Hornizz at the Kodo Graveyard. Short and on the way.",
+      "npc": 12277,
+      "quest": 6132,
+      "tag": "optional",
+      "title": "Get Me Out of Here!",
+      "type": "ACCEPT",
+      "x": 34.0,
+      "y": 53.5,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Escort Melizza to safety at (40, 62).",
+      "quest": 6132,
+      "tag": "optional",
+      "title": "Get Me Out of Here!",
+      "type": "COMPLETE",
+      "x": 40.1,
+      "y": 61.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Hornizz Brimbuzzle at the Kodo Graveyard: Get Me Out of Here!",
+      "npc": 6019,
+      "quest": 6132,
+      "tag": "optional",
+      "title": "Get Me Out of Here!",
+      "type": "TURNIN",
+      "x": 47.8,
+      "y": 61.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Nataka Longhorn at Ghost Walker Post: Family Tree.",
+      "npc": 11259,
+      "quest": 5361,
+      "tag": "main",
+      "title": "Family Tree",
+      "type": "TURNIN",
+      "x": 55.4,
+      "y": 55.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Wind rider Thalon back to Ratchet (Bragok). Walk north-east if the flight is not in game.",
+      "to": "Ratchet, The Barrens",
+      "type": "FLY"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Menara Voidrender in the Ratchet tower: Shard of a Felhound.",
+      "npc": 6266,
+      "quest": 4962,
+      "tag": "main",
+      "title": "Shard of a Felhound",
+      "type": "TURNIN",
+      "x": 62.5,
+      "y": 35.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wind rider Shardi at Brackenwall. Tabetha and the Demon of the Orb are a short walk east.",
+      "to": "Brackenwall Village, Dustwallow Marsh",
+      "type": "FLY"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Tabetha in Dustwallow: Fragments of the Orb of Orahil (warlock).",
+      "npc": 6546,
+      "quest": 1799,
+      "tag": "optional",
+      "title": "Fragments of the Orb of Orahil",
+      "type": "TURNIN",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha in Dustwallow: The Infernal Orb (mage).",
+      "npc": 6546,
+      "quest": 1954,
+      "tag": "optional",
+      "title": "The Infernal Orb",
+      "type": "TURNIN",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Tabetha: Cleansing of the Orb of Orahil (warlock elite Demon of the Orb). Revisit at 40.",
+      "npc": 6546,
+      "quest": 4961,
+      "tag": "optional-elite",
+      "title": "Cleansing of the Orb of Orahil",
+      "type": "ACCEPT",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha: The Exorcism (mage elite Demon of the Orb). Revisit at 40.",
+      "npc": 6546,
+      "quest": 1955,
+      "tag": "optional-elite",
+      "title": "The Exorcism",
+      "type": "ACCEPT",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Demon of the Orb (elite, lv 40) at (46, 57). Revisit at 40.",
+      "quest": 4961,
+      "tag": "optional-elite",
+      "title": "Cleansing of the Orb of Orahil",
+      "type": "COMPLETE",
+      "x": 45.8,
+      "y": 57.0,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Demon of the Orb (elite, lv 40) at (46, 57). Revisit at 40.",
+      "quest": 1955,
+      "tag": "optional-elite",
+      "title": "The Exorcism",
+      "type": "COMPLETE",
+      "x": 45.8,
+      "y": 57.0,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Tabetha in Dustwallow: Cleansing of the Orb of Orahil. Revisit at 40.",
+      "npc": 6546,
+      "quest": 4961,
+      "tag": "optional-elite",
+      "title": "Cleansing of the Orb of Orahil",
+      "type": "TURNIN",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Tabetha in Dustwallow: The Exorcism. Revisit at 40.",
+      "npc": 6546,
+      "quest": 1955,
+      "tag": "optional-elite",
+      "title": "The Exorcism",
+      "type": "TURNIN",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Tabetha: Returning the Cleansed Orb (warlock). Take it back to Menara in Ratchet.",
+      "npc": 6546,
+      "quest": 4976,
+      "tag": "optional",
+      "title": "Returning the Cleansed Orb",
+      "type": "ACCEPT",
+      "x": 46.1,
+      "y": 57.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Walk north-east from Tabetha to Ratchet, about 30 map-% through the Dustwallow road.",
+      "to": "Ratchet, The Barrens (north-west from Brackenwall)",
+      "type": "TRAVEL"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Menara Voidrender in Ratchet: Returning the Cleansed Orb (warlock).",
+      "npc": 6266,
+      "quest": 4976,
+      "tag": "optional",
+      "title": "Returning the Cleansed Orb",
+      "type": "TURNIN",
+      "x": 62.5,
+      "y": 35.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Walk north-west to the Crossroads for Korran and the Devrak flight point.",
+      "to": "The Crossroads (Barrens road from Ratchet)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Korran at the Crossroads: Parts of the Swarm. Silithid parts from Thousand Needles.",
+      "npc": 3428,
+      "quest": 1148,
+      "tag": "main",
+      "title": "Parts of the Swarm",
+      "type": "TURNIN",
+      "x": 51.1,
+      "y": 29.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Korran at the Crossroads: Parts of the Swarm, second leg. Return to Belgrom in Orgrimmar.",
+      "npc": 3428,
+      "quest": 1184,
+      "tag": "main",
+      "title": "Parts of the Swarm",
+      "type": "ACCEPT",
+      "x": 51.1,
+      "y": 29.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Walk north along the Durotar road to Orgrimmar for Belgrom and the zeppelin.",
+      "to": "Orgrimmar",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Belgrom Rockmaul in Orgrimmar: Parts of the Swarm.",
+      "npc": 4485,
+      "quest": 1184,
+      "tag": "main",
+      "title": "Parts of the Swarm",
+      "type": "TURNIN",
+      "x": 75.2,
+      "y": 34.2,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "HUNTER",
+        "MAGE",
+        "PRIEST",
+        "ROGUE",
+        "SHAMAN",
+        "WARLOCK",
+        "WARRIOR"
+      ],
+      "note": "Orgrimmar trainers at level 40: warlock, rogue, mage, priest, shaman, hunter, warrior. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 48.0,
+      "y": 45.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Repair and sell greys before the zeppelin.",
+      "type": "VENDOR_REPAIR",
+      "x": 49.0,
+      "y": 48.0,
+      "zone": "Orgrimmar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Zeppelin from the Orgrimmar tower to Grom'gol Base Camp. Exit for 40-45a (Stranglethorn).",
+      "to": "Grom'gol Base Camp, Stranglethorn Vale",
+      "type": "FLY"
+    }
+  ]
+}

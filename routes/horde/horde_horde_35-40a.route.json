@@ -1995,12 +1995,6 @@
       "x": 26.8,
       "y": 77.2,
       "zone": "Stranglethorn Vale"
-    },
-    {
-      "bagCheck": true,
-      "note": "Boat from the Booty Bay dock (26, 73) to Ratchet in The Barrens. Exit for 35-40b.",
-      "to": "Ratchet, The Barrens (boat from Booty Bay)",
-      "type": "TRAVEL"
     }
   ]
 }

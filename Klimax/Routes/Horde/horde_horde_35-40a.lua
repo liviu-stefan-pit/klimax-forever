@@ -161,6 +161,5 @@ Klimax_RegisterRoute({
     {k="horde_horde_35-40a:U:h401e4146", t="U", note="Hearth back to Booty Bay. Revisit at 40 for the elite."},
     {k="horde_horde_35-40a:T:628:0", t="T", q=628, n="Excelsior", g="e", z=1434, x=28.3, y=77.6, npc=2495, note="Turn in to Drizzlik in Booty Bay. Revisit at 40.", rv=40},
     {k="horde_horde_35-40a:R:h0bbd711f", t="R", z=1434, x=26.8, y=77.2, note="Booty Bay: rogue trainer Ian Strom. Learn what your level allows.", cl={"ROGUE"}},
-    {k="horde_horde_35-40a:V:hdae60f44", t="V", to="Ratchet, The Barrens (boat from Booty Bay)", note="Boat from the Booty Bay dock (26, 73) to Ratchet in The Barrens. Exit for 35-40b.", bag=true},
   },
 })

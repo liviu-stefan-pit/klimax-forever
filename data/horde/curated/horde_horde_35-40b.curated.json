@@ -1,0 +1,830 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 635,
+      "reason": "Pendant starter in Dustwallow, but the Shards of Myzrael finisher and the Myzrael chain (656) are in Arathi (40-45a)."
+    },
+    {
+      "decision": "drop",
+      "quest": 687,
+      "reason": "Theldurin: needs 653 or 688, both behind 652 (elite Fozruk, lv 42, revisit in 40-45a). 653 is in no pack."
+    },
+    {
+      "decision": "drop",
+      "quest": 737,
+      "reason": "Forbidden Knowledge: needs 735 or 736, neither in any pack. Badlands and Ironforge chain for 40-45a."
+    },
+    {
+      "decision": "drop",
+      "quest": 1049,
+      "reason": "Compendium of the Fallen: Scarlet Monastery dungeon, instanced; not a solo stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 1102,
+      "reason": "A Vengeful Fate: Razorflank's Heart is a Razorfen Kraul boss drop (dungeon) with no map position in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 1106,
+      "reason": "Martek the Exiled: turn-in is Martek in the Badlands (40-45a). The chain 1106, 1108 and 1137 belongs there."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1107,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1111,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1112,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1114,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1115,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1136,
+      "reason": "Frostmaw: single lv 37 boss in Alterac Mountains with a summon object. Far from the route; 30-35 dropped it too."
+    },
+    {
+      "decision": "drop",
+      "quest": 1145,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1146,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1147,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1148,
+      "reason": "Parts of the Swarm: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 1175,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1177,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1178,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1180,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1184,
+      "reason": "Parts of the Swarm: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "main",
+      "quest": 1186,
+      "reason": "The Eighteenth Pilot: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "main",
+      "quest": 1187,
+      "reason": "Razzeric's Tweaking: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 1188,
+      "reason": "Safety First: Gadgetzan (Tanaris) turn-in and a second Shimmering loop for 820 XP. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1189,
+      "reason": "Safety First: return leg of 1188, which is not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1190,
+      "reason": "Keeping Pace: needs 1137, dropped in 35-40a (its next step 1108 is a Badlands turn-in). Chain cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 1191,
+      "reason": "Zamek's Distraction: part of the 1190 chain, which cannot start (needs 1137)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1192,
+      "reason": "Indurium Ore: end of the 1190 chain, which cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 1194,
+      "reason": "Rizzle's Schematics: part of the 1190 chain, which cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 1201,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1202,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1203,
+      "reason": "Jarl Needs a Blade: the Moonsteel Broadsword has no source position in the DB (3450 XP without drop data)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1206,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1218,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1238,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1239,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1240,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1251,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1262,
+      "reason": "Report to Zor: needs 1261, which 35-40a dropped (Kalimdor turn-in), so the Zor chain cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 1268,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1269,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1270,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1273,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1276,
+      "reason": "The Black Shield: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 1321,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1322,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1323,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1365,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1367,
+      "reason": "Magram Alliance: the objective is a Friendly Magram reputation. Reputation-gated line dropped (same as 30-35)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1368,
+      "reason": "Gelkis Alliance: reputation-gated line (Gelkis), dropped with 1369."
+    },
+    {
+      "decision": "drop",
+      "quest": 1369,
+      "reason": "Broken Tears: Magram reputation gate (Friendly). Gelkis and Magram reputation line dropped (30-35 dropped it too)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1370,
+      "reason": "Stealing Supplies: Gelkis reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1371,
+      "reason": "Gizmo for Warug: Magram reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1372,
+      "reason": "Nothing But The Truth: starts at Beggar's Haunt in Duskwood (Eastern Kingdoms), outside this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 1373,
+      "reason": "Ongeku: Gelkis reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1374,
+      "reason": "Khan Jehn: Gelkis reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1375,
+      "reason": "Khan Shaka: Magram reputation gate. Reputation line dropped (see 1369)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1380,
+      "reason": "Khan Hratha elite: needs 1374 (Gelkis reputation gate), which is dropped, so it cannot start.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1381,
+      "reason": "Khan Hratha elite: needs 1375 (Magram reputation gate), which is dropped, so it cannot start.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1383,
+      "reason": "Shadow panther elite in Duskwood (Eastern Kingdoms, Alliance side) after 1372. No Horde route or flight here.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1388,
+      "reason": "Nothing But The Truth: Duskwood start, part of the 1372 chain (not routed)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1391,
+      "reason": "Nothing But The Truth: Stonard turn-in after the Duskwood chain (1372 to 1388), not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1433,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1434,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1435,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1436,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1480,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1481,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1482,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1484,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1488,
+      "reason": "Elite Lord Azrethoc and Jugkar Grim'rod (lv 40) on the Desolace route. Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "class",
+      "quest": 1799,
+      "reason": "Warlock: Menara's Fragments of the Orb of Orahil. Class-only, so its XP is not counted."
+    },
+    {
+      "decision": "class",
+      "quest": 1947,
+      "reason": "Mage: Journey to the Marsh (Thunder Bluff accept, Tabetha turn-in). Class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1948,
+      "reason": "Items of Power: Bolt Charged Bramble is only in Arathi (zone 45), outside this path."
+    },
+    {
+      "decision": "class",
+      "quest": 1949,
+      "reason": "Mage: Hidden Secrets, Tabetha to Magus Tirth on the Shimmering Flats. Class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1951,
+      "reason": "Rituals of Power: needs 1950, dropped in an earlier band; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1952,
+      "reason": "Mage's Wand: needs 1948 and 1951; neither is routed."
+    },
+    {
+      "decision": "class",
+      "quest": 1953,
+      "reason": "Mage: Return to the Marsh breadcrumb for the Infernal Orb chain. Class-only."
+    },
+    {
+      "decision": "class",
+      "quest": 1954,
+      "reason": "Mage: The Infernal Orb, Desolace infernals to Tabetha. Class-only."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1955,
+      "reason": "Mage elite Demon of the Orb (lv 40) at Tabetha. Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "drop",
+      "quest": 1956,
+      "reason": "Power in Uldaman: the Obsidian Power Source has no map position (Uldaman instance)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1957,
+      "reason": "Mana Surges: needs 1956, which is not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1958,
+      "reason": "Celestial Power: end of the 1956 chain, not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2283,
+      "reason": "Necklace Recovery elite: the Uldaman dig site is in the Badlands (40-45a) and the next step 2284 has no map position.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 2284,
+      "reason": "Necklace Recovery, Take 2: clue from Uldaman with no map position; follows the unroutable elite 2283."
+    },
+    {
+      "decision": "drop",
+      "quest": 2753,
+      "reason": "Trampled Under Foot: Blacksmithing-gated (profession, skill 164). Profession quests are dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 2754,
+      "reason": "Horns of Frenzy: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2755,
+      "reason": "Joys of Omosh: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2756,
+      "reason": "The Old Ways: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2757,
+      "reason": "Booty Bay or Bust!: Blacksmithing-gated profession chain (see 2753)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2841,
+      "reason": "Rig Wars: blueprints and safe from Gnomeregan (dungeon) for Nogg in Orgrimmar."
+    },
+    {
+      "decision": "drop",
+      "quest": 2842,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 2862,
+      "reason": "War on the Woodpaw: Feralas detour (Camp Mojache) for 10 lv 40-44 gnoll manes. Not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 2945,
+      "reason": "Grime-Encrusted Ring: item start and Sparklematic finisher have no map position (Gnomeregan)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2949,
+      "reason": "Return of the Ring: follows 2945 (no map position). Gnomeregan chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 2950,
+      "reason": "Nogg's Ring Redo: follows 2949. Gnomeregan chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 3523,
+      "reason": "Scourge of the Downs: Razorfen Downs dungeon; the starter Belnistrasz has no map position."
+    },
+    {
+      "decision": "drop",
+      "quest": 3525,
+      "reason": "Extinguishing the Idol: escort inside Razorfen Downs (dungeon). Not a solo stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 3631,
+      "reason": "Summon Felsteed: starts at Zevrost in Orgrimmar and turns in at Ratchet. The route passes Orgrimmar only at the exit."
+    },
+    {
+      "decision": "drop",
+      "quest": 4490,
+      "reason": "Summon Felsteed (learn): needs 3631, dropped with it."
+    },
+    {
+      "decision": "drop",
+      "quest": 4781,
+      "reason": "Components for the Enchanted Gold: needs 1796, dropped in 30-35. The Menara gold chain cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 4783,
+      "reason": "Components for the Enchanted Gold: needs 4782, dropped earlier. Chain cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 4784,
+      "reason": "Components for the Enchanted Gold: needs 4783, which cannot start."
+    },
+    {
+      "decision": "drop",
+      "quest": 4786,
+      "reason": "The Completed Robe: end of the 4781 chain, which cannot start."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 4961,
+      "reason": "Warlock elite Demon of the Orb (lv 40) at Tabetha. Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "class",
+      "quest": 4962,
+      "reason": "Warlock: Shard of a Felhound (felhound path). Class-only; its XP is not counted."
+    },
+    {
+      "decision": "drop",
+      "quest": 4963,
+      "reason": "Shard of an Infernal: exclusive with 4962. The felhound path is routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4964,
+      "reason": "Completed Orb of Dar'Orahil: the DB lists its prerequisite 4962 as -4962 (negative id). The validator reads that as a missing quest (E_PREREQ), so it is not routed until the data question is settled."
+    },
+    {
+      "decision": "drop",
+      "quest": 4967,
+      "reason": "Knowledge of the Orb of Orahil: Orgrimmar breadcrumb (Zevrost). 1799 starts at Menara in Ratchet without it. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4975,
+      "reason": "The Completed Orb of Noh'Orahil: the infernal path, exclusive with 4962."
+    },
+    {
+      "decision": "class",
+      "quest": 4976,
+      "reason": "Warlock: Returning the Cleansed Orb to Menara. Class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 5301,
+      "reason": "The Art of the Armorsmith: profession-gated (Blacksmithing 200). Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 5302,
+      "reason": "The Way of the Weaponsmith: profession-gated (Blacksmithing 200). Dropped."
+    },
+    {
+      "decision": "main",
+      "quest": 5361,
+      "reason": "Family Tree: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "main",
+      "quest": 5381,
+      "reason": "Hand of Iruxos: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 5386,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 5501,
+      "reason": "Bone Collector: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 5561,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 5581,
+      "reason": "Portals of the Legion: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "drop",
+      "quest": 5741,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 5821,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "optional",
+      "quest": 5943,
+      "reason": "Gizelton Caravan escort through Mannoroc Coven. Escort, kept as optional because it is on the Desolace route."
+    },
+    {
+      "decision": "main",
+      "quest": 6027,
+      "reason": "Book of the Ancients: routed here for XP or a chain to a hub reward."
+    },
+    {
+      "decision": "optional",
+      "quest": 6132,
+      "reason": "Melizza Brimbuzzle escort to Hornizz at the Kodo Graveyard. Short escort on the way."
+    },
+    {
+      "decision": "drop",
+      "quest": 6134,
+      "reason": "Ghost-o-plasm Round Up: eight drops from a single lv 38-39 Magrami Spectre spawn (sp 1). Not realistic on this timer."
+    },
+    {
+      "decision": "drop",
+      "quest": 6142,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 6143,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 6161,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6626,
+      "reason": "Turned in by horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 7068,
+      "reason": "Shadowshard Fragments elite: Maraudon (instanced) group content with lv 40-42 mobs.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 7541,
+      "reason": "Service to the Horde: follows 1262, which is not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 7866,
+      "reason": "Outrider Basic Care Package: dungeon and reputation-gated (Outrider)."
+    },
+    {
+      "decision": "drop",
+      "quest": 8427,
+      "reason": "Battle of Warsong Gulch: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 8432,
+      "reason": "Battle of Warsong Gulch: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 8436,
+      "reason": "Conquering Arathi Basin: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 8440,
+      "reason": "Conquering Arathi Basin: battleground marks (dungeon-type objective). Not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 8769,
+      "reason": "A Ticking Present: holiday or event gift item with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 8853,
+      "reason": "Fifteen Signets for War Supplies: war-effort turn-in with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79229,
+      "reason": "Highway Robbery: Forever-only talk quest with no XP row and no finisher position."
+    },
+    {
+      "decision": "drop",
+      "quest": 79360,
+      "reason": "Elemental Aid: starts with Charlga Razorflank in Razorfen Kraul (dungeon boss)."
+    },
+    {
+      "decision": "class",
+      "quest": 79364,
+      "reason": "Shaman: Eyes on the Sky, Rau to Prate in Thousand Needles. Forever quest with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79366,
+      "reason": "Heed My Call: the Twisted Totems have no map position. Forever-only quest with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79442,
+      "reason": "The Tempest's Weapons: race-limited, Alterac Mountains turn-in, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 92743,
+      "reason": "A Conqueror's Crown: Magram reputation-gated Forever line. Dropped (see 1369)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92873,
+      "reason": "Proof of Concept: Magram reputation-gated Forever line (necromancy). No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 92894,
+      "reason": "Bone Raising: Magram reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93034,
+      "reason": "Valley of Bones: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93035,
+      "reason": "Ravaging Ravagers: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93037,
+      "reason": "Outing Outcasts: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93041,
+      "reason": "Facing the Truth: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93062,
+      "reason": "Bone Burying: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93128,
+      "reason": "Khan Jehn: Gelkis reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93196,
+      "reason": "Khan Jehn (necromancy): Magram reputation-gated Forever line. No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 93225,
+      "reason": "Carved Centaur Totems: Forever-only kill count with no XP row. Not worth a Ghost Walker detour."
+    },
+    {
+      "decision": "drop",
+      "quest": 93678,
+      "reason": "Abridged Notes on Draenethyst: returns to Magtoor in the Swamp of Sorrows. Forever-only item chain."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 96222,
+      "reason": "Elite Khan Hratha (lv 42) holds the Maraudine Key Fragment for Umarak. Revisit at 42.",
+      "revisitAt": 42
+    },
+    {
+      "decision": "drop",
+      "quest": 96774,
+      "reason": "Ancient Gurubashi Idol: Drowned City objective with no map position. Forever-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 96784,
+      "reason": "Master of Disguise: Stromgarde Keep (Arathi) rogue chain. The object start has no map position."
+    },
+    {
+      "decision": "drop",
+      "quest": 96785,
+      "reason": "Ain't No Telling: Stromgarde Keep (Arathi) rogue chain. Not on this path."
+    },
+    {
+      "decision": "drop",
+      "quest": 97265,
+      "reason": "Hate the Hatefury: Forever-only repeat of the Hatefury line (1434 and 1435 are done). No XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 98887,
+      "reason": "Conflict at Darkspear Islands: battleground marks. Not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 98888,
+      "reason": "Conflict at Darkspear Islands: battleground marks. Not a leveling stop."
+    },
+    {
+      "decision": "drop",
+      "quest": 98906,
+      "reason": "The Battle for Darkspear Islands: battleground win. Not a leveling stop."
+    }
+  ],
+  "id": "horde_horde_35-40b",
+  "schemaVersion": 1
+}
