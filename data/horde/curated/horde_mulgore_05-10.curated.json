@@ -1,0 +1,534 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 743,
+      "reason": "Windfury Talons: 700 XP, harpies on the road south-east of Bloodhoof, lvl 7-9 mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 744,
+      "reason": "Preparation for Ceremony: 880 XP plus a level 11 shield. Feathers north-west of Thunder Bluff; taken at level 7+."
+    },
+    {
+      "decision": "main",
+      "quest": 745,
+      "reason": "Sharing the Land: 540 XP, Palemane west of Bloodhoof, lvl 5-8."
+    },
+    {
+      "decision": "drop",
+      "quest": 746,
+      "reason": "Dwarven Digging: the Prospector's Picks have no DB source; only the forge object (Broken Tools) is known, so the 5-pick step cannot be placed honestly."
+    },
+    {
+      "decision": "main",
+      "quest": 748,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 749,
+      "reason": "The Ravaged Caravan: 530 XP, Morin's crate errand at Bloodhoof."
+    },
+    {
+      "decision": "main",
+      "quest": 750,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 751,
+      "reason": "The Ravaged Caravan part 2: 530 XP, documents from the crate back to Morin."
+    },
+    {
+      "decision": "main",
+      "quest": 753,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 754,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 755,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 756,
+      "reason": "Handed over from mulgore_01-05 (Thunderhorn Totem): Tauren totem chain, 630 XP, claws lvl 7-8 north of Bloodhoof."
+    },
+    {
+      "decision": "main",
+      "quest": 757,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 758,
+      "reason": "Thunderhorn Cleansing: 700 XP, the totem chain link at the Thunderhorn well."
+    },
+    {
+      "decision": "main",
+      "quest": 759,
+      "reason": "Wildmane Totem: 840 XP. Prairie Wolf Alphas lvl 9-10 north of Red Rocks, so taken at level 7+."
+    },
+    {
+      "decision": "main",
+      "quest": 760,
+      "reason": "Wildmane Cleansing: 1050 XP, the chain's biggest step. Dreamwatcher Staff is the reward hint."
+    },
+    {
+      "decision": "main",
+      "quest": 761,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 763,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 764,
+      "reason": "The Venture Co.: 630 XP, mine workers and supervisors lvl 8-10, done at level 8."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 765,
+      "reason": "Supervisor Fizsprocket: lvl 12, hard content for this band. Kept, tagged elite, revisit at 15.",
+      "revisitAt": 15
+    },
+    {
+      "decision": "main",
+      "quest": 766,
+      "reason": "Mazzranache: 700 XP, four item drops on the north pastures around Bloodhoof."
+    },
+    {
+      "decision": "main",
+      "quest": 767,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "drop",
+      "quest": 768,
+      "reason": "Gathering Leather: profession-gated (Skinning). Not leveling content; the band does not assume the skill."
+    },
+    {
+      "decision": "drop",
+      "quest": 769,
+      "reason": "Kodo Hide Bag: profession-gated (Leatherworking). Same rule as the other profession quests."
+    },
+    {
+      "decision": "drop",
+      "quest": 770,
+      "reason": "The Demon Scarred Cloak: no objective rows in the DB and the cloak's drop NPC has no spawn in this pack. The Ghost Howl lead cannot be placed."
+    },
+    {
+      "decision": "main",
+      "quest": 771,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 772,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 773,
+      "reason": "Rite of Wisdom (handed over from mulgore_01-05): 840 XP, Seer Wiserunner to the Ancestral Spirit at Red Rocks."
+    },
+    {
+      "decision": "optional",
+      "quest": 775,
+      "reason": "Journey into Thunder Bluff: escort of 420 XP. Short, from Red Rocks to Cairne, so on the way."
+    },
+    {
+      "decision": "main",
+      "quest": 780,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "drop",
+      "quest": 781,
+      "reason": "Dropped in mulgore_01-05 too: the Dirt-stained Map starter has no spawn coordinates in the DB."
+    },
+    {
+      "decision": "main",
+      "quest": 833,
+      "reason": "A Sacred Burial: 630 XP, Bristleback Interlopers at Red Rocks (lvl 9-10), taken at level 7+."
+    },
+    {
+      "decision": "main",
+      "quest": 842,
+      "reason": "Crossroads Conscription: 910 XP, Far Watch to Sergra at the Crossroads. Needs 840 first (Razor Hill, taken from data/raw)."
+    },
+    {
+      "decision": "drop",
+      "quest": 844,
+      "reason": "Plainstrider Menace is exclusive with the Tauren escort 854 and with 861. The route takes 854 and 861 for more XP on the same walk."
+    },
+    {
+      "decision": "optional",
+      "quest": 854,
+      "reason": "Journey to the Crossroads: Tauren escort, 225 XP. Kirge to Thork, on the way to the Crossroads."
+    },
+    {
+      "decision": "optional",
+      "quest": 860,
+      "reason": "Sergra Darkthorn: breadcrumb after 861, 85 XP. Accepted at Melor, turned in at the Crossroads."
+    },
+    {
+      "decision": "main",
+      "quest": 861,
+      "reason": "The Hunter's Way: 840 XP, Flatland Prowler claws (lvl 9) north of Red Rocks, Melor in Thunder Bluff. Level 10."
+    },
+    {
+      "decision": "main",
+      "quest": 871,
+      "reason": "Disrupt the Attacks: 910 XP, Razormane camp north-west of the Crossroads (lvl 10-12), Thork turn-in."
+    },
+    {
+      "decision": "optional",
+      "quest": 886,
+      "reason": "The Barrens Oases: breadcrumb, 85 XP. Hamuul to Tonga. Its target 870 has no objective rows in the DB, so 870 is not taken."
+    },
+    {
+      "decision": "drop",
+      "quest": 1462,
+      "reason": "Earth Sapta re-get, dropped in mulgore_01-05 too; not part of the Call of Earth chain."
+    },
+    {
+      "decision": "optional",
+      "quest": 1492,
+      "reason": "Wharfmaster Dizzywig: 440 XP, crate from the Crossroads to Ratchet, a short walk from the Crossroads."
+    },
+    {
+      "decision": "class",
+      "quest": 1498,
+      "reason": "Path of Defense (Warrior): five Singed Scales from the Durotar lizard field. Opens the Thun'grim chain."
+    },
+    {
+      "decision": "class",
+      "quest": 1502,
+      "reason": "Thun'grim Firegaze (Warrior): 210 XP, second link of the Thun'grim chain."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1503,
+      "reason": "Forged Steel (Warrior): 840 XP and a level 15 Thun'grim weapon upgrade. Gear detour for warriors."
+    },
+    {
+      "decision": "class",
+      "quest": 1505,
+      "reason": "Veteran Uzzek (Warrior): breadcrumb from Torm in Thunder Bluff, opens Path of Defense."
+    },
+    {
+      "decision": "class",
+      "quest": 1519,
+      "reason": "Done in mulgore_01-05: Call of Earth (Shaman)."
+    },
+    {
+      "decision": "class",
+      "quest": 1520,
+      "reason": "Done in mulgore_01-05: Call of Earth (Shaman)."
+    },
+    {
+      "decision": "class",
+      "quest": 1521,
+      "reason": "Done in mulgore_01-05: Call of Earth (Shaman)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1523,
+      "reason": "Call of Fire (Xanis, Thunder Bluff) is exclusive with 2984, which starts at Bloodhoof on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1524,
+      "reason": "Call of Fire part 2 ends at Telf Joolam in south Durotar, off this band's path. Pick it up in the 10-15 band if wanted."
+    },
+    {
+      "decision": "optional",
+      "quest": 1656,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "drop",
+      "quest": 1883,
+      "reason": "Mage-only quest. A Tauren cannot be a mage."
+    },
+    {
+      "decision": "class",
+      "quest": 2984,
+      "reason": "Call of Fire (Shaman): 420 XP, Narm Skychaser in Bloodhoof, hand-in at Kranal Fiss in the Barrens."
+    },
+    {
+      "decision": "main",
+      "quest": 3376,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "drop",
+      "quest": 5922,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "decision": "drop",
+      "quest": 5926,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "decision": "drop",
+      "quest": 5927,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "decision": "drop",
+      "quest": 5928,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "decision": "drop",
+      "quest": 5932,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "decision": "drop",
+      "quest": 6002,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "decision": "class",
+      "quest": 6061,
+      "reason": "Taming the Beast (Hunter): 840 XP, tame an Adult Plainstrider west of Bloodhoof."
+    },
+    {
+      "decision": "class",
+      "quest": 6065,
+      "reason": "The Hunter's Path (Hunter breadcrumb): Kary Thunderhorn in Thunder Bluff, hand-in at Yaw."
+    },
+    {
+      "decision": "drop",
+      "quest": 6066,
+      "reason": "Hunter's Path variant from another city; exclusive with 6065, which the route takes."
+    },
+    {
+      "decision": "drop",
+      "quest": 6067,
+      "reason": "Hunter's Path variant from another city; exclusive with 6065, which the route takes."
+    },
+    {
+      "decision": "class",
+      "quest": 6087,
+      "reason": "Taming the Beast (Hunter): 840 XP each, tame a Prairie Stalker and then a Swoop near Bloodhoof."
+    },
+    {
+      "decision": "class",
+      "quest": 6088,
+      "reason": "Taming the Beast (Hunter): 840 XP each, tame a Prairie Stalker and then a Swoop near Bloodhoof."
+    },
+    {
+      "decision": "class",
+      "quest": 6089,
+      "reason": "Training the Beast (Hunter): 420 XP, Holt Thunderhorn in Thunder Bluff."
+    },
+    {
+      "decision": "main",
+      "quest": 6361,
+      "reason": "A Bundle of Hides (Tauren): first link of the wind-rider chain, 210 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 6362,
+      "reason": "Ride to Thunder Bluff (Tauren): 420 XP, buy the wind rider from Devrak."
+    },
+    {
+      "decision": "main",
+      "quest": 6363,
+      "reason": "Tal the Wind Rider Master (Tauren): 210 XP, Ahanu's leather goods to Tal."
+    },
+    {
+      "decision": "main",
+      "quest": 6364,
+      "reason": "Return to Jahan (Tauren): 1050 XP, buy the ride back to the Crossroads from Tal."
+    },
+    {
+      "decision": "main",
+      "quest": 9264,
+      "reason": "Investigate the Scourge of Thunder Bluff: 630 XP, Scourge stones and runic circle near Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 76156,
+      "reason": "Stalk With The Earthmother: three item errands with no XP rows, bouncing between the Venture Co. mine and Boarton in Thunder Bluff. Not worth the trips."
+    },
+    {
+      "decision": "drop",
+      "quest": 76160,
+      "reason": "Stalk With The Earthmother: three item errands with no XP rows, bouncing between the Venture Co. mine and Boarton in Thunder Bluff. Not worth the trips."
+    },
+    {
+      "decision": "drop",
+      "quest": 76240,
+      "reason": "Stalk With The Earthmother: three item errands with no XP rows, bouncing between the Venture Co. mine and Boarton in Thunder Bluff. Not worth the trips."
+    },
+    {
+      "decision": "drop",
+      "quest": 94911,
+      "reason": "Forever druid side quests (Child of Nature, Moonglade teleport): no XP rows, part of the dropped druid excursion."
+    },
+    {
+      "decision": "drop",
+      "quest": 94913,
+      "reason": "Forever druid side quests (Child of Nature, Moonglade teleport): no XP rows, part of the dropped druid excursion."
+    },
+    {
+      "decision": "main",
+      "quest": 95805,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "main",
+      "quest": 96130,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "optional",
+      "quest": 96605,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "optional",
+      "quest": 96659,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "optional",
+      "quest": 96661,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "drop",
+      "quest": 97485,
+      "reason": "Traditions of the Bluff: four vendor purchases for a junk reward (Prepared Incense) and no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 97927,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97928,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97929,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97930,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97931,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97932,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97933,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97934,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97935,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97936,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "drop",
+      "quest": 97937,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "decision": "optional",
+      "quest": 98424,
+      "reason": "Fizsprocket's Notes: no XP row. A prerequisite of the elite Clearcutter Key (98427), so it stays."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 98427,
+      "reason": "Ceasing Operations: Venture Co. Clearcutter, an elite lvl 12 mob. Kept, not dropped; revisit at 15.",
+      "revisitAt": 15
+    },
+    {
+      "decision": "drop",
+      "quest": 98430,
+      "reason": "The Longwalkers: escort with no XP row. The Palemane area is already covered by 745."
+    },
+    {
+      "decision": "main",
+      "quest": 98435,
+      "reason": "Thunderhorn's Report: closes the Tauren totem chain. Hand-in at Hamuul in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 99079,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "decision": "drop",
+      "quest": 99080,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "decision": "drop",
+      "quest": 99081,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "decision": "drop",
+      "quest": 99082,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "decision": "drop",
+      "quest": 99101,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "decision": "main",
+      "quest": 99108,
+      "reason": "Done in mulgore_01-05; turned in there."
+    },
+    {
+      "decision": "drop",
+      "quest": 99411,
+      "reason": "Kyle's Gone Missing: lvl 12 pet and the Tender Strider Meat has no source in the pack; no XP row (carried from 01-05)."
+    }
+  ],
+  "id": "horde_mulgore_05-10",
+  "schemaVersion": 1
+}

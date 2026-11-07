@@ -1,0 +1,2881 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_zephras_10-15 is written after this band. It starts at Valanaar, where this band exits.",
+    "W_XP_RANGE: 62 quests in this band are Zephra's Isle quests with no XP row in data/raw (as in zephras_01-05), so the 22800 XP budget cannot be checked. Pacing is by level range and step count. Re-check in game.",
+    "Level 10 starters: Taming the Beast (Hunter, Elayaa Easewind) and Call of Fire (Shaman, Aarnor Galestrike) are in Shen'dar Village and need level 10. The late Shen'dar stop takes them at level 10 on the way south. Other classes skip them at runtime.",
+    "Mulgore side trip (98424, 98427): 98427 Ceasing Operations is elite-flagged in the pack, and elite quests may not be dropped (PRD 6.2), so the zeppelin round trip is kept as optional. 98424 is here only because 98427 needs it. Its source item, Mulgore Expansion Plans (281031), comes from Mulgore quests outside this band, so check it in game or cut the side trip.",
+    "Elite talks (Desperate Times, A Grand Adventure, Confront Lorthuna) show mob level 9999 in the DB, so their revisitAt values are estimates. Check them in game.",
+    "Mulgore and Thunder Bluff drops: 92 quests, all reached only by the isle zeppelin. Zephras_10-15 leaves the isle at about level 12 by that zeppelin, so it can take any of them that its pack keeps."
+  ],
+  "band": [
+    5,
+    10
+  ],
+  "branch": "zephras",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 743,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 744,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 745,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 746,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 748,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 749,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 750,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 751,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 753,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 754,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 755,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 756,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 757,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 758,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 759,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 760,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 761,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 763,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 764,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 765,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 766,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 767,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 768,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 769,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 770,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 771,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 772,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 773,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 775,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 780,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 781,
+      "reason": "Off-isle reach-zone quest: reached only by the isle zeppelin, not on this band's path."
+    },
+    {
+      "quest": 833,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 860,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 861,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 886,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 1462,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 1505,
+      "reason": "Warrior quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 1519,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 1520,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 1523,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 1656,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 1883,
+      "reason": "Mage quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 2984,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 3376,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 5655,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Troll: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 5656,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Troll: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 5661,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Undead: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 5663,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Undead: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 5922,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 5926,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 5928,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6002,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6061,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6065,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6070,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Orc/Troll: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6087,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6088,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6089,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6363,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 6364,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "quest": 9264,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 76156,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 76160,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 76240,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 92463,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92464,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92465,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92466,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92467,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92468,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92469,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92470,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92471,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92472,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92473,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92514,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92515,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92544,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92553,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 92598,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 93552,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 94493,
+      "reason": "Exclusive alternative to Unnerving Silence (94484). Only one of the two can be done."
+    },
+    {
+      "quest": 94911,
+      "reason": "Druid quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 94913,
+      "reason": "Druid quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "quest": 95805,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 96101,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 96130,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 96605,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 96638,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "quest": 96646,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 96659,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 96661,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97485,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 97927,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97928,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97929,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97930,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97931,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97932,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97933,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97934,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97935,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97936,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97937,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "quest": 97963,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97964,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97965,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97967,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97968,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97969,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97970,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97971,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 97972,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 98284,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 98285,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "quest": 98430,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 98435,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99079,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99080,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99081,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99082,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99101,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99108,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "quest": 99411,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    }
+  ],
+  "entry": {
+    "hub": "Shen'dar Village",
+    "level": 5,
+    "x": 43.0,
+    "y": 43.2,
+    "zone": "Zephra's Isle"
+  },
+  "exitPoint": {
+    "hub": "Valanaar",
+    "level": 10,
+    "x": 61.2,
+    "y": 74.9,
+    "zone": "Zephra's Isle"
+  },
+  "faction": "horde",
+  "id": "horde_zephras_05-10",
+  "next": "horde_zephras_10-15",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Illaya Amberwind starts the Windshapers chain. Talk to her here.",
+      "npc": 251902,
+      "quest": 92595,
+      "tag": "main",
+      "title": "The Windshapers",
+      "type": "ACCEPT",
+      "x": 43.5,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Illaya Amberwind: the Windshapers are with you. Next, the mages.",
+      "npc": 251902,
+      "quest": 92595,
+      "tag": "main",
+      "title": "The Windshapers",
+      "type": "TURNIN",
+      "x": 43.5,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Meddlesome Mages: Illaya sends you after six High Order Apprentices north of the village.",
+      "npc": 251902,
+      "quest": 94411,
+      "tag": "main",
+      "title": "Meddlesome Mages",
+      "type": "ACCEPT",
+      "x": 43.5,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Criminal Element: Aonda sends you after the Highlands bandits north of the village.",
+      "npc": 251523,
+      "quest": 92517,
+      "tag": "main",
+      "title": "The Criminal Element",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Pilfered Windstones drop from the same bandit camp. Teeri Wellwind's order.",
+      "npc": 251906,
+      "quest": 93319,
+      "tag": "optional",
+      "title": "Pilfered Windstones",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 45.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hippogryph Harassment: Teeri wants Youths, Protectors and the Matriarch from the west flock.",
+      "npc": 251906,
+      "quest": 92516,
+      "tag": "main",
+      "title": "Hippogryph Harassment",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 45.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "A Little Beauty: Taleen wants Hippogryph Down from the same western flock.",
+      "npc": 251991,
+      "quest": 93951,
+      "tag": "optional",
+      "title": "A Little Beauty",
+      "type": "ACCEPT",
+      "x": 44.9,
+      "y": 44.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "High Order Apprentices (level 5-6) north of Shen'dar. Six kills, easy.",
+      "quest": 94411,
+      "tag": "main",
+      "title": "Meddlesome Mages",
+      "type": "COMPLETE",
+      "x": 46.7,
+      "y": 38.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Pilfered Windstones from the bandit camp. Loot while you clear it.",
+      "quest": 93319,
+      "tag": "optional",
+      "title": "Pilfered Windstones",
+      "type": "COMPLETE",
+      "x": 48.9,
+      "y": 37.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Highlands Bandits at the camp. Badwind Bennic (level 7) is at (50.6, 34.3), last.",
+      "quest": 92517,
+      "tag": "main",
+      "title": "The Criminal Element",
+      "type": "COMPLETE",
+      "x": 48.8,
+      "y": 37.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "West across the ridge: Youths, Protectors (level 6-7), then the Matriarch at (34, 54).",
+      "quest": 92516,
+      "tag": "main",
+      "title": "Hippogryph Harassment",
+      "type": "COMPLETE",
+      "x": 38.2,
+      "y": 54.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hippogryph Down from the same flock. Eight feathers, all close by.",
+      "quest": 93951,
+      "tag": "optional",
+      "title": "A Little Beauty",
+      "type": "COMPLETE",
+      "x": 36.1,
+      "y": 53.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Illaya in Shen'dar Village.",
+      "npc": 251902,
+      "quest": 94411,
+      "tag": "main",
+      "title": "Meddlesome Mages",
+      "type": "TURNIN",
+      "x": 43.5,
+      "y": 44.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Teeri Wellwind in Shen'dar Village.",
+      "npc": 251906,
+      "quest": 93319,
+      "tag": "optional",
+      "title": "Pilfered Windstones",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 45.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Constable Aonda: the bandit camp is cleared.",
+      "npc": 251523,
+      "quest": 92517,
+      "tag": "main",
+      "title": "The Criminal Element",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Teeri Wellwind: the hippogryphs are done.",
+      "npc": 251906,
+      "quest": 92516,
+      "tag": "main",
+      "title": "Hippogryph Harassment",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 45.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Taleen Shimmerthread: the feathers, back in the village.",
+      "npc": 251991,
+      "quest": 93951,
+      "tag": "optional",
+      "title": "A Little Beauty",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 44.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "About level 6: Shen'dar trainers: mage, warrior, rogue, hunter, shaman, druid. Priests and Paladins train in Thunder Bluff.",
+      "type": "TRAINER",
+      "x": 44.7,
+      "y": 44.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Infiltrating the Cult: Aonda's next lead. The Falaath chain starts here.",
+      "npc": 251523,
+      "quest": 93036,
+      "tag": "main",
+      "title": "Infiltrating the Cult",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Sania Silverstream: the cult's trail leads to Falaath Village.",
+      "npc": 251904,
+      "quest": 93036,
+      "tag": "main",
+      "title": "Infiltrating the Cult",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Falaath Village: Sania sends you to Missionary Jasaan at the village entrance.",
+      "npc": 251904,
+      "quest": 92529,
+      "tag": "main",
+      "title": "Falaath Village",
+      "type": "ACCEPT",
+      "x": 44.9,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Missionary Jasaan at the entrance to Falaath Village.",
+      "npc": 257065,
+      "quest": 92529,
+      "tag": "main",
+      "title": "Falaath Village",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 56.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Among the Faithful: Jasaan wants you to look around Falaath Village.",
+      "npc": 257065,
+      "quest": 92528,
+      "tag": "main",
+      "title": "Among the Faithful",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 56.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The wardrobe inside Falaath Village. Look at it, then return to Aonda.",
+      "quest": 92528,
+      "tag": "main",
+      "title": "Among the Faithful",
+      "type": "COMPLETE",
+      "x": 48.8,
+      "y": 53.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Constable Aonda in Shen'dar Village.",
+      "npc": 251523,
+      "quest": 92528,
+      "tag": "main",
+      "title": "Among the Faithful",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Havoc in the Highlands: Aonda's order for the Falaath ruins.",
+      "npc": 251523,
+      "quest": 92550,
+      "tag": "main",
+      "title": "Havoc in the Highlands",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Stolen Supplies: Danarii Bellowveil wants supply packs from Falaath.",
+      "npc": 252172,
+      "quest": 92551,
+      "tag": "main",
+      "title": "Stolen Supplies",
+      "type": "ACCEPT",
+      "x": 45.2,
+      "y": 45.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Western Watch: Aonda sends you to Peacekeeper Vaaniel at the west watchtower.",
+      "npc": 251523,
+      "quest": 93926,
+      "tag": "main",
+      "title": "The Western Watch",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Peacekeeper Vaaniel at the western watchtower.",
+      "npc": 252155,
+      "quest": 93926,
+      "tag": "main",
+      "title": "The Western Watch",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 62.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "A Last Request: read the note near the dead peacekeeper, then collect the cult's items.",
+      "npc": 252155,
+      "quest": 93927,
+      "tag": "main",
+      "title": "A Last Request",
+      "type": "ACCEPT",
+      "x": 42.4,
+      "y": 62.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Skypriest Aanders (level 8), plus the note, feather and signet beside the body.",
+      "quest": 93927,
+      "tag": "main",
+      "title": "A Last Request",
+      "type": "COMPLETE",
+      "x": 41.4,
+      "y": 63.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Falaath ruins: Al'Aketh Stormcallers and Living Lightning (level 7-8), then Cyclas's head.",
+      "quest": 92550,
+      "tag": "main",
+      "title": "Havoc in the Highlands",
+      "type": "COMPLETE",
+      "x": 49.2,
+      "y": 55.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Supply packs from the Stormcallers and healers in Falaath. Delanea's packs are by Valanaar.",
+      "quest": 92551,
+      "tag": "main",
+      "title": "Stolen Supplies",
+      "type": "COMPLETE",
+      "x": 49.2,
+      "y": 55.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Constable Aonda: Havoc is finished.",
+      "npc": 251523,
+      "quest": 92550,
+      "tag": "main",
+      "title": "Havoc in the Highlands",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Danarii Bellowveil in Shen'dar Village.",
+      "npc": 252172,
+      "quest": 92551,
+      "tag": "main",
+      "title": "Stolen Supplies",
+      "type": "TURNIN",
+      "x": 45.2,
+      "y": 45.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Constable Aonda: the note and the signet.",
+      "npc": 251523,
+      "quest": 93927,
+      "tag": "main",
+      "title": "A Last Request",
+      "type": "TURNIN",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "To Valanaar: Aonda's report opens the south-east of the isle.",
+      "npc": 251523,
+      "quest": 92579,
+      "tag": "main",
+      "title": "To Valanaar",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Deliver the Signet: carry the Shadowsong signet to Talaanis in Valanaar.",
+      "npc": 251523,
+      "quest": 93948,
+      "tag": "main",
+      "title": "Deliver the Signet",
+      "type": "ACCEPT",
+      "x": 45.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Sell greys and repair in Shen'dar Village before the long walk.",
+      "type": "VENDOR_REPAIR",
+      "x": 43.5,
+      "y": 43.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Coriella: food and water for the south road. Mana users: extra water.",
+      "type": "BUY",
+      "x": 43.0,
+      "y": 43.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hunters: Veena Vericloud sells arrows and bullets here. Top up before the south.",
+      "type": "BUY",
+      "x": 44.7,
+      "y": 45.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "bagCheck": true,
+      "note": "Head south-east to Valanaar, the far hub with the inn. Long walk, so check your bags.",
+      "to": "Valanaar",
+      "type": "TRAVEL",
+      "x": 43.0,
+      "y": 43.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Talaanis Shadowsong in Valanaar.",
+      "npc": 252476,
+      "quest": 93948,
+      "tag": "main",
+      "title": "Deliver the Signet",
+      "type": "TURNIN",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist: the report is in.",
+      "npc": 252383,
+      "quest": 92579,
+      "tag": "main",
+      "title": "To Valanaar",
+      "type": "TURNIN",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Grand Skyseer: Valennia sends you to Ayessa Dawnsinger.",
+      "npc": 252383,
+      "quest": 92700,
+      "tag": "main",
+      "title": "The Grand Skyseer",
+      "type": "ACCEPT",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Bugged: Valennia wants eight Enchanted Skyhoppers killed near Valanaar.",
+      "npc": 252383,
+      "quest": 93949,
+      "tag": "main",
+      "title": "Bugged",
+      "type": "ACCEPT",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Enchanted Skyhoppers on the south-west edge of Valanaar.",
+      "quest": 93949,
+      "tag": "main",
+      "title": "Bugged",
+      "type": "COMPLETE",
+      "x": 62.0,
+      "y": 76.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist, back in Valanaar.",
+      "npc": 252383,
+      "quest": 93949,
+      "tag": "main",
+      "title": "Bugged",
+      "type": "TURNIN",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger at the Valanaar hall.",
+      "npc": 251968,
+      "quest": 92700,
+      "tag": "main",
+      "title": "The Grand Skyseer",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Broken Construct: Ayessa sends you to Riaani Nightwind.",
+      "npc": 251968,
+      "quest": 93735,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Riaani Nightwind, west side of Valanaar.",
+      "npc": 256083,
+      "quest": 93735,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 73.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Riaani wants Air Construct Cores, Crystallized Lightning and Enchanted Gyrozephyrs.",
+      "npc": 256083,
+      "quest": 93737,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 73.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Bind your hearthstone to Donaal Downbreeze's inn in Valanaar.",
+      "npc": 255940,
+      "type": "HEARTH_BIND",
+      "x": 62.2,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Blood Tithe: Alvarion Windfield sends you to his brother Aamelia at the orchard.",
+      "npc": 252448,
+      "quest": 92679,
+      "tag": "main",
+      "title": "Blood Tithe",
+      "type": "ACCEPT",
+      "x": 62.1,
+      "y": 73.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Crab Season: Nyalah wants Windsong Crawler Meat. Optional, on the north leg.",
+      "npc": 257006,
+      "quest": 93317,
+      "tag": "optional",
+      "title": "Crab Season",
+      "type": "ACCEPT",
+      "x": 60.6,
+      "y": 72.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Unwelcome Spirits: Endaria wants Wind Hollow Essences from the north ruins.",
+      "npc": 254344,
+      "quest": 93736,
+      "tag": "optional",
+      "title": "Unwelcome Spirits",
+      "type": "ACCEPT",
+      "x": 58.1,
+      "y": 78.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aid For The Refugees: Ealaane wants Abandoned Belongings from Ban'aethal.",
+      "npc": 259012,
+      "quest": 94896,
+      "tag": "optional",
+      "title": "Aid For The Refugees",
+      "type": "ACCEPT",
+      "x": 66.0,
+      "y": 74.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Fate of a Loved One: Ealaane's second request, in the same ruins.",
+      "npc": 259012,
+      "quest": 94897,
+      "tag": "optional",
+      "title": "The Fate of a Loved One",
+      "type": "ACCEPT",
+      "x": 66.0,
+      "y": 74.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Druids: The Great Ursera Spirit starts at Lotheluum. Needs level 10.",
+      "npc": 252359,
+      "quest": 94006,
+      "tag": "main",
+      "title": "The Great Ursera Spirit",
+      "type": "ACCEPT",
+      "x": 64.0,
+      "y": 75.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Unnerving Silence: Lotheluum sends you to Elegael Thornpaw in north Shadowgale.",
+      "npc": 252359,
+      "quest": 94484,
+      "tag": "main",
+      "title": "Unnerving Silence",
+      "type": "ACCEPT",
+      "x": 64.0,
+      "y": 75.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh Assassins: Fendaal Windstone's kill order, on the road north.",
+      "npc": 273017,
+      "quest": 98512,
+      "tag": "optional",
+      "title": "Al'Aketh Assassins",
+      "type": "ACCEPT",
+      "x": 56.8,
+      "y": 61.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Air Construct Core (level 4) on the way west, beside the orchard road.",
+      "objectiveIndex": 4,
+      "quest": 93737,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "COMPLETE",
+      "x": 44.2,
+      "y": 75.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aamelia Windfield at the orchard: she has the next lead.",
+      "npc": 252800,
+      "quest": 92679,
+      "tag": "main",
+      "title": "Blood Tithe",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Make Yourself Useful: Aamelia wants ripe stormapples and bandit kills.",
+      "npc": 252800,
+      "quest": 92682,
+      "tag": "main",
+      "title": "Make Yourself Useful",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Flutterfly Dust: Aamelia wants dust from the flutterflies around the orchard.",
+      "npc": 252800,
+      "quest": 92683,
+      "tag": "main",
+      "title": "Flutterfly Dust",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ornery Galestriders: Aamelia wants tenderloins from the galestriders to the east.",
+      "npc": 252800,
+      "quest": 92684,
+      "tag": "main",
+      "title": "Ornery Ornery Galestriders",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "What Is My Purpose?: speak to the Cyclone Construct first, then Aamelia.",
+      "npc": 250929,
+      "quest": 92698,
+      "tag": "optional",
+      "title": "What Is My Purpose?",
+      "type": "ACCEPT",
+      "x": 48.9,
+      "y": 78.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aamelia Windfield: report on the construct.",
+      "npc": 252800,
+      "quest": 92698,
+      "tag": "optional",
+      "title": "What Is My Purpose?",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hungry Bandits (level 8-9) and Ripe Stormapples (47.3, 81.3), right by Aamelia.",
+      "quest": 92682,
+      "tag": "main",
+      "title": "Make Yourself Useful",
+      "type": "COMPLETE",
+      "x": 47.8,
+      "y": 80.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Flutterflies around (50.3, 78.7). Use the swatter for the dust.",
+      "quest": 92683,
+      "tag": "main",
+      "title": "Flutterfly Dust",
+      "type": "COMPLETE",
+      "x": 50.0,
+      "y": 78.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ornery Galestriders on the open ground east of the orchard. Seven tenderloins.",
+      "quest": 92684,
+      "tag": "main",
+      "title": "Ornery Ornery Galestriders",
+      "type": "COMPLETE",
+      "x": 55.3,
+      "y": 73.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aamelia Windfield: stormapples and bandits done.",
+      "npc": 252800,
+      "quest": 92682,
+      "tag": "main",
+      "title": "Make Yourself Useful",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aamelia Windfield: dust collected.",
+      "npc": 252800,
+      "quest": 92683,
+      "tag": "main",
+      "title": "Flutterfly Dust",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aamelia Windfield: tenderloins collected.",
+      "npc": 252800,
+      "quest": 92684,
+      "tag": "main",
+      "title": "Ornery Ornery Galestriders",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Hills Have Eyes: Aamelia wants Blood-Stained Bandit Masks from the highwaymen.",
+      "npc": 252800,
+      "quest": 92685,
+      "tag": "main",
+      "title": "The Hills Have Eyes",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Highwayman Bandits north of the orchard. Seven masks.",
+      "quest": 92685,
+      "tag": "main",
+      "title": "The Hills Have Eyes",
+      "type": "COMPLETE",
+      "x": 48.6,
+      "y": 75.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Aamelia Windfield: the masks are in.",
+      "npc": 252800,
+      "quest": 92685,
+      "tag": "main",
+      "title": "The Hills Have Eyes",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Standing Our Ground: Aamelia is ready to face the bandit leader Ferauu.",
+      "npc": 252800,
+      "quest": 92693,
+      "tag": "main",
+      "title": "Standing Our Ground",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ferauu the Bludgeon (level 8) near the orchard. Seven kills.",
+      "quest": 92693,
+      "tag": "main",
+      "title": "Standing Our Ground",
+      "type": "COMPLETE",
+      "x": 48.1,
+      "y": 77.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "_review": "W_BACKTRACK: the Windfield chain is forced by prerequisites. The Hills Have Eyes needs the three orchard quests turned in, Standing Our Ground needs it, and Deliver the News needs that. Each return to Aamelia is under 8 map-% from the mobs, so the three returns are accepted.",
+      "note": "Aamelia Windfield: the bandit leader is dealt with.",
+      "npc": 252800,
+      "quest": 92693,
+      "tag": "main",
+      "title": "Standing Our Ground",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Deliver the News: Aamelia sends you back to Alvarion in Valanaar.",
+      "npc": 252800,
+      "quest": 92703,
+      "tag": "main",
+      "title": "Deliver the News",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 82.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Alvarion Windfield in Valanaar.",
+      "npc": 252448,
+      "quest": 92703,
+      "tag": "main",
+      "title": "Deliver the News",
+      "type": "TURNIN",
+      "x": 62.1,
+      "y": 73.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "About level 8: Valanaar trainers: hunter, rogue, druid, warrior, shaman. Learn what you can afford before the north leg.",
+      "type": "TRAINER",
+      "x": 61.2,
+      "y": 74.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Crystallized Lightning from the construct patch north of the orchard.",
+      "objectiveIndex": 2,
+      "quest": 93737,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "COMPLETE",
+      "x": 52.1,
+      "y": 66.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh Assassins (level 9-10) on the road north. Ten kills.",
+      "quest": 98512,
+      "tag": "optional",
+      "title": "Al'Aketh Assassins",
+      "type": "COMPLETE",
+      "x": 55.9,
+      "y": 60.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Enchanted Gyrozephyrs (level 4) on the Shen'dar side of the Gustberry road.",
+      "objectiveIndex": 3,
+      "quest": 93737,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "COMPLETE",
+      "x": 51.9,
+      "y": 47.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Fendaal Windstone at the assassin patch.",
+      "npc": 273017,
+      "quest": 98512,
+      "tag": "optional",
+      "title": "Al'Aketh Assassins",
+      "type": "TURNIN",
+      "x": 56.8,
+      "y": 61.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Riaani Nightwind in Valanaar.",
+      "npc": 256083,
+      "quest": 93737,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 73.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Broken Construct: Riaani sends you back to Ayessa.",
+      "npc": 256083,
+      "quest": 93738,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 73.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger in Valanaar.",
+      "npc": 251968,
+      "quest": 93738,
+      "tag": "main",
+      "title": "The Broken Construct",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "A Firm Response: Ayessa sends you to confront Belathaan Brightwish.",
+      "npc": 251968,
+      "quest": 93746,
+      "tag": "main",
+      "title": "A Firm Response",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Belathaan Brightwish on the road to the Shrine of Akir. Four kills, level 10.",
+      "quest": 93746,
+      "tag": "main",
+      "title": "A Firm Response",
+      "type": "COMPLETE",
+      "x": 59.3,
+      "y": 57.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Windsong Crawler Meat by the water north-east of Valanaar. Six pieces.",
+      "quest": 93317,
+      "tag": "optional",
+      "title": "Crab Season",
+      "type": "COMPLETE",
+      "x": 65.0,
+      "y": 61.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Back to Ayessa Dawnsinger to report.",
+      "npc": 251968,
+      "quest": 93746,
+      "tag": "main",
+      "title": "A Firm Response",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Blood for Blood: Ayessa wants Windstone Charms from the Al'Aketh cultists north of Valanaar.",
+      "npc": 251968,
+      "quest": 93740,
+      "tag": "main",
+      "title": "Blood for Blood",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "In Service of Zephras: Ayessa sends you back to Valennia once the charms are in.",
+      "npc": 251968,
+      "quest": 92871,
+      "tag": "main",
+      "title": "In Service of Zephras",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh Windstone Charms from Preachers, Pillagers and Guardians near the Shrine. Ten needed.",
+      "quest": 93740,
+      "tag": "main",
+      "title": "Blood for Blood",
+      "type": "COMPLETE",
+      "x": 63.6,
+      "y": 56.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw in north Shadowgale.",
+      "npc": 257944,
+      "quest": 94484,
+      "tag": "main",
+      "title": "Unnerving Silence",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Tears of the Lady: Elegael wants eight Lady's Tear Moss from the glade.",
+      "npc": 257944,
+      "quest": 94485,
+      "tag": "main",
+      "title": "Tears of the Lady",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Feathers for Binding: Elegael wants twenty Shriekling feathers.",
+      "npc": 257944,
+      "quest": 94486,
+      "tag": "main",
+      "title": "Feathers for Binding",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Unwanted and Unworthy: Elegael wants Bloody Heirlooms from the cultists.",
+      "npc": 257944,
+      "quest": 94487,
+      "tag": "main",
+      "title": "Unwanted and Unworthy",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Lady's Tear Moss in the Shadowgale glade. Eight needed.",
+      "quest": 94485,
+      "tag": "main",
+      "title": "Tears of the Lady",
+      "type": "COMPLETE",
+      "x": 60.9,
+      "y": 38.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Pristine Shriekling Feathers from the Shrieklings. Twenty needed.",
+      "quest": 94486,
+      "tag": "main",
+      "title": "Feathers for Binding",
+      "type": "COMPLETE",
+      "x": 58.7,
+      "y": 39.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Bloody Heirlooms from Al'Aketh footsoldiers and stormchasers. Ten needed.",
+      "quest": 94487,
+      "tag": "main",
+      "title": "Unwanted and Unworthy",
+      "type": "COMPLETE",
+      "x": 63.5,
+      "y": 37.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw: the moss is in.",
+      "npc": 257944,
+      "quest": 94485,
+      "tag": "main",
+      "title": "Tears of the Lady",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw: the feathers are in.",
+      "npc": 257944,
+      "quest": 94486,
+      "tag": "main",
+      "title": "Feathers for Binding",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw: the heirlooms are in.",
+      "npc": 257944,
+      "quest": 94487,
+      "tag": "main",
+      "title": "Unwanted and Unworthy",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Ties That Bind: Commander Haalien's head is the last part of the Shadowgale chain.",
+      "npc": 257944,
+      "quest": 94488,
+      "tag": "main",
+      "title": "The Ties That Bind",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Wounds of Betrayal: heal the druids in the Nightfang Den and find Jorel.",
+      "npc": 257944,
+      "quest": 94489,
+      "tag": "main",
+      "title": "The Wounds of Betrayal",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Commander Haalien at (65.5, 36.3). Kill him and take the head.",
+      "quest": 94488,
+      "tag": "main",
+      "title": "The Ties That Bind",
+      "type": "COMPLETE",
+      "x": 65.5,
+      "y": 36.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Jorel Windsinger at (64.5, 34.7). Heal the Nightfang druids first.",
+      "quest": 94489,
+      "tag": "main",
+      "title": "The Wounds of Betrayal",
+      "type": "COMPLETE",
+      "x": 64.5,
+      "y": 34.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw: the head is delivered.",
+      "npc": 257944,
+      "quest": 94488,
+      "tag": "main",
+      "title": "The Ties That Bind",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw: the den is healed.",
+      "npc": 257944,
+      "quest": 94489,
+      "tag": "main",
+      "title": "The Wounds of Betrayal",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ripped Missive: pick up the letter from Haalien's camp.",
+      "quest": 94490,
+      "tag": "main",
+      "title": "Ripped Missive",
+      "type": "ACCEPT",
+      "x": 65.5,
+      "y": 36.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elegael Thornpaw: the missive is in.",
+      "npc": 257944,
+      "quest": 94490,
+      "tag": "main",
+      "title": "Ripped Missive",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Fate of the Den: carry the missive to Lotheluum in Valanaar.",
+      "npc": 257944,
+      "quest": 94491,
+      "tag": "main",
+      "title": "The Fate of the Den",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 39.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Wind Hollow Essences in the Ban'aethal ruins. Ten needed.",
+      "quest": 93736,
+      "tag": "optional",
+      "title": "Unwelcome Spirits",
+      "type": "COMPLETE",
+      "x": 58.2,
+      "y": 32.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Abandoned Belongings in the Ban'aethal ruins. Eight needed.",
+      "quest": 94896,
+      "tag": "optional",
+      "title": "Aid For The Refugees",
+      "type": "COMPLETE",
+      "x": 58.0,
+      "y": 31.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Resaan's Heirloom in the ruins. Find Resaan first.",
+      "quest": 94897,
+      "tag": "optional",
+      "title": "The Fate of a Loved One",
+      "type": "COMPLETE",
+      "x": 57.0,
+      "y": 29.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hearthstone to Donaal's inn in Valanaar. The walk back is long.",
+      "type": "HEARTH_USE",
+      "x": 57.0,
+      "y": 29.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Lotheluum Starbreeze in Valanaar.",
+      "npc": 252359,
+      "quest": 94491,
+      "tag": "main",
+      "title": "The Fate of the Den",
+      "type": "TURNIN",
+      "x": 64.0,
+      "y": 75.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ealaane Nimbuswalker in Valanaar.",
+      "npc": 259012,
+      "quest": 94896,
+      "tag": "optional",
+      "title": "Aid For The Refugees",
+      "type": "TURNIN",
+      "x": 66.0,
+      "y": 74.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ealaane Nimbuswalker in Valanaar.",
+      "npc": 259012,
+      "quest": 94897,
+      "tag": "optional",
+      "title": "The Fate of a Loved One",
+      "type": "TURNIN",
+      "x": 66.0,
+      "y": 74.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Endaria Mistgaze in Valanaar.",
+      "npc": 254344,
+      "quest": 93736,
+      "tag": "optional",
+      "title": "Unwelcome Spirits",
+      "type": "TURNIN",
+      "x": 58.1,
+      "y": 78.3,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger in Valanaar.",
+      "npc": 251968,
+      "quest": 93740,
+      "tag": "main",
+      "title": "Blood for Blood",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Nyalah Brightfire in Valanaar.",
+      "npc": 257006,
+      "quest": 93317,
+      "tag": "optional",
+      "title": "Crab Season",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 72.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist: Ayessa's report is delivered.",
+      "npc": 252383,
+      "quest": 92871,
+      "tag": "main",
+      "title": "In Service of Zephras",
+      "type": "TURNIN",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Tower Defense: Valennia sends you to Yorana Windyreed at the eastern watchtower.",
+      "npc": 252383,
+      "quest": 93320,
+      "tag": "main",
+      "title": "Tower Defense",
+      "type": "ACCEPT",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Yorana Windyreed at the eastern watchtower.",
+      "npc": 252378,
+      "quest": 93320,
+      "reward": {
+        "preferItem": 263340,
+        "why": "Mail wearers: Peacekeeper's Legguards (level 13). Others: Windswept Slippers."
+      },
+      "tag": "main",
+      "title": "Tower Defense",
+      "type": "TURNIN",
+      "x": 69.7,
+      "y": 67.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Disrupting Logistics: Yorana wants Al'Aketh healers and brawlers west of her.",
+      "npc": 252378,
+      "quest": 92642,
+      "tag": "main",
+      "title": "Disrupting Logistics",
+      "type": "ACCEPT",
+      "x": 69.7,
+      "y": 67.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Breaking the Breaker: Yorana sends you to Commander Belguilos at the camp.",
+      "npc": 252378,
+      "quest": 92645,
+      "tag": "main",
+      "title": "Breaking the Breaker",
+      "type": "ACCEPT",
+      "x": 69.7,
+      "y": 67.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Urs'endris, north-east of Valanaar, for the druid chain.",
+      "npc": 255853,
+      "quest": 94006,
+      "tag": "main",
+      "title": "The Great Ursera Spirit",
+      "type": "TURNIN",
+      "x": 69.8,
+      "y": 61.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Strength and Mercy: Urs'endris wants six Ur'endra killed on the Gustberry road.",
+      "npc": 255853,
+      "quest": 94638,
+      "tag": "main",
+      "title": "Strength and Mercy",
+      "type": "ACCEPT",
+      "x": 69.8,
+      "y": 61.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh Healers (31) and Brawlers (39) just west of Yorana. Healers first.",
+      "quest": 92642,
+      "tag": "main",
+      "title": "Disrupting Logistics",
+      "type": "COMPLETE",
+      "x": 65.9,
+      "y": 67.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Commander Belguilos at the camp north-west of Yorana.",
+      "quest": 92645,
+      "tag": "main",
+      "title": "Breaking the Breaker",
+      "type": "COMPLETE",
+      "x": 65.6,
+      "y": 65.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Ur'endra on the Gustberry road. Six kills.",
+      "quest": 94638,
+      "tag": "main",
+      "title": "Strength and Mercy",
+      "type": "COMPLETE",
+      "x": 54.2,
+      "y": 65.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Urs'endris: Ur'endra is dealt with.",
+      "npc": 255853,
+      "quest": 94638,
+      "tag": "main",
+      "title": "Strength and Mercy",
+      "type": "TURNIN",
+      "x": 69.8,
+      "y": 61.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Yorana Windyreed: the healers and brawlers are done.",
+      "npc": 252378,
+      "quest": 92642,
+      "tag": "main",
+      "title": "Disrupting Logistics",
+      "type": "TURNIN",
+      "x": 69.7,
+      "y": 67.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Yorana Windyreed: Belguilos is down.",
+      "npc": 252378,
+      "quest": 92645,
+      "tag": "main",
+      "title": "Breaking the Breaker",
+      "type": "TURNIN",
+      "x": 69.7,
+      "y": 67.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Return to Valanaar: Yorana's report goes back to Valennia.",
+      "npc": 252378,
+      "quest": 92880,
+      "tag": "main",
+      "title": "Return to Valanaar",
+      "type": "ACCEPT",
+      "x": 69.7,
+      "y": 67.1,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist in Valanaar.",
+      "npc": 252383,
+      "quest": 92880,
+      "reward": {
+        "preferItem": 257346,
+        "why": "Quickblade's Dagger (level 13 dagger): the one-hander pick. Warriors: Honed Greathammer."
+      },
+      "tag": "main",
+      "title": "Return to Valanaar",
+      "type": "TURNIN",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The High Elder's Request: Valennia sends you to Talaanis Shadowsong.",
+      "npc": 252383,
+      "quest": 92881,
+      "tag": "main",
+      "title": "The High Elder's Request",
+      "type": "ACCEPT",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Talaanis Shadowsong in Valanaar.",
+      "npc": 252476,
+      "quest": 92881,
+      "tag": "main",
+      "title": "The High Elder's Request",
+      "type": "TURNIN",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Turncoat: Talaanis sends you to the cultist house north-west of Valanaar.",
+      "npc": 252476,
+      "quest": 92643,
+      "tag": "main",
+      "title": "The Turncoat",
+      "type": "ACCEPT",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Find the turncoat at the house. The Dead Cultist is at (56.0, 58.8).",
+      "quest": 92643,
+      "tag": "main",
+      "title": "The Turncoat",
+      "type": "COMPLETE",
+      "x": 56.0,
+      "y": 58.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Dead Cultist at the house north-west of Valanaar.",
+      "npc": 253372,
+      "quest": 92643,
+      "tag": "main",
+      "title": "The Turncoat",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 58.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Unfortunate News: the Dead Cultist gives you the glowing crystal.",
+      "npc": 253372,
+      "quest": 92644,
+      "tag": "main",
+      "title": "Unfortunate News",
+      "type": "ACCEPT",
+      "x": 56.0,
+      "y": 58.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Talaanis Shadowsong in Valanaar.",
+      "npc": 252476,
+      "quest": 92644,
+      "tag": "main",
+      "title": "Unfortunate News",
+      "type": "TURNIN",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Cult's True Plans: speak with Talaanis and observe the talk.",
+      "npc": 252476,
+      "quest": 94568,
+      "tag": "main",
+      "title": "The Cult's True Plans",
+      "type": "ACCEPT",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Talaanis Shadowsong: you have seen the talk.",
+      "npc": 252476,
+      "quest": 94568,
+      "tag": "main",
+      "title": "The Cult's True Plans",
+      "type": "TURNIN",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Desperate Times: Talaanis sends you to Valennia's elite talks. Optional.",
+      "npc": 252476,
+      "quest": 92640,
+      "revisitAt": 12,
+      "tag": "optional-elite",
+      "title": "Desperate Times",
+      "type": "ACCEPT",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Elaadrin Evengale beside Valennia. Elite talk. Optional, revisit at 12.",
+      "quest": 92640,
+      "tag": "optional-elite",
+      "title": "Desperate Times",
+      "type": "COMPLETE",
+      "x": 66.6,
+      "y": 79.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist in Valanaar.",
+      "npc": 252383,
+      "quest": 92640,
+      "tag": "optional-elite",
+      "title": "Desperate Times",
+      "type": "TURNIN",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Prepare for Battle: Valennia wants you ready in the Gustberry Lowlands.",
+      "npc": 252383,
+      "quest": 93065,
+      "tag": "main",
+      "title": "Prepare for Battle",
+      "type": "ACCEPT",
+      "x": 66.1,
+      "y": 76.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist in the Gustberry Lowlands.",
+      "npc": 253844,
+      "quest": 93065,
+      "tag": "main",
+      "title": "Prepare for Battle",
+      "type": "TURNIN",
+      "x": 61.2,
+      "y": 70.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Making Our Move: Valennia sends you to the Shrine of Akir with seven of each cultist.",
+      "npc": 253844,
+      "quest": 92947,
+      "tag": "main",
+      "title": "Making Our Move",
+      "type": "ACCEPT",
+      "x": 61.2,
+      "y": 70.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "The Skybreaker Bulwark: Seena sends you to the Shrine for the Stormshield. Warriors only.",
+      "npc": 252377,
+      "quest": 94003,
+      "tag": "main",
+      "title": "The Skybreaker Bulwark",
+      "type": "ACCEPT",
+      "x": 59.9,
+      "y": 72.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Al'Aketh Guardians, Spiritcallers and Blademasters at the Shrine of Akir (level 10-11).",
+      "quest": 92947,
+      "tag": "main",
+      "title": "Making Our Move",
+      "type": "COMPLETE",
+      "x": 62.2,
+      "y": 50.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Zaal Stormshield at the Shrine of Akir. Warriors only.",
+      "quest": 94003,
+      "tag": "main",
+      "title": "The Skybreaker Bulwark",
+      "type": "COMPLETE",
+      "x": 56.6,
+      "y": 50.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Hyusaa Quickbreeze at the Shrine of Akir.",
+      "npc": 253576,
+      "quest": 92947,
+      "tag": "main",
+      "title": "Making Our Move",
+      "type": "TURNIN",
+      "x": 63.8,
+      "y": 50.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Inner Sanctum: Hyusaa sends you back to Valennia at the sanctum.",
+      "npc": 253576,
+      "quest": 93958,
+      "tag": "main",
+      "title": "The Inner Sanctum",
+      "type": "ACCEPT",
+      "x": 63.8,
+      "y": 50.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Valennia Stormfist inside the sanctum.",
+      "npc": 253590,
+      "quest": 93958,
+      "tag": "main",
+      "title": "The Inner Sanctum",
+      "type": "TURNIN",
+      "x": 65.2,
+      "y": 50.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Seena Skybreaker in Valanaar.",
+      "npc": 252377,
+      "quest": 94003,
+      "reward": {
+        "preferItem": 275290,
+        "why": "Stormforged Protector (level 14 shield): a large armour upgrade for Warriors."
+      },
+      "tag": "main",
+      "title": "The Skybreaker Bulwark",
+      "type": "TURNIN",
+      "x": 59.9,
+      "y": 72.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Confront Lorthuna: Valennia sends you through the Rohashi portal. Elite. Optional.",
+      "npc": 253590,
+      "quest": 92646,
+      "revisitAt": 14,
+      "tag": "optional-elite",
+      "title": "Confront Lorthuna",
+      "type": "ACCEPT",
+      "x": 65.2,
+      "y": 50.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa's elite fight at the Rohashi portal (65.5, 50.3). Optional, revisit at 14.",
+      "quest": 92646,
+      "tag": "optional-elite",
+      "title": "Confront Lorthuna",
+      "type": "COMPLETE",
+      "x": 74.0,
+      "y": 52.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger in Valanaar.",
+      "npc": 251968,
+      "quest": 92646,
+      "tag": "optional-elite",
+      "title": "Confront Lorthuna",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "The Fate of Zephras: Ayessa sends you to Talaanis.",
+      "npc": 251968,
+      "quest": 93836,
+      "tag": "main",
+      "title": "The Fate of Zephras",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Talaanis Shadowsong: speak with her in Valanaar.",
+      "quest": 93836,
+      "tag": "main",
+      "title": "The Fate of Zephras",
+      "type": "COMPLETE",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger in Valanaar.",
+      "npc": 252476,
+      "quest": 93836,
+      "tag": "main",
+      "title": "The Fate of Zephras",
+      "type": "TURNIN",
+      "x": 66.2,
+      "y": 76.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "A Grand Adventure: Ayessa has something to say. Elite-flagged talk. Optional.",
+      "npc": 251968,
+      "quest": 92708,
+      "revisitAt": 10,
+      "tag": "optional-elite",
+      "title": "A Grand Adventure",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Ayessa Dawnsinger: you have listened.",
+      "npc": 251968,
+      "quest": 92708,
+      "tag": "optional-elite",
+      "title": "A Grand Adventure",
+      "type": "TURNIN",
+      "x": 59.1,
+      "y": 79.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "bagCheck": true,
+      "classes": [
+        "HUNTER",
+        "SHAMAN"
+      ],
+      "note": "Hunters and Shamans at level 10: back to Shen'dar Village for the class starters. Others skip.",
+      "to": "Shen'dar Village",
+      "type": "TRAVEL",
+      "x": 61.2,
+      "y": 74.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Taming the Beast: Elayaa Easewind's first taming quest. Needs level 10.",
+      "npc": 254084,
+      "quest": 94007,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 45.3,
+      "y": 44.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Call of Fire: Aarnor Galestrike sends you to Olariaan. Needs level 10.",
+      "npc": 254082,
+      "quest": 97243,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "ACCEPT",
+      "x": 43.5,
+      "y": 44.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "WANTED: Vulgara the Insatiable. Elite (level 8). Optional, revisit at 11.",
+      "quest": 93318,
+      "revisitAt": 11,
+      "tag": "optional-elite",
+      "title": "WANTED: Vulgara the Insatiable",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 45.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Vulgara's head from the Highlands. Elite, so take it only if you are ready.",
+      "quest": 93318,
+      "tag": "optional-elite",
+      "title": "WANTED: Vulgara the Insatiable",
+      "type": "COMPLETE",
+      "x": 42.7,
+      "y": 52.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Danarii Bellowveil in Shen'dar Village.",
+      "npc": 252172,
+      "quest": 93318,
+      "tag": "optional-elite",
+      "title": "WANTED: Vulgara the Insatiable",
+      "type": "TURNIN",
+      "x": 45.2,
+      "y": 45.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Olariaan Swiftburn at the Shrine of Flames: bring him the Torch of Dormant Flame.",
+      "npc": 268592,
+      "quest": 97243,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "TURNIN",
+      "x": 51.2,
+      "y": 86.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Call of Fire: Olariaan wants Faladiel's Heart from the Skypriest.",
+      "npc": 268592,
+      "quest": 97244,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "ACCEPT",
+      "x": 51.2,
+      "y": 86.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Skypriest Faladiel in the Gustberry Lowlands. Take the heart.",
+      "quest": 97244,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "COMPLETE",
+      "x": 64.4,
+      "y": 63.7,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Olariaan Swiftburn: Faladiel's Heart is delivered.",
+      "npc": 268592,
+      "quest": 97244,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "TURNIN",
+      "x": 51.2,
+      "y": 86.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Call of Fire: Olariaan sends you after Kuramaa in the Shen'dar Highlands.",
+      "npc": 268592,
+      "quest": 97245,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "ACCEPT",
+      "x": 51.2,
+      "y": 86.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Kuramaa's stump in the Shen'dar Highlands. Defeat the spirit, take the mask.",
+      "quest": 97245,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "COMPLETE",
+      "x": 42.4,
+      "y": 68.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Olariaan Swiftburn: Kuramaa's Mask is delivered.",
+      "npc": 268592,
+      "quest": 97245,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "TURNIN",
+      "x": 51.2,
+      "y": 86.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Call of Fire: the braziers and the Eternal Flame. Deliver it to Sessaria.",
+      "npc": 268592,
+      "quest": 97257,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "ACCEPT",
+      "x": 51.2,
+      "y": 86.2,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Brazier of Offering at (51.2, 85.9), then the Brazier of Eternal Flame at (58.4, 78.8).",
+      "quest": 97257,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "COMPLETE",
+      "x": 51.2,
+      "y": 85.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Sessaria Skystride at the Gustberry shrine.",
+      "npc": 252382,
+      "quest": 97257,
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "TURNIN",
+      "x": 58.3,
+      "y": 78.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Quel'ana Quickgale in Valanaar: the first taming is done.",
+      "npc": 252389,
+      "quest": 94007,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Taming the Beast: tame a Windsong Crawler with the Taming Rod.",
+      "npc": 252389,
+      "quest": 94978,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Windsong Crawlers near the water. Tame one, then return the rod.",
+      "quest": 94978,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 51.6,
+      "y": 58.5,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Quel'ana Quickgale in Valanaar.",
+      "npc": 252389,
+      "quest": 94978,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Taming the Beast: tame an Ornery Galestrider with the Taming Rod.",
+      "npc": 252389,
+      "quest": 94979,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Ornery Galestriders in the Gustberry Lowlands. Tame one.",
+      "quest": 94979,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 55.3,
+      "y": 73.4,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Quel'ana Quickgale in Valanaar.",
+      "npc": 252389,
+      "quest": 94979,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Taming the Beast: tame a Vuldren Alpha with the Taming Rod.",
+      "npc": 252389,
+      "quest": 94013,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Vuldren Alpha in the Gustberry Lowlands. Tame it.",
+      "quest": 94013,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 54.7,
+      "y": 73.8,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Quel'ana Quickgale in Valanaar.",
+      "npc": 252389,
+      "quest": 94013,
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Training the Beast: Quel'ana sends you to Quel'dora Quickgale.",
+      "npc": 252389,
+      "quest": 94050,
+      "tag": "main",
+      "title": "Training the Beast",
+      "type": "ACCEPT",
+      "x": 59.6,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Quel'dora Quickgale in Valanaar.",
+      "npc": 254411,
+      "quest": 94050,
+      "tag": "main",
+      "title": "Training the Beast",
+      "type": "TURNIN",
+      "x": 59.9,
+      "y": 72.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Take the Zephra's Isle zeppelin to Thunder Bluff. Gold cost only. Optional side trip.",
+      "to": "Thunder Bluff",
+      "type": "FLY",
+      "x": 57.7,
+      "y": 81.0,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Fizsprocket's Notes: Morin wants the rest of Fizsprocket's pages. Optional, Mulgore.",
+      "quest": 98424,
+      "tag": "optional",
+      "title": "Fizsprocket's Notes",
+      "type": "ACCEPT",
+      "x": 61.2,
+      "y": 49.3,
+      "zone": "Mulgore"
+    },
+    {
+      "bagCheck": true,
+      "note": "Pages from the Venture Co. mine carts: (58.6, 47.3), (61.7, 47.3) and (59.0, 46.4).",
+      "quest": 98424,
+      "tag": "optional",
+      "title": "Fizsprocket's Notes",
+      "type": "COMPLETE",
+      "x": 59.0,
+      "y": 46.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin Cloudstalker near Bloodhoof Village.",
+      "npc": 2988,
+      "quest": 98424,
+      "tag": "optional",
+      "title": "Fizsprocket's Notes",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Ceasing Operations: Morin wants the Clearcutter Key. Elite, optional. Revisit at 13.",
+      "npc": 2988,
+      "quest": 98427,
+      "revisitAt": 13,
+      "tag": "optional-elite",
+      "title": "Ceasing Operations",
+      "type": "ACCEPT",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Venture Co. Clearclutter (level 12 elite) in the mine. Optional, revisit at 13.",
+      "quest": 98427,
+      "tag": "optional-elite",
+      "title": "Ceasing Operations",
+      "type": "COMPLETE",
+      "x": 56.8,
+      "y": 42.8,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin Cloudstalker near Bloodhoof Village.",
+      "npc": 2988,
+      "quest": 98427,
+      "tag": "optional-elite",
+      "title": "Ceasing Operations",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "bagCheck": true,
+      "note": "Walk back to Thunder Bluff's zeppelin tower. Check your bags first.",
+      "to": "Thunder Bluff",
+      "type": "TRAVEL",
+      "x": 57.7,
+      "y": 88.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Zeppelin back to Valanaar on Zephra's Isle. Gold cost only.",
+      "to": "Zephra's Isle",
+      "type": "FLY",
+      "x": 57.7,
+      "y": 88.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "About level 10: Valanaar trainers again: hunter, rogue, druid, warrior, shaman. Learn what you can afford before the next band.",
+      "type": "TRAINER",
+      "x": 61.2,
+      "y": 74.9,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Sell greys in Valanaar, then repair at the nearest vendor before the next band.",
+      "type": "VENDOR_REPAIR",
+      "x": 62.2,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    },
+    {
+      "note": "Donaal Downbreeze: food and water. Hunters: Antelariaa Cloudgaze at (63.0, 77.8) has arrows.",
+      "type": "BUY",
+      "x": 62.2,
+      "y": 72.6,
+      "zone": "Zephra's Isle"
+    }
+  ]
+}

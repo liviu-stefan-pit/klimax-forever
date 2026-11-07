@@ -1,0 +1,1004 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 743,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 744,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 745,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 746,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 748,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 749,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 750,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 751,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 753,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 754,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 755,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 756,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 757,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 758,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 759,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 760,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 761,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 763,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 764,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 765,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 766,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 767,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 768,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 769,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 770,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 771,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 772,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 773,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 775,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 780,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 781,
+      "reason": "Off-isle reach-zone quest: reached only by the isle zeppelin, not on this band's path."
+    },
+    {
+      "decision": "drop",
+      "quest": 833,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 860,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 861,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 886,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1462,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1505,
+      "reason": "Warrior quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1519,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1520,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1523,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1656,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 1883,
+      "reason": "Mage quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 2984,
+      "reason": "Shaman quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 3376,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 5655,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Troll: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 5656,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Troll: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 5661,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Undead: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 5663,
+      "reason": "Priest-only Mulgore or Thunder Bluff quest for Undead: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 5922,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 5926,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 5928,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6002,
+      "reason": "Druid-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6061,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6065,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6070,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Orc/Troll: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6087,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6088,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6089,
+      "reason": "Hunter-only Mulgore or Thunder Bluff quest for Tauren: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6363,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 6364,
+      "reason": "Tauren-only quest in Mulgore or Thunder Bluff: needs a zeppelin trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 9264,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 76156,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 76160,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 76240,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 92463,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92464,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92465,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92466,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92467,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92468,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92469,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92470,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92471,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92472,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92473,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92514,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92515,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "main",
+      "quest": 92516,
+      "reason": "Hippogryph Youths, Protectors and the Matriarch west of Shen'dar, level 6-7. Clean kill quest."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 92517,
+      "reason": "Highlands bandit camp, level 7. Highlands Mail Legguards are the first mail step."
+    },
+    {
+      "decision": "main",
+      "quest": 92528,
+      "reason": "Falaath wardrobe look-around. Gates Havoc in the Highlands and Stolen Supplies."
+    },
+    {
+      "decision": "main",
+      "quest": 92529,
+      "reason": "Falaath Village entrance report. Second link of the cult chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 92544,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "main",
+      "quest": 92550,
+      "reason": "Havoc in the Highlands: Stormcallers and Living Lightning in Falaath, level 7-8."
+    },
+    {
+      "decision": "main",
+      "quest": 92551,
+      "reason": "Stolen supply packs in Falaath. The Delanea packs sit on the road to Valanaar."
+    },
+    {
+      "decision": "drop",
+      "quest": 92553,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "main",
+      "quest": 92579,
+      "reason": "Aonda's report opens Valanaar, the isle's south-east half."
+    },
+    {
+      "decision": "main",
+      "quest": 92595,
+      "reason": "Windshapers chain head with Illaya. Leads to the Meddlesome Mages kill quest."
+    },
+    {
+      "decision": "drop",
+      "quest": 92598,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92640,
+      "reason": "Desperate Times: elite-flagged talk chain with Ayessa and Elaadrin. Kept, skippable.",
+      "revisitAt": 12
+    },
+    {
+      "decision": "main",
+      "quest": 92642,
+      "reason": "Al'Aketh healers and brawlers west of Yorana, level 9-10. Needed for Return to Valanaar."
+    },
+    {
+      "decision": "main",
+      "quest": 92643,
+      "reason": "The Turncoat: find the cultist north-west of Valanaar. Part of the cult chain."
+    },
+    {
+      "decision": "main",
+      "quest": 92644,
+      "reason": "Unfortunate News: deliver the glowing crystal back to Talaanis."
+    },
+    {
+      "decision": "main",
+      "quest": 92645,
+      "reason": "Commander Belguilos at the Gustberry camp, level 10. Needed for Return to Valanaar."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92646,
+      "reason": "Confront Lorthuna: elite-flagged portal fight at the Rohashi Spires. Kept, skippable.",
+      "revisitAt": 14
+    },
+    {
+      "decision": "main",
+      "quest": 92679,
+      "reason": "Blood Tithe opens the Windfield Orchard cluster."
+    },
+    {
+      "decision": "main",
+      "quest": 92682,
+      "reason": "Hungry Bandits and Stormapples in the orchard. Needed for The Hills Have Eyes."
+    },
+    {
+      "decision": "main",
+      "quest": 92683,
+      "reason": "Flutterfly dust in the orchard. Needed for The Hills Have Eyes."
+    },
+    {
+      "decision": "main",
+      "quest": 92684,
+      "reason": "Galestrider tenderloins. Needed for The Hills Have Eyes."
+    },
+    {
+      "decision": "main",
+      "quest": 92685,
+      "reason": "Highwayman masks in the orchard. Gates Standing Our Ground."
+    },
+    {
+      "decision": "main",
+      "quest": 92693,
+      "reason": "Ferauu the Bludgeon, level 8. Gates Deliver the News."
+    },
+    {
+      "decision": "optional",
+      "quest": 92698,
+      "reason": "What Is My Purpose?: a talk at the orchard. No mobs, cheap."
+    },
+    {
+      "decision": "main",
+      "quest": 92700,
+      "reason": "The Grand Skyseer: Valennia sends you to Ayessa. Gates the Broken Construct chain."
+    },
+    {
+      "decision": "main",
+      "quest": 92703,
+      "reason": "Deliver the News: Aamelia's last step, back to Alvarion in Valanaar."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92708,
+      "reason": "A Grand Adventure: elite-flagged talk with Ayessa. Kept, skippable.",
+      "revisitAt": 10
+    },
+    {
+      "decision": "main",
+      "quest": 92871,
+      "reason": "In Service of Zephras: Ayessa's report to Valennia. Gates Tower Defense."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 92880,
+      "reason": "Return to Valanaar: Yorana's report. Level 13 weapons, Quickblade's Dagger is the pick."
+    },
+    {
+      "decision": "main",
+      "quest": 92881,
+      "reason": "The High Elder's Request: Valennia sends you to Talaanis."
+    },
+    {
+      "decision": "main",
+      "quest": 92947,
+      "reason": "Making Our Move: seven Guardians, Spiritcallers and Blademasters at the Shrine, level 10-11."
+    },
+    {
+      "decision": "main",
+      "quest": 93036,
+      "reason": "Infiltrating the Cult: Aonda's order that opens the Falaath chain."
+    },
+    {
+      "decision": "main",
+      "quest": 93065,
+      "reason": "Prepare for Battle: Valennia's ready-check. Gates Making Our Move."
+    },
+    {
+      "decision": "optional",
+      "quest": 93317,
+      "reason": "Crab Season: six crawler meat for food rewards. Optional gather on the north leg."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 93318,
+      "reason": "WANTED: Vulgara the Insatiable, elite level 8 in the Highlands. Kept, skippable.",
+      "revisitAt": 11
+    },
+    {
+      "decision": "optional",
+      "quest": 93319,
+      "reason": "Pilfered Windstones from the same bandit camp as The Criminal Element."
+    },
+    {
+      "decision": "main",
+      "keyReward": true,
+      "quest": 93320,
+      "reason": "Tower Defense: Peacekeeper's Legguards (level 13 mail) are the armour step."
+    },
+    {
+      "decision": "drop",
+      "quest": 93552,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "main",
+      "quest": 93735,
+      "reason": "The Broken Construct: Ayessa sends you to Riaani."
+    },
+    {
+      "decision": "optional",
+      "quest": 93736,
+      "reason": "Unwelcome Spirits: ten Wind Hollow Essences in the north ruins, on the Ban'aethal leg."
+    },
+    {
+      "decision": "main",
+      "quest": 93737,
+      "reason": "The Broken Construct: three construct drops across the isle. Gates Riaani's next step."
+    },
+    {
+      "decision": "main",
+      "quest": 93738,
+      "reason": "The Broken Construct: report back to Ayessa. Gates A Firm Response."
+    },
+    {
+      "decision": "main",
+      "quest": 93740,
+      "reason": "Blood for Blood: Windstone Charms from the Shrine cultists. Gates In Service of Zephras."
+    },
+    {
+      "decision": "main",
+      "quest": 93746,
+      "reason": "A Firm Response: Belathaan Brightwish, four kills at level 10. Gates Blood for Blood."
+    },
+    {
+      "decision": "main",
+      "quest": 93836,
+      "reason": "The Fate of Zephras: talk with Talaanis. Chain end inside this band."
+    },
+    {
+      "decision": "main",
+      "quest": 93926,
+      "reason": "The Western Watch: Peacekeeper Vaaniel. Gates A Last Request."
+    },
+    {
+      "decision": "main",
+      "quest": 93927,
+      "reason": "A Last Request: Skypriest Aanders and the Shadowsong signet. Gates the Valanaar quests."
+    },
+    {
+      "decision": "main",
+      "quest": 93948,
+      "reason": "Deliver the Signet: Talaanis is the gate into the Valanaar chains."
+    },
+    {
+      "decision": "main",
+      "quest": 93949,
+      "reason": "Bugged: eight Enchanted Skyhoppers near Valanaar, level 7-8."
+    },
+    {
+      "decision": "optional",
+      "quest": 93951,
+      "reason": "A Little Beauty: eight Hippogryph Down from the western flock, same trip as Harassment."
+    },
+    {
+      "decision": "main",
+      "quest": 93958,
+      "reason": "The Inner Sanctum: Valennia's talk at the Shrine. Gates Confront Lorthuna."
+    },
+    {
+      "decision": "class",
+      "quest": 94003,
+      "reason": "Skybreaker Bulwark: Warriors only. Stormforged Protector (level 14) is a shield upgrade."
+    },
+    {
+      "decision": "class",
+      "quest": 94006,
+      "reason": "Druid chain start: The Great Ursera Spirit, needs level 10."
+    },
+    {
+      "decision": "class",
+      "quest": 94007,
+      "reason": "Hunter: Taming the Beast starter at Elayaa, Shen'dar. Needs level 10."
+    },
+    {
+      "decision": "class",
+      "quest": 94013,
+      "reason": "Hunter: tame a Vuldren Alpha. Needs level 10."
+    },
+    {
+      "decision": "class",
+      "quest": 94050,
+      "reason": "Hunter: Training the Beast, the chain's last step."
+    },
+    {
+      "decision": "main",
+      "quest": 94411,
+      "reason": "Meddlesome Mages: six High Order Apprentices, level 5-6. Totem of Charged Flames for shamans."
+    },
+    {
+      "decision": "main",
+      "quest": 94484,
+      "reason": "Unnerving Silence opens the Shadowgale chain. Its exclusive twin 94493 is dropped."
+    },
+    {
+      "decision": "main",
+      "quest": 94485,
+      "reason": "Tears of the Lady: Lady's Tear Moss in Shadowgale. Easy gather."
+    },
+    {
+      "decision": "main",
+      "quest": 94486,
+      "reason": "Feathers for Binding: twenty Shriekling feathers, level 10-11 mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 94487,
+      "reason": "Unwanted and Unworthy: Bloody Heirlooms from level 10-11 footsoldiers."
+    },
+    {
+      "decision": "main",
+      "quest": 94488,
+      "reason": "The Ties That Bind: Commander Haalien, level 10. Gates Ripped Missive."
+    },
+    {
+      "decision": "main",
+      "quest": 94489,
+      "reason": "The Wounds of Betrayal: heal the druids in the Nightfang Den, level 10."
+    },
+    {
+      "decision": "main",
+      "quest": 94490,
+      "reason": "Ripped Missive: picks up the letter from Haalien's camp."
+    },
+    {
+      "decision": "main",
+      "quest": 94491,
+      "reason": "The Fate of the Den: carry the missive to Lotheluum in Valanaar."
+    },
+    {
+      "decision": "drop",
+      "quest": 94493,
+      "reason": "Exclusive alternative to Unnerving Silence (94484). Only one of the two can be done."
+    },
+    {
+      "decision": "main",
+      "quest": 94568,
+      "reason": "The Cult's True Plans: observe the talk with Talaanis. Gates Desperate Times."
+    },
+    {
+      "decision": "class",
+      "quest": 94638,
+      "reason": "Druid: Strength and Mercy, six Ur'endra kills on the Gustberry road."
+    },
+    {
+      "decision": "optional",
+      "quest": 94896,
+      "reason": "Aid For The Refugees: eight Abandoned Belongings in Ban'aethal. No reward, on the way."
+    },
+    {
+      "decision": "optional",
+      "quest": 94897,
+      "reason": "The Fate of a Loved One: Resaan's heirloom in the same ruins as Aid For The Refugees."
+    },
+    {
+      "decision": "drop",
+      "quest": 94911,
+      "reason": "Druid quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 94913,
+      "reason": "Druid quest in Mulgore or Thunder Bluff: the isle has no land link, so it needs a zeppelin trip."
+    },
+    {
+      "decision": "class",
+      "quest": 94978,
+      "reason": "Hunter: tame a Windsong Crawler. Needs level 10."
+    },
+    {
+      "decision": "class",
+      "quest": 94979,
+      "reason": "Hunter: tame an Ornery Galestrider. Needs level 10."
+    },
+    {
+      "decision": "drop",
+      "quest": 95805,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 96101,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 96130,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 96605,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 96638,
+      "reason": "Already turned in during zephras_01-05 (its route has the ACCEPT and TURNIN)."
+    },
+    {
+      "decision": "drop",
+      "quest": 96646,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 96659,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 96661,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "class",
+      "quest": 97243,
+      "reason": "Shaman: Call of Fire starter at Shen'dar. Needs level 10."
+    },
+    {
+      "decision": "class",
+      "quest": 97244,
+      "reason": "Shaman: Faladiel's Heart from Skypriest Faladiel in the Gustberry Lowlands."
+    },
+    {
+      "decision": "class",
+      "quest": 97245,
+      "reason": "Shaman: Kuramaa's Mask from the spirit in the Shen'dar Highlands."
+    },
+    {
+      "decision": "class",
+      "quest": 97257,
+      "reason": "Shaman: the braziers and the Eternal Flame. Finishes Call of Fire."
+    },
+    {
+      "decision": "drop",
+      "quest": 97485,
+      "reason": "Thunder Bluff quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 97927,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97928,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97929,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97930,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97931,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97932,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97933,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97934,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97935,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97936,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97937,
+      "reason": "Profession-gated Camping 101 quest in Thunder Bluff or Mulgore: a trainer trip off the isle."
+    },
+    {
+      "decision": "drop",
+      "quest": 97963,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97964,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97965,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97967,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97968,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97969,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97970,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97971,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 97972,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 98284,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "drop",
+      "quest": 98285,
+      "reason": "Profession-gated Camping 101 (isle trainer): a trainer trip, not leveling content."
+    },
+    {
+      "decision": "optional",
+      "quest": 98424,
+      "reason": "Fizsprocket's Notes (Mulgore). Prerequisite of the elite Ceasing Operations, so kept as a side trip."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 98427,
+      "reason": "Ceasing Operations: elite-flagged key from a level 12 Venture Co. mob in Mulgore. Kept, skippable.",
+      "revisitAt": 13
+    },
+    {
+      "decision": "drop",
+      "quest": 98430,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 98435,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "optional",
+      "quest": 98512,
+      "reason": "Al'Aketh Assassins: ten kills on the road north. Optional."
+    },
+    {
+      "decision": "drop",
+      "quest": 99079,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 99080,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 99081,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 99082,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 99101,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 99108,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 99411,
+      "reason": "Mulgore quest: reached only by the isle zeppelin, not on this band's path. Not worth the trip."
+    }
+  ],
+  "id": "horde_zephras_05-10",
+  "schemaVersion": 1
+}

@@ -1,0 +1,1670 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_horde_10-15 is the next band; it is written in a later phase.",
+    "W_NOT_IN_PACK: quest 840 (Conscript of the Horde) is not in the mulgore pack. It is the prerequisite of 842 and Tauren can take it at Razor Hill, so it was taken from data/raw.",
+    "W_XP_RANGE: 16090 of 22800 counted (71%). The pack holds fewer XP quests than the budget. Not counted by the validator: class chains (hunter 6065/6061/6087/6088/6089 about 3025 XP, warrior 1505/1502/1503 about 1135, shaman 2984 420) and kill XP, which is not modelled. A Tauren hunter lands near 84% with class XP; a warrior near 76%. Not taken: 870 The Forgotten Pools (680 XP) has no objective rows in the DB, only 'report back with your findings', so it cannot be placed honestly; 844 is exclusive with 854 and 861; Fizsprocket and the Clearcutter are lvl 12 elites, kept as optional-elite (revisit at 15). The 10-15 band should carry the remaining budget."
+  ],
+  "band": [
+    5,
+    10
+  ],
+  "branch": "mulgore",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 746,
+      "reason": "Dwarven Digging: the Prospector's Picks have no DB source; only the forge object (Broken Tools) is known, so the 5-pick step cannot be placed honestly."
+    },
+    {
+      "quest": 768,
+      "reason": "Gathering Leather: profession-gated (Skinning). Not leveling content; the band does not assume the skill."
+    },
+    {
+      "quest": 769,
+      "reason": "Kodo Hide Bag: profession-gated (Leatherworking). Same rule as the other profession quests."
+    },
+    {
+      "quest": 770,
+      "reason": "The Demon Scarred Cloak: no objective rows in the DB and the cloak's drop NPC has no spawn in this pack. The Ghost Howl lead cannot be placed."
+    },
+    {
+      "quest": 781,
+      "reason": "Dropped in mulgore_01-05 too: the Dirt-stained Map starter has no spawn coordinates in the DB."
+    },
+    {
+      "quest": 844,
+      "reason": "Plainstrider Menace is exclusive with the Tauren escort 854 and with 861. The route takes 854 and 861 for more XP on the same walk."
+    },
+    {
+      "quest": 1462,
+      "reason": "Earth Sapta re-get, dropped in mulgore_01-05 too; not part of the Call of Earth chain."
+    },
+    {
+      "quest": 1523,
+      "reason": "Call of Fire (Xanis, Thunder Bluff) is exclusive with 2984, which starts at Bloodhoof on this route."
+    },
+    {
+      "quest": 1524,
+      "reason": "Call of Fire part 2 ends at Telf Joolam in south Durotar, off this band's path. Pick it up in the 10-15 band if wanted."
+    },
+    {
+      "quest": 1883,
+      "reason": "Mage-only quest. A Tauren cannot be a mage."
+    },
+    {
+      "quest": 5922,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "quest": 5926,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "quest": 5927,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "quest": 5928,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "quest": 5932,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "quest": 6002,
+      "reason": "Tauren druid Moonglade chain: a teleport and flight excursion for class-only XP, and 5932 needs 5930, which is outside this pack. Not taken in this band."
+    },
+    {
+      "quest": 6066,
+      "reason": "Hunter's Path variant from another city; exclusive with 6065, which the route takes."
+    },
+    {
+      "quest": 6067,
+      "reason": "Hunter's Path variant from another city; exclusive with 6065, which the route takes."
+    },
+    {
+      "quest": 76156,
+      "reason": "Stalk With The Earthmother: three item errands with no XP rows, bouncing between the Venture Co. mine and Boarton in Thunder Bluff. Not worth the trips."
+    },
+    {
+      "quest": 76160,
+      "reason": "Stalk With The Earthmother: three item errands with no XP rows, bouncing between the Venture Co. mine and Boarton in Thunder Bluff. Not worth the trips."
+    },
+    {
+      "quest": 76240,
+      "reason": "Stalk With The Earthmother: three item errands with no XP rows, bouncing between the Venture Co. mine and Boarton in Thunder Bluff. Not worth the trips."
+    },
+    {
+      "quest": 94911,
+      "reason": "Forever druid side quests (Child of Nature, Moonglade teleport): no XP rows, part of the dropped druid excursion."
+    },
+    {
+      "quest": 94913,
+      "reason": "Forever druid side quests (Child of Nature, Moonglade teleport): no XP rows, part of the dropped druid excursion."
+    },
+    {
+      "quest": 97485,
+      "reason": "Traditions of the Bluff: four vendor purchases for a junk reward (Prepared Incense) and no XP row."
+    },
+    {
+      "quest": 97927,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97928,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97929,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97930,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97931,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97932,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97933,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97934,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97935,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97936,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 97937,
+      "reason": "Camping 101 (profession-gated): needs a gathering or crafting skill. Same rule as mulgore_01-05 and the Durotar band."
+    },
+    {
+      "quest": 98430,
+      "reason": "The Longwalkers: escort with no XP row. The Palemane area is already covered by 745."
+    },
+    {
+      "quest": 99079,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "quest": 99080,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "quest": 99081,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "quest": 99082,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "quest": 99101,
+      "reason": "Longwalker errand chain (Malah, Herak, High Chieftain): no XP rows; the chain ends in a lvl 11 Herak fight. Gear reward only."
+    },
+    {
+      "quest": 99411,
+      "reason": "Kyle's Gone Missing: lvl 12 pet and the Tender Strider Meat has no source in the pack; no XP row (carried from 01-05)."
+    }
+  ],
+  "entry": {
+    "hub": "Bloodhoof Village",
+    "level": 5,
+    "x": 45.9,
+    "y": 64.2,
+    "zone": "Mulgore"
+  },
+  "exitPoint": {
+    "hub": "The Crossroads",
+    "level": 10,
+    "x": 52.0,
+    "y": 30.0,
+    "zone": "The Barrens"
+  },
+  "faction": "horde",
+  "id": "horde_mulgore_05-10",
+  "next": "horde_horde_10-15",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "minLevel": 5,
+      "note": "Morin Cloudstalker at Bloodhoof: pick up The Ravaged Caravan. The crate is on the road north.",
+      "npc": 2988,
+      "quest": 749,
+      "tag": "main",
+      "title": "The Ravaged Caravan",
+      "type": "ACCEPT",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Sealed Supply Crate on the road north of Bloodhoof. Use it to finish the first caravan errand.",
+      "quest": 749,
+      "tag": "main",
+      "title": "The Ravaged Caravan",
+      "type": "TURNIN",
+      "x": 51.9,
+      "y": 53.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "The crate gives the second part: Venture Co. Documents. Take them back to Morin.",
+      "quest": 751,
+      "tag": "main",
+      "title": "The Ravaged Caravan",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 53.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin Cloudstalker: hand in the documents. Two Venture Co. jobs open now.",
+      "npc": 2988,
+      "quest": 751,
+      "tag": "main",
+      "title": "The Ravaged Caravan",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 5,
+      "note": "Morin's Venture Co. job: workers and supervisors in the mine north-east of Bloodhoof.",
+      "npc": 2988,
+      "quest": 764,
+      "tag": "main",
+      "title": "The Venture Co.",
+      "type": "ACCEPT",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 5,
+      "note": "Supervisor Fizsprocket is lvl 12: hard now. Accept now, and do it with a buddy or come back at 15.",
+      "npc": 2988,
+      "quest": 765,
+      "revisitAt": 15,
+      "tag": "optional-elite",
+      "title": "Supervisor Fizsprocket",
+      "type": "ACCEPT",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Baine Bloodhoof: Sharing the Land. Palemane Tanners, Skinners and Poachers west of camp.",
+      "npc": 2993,
+      "quest": 745,
+      "tag": "main",
+      "title": "Sharing the Land",
+      "type": "ACCEPT",
+      "x": 46.7,
+      "y": 63.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Palemane west of Bloodhoof. Kill 10 Tanners, 8 Skinners and 5 Poachers. They are lvl 5-8.",
+      "quest": 745,
+      "tag": "main",
+      "title": "Sharing the Land",
+      "type": "COMPLETE",
+      "x": 35.4,
+      "y": 64.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Baine Bloodhoof.",
+      "npc": 2993,
+      "quest": 745,
+      "tag": "main",
+      "title": "Sharing the Land",
+      "type": "TURNIN",
+      "x": 46.7,
+      "y": 63.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Ruul Eagletalon in Bloodhoof: eight Windfury Talons from the harpies south-east of camp.",
+      "npc": 2985,
+      "quest": 743,
+      "tag": "main",
+      "title": "Dangers of the Windfury",
+      "type": "ACCEPT",
+      "x": 46.5,
+      "y": 64.9,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Windfury Harpies and Wind Witches south-east of Bloodhoof. Collect 8 Windfury Talons.",
+      "quest": 743,
+      "tag": "main",
+      "title": "Dangers of the Windfury",
+      "type": "COMPLETE",
+      "x": 61.6,
+      "y": 72.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Ruul Eagletalon: talons handed in.",
+      "npc": 2985,
+      "quest": 743,
+      "tag": "main",
+      "title": "Dangers of the Windfury",
+      "type": "TURNIN",
+      "x": 46.5,
+      "y": 64.9,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 5,
+      "note": "Maur Raincaller in Bloodhoof: four drops from the north pastures. One loop covers them all.",
+      "npc": 3055,
+      "quest": 766,
+      "tag": "main",
+      "title": "Mazzranache",
+      "type": "ACCEPT",
+      "x": 46.2,
+      "y": 60.8,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Prairie Wolf Heart, Cougar Femur, Plainstrider Scale and Swoop Gizzard, all north of Bloodhoof.",
+      "quest": 766,
+      "tag": "main",
+      "title": "Mazzranache",
+      "type": "COMPLETE",
+      "x": 47.4,
+      "y": 55.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Maur Raincaller: the four items handed in.",
+      "npc": 3055,
+      "quest": 766,
+      "tag": "main",
+      "title": "Mazzranache",
+      "type": "TURNIN",
+      "x": 46.2,
+      "y": 60.8,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Bread and water before the north loops. Hunters: arrows from Moorat Longstride here.",
+      "type": "BUY",
+      "x": 45.3,
+      "y": 61.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mull Thunderhorn: Thunderhorn Totem, the next Tauren link of the totem chain.",
+      "npc": 2948,
+      "quest": 756,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thunderhorn Totem",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Prairie Stalkers and Flatland Cougars north of camp. Claws from both; fight them one at a time.",
+      "quest": 756,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thunderhorn Totem",
+      "type": "COMPLETE",
+      "x": 48.3,
+      "y": 52.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mull Thunderhorn: claws handed in.",
+      "npc": 2948,
+      "quest": 756,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thunderhorn Totem",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mull: Thunderhorn Cleansing, the next totem link.",
+      "npc": 2948,
+      "quest": 758,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thunderhorn Cleansing",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Use the Thunderhorn Cleansing Totem at the Thunderhorn Water Well, just north-west of Bloodhoof.",
+      "quest": 758,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thunderhorn Cleansing",
+      "type": "COMPLETE",
+      "x": 44.2,
+      "y": 51.1,
+      "zone": "Mulgore"
+    },
+    {
+      "_review": "W_BACKTRACK accepted: 758 needs 756 handed in at Mull first, and 758's well sits 4 map-% from the 756 claws. Each Mull return is one short walk.",
+      "note": "Back to Mull with the cleansing done.",
+      "npc": 2948,
+      "quest": 758,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thunderhorn Cleansing",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 6,
+      "note": "Level 6: Bloodhoof trainers (Yaw, Narm, Gennia, Krang) are all here. Learn what you can afford.",
+      "type": "TRAINER",
+      "x": 47.5,
+      "y": 63.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Seer Wiserunner north-west of Bloodhoof: Rite of Wisdom, the handed-over vision quest.",
+      "npc": 2984,
+      "quest": 773,
+      "tag": "main",
+      "title": "Rite of Wisdom",
+      "type": "ACCEPT",
+      "x": 34.3,
+      "y": 43.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Ancestral Spirit at Red Rocks, east of Thunder Bluff. Speak with it to finish.",
+      "npc": 2994,
+      "quest": 773,
+      "tag": "main",
+      "title": "Rite of Wisdom",
+      "type": "TURNIN",
+      "x": 58.3,
+      "y": 30.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "The Ancestral Spirit's escort into Thunder Bluff. Short walk; keep the spirit alive.",
+      "npc": 2994,
+      "quest": 775,
+      "tag": "optional",
+      "title": "Journey into Thunder Bluff",
+      "type": "ACCEPT",
+      "x": 58.3,
+      "y": 30.7,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Cairne Bloodhoof in Thunder Bluff: escort done.",
+      "npc": 3057,
+      "quest": 775,
+      "tag": "optional",
+      "title": "Journey into Thunder Bluff",
+      "type": "TURNIN",
+      "x": 60.3,
+      "y": 51.7,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Tal the wind rider master: discover the Thunder Bluff flight point on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 47.0,
+      "y": 49.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "minLevel": 7,
+      "note": "Eyahn Eagletalon in Thunder Bluff: Preparation for Ceremony. Feathers from the windfury north-west.",
+      "npc": 2987,
+      "quest": 744,
+      "tag": "main",
+      "title": "Preparation for Ceremony",
+      "type": "ACCEPT",
+      "x": 37.8,
+      "y": 59.6,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Windfury Sorceresses and Matriarchs north-west of Thunder Bluff. Collect 6 Azure and 6 Bronze Feathers.",
+      "quest": 744,
+      "tag": "main",
+      "title": "Preparation for Ceremony",
+      "type": "COMPLETE",
+      "x": 32.4,
+      "y": 32.9,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Eyahn Eagletalon: feathers handed in. The Tribal Warrior's Shield is the reward hint.",
+      "npc": 2987,
+      "quest": 744,
+      "reward": {
+        "preferItem": 4967,
+        "why": "Shield, item level 11: a clear upgrade for warriors and paladins."
+      },
+      "tag": "main",
+      "title": "Preparation for Ceremony",
+      "type": "TURNIN",
+      "x": 37.8,
+      "y": 59.6,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Lieutenant Lisande in Thunder Bluff: the Scourge investigation.",
+      "npc": 16490,
+      "quest": 9264,
+      "tag": "main",
+      "title": "Investigate the Scourge of Thunder Bluff",
+      "type": "ACCEPT",
+      "x": 31.4,
+      "y": 70.4,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Scourge camp north of Thunder Bluff: 3 Dim Necrotic Stones, then investigate the runic circle at (39.5, 44.1).",
+      "quest": 9264,
+      "tag": "main",
+      "title": "Investigate the Scourge of Thunder Bluff",
+      "type": "COMPLETE",
+      "x": 39.4,
+      "y": 44.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Lisande: stones and investigation reported.",
+      "npc": 16490,
+      "quest": 9264,
+      "tag": "main",
+      "title": "Investigate the Scourge of Thunder Bluff",
+      "type": "TURNIN",
+      "x": 31.4,
+      "y": 70.4,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "minLevel": 7,
+      "note": "Mull Thunderhorn: Wildmane Totem. Prairie Wolf Alphas north of Red Rocks are lvl 9-10.",
+      "npc": 2948,
+      "quest": 759,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Wildmane Totem",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Prairie Wolf Alphas north of Red Rocks. Bring 8 Prairie Alpha Teeth back to Mull.",
+      "quest": 759,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Wildmane Totem",
+      "type": "COMPLETE",
+      "x": 48.5,
+      "y": 31.0,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Back to Mull with 8 teeth.",
+      "npc": 2948,
+      "quest": 759,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Wildmane Totem",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 8,
+      "note": "Level 8: Bloodhoof trainers again. Learn your new spells before the north loop.",
+      "type": "TRAINER",
+      "x": 47.5,
+      "y": 63.0,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 4,
+      "note": "Mull: Wildmane Cleansing, the biggest link in the chain. Caster staff is the reward hint.",
+      "npc": 2948,
+      "quest": 760,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Wildmane Cleansing",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Use the Wildmane Cleansing Totem at the Wildmane Water Well, north of Red Rocks.",
+      "quest": 760,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Wildmane Cleansing",
+      "type": "COMPLETE",
+      "x": 42.7,
+      "y": 25.0,
+      "zone": "Mulgore"
+    },
+    {
+      "minLevel": 7,
+      "note": "Lorekeeper Raintotem at Red Rocks: A Sacred Burial. Bristleback Interlopers are right here.",
+      "npc": 3233,
+      "quest": 833,
+      "tag": "main",
+      "title": "A Sacred Burial",
+      "type": "ACCEPT",
+      "x": 57.0,
+      "y": 34.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Bristleback Interlopers at Red Rocks (lvl 9-10). Kill 8 and watch for pulls.",
+      "quest": 833,
+      "tag": "main",
+      "title": "A Sacred Burial",
+      "type": "COMPLETE",
+      "x": 58.1,
+      "y": 30.8,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Lorekeeper Raintotem: interlopers handed in.",
+      "npc": 3233,
+      "quest": 833,
+      "tag": "main",
+      "title": "A Sacred Burial",
+      "type": "TURNIN",
+      "x": 57.0,
+      "y": 34.5,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mull: Wildmane Cleansing done. Caster staff is the reward hint.",
+      "npc": 2948,
+      "quest": 760,
+      "races": [
+        "Tauren"
+      ],
+      "reward": {
+        "preferItem": 4961,
+        "why": "Dreamwatcher Staff, item level 10: a caster staff for druids and shamans."
+      },
+      "tag": "main",
+      "title": "Wildmane Cleansing",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Mull: Thunderhorn's Report. Carry it to Arch Druid Hamuul on Thunder Bluff's Elder Rise.",
+      "npc": 2948,
+      "quest": 98435,
+      "tag": "main",
+      "title": "Thunderhorn's Report",
+      "type": "ACCEPT",
+      "x": 47.5,
+      "y": 63.6,
+      "zone": "Mulgore"
+    },
+    {
+      "bagCheck": true,
+      "note": "Fizsprocket's Notes: the Expansion Plans lie on the mine desk. Accept them, then gather the three pages.",
+      "quest": 98424,
+      "tag": "optional",
+      "title": "Fizsprocket's Notes",
+      "type": "ACCEPT",
+      "x": 61.2,
+      "y": 49.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Three pages inside the Venture Co. mine: Shredder, Barrens and 'Gerenzo' notes. Pick them all up.",
+      "quest": 98424,
+      "tag": "optional",
+      "title": "Fizsprocket's Notes",
+      "type": "COMPLETE",
+      "x": 59.0,
+      "y": 46.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Venture Co. workers and supervisors inside the mine. Kill 14 workers and 6 supervisors.",
+      "quest": 764,
+      "tag": "main",
+      "title": "The Venture Co.",
+      "type": "COMPLETE",
+      "x": 59.6,
+      "y": 48.1,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Fizsprocket is lvl 12: skip this now and revisit at 15. Clipboard only if you are strong enough.",
+      "quest": 765,
+      "revisitAt": 15,
+      "tag": "optional-elite",
+      "title": "Supervisor Fizsprocket",
+      "type": "COMPLETE",
+      "x": 61.2,
+      "y": 49.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin Cloudstalker: workers and supervisors reported.",
+      "npc": 2988,
+      "quest": 764,
+      "tag": "main",
+      "title": "The Venture Co.",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin: the clipboard waits for level 15. Hand it in then.",
+      "npc": 2988,
+      "quest": 765,
+      "revisitAt": 15,
+      "tag": "optional-elite",
+      "title": "Supervisor Fizsprocket",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin: the three pages handed in.",
+      "npc": 2988,
+      "quest": 98424,
+      "tag": "optional",
+      "title": "Fizsprocket's Notes",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin: the Clearcutter Key is an elite job at lvl 12. Accept now, do it at 15.",
+      "npc": 2988,
+      "quest": 98427,
+      "revisitAt": 15,
+      "tag": "optional-elite",
+      "title": "Ceasing Operations",
+      "type": "ACCEPT",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Venture Co. Clearcutter (elite) in the mine. Skip until you can solo it at 15.",
+      "quest": 98427,
+      "revisitAt": 15,
+      "tag": "optional-elite",
+      "title": "Ceasing Operations",
+      "type": "COMPLETE",
+      "x": 56.8,
+      "y": 42.8,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Morin: Clearcutter Key turned in at 15.",
+      "npc": 2988,
+      "quest": 98427,
+      "revisitAt": 15,
+      "tag": "optional-elite",
+      "title": "Ceasing Operations",
+      "type": "TURNIN",
+      "x": 54.8,
+      "y": 64.3,
+      "zone": "Mulgore"
+    },
+    {
+      "bagCheck": true,
+      "minLevel": 10,
+      "note": "Skorn Whitecloud in Bloodhoof: The Hunter's Way. Four Flatland Prowler claws, then Melor in Thunder Bluff.",
+      "npc": 3052,
+      "quest": 861,
+      "tag": "main",
+      "title": "The Hunter's Way",
+      "type": "ACCEPT",
+      "x": 46.0,
+      "y": 63.4,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Flatland Prowlers (lvl 9) north of Red Rocks. Collect 4 Flatland Prowler Claws.",
+      "quest": 861,
+      "tag": "main",
+      "title": "The Hunter's Way",
+      "type": "COMPLETE",
+      "x": 48.5,
+      "y": 28.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Melor Stonehoof in Thunder Bluff: claws handed in.",
+      "npc": 3441,
+      "quest": 861,
+      "tag": "main",
+      "title": "The Hunter's Way",
+      "type": "TURNIN",
+      "x": 61.5,
+      "y": 80.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "minLevel": 10,
+      "note": "Melor gives the Sergra breadcrumb. 85 XP, turned in at the Crossroads.",
+      "npc": 3441,
+      "quest": 860,
+      "tag": "optional",
+      "title": "Sergra Darkthorn",
+      "type": "ACCEPT",
+      "x": 61.5,
+      "y": 80.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 10,
+      "note": "Narm Skychaser in Bloodhoof: Call of Fire. Hand-in is Kranal Fiss in the Barrens.",
+      "npc": 3066,
+      "quest": 2984,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "ACCEPT",
+      "x": 47.4,
+      "y": 62.5,
+      "zone": "Mulgore"
+    },
+    {
+      "bagCheck": true,
+      "classes": [
+        "HUNTER"
+      ],
+      "minLevel": 10,
+      "note": "Kary Thunderhorn in Thunder Bluff: The Hunter's Path. Hand-in is Yaw Sharpmane in Bloodhoof.",
+      "npc": 3038,
+      "quest": 6065,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Hunter's Path",
+      "type": "ACCEPT",
+      "x": 58.5,
+      "y": 88.3,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Torm Ragetotem in Thunder Bluff: Veteran Uzzek. Hand-in is Uzzek at Far Watch in the Barrens.",
+      "npc": 3041,
+      "quest": 1505,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Veteran Uzzek",
+      "type": "ACCEPT",
+      "x": 57.2,
+      "y": 87.4,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "minLevel": 10,
+      "note": "Level 10: Thunder Bluff south-ridge trainers (Torm, Kary, Holt). Learn what you can afford.",
+      "type": "TRAINER",
+      "x": 57.2,
+      "y": 87.4,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Yaw Sharpmane in Bloodhoof: The Hunter's Path handed in. Taming the Beast starts now.",
+      "npc": 3065,
+      "quest": 6065,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Hunter's Path",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "minLevel": 10,
+      "note": "Yaw Sharpmane: Taming the Beast. Use the Taming Rod on an Adult Plainstrider.",
+      "npc": 3065,
+      "quest": 6061,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Adult Plainstriders (lvl 6-8) west of Bloodhoof. Tame one with the Taming Rod.",
+      "quest": 6061,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 40.2,
+      "y": 64.1,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Yaw Sharpmane: rod returned, next tame.",
+      "npc": 3065,
+      "quest": 6061,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "minLevel": 10,
+      "note": "Yaw: tame a Prairie Stalker next.",
+      "npc": 3065,
+      "quest": 6087,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Prairie Stalkers north of Bloodhoof (lvl 7-8). Tame one with the rod.",
+      "quest": 6087,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 48.3,
+      "y": 52.5,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Yaw: stalker tamed and rod returned.",
+      "npc": 3065,
+      "quest": 6087,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "minLevel": 10,
+      "note": "Yaw: tame a Swoop next.",
+      "npc": 3065,
+      "quest": 6088,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Swoops in the hills north of Bloodhoof. Tame one with the rod.",
+      "quest": 6088,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "COMPLETE",
+      "x": 48.6,
+      "y": 49.4,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Yaw: swoop tamed and rod returned.",
+      "npc": 3065,
+      "quest": 6088,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Taming the Beast",
+      "type": "TURNIN",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "minLevel": 10,
+      "note": "Yaw: Training the Beast. Holt Thunderhorn on Hunter Rise in Thunder Bluff finishes it.",
+      "npc": 3065,
+      "quest": 6089,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Training the Beast",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 59.6,
+      "zone": "Mulgore"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Holt Thunderhorn on Hunter Rise: Training the Beast done.",
+      "npc": 3039,
+      "quest": 6089,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Training the Beast",
+      "type": "TURNIN",
+      "x": 57.3,
+      "y": 89.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "_review": "W_EXCURSION accepted: Hamuul is on the far north-east edge of Thunder Bluff, after the south-ridge hunter quests. Hearth and wind riders do not reach it; a single long walk.",
+      "note": "Arch Druid Hamuul on the Elder Rise: Thunderhorn's Report delivered.",
+      "npc": 5769,
+      "quest": 98435,
+      "tag": "main",
+      "title": "Thunderhorn's Report",
+      "type": "TURNIN",
+      "x": 78.6,
+      "y": 28.6,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "minLevel": 10,
+      "note": "Hamuul Runetotem: The Barrens Oases breadcrumb. Tonga Runetotem at the Crossroads is the hand-in.",
+      "npc": 5769,
+      "quest": 886,
+      "tag": "optional",
+      "title": "The Barrens Oases",
+      "type": "ACCEPT",
+      "x": 78.6,
+      "y": 28.6,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Omusa Thunderhorn at Camp Taurajo: discover the flight point on the way south.",
+      "type": "FP_DISCOVER",
+      "x": 44.5,
+      "y": 59.1,
+      "zone": "The Barrens"
+    },
+    {
+      "minLevel": 9,
+      "note": "Kirge Sternhorn at Camp Taurajo: Journey to the Crossroads, an escort to Thork. Short and on the way.",
+      "npc": 3418,
+      "quest": 854,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "optional",
+      "title": "Journey to the Crossroads",
+      "type": "ACCEPT",
+      "x": 44.9,
+      "y": 58.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Tonga Runetotem at the Crossroads: The Barrens Oases handed in.",
+      "npc": 3448,
+      "quest": 886,
+      "tag": "optional",
+      "title": "The Barrens Oases",
+      "type": "TURNIN",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sergra Darkthorn at the Crossroads: the breadcrumb handed in.",
+      "npc": 3338,
+      "quest": 860,
+      "tag": "optional",
+      "title": "Sergra Darkthorn",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 31.0,
+      "zone": "The Barrens"
+    },
+    {
+      "minLevel": 9,
+      "note": "Apothecary Helbrim at the Crossroads: Wharfmaster Dizzywig. A crate for Ratchet, a short walk.",
+      "npc": 3390,
+      "quest": 1492,
+      "tag": "optional",
+      "title": "Wharfmaster Dizzywig",
+      "type": "ACCEPT",
+      "x": 51.4,
+      "y": 30.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bragok at Ratchet: discover the flight point while you deliver the crate.",
+      "type": "FP_DISCOVER",
+      "x": 63.1,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wharfmaster Dizzywig in Ratchet: crate delivered.",
+      "npc": 3453,
+      "quest": 1492,
+      "tag": "optional",
+      "title": "Wharfmaster Dizzywig",
+      "type": "TURNIN",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Crossroads: stock bread and water before the Razor Hill and Far Watch loop. Hunters: arrows.",
+      "type": "BUY",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    },
+    {
+      "minLevel": 10,
+      "note": "Takrin Pathseeker at Razor Hill: Conscript of the Horde. He sends you west to Far Watch.",
+      "npc": 3336,
+      "quest": 840,
+      "tag": "main",
+      "title": "Conscript of the Horde",
+      "type": "ACCEPT",
+      "x": 50.8,
+      "y": 43.6,
+      "zone": "Durotar"
+    },
+    {
+      "note": "Kargal Battlescar at Far Watch: Conscript of the Horde handed in.",
+      "npc": 3337,
+      "quest": 840,
+      "tag": "main",
+      "title": "Conscript of the Horde",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 19.4,
+      "zone": "The Barrens"
+    },
+    {
+      "minLevel": 10,
+      "note": "Kargal Battlescar: Crossroads Conscription. The hand-in is Sergra Darkthorn at the Crossroads.",
+      "npc": 3337,
+      "quest": 842,
+      "tag": "main",
+      "title": "Crossroads Conscription",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 19.4,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Uzzek at Far Watch: Veteran Uzzek handed in. Path of Defense starts here.",
+      "npc": 5810,
+      "quest": 1505,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Veteran Uzzek",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Uzzek: Path of Defense. Five Singed Scales from the Thunder Lizards in Durotar.",
+      "npc": 5810,
+      "quest": 1498,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Path of Defense",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Thunder Lizards on the Durotar lizard field (lvl 9-11). Collect 5 Singed Scales.",
+      "quest": 1498,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Path of Defense",
+      "type": "COMPLETE",
+      "x": 40.5,
+      "y": 26.8,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Uzzek: Singed Scales handed in.",
+      "npc": 5810,
+      "quest": 1498,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Path of Defense",
+      "type": "TURNIN",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Uzzek: Thun'grim Firegaze, the second link of the Thun'grim chain.",
+      "npc": 5810,
+      "quest": 1502,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thun'grim Firegaze",
+      "type": "ACCEPT",
+      "x": 61.4,
+      "y": 21.1,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Kranal Fiss in the Barrens: Call of Fire handed in. The second link is in Durotar; not taken.",
+      "npc": 5907,
+      "quest": 2984,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Call of Fire",
+      "type": "TURNIN",
+      "x": 56.0,
+      "y": 19.9,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Thun'grim Firegaze: second link done. Forged Steel is next.",
+      "npc": 5878,
+      "quest": 1502,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Thun'grim Firegaze",
+      "type": "TURNIN",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Thun'grim Firegaze: Forged Steel. Weapons at item level 15 for warriors.",
+      "npc": 5878,
+      "quest": 1503,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Forged Steel",
+      "type": "ACCEPT",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Forged Steel Bars at the Thun'grim forge north-west of the Crossroads.",
+      "quest": 1503,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Forged Steel",
+      "type": "COMPLETE",
+      "x": 55.0,
+      "y": 26.6,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Thun'grim Firegaze: Forged Steel handed in. Pick the weapon you can use.",
+      "npc": 5878,
+      "quest": 1503,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Forged Steel",
+      "type": "TURNIN",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sergra Darkthorn: Crossroads Conscription handed in.",
+      "npc": 3338,
+      "quest": 842,
+      "tag": "main",
+      "title": "Crossroads Conscription",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 31.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Thork at the Crossroads: escort done.",
+      "npc": 3429,
+      "quest": 854,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "optional",
+      "title": "Journey to the Crossroads",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Devrak the wind rider master at the Crossroads: discover the flight point.",
+      "type": "FP_DISCOVER",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "minLevel": 9,
+      "note": "Thork: Disrupt the Attacks. The Razormane camp is just north-west of the Crossroads.",
+      "npc": 3429,
+      "quest": 871,
+      "tag": "main",
+      "title": "Disrupt the Attacks",
+      "type": "ACCEPT",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Razormane Water Seekers, Thornweavers and Hunters (lvl 10-12) north of the Crossroads. 8, 8 and 3.",
+      "quest": 871,
+      "tag": "main",
+      "title": "Disrupt the Attacks",
+      "type": "COMPLETE",
+      "x": 54.8,
+      "y": 26.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Thork: Razormane camp reported.",
+      "npc": 3429,
+      "quest": 871,
+      "tag": "main",
+      "title": "Disrupt the Attacks",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sell greys and repair near the Boorand inn at the Crossroads before the wind-rider chain.",
+      "type": "VENDOR_REPAIR",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "minLevel": 10,
+      "note": "Jahan Hawkwing at the Crossroads: A Bundle of Hides. Tauren wind-rider chain: four quests, two flights.",
+      "npc": 3483,
+      "quest": 6361,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "A Bundle of Hides",
+      "type": "ACCEPT",
+      "x": 51.2,
+      "y": 29.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Devrak: the bundle of hides handed in.",
+      "npc": 3615,
+      "quest": 6361,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "A Bundle of Hides",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "minLevel": 10,
+      "note": "Devrak: Ride to Thunder Bluff. Buy the wind rider to Thunder Bluff here.",
+      "npc": 3615,
+      "quest": 6362,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Ride to Thunder Bluff",
+      "type": "ACCEPT",
+      "x": 51.5,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Buy the wind rider from Devrak to Thunder Bluff. Gold cost only.",
+      "to": "Thunder Bluff",
+      "type": "FLY"
+    },
+    {
+      "note": "Ahanu in Thunder Bluff: the leather goods are next.",
+      "npc": 8359,
+      "quest": 6362,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Ride to Thunder Bluff",
+      "type": "TURNIN",
+      "x": 45.8,
+      "y": 55.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Ahanu: Tal the Wind Rider Master. Take Ahanu's leather goods to Tal.",
+      "npc": 8359,
+      "quest": 6363,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Tal the Wind Rider Master",
+      "type": "ACCEPT",
+      "x": 45.8,
+      "y": 55.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Tal in Thunder Bluff: Ahanu's Leather Goods handed in.",
+      "npc": 2995,
+      "quest": 6363,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Tal the Wind Rider Master",
+      "type": "TURNIN",
+      "x": 47.0,
+      "y": 49.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "minLevel": 10,
+      "note": "Tal: Return to Jahan. Buy the wind rider back to the Crossroads here.",
+      "npc": 2995,
+      "quest": 6364,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Return to Jahan",
+      "type": "ACCEPT",
+      "x": 47.0,
+      "y": 49.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Buy the wind rider from Tal back to the Crossroads. Gold cost only.",
+      "to": "The Barrens",
+      "type": "FLY"
+    },
+    {
+      "note": "Jahan Hawkwing at the Crossroads: wind-rider chain complete.",
+      "npc": 3483,
+      "quest": 6364,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Return to Jahan",
+      "type": "TURNIN",
+      "x": 51.2,
+      "y": 29.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Bind your hearthstone to Boorand Plainswind at the Crossroads inn. The next band starts here.",
+      "type": "HEARTH_BIND",
+      "x": 52.0,
+      "y": 29.9,
+      "zone": "The Barrens"
+    }
+  ]
+}

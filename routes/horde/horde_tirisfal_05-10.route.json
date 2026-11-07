@@ -1,0 +1,2415 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_tirisfal_10-15 is the next band; it is written in a later phase.",
+    "W_XP_RANGE: quest XP counts only unfiltered TURNINs (about 82% of budget). Class chains are excluded by design: a Warrior adds 2675 XP (about 94%), a Warlock 1470 (about 89%), a Mage 925, a Rogue 210. Kill XP is not modelled. Non-class characters rely on kills and need the band to be extended in phase 05 if the gap matters."
+  ],
+  "band": [
+    5,
+    10
+  ],
+  "branch": "tirisfal",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 410,
+      "reason": "Alternative candle quest to 431. Both are exclusive with 411, so the one-step candle 431 is routed instead."
+    },
+    {
+      "quest": 411,
+      "reason": "Exclusive with the candle quests 410 and 431, which 409 needs. The candle path is routed, so 411 is unreachable."
+    },
+    {
+      "quest": 421,
+      "reason": "Dalar Dawnweaver chain requires level 12. The band ends at 10, so it is handed to horde_tirisfal_10-15 at the Sepulcher."
+    },
+    {
+      "quest": 422,
+      "reason": "Dalar Dawnweaver chain requires level 12. The band ends at 10, so it is handed to horde_tirisfal_10-15 at the Sepulcher."
+    },
+    {
+      "quest": 447,
+      "reason": "Grizzled Bear Heart objectives spawn in zone 12, outside this band. No Silverpine route. Data gap."
+    },
+    {
+      "quest": 5660,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "quest": 5661,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "quest": 5662,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "quest": 5663,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "quest": 9265,
+      "reason": "Dim Necrotic Stone spawns are in zones 12 and 215 per the DB. Cannot be routed here. Data gap."
+    },
+    {
+      "quest": 91920,
+      "reason": "No XP data, and a second Quinn/Renferrel delivery loop duplicating 429 and 430."
+    },
+    {
+      "quest": 91921,
+      "reason": "No XP data, and a second Quinn/Renferrel delivery loop duplicating 429 and 430."
+    },
+    {
+      "quest": 94427,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 94434,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 94435,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 94436,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 94438,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 94440,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 94441,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "quest": 95314,
+      "reason": "Shadowvale elixir: no XP data, far west from the Brill hub."
+    },
+    {
+      "quest": 95803,
+      "reason": "Lady Sylvanas turn-in sits at the far south of the Undercity (58, 92). Long walk for a paladin turn-in."
+    },
+    {
+      "quest": 96658,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 96895,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 96896,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 96897,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 96898,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 96899,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 97558,
+      "reason": "No XP data. Vile Fin Murloc Skin spawns at (67,27) and (33,43), off the route."
+    },
+    {
+      "quest": 97951,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97952,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97953,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97954,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97955,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97956,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97957,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97958,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97959,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97960,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 97961,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "quest": 98545,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 99134,
+      "reason": "Punish 5 Deathguards: no objectives in the DB, cannot be routed."
+    },
+    {
+      "quest": 99141,
+      "reason": "Patience: Kristof report source is lvl 55. Not routable."
+    },
+    {
+      "quest": 99142,
+      "reason": "Tomb Weed: no XP data, a detour to the east cluster for one turn-in."
+    },
+    {
+      "quest": 99144,
+      "reason": "Seeking Refuge escort from the Scarlet Crusader Outpost: an escort through Scarlet mobs at lvl 7-8 is risky solo, and the outpost is off the route."
+    },
+    {
+      "quest": 99152,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "quest": 99153,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    }
+  ],
+  "entry": {
+    "hub": "Brill",
+    "level": 5,
+    "x": 60.4,
+    "y": 51.8,
+    "zone": "Tirisfal Glades"
+  },
+  "exitPoint": {
+    "hub": "The Sepulcher",
+    "level": 10,
+    "x": 43.2,
+    "y": 41.3,
+    "zone": "Silverpine Forest"
+  },
+  "faction": "horde",
+  "id": "horde_tirisfal_05-10",
+  "next": "horde_tirisfal_10-15",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Magistrate Sevren in Brill. Graverobbers and ichors just north of town.",
+      "npc": 1499,
+      "quest": 358,
+      "tag": "main",
+      "title": "Graverobbers",
+      "type": "ACCEPT",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand: 10 Scarlet Warriors at the Crusader Outpost, west of Brill.",
+      "npc": 1515,
+      "quest": 427,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "ACCEPT",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Apothecary Johaan: Darkhound Blood from the hounds just west of Brill.",
+      "npc": 1518,
+      "quest": 367,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "ACCEPT",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Deathguard Dillinger: Notched Ribs and Blackened Skulls from the Mills.",
+      "npc": 1496,
+      "quest": 426,
+      "tag": "main",
+      "title": "The Mills Overrun",
+      "type": "ACCEPT",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "North of Brill to the graverobber camp and the Mills.",
+      "to": "North of Brill to th",
+      "type": "TRAVEL",
+      "x": 57.6,
+      "y": 38.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Ichors drop from the graverobbers at the Rot Hide camp, north of Brill.",
+      "quest": 358,
+      "tag": "main",
+      "title": "Graverobbers",
+      "type": "COMPLETE",
+      "x": 57.6,
+      "y": 38.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Sevren in Brill.",
+      "npc": 1499,
+      "quest": 358,
+      "tag": "main",
+      "title": "Graverobbers",
+      "type": "TURNIN",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Sevren's orders for the Undercity: Bethor Iceshard, north-east of the city.",
+      "npc": 1499,
+      "quest": 405,
+      "tag": "main",
+      "title": "The Prodigal Lich",
+      "type": "ACCEPT",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Notched Ribs and Blackened Skulls in the Mills, north-west of the graverobbers.",
+      "to": "Notched Ribs and Bla",
+      "type": "TRAVEL",
+      "x": 47.3,
+      "y": 36.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Cracked Skull Soldiers drop the ribs, Darkeye Bonecasters the skulls.",
+      "quest": 426,
+      "tag": "main",
+      "title": "The Mills Overrun",
+      "type": "COMPLETE",
+      "x": 47.3,
+      "y": 36.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Dillinger in Brill.",
+      "npc": 1496,
+      "quest": 426,
+      "tag": "main",
+      "title": "The Mills Overrun",
+      "type": "TURNIN",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Level 6: Brill has trainers for five classes. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Sell greys and repair in Brill before the west trip.",
+      "type": "VENDOR_REPAIR",
+      "x": 61.5,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Darkhounds lie just west of Brill, on the road.",
+      "to": "Darkhounds lie just ",
+      "type": "TRAVEL",
+      "x": 56.5,
+      "y": 50.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Cursed Darkhounds on the west road. Collect 5 Darkhound Blood.",
+      "quest": 367,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "COMPLETE",
+      "x": 56.5,
+      "y": 50.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Apothecary Johaan in Brill.",
+      "npc": 1518,
+      "quest": 367,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "TURNIN",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Johaan: five Vile Fin Scales from the murlocs in Shadowvale.",
+      "npc": 1518,
+      "quest": 368,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "ACCEPT",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "West to the Crusader Outpost and its Scarlet Warriors.",
+      "to": "West to the Crusader",
+      "type": "TRAVEL",
+      "x": 32.5,
+      "y": 48.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Scarlet Warriors around the outpost. Kill 10, lvl 6-7.",
+      "quest": 427,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "COMPLETE",
+      "x": 32.5,
+      "y": 48.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill with the Scarlet Warrior trophies.",
+      "to": "Back to Brill with t",
+      "type": "TRAVEL",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand in Brill.",
+      "npc": 1515,
+      "quest": 427,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 5,
+      "note": "Deathguard Burgess: Scarlet Insignia Rings from the Scarlet camps.",
+      "npc": 1652,
+      "quest": 374,
+      "tag": "main",
+      "title": "Proof of Demise",
+      "type": "ACCEPT",
+      "x": 60.9,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 7,
+      "note": "Executor Zygand: the next Scarlet job, Captain Perrine south-east of Brill.",
+      "npc": 1515,
+      "quest": 370,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "ACCEPT",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Buy 2 bread and 2 water from Innkeeper Renee. Hunters: top up your arrows.",
+      "type": "BUY",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 7,
+      "note": "Gretchen Dedmar in Brill: five Duskbat Pelts and Coarse Thread.",
+      "npc": 1521,
+      "quest": 375,
+      "tag": "main",
+      "title": "The Chill of Death",
+      "type": "ACCEPT",
+      "x": 61.9,
+      "y": 52.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 7,
+      "note": "Coleman Farthing: Devlin Agamand at the Mills, plus the remains.",
+      "npc": 1500,
+      "quest": 362,
+      "tag": "main",
+      "title": "The Haunted Mills",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 7,
+      "note": "Coleman Farthing: three Agamand remains from the Mills.",
+      "npc": 1500,
+      "quest": 354,
+      "tag": "main",
+      "title": "Deaths in the Family",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 8,
+      "note": "Level 8: trainers in Brill. Learn new ranks.",
+      "type": "TRAINER",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Brill doorstep: Vampiric Duskbats for Gretchen.",
+      "to": "Brill doorstep: Vamp",
+      "type": "TRAVEL",
+      "x": 62.7,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Duskbats at the Brill doorstep. Coarse Thread is a vendor item, buy it in Brill.",
+      "quest": 375,
+      "tag": "main",
+      "title": "The Chill of Death",
+      "type": "COMPLETE",
+      "x": 62.7,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Gretchen Dedmar in Brill.",
+      "npc": 1521,
+      "quest": 375,
+      "tag": "main",
+      "title": "The Chill of Death",
+      "type": "TURNIN",
+      "x": 61.9,
+      "y": 52.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to the Mills: Devlin Agamand and the remains.",
+      "to": "North to the Mills: ",
+      "type": "TRAVEL",
+      "x": 47.2,
+      "y": 40.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Devlin Agamand in the Mills. Kill him for the remains.",
+      "quest": 362,
+      "tag": "main",
+      "title": "The Haunted Mills",
+      "type": "COMPLETE",
+      "x": 47.2,
+      "y": 40.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Agamand remains at (46, 29), (50, 36) and (43, 33). Collect all 3.",
+      "quest": 354,
+      "tag": "main",
+      "title": "Deaths in the Family",
+      "type": "COMPLETE",
+      "x": 45.8,
+      "y": 29.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill with the remains.",
+      "to": "Back to Brill with t",
+      "type": "TRAVEL",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Coleman Farthing in Brill.",
+      "npc": 1500,
+      "quest": 354,
+      "tag": "main",
+      "title": "Deaths in the Family",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Coleman Farthing in Brill.",
+      "npc": 1500,
+      "quest": 362,
+      "tag": "main",
+      "title": "The Haunted Mills",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Coleman Farthing: speak with Magistrate Sevren once 354 and 362 are in.",
+      "npc": 1500,
+      "quest": 355,
+      "tag": "optional",
+      "title": "Speak with Sevren",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Magistrate Sevren in Brill.",
+      "npc": 1499,
+      "quest": 355,
+      "tag": "optional",
+      "title": "Speak with Sevren",
+      "type": "TURNIN",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Repair after the Mills.",
+      "type": "VENDOR_REPAIR",
+      "x": 61.5,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Magistrate Sevren sends you to Deathguard Linnea at her camp, east of Brill.",
+      "npc": 1499,
+      "quest": 359,
+      "tag": "main",
+      "title": "Forsaken Duties",
+      "type": "ACCEPT",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "East to Linnea camp by the zeppelin tower.",
+      "to": "East to Linnea camp ",
+      "type": "TRAVEL",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Linnea at her camp.",
+      "npc": 1495,
+      "quest": 359,
+      "tag": "main",
+      "title": "Forsaken Duties",
+      "type": "TURNIN",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "Linnea hands the Magistrate follow-up back to you.",
+      "npc": 1495,
+      "quest": 360,
+      "tag": "main",
+      "title": "Return to the Magistrate",
+      "type": "ACCEPT",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 8,
+      "note": "Deathguard Linnea: 8 Bleeding Horrors and 8 Wandering Spirits, east of her camp.",
+      "npc": 1495,
+      "quest": 356,
+      "tag": "main",
+      "title": "Rear Guard Patrol",
+      "type": "ACCEPT",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Magistrate Sevren in Brill.",
+      "npc": 1499,
+      "quest": 360,
+      "tag": "main",
+      "title": "Return to the Magistrate",
+      "type": "TURNIN",
+      "x": 61.3,
+      "y": 50.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "East to the Bleeding Horrors and Wandering Spirits, lvl 9-11.",
+      "to": "East to the Bleeding",
+      "type": "TRAVEL",
+      "x": 76.3,
+      "y": 60.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "_review": "Validator expects level 7 from quest XP alone. Mills and Brill kills put the character near 8 here. Wandering Spirits lvl 10-11: margin about 2.",
+      "note": "Bleeding Horrors and Wandering Spirits east of Linnea. Kill 8 of each.",
+      "quest": 356,
+      "tag": "main",
+      "title": "Rear Guard Patrol",
+      "type": "COMPLETE",
+      "x": 76.3,
+      "y": 60.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Linnea at her camp.",
+      "npc": 1495,
+      "quest": 356,
+      "tag": "main",
+      "title": "Rear Guard Patrol",
+      "type": "TURNIN",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 8,
+      "note": "Paladin: Shari Stilwell in Brill sends you to Breton Samuels at Bandarion Keep.",
+      "npc": 246152,
+      "quest": 91282,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "A Second Home",
+      "type": "ACCEPT",
+      "x": 60.2,
+      "y": 52.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "South-west to Deathknell for Duesten.",
+      "to": "South-west to Deathk",
+      "type": "TRAVEL",
+      "x": 31.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "minLevel": 5,
+      "note": "Dark Cleric Duesten in Deathknell. Priest breadcrumb, needs level 5.",
+      "npc": 2123,
+      "quest": 5651,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "In Favor of Darkness",
+      "type": "ACCEPT",
+      "x": 31.1,
+      "y": 66.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "On to Bandarion Keep for Breton Samuels.",
+      "to": "On to Bandarion Keep",
+      "type": "TRAVEL",
+      "x": 22.1,
+      "y": 45.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Breton Samuels at Bandarion Keep.",
+      "npc": 246349,
+      "quest": 91282,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "A Second Home",
+      "type": "TURNIN",
+      "x": 21.9,
+      "y": 45.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 8,
+      "note": "Breton: slay Vile Fin Attackers and Seers in Shadowvale.",
+      "npc": 246349,
+      "quest": 91285,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Murlocs at the Gates",
+      "type": "ACCEPT",
+      "x": 21.9,
+      "y": 45.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "Shadowvale: murlocs at the lake, Vile Fin Scales and Attackers.",
+      "to": "Shadowvale: murlocs ",
+      "type": "TRAVEL",
+      "x": 16.5,
+      "y": 56.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Vile Fin Attackers and Seers at the lake. Kill 8 of each.",
+      "quest": 91285,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Murlocs at the Gates",
+      "type": "COMPLETE",
+      "x": 16.5,
+      "y": 56.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Vile Fin Scales from the murlocs at the same lake. Collect 5.",
+      "quest": 368,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "COMPLETE",
+      "x": 16.7,
+      "y": 56.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Tarnished Zealots in Shadowvale carry the Scarlet Insignia Rings.",
+      "quest": 374,
+      "tag": "main",
+      "title": "Proof of Demise",
+      "type": "COMPLETE",
+      "x": 13.8,
+      "y": 63.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Bandarion Keep to turn in the murloc work.",
+      "to": "Back to Bandarion Ke",
+      "type": "TRAVEL",
+      "x": 22.1,
+      "y": 45.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Breton Samuels at Bandarion Keep.",
+      "npc": 246349,
+      "quest": 91285,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Murlocs at the Gates",
+      "type": "TURNIN",
+      "x": 21.9,
+      "y": 45.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 8,
+      "note": "Breton sends you to speak with the Bandarion residents.",
+      "npc": 246349,
+      "quest": 91294,
+      "races": [
+        "Undead"
+      ],
+      "revisitAt": 12,
+      "tag": "optional-elite",
+      "title": "Touring the Grounds",
+      "type": "ACCEPT",
+      "x": 21.9,
+      "y": 45.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Danitha Morr in the keep. Talk only, do not attack her.",
+      "npc": 246378,
+      "quest": 91294,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional-elite",
+      "title": "Touring the Grounds",
+      "type": "TURNIN",
+      "x": 22.1,
+      "y": 44.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 8,
+      "note": "Jorin Croge: 12 pieces of Sturdy Lumber from Shadowvale.",
+      "npc": 246393,
+      "quest": 91316,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Making Repairs",
+      "type": "ACCEPT",
+      "x": 22.7,
+      "y": 44.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "minLevel": 9,
+      "note": "Danitha Morr: slay the Tarnished Drudges and Zealots in Shadowvale.",
+      "npc": 246378,
+      "quest": 91317,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Tarnished",
+      "type": "ACCEPT",
+      "x": 22.1,
+      "y": 44.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "Back to Shadowvale for the lumber and the Tarnished.",
+      "to": "Back to Shadowvale f",
+      "type": "TRAVEL",
+      "x": 10.0,
+      "y": 65.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Sturdy Lumber lies around Shadowvale. Collect 12.",
+      "quest": 91316,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Making Repairs",
+      "type": "COMPLETE",
+      "x": 10.0,
+      "y": 65.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "_review": "Validator expects level 7 from quest XP alone. Shadowvale murlocs add about a level, so real level is about 8-9. Tarnished Drudges lvl 10: margin 1-2.",
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Tarnished Drudges and Zealots, with Rudolph Gelhardt the head.",
+      "quest": 91317,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Tarnished",
+      "type": "COMPLETE",
+      "x": 13.6,
+      "y": 63.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Bandarion Keep.",
+      "to": "Back to Bandarion Ke",
+      "type": "TRAVEL",
+      "x": 22.1,
+      "y": 45.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Jorin Croge at Bandarion. The shield is the upgrade.",
+      "npc": 246393,
+      "quest": 91316,
+      "races": [
+        "Undead"
+      ],
+      "reward": {
+        "preferItem": 246265,
+        "why": "Salvaged Wooden Tower Shield (il14), a real shield upgrade for paladins"
+      },
+      "tag": "main",
+      "title": "Making Repairs",
+      "type": "TURNIN",
+      "x": 22.7,
+      "y": 44.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PALADIN"
+      ],
+      "note": "Danitha Morr, Bandarion Keep.",
+      "npc": 246378,
+      "quest": 91317,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Tarnished",
+      "type": "TURNIN",
+      "x": 22.1,
+      "y": 44.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Hearthstone back to Brill: the west trip ends far from the inn.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Deathguard Burgess in Brill.",
+      "npc": 1652,
+      "quest": 374,
+      "tag": "main",
+      "title": "Proof of Demise",
+      "type": "TURNIN",
+      "x": 60.9,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Apothecary Johaan in Brill.",
+      "npc": 1518,
+      "quest": 368,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "TURNIN",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Dark Cleric Beryl in Brill.",
+      "npc": 2129,
+      "quest": 5651,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "In Favor of Darkness",
+      "type": "TURNIN",
+      "x": 61.6,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Dark Cleric Beryl: heal Deathguard Kel north of Brill.",
+      "npc": 2129,
+      "quest": 5650,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Garments of Darkness",
+      "type": "ACCEPT",
+      "x": 61.6,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Find Deathguard Kel north of Brill. Heal and buff him, then return.",
+      "quest": 5650,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Garments of Darkness",
+      "type": "COMPLETE",
+      "x": 59.2,
+      "y": 46.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Dark Cleric Beryl in Brill.",
+      "npc": 2129,
+      "quest": 5650,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Garments of Darkness",
+      "type": "TURNIN",
+      "x": 61.6,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 8,
+      "note": "Johaan: four samples of venom from the Vicious Night Web Spiders east of Brill.",
+      "npc": 1518,
+      "quest": 369,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "ACCEPT",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "South-east of Deathknell: Captain Perrine and the Scarlet camp.",
+      "to": "South-east of Deathk",
+      "type": "TRAVEL",
+      "x": 51.1,
+      "y": 67.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Captain Perrine, 3 Zealots and 3 Missionaries at the camp.",
+      "quest": 370,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "COMPLETE",
+      "x": 51.1,
+      "y": 67.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill to turn in Perrine.",
+      "to": "Back to Brill to tur",
+      "type": "TRAVEL",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand in Brill.",
+      "npc": 1515,
+      "quest": 370,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 8,
+      "note": "Executor Zygand: Captain Vachon and 5 Scarlet Friars in Venomweb Vale.",
+      "npc": 1515,
+      "quest": 371,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "ACCEPT",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "East to Venomweb Vale: Night Web Spiders and Scarlet Friars.",
+      "to": "East to Venomweb Val",
+      "type": "TRAVEL",
+      "x": 86.8,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Vicious Night Web Spiders in Venomweb. Collect 4 venom samples.",
+      "quest": 369,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "COMPLETE",
+      "x": 86.8,
+      "y": 52.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "_review": "Validator expects level 7 from quest XP alone. Perrine and the Scarlet camp add about 2 levels. Captain Vachon is lvl 11: margin about 2, skip him below level 9.",
+      "note": "Captain Vachon and the Scarlet Friars around (79, 56). Lvl 9-11.",
+      "quest": 371,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "COMPLETE",
+      "x": 78.8,
+      "y": 56.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill.",
+      "to": "Back to Brill.",
+      "type": "TRAVEL",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand in Brill.",
+      "npc": 1515,
+      "quest": 371,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Apothecary Johaan in Brill.",
+      "npc": 1518,
+      "quest": 369,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "TURNIN",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 8,
+      "note": "Johaan: Johaan Special Drink for the Captured Mountaineer.",
+      "npc": 1518,
+      "quest": 492,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "ACCEPT",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Captured Mountaineer in Brill.",
+      "npc": 2211,
+      "quest": 492,
+      "tag": "main",
+      "title": "A New Plague",
+      "type": "TURNIN",
+      "x": 61.9,
+      "y": 51.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 10,
+      "note": "Level 10: trainers in Brill. Learn new ranks.",
+      "type": "TRAINER",
+      "x": 61.8,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Warrior: speak with Deathguard Dillinger. Austil de Mon starts the chain.",
+      "npc": 2131,
+      "quest": 1818,
+      "tag": "main",
+      "title": "Speak with Dillinger",
+      "type": "ACCEPT",
+      "x": 61.9,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Deathguard Dillinger in Brill.",
+      "npc": 1496,
+      "quest": 1818,
+      "tag": "main",
+      "title": "Speak with Dillinger",
+      "type": "TURNIN",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Dillinger: kill Ulag the Cleaver north of Brill.",
+      "npc": 1496,
+      "quest": 1819,
+      "tag": "main",
+      "title": "Ulag the Cleaver",
+      "type": "ACCEPT",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "_review": "Validator expects level 8 from quest XP alone. Real level after the Mills and Linnea is about 9-10. Ulag lvl 11: margin 1-2.",
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Ulag the Cleaver, just north of Brill. Level 11.",
+      "quest": 1819,
+      "tag": "main",
+      "title": "Ulag the Cleaver",
+      "type": "COMPLETE",
+      "x": 59.5,
+      "y": 48.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Deathguard Dillinger in Brill.",
+      "npc": 1496,
+      "quest": 1819,
+      "tag": "main",
+      "title": "Ulag the Cleaver",
+      "type": "TURNIN",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Dillinger sends you to Coleman Farthing.",
+      "npc": 1496,
+      "quest": 1820,
+      "tag": "main",
+      "title": "Speak with Coleman",
+      "type": "ACCEPT",
+      "x": 58.2,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Coleman Farthing in Brill.",
+      "npc": 1500,
+      "quest": 1820,
+      "tag": "main",
+      "title": "Speak with Coleman",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Coleman Farthing: the four Agamand family weapons north of Brill.",
+      "npc": 1500,
+      "quest": 1821,
+      "tag": "main",
+      "title": "Agamand Heirlooms",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 6,
+      "note": "WANTED: Maggot Eye. The poster is on the Brill board.",
+      "quest": 398,
+      "tag": "main",
+      "title": "WANTED: Maggot Eye",
+      "type": "ACCEPT",
+      "x": 60.7,
+      "y": 51.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to the Agamand heirloom weapons and Maggot Eye.",
+      "to": "North to the Agamand",
+      "type": "TRAVEL",
+      "x": 51.7,
+      "y": 25.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Four Agamand family weapons: axe, dagger, mace and sword, around (52, 26).",
+      "quest": 1821,
+      "tag": "main",
+      "title": "Agamand Heirlooms",
+      "type": "COMPLETE",
+      "x": 51.7,
+      "y": 25.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Maggot Eye's Paw from Maggot Eye at (58.7, 30.8). Level 11 boss.",
+      "quest": 398,
+      "tag": "main",
+      "title": "WANTED: Maggot Eye",
+      "type": "COMPLETE",
+      "x": 58.7,
+      "y": 30.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill.",
+      "to": "Back to Brill.",
+      "type": "TRAVEL",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Coleman Farthing in Brill.",
+      "npc": 1500,
+      "quest": 1821,
+      "tag": "main",
+      "title": "Agamand Heirlooms",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand in Brill.",
+      "npc": 1515,
+      "quest": 398,
+      "tag": "main",
+      "title": "WANTED: Maggot Eye",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "minLevel": 10,
+      "note": "Coleman Farthing: the heirloom weapons come from the four pieces.",
+      "npc": 1500,
+      "quest": 1822,
+      "tag": "main",
+      "title": "Heirloom Weapon",
+      "type": "ACCEPT",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Coleman Farthing: take the Heirloom Sword, the best all-round warrior pick.",
+      "npc": 1500,
+      "quest": 1822,
+      "reward": {
+        "preferItem": 7118,
+        "why": "Heirloom Sword (il15): a clear upgrade for a warrior at level 11"
+      },
+      "tag": "main",
+      "title": "Heirloom Weapon",
+      "type": "TURNIN",
+      "x": 61.7,
+      "y": 52.3,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "minLevel": 10,
+      "note": "Warlock: Ageron Kargal in Brill sends you to Carendin Halgar in the Undercity.",
+      "npc": 5724,
+      "quest": 1478,
+      "tag": "main",
+      "title": "Halgar's Summons",
+      "type": "ACCEPT",
+      "x": 61.6,
+      "y": 52.7,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "minLevel": 10,
+      "note": "Mage: Cain Firesong in Brill sends you to Anastasia Hartwell in the Undercity.",
+      "npc": 2128,
+      "quest": 1881,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Speak with Anastasia",
+      "type": "ACCEPT",
+      "x": 62.0,
+      "y": 52.5,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "minLevel": 10,
+      "note": "Rogue: Marion Call sends you to Mennet Carkad in the Rogues Quarter.",
+      "npc": 2130,
+      "quest": 1885,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Mennet Carkad",
+      "type": "ACCEPT",
+      "x": 61.8,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 10,
+      "note": "Executor Zygand: Captain Melrache and two bodyguards, north-east. Level 10.",
+      "npc": 1515,
+      "quest": 372,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "ACCEPT",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Buy bread and water from Innkeeper Renee. Undercity food is at Boyle if you run low.",
+      "type": "BUY",
+      "x": 61.7,
+      "y": 52.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Into the Undercity to Carendin Halgar and Bethor Iceshard.",
+      "to": "Into the Undercity t",
+      "type": "TRAVEL",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Carendin Halgar in the Magic Quarter.",
+      "npc": 5675,
+      "quest": 1478,
+      "tag": "main",
+      "title": "Halgar's Summons",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "minLevel": 10,
+      "note": "Carendin Halgar: recover Egalin Grimoire from the Scarlet camp near (51, 67).",
+      "npc": 5675,
+      "quest": 1473,
+      "tag": "main",
+      "title": "Creature of the Void",
+      "type": "ACCEPT",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "minLevel": 10,
+      "note": "Priest: Touch of Weakness from Aelthalyste in the Undercity.",
+      "npc": 4606,
+      "quest": 5658,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Touch of Weakness",
+      "type": "ACCEPT",
+      "x": 49.3,
+      "y": 17.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "PRIEST"
+      ],
+      "note": "Aelthalyste in the Undercity.",
+      "npc": 4606,
+      "quest": 5658,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Touch of Weakness",
+      "type": "TURNIN",
+      "x": 49.3,
+      "y": 17.1,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Mage quarter: Anastasia Hartwell.",
+      "to": "Mage quarter: Anasta",
+      "type": "TRAVEL",
+      "x": 85.0,
+      "y": 14.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Anastasia Hartwell, Mage Quarter.",
+      "npc": 4568,
+      "quest": 1881,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Speak with Anastasia",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "minLevel": 10,
+      "note": "Anastasia: bring Balnir Snapdragons from Balnir Farmstead near Linnea.",
+      "npc": 4568,
+      "quest": 1882,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Balnir Farmstead",
+      "type": "ACCEPT",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Mennet Carkad in the Rogues Quarter.",
+      "npc": 6467,
+      "quest": 1885,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Mennet Carkad",
+      "type": "TURNIN",
+      "x": 83.5,
+      "y": 69.1,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Bethor Iceshard in the north-east of the Undercity.",
+      "to": "Bethor Iceshard in t",
+      "type": "TRAVEL",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Bethor Iceshard in the Undercity.",
+      "npc": 1498,
+      "quest": 405,
+      "tag": "main",
+      "title": "The Prodigal Lich",
+      "type": "TURNIN",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "minLevel": 8,
+      "note": "Bethor Iceshard: the Lich Identity. Spellbook lies on Gunther Retreat.",
+      "npc": 1498,
+      "quest": 357,
+      "tag": "main",
+      "title": "The Lich's Identity",
+      "type": "ACCEPT",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Across the Undercity to Gunther Retreat for the spellbook.",
+      "to": "Across the Undercity",
+      "type": "TRAVEL",
+      "x": 68.0,
+      "y": 42.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "The Lich's Spellbook on Gunther's island, by the lake.",
+      "quest": 357,
+      "tag": "main",
+      "title": "The Lich's Identity",
+      "type": "COMPLETE",
+      "x": 68.0,
+      "y": 42.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Bethor in the Undercity.",
+      "to": "Back to Bethor in th",
+      "type": "TRAVEL",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Bethor Iceshard in the Undercity.",
+      "npc": 1498,
+      "quest": 357,
+      "tag": "main",
+      "title": "The Lich's Identity",
+      "type": "TURNIN",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "minLevel": 8,
+      "note": "Bethor Iceshard: return the spellbook to Gunther Arcanus.",
+      "npc": 1498,
+      "quest": 366,
+      "tag": "main",
+      "title": "Return the Book",
+      "type": "ACCEPT",
+      "x": 84.1,
+      "y": 17.4,
+      "zone": "Undercity"
+    },
+    {
+      "note": "To Gunther on his island, with the candle crate beside him.",
+      "to": "To Gunther on his is",
+      "type": "TRAVEL",
+      "x": 68.2,
+      "y": 41.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Gunther Arcanus on his island.",
+      "npc": 1497,
+      "quest": 366,
+      "tag": "main",
+      "title": "Return the Book",
+      "type": "TURNIN",
+      "x": 68.2,
+      "y": 41.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Gunther: the Crate of Candles by the island gives the Candle of Beckoning.",
+      "quest": 431,
+      "tag": "main",
+      "title": "Candles of Beckoning",
+      "type": "ACCEPT",
+      "x": 68.2,
+      "y": 42.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "The Crate of Candles, same spot as the pickup.",
+      "quest": 431,
+      "tag": "main",
+      "title": "Candles of Beckoning",
+      "type": "TURNIN",
+      "x": 68.2,
+      "y": 42.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 10,
+      "note": "Gunther Arcanus: summon Lillith Nefara with the candle, then kill her.",
+      "npc": 1497,
+      "quest": 409,
+      "tag": "main",
+      "title": "Proving Allegiance",
+      "type": "ACCEPT",
+      "x": 68.2,
+      "y": 41.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "_review": "Validator expects level 8 from quest XP alone. Real level after the Undercity and the lake is about 10. Lillith lvl 12: margin about 2, solo.",
+      "note": "Lillith Nefara at (67, 45) next to the dinner table. Level 12.",
+      "quest": 409,
+      "tag": "main",
+      "title": "Proving Allegiance",
+      "type": "COMPLETE",
+      "x": 66.7,
+      "y": 45.0,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Gunther Arcanus on his island.",
+      "npc": 1497,
+      "quest": 409,
+      "tag": "main",
+      "title": "Proving Allegiance",
+      "type": "TURNIN",
+      "x": 68.2,
+      "y": 41.9,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "South-east to the Scarlet camp for Egalin Grimoire.",
+      "to": "South-east to the Sc",
+      "type": "TRAVEL",
+      "x": 51.1,
+      "y": 67.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Egalin Grimoire lies at the Scarlet camp south-east of Deathknell.",
+      "quest": 1473,
+      "tag": "main",
+      "title": "Creature of the Void",
+      "type": "COMPLETE",
+      "x": 51.1,
+      "y": 67.6,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to the Undercity, Halgar.",
+      "to": "Back to the Undercit",
+      "type": "TRAVEL",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Carendin Halgar in the Undercity.",
+      "npc": 5675,
+      "quest": 1473,
+      "tag": "main",
+      "title": "Creature of the Void",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "minLevel": 10,
+      "note": "Halgar: summon and subdue a Voidwalker at the Summoning Circle.",
+      "npc": 5675,
+      "quest": 1471,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Binding",
+      "type": "ACCEPT",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Use the Runes of Summoning at the circle to subdue the Voidwalker.",
+      "quest": 1471,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Binding",
+      "type": "COMPLETE",
+      "x": 86.6,
+      "y": 27.1,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "WARLOCK"
+      ],
+      "note": "Carendin Halgar in the Undercity.",
+      "npc": 5675,
+      "quest": 1471,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Binding",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 26.0,
+      "zone": "Undercity"
+    },
+    {
+      "classes": [
+        "MAGE"
+      ],
+      "note": "Anastasia Hartwell, Mage Quarter.",
+      "npc": 4568,
+      "quest": 1882,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Balnir Farmstead",
+      "type": "TURNIN",
+      "x": 85.1,
+      "y": 10.0,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Back to Brill to hand in the Undercity work.",
+      "to": "Back to Brill to han",
+      "type": "TRAVEL",
+      "x": 60.7,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "North-east to Captain Melrache and his bodyguards. Level 10.",
+      "to": "North-east to Captai",
+      "type": "TRAVEL",
+      "x": 79.5,
+      "y": 25.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "_review": "Validator expects level 8 from quest XP alone. The step is at the end of the band (ACCEPT minLevel 10). Melrache lvl 12: margin about 2, boss.",
+      "note": "Captain Melrache and two bodyguards. Lvl 12 boss, only at level 10.",
+      "quest": 372,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "COMPLETE",
+      "x": 79.5,
+      "y": 25.1,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Back to Brill to turn in Melrache.",
+      "to": "Back to Brill to tur",
+      "type": "TRAVEL",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Executor Zygand in Brill.",
+      "npc": 1515,
+      "quest": 372,
+      "tag": "main",
+      "title": "At War With The Scarlet Crusade",
+      "type": "TURNIN",
+      "x": 60.6,
+      "y": 51.8,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "minLevel": 9,
+      "note": "Johaan: take the findings to Apothecary Renferrel in Silverpine Forest.",
+      "npc": 1518,
+      "quest": 445,
+      "tag": "main",
+      "title": "Delivery to Silverpine Forest",
+      "type": "ACCEPT",
+      "x": 59.5,
+      "y": 52.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Walk to the Sepulcher in Silverpine Forest.",
+      "to": "Walk to the Sepulche",
+      "type": "TRAVEL",
+      "x": 43.2,
+      "y": 41.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Discover the bat flight path at Karos Razok, then bind your hearthstone at Bates.",
+      "type": "FP_DISCOVER",
+      "x": 45.6,
+      "y": 42.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Make the Sepulcher your home at Innkeeper Bates. The next band starts here.",
+      "type": "HEARTH_BIND",
+      "x": 43.2,
+      "y": 41.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Apothecary Renferrel at the Sepulcher.",
+      "npc": 1937,
+      "quest": 445,
+      "tag": "main",
+      "title": "Delivery to Silverpine Forest",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Deathguard Podrig: deliver his order to Karos Razok, the bat master.",
+      "npc": 6389,
+      "quest": 6321,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Supplying the Sepulcher",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 41.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Karos Razok, bat master at the Sepulcher.",
+      "npc": 2226,
+      "quest": 6321,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Supplying the Sepulcher",
+      "type": "TURNIN",
+      "x": 45.6,
+      "y": 42.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Karos Razok: buy a bat ride to the Undercity.",
+      "npc": 2226,
+      "quest": 6323,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Ride to the Undercity",
+      "type": "ACCEPT",
+      "x": 45.6,
+      "y": 42.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Buy the bat ride to the Undercity from Karos Razok. Bat flight is about a minute.",
+      "to": "Undercity",
+      "type": "FLY"
+    },
+    {
+      "note": "Gordon Wendham in the Undercity.",
+      "npc": 4556,
+      "quest": 6323,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Ride to the Undercity",
+      "type": "TURNIN",
+      "x": 61.5,
+      "y": 41.8,
+      "zone": "Undercity"
+    },
+    {
+      "minLevel": 10,
+      "note": "Gordon Wendham: bring his crate to Michael Garrett at the bat handler.",
+      "npc": 4556,
+      "quest": 6322,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Michael Garrett",
+      "type": "ACCEPT",
+      "x": 61.5,
+      "y": 41.8,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Michael Garrett, bat handler at the Undercity flight master.",
+      "npc": 4551,
+      "quest": 6322,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Michael Garrett",
+      "type": "TURNIN",
+      "x": 63.2,
+      "y": 48.6,
+      "zone": "Undercity"
+    },
+    {
+      "minLevel": 10,
+      "note": "Michael Garrett: buy a bat ride back to the Sepulcher.",
+      "npc": 4551,
+      "quest": 6324,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Return to Podrig",
+      "type": "ACCEPT",
+      "x": 63.2,
+      "y": 48.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Buy the bat ride back to the Sepulcher from Michael Garrett.",
+      "to": "Sepulcher",
+      "type": "FLY"
+    },
+    {
+      "note": "Deathguard Podrig at the Sepulcher.",
+      "npc": 6389,
+      "quest": 6324,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Return to Podrig",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 41.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "High Executor Hadrec at the Sepulcher: find the Deathstalkers.",
+      "npc": 1952,
+      "quest": 428,
+      "tag": "main",
+      "title": "Lost Deathstalkers",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Deathstalker Erland at the Ivar Patch: escort him to Rane Yorick.",
+      "npc": 1978,
+      "quest": 435,
+      "tag": "optional",
+      "title": "Escorting Erland",
+      "type": "ACCEPT",
+      "x": 56.2,
+      "y": 9.2,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "bagCheck": true,
+      "note": "North to the Ivar Patch, where the Deathstalkers hold out.",
+      "to": "North to the Ivar Pa",
+      "type": "TRAVEL",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Rane Yorick at the Ivar Patch.",
+      "npc": 1950,
+      "quest": 428,
+      "tag": "main",
+      "title": "Lost Deathstalkers",
+      "type": "TURNIN",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Escort Erland to Rane Yorick (short run). Wolves on the way.",
+      "quest": 435,
+      "tag": "optional",
+      "title": "Escorting Erland",
+      "type": "COMPLETE",
+      "x": 54.4,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Rane Yorick at the Ivar Patch.",
+      "npc": 1950,
+      "quest": 435,
+      "tag": "optional",
+      "title": "Escorting Erland",
+      "type": "TURNIN",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Rane Yorick: gather 6 discolored worg hearts for Renferrel.",
+      "npc": 1950,
+      "quest": 429,
+      "tag": "main",
+      "title": "Wild Hearts",
+      "type": "ACCEPT",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Worgs north-east of the Ivar Patch, lvl 10-11. Collect 6 hearts.",
+      "quest": 429,
+      "tag": "main",
+      "title": "Wild Hearts",
+      "type": "COMPLETE",
+      "x": 58.9,
+      "y": 12.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Back to the Sepulcher to hand in the hearts.",
+      "to": "Back to the Sepulche",
+      "type": "TRAVEL",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Apothecary Renferrel at the Sepulcher.",
+      "npc": 1937,
+      "quest": 429,
+      "tag": "main",
+      "title": "Wild Hearts",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Renferrel: Quinn Yorick needs his potion back at the Ivar Patch.",
+      "npc": 1937,
+      "quest": 430,
+      "tag": "main",
+      "title": "Return to Quinn",
+      "type": "ACCEPT",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "North again to Quinn Yorick at the Ivar Patch.",
+      "to": "North again to Quinn",
+      "type": "TRAVEL",
+      "x": 53.4,
+      "y": 12.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Quinn Yorick at the Ivar Patch.",
+      "npc": 1951,
+      "quest": 430,
+      "tag": "main",
+      "title": "Return to Quinn",
+      "type": "TURNIN",
+      "x": 53.4,
+      "y": 12.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Rane Yorick: kill Ivar the Foul at the Ivar Patch. Optional-elite, revisit at 12.",
+      "npc": 1950,
+      "quest": 425,
+      "revisitAt": 12,
+      "tag": "optional-elite",
+      "title": "Ivar the Foul",
+      "type": "ACCEPT",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Ivar the Foul at the Ivar Patch. Lvl 13, skip if it is too high.",
+      "quest": 425,
+      "tag": "optional-elite",
+      "title": "Ivar the Foul",
+      "type": "COMPLETE",
+      "x": 51.5,
+      "y": 13.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Rane Yorick at the Ivar Patch.",
+      "npc": 1950,
+      "quest": 425,
+      "tag": "optional-elite",
+      "title": "Ivar the Foul",
+      "type": "TURNIN",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "Rane Yorick: the Deathstalker Report for High Executor Hadrec.",
+      "npc": 1950,
+      "quest": 449,
+      "tag": "main",
+      "title": "The Deathstalkers' Report",
+      "type": "ACCEPT",
+      "x": 53.5,
+      "y": 13.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Back to the Sepulcher to hand in the report.",
+      "to": "Back to the Sepulche",
+      "type": "TRAVEL",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "High Executor Hadrec at the Sepulcher.",
+      "npc": 1952,
+      "quest": 449,
+      "tag": "main",
+      "title": "The Deathstalkers' Report",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "minLevel": 10,
+      "note": "High Executor Hadrec: speak with Renferrel.",
+      "npc": 1952,
+      "quest": 3221,
+      "tag": "optional",
+      "title": "Speak with Renferrel",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Apothecary Renferrel at the Sepulcher.",
+      "npc": 1937,
+      "quest": 3221,
+      "tag": "optional",
+      "title": "Speak with Renferrel",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    }
+  ]
+}

@@ -1,0 +1,630 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 8,
+      "reason": "Done in horde_tirisfal_01-05: A Rogue's Deal."
+    },
+    {
+      "decision": "main",
+      "quest": 354,
+      "reason": "Agamand remains at the Mills: 880 XP. Lvl 10 remains, so collect from level 8."
+    },
+    {
+      "decision": "optional",
+      "quest": 355,
+      "reason": "Speak with Sevren: 85 XP, on the way once 354 and 362 are in."
+    },
+    {
+      "decision": "main",
+      "quest": 356,
+      "reason": "Rear Guard Patrol: 660 XP at Linnea camp. Bleeding Horrors lvl 9-10, so do it at level 9."
+    },
+    {
+      "decision": "main",
+      "quest": 357,
+      "reason": "The Lich Identity: 530 XP. Spellbook at Gunther Retreat, turn-in in the Undercity."
+    },
+    {
+      "decision": "main",
+      "quest": 358,
+      "reason": "Graverobbers north of Brill: 700 XP and the Lich chain opener. Lvl 6-8 mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 359,
+      "reason": "Forsaken Duties and Return to the Magistrate: 195 and 390 XP, Linnea camp runs."
+    },
+    {
+      "decision": "main",
+      "quest": 360,
+      "reason": "Forsaken Duties and Return to the Magistrate: 195 and 390 XP, Linnea camp runs."
+    },
+    {
+      "decision": "main",
+      "quest": 361,
+      "reason": "Done in horde_tirisfal_01-05: A Letter Undelivered."
+    },
+    {
+      "decision": "main",
+      "quest": 362,
+      "reason": "Devlin Agamand at the Mills: 420 XP, lvl 9 boss, same trip as 354."
+    },
+    {
+      "decision": "main",
+      "quest": 365,
+      "reason": "Done in horde_tirisfal_01-05: Fields of Grief."
+    },
+    {
+      "decision": "main",
+      "quest": 366,
+      "reason": "Return the Book: 350 XP, Gunther Arcanus on the lake island."
+    },
+    {
+      "decision": "main",
+      "quest": 367,
+      "reason": "Darkhound Blood: 540 XP on the Brill doorstep. Cursed Darkhounds lvl 7-8."
+    },
+    {
+      "decision": "main",
+      "quest": 368,
+      "reason": "Vile Fin Scales in Shadowvale: 780 XP, murlocs lvl 9-10."
+    },
+    {
+      "decision": "main",
+      "quest": 369,
+      "reason": "Vicious Night Web Spider venom: 220 XP, east of Brill. Part of the Johaan chain."
+    },
+    {
+      "decision": "main",
+      "quest": 370,
+      "reason": "Captain Perrine camp south-east of Brill: 780 XP. Mobs lvl 7-9."
+    },
+    {
+      "decision": "main",
+      "quest": 371,
+      "reason": "Captain Vachon and Friars: 840 XP in Venomweb Vale. Vachon lvl 11, do at level 9."
+    },
+    {
+      "decision": "main",
+      "quest": 372,
+      "reason": "Captain Melrache north-east: 910 XP, lvl 12 boss, so only at level 10."
+    },
+    {
+      "decision": "main",
+      "quest": 374,
+      "reason": "Proof of Demise: 630 XP. Rings from Scarlet Warriors and Shadowvale Zealots. Handed over."
+    },
+    {
+      "decision": "main",
+      "quest": 375,
+      "reason": "The Chill of Death: 700 XP, Duskbat Pelts at the Brill doorstep. Coarse Thread is a vendor item."
+    },
+    {
+      "decision": "main",
+      "quest": 380,
+      "reason": "Done in horde_tirisfal_01-05: Night Web's Hollow."
+    },
+    {
+      "decision": "main",
+      "quest": 381,
+      "reason": "Done in horde_tirisfal_01-05: The Scarlet Crusade."
+    },
+    {
+      "decision": "main",
+      "quest": 382,
+      "reason": "Done in horde_tirisfal_01-05: The Red Messenger."
+    },
+    {
+      "decision": "main",
+      "quest": 383,
+      "reason": "Done in horde_tirisfal_01-05: Vital Intelligence."
+    },
+    {
+      "decision": "main",
+      "quest": 398,
+      "reason": "WANTED: Maggot Eye: 840 XP. Maggot Eye is lvl 11, so do it at level 10."
+    },
+    {
+      "decision": "main",
+      "quest": 404,
+      "reason": "Done in horde_tirisfal_01-05: A Putrid Task."
+    },
+    {
+      "decision": "main",
+      "quest": 405,
+      "reason": "Prodigal Lich opener from Sevren: 175 XP, starts the Lich chain."
+    },
+    {
+      "decision": "main",
+      "quest": 407,
+      "reason": "Done in horde_tirisfal_01-05: Fields of Grief."
+    },
+    {
+      "decision": "main",
+      "quest": 409,
+      "reason": "Proving Allegiance: 680 XP. Lillith lvl 12, do at level 10 with the candle from 431."
+    },
+    {
+      "decision": "drop",
+      "quest": 410,
+      "reason": "Alternative candle quest to 431. Both are exclusive with 411, so the one-step candle 431 is routed instead."
+    },
+    {
+      "decision": "drop",
+      "quest": 411,
+      "reason": "Exclusive with the candle quests 410 and 431, which 409 needs. The candle path is routed, so 411 is unreachable."
+    },
+    {
+      "decision": "drop",
+      "quest": 421,
+      "reason": "Dalar Dawnweaver chain requires level 12. The band ends at 10, so it is handed to horde_tirisfal_10-15 at the Sepulcher."
+    },
+    {
+      "decision": "drop",
+      "quest": 422,
+      "reason": "Dalar Dawnweaver chain requires level 12. The band ends at 10, so it is handed to horde_tirisfal_10-15 at the Sepulcher."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 425,
+      "reason": "Ivar the Foul lvl 13, 3+ above the band end. Optional-elite, revisit at 12.",
+      "revisitAt": 12
+    },
+    {
+      "decision": "main",
+      "quest": 426,
+      "reason": "The Mills Overrun: 880 XP at the Mills north of Brill. Handed over from the Johaan route."
+    },
+    {
+      "decision": "main",
+      "quest": 427,
+      "reason": "At War With The Scarlet Crusade, first step: 700 XP at the Crusader Outpost, lvl 6-7 mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 428,
+      "reason": "Lost Deathstalkers breadcrumb: no XP, but unlocks the Rane Yorick chain."
+    },
+    {
+      "decision": "main",
+      "quest": 429,
+      "reason": "Wild Hearts: 440 XP. Worg hearts lvl 10-11 at Ivar Patch."
+    },
+    {
+      "decision": "main",
+      "quest": 430,
+      "reason": "Return to Quinn: 660 XP delivery at Ivar Patch."
+    },
+    {
+      "decision": "main",
+      "quest": 431,
+      "reason": "Candles of Beckoning: one-step candle pickup at the crate. Needed for 409."
+    },
+    {
+      "decision": "optional",
+      "quest": 435,
+      "reason": "Escorting Erland: 880 XP, short escort (about 5 map-% to Rane). Keep the escort tight."
+    },
+    {
+      "decision": "main",
+      "quest": 445,
+      "reason": "Delivery to Silverpine Forest: 630 XP, Johaan to Renferrel at the Sepulcher."
+    },
+    {
+      "decision": "drop",
+      "quest": 447,
+      "reason": "Grizzled Bear Heart objectives spawn in zone 12, outside this band. No Silverpine route. Data gap."
+    },
+    {
+      "decision": "main",
+      "quest": 449,
+      "reason": "The Deathstalkers Report: 440 XP back to Hadrec at the Sepulcher."
+    },
+    {
+      "decision": "main",
+      "quest": 492,
+      "reason": "Johaan Special Drink: 880 XP, finish of the Johaan chain at the Captured Mountaineer."
+    },
+    {
+      "decision": "main",
+      "quest": 590,
+      "reason": "Done in horde_tirisfal_01-05: A Rogue's Deal."
+    },
+    {
+      "decision": "class",
+      "quest": 1470,
+      "reason": "Done in horde_tirisfal_01-05: Piercing the Veil."
+    },
+    {
+      "decision": "class",
+      "quest": 1471,
+      "reason": "Warlock chain: the Voidwalker summon, Undead Warlock only. Not counted in XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1473,
+      "reason": "Warlock chain: the Voidwalker summon, Undead Warlock only. Not counted in XP."
+    },
+    {
+      "decision": "class",
+      "quest": 1478,
+      "reason": "Warlock chain: the Voidwalker summon, Undead Warlock only. Not counted in XP."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1818,
+      "reason": "Warrior chain to the Agamand heirloom weapons (il15 upgrades). Warrior only."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1819,
+      "reason": "Warrior chain to the Agamand heirloom weapons (il15 upgrades). Warrior only."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1820,
+      "reason": "Warrior chain to the Agamand heirloom weapons (il15 upgrades). Warrior only."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1821,
+      "reason": "Warrior chain to the Agamand heirloom weapons (il15 upgrades). Warrior only."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 1822,
+      "reason": "Warrior chain to the Agamand heirloom weapons (il15 upgrades). Warrior only."
+    },
+    {
+      "decision": "class",
+      "quest": 1881,
+      "reason": "Mage chain: Balnir Snapdragons. Undead Mage only."
+    },
+    {
+      "decision": "class",
+      "quest": 1882,
+      "reason": "Mage chain: Balnir Snapdragons. Undead Mage only."
+    },
+    {
+      "decision": "class",
+      "quest": 1885,
+      "reason": "Rogue breadcrumb: speak with Mennet Carkad in the Rogues Quarter. Undead Rogue only."
+    },
+    {
+      "decision": "optional",
+      "quest": 3221,
+      "reason": "Speak with Renferrel: 90 XP, on the way back to the Sepulcher."
+    },
+    {
+      "decision": "main",
+      "quest": 3901,
+      "reason": "Done in horde_tirisfal_01-05: Rattling the Rattlecages."
+    },
+    {
+      "decision": "main",
+      "quest": 3902,
+      "reason": "Done in horde_tirisfal_01-05: Scavenging Deathknell."
+    },
+    {
+      "decision": "main",
+      "quest": 5481,
+      "reason": "Done in horde_tirisfal_01-05: Gordo's Task."
+    },
+    {
+      "decision": "main",
+      "quest": 5482,
+      "reason": "Done in horde_tirisfal_01-05: Doom Weed."
+    },
+    {
+      "decision": "class",
+      "quest": 5650,
+      "reason": "Priest chain: heal Kel near Brill. Class quest, not counted in XP. Priest only."
+    },
+    {
+      "decision": "class",
+      "quest": 5651,
+      "reason": "Priest breadcrumb from Duesten in Deathknell: Priest only. Route stop on the west trip."
+    },
+    {
+      "decision": "class",
+      "quest": 5658,
+      "reason": "Priest Touch of Weakness from Aelthalyste in the Undercity. Priest only."
+    },
+    {
+      "decision": "drop",
+      "quest": 5660,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5661,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5662,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5663,
+      "reason": "Racial alternatives of 5658 from other capitals. Exclusive with 5658, which is routed."
+    },
+    {
+      "decision": "main",
+      "quest": 6321,
+      "reason": "Undead bat chain Sepulcher-Undercity-Sepulcher: 1890 XP, race-only, both bat flights are taxi rides."
+    },
+    {
+      "decision": "main",
+      "quest": 6322,
+      "reason": "Undead bat chain Sepulcher-Undercity-Sepulcher: 1890 XP, race-only, both bat flights are taxi rides."
+    },
+    {
+      "decision": "main",
+      "quest": 6323,
+      "reason": "Undead bat chain Sepulcher-Undercity-Sepulcher: 1890 XP, race-only, both bat flights are taxi rides."
+    },
+    {
+      "decision": "main",
+      "quest": 6324,
+      "reason": "Undead bat chain Sepulcher-Undercity-Sepulcher: 1890 XP, race-only, both bat flights are taxi rides."
+    },
+    {
+      "decision": "main",
+      "quest": 6395,
+      "reason": "Done in horde_tirisfal_01-05: Marla's Last Wish."
+    },
+    {
+      "decision": "drop",
+      "quest": 9265,
+      "reason": "Dim Necrotic Stone spawns are in zones 12 and 215 per the DB. Cannot be routed here. Data gap."
+    },
+    {
+      "decision": "main",
+      "quest": 86784,
+      "reason": "Done in horde_tirisfal_01-05: Sticks and Bones."
+    },
+    {
+      "decision": "class",
+      "quest": 91208,
+      "reason": "Done in horde_tirisfal_01-05: Coming to Terms."
+    },
+    {
+      "decision": "class",
+      "quest": 91209,
+      "reason": "Done in horde_tirisfal_01-05: Continue Your Training."
+    },
+    {
+      "decision": "class",
+      "quest": 91282,
+      "reason": "Paladin: A Second Home, first step to Bandarion Keep. Paladin only."
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 91285,
+      "reason": "Murlocs at the Gates: UP weapons Skullthumper and Driftwood Smasher. Paladin only."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 91294,
+      "reason": "Touring the Grounds: elite-flagged (Danitha Morr lvl 61 credit), talk only. Paladin only. Revisit at 12.",
+      "revisitAt": 12
+    },
+    {
+      "decision": "class",
+      "keyReward": true,
+      "quest": 91316,
+      "reason": "Making Repairs: UP Salvaged Wooden Tower Shield (il14). Paladin only."
+    },
+    {
+      "decision": "class",
+      "quest": 91317,
+      "reason": "The Tarnished: Rudolph Gelhardt head, Shadowvale. Paladin only."
+    },
+    {
+      "decision": "drop",
+      "quest": 91920,
+      "reason": "No XP data, and a second Quinn/Renferrel delivery loop duplicating 429 and 430."
+    },
+    {
+      "decision": "drop",
+      "quest": 91921,
+      "reason": "No XP data, and a second Quinn/Renferrel delivery loop duplicating 429 and 430."
+    },
+    {
+      "decision": "drop",
+      "quest": 94427,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 94434,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 94435,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 94436,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 94438,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 94440,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 94441,
+      "reason": "Lesson in Divinity: 7 paladin quests with no XP data, Undercity and Venomweb trips. Dropped for pace."
+    },
+    {
+      "decision": "drop",
+      "quest": 95314,
+      "reason": "Shadowvale elixir: no XP data, far west from the Brill hub."
+    },
+    {
+      "decision": "drop",
+      "quest": 95803,
+      "reason": "Lady Sylvanas turn-in sits at the far south of the Undercity (58, 92). Long walk for a paladin turn-in."
+    },
+    {
+      "decision": "optional",
+      "quest": 96607,
+      "reason": "Done in horde_tirisfal_01-05: The Great Outdoors."
+    },
+    {
+      "decision": "optional",
+      "quest": 96656,
+      "reason": "Done in horde_tirisfal_01-05: The Adventurer."
+    },
+    {
+      "decision": "drop",
+      "quest": 96658,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 96895,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 96896,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 96897,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 96898,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 96899,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 97558,
+      "reason": "No XP data. Vile Fin Murloc Skin spawns at (67,27) and (33,43), off the route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97951,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97952,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97953,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97954,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97955,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97956,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97957,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97958,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97959,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97960,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "drop",
+      "quest": 97961,
+      "reason": "Profession-gated Camping 101 quest. Needs a gathering or crafting skill. Dropped, as in 01-05."
+    },
+    {
+      "decision": "optional",
+      "quest": 98389,
+      "reason": "Done in horde_tirisfal_01-05: A Light in the Darkness."
+    },
+    {
+      "decision": "drop",
+      "quest": 98545,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 99134,
+      "reason": "Punish 5 Deathguards: no objectives in the DB, cannot be routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 99141,
+      "reason": "Patience: Kristof report source is lvl 55. Not routable."
+    },
+    {
+      "decision": "drop",
+      "quest": 99142,
+      "reason": "Tomb Weed: no XP data, a detour to the east cluster for one turn-in."
+    },
+    {
+      "decision": "drop",
+      "quest": 99144,
+      "reason": "Seeking Refuge escort from the Scarlet Crusader Outpost: an escort through Scarlet mobs at lvl 7-8 is risky solo, and the outpost is off the route."
+    },
+    {
+      "decision": "drop",
+      "quest": 99152,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    },
+    {
+      "decision": "drop",
+      "quest": 99153,
+      "reason": "Argent Dawn chain: no XP data. Leonid sits at Bandarion Keep, a second long trip. Dropped."
+    }
+  ],
+  "id": "horde_tirisfal_05-10",
+  "schemaVersion": 1
+}
