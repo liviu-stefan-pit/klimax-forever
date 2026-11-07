@@ -219,11 +219,16 @@ def compile_index(routes: dict[str, dict[str, Any]], world: World) -> str:
 
 def compile_zones(world: World) -> str:
     rows: dict[int, tuple[str, int, int]] = {}
+    missing: list[str] = []
     for zone in world.travel.get("zones", []):
         ui_map = ui_map_for(zone["id"], world.area_to_ui_map)
-        if ui_map:
-            lo, hi = zone.get("levelRange") or zone.get("levelMinMax") or [1, 60]
-            rows[ui_map] = (zone["name"], lo, hi)
+        if not ui_map:
+            missing.append(f"{zone['name']} (area {zone['id']})")
+            continue
+        lo, hi = zone.get("levelRange") or zone.get("levelMinMax") or [1, 60]
+        rows[ui_map] = (zone["name"], lo, hi)
+    if missing:
+        raise CompileError("no uiMapID known for travel.json zones: " + ", ".join(missing))
     lines = [
         GENERATED_MARK,
         _manifest_header(world),
@@ -263,7 +268,7 @@ def resolve_zones(routes: dict[str, dict[str, Any]], world: World) -> dict[str, 
     if missing:
         raise CompileError(
             "no uiMapID known for: " + ", ".join(missing) + ". Add the zone to "
-            "pipeline/routes/ui_maps.py (BASE_UI_MAPS) once its id is verified."
+            "pipeline/routes/ui_maps.py (OVERRIDES) once its id is verified."
         )
     return mapping
 

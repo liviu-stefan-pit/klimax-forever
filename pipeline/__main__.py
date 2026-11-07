@@ -15,6 +15,8 @@ from pipeline.extract.run import DEFAULT_OUT, DEFAULT_QUESTIEDB
 # name -> (help text, phase that implements it)
 COMMANDS: dict[str, tuple[str, str]] = {
     "extract": ("Decode QuestieDB into data/raw/*.json + manifest.json", "01"),
+    "game-data": ("Read transport/trainer facts from the installed game's add-ons", "03b"),
+    "rxp-crosscheck": ("Write docs/reports/rxp_crosscheck.md (ids and counts only)", "03b"),
     "shape": ("Build Horde band packs and travel candidates", "02"),
     "validate": ("Validate route JSON (hard gate)", "03"),
     "compile": ("Compile validated routes into Klimax/Routes/*.lua", "03"),
@@ -43,6 +45,16 @@ def build_parser() -> argparse.ArgumentParser:
                 type=Path,
                 default=DEFAULT_OUT,
                 help="output folder for data/raw (default: %(default)s)",
+            )
+        if name == "game-data":
+            sub_parser.add_argument(
+                "--addons",
+                type=Path,
+                default=None,
+                help="Interface/AddOns folder of the installed game (read-only)",
+            )
+            sub_parser.add_argument(
+                "--out", type=Path, default=Path("data/raw/game"), help="output folder"
             )
         if name == "shape":
             sub_parser.add_argument(
@@ -146,6 +158,22 @@ def _run_shape(args: argparse.Namespace) -> int:
     return 0
 
 
+def _run_game_data(args: argparse.Namespace) -> int:
+    from pipeline.extract.game_travel import DEFAULT_ADDONS, write_transport
+    from pipeline.extract.rxp_guides import write_rxp_quest_ids
+    from pipeline.extract.trainer_spells import write_trainer_spells
+
+    addons = args.addons or DEFAULT_ADDONS
+    if not addons.is_dir():
+        print(f"game-data: {addons} not found (the game must be installed)", file=sys.stderr)
+        return 1
+    path = write_transport(addons, args.out)
+    print(f"wrote {path}")
+    print(f"wrote {write_trainer_spells(addons, args.out)}")
+    print(f"wrote {write_rxp_quest_ids(addons, args.out)}")
+    return 0
+
+
 def _run_extract(questiedb: Path, out_dir: Path) -> int:
     from pipeline.extract.run import format_summary, run_extract
 
@@ -153,7 +181,11 @@ def _run_extract(questiedb: Path, out_dir: Path) -> int:
         print(f"[extract] {message}", file=sys.stderr)
 
     try:
-        result = run_extract(questiedb=questiedb, out_dir=out_dir, progress=progress)
+        from pipeline.routes.ui_maps import UI_MAPS_PATH
+
+        result = run_extract(
+            questiedb=questiedb, out_dir=out_dir, progress=progress, ui_maps_path=UI_MAPS_PATH
+        )
     except FileNotFoundError as exc:
         print(f"extract: {exc}", file=sys.stderr)
         return 1
@@ -169,6 +201,13 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "extract":
         return _run_extract(args.questiedb, args.out)
+    if args.command == "game-data":
+        return _run_game_data(args)
+    if args.command == "rxp-crosscheck":
+        from pipeline.shape.rxp_crosscheck import run_crosscheck
+
+        print(f"wrote {run_crosscheck()}")
+        return 0
     if args.command == "shape":
         return _run_shape(args)
     if args.command == "validate":

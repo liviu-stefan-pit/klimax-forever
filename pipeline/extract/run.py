@@ -29,6 +29,7 @@ from pipeline.extract.decode_toc import (
     stream_toc,
 )
 from pipeline.extract.schema import EntitySchema, load_schemas
+from pipeline.routes.ui_maps import build_ui_map_table
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_QUESTIEDB = REPO_ROOT / "QuestieDB"
@@ -125,6 +126,7 @@ def run_extract(
     questiedb: Path = DEFAULT_QUESTIEDB,
     out_dir: Path = DEFAULT_OUT,
     progress: Callable[[str], None] = lambda message: None,
+    ui_maps_path: Path | None = None,
 ) -> ExtractResult:
     """Decode the vendored QuestieDB and write all outputs. Returns the result summary."""
     toc = questiedb / TOC_NAME
@@ -190,6 +192,19 @@ def run_extract(
         else:
             entries = len(data)
         outputs[filename] = {"sha256": sha256_file(path), "entries": entries}
+
+    if ui_maps_path is not None:
+        table = build_ui_map_table(
+            zones,
+            {
+                "questiedb": str(headers.get("Version")),
+                "files": "support/Forever/Zones/areaIdToUiMapId.lua",
+                "sha256": sha256_file(
+                    questiedb / "support" / "Forever" / "Zones" / "areaIdToUiMapId.lua"
+                ),
+            },
+        )
+        ui_maps_path.write_text(dumps(table), encoding="utf-8", newline="\n")
 
     counts = {
         "quests": len(entities["Quest"]),

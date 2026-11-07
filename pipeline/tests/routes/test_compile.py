@@ -78,7 +78,7 @@ def test_unknown_ui_map_id_stops_the_compile(tmp_path: Path) -> None:
     route = load("valid_tiny")
     world = build_world()
     world.travel["zones"].append(
-        {"id": 16593, "name": "Zephra's Isle", "enum": "ZEPHRAS_ISLE", "levelRange": [1, 13]}
+        {"id": 99999, "name": "Zephra's Isle", "enum": "ZEPHRAS_ISLE", "levelRange": [1, 13]}
     )
     world.__post_init__()
     route["entry"]["zone"] = "Zephra's Isle"

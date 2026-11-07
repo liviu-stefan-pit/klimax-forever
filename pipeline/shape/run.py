@@ -95,6 +95,13 @@ def run_shape(
     from pipeline.shape.travel import build_travel
 
     travel = build_travel(ctx)
+    transport_path = raw_dir / "game" / "transport.json"
+    if transport_path.is_file():
+        from pipeline.shape.game_merge import merge_game_transport
+
+        transport = json.loads(transport_path.read_text(encoding="utf-8"))
+        merge_game_transport(travel, transport, cfg.id)
+        say(f"merged game transport data ({len(travel['transport']['links'])} links)")
     _write_json(out / "travel.json", travel)
     result.travel_summary = {
         "zones": len(travel["zones"]),

@@ -1,9 +1,10 @@
 """Support data: quest XP table, zone maps and the zone name enum.
 
 * ``xp.json``: ``{questId: [level, xp]}`` from ``support/Forever/QuestXP/xpDB-classic.lua``.
-* ``zones.json``: zone maps and the zone name enum. The zone map files only hold *overrides*
-  (Lua source inside long strings, plus a few direct assignments). They are evaluated with
-  a stub ``QuestieLoader`` so the output is what QuestieDB itself would load.
+* ``zones.json``: zone maps and the zone name enum. Each zone file holds a generated base table
+  and a small override table (Lua source inside long strings, plus a few direct assignments).
+  They are evaluated with a stub ``QuestieLoader`` and merged (override wins), so the output is
+  what QuestieDB itself would load.
 """
 
 from __future__ import annotations
@@ -100,19 +101,21 @@ def load_zone_maps(questiedb: Path, report: SupportReport) -> dict[str, Any]:
             report.skipped.append({"file": f"support/Forever/Zones/{filename}", "error": str(exc)})
 
     out: dict[str, Any] = {}
-    for lua_name, py_name in (
-        ("areaIdToUiMapIdOverride", "areaIdToUiMapId"),
-        ("uiMapIdToAreaIdOverride", "uiMapIdToAreaId"),
-        ("subZoneToParentZoneOverride", "subZoneToParentZone"),
-    ):
-        source = zone_db.private[lua_name]
-        if source is None:
-            report.skipped.append({"file": lua_name, "error": "override not defined by any file"})
-            continue
-        try:
-            out[py_name] = lua_to_python(evaluate(source, lua_name))
-        except Exception as exc:
-            report.skipped.append({"file": lua_name, "error": str(exc)})
+    for py_name in ("areaIdToUiMapId", "uiMapIdToAreaId", "subZoneToParentZone"):
+        # Each file holds a generated base table and a small authored override table. Both are
+        # Lua source in a long string. The override wins on a clash (as in QuestieDB itself).
+        merged: dict[Any, Any] = {}
+        for lua_name in (py_name, f"{py_name}Override"):
+            source = zone_db.private[lua_name]
+            if source is None:
+                report.skipped.append({"file": lua_name, "error": "table not defined by any file"})
+                continue
+            try:
+                merged.update(lua_to_python(evaluate(source, lua_name)))
+            except Exception as exc:
+                report.skipped.append({"file": lua_name, "error": str(exc)})
+        if merged:
+            out[py_name] = dict(sorted(merged.items(), key=lambda kv: str(kv[0])))
 
     instance_map = lua_to_python(zone_db["instanceIdToAreaId"])
     if instance_map is not None:

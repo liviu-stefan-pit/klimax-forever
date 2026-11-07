@@ -36,4 +36,6 @@ Klimax_RegisterZones({
   [1456] = {"Thunder Bluff", 10, 60},
   [1458] = {"Undercity", 13, 60},
   [1459] = {"Alterac Valley", 60, 60},
+  [2521] = {"Zephra's Isle", 3, 12},
+  [2548] = {"Riverglades", 1, 60},
 })
