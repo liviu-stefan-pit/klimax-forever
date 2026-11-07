@@ -164,7 +164,11 @@ function K.Command(msg)
     local cmd, rest = (msg or ""):match("^%s*(%S*)%s*(.-)%s*$")
     cmd = (cmd or ""):lower()
     if cmd == "" then
-        K.Print(L.UI_PENDING)
+        if K.UI then
+            K.UI.Toggle()
+        else
+            K.Print(L.HELP)
+        end
     elseif cmd == "debug" then
         K.DebugDump()
     elseif cmd == "sync" then

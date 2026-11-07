@@ -17,6 +17,8 @@ globals = {
     "SLASH_KLIMAX1",
     "SLASH_KLIMAX2",
     "SlashCmdList",
+    -- Blizzard popup registry: the add-on adds its own popup entries (KLIMAX_RESET_*), no new globals.
+    "StaticPopupDialogs",
 }
 
 -- WoW API the add-on reads (PRD §7). Add to this list only when a new API is used.
@@ -50,6 +52,8 @@ read_globals = {
     "hooksecurefunc", "InterfaceOptionsFrame_OpenToCategory", "Settings",
     -- events and frames for the step engine
     "C_Timer",
+    -- phase 07 UI and arrow: world positions, popups, combat and tooltips
+    "CreateVector2D", "GameTooltip", "GetPlayerFacing", "UIParent",
     -- phase 06 compatibility wrappers (Klimax/Compat.lua)
     "IsQuestFlaggedCompleted", "C_AddOns", "GetAddOnMetadata",
 }

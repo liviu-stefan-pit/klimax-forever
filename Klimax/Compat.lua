@@ -151,3 +151,38 @@ function C.GetBestMapForPlayer()
     end
     return nil
 end
+
+-- Facing of the player in radians (0 = north, counter-clockwise), or nil.
+function C.GetFacing()
+    return (call2(GetPlayerFacing))
+end
+
+-- World position in yards for a map position given in 0..1: continent map id, x, y; or nil.
+-- Needs C_Map.GetWorldPosFromMapPos and CreateVector2D. Without them the arrow stays hidden.
+local function worldPos(mapID, x, y)
+    local cont, vec = C_Map.GetWorldPosFromMapPos(mapID, CreateVector2D(x, y))
+    if not cont or type(vec) ~= "table" then
+        return nil
+    end
+    local wx, wy
+    if type(vec.GetXY) == "function" then
+        wx, wy = vec:GetXY()
+    else
+        wx, wy = vec.x, vec.y
+    end
+    if type(wx) ~= "number" or type(wy) ~= "number" then
+        return nil
+    end
+    return cont, wx, wy
+end
+
+function C.GetWorldPos(mapID, x, y)
+    if not (C_Map and type(C_Map.GetWorldPosFromMapPos) == "function" and type(CreateVector2D) == "function") then
+        return nil
+    end
+    local ok, cont, wx, wy = pcall(worldPos, mapID, x, y)
+    if not ok or not cont then
+        return nil
+    end
+    return cont, wx, wy
+end

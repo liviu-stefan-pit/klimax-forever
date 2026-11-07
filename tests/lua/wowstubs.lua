@@ -27,11 +27,26 @@ local function newState()
         completed = {},   -- questID -> true (IsQuestFlaggedCompleted and GetQuestsCompleted)
         logList = {},     -- array of {questID = n, isComplete = bool, title = string}
         time = 0,
+        facing = 0,       -- GetPlayerFacing (radians)
+        contOf = {},      -- uiMapID -> continent id (default 1)
     }
 end
 
+-- A widget with the methods the add-on calls. Create* returns another widget; any other
+-- method is a no-op that returns nil. Frames and textures store nothing: specs check logic
+-- through the add-on's pure functions, not through widget text.
+local widgetMeta = {}
+widgetMeta.__index = function(_, name)
+    if name:sub(1, 6) == "Create" then
+        return function()
+            return setmetatable({}, widgetMeta)
+        end
+    end
+    return function() end
+end
+
 local function fakeFrame()
-    local frame = { events = {}, scripts = {} }
+    local frame = setmetatable({ events = {}, scripts = {} }, widgetMeta)
     function frame:RegisterEvent(event)
         self.events[event] = true
     end
@@ -74,6 +89,18 @@ function W.reset(opts)
         local f = fakeFrame()
         W.frames[#W.frames + 1] = f
         return f
+    end
+
+    StaticPopupDialogs = {}
+    StaticPopup_Show = function() end
+    GameTooltip = setmetatable({}, widgetMeta)
+    UIParent = setmetatable({}, widgetMeta)
+    GetPlayerFacing = function()
+        return W.state.facing
+    end
+    -- World positions: yards = map percent * 1000, continent from state.contOf (default 1).
+    CreateVector2D = function(x, y)
+        return { x = x, y = y, GetXY = function(self) return self.x, self.y end }
     end
 
     C_Timer = {
@@ -167,6 +194,10 @@ function W.reset(opts)
         end,
         GetPlayerMapPosition = function()
             return W.state.pos.x, W.state.pos.y
+        end,
+        GetWorldPosFromMapPos = function(mapID, vec)
+            local cont = W.state.contOf[mapID] or 1
+            return cont, CreateVector2D(vec.x * 1000, vec.y * 1000)
         end,
     }
 

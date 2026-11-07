@@ -54,6 +54,11 @@ local function applies(step, player)
     return true
 end
 
+-- Auto-advance can be switched off in the options (phase 07). Manual Next, Skip and sync still work.
+local function autoAdvanceOn()
+    return K.Option == nil or K.Option("autoAdvance") ~= false
+end
+
 -- Per-character state table for one route, created on demand.
 local function charState(routeId)
     K.cdb = K.cdb or {}
@@ -349,8 +354,14 @@ end
 -- Marks the cursor step done. For an ACCEPT, the whole hub batch is marked done.
 -- Returns the number of steps marked.
 function E:Next()
-    local i = self.cursor
-    if not i then
+    return self:MarkDone(self.cursor)
+end
+
+-- Marks the step at index i and its hub batch done (phase 07: the UI can act on a focused step
+-- that is not the cursor). Returns the number of steps marked.
+function E:MarkDone(i)
+    local s = i and self.steps[i]
+    if not s then
         return 0
     end
     local st = charState(self.routeId)
@@ -406,7 +417,7 @@ end
 
 -- Marks every pending step that satisfies pred as done. Returns true when something changed.
 local function markWhere(self, pred)
-    if not self.routeId then
+    if not self.routeId or not autoAdvanceOn() then
         return false
     end
     local st = charState(self.routeId)
@@ -426,7 +437,7 @@ end
 -- Marks the cursor step done when its type is in `types` (a set of letters).
 local function markCursorIf(self, types)
     local i = self.cursor
-    if not i or not types[self.steps[i].t] then
+    if not i or not types[self.steps[i].t] or not autoAdvanceOn() then
         return false
     end
     charState(self.routeId)[self.steps[i].k] = "done"
@@ -455,7 +466,7 @@ end
 -- Coordinates are map percent (route values), so x and y are passed in percent too.
 function E:CheckPositionAt(mapID, x, y)
     local i = self.cursor
-    if not i then
+    if not i or not autoAdvanceOn() then
         return false
     end
     local s = self.steps[i]
