@@ -239,7 +239,11 @@ def test_split_bands_assign_branches_by_zone_and_race() -> None:
     ctx = ShapeContext(raw, HORDE)
     ctx.build_quests()
     plan = plan_tracks(ctx, 1, 5)
-    assert plan.quests == {"durotar": [1], "mulgore": [2], "tirisfal": [3]}
+    assert {k: v for k, v in plan.quests.items() if v} == {
+        "durotar": [1],
+        "mulgore": [2],
+        "tirisfal": [3],
+    }
     # 4: Undead-only quest in Durotar; 5: Barrens is only in reach from level 5.
     assert plan.orphans == [4, 5]
     assert plan_tracks(ctx, 5, 10).quests["durotar"] == [1, 5]

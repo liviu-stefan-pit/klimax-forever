@@ -131,6 +131,14 @@ HORDE = FactionConfig(
             home_zones=("TIRISFAL_GLADES", "UNDERCITY"),
             reach_zones=("SILVERPINE_FOREST",),
         ),
+        # Forever-only start zone. Open to every Horde race; how characters reach it is not in
+        # the data, so no reach zones. Added at the user's request (phase 02 follow-up).
+        Branch(
+            id="zephras",
+            races=("Orc", "Troll", "Tauren", "Undead"),
+            start_hub="Zephra's Isle",
+            home_zones=("ZEPHRAS_ISLE",),
+        ),
     ),
     shared_track="horde",
     split_bands=((1, 5), (5, 10)),
