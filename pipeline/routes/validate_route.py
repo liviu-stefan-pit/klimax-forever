@@ -1176,6 +1176,20 @@ class RouteValidator:
 
     # ---- warnings from the walk through the whole route --------------------------------
 
+    @staticmethod
+    def _span(route: dict[str, Any]) -> tuple[int, int]:
+        """Level span the XP and trainer checks use.
+
+        A part route (id ending in a letter, e.g. horde_horde_35-40a) covers only some of its
+        band, so its own entry and exit levels bound the span. Other routes use the band.
+        """
+        lo, hi = route["band"]
+        if route["id"][-1:].isalpha():
+            start, end = route["entry"]["level"], route["exitPoint"]["level"]
+            if lo <= start < end <= hi:
+                return start, end
+        return lo, hi
+
     def _expected_levels(self, route: dict[str, Any]) -> tuple[list[float], dict[str, Any]]:
         """Expected player level at each step, assuming the band is paced to end at its top level.
 
@@ -1183,7 +1197,7 @@ class RouteValidator:
         band's XP budget; kills and exploration are not modelled separately.
         """
         world = self.world
-        lo, hi = route["band"]
+        lo, hi = self._span(route)
         budget = xp_budget(lo, hi)
         gained: list[int] = []
         steps_count = len(route["steps"])
@@ -1367,7 +1381,7 @@ class RouteValidator:
     def _trainer_warnings(
         self, route: dict[str, Any], report: Report, levels: list[float]
     ) -> dict[str, Any]:
-        lo, hi = route["band"]
+        lo, hi = self._span(route)
         trainers = [(i, s) for i, s in enumerate(route["steps"]) if s["type"] == "TRAINER"]
         groups: dict[str, list[tuple[int, dict[str, Any]]]] = {"ALL": []}
         for item in trainers:

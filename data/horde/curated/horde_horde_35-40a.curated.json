@@ -1,0 +1,883 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 186,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 187,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "class",
+      "quest": 188,
+      "reason": "Hunter-only Tiger Mastery (Sin'Dall lv 37 at this level). Class XP is not counted."
+    },
+    {
+      "decision": "drop",
+      "quest": 189,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 191,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "class",
+      "quest": 192,
+      "reason": "Hunter-only Panther Mastery (lv 37-38 panthers). Class XP is not counted."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 193,
+      "reason": "Hunter-only elite Fang of Bhag'thera (lv 40). Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "drop",
+      "quest": 194,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 195,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 196,
+      "reason": "Raptor Mastery: Jungle Stalkers lv 40-41 are 3+ above the expected level here (hunter only)."
+    },
+    {
+      "decision": "main",
+      "quest": 209,
+      "reason": "Skullsplitter tusks lv 39-45 in the central pass; within 2 levels of the route's late levels."
+    },
+    {
+      "decision": "drop",
+      "quest": 213,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 338,
+      "reason": "The Green Hills of Stranglethorn: 4700 XP on the four chapters of Nesingwary's manuscript."
+    },
+    {
+      "decision": "main",
+      "quest": 339,
+      "reason": "Green Hills chapter (780 XP); pages drop from the central Stranglethorn mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 340,
+      "reason": "Green Hills chapter (780 XP); pages drop from the central Stranglethorn mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 341,
+      "reason": "Green Hills chapter (780 XP); pages drop from the central Stranglethorn mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 342,
+      "reason": "Green Hills chapter (780 XP); pages drop from the central Stranglethorn mobs."
+    },
+    {
+      "decision": "drop",
+      "quest": 495,
+      "reason": "Crown of Will breadcrumb (300 XP); the elite 518 does not need it."
+    },
+    {
+      "decision": "main",
+      "quest": 503,
+      "reason": "Gol'dir: freed in Alterac; the Rusted Iron Key comes from Jailor Borhuin (lv 37)."
+    },
+    {
+      "decision": "main",
+      "quest": 506,
+      "reason": "Blackmoore's Legacy: Gol'dir's second quest, turned in at Krusk on the same Alterac visit."
+    },
+    {
+      "decision": "drop",
+      "quest": 507,
+      "reason": "Lord Aliden Perenolde (lv 41) is 4+ above the expected level on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 508,
+      "reason": "Taretha's Gift: needs 507 (lv 41 boss)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 518,
+      "reason": "Elite Crushridge Maulers (lv 36-37). Revisit at 37.",
+      "revisitAt": 37
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 519,
+      "reason": "Elite heads of Targ, Muckrake and Glommus (lv 39-41). Revisit at 41.",
+      "revisitAt": 41
+    },
+    {
+      "decision": "drop",
+      "quest": 533,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 535,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 544,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 545,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 552,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 553,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 557,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 566,
+      "reason": "Baron Vardus (lv 40) is 3+ above the expected level here."
+    },
+    {
+      "decision": "drop",
+      "quest": 568,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 569,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 570,
+      "reason": "Mok'thardin's Enchantment: Shadowmaw claws and tigress fangs (lv 37-38) in the central pass."
+    },
+    {
+      "decision": "drop",
+      "quest": 571,
+      "reason": "Aged gorillas lv 40-41 are 3+ above the expected level here."
+    },
+    {
+      "decision": "drop",
+      "quest": 572,
+      "reason": "Jungle Stalker feathers lv 40-41 are 3+ above the expected level here."
+    },
+    {
+      "decision": "main",
+      "quest": 576,
+      "reason": "Keep An Eye Out: Bloodsail Buccaneers (lv 39-46) next to Booty Bay, about 2 levels above."
+    },
+    {
+      "decision": "main",
+      "quest": 577,
+      "reason": "Some Assembly Required: crocolisk skins in the north-central pass; turned in at Booty Bay."
+    },
+    {
+      "decision": "drop",
+      "quest": 581,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 582,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 584,
+      "reason": "Gan'zulah's and Nezzliok's heads (lv 40-41) are 3+ above the expected level here."
+    },
+    {
+      "decision": "drop",
+      "quest": 585,
+      "reason": "Needs 584 (lv 40-41 heads)."
+    },
+    {
+      "decision": "main",
+      "quest": 587,
+      "reason": "Up to Snuff: Bloodsail snuff drops at Booty Bay (lv 39-45), 2 levels above at this point."
+    },
+    {
+      "decision": "main",
+      "quest": 595,
+      "reason": "Bloodsail Buccaneers chain start; the correspondence object is at (27, 70) near Booty Bay."
+    },
+    {
+      "decision": "drop",
+      "quest": 596,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 597,
+      "reason": "Bloodsail chain: take the correspondence from the object, report to First Mate Crazz."
+    },
+    {
+      "decision": "main",
+      "quest": 598,
+      "reason": "Split Bone Necklace: Kin'weelay in Grom'gol; necklaces around (46, 39) in the central pass."
+    },
+    {
+      "decision": "main",
+      "quest": 599,
+      "reason": "Bloodsail chain: report the planned attack to Fleet Master Seahorn."
+    },
+    {
+      "decision": "drop",
+      "quest": 600,
+      "reason": "Venture Company Mining: the crystals drop from lv 40-42 mobs in the centre, 3+ above the expected level there."
+    },
+    {
+      "decision": "drop",
+      "quest": 605,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 606,
+      "reason": "Mistvale giblets lv 40-41 are 3+ above the expected level here."
+    },
+    {
+      "decision": "drop",
+      "quest": 607,
+      "reason": "Return to MacKinley: needs 606 (lv 40-41 giblets)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 628,
+      "reason": "Excelsior: elite elder crocolisk skins (3 spawns). Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "drop",
+      "quest": 629,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 638,
+      "reason": "Trollbane breadcrumb: starts in Grom'gol, turns in at Zengu in Arathi; 639 is already done."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 639,
+      "reason": "Elite Sigil of Strom, turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 640,
+      "reason": "The Broken Sigil: elite Stromgarde defenders (lv 37-40). Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "optional",
+      "quest": 641,
+      "reason": "Sigil of Thoradin: 315 XP, follows the 640 elite and is kept as a cheap follow-up."
+    },
+    {
+      "decision": "main",
+      "quest": 642,
+      "reason": "The Princess Trapped: Drywhisker kobolds lv 35-38; motes drop next to the Shards."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 643,
+      "reason": "Sigil of Arathor: elite lv 38 (one spawn). Revisit at 38.",
+      "revisitAt": 38
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 644,
+      "reason": "Sigil of Trollbane: elite Prince Galen Trollbane, lv 44. Revisit at 44.",
+      "revisitAt": 44
+    },
+    {
+      "decision": "drop",
+      "quest": 645,
+      "reason": "Trol'kalar: needs 644, the lv 44 elite Prince Galen (revisit at 44)."
+    },
+    {
+      "decision": "drop",
+      "quest": 646,
+      "reason": "Trol'kalar: needs 645, which waits for the lv 44 elite revisit."
+    },
+    {
+      "decision": "main",
+      "quest": 651,
+      "reason": "Stones of Binding: keys from Arathi spawns, turned in at the Stone of Inner Binding."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 652,
+      "reason": "Breaking the Keystone: elite Fozruk, lv 42. Revisit at 42.",
+      "revisitAt": 42
+    },
+    {
+      "decision": "drop",
+      "quest": 655,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 662,
+      "reason": "Deep Sea Salvage: charts and logs from Maiden's Folly, next to Faldir's Cove."
+    },
+    {
+      "decision": "optional",
+      "quest": 663,
+      "reason": "Land Ho!: talk to Shakes O'Breen; cheap prerequisite of the Faldir's Cove escort."
+    },
+    {
+      "decision": "drop",
+      "quest": 664,
+      "reason": "Daggerspine Sorceresses (lv 39-40) are 3+ above the expected level at this point."
+    },
+    {
+      "decision": "optional",
+      "quest": 665,
+      "reason": "Sunken Treasure escort: a short escort in Faldir's Cove; optional."
+    },
+    {
+      "decision": "main",
+      "quest": 666,
+      "reason": "Sunken Treasure: Elven Gems in the cave at (23, 88) in Faldir's Cove."
+    },
+    {
+      "decision": "main",
+      "quest": 668,
+      "reason": "Sunken Treasure: Draxlegauge hand-in to O'Breen."
+    },
+    {
+      "decision": "main",
+      "quest": 669,
+      "reason": "Sunken Treasure: carried to Seahorn in Booty Bay, turned in on the exit leg."
+    },
+    {
+      "decision": "drop",
+      "quest": 670,
+      "reason": "Last leg returns to O'Breen in Arathi from Booty Bay; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 671,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 672,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 673,
+      "reason": "Foul Magics: elite Marez Cowl's Bloodstone Orb (lv 40). Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "drop",
+      "quest": 674,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 675,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 678,
+      "reason": "Call to Arms: Boulderfist brutes and magi (lv 35-37), the chain continues from 677."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 679,
+      "reason": "Elite Boulderfist Shaman and Lord (lv 38-40). Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 680,
+      "reason": "The Real Threat: elite Or'Kalar (lv 40). Revisit at 40.",
+      "revisitAt": 40
+    },
+    {
+      "decision": "drop",
+      "quest": 688,
+      "reason": "Myzrael's Allies: needs 652 (elite Fozruk, lv 42, revisit at 42)."
+    },
+    {
+      "decision": "drop",
+      "quest": 692,
+      "reason": "The Lost Fragments: needs 687, which is in the part b pack."
+    },
+    {
+      "decision": "main",
+      "quest": 698,
+      "reason": "Lack of Surplus: sawtooth flanks lv 38-42 around (57, 36); turn-in at Tok'Kar in the south."
+    },
+    {
+      "decision": "drop",
+      "quest": 699,
+      "reason": "Sawtooth snapper claws lv 41-42 are 5 above the expected level at this point."
+    },
+    {
+      "decision": "drop",
+      "quest": 701,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 702,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 703,
+      "reason": "Barbecued Buzzard Wings: the wings drop in Tanaris and Desolace, not on this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 705,
+      "reason": "Pearl Diving: blue pearls in Stranglethorn, turn-in at Rigglefuzz in the Badlands; two-zone round trip."
+    },
+    {
+      "decision": "main",
+      "quest": 709,
+      "reason": "Solution to Doom: a single tablet north of Theldurin; no level-gated mobs."
+    },
+    {
+      "decision": "drop",
+      "quest": 710,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 711,
+      "reason": "Large Stone Slabs from lv 39-40 mobs are 3+ above the expected level in the Badlands."
+    },
+    {
+      "decision": "drop",
+      "quest": 712,
+      "reason": "Bracers of Rock Binding from lv 42-44 mobs; needs 711."
+    },
+    {
+      "decision": "drop",
+      "quest": 713,
+      "reason": "Coolant Heads Prevail: Frost Oil has no DB source position."
+    },
+    {
+      "decision": "drop",
+      "quest": 714,
+      "reason": "Gyro... What?: Gyrochronatom has no DB source position."
+    },
+    {
+      "decision": "drop",
+      "quest": 715,
+      "reason": "Liquid Stone: needs 714 (no DB source)."
+    },
+    {
+      "decision": "drop",
+      "quest": 716,
+      "reason": "Patterned Bronze Bracers have no DB source position."
+    },
+    {
+      "decision": "main",
+      "quest": 728,
+      "reason": "To the Undercity for Yagyin's Digest: Bel'dugur turn-in on the Undercity trainer visit."
+    },
+    {
+      "decision": "drop",
+      "quest": 734,
+      "reason": "This Is Going to Be Hard: needs 714 (no DB source)."
+    },
+    {
+      "decision": "drop",
+      "quest": 777,
+      "reason": "This Is Going to Be Hard: needs 734."
+    },
+    {
+      "decision": "drop",
+      "quest": 847,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1048,
+      "reason": "Into the Scarlet Monastery: instanced bosses with no map positions; group dungeon elite.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1051,
+      "reason": "Vorrel's Revenge: starter Vorrel has no map position (instanced dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1108,
+      "reason": "Indurium: needs 1106, which is in the part b pack."
+    },
+    {
+      "decision": "drop",
+      "quest": 1109,
+      "reason": "Going, Going, Guano!: Kraul Guano has no DB source position; cannot be completed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1113,
+      "reason": "Hearts of Zeal: prerequisite 1109 Kraul Guano has no DB source, so the chain cannot start.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1116,
+      "reason": "Dream Dust: turn-in is Kravel in the Shimmering Flats (Thousand Needles), far from the exit."
+    },
+    {
+      "decision": "drop",
+      "quest": 1117,
+      "reason": "Rumors for Kravel: Shimmering Flats (Thousand Needles); not in the part b pack."
+    },
+    {
+      "decision": "drop",
+      "quest": 1137,
+      "reason": "News for Fizzle: needs 1108 (part b)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1160,
+      "reason": "Test of Lore: the Beginnings of the Undead Threat is a dungeon-side object; chain not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1164,
+      "reason": "To Steal From Thieves: heads in Arathi after an Undercity start; two far legs."
+    },
+    {
+      "decision": "drop",
+      "quest": 1181,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1182,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 1183,
+      "reason": "Goblin Sponsorship: turn-in Pozzik in the Shimmering Flats (Thousand Needles)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1261,
+      "reason": "Marg Speaks: turn-in with Nazeer in Brackenwall Village (Dustwallow Marsh)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1389,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1392,
+      "reason": "Noboru the Cudgel: item start in the Swamp; turned in at Magtoor in the Harborage."
+    },
+    {
+      "decision": "optional",
+      "quest": 1393,
+      "reason": "Galen's Escape: short escort in the Swamp with the strongbox turn-in on the way; optional."
+    },
+    {
+      "decision": "drop",
+      "quest": 1394,
+      "reason": "Final Passage: needs 6628 (blocked); Dorn is in Thousand Needles."
+    },
+    {
+      "decision": "drop",
+      "quest": 1418,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "main",
+      "quest": 1419,
+      "reason": "Coyote Thieves: jawbones from lv 35-43 coyotes at (32, 64) and (55, 53) in the Badlands."
+    },
+    {
+      "decision": "main",
+      "quest": 1420,
+      "reason": "Report to Helgrum: picked up from Neeka and turned in at Helgrum in the Swamp."
+    },
+    {
+      "decision": "drop",
+      "quest": 1559,
+      "reason": "Flash Bomb Recipe: profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 1712,
+      "reason": "The Summoning chain: needs 1791 (not in this pack)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1713,
+      "reason": "The Summoning: needs 1712, which is blocked by 1791 (not in this pack).",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 1714,
+      "reason": "Essence of the Exile: class-only, no XP row, Alterac cauldron."
+    },
+    {
+      "decision": "drop",
+      "quest": 1792,
+      "reason": "Whirlwind Weapon: class-only and needs 1713."
+    },
+    {
+      "decision": "drop",
+      "quest": 2202,
+      "reason": "Uldaman Reagent Run: most Magenta Fungus Caps are in Loch Modan (zone 38), off this route."
+    },
+    {
+      "decision": "main",
+      "quest": 2258,
+      "reason": "Badlands Reagent Run: buzzards, coyotes and rock elementals around Kargath."
+    },
+    {
+      "decision": "drop",
+      "quest": 2318,
+      "reason": "Translating the Journal: starter Remains of a Paladin has no map position."
+    },
+    {
+      "decision": "drop",
+      "quest": 2338,
+      "reason": "Translating the Journal: needs 2318."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 2418,
+      "reason": "Elite Power Stones, turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 2760,
+      "reason": "The Mithril Order: profession-gated."
+    },
+    {
+      "decision": "drop",
+      "quest": 2843,
+      "reason": "Turned in at horde_horde_30-35; not repeated here."
+    },
+    {
+      "decision": "drop",
+      "quest": 2932,
+      "reason": "Grim Message: explore trigger and pike placement in The Hinterlands (zone 47); off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 3341,
+      "reason": "Bring the End: instanced boss with no map position."
+    },
+    {
+      "decision": "drop",
+      "quest": 4489,
+      "reason": "Summon Felsteed: warlock quest that finishes in Ratchet (Kalimdor)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4782,
+      "reason": "Warlock Bloodrobe chain: needs 4781 (Orgrimmar and Undercity breadcrumbs, not routed)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4785,
+      "reason": "Warlock Fine Gold Thread: needs 4783, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 4969,
+      "reason": "Warlock Orb of Orahil breadcrumb: Menara is in the Barrens; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 6521,
+      "reason": "An Unholy Alliance: prerequisite 6522 Small Scroll has no map position.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 6522,
+      "reason": "Small Scroll is an item start with no map position; blocks 6521."
+    },
+    {
+      "decision": "drop",
+      "quest": 6983,
+      "reason": "You're a Mean One: prerequisite 6963 is a level 60 holiday quest.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 8170,
+      "reason": "Battleground token quest, not a leveling quest."
+    },
+    {
+      "decision": "drop",
+      "quest": 8263,
+      "reason": "Reputation quest, not a leveling quest."
+    },
+    {
+      "decision": "drop",
+      "quest": 78676,
+      "reason": "Rogue class quest with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79358,
+      "reason": "Shaman class quest: turn-in in Thousand Needles, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79361,
+      "reason": "Shaman class quest: turn-in in Thousand Needles, no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 79535,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79536,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79947,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79948,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79949,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79950,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79951,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79952,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79953,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 92434,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 93176,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 93663,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 93680,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96781,
+      "reason": "Rogue class quest with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 96783,
+      "reason": "Rogue class quest with no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 96984,
+      "reason": "Dungeon quest (Dalaran): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 96986,
+      "reason": "Dungeon quest (Dalaran): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 96988,
+      "reason": "Dungeon quest (Dalaran): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 97287,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97328,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97539,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97985,
+      "reason": "Thundering Hearts: the Stormheart is in Thousand Needles (Kalimdor); no XP row.",
+      "unroutable": true
+    }
+  ],
+  "id": "horde_horde_35-40a",
+  "schemaVersion": 1
+}

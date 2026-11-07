@@ -358,3 +358,12 @@ def test_schema_accepts_the_unroutable_flag_on_dropped_entries() -> None:
     route = load("stitch_prev")
     route["dropped"].append({"quest": 10, "reason": "elite with a blocked prerequisite", "unroutable": True})
     assert "E_SCHEMA" not in codes(validate_route(route, build_world()))
+
+
+def test_part_routes_use_their_own_entry_and_exit_as_the_level_span() -> None:
+    from pipeline.routes.validate_route import RouteValidator
+
+    part = {"id": "horde_horde_35-40a", "band": [35, 40], "entry": {"level": 35}, "exitPoint": {"level": 37}}
+    assert RouteValidator._span(part) == (35, 37)
+    whole = {"id": "horde_horde_35-40", "band": [35, 40], "entry": {"level": 35}, "exitPoint": {"level": 37}}
+    assert RouteValidator._span(whole) == (35, 40)
