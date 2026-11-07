@@ -2,7 +2,7 @@
 -- QuestieDB 1.0.11 (commit 80866960788084ae1592abf66a08f0d306458a95)
 Klimax_RegisterIndex({
   routes = {
-    ["horde_durotar_01-05"] = {branch="durotar", lo=1, hi=5, next="horde_durotar_05-10", steps=85},
+    ["horde_durotar_01-05"] = {branch="durotar", lo=1, hi=5, next="horde_durotar_05-10", steps=92},
   },
   start = {
     durotar = "horde_durotar_01-05",
@@ -18,6 +18,9 @@ Klimax_RegisterIndex({
     [823] = {"horde_durotar_01-05"},
     [1485] = {"horde_durotar_01-05"},
     [1499] = {"horde_durotar_01-05"},
+    [1516] = {"horde_durotar_01-05"},
+    [1517] = {"horde_durotar_01-05"},
+    [1518] = {"horde_durotar_01-05"},
     [2161] = {"horde_durotar_01-05"},
     [2383] = {"horde_durotar_01-05"},
     [3065] = {"horde_durotar_01-05"},

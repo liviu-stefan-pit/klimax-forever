@@ -941,7 +941,11 @@ class RouteValidator:
     ) -> None:
         world = self.world
         group = [int(g) for g in quest.get("preQuestGroup") or []]
-        single = [int(s) for s in quest.get("preQuestSingle") or []]
+        # Data bug in QuestieDB: race/faction variants (1516, 1519, 92466) list themselves and
+        # their exclusive siblings as "any one of" prerequisites. A quest can never require
+        # itself or something it excludes, so those ids are ignored.
+        unusable = {qid, *(int(e) for e in quest.get("exclusiveTo") or [])}
+        single = [int(s) for s in quest.get("preQuestSingle") or [] if int(s) not in unusable]
 
         def why(pre: int) -> str:
             name = world.quest_name(pre)

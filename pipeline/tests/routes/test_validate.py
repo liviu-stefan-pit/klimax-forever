@@ -292,3 +292,16 @@ def test_curated_schema_and_pack_coverage() -> None:
     revisit = json.loads(json.dumps(good))
     revisit["decisions"][1]["revisitAt"] = 8  # only valid on optional-elite
     assert validate_curated(revisit)[0].code == "E_SCHEMA"
+
+
+def test_self_and_exclusive_prerequisites_are_ignored() -> None:
+    """QuestieDB lists race variants (1516, 1519) as their own 'any one of' prerequisites."""
+    world = build_world()
+    quest = world.quests[4]
+    quest["preQuestSingle"] = [4, *quest.get("exclusiveTo", [])]
+    assert quest.get("exclusiveTo")
+    nxt = load("stitch_next_ok")
+    nxt["steps"] = [
+        {"type": "ACCEPT", "quest": 4, "tag": "optional", "zone": "Durotar", "x": 42.1, "y": 68.3}
+    ]
+    assert "E_PREREQ" not in codes(validate_route(nxt, world))

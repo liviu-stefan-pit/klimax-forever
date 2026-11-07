@@ -42,18 +42,6 @@
       "reason": "Replacement quest to re-get a lost Earth Sapta; not part of the Call of Earth chain."
     },
     {
-      "quest": 1516,
-      "reason": "Shaman Call of Earth 1: DB lists 1516 as its own prerequisite, so it can never unlock. Data gap; re-add once fixed."
-    },
-    {
-      "quest": 1517,
-      "reason": "Shaman Call of Earth 2: follows 1516, blocked by the same prerequisite data bug. Re-add with the chain."
-    },
-    {
-      "quest": 1518,
-      "reason": "Shaman Call of Earth 3 (Earth Totem): follows 1517, blocked by the same data bug. Re-add with the chain."
-    },
-    {
       "quest": 5648,
       "reason": "Troll Priest quest: needs level 5 and Tai'jin in Razor Hill; handled at the start of 05-10."
     },
@@ -971,12 +959,38 @@
       "zone": "Durotar"
     },
     {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 4,
+      "note": "Shamans: Canaga needs two Felstalker hooves from the north patch. Needs level 4.",
+      "quest": 1516,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 42.4,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
       "note": "Yarrog Baneshadow is in the Burning Blade cave in the north. He carries the medallion.",
       "quest": 794,
       "tag": "main",
       "type": "COMPLETE",
       "x": 42.7,
       "y": 53.0,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Shamans: Felstalkers wander just east of the cave. 2 hooves.",
+      "quest": 1516,
+      "tag": "main",
+      "type": "COMPLETE",
+      "x": 44.0,
+      "y": 53.9,
       "zone": "Durotar"
     },
     {
@@ -1008,6 +1022,72 @@
       "type": "ACCEPT",
       "x": 42.8,
       "y": 69.1,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "quest": 1516,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "minLevel": 4,
+      "note": "Shamans: next you drink the Earth Sapta at the Spirit Rock, just south of the Valley.",
+      "quest": 1517,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 42.4,
+      "y": 69.2,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Shamans: the Minor Manifestation of Earth waits at the Spirit Rock. Drink the Sapta there.",
+      "npc": 5891,
+      "quest": 1517,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 76.2,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "npc": 5891,
+      "quest": 1518,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 76.2,
+      "zone": "Durotar"
+    },
+    {
+      "classes": [
+        "SHAMAN"
+      ],
+      "note": "Shamans: this earns your Earth Totem, a core class tool. Walk back to Canaga.",
+      "quest": 1518,
+      "tag": "main",
+      "title": "Call of Earth",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 69.2,
       "zone": "Durotar"
     },
     {

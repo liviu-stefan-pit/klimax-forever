@@ -86,19 +86,20 @@
       "reason": "Warlock hand-off to Zureetha; the Warlock way into Burning Blade Medallion."
     },
     {
-      "decision": "drop",
+      "decision": "class",
       "quest": 1516,
-      "reason": "Shaman Call of Earth 1: DB lists 1516 as its own prerequisite, so it can never unlock. Data gap; re-add once fixed."
+      "reason": "Shaman: Call of Earth part 1, Felstalker hooves from the north patch."
     },
     {
-      "decision": "drop",
+      "decision": "class",
       "quest": 1517,
-      "reason": "Shaman Call of Earth 2: follows 1516, blocked by the same prerequisite data bug. Re-add with the chain."
+      "reason": "Shaman: Call of Earth part 2, drink the Earth Sapta at the Spirit Rock."
     },
     {
-      "decision": "drop",
+      "decision": "class",
+      "keyReward": true,
       "quest": 1518,
-      "reason": "Shaman Call of Earth 3 (Earth Totem): follows 1517, blocked by the same data bug. Re-add with the chain."
+      "reason": "Shaman: Call of Earth part 3, rewards the Earth Totem."
     },
     {
       "decision": "optional",
