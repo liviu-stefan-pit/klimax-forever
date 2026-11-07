@@ -340,3 +340,15 @@ def test_paths_are_scoped_to_the_races_of_their_start_branch() -> None:
     assert not validator._step_on_path({"type": "ACCEPT", "races": ["Tauren"]}, durotar)
     assert validator._step_on_path({"type": "ACCEPT"}, durotar)
     assert validator._step_on_path({"type": "ACCEPT", "races": ["Tauren"]}, PathState(label="x"))
+
+
+def test_unplaceable_quest_has_no_usable_starter_position() -> None:
+    world = build_world()
+    world.objects[900] = {"name": "Instanced Machine", "spawns": {"721": [[-1, -1]]}}
+    world.quests[77] = {
+        "name": "Machine Quest",
+        "startedBy": {"npcs": [], "objects": [900], "items": []},
+        "finishedBy": {"npcs": [], "objects": [900], "items": []},
+    }
+    assert world.unplaceable(77)
+    assert not world.unplaceable(1)  # Kaltunk has a real spawn

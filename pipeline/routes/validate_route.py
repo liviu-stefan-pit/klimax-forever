@@ -423,7 +423,11 @@ class RouteValidator:
         seen: set[int] = set()
         used = {s["quest"] for s in steps if "quest" in s}
         pack = world.pack(pack_id_of(route))
-        elite = {q["i"] for q in (pack or {}).get("quests", []) if "elite" in q.get("fl", [])}
+        elite = {
+            q["i"]
+            for q in (pack or {}).get("quests", [])
+            if "elite" in q.get("fl", []) and not world.unplaceable(q["i"])
+        }
         for entry in route["dropped"]:
             qid = entry["quest"]
             if qid not in world.quests:
@@ -1608,7 +1612,11 @@ def validate_curated(data: dict[str, Any], world: World | None = None) -> list[I
             )
         for q in pack["quests"]:
             decisions = {r["quest"]: r["decision"] for r in data["decisions"]}
-            if "elite" in q.get("fl", []) and decisions.get(q["i"]) == "drop":
+            if (
+                "elite" in q.get("fl", [])
+                and decisions.get(q["i"]) == "drop"
+                and not world.unplaceable(q["i"])
+            ):
                 issues.append(
                     Issue(
                         ERROR,

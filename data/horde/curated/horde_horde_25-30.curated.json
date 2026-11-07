@@ -1,0 +1,1178 @@
+{
+  "decisions": [
+    {
+      "decision": "main",
+      "quest": 2,
+      "reason": "Sharptalon's Claw (Senani chain): the item at Ashenvale (75, 70)."
+    },
+    {
+      "decision": "drop",
+      "quest": 23,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 24,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 25,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 63,
+      "reason": "Shaman Call of Water chain: class-only, Silverpine brazier plus Barrens NPCs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 96,
+      "reason": "Shaman Call of Water chain: class-only, Silverpine brazier plus Barrens NPCs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 100,
+      "reason": "Shaman Call of Water chain: class-only, Silverpine brazier plus Barrens NPCs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 185,
+      "reason": "Hunter pet chain (Tiger Mastery): needs Stranglethorn Vale and Booty Bay. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 190,
+      "reason": "Hunter pet chain (Panther Mastery): needs Stranglethorn Vale and Booty Bay. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 201,
+      "reason": "Stranglethorn Vale (Booty Bay boat from Ratchet) is off this route. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 216,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 220,
+      "reason": "Shaman Call of Water chain: class-only, Silverpine brazier plus Barrens NPCs. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 247,
+      "reason": "The Hunt Completed: Senani's final quest, needs 2 and the 23/24 pair from 20-25."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 442,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 501,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 502,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 509,
+      "reason": "Elixir of Agony: Lydon chain (Mudsnout, Undercity, south-east coast, keg)."
+    },
+    {
+      "decision": "main",
+      "quest": 513,
+      "reason": "Elixir of Agony: Faranell in the Undercity, the chain link from 509."
+    },
+    {
+      "decision": "main",
+      "quest": 515,
+      "reason": "Elixir of Agony: Daggerspine and Torn Fin coast; needs a Strong Troll's Blood Potion (DB gap)."
+    },
+    {
+      "decision": "main",
+      "quest": 517,
+      "reason": "Elixir of Agony: the Shindigger keg at Dun Garok, south-east Hillsbrad."
+    },
+    {
+      "decision": "main",
+      "quest": 524,
+      "reason": "Elixir of Agony: the keg on the captured farmers' rug at Tarren Mill (3650 XP)."
+    },
+    {
+      "decision": "drop",
+      "quest": 527,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 528,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 529,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 532,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 539,
+      "reason": "Battle of Hillsbrad: Foreman Bonds and miners at the mines; gates 541."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 541,
+      "reason": "Battle of Hillsbrad: Dun Garok elites (mobs 28-32). Gates 550; do at level 30.",
+      "revisitAt": 30
+    },
+    {
+      "decision": "drop",
+      "quest": 546,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 547,
+      "reason": "Humbert's Sword: Dun Garok elite group. Do at level 30.",
+      "revisitAt": 30
+    },
+    {
+      "decision": "main",
+      "quest": 550,
+      "reason": "Battle of Hillsbrad: Varimathras in the Undercity (2550 XP) after the Dun Garok elite."
+    },
+    {
+      "decision": "drop",
+      "quest": 556,
+      "reason": "Worn Stone Tokens: Dalaran ruins in Alterac, mobs 31-36 (3+ above the band). Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 567,
+      "reason": "Dangerous!: four Hillsbrad NPCs on the way to the mines."
+    },
+    {
+      "decision": "drop",
+      "quest": 575,
+      "reason": "Stranglethorn Vale (Booty Bay boat from Ratchet) is off this route. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 583,
+      "reason": "Stranglethorn Vale (Booty Bay boat from Ratchet) is off this route. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 676,
+      "reason": "Boulderfist ogres and enforcers (32-34) are 3+ above the expected level (29) at the end of this band. Chain continues in 35-40."
+    },
+    {
+      "decision": "drop",
+      "quest": 677,
+      "reason": "Witherbark trolls (32-35) are 3+ above the expected level (29) at the end of this band. Chain continues in 35-40 (678)."
+    },
+    {
+      "decision": "drop",
+      "quest": 822,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 824,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 843,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 846,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 849,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 857,
+      "reason": "The Tear of the Moons: Feegly the Exiled in the south Barrens near Gann's camp."
+    },
+    {
+      "decision": "drop",
+      "quest": 862,
+      "reason": "Profession-gated (Cooking 15): Dig Rat Stew."
+    },
+    {
+      "decision": "drop",
+      "quest": 873,
+      "reason": "Jorn chain: 874 needs 913 (Orc/Troll chain), not routable for every race."
+    },
+    {
+      "decision": "drop",
+      "quest": 874,
+      "reason": "Jorn chain: needs 913 (Orc/Troll chain), not routable for every race."
+    },
+    {
+      "decision": "drop",
+      "quest": 879,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 884,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 885,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 893,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 897,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 906,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1013,
+      "reason": "Dungeon quest (5-man): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 1014,
+      "reason": "Dungeon quest (Shadowfang Keep): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 1058,
+      "reason": "Jin'Zil starts far south-east in Stonetalon; objectives are north-west. Two long walks."
+    },
+    {
+      "decision": "drop",
+      "quest": 1066,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 1067,
+      "reason": "Return to Thunder Bluff: Lydon's Toxin to Zamah; the Zamah chain (1086)."
+    },
+    {
+      "decision": "main",
+      "quest": 1068,
+      "reason": "Shredding Machines (handed over): XT shredders in east Stonetalon, turn-in at Seereth."
+    },
+    {
+      "decision": "main",
+      "quest": 1086,
+      "reason": "The Flying Machine Airport: Venture Co. copter pads in east Stonetalon (66, 45)."
+    },
+    {
+      "decision": "main",
+      "quest": 1087,
+      "reason": "Cenarius' Legacy: Sons and Daughters of Cenarius in north-west Stonetalon."
+    },
+    {
+      "decision": "main",
+      "quest": 1088,
+      "reason": "Ordanus: the head in Ashenvale near Splintertree, turn-in at Sun Rock."
+    },
+    {
+      "decision": "main",
+      "quest": 1089,
+      "reason": "The Den: the keys from the Talon Den in north-west Stonetalon, turn-in at Sun Rock."
+    },
+    {
+      "decision": "drop",
+      "quest": 1095,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1096,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1098,
+      "reason": "Dungeon quest (Shadowfang Keep): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 1103,
+      "reason": "Shaman Call of Water chain: class-only, Silverpine brazier plus Barrens NPCs. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 1104,
+      "reason": "Salt Flat Venom: east Thousand Needles, the Shimmering Flats (level 29+)."
+    },
+    {
+      "decision": "main",
+      "quest": 1105,
+      "reason": "Hardened Shells: east Thousand Needles, the Shimmering Flats (level 29+)."
+    },
+    {
+      "decision": "main",
+      "quest": 1110,
+      "reason": "Rocket Car Parts: the Shimmering Flats, Kravel Koalbeard (level 29+)."
+    },
+    {
+      "decision": "main",
+      "quest": 1130,
+      "reason": "Melor Sends Word breadcrumb from Jorn at Camp Taurajo to Melor in Thunder Bluff."
+    },
+    {
+      "decision": "main",
+      "quest": 1131,
+      "reason": "Steelsnap: Steelsnap's Rib in Thousand Needles, turn-in at Melor in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 1144,
+      "reason": "Escort from a dungeon-side zone with no coordinates in the DB. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1149,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 1150,
+      "reason": "Test of Endurance: Grenka's Claw near Dorn Plainstalker."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1151,
+      "reason": "Test of Strength: elite Rok'Alim fragments in Thousand Needles. Do at level 30.",
+      "revisitAt": 30
+    },
+    {
+      "decision": "drop",
+      "quest": 1152,
+      "reason": "Test of Lore: Braug turn-in in Stonetalon, then Ashenvale and Undercity legs. Three far trips."
+    },
+    {
+      "decision": "main",
+      "quest": 1153,
+      "reason": "A New Ore Sample: Gravelsnout Diggers in Thousand Needles, turn-in at Camp Taurajo."
+    },
+    {
+      "decision": "drop",
+      "quest": 1154,
+      "reason": "Test of Lore: needs the Braug turn-in in Stonetalon and the Ashenvale legacy. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1159,
+      "reason": "Test of Lore: needs 6627 and the Parqual turn-in in the Undercity. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 1176,
+      "reason": "Load Lightening: Pozzik in the Shimmering Flats, vulture bones."
+    },
+    {
+      "decision": "drop",
+      "quest": 1195,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 1196,
+      "reason": "The Sacred Flame: Zangen in Thunder Bluff, turn-in at Rau Cliffrunner (Freewind)."
+    },
+    {
+      "decision": "main",
+      "quest": 1197,
+      "reason": "The Sacred Flame part 2: Cloven Hoof from Rau Cliffrunner at Freewind Post."
+    },
+    {
+      "decision": "drop",
+      "quest": 1198,
+      "reason": "Dungeon chain (Blackfathom side): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 1221,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 1361,
+      "reason": "Regthar Deathgate breadcrumb from Tarren Mill; no mobs."
+    },
+    {
+      "decision": "main",
+      "quest": 1362,
+      "reason": "Kolkar of Desolace breadcrumb to Felgur Twocuts; the 1365 link is in 30-35."
+    },
+    {
+      "decision": "drop",
+      "quest": 1366,
+      "reason": "Centaur Bounty needs 1365, which belongs to the 30-35 pack. Handed on."
+    },
+    {
+      "decision": "main",
+      "quest": 1431,
+      "reason": "Alliance Relations: Craven Drok to Keldran in Orgrimmar, cheap and on the way."
+    },
+    {
+      "decision": "main",
+      "quest": 1432,
+      "reason": "Alliance Relations part 2: Keldran to Takata Steelblade in Desolace."
+    },
+    {
+      "decision": "drop",
+      "quest": 1531,
+      "reason": "Shaman Call of Air: class-only, Orgrimmar and Thunder Bluff legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1532,
+      "reason": "Shaman Call of Air: class-only, Orgrimmar and Thunder Bluff legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1534,
+      "reason": "Shaman Call of Water chain: class-only, Silverpine brazier plus Barrens NPCs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1718,
+      "reason": "Warrior class chain (Thunder Bluff and Barrens). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1719,
+      "reason": "Warrior class chain (The Affray). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1740,
+      "reason": "Warlock Orb of Soran'ruk: fragments have no objective positions in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 1791,
+      "reason": "Warrior class chain (The Windwatcher). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1795,
+      "reason": "Warlock Binding: needs the Tome of the Cabal chain (Undercity and Ratchet). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1796,
+      "reason": "Warlock: needs the Menara breadcrumbs (4737/4739). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1801,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1803,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1805,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1838,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1839,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1840,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1841,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1842,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1843,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1844,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1845,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1846,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1847,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1848,
+      "reason": "Warrior Brutal Armor chain: Barrens, Durotar, Thunder Bluff and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1918,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1943,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1944,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1945,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1946,
+      "reason": "Mage chain (Troll/Undead): Undercity, Orgrimmar, Ashenvale and Crossroads legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1950,
+      "reason": "Mage class quest (Tirth, Thousand Needles). Not routed."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 2478,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2479,
+      "reason": "Rogue Hinott's Assistance: Shenthul in Orgrimmar to Tarren Mill, a long walk. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2751,
+      "reason": "Profession-gated (Blacksmithing): Barbaric Battlements."
+    },
+    {
+      "decision": "drop",
+      "quest": 2752,
+      "reason": "Profession-gated (Blacksmithing): On Iron Pauldrons."
+    },
+    {
+      "decision": "drop",
+      "quest": 2904,
+      "reason": "Escort in Stranglethorn with a starter that has no coordinates. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2951,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed. Dungeon elite; revisit with a group."
+    },
+    {
+      "decision": "drop",
+      "quest": 2952,
+      "reason": "Gnomeregan instance chain (zone 721, no coordinates in the DB). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2953,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed. Dungeon elite; revisit with a group."
+    },
+    {
+      "decision": "drop",
+      "quest": 2996,
+      "reason": "Warlock breadcrumb (Orgrimmar side of Seeking Strahad). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 3001,
+      "reason": "Warlock breadcrumb: the Tome of the Cabal chain. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 3369,
+      "reason": "Dungeon chain (Glowing Shard): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 3513,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 3514,
+      "reason": "Horde Presence: elite leader of the Talon Den, north-west Stonetalon. Come back at 28.",
+      "revisitAt": 28
+    },
+    {
+      "decision": "drop",
+      "quest": 3567,
+      "reason": "To the Top (Feralas): no XP row, far south-east."
+    },
+    {
+      "decision": "drop",
+      "quest": 4542,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 4601,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed. Dungeon elite; revisit with a group."
+    },
+    {
+      "decision": "drop",
+      "quest": 4602,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed. Dungeon elite; revisit with a group."
+    },
+    {
+      "decision": "drop",
+      "quest": 4603,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed. Dungeon elite; revisit with a group."
+    },
+    {
+      "decision": "drop",
+      "quest": 4604,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed. Dungeon elite; revisit with a group."
+    },
+    {
+      "decision": "drop",
+      "quest": 4605,
+      "reason": "Gnomeregan instance chain (zone 721, no coordinates in the DB). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4606,
+      "reason": "Gnomeregan instance chain (zone 721, no coordinates in the DB). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4737,
+      "reason": "Warlock Menara breadcrumb: Orgrimmar and Undercity legs. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4739,
+      "reason": "Warlock Menara breadcrumb: Orgrimmar and Undercity legs. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 4767,
+      "reason": "Wind Rider: Highperch Wyvern Eggs for Elu at Freewind Post."
+    },
+    {
+      "decision": "optional",
+      "quest": 4770,
+      "reason": "Escort Pao'ka Swiftmountain from Highperch to Whitereach Post, on the west loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 4821,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 4841,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 4865,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 4881,
+      "reason": "Assassination Plot: warn Kanati Greycloud at Whitereach Post."
+    },
+    {
+      "decision": "optional",
+      "quest": 4904,
+      "reason": "Escort Lakota Windsong from the Darkcloud Pinnacle to Freewind. Short and on the way."
+    },
+    {
+      "decision": "optional",
+      "quest": 4966,
+      "reason": "Protect Kanati Greycloud from the Galak assassins near Whitereach Post."
+    },
+    {
+      "decision": "drop",
+      "quest": 5062,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 5064,
+      "reason": "Grimtotem Spying: three Secret Notes in Darkcloud Pinnacle."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5088,
+      "reason": "Arikara: elite in Thousand Needles, set by Magatha in Thunder Bluff. Come back at 28.",
+      "revisitAt": 28
+    },
+    {
+      "decision": "main",
+      "quest": 5147,
+      "reason": "WANTED: Arnak Grimtotem. The hoof at Darkcloud, turn-in at Cliffwatcher Longhorn."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5151,
+      "reason": "Hypercapacitor Gizmo: elite beast at Wizlo's camp in Thousand Needles. Level 30.",
+      "revisitAt": 30
+    },
+    {
+      "decision": "drop",
+      "quest": 5421,
+      "reason": "Fish in a Bucket (Desolace): no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5762,
+      "reason": "Hemet Nesingwary turn-in in Stranglethorn Vale, far south. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5763,
+      "reason": "Hemet Nesingwary turn-in in Stranglethorn Vale, far south. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 5881,
+      "reason": "Calling in the Reserves: a letter from Maggran to Grish Longrunner at the Great Lift."
+    },
+    {
+      "decision": "drop",
+      "quest": 6282,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6283,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6301,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6381,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6393,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6441,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6462,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6482,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6503,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "main",
+      "quest": 6504,
+      "reason": "The Lost Pages: shredder manual pages around Gurda Ragescar in Ashenvale (3650 XP)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6544,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6546,
+      "reason": "Warsong runner update: no XP row in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 6561,
+      "reason": "Dungeon quest (Blackfathom Deeps): not soloable for this profile."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6565,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6571,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6581,
+      "reason": "Warsong runner update: no XP row in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 6621,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6627,
+      "reason": "Test of Lore: needs the Braug chain above. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 6628,
+      "reason": "Test of Lore: needs 1160, which belongs to the 30-35 pack. Handed on."
+    },
+    {
+      "decision": "drop",
+      "quest": 6641,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 6681,
+      "reason": "Rogue Ravenholdt chain: Hillsbrad and Alterac trip. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 6921,
+      "reason": "Dungeon quest (Maraudon side): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 6922,
+      "reason": "Dungeon quest (Maraudon side): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 6981,
+      "reason": "Dungeon quest (Dire Maul side): not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 7321,
+      "reason": "Profession-gated (Cooking): Soothing Turtle Bisque."
+    },
+    {
+      "decision": "drop",
+      "quest": 8171,
+      "reason": "Battleground quest: not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8370,
+      "reason": "Battleground quest: not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8390,
+      "reason": "Battleground quest: not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8426,
+      "reason": "Battleground quest: not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8431,
+      "reason": "Battleground quest: not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8852,
+      "reason": "Holiday or PvP token quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 9388,
+      "reason": "Holiday festival quest (Flickering Flames): event-only objects, starter in Teldrassil."
+    },
+    {
+      "decision": "drop",
+      "quest": 9389,
+      "reason": "Holiday festival quest (Flickering Flames): event-only objects, starter in Teldrassil."
+    },
+    {
+      "decision": "drop",
+      "quest": 65610,
+      "reason": "Warlock class quest with no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 78132,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78133,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78134,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78261,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78270,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79192,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79362,
+      "reason": "Shaman class quest with no XP row, Alterac side. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79363,
+      "reason": "Shaman class quest with no XP row, Alterac side. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79974,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79975,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79976,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79980,
+      "reason": "Forever side quest with no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 86576,
+      "reason": "Bloodfury Trinkets: no XP row, glittering sunstone only. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95034,
+      "reason": "Undead paladin chain (Silverpine and Hillsbrad), no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95036,
+      "reason": "Undead paladin chain (Silverpine and Hillsbrad), no XP row. Not routed."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 95042,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95111,
+      "reason": "Undead paladin chain (Silverpine and Hillsbrad), no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95125,
+      "reason": "Undead paladin chain (Silverpine and Hillsbrad), no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95126,
+      "reason": "Undead paladin chain (Silverpine and Hillsbrad), no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95140,
+      "reason": "Undead paladin chain (Silverpine and Hillsbrad), no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95663,
+      "reason": "Dungeon chain (Forever instance content): no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95664,
+      "reason": "Dungeon chain (Forever instance content): no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95682,
+      "reason": "Dungeon chain (Forever instance content): no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95697,
+      "reason": "Dungeon chain (Forever instance content): no XP row. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 95883,
+      "reason": "Silverpine follow-up: no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95884,
+      "reason": "Silverpine follow-up: no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95885,
+      "reason": "Silverpine follow-up: no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96241,
+      "reason": "Gloomrise errand in Mulgore: no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96259,
+      "reason": "Gloomrise errand in Mulgore: no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96260,
+      "reason": "Gloomrise errand in Mulgore: no XP row. Off route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 96261,
+      "reason": "The Broodmother: elite in Mulgore (Gloomrise), no XP row. Detour from Thunder Bluff.",
+      "revisitAt": 30
+    },
+    {
+      "decision": "drop",
+      "quest": 96294,
+      "reason": "Gloomrise errand in Mulgore: no XP row. Off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96779,
+      "reason": "Rogue class quest (Alterac). Not routed."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 97250,
+      "reason": "Turned in before this band (horde_horde_20-25); nothing to route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97538,
+      "reason": "No XP row in the DB; errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98069,
+      "reason": "No XP row in the DB; Freewind errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98070,
+      "reason": "No XP row in the DB; Freewind errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98093,
+      "reason": "No XP row in the DB; Barrens errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98094,
+      "reason": "No XP row in the DB; Hillsbrad errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98095,
+      "reason": "No XP row in the DB; Hillsbrad errand off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98823,
+      "reason": "Dungeon chain (Forever instance content): no XP row. Not routed."
+    }
+  ],
+  "id": "horde_horde_25-30",
+  "schemaVersion": 1
+}

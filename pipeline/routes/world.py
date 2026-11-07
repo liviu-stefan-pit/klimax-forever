@@ -156,6 +156,17 @@ class World:
             out.extend((kind, int(i)) for i in (block or {}).get(key, []) or [])
         return out
 
+    def unplaceable(self, quest_id: int) -> bool:
+        """True if no starter of the quest has a usable map position (e.g. instanced objects).
+
+        Such a quest cannot get an ACCEPT step with coordinates, so it may be dropped even if it
+        is elite. Item starters do not count: they come from drops and are placed elsewhere.
+        """
+        givers = self.quest_giver(quest_id, "start")
+        if not givers or any(kind == "i" for kind, _ in givers):
+            return False
+        return not any(self.entity_spawns(kind, entity_id) for kind, entity_id in givers)
+
     # ---- packs ---------------------------------------------------------------------------
 
     def pack(self, pack_id: str) -> dict[str, Any] | None:
