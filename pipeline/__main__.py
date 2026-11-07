@@ -23,6 +23,8 @@ COMMANDS: dict[str, tuple[str, str]] = {
     "overview": ("Write docs/ROUTE_OVERVIEW.md from the stitched routes", "05"),
     "gen-rares": ("Write Klimax/Data/Rares.lua (rare NPCs in Horde zones)", "08"),
     "gen-chests": ("Write Klimax/Data/Chests.lua (chest spawns in Horde zones)", "08"),
+    "fixture": ("Convert a /klimax dump (SavedVariables) into a JSON test fixture", "18"),
+    "diagnose": ("Offline data checks behind the phase 18 diagnosis (read-only)", "18"),
     "refresh": ("extract + shape + diff + validate in one go", "90"),
     "diff-db": ("Diff two raw extracts and list affected bands", "90"),
 }
@@ -106,6 +108,35 @@ def build_parser() -> argparse.ArgumentParser:
                 "--through", type=int, default=None, help="only describe levels below this one"
             )
             _add_route_paths(sub_parser)
+        if name == "fixture":
+            sub_parser.add_argument(
+                "savedvars", type=Path, help="WTF/Account/<account>/SavedVariables/Klimax.lua"
+            )
+            sub_parser.add_argument(
+                "--out", type=Path, default=None, help="fixture path (default: tests/fixtures/...)"
+            )
+            sub_parser.add_argument("--char", default=None, help="dump key 'Name-Realm'")
+            sub_parser.add_argument(
+                "--keep-name", action="store_true", help="keep the character name and realm"
+            )
+        if name == "diagnose":
+            sub_parser.add_argument(
+                "--check",
+                action="append",
+                default=None,
+                help="run only this check (repeatable): scope_gaps, npc_positions, "
+                "shadowed_ids, cross_branch_rewards, zone_flow",
+            )
+            sub_parser.add_argument("--json", action="store_true", help="machine-readable output")
+            sub_parser.add_argument("--limit", type=int, default=25, help="lines per check")
+            sub_parser.add_argument(
+                "--as",
+                dest="as_char",
+                default=None,
+                metavar="RACE/CLASS",
+                help="zone_flow for one character only, e.g. Orc/HUNTER",
+            )
+            _add_route_paths(sub_parser)
         if name == "compile":
             sub_parser.add_argument("--addon", type=Path, default=Path("Klimax"))
             sub_parser.add_argument(
@@ -167,6 +198,50 @@ def _run_compile(args: argparse.Namespace) -> int:
         addon_dir=args.addon,
         stitched=args.stitched,
     )
+
+
+def _run_fixture(args: argparse.Namespace) -> int:
+    from pipeline.diagnose.fixture import FixtureError, convert_file
+    from pipeline.diagnose.savedvars import SavedVariablesError
+
+    try:
+        path = convert_file(args.savedvars, args.out, char=args.char, keep_name=args.keep_name)
+    except (OSError, FixtureError, SavedVariablesError) as exc:
+        print(f"fixture: {exc}", file=sys.stderr)
+        return 1
+    print(f"wrote {path}")
+    return 0
+
+
+def _run_diagnose(args: argparse.Namespace) -> int:
+    import json
+
+    from pipeline.diagnose.data_checks import CHECKS, format_report, load_routes, run_checks
+    from pipeline.routes.world import World
+
+    unknown = [c for c in args.check or [] if c not in CHECKS]
+    if unknown:
+        print(f"diagnose: unknown check(s): {', '.join(unknown)}", file=sys.stderr)
+        return 2
+    try:
+        world = World.load(args.faction, args.raw, args.data)
+    except FileNotFoundError as exc:
+        print(f"diagnose: {exc} (run extract and shape first)", file=sys.stderr)
+        return 2
+    as_char = None
+    if args.as_char:
+        race, _, klass = args.as_char.partition("/")
+        if not race or not klass:
+            print("diagnose: --as needs RACE/CLASS, e.g. Orc/HUNTER", file=sys.stderr)
+            return 2
+        as_char = (race, klass.upper())
+    routes = load_routes(args.routes_dir or Path("routes") / args.faction)
+    results = run_checks(routes, world, args.check, as_char)
+    if args.json:
+        print(json.dumps(results, indent=1, sort_keys=True))
+    else:
+        print(format_report(results, args.limit))
+    return 0
 
 
 def _run_shape(args: argparse.Namespace) -> int:
@@ -246,6 +321,10 @@ def main(argv: list[str] | None = None) -> int:
         return _run_compile(args)
     if args.command == "overview":
         return _run_overview(args)
+    if args.command == "fixture":
+        return _run_fixture(args)
+    if args.command == "diagnose":
+        return _run_diagnose(args)
     if args.command == "gen-rares":
         from pipeline.smart.gen import write_rares
 

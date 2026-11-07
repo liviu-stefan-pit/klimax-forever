@@ -25,7 +25,14 @@ local function newState()
         bind = "Razor Hill",
         taxi = {},
         completed = {},   -- questID -> true (IsQuestFlaggedCompleted and GetQuestsCompleted)
-        logList = {},     -- array of {questID = n, isComplete = bool, title = string}
+        -- array of {questID = n, isComplete = true | 1 | -1 | nil, title = string, level = n,
+        -- objectives = {{text, type, finished, numFulfilled, numRequired}}} or a header line
+        -- {isHeader = true, title = string, isCollapsed = bool}. A collapsed header hides the quests
+        -- under it, as the client does (phase 18).
+        logList = {},
+        xp = 0, xpMax = 1000, rested = nil,
+        zoneText = "Durotar", subzoneText = "",
+        realm = "Forever",
         time = 0,
         wall = 1000000,   -- time() in seconds
         classification = {},
@@ -122,8 +129,27 @@ function W.reset(opts)
         return W.state.completed[questID] or false
     end
 
+    -- Visible quest log lines (collapsed headers hide their quests) and the total quest count.
     local function logEntries()
-        return W.state.logList
+        local visible, quests = {}, 0
+        local collapsed = false
+        for _, e in ipairs(W.state.logList) do
+            if e.isHeader then
+                collapsed = e.isCollapsed and true or false
+                visible[#visible + 1] = e
+            else
+                quests = quests + 1
+                if not collapsed then
+                    visible[#visible + 1] = e
+                end
+            end
+        end
+        return visible, quests
+    end
+
+    local function objectivesAt(i)
+        local e = logEntries()[i]
+        return e and e.objectives or {}
     end
 
     if opts.legacy then
@@ -139,7 +165,8 @@ function W.reset(opts)
             return set
         end
         GetNumQuestLogEntries = function()
-            return #logEntries(), 0
+            local visible, quests = logEntries()
+            return #visible, quests
         end
         GetQuestLogTitle = function(i)
             local e = logEntries()[i]
@@ -147,24 +174,52 @@ function W.reset(opts)
                 return nil
             end
             -- title, level, suggestedGroup, isHeader, isCollapsed, isComplete, frequency, questID
-            return e.title, 1, 0, false, false, e.isComplete, 0, e.questID
+            if e.isHeader then
+                return e.title, 0, 0, true, e.isCollapsed and true or false, nil, 0, nil
+            end
+            return e.title, e.level or 1, 0, false, false, e.isComplete, 0, e.questID
+        end
+        GetNumQuestLeaderBoards = function(i)
+            return #objectivesAt(i)
+        end
+        GetQuestLogLeaderBoard = function(j, i)
+            local o = objectivesAt(i)[j]
+            if not o then
+                return nil
+            end
+            return o.text, o.type, o.finished
         end
     else
         IsQuestFlaggedCompleted = nil
+        GetNumQuestLeaderBoards = nil
+        GetQuestLogLeaderBoard = nil
         GetQuestsCompleted = nil
         GetNumQuestLogEntries = nil
         GetQuestLogTitle = nil
         C_QuestLog = {
             IsQuestFlaggedCompleted = isCompleted,
             GetNumQuestLogEntries = function()
-                return #logEntries()
+                local visible, quests = logEntries()
+                return #visible, quests
             end,
             GetInfo = function(i)
                 local e = logEntries()[i]
                 if not e then
                     return nil
                 end
-                return { questID = e.questID, isComplete = e.isComplete, title = e.title, isHeader = false }
+                if e.isHeader then
+                    return { title = e.title, isHeader = true, isCollapsed = e.isCollapsed and true or false }
+                end
+                return { questID = e.questID, isComplete = e.isComplete, title = e.title, isHeader = false,
+                    level = e.level or 1 }
+            end,
+            GetQuestObjectives = function(questID)
+                for _, e in ipairs(W.state.logList) do
+                    if e.questID == questID then
+                        return e.objectives or {}
+                    end
+                end
+                return {}
             end,
         }
     end
@@ -189,6 +244,24 @@ function W.reset(opts)
     end
     UnitLevel = function()
         return W.state.level
+    end
+    UnitXP = function()
+        return W.state.xp
+    end
+    UnitXPMax = function()
+        return W.state.xpMax
+    end
+    GetXPExhaustion = function()
+        return W.state.rested
+    end
+    GetRealZoneText = function()
+        return W.state.zoneText
+    end
+    GetSubZoneText = function()
+        return W.state.subzoneText
+    end
+    GetRealmName = function()
+        return W.state.realm
     end
 
     C_Map = {

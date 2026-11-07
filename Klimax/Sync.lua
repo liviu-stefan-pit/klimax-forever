@@ -149,6 +149,7 @@ function S:Apply(result)
             end
             if done then
                 st[s.k] = "done"
+                E.NoteMark("sync", s, "done")
                 marked = marked + 1
             end
         end
@@ -308,6 +309,7 @@ function S:LevelSync(result)
                 cdb.gearChoice[choiceKey(E.routeId, s.q)])
             if verdict == "archive" then
                 st[s.k] = "archived"
+                E.NoteMark("levelsync-archive", s, "archived")
             elseif verdict == "ask" and not asked[s.q] then
                 asked[s.q] = true
                 gear = gear or s

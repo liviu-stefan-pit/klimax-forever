@@ -6,6 +6,28 @@ K.name = ADDON
 K.SCHEMA = 1
 K.player = K.player or {}
 
+-- Phase 18: which step engine runs. "legacy" is the band engine (Engine.lua with Sync and Audit).
+-- A later engine registers itself in K.engines; until then any other value falls back to legacy.
+-- The choice is KlimaxDB.options.engine, set with /klimax engine <name> and applied on /reload.
+K.engines = K.engines or {}
+
+function K.EngineMode()
+    local want = K.db and K.db.options and K.db.options.engine
+    if want and K.engines[want] then
+        return want
+    end
+    return "legacy"
+end
+
+local function engineNames()
+    local names = {}
+    for name in pairs(K.engines) do
+        names[#names + 1] = name
+    end
+    table.sort(names)
+    return table.concat(names, ", ")
+end
+
 -- ---- Event frame and dispatcher -------------------------------------------------------------
 
 K.frame = CreateFrame("Frame")
@@ -189,6 +211,16 @@ function K.Command(msg)
         end
     elseif cmd == "dev" then
         K.DevCommand(rest)
+    elseif cmd == "dump" then
+        K.Diag.Dump()
+    elseif cmd == "audit" then
+        if rest:lower() == "state" then
+            K.Diag.ReportState()
+        else
+            K.Audit.Run(true)
+        end
+    elseif cmd == "engine" then
+        K.EngineCommand(rest)
     else
         K.Print(L.HELP)
     end
@@ -196,6 +228,20 @@ end
 
 SlashCmdList["KLIMAX"] = function(msg)
     K.Command(msg)
+end
+
+-- "/klimax engine" prints the selected engine; "/klimax engine <name>" selects a registered one.
+function K.EngineCommand(rest)
+    local name = (rest or ""):lower()
+    if name == "" then
+        K.Print(string.format(L.ENGINE_CURRENT, K.EngineMode(), engineNames()))
+    elseif K.engines[name] then
+        K.db.options = K.db.options or {}
+        K.db.options.engine = name
+        K.Print(string.format(L.ENGINE_SET, name))
+    else
+        K.Print(string.format(L.ENGINE_UNKNOWN, name, engineNames()))
+    end
 end
 
 -- Dev-only helpers (phase 08). "dev level N" fakes the level for the engine and the elite module,

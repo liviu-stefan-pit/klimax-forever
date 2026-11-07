@@ -43,3 +43,4 @@ Trainer.lua
 Opportunities.lua
 Elite.lua
 Audit.lua
+Diag.lua

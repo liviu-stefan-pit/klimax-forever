@@ -10,6 +10,10 @@ local L = K.L
 
 local E = {}
 K.Engine = E
+-- Phase 18: this step engine is the "legacy" engine. It stays selectable by K.EngineMode() so a
+-- later engine can be compared with it (see Core.lua).
+K.engines = K.engines or {}
+K.engines.legacy = E
 
 E.routeId = nil
 E.raw = nil
@@ -30,6 +34,15 @@ local RACE_BRANCH = {
 }
 
 -- ---- Helpers ----------------------------------------------------------------------------------
+
+-- Phase 18 instrumentation: every state the engine stores is reported to K.Diag (when loaded)
+-- with its source, so a dump can show why a step was marked. It never changes what is stored.
+local function noteMark(source, step, state)
+    if K.Diag and K.Diag.NoteMark then
+        K.Diag.NoteMark(source, step, state)
+    end
+end
+E.NoteMark = noteMark
 
 local function contains(list, value)
     if type(list) ~= "table" or value == nil then
@@ -334,6 +347,7 @@ function E:ArchiveQuest(quest)
     for i, s in ipairs(self.steps) do
         if s.q == quest and self.eff[i] == "pending" then
             st[s.k] = "archived"
+            noteMark("archive-quest", s, "archived")
             n = n + 1
         end
     end
@@ -483,6 +497,7 @@ function E:MarkDone(i)
     for _, j in ipairs(self:Batch(i)) do
         if self.eff[j] == "pending" then
             st[self.steps[j].k] = "done"
+            noteMark(j == i and "next" or "next-batch", self.steps[j], "done")
             marked = marked + 1
         end
     end
@@ -499,6 +514,7 @@ function E:Skip(i)
     end
     local before = countEff(self, "cascade")
     charState(self.routeId)[s.k] = "skipped"
+    noteMark("skip", s, "skipped")
     if K.Elite then
         K.Elite.OnSkip(s, self.routeId)
     end
@@ -533,7 +549,7 @@ function E:Reset(scope)
 end
 
 -- Marks every pending step that satisfies pred as done. Returns true when something changed.
-local function markWhere(self, pred)
+local function markWhere(self, pred, source)
     if not self.routeId or not autoAdvanceOn() then
         return false
     end
@@ -542,6 +558,7 @@ local function markWhere(self, pred)
     for i, s in ipairs(self.steps) do
         if self.eff[i] == "pending" and pred(s) then
             st[s.k] = "done"
+            noteMark(source, s, "done")
             changed = true
         end
     end
@@ -552,12 +569,13 @@ local function markWhere(self, pred)
 end
 
 -- Marks the cursor step done when its type is in `types` (a set of letters).
-local function markCursorIf(self, types)
+local function markCursorIf(self, types, source)
     local i = self.cursor
     if not i or not types[self.steps[i].t] or not autoAdvanceOn() then
         return false
     end
     charState(self.routeId)[self.steps[i].k] = "done"
+    noteMark(source, self.steps[i], "done")
     self:Recompute()
     return true
 end
@@ -576,7 +594,7 @@ function E:CheckQuestLog(log)
             return true
         end
         return s.t == "C" and e.complete
-    end)
+    end, "questlog")
 end
 
 -- Marks TRAVEL steps done when the player stands within TRAVEL_RADIUS of the cursor step.
@@ -593,6 +611,7 @@ function E:CheckPositionAt(mapID, x, y)
     local dx, dy = x - s.x, y - s.y
     if dx * dx + dy * dy <= TRAVEL_RADIUS * TRAVEL_RADIUS then
         charState(self.routeId)[s.k] = "done"
+        noteMark("position", s, "done")
         self:Recompute()
         return true
     end
@@ -626,7 +645,7 @@ function E:MarkFlightPaths(nodes)
             end
         end
         return false
-    end)
+    end, "taxi")
 end
 
 -- Hearth bind: the cursor H step is done when the bind location matches its `to` (or has none).
@@ -639,7 +658,7 @@ function E:HearthBound(location)
     if s.to and location ~= s.to then
         return false
     end
-    return markCursorIf(self, { H = true })
+    return markCursorIf(self, { H = true }, "bind")
 end
 
 -- Throttled quest log checks: many QUEST_LOG_UPDATE events collapse into one check per second.
@@ -648,14 +667,14 @@ local logCheckQueued = false
 K.On("QUEST_ACCEPTED", function(a, b)
     local questID = tonumber(b) or tonumber(a)
     if questID then
-        markWhere(E, function(s) return s.q == questID and s.t == "A" end)
+        markWhere(E, function(s) return s.q == questID and s.t == "A" end, "accepted-event")
     end
 end)
 
 K.On("QUEST_TURNED_IN", function(questID)
     questID = tonumber(questID)
     if questID then
-        markWhere(E, function(s) return s.q == questID end)
+        markWhere(E, function(s) return s.q == questID end, "turnedin-event")
     end
 end)
 
@@ -701,7 +720,7 @@ end)
 
 K.On("UNIT_SPELLCAST_SUCCEEDED", function(unit, _, spellID)
     if unit == "player" and tonumber(spellID) == HEARTH_SPELL then
-        markCursorIf(E, { U = true })
+        markCursorIf(E, { U = true }, "hearth-cast")
     end
 end)
 
@@ -712,18 +731,21 @@ end)
 K.On("TRAINER_CLOSED", function()
     if trainerOpen then
         trainerOpen = false
-        markCursorIf(E, { R = true })
+        markCursorIf(E, { R = true }, "trainer-closed")
     end
 end)
 
 K.On("MERCHANT_CLOSED", function()
-    markCursorIf(E, { B = true, P = true })
+    markCursorIf(E, { B = true, P = true }, "merchant-closed")
 end)
 
 K.Every(1, function()
     E:CheckPosition()
 end)
 
+-- Only the selected engine starts (phase 18 flag). Today "legacy" is the only one registered.
 K.On("PLAYER_LOGIN", function()
-    E:Start()
+    if not K.EngineMode or K.EngineMode() == "legacy" then
+        E:Start()
+    end
 end)

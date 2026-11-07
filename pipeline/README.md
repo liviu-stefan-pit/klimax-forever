@@ -1,1 +1,3 @@
 The offline Python 3.11+ pipeline. It decodes QuestieDB (`extract`), builds faction band packs (`shape`), validates route JSON (`validate`), compiles routes into Lua (`compile`), and handles data refreshes (`refresh`, `diff-db`). Run it as `python -m pipeline <command>` from the repo root.
+
+Phase 18 diagnostics: `fixture <SavedVariables/Klimax.lua> [--out PATH] [--char Name-Realm]` turns a `/klimax dump` into a JSON fixture under `tests/fixtures/`, and `diagnose [--check NAME] [--as Orc/HUNTER] [--json]` runs the read-only data checks in `pipeline/diagnose/data_checks.py` (scope gaps, NPC positions, shadowed quest ids, cross-branch key rewards, zone flow).

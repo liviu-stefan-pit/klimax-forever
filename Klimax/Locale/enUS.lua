@@ -12,7 +12,8 @@ K.L = {
     RESET_ALL = "All Klimax progress reset.",
     SKIPPED = "Skipped 1 step (%d dependent step(s) skipped too).",
     UNKNOWN_BAND = "Unknown band %s. Try a route id like horde_horde_10-15, or a band like 10-15.",
-    HELP = "Commands: /klimax (show or hide) | debug | sync | reset [all] | band <lo-hi> | dev level <1-60>",
+    HELP = "Commands: /klimax (show or hide) | debug | sync | reset [all] | band <lo-hi> | dev level <1-60>"
+        .. " | audit [state] | dump | engine [name]",
     DEV_USAGE = "Dev: /klimax dev level <1-60> fakes the level for the engine.",
     DEV_LEVEL = "Dev: level faked to %d (your real character is unchanged).",
 
@@ -132,4 +133,28 @@ K.L = {
     MISSED_GO = "Go there",
     MISSED_IGNORE = "Ignore",
     AUDIT_NONE = "Audit: nothing to fix right now.",
+
+    -- phase 18 diagnostics (Diag.lua, Core.lua)
+    DUMP_SAVED = "Dump saved for %s: %d quest log line(s), %d completed route quest(s), %d disagreement(s)."
+        .. " /reload or log out, then send WTF/Account/<account>/SavedVariables/Klimax.lua.",
+    AUDIT_STATE_HEAD = "State audit: %d disagreement(s) between the guide and the game in %s:",
+    AUDIT_STATE_LINE = "%s (quest %d): game %s, guide %s. %s",
+    AUDIT_STATE_UNCERTAIN = " (may be under a collapsed header)",
+    AUDIT_STATE_MORE = "... and %d more. /klimax dump saves the full list.",
+    AUDIT_STATE_CLEAN = "State audit: the guide agrees with the game for every quest step in %s.",
+    AUDIT_STATE_NO_API = "State audit: this client has no completed-quest API, so turn-ins cannot be checked.",
+    AUDIT_STATE_HIDDEN = "State audit: %d quest(s) are hidden under collapsed quest log headers."
+        .. " Expand all headers for an exact check.",
+    ENGINE_CURRENT = "Engine: %s (available: %s).",
+    ENGINE_SET = "Engine set to %s. /reload to apply.",
+    ENGINE_UNKNOWN = "Unknown engine %s (available: %s).",
+    DIAG_done_not_accepted = "Marked done, but the quest is not in your log and not completed.",
+    DIAG_done_not_complete = "Marked done, but the quest's objectives are not complete.",
+    DIAG_done_not_turned_in = "Marked done, but the game does not show the quest as turned in.",
+    DIAG_stale_turnin = "Still shown, but the quest was already turned in.",
+    DIAG_stale_step = "Still shown, but the quest was already turned in.",
+    DIAG_pending_failed = "Still shown, but the quest has failed. Abandon and re-accept it.",
+    DIAG_turnin_not_in_log = "Turn-in shown, but the quest is not in your log.",
+    DIAG_complete_not_in_log = "Objective shown, but the quest is not in your log.",
+    DIAG_archived_in_log = "Archived as outgrown, but the quest is still in your log.",
 }

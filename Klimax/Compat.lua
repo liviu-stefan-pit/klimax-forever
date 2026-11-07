@@ -104,6 +104,93 @@ function C.GetQuestLog()
     return log
 end
 
+-- ---- Phase 18 diagnostics: raw quest log, XP, zone text ----------------------------------------
+
+-- Which completed-quest API the client offers: "C_QuestLog", "global", "set" or nil.
+function C.CompletedApiKind()
+    if C_QuestLog and type(C_QuestLog.IsQuestFlaggedCompleted) == "function" then
+        return "C_QuestLog"
+    end
+    if type(IsQuestFlaggedCompleted) == "function" then
+        return "global"
+    end
+    if type(GetQuestsCompleted) == "function" then
+        return "set"
+    end
+    return nil
+end
+
+-- Objectives of a quest as a list of {text, type, finished, have, need}. Uses
+-- C_QuestLog.GetQuestObjectives(questID) when present, else the Classic leaderboard of log line i.
+local function objectivesOf(questID, logIndex)
+    local out = {}
+    if C_QuestLog and type(C_QuestLog.GetQuestObjectives) == "function" and questID then
+        local list = call2(C_QuestLog.GetQuestObjectives, questID)
+        if type(list) == "table" then
+            for _, o in ipairs(list) do
+                out[#out + 1] = { text = o.text, type = o.type, finished = o.finished and true or false,
+                    have = o.numFulfilled, need = o.numRequired }
+            end
+            return out
+        end
+    end
+    if type(GetNumQuestLeaderBoards) == "function" and type(GetQuestLogLeaderBoard) == "function" then
+        local n = call2(GetNumQuestLeaderBoards, logIndex) or 0
+        for j = 1, n do
+            local ok, text, kind, finished = pcall(GetQuestLogLeaderBoard, j, logIndex)
+            if ok then
+                out[#out + 1] = { text = text, type = kind, finished = finished and true or false }
+            end
+        end
+    end
+    return out
+end
+
+-- Every visible line of the quest log, headers included, exactly as the client reports it:
+-- {index, title, level, header, collapsed, complete (raw value: true, 1, -1 or nil), questID,
+-- objectives (only when withObjectives is true)}. Also returns the client's own quest count (the
+-- second return of GetNumQuestLogEntries), which includes quests hidden under collapsed headers.
+function C.GetQuestLogLines(withObjectives)
+    local lines = {}
+    local numQuests
+    if C_QuestLog and type(C_QuestLog.GetNumQuestLogEntries) == "function"
+        and type(C_QuestLog.GetInfo) == "function" then
+        local n, q = call2(C_QuestLog.GetNumQuestLogEntries)
+        numQuests = q
+        for i = 1, n or 0 do
+            local info = call2(C_QuestLog.GetInfo, i)
+            if type(info) == "table" then
+                lines[#lines + 1] = { index = i, title = info.title, level = info.level,
+                    header = info.isHeader and true or false, collapsed = info.isCollapsed and true or false,
+                    complete = info.isComplete, failed = info.isFailed, questID = info.questID,
+                    objectives = (withObjectives and not info.isHeader) and objectivesOf(info.questID, i) or nil }
+            end
+        end
+    elseif type(GetNumQuestLogEntries) == "function" and type(GetQuestLogTitle) == "function" then
+        local n, q = call2(GetNumQuestLogEntries)
+        numQuests = q
+        for i = 1, n or 0 do
+            local ok, title, level, _, isHeader, isCollapsed, isComplete, _, questID = pcall(GetQuestLogTitle, i)
+            if ok and title then
+                lines[#lines + 1] = { index = i, title = title, level = level, header = isHeader and true or false,
+                    collapsed = isCollapsed and true or false, complete = isComplete, questID = questID,
+                    objectives = (withObjectives and not isHeader) and objectivesOf(questID, i) or nil }
+            end
+        end
+    end
+    return lines, numQuests
+end
+
+-- Current XP, XP to the next level, and rested XP (each nil when unknown).
+function C.GetXP()
+    return call2(UnitXP, "player"), call2(UnitXPMax, "player"), call2(GetXPExhaustion)
+end
+
+-- Zone and subzone names as the client shows them.
+function C.GetZoneTexts()
+    return call2(GetRealZoneText), call2(GetSubZoneText)
+end
+
 -- Free slots in a bag, or nil when no container API is available.
 function C.GetContainerFreeSlots(bag)
     local fn
