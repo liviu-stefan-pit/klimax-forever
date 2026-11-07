@@ -195,6 +195,10 @@ function K.Command(msg)
         K.DebugDump()
     elseif cmd == "sync" or cmd == "resync" then
         K.Sync:RunAndReport()
+    elseif cmd == "plan" then
+        K.Planner.PrintPlan(tonumber(rest))
+    elseif cmd == "why" then
+        K.Planner.PrintWhy(rest)
     elseif cmd == "reset" then
         if rest:lower() == "all" then
             K.Engine:Reset("all")

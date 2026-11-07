@@ -1,6 +1,6 @@
 -- Phase 18 diagnostics: game-state rules, the engine-versus-game comparison, the raw quest log
 -- reader, /klimax dump, /klimax audit state, mark provenance, the engine flag and the fixture
--- loader. These specs pass; the known-failing behaviour lives in known_failing_spec.lua.
+-- loader. The phase 18 known failures now pass in hunter_replay_spec.lua.
 package.path = "tests/lua/?.lua;" .. package.path
 local W = require("wowstubs")
 local Fx = require("fixture")

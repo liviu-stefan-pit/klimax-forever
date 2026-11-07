@@ -305,10 +305,54 @@ function E:Recompute()
             break
         end
     end
+    -- Phase 21 (KF9): a turn-in that is ready where the player stands comes first.
+    local here = self.cursor and E.ReadyTurnInHere(self)
+    if here then
+        self.cursor = here
+    end
     K.cdb = K.cdb or {}
     K.cdb.routeId = self.routeId
     K.cdb.cursor = self.cursor and self.steps[self.cursor].k or nil
     notify(self)
+end
+
+E.NEAR_READY = 5.0  -- map-%: about 50 yards
+
+-- Index of a pending TURNIN, in route order, whose quest is ready to hand in and whose NPC stands
+-- within NEAR_READY of the player on the same map; nil when the cursor step is already that close.
+function E.ReadyTurnInHere(self)
+    local mapID = K.Compat.GetBestMapForPlayer()
+    local pos = mapID and K.Compat.GetPlayerMapPosition(mapID)
+    if not pos then
+        return nil
+    end
+    local px, py = pos.x * 100, pos.y * 100
+    local function near(s)
+        if s.z ~= mapID or not s.x or not s.y then
+            return false
+        end
+        local dx, dy = s.x - px, s.y - py
+        return dx * dx + dy * dy <= E.NEAR_READY * E.NEAR_READY
+    end
+    if near(self.steps[self.cursor]) then
+        return nil
+    end
+    local log
+    for i, s in ipairs(self.steps) do
+        if s.t == "T" and self.eff[i] == "pending" and not self.levelHeld[i] and near(s) then
+            local ready
+            if K.State and K.State:Ready() then
+                ready = K.State:Get(s.q) == "objectives-done"
+            else
+                log = log or K.Compat.GetQuestLog()
+                ready = log[s.q] ~= nil and log[s.q].complete
+            end
+            if ready then
+                return i
+            end
+        end
+    end
+    return nil
 end
 
 -- Rebuilds stable key -> index for a step list.

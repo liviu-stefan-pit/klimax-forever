@@ -63,6 +63,8 @@ read_globals = {
     "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard",
     -- phase 20 snapshot (Klimax/Compat.lua: full quest log read)
     "ExpandQuestHeader", "CollapseQuestHeader", "QuestLogFrame",
+    -- phase 21 planner
+    "debugprofilestop", "UnitAffectingCombat",
 }
 
 -- Files that are generated or vendored are not linted.

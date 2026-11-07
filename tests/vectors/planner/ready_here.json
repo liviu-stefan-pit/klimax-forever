@@ -1,0 +1,16 @@
+{
+  "name": "a ready turn-in where the player stands comes before one in another zone (KF9)",
+  "snapshot": {"level": 12, "xp": 0, "mapID": 2, "x": 52.0, "y": 30.0},
+  "states": {"1": ["objectives-done"], "2": ["objectives-done"]},
+  "world": {
+    "zones": {"1": {"lv": [8, 10, 12], "quests": [1]}, "2": {"lv": [10, 14, 20], "quests": [2]}},
+    "quests": {
+      "1": {"n": "Far", "lv": 11, "rl": 8, "xp": 900, "sn": [10], "en": [10], "o": [{"k": "c", "at": [[1, 40.0, 40.0, 2.0, 8]]}]},
+      "2": {"n": "Near", "lv": 11, "rl": 8, "xp": 600, "sn": [20], "en": [20], "o": [{"k": "c", "at": [[2, 60.0, 60.0, 2.0, 8]]}]}
+    },
+    "npcs": {"10": [[1, 52.0, 43.0]], "20": [[2, 52.2, 30.1]]},
+    "objects": {},
+    "travel": {"adj": [[1, 2]], "links": [], "nodes": {}, "cost": {"zoneBorder": 60}}
+  },
+  "expect": ["plan:T:2", "plan:V:1:1", "plan:T:1"]
+}

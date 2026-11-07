@@ -1,0 +1,15 @@
+{
+  "name": "identical quests: the lower quest id goes first, every time",
+  "snapshot": {"level": 4, "xp": 0, "mapID": 1, "x": 50.0, "y": 50.0},
+  "world": {
+    "zones": {"1": {"lv": [1, 4, 8], "quests": [3, 7]}},
+    "quests": {
+      "7": {"n": "Seven", "lv": 4, "rl": 1, "xp": 250, "sn": [10], "en": [10], "o": [{"k": "c", "at": [[1, 60.0, 60.0, 2.0, 8]]}]},
+      "3": {"n": "Three", "lv": 4, "rl": 1, "xp": 250, "sn": [10], "en": [10], "o": [{"k": "c", "at": [[1, 60.0, 60.0, 2.0, 8]]}]}
+    },
+    "npcs": {"10": [[1, 50.0, 50.0]]},
+    "objects": {},
+    "travel": {"adj": [], "links": [], "nodes": {}, "cost": {}}
+  },
+  "expect": ["plan:A:3", "plan:A:7", "plan:C:3", "plan:C:7", "plan:T:3", "plan:T:7"]
+}

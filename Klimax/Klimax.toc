@@ -46,6 +46,12 @@ Core.lua
 State\Snapshot.lua
 State\Reconciler.lua
 State\State.lua
+Plan\Weights.lua
+Plan\Score.lua
+Plan\Transitions.lua
+Plan\Candidates.lua
+Plan\Sequence.lua
+Plan\Planner.lua
 Engine.lua
 Sync.lua
 Arrow.lua

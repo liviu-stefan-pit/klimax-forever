@@ -1,6 +1,5 @@
 -- The level 15 Hunter replay (phase 18 synthetic fixture). These were the phase 18 known
--- failures KF1-KF8 and KF10; the reconciler (phase 20) makes them pass. KF9 (ordering) stays in
--- known_failing_spec.lua until the planner (phase 21).
+-- failures: KF1-KF8 and KF10 pass since the reconciler (phase 20), KF9 (ordering) since phase 21.
 package.path = "tests/lua/?.lua;" .. package.path
 local W = require("wowstubs")
 local Fx = require("fixture")
@@ -122,5 +121,20 @@ describe("level 15 Hunter replay (synthetic fixture), fixed in phase 20", functi
         W.state.completed[92461] = true
         local id = K.Engine.ChooseRoute(K.Detect())
         assert.are.equal("horde_zephras_05-10", id)
+    end)
+
+    it("[ordering] KF9: a ready turn-in where the player stands comes before one across the map", function()
+        local K = W.start({ skipRoutes = true })
+        W.registerRoute({ id = "ord", faction = "horde", branch = "horde", lo = 10, hi = 15, steps = {
+            { t = "T", k = "Tfar", q = 1, g = "m", z = 1411, x = 52, y = 43, npc = 1 },
+            { t = "T", k = "Tnear", q = 2, g = "m", z = 1413, x = 52, y = 30, npc = 2 },
+        } })
+        W.setQuestLog(1, true)
+        W.setQuestLog(2, true)
+        W.state.mapID, W.state.pos = 1413, { x = 0.52, y = 0.30 }
+        K.Detect()
+        K.Engine:Load("ord")
+        local _, step = K.Engine:Current()
+        assert.are.equal("Tnear", step.k)
     end)
 end)

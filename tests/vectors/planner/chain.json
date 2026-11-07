@@ -1,0 +1,16 @@
+{
+  "name": "a chain: handing in the first quest opens the next at the same NPC",
+  "snapshot": {"level": 5, "xp": 0, "mapID": 1, "x": 50.0, "y": 50.0},
+  "states": {"2": ["unavailable", "prereq"]},
+  "world": {
+    "zones": {"1": {"lv": [3, 5, 8], "quests": [1, 2]}},
+    "quests": {
+      "1": {"n": "First", "lv": 5, "rl": 3, "xp": 300, "sn": [10], "en": [10], "nx": 2, "o": [{"k": "c", "at": [[1, 60.0, 50.0, 2.0, 8]]}]},
+      "2": {"n": "Second", "lv": 5, "rl": 3, "xp": 300, "sn": [10], "en": [10], "pa": [1]}
+    },
+    "npcs": {"10": [[1, 50.5, 50.0]]},
+    "objects": {},
+    "travel": {"adj": [], "links": [], "nodes": {}, "cost": {}}
+  },
+  "expect": ["plan:A:1", "plan:C:1", "plan:T:1", "plan:A:2", "plan:T:2"]
+}
