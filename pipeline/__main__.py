@@ -24,6 +24,7 @@ COMMANDS: dict[str, tuple[str, str]] = {
     "gen-rares": ("Write Klimax/Data/Rares.lua (rare NPCs in Horde zones)", "08"),
     "gen-chests": ("Write Klimax/Data/Chests.lua (chest spawns in Horde zones)", "08"),
     "fixture": ("Convert a /klimax dump (SavedVariables) into a JSON test fixture", "18"),
+    "compile-world": ("Build the world data (quest graph, hubs, services) into Klimax/World", "19"),
     "diagnose": ("Offline data checks behind the phase 18 diagnosis (read-only)", "18"),
     "refresh": ("extract + shape + diff + validate in one go", "90"),
     "diff-db": ("Diff two raw extracts and list affected bands", "90"),
@@ -37,7 +38,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sub = parser.add_subparsers(dest="command", metavar="<command>")
     for name, (help_text, _phase) in COMMANDS.items():
-        sub_parser = sub.add_parser(name, help=help_text, description=help_text)
+        # The plan calls the world compiler `compile_world`; both spellings work.
+        aliases = ["compile_world"] if name == "compile-world" else []
+        sub_parser = sub.add_parser(name, help=help_text, description=help_text, aliases=aliases)
         if name == "extract":
             sub_parser.add_argument(
                 "--questiedb",
@@ -101,6 +104,13 @@ def build_parser() -> argparse.ArgumentParser:
             )
             sub_parser.add_argument("--json", action="store_true", help="machine-readable output")
             sub_parser.add_argument("--no-stats", action="store_true", help="hide the stats block")
+            sub_parser.add_argument(
+                "--world",
+                action="store_true",
+                help="run the world graph validator (phase 19) instead of the route checks; "
+                "also fails when Klimax/World is out of date",
+            )
+            _add_world_args(sub_parser)
             _add_route_paths(sub_parser)
         if name == "overview":
             sub_parser.add_argument("--out", type=Path, default=Path("docs/ROUTE_OVERVIEW.md"))
@@ -137,6 +147,16 @@ def build_parser() -> argparse.ArgumentParser:
                 help="zone_flow for one character only, e.g. Orc/HUNTER",
             )
             _add_route_paths(sub_parser)
+        if name == "compile-world":
+            _add_world_args(sub_parser)
+            sub_parser.add_argument(
+                "--report",
+                type=Path,
+                default=Path("docs/reports/world_coverage.md"),
+                help="coverage and gaps report (default: %(default)s)",
+            )
+            sub_parser.add_argument("--no-report", action="store_true", help="skip the report")
+            _add_route_paths(sub_parser)
         if name == "compile":
             sub_parser.add_argument("--addon", type=Path, default=Path("Klimax"))
             sub_parser.add_argument(
@@ -144,6 +164,18 @@ def build_parser() -> argparse.ArgumentParser:
             )
             _add_route_paths(sub_parser)
     return parser
+
+
+def _add_world_args(sub_parser: argparse.ArgumentParser) -> None:
+    sub_parser.add_argument(
+        "--zone",
+        action="append",
+        default=None,
+        metavar="ENUM",
+        help="world: compile this zone (zones.json enum, repeatable); default: the phase 19 set",
+    )
+    if not any(a.dest == "addon" for a in sub_parser._actions):
+        sub_parser.add_argument("--addon", type=Path, default=Path("Klimax"))
 
 
 def _add_route_paths(sub_parser: argparse.ArgumentParser) -> None:
@@ -159,6 +191,17 @@ def _add_route_paths(sub_parser: argparse.ArgumentParser) -> None:
 
 
 def _run_validate(args: argparse.Namespace) -> int:
+    if args.world:
+        from pipeline.world.cli import run_validate_world
+
+        return run_validate_world(
+            faction=args.faction,
+            raw=args.raw,
+            data=args.data,
+            addon_dir=args.addon,
+            zones=args.zone,
+            as_json=args.json,
+        )
     from pipeline.routes.cli import run_validate
 
     return run_validate(
@@ -197,6 +240,19 @@ def _run_compile(args: argparse.Namespace) -> int:
         routes_dir=args.routes_dir or Path("routes") / args.faction,
         addon_dir=args.addon,
         stitched=args.stitched,
+    )
+
+
+def _run_compile_world(args: argparse.Namespace) -> int:
+    from pipeline.world.cli import run_compile_world
+
+    return run_compile_world(
+        faction=args.faction,
+        raw=args.raw,
+        data=args.data,
+        addon_dir=args.addon,
+        zones=args.zone,
+        report_path=None if args.no_report else args.report,
     )
 
 
@@ -323,6 +379,8 @@ def main(argv: list[str] | None = None) -> int:
         return _run_overview(args)
     if args.command == "fixture":
         return _run_fixture(args)
+    if args.command in ("compile-world", "compile_world"):
+        return _run_compile_world(args)
     if args.command == "diagnose":
         return _run_diagnose(args)
     if args.command == "gen-rares":

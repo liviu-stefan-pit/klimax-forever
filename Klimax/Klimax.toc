@@ -12,6 +12,17 @@ Data\ClassWeights.lua
 Data\TrainerFilters.lua
 Data\Rares.lua
 Data\Chests.lua
+WorldDB.lua
+World\Index.lua
+World\Travel.lua
+World\Durotar.lua
+World\Mulgore.lua
+World\TirisfalGlades.lua
+World\Orgrimmar.lua
+World\ThunderBluff.lua
+World\Undercity.lua
+World\ZephrasIsle.lua
+World\Outside.lua
 Routes\Horde\Index.lua
 Routes\Horde\horde_durotar_01-05.lua
 Routes\Horde\horde_durotar_05-10.lua

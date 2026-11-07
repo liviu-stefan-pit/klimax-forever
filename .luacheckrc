@@ -66,4 +66,5 @@ read_globals = {
 -- Files that are generated or vendored are not linted.
 exclude_files = {
     "Klimax/Routes/**",
+    "Klimax/World/**",
 }
