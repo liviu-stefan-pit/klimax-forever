@@ -21,6 +21,8 @@ COMMANDS: dict[str, tuple[str, str]] = {
     "validate": ("Validate route JSON (hard gate)", "03"),
     "compile": ("Compile validated routes into Klimax/Routes/*.lua", "03"),
     "overview": ("Write docs/ROUTE_OVERVIEW.md from the stitched routes", "05"),
+    "gen-rares": ("Write Klimax/Data/Rares.lua (rare NPCs in Horde zones)", "08"),
+    "gen-chests": ("Write Klimax/Data/Chests.lua (chest spawns in Horde zones)", "08"),
     "refresh": ("extract + shape + diff + validate in one go", "90"),
     "diff-db": ("Diff two raw extracts and list affected bands", "90"),
 }
@@ -244,6 +246,16 @@ def main(argv: list[str] | None = None) -> int:
         return _run_compile(args)
     if args.command == "overview":
         return _run_overview(args)
+    if args.command == "gen-rares":
+        from pipeline.smart.gen import write_rares
+
+        print(f"wrote Klimax/Data/Rares.lua ({write_rares()} rares)")
+        return 0
+    if args.command == "gen-chests":
+        from pipeline.smart.gen import write_chests
+
+        print(f"wrote Klimax/Data/Chests.lua ({write_chests()} chest spawns)")
+        return 0
     _help, phase = COMMANDS[args.command]
     print(f"'{args.command}' is not implemented yet (phase {phase}).", file=sys.stderr)
     return 2

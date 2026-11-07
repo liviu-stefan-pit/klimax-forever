@@ -15,6 +15,9 @@ local WIDTH, HEIGHT = 300, 100
 local LIST_ROWS = 16
 local MENU_ROWS = 18
 local ROW_H = 14
+local TITLE_MAX = 40   -- bytes; one line at the title size
+local NOTE_MAX = 92    -- bytes; two lines at the note size
+local STATUS_MAX = 54  -- bytes; one line at the status size, for cursor-step hints
 
 U.fonts = {}          -- font strings with a base size, rescaled by the font option
 U.focusKey = nil      -- stable key of a pending step the user picked in the step list
@@ -26,7 +29,7 @@ U.combatHidden = false
 local DEFAULTS = {
     showOptional = true, showElite = true, autoAdvance = true, arrow = true,
     arrowDetached = false, hideInCombat = false, locked = false,
-    bagThreshold = 3, fontScale = 1, scale = 1, alpha = 0.85,
+    bagThreshold = 3, fontScale = 1, scale = 1, alpha = 0.85, opportunities = true,
 }
 
 -- Reads an option with its default. Safe before SavedVariables are loaded.
@@ -59,6 +62,7 @@ U.OPTION_ROWS = {
     { key = "fontScale", kind = "cycle", label = "OPT_FONT", values = { 0.85, 1, 1.15, 1.3 } },
     { key = "scale", kind = "cycle", label = "OPT_SCALE", values = { 0.8, 0.9, 1, 1.1, 1.25 } },
     { key = "alpha", kind = "cycle", label = "OPT_ALPHA", values = { 0.4, 0.6, 0.85, 1 } },
+    { key = "opportunities", kind = "bool", label = "OPT_OPPORTUNITIES" },
 }
 
 -- The value after current in values; the first value when current is not in the list.
@@ -89,6 +93,24 @@ function U.OptionText(row)
 end
 
 -- ---- Pure view logic --------------------------------------------------------------------------
+
+-- Cuts text to at most max bytes, ending with "..." and never inside a UTF-8 character.
+-- The window has fixed-height text areas; clipping keeps long quest names and notes off the buttons.
+function U.Clip(text, max)
+    text = tostring(text or "")
+    if #text <= max then
+        return text
+    end
+    local cut = max - 3
+    while cut > 0 do
+        local b = text:byte(cut + 1)
+        if not b or b < 0x80 or b >= 0xC0 then
+            break
+        end
+        cut = cut - 1
+    end
+    return text:sub(1, cut) .. "..."
+end
 
 local ACTION_KEY = {
     A = "ACT_ACCEPT", C = "ACT_COLLECT", T = "ACT_TURNIN", V = "ACT_TRAVEL", F = "ACT_FLY",
@@ -423,7 +445,7 @@ function U.ApplyAll()
     for _, e in ipairs(U.fonts) do
         e.fs:SetFont(FONT, e.base * K.Option("fontScale"), "")
     end
-    U.frame.handle:EnableMouse(not K.Option("locked"))
+    U.frame:EnableMouse(not K.Option("locked"))
     A.Place(U.frame)
     U.ApplyVisibility()
     U.Refresh()
@@ -445,23 +467,23 @@ function U.Refresh()
     f.skip:SetEnabled(ready)
     if ready then
         f.action:SetText(m.action)
-        f.title:SetText(m.title)
+        f.title:SetText(U.Clip(m.title, TITLE_MAX))
         f.chip:SetText(m.tagText or "")
         local c = TAG_COLOR[m.tag] or { 1, 1, 1 }
         f.chip:SetTextColor(c[1], c[2], c[3])
         if m.checklist then
             local lines = {}
-            for n = 1, math.min(#m.checklist, 3) do
+            for n = 1, math.min(#m.checklist, 2) do
                 local item = m.checklist[n]
                 lines[#lines + 1] = string.format("%s %s", STATE_MARK[item.state] or "[ ]", item.text)
             end
-            if #m.checklist > 3 then
-                lines[#lines + 1] = string.format("+ %d more", #m.checklist - 3)
+            if #m.checklist > 2 then
+                lines[#lines + 1] = string.format("+ %d more", #m.checklist - 2)
             end
             f.note:SetText(table.concat(lines, "\n"))
             f.status:SetText(string.format(L.HUB_PROGRESS, m.hubDone, m.hubTotal))
         else
-            f.note:SetText(m.note)
+            f.note:SetText(U.Clip(m.note, NOTE_MAX))
             f.status:SetText(string.format(L.STEP_COUNT, m.stepNo, m.total))
         end
     else
@@ -476,6 +498,14 @@ function U.Refresh()
         f.chip:SetText("")
         f.note:SetText("")
         f.status:SetText("")
+    end
+    -- A cursor-step hint (bags, flight path, hearthstone, trainer, supplies) takes the status line.
+    local hint = ready and K.Helpers and K.Helpers.CurrentHint()
+    if hint then
+        f.status:SetText(U.Clip(hint, STATUS_MAX))
+        f.status:SetTextColor(1, 0.7, 0.3)
+    else
+        f.status:SetTextColor(0.6, 0.6, 0.6)
     end
     U.RefreshSteps()
     A.Update()
@@ -691,22 +721,24 @@ local function buildMain()
     f:SetMovable(true)
     backdrop(f, 0, 0, 0, 0.8)
 
-    -- Drag handle: the top strip. Locked windows ignore drags.
-    local handle = CreateFrame("Frame", nil, f)
-    handle:SetPoint("TOPLEFT", f, "TOPLEFT", 0, 0)
-    handle:SetPoint("TOPRIGHT", f, "TOPRIGHT", 0, 0)
-    handle:SetHeight(14)
-    handle:EnableMouse(not K.Option("locked"))
-    handle:RegisterForDrag("LeftButton")
-    handle:SetScript("OnDragStart", function()
+    -- Drag: left-drag anywhere on the window that is not a button. Locked windows ignore drags.
+    -- The window takes mouse input only while unlocked, so a locked window does not block the world.
+    f:EnableMouse(not K.Option("locked"))
+    f:RegisterForDrag("LeftButton")
+    f:SetScript("OnDragStart", function()
         if not K.Option("locked") then
             f:StartMoving()
         end
     end)
-    handle:SetScript("OnDragStop", function()
+    f:SetScript("OnDragStop", function()
         f:StopMovingOrSizing()
         savePos(f, "pos")
     end)
+    -- Title strip (decoration only; dragging works on the whole window).
+    local handle = CreateFrame("Frame", nil, f)
+    handle:SetPoint("TOPLEFT", f, "TOPLEFT", 0, 0)
+    handle:SetPoint("TOPRIGHT", f, "TOPRIGHT", 0, 0)
+    handle:SetHeight(14)
     f.handle = handle
     handle.title = fontString(handle, 9)
     handle.title:SetPoint("LEFT", handle, "LEFT", 6, 0)

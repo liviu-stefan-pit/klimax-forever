@@ -24,7 +24,7 @@ globals = {
 -- WoW API the add-on reads (PRD §7). Add to this list only when a new API is used.
 read_globals = {
     -- frames and UI
-    "CreateFrame", "UIParent", "GameTooltip", "DEFAULT_CHAT_FRAME", "StaticPopupDialogs",
+    "CreateFrame", "UIParent", "GameTooltip", "DEFAULT_CHAT_FRAME",
     "StaticPopup_Show", "UIErrorsFrame", "Minimap",
     -- player and faction
     "UnitFactionGroup", "UnitRace", "UnitClass", "UnitLevel", "UnitName",
@@ -56,6 +56,8 @@ read_globals = {
     "CreateVector2D", "GameTooltip", "GetPlayerFacing", "UIParent",
     -- phase 06 compatibility wrappers (Klimax/Compat.lua)
     "IsQuestFlaggedCompleted", "C_AddOns", "GetAddOnMetadata",
+    -- phase 08 smart features (Klimax/Compat.lua wrappers, helpers, rewards, trainer, elites)
+    "GetContainerNumSlots", "GetNumQuestChoices", "GetQuestID", "GetTrainerServiceCost",
 }
 
 -- Files that are generated or vendored are not linted.

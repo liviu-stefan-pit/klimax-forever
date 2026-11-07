@@ -27,6 +27,9 @@ local function newState()
         completed = {},   -- questID -> true (IsQuestFlaggedCompleted and GetQuestsCompleted)
         logList = {},     -- array of {questID = n, isComplete = bool, title = string}
         time = 0,
+        wall = 1000000,   -- time() in seconds
+        classification = {},
+        names = {},
         facing = 0,       -- GetPlayerFacing (radians)
         contOf = {},      -- uiMapID -> continent id (default 1)
     }
@@ -215,6 +218,17 @@ function W.reset(opts)
     end
     GetTime = function()
         return W.state.time
+    end
+    -- Wall clock in seconds (the add-on's persistent cooldowns use time(), not GetTime()).
+    time = function()
+        return W.state.wall
+    end
+    -- Nameplate rarity: state.classification[unit] and state.names[unit] (phase 08).
+    UnitClassification = function(unit)
+        return W.state.classification[unit]
+    end
+    UnitName = function(unit)
+        return W.state.names[unit] or unit
     end
 end
 

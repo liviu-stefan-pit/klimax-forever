@@ -15,7 +15,7 @@ K.Arrow = A
 
 A.UPDATE_INTERVAL = 0.1                       -- 10 Hz (PRD 8)
 A.TEXTURE = "Interface\\Minimap\\ROTATING-MINIMAPGUIDEARROW"
-A.SIZE = 28
+A.SIZE = 56
 local TWO_PI = 2 * math.pi
 
 -- Wraps an angle into (-pi, pi].
@@ -117,7 +117,7 @@ function A.Build(parent)
         return
     end
     local f = CreateFrame("Frame", nil, UIParent)
-    f:SetSize(120, A.SIZE + 16)
+    f:SetSize(160, A.SIZE + 20)
     f:SetFrameStrata("MEDIUM")
     f:RegisterForDrag("LeftButton")
     f:SetScript("OnDragStart", function()
@@ -134,13 +134,13 @@ function A.Build(parent)
 
     local tex = f:CreateTexture(nil, "ARTWORK")
     tex:SetSize(A.SIZE, A.SIZE)
-    tex:SetPoint("TOP", f, "TOP", 0, 0)
+    tex:SetPoint("BOTTOM", f, "BOTTOM", 0, 0)   -- the picture sits on the window edge
     tex:SetTexture(A.TEXTURE)
     f.tex = tex
 
     local text = f:CreateFontString(nil, "OVERLAY")
-    text:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE")
-    text:SetPoint("TOP", tex, "BOTTOM", 0, -1)
+    text:SetFont("Fonts\\FRIZQT__.TTF", 13, "OUTLINE")
+    text:SetPoint("TOP", f, "TOP", 0, 0)
     text:SetTextColor(1, 1, 1)
     f.text = text
 

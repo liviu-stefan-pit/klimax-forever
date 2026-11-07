@@ -176,6 +176,176 @@ local function worldPos(mapID, x, y)
     return cont, wx, wy
 end
 
+-- ---- Phase 08 wrappers: bags, items, trainers, reward choices, hearthstone ------------------
+
+-- Number of slots in a bag, or nil.
+function C.GetBagSlotCount(bag)
+    local fn
+    if C_Container and type(C_Container.GetContainerNumSlots) == "function" then
+        fn = C_Container.GetContainerNumSlots
+    else
+        fn = GetContainerNumSlots
+    end
+    return call2(fn, bag)
+end
+
+-- A bag slot as {link, stack, quality}, or nil when the slot is empty or unreadable.
+function C.GetBagSlot(bag, slot)
+    if C_Container and type(C_Container.GetContainerItemInfo) == "function" then
+        local info = call2(C_Container.GetContainerItemInfo, bag, slot)
+        if type(info) == "table" and info.hyperlink then
+            return { link = info.hyperlink, stack = info.stackCount or 1, quality = info.quality or 0 }
+        end
+        return nil
+    end
+    if type(GetContainerItemInfo) == "function" then
+        local ok, _, count, _, quality, _, _, link = pcall(GetContainerItemInfo, bag, slot)
+        if ok and link then
+            return { link = link, stack = count or 1, quality = quality or 0 }
+        end
+    end
+    return nil
+end
+
+-- Uses (sells, at a merchant) the item in a bag slot. Only called from a user click.
+function C.UseBagSlot(bag, slot)
+    local fn
+    if C_Container and type(C_Container.UseContainerItem) == "function" then
+        fn = C_Container.UseContainerItem
+    else
+        fn = UseContainerItem
+    end
+    if type(fn) ~= "function" then
+        return false
+    end
+    return pcall(fn, bag, slot)
+end
+
+-- Item class and subclass IDs of a link, read without the item cache: {classID, subclassID}.
+function C.ItemClass(link)
+    if type(GetItemInfoInstant) ~= "function" or not link then
+        return nil
+    end
+    -- Returns: ok, itemID, itemType, itemSubType, itemEquipLoc, icon, classID, subclassID.
+    local res = { pcall(GetItemInfoInstant, link) }
+    if res[1] and res[7] then
+        return { classID = res[7], subclassID = res[8] }
+    end
+    return nil
+end
+
+-- Item data of a link once it is cached: {name, sellPrice, equipLoc, classID, subclassID}, or nil.
+function C.GetItemInfo(link)
+    if type(GetItemInfo) ~= "function" or not link then
+        return nil
+    end
+    local ok, name, _, quality, _, _, _, _, _, equipLoc, _, sellPrice, classID, subclassID = pcall(GetItemInfo, link)
+    if not ok or not name then
+        return nil
+    end
+    return {
+        name = name, quality = quality, sellPrice = sellPrice or 0, equipLoc = equipLoc,
+        classID = classID, subclassID = subclassID,
+    }
+end
+
+-- Stat table of a link (keys like ITEM_MOD_STRENGTH_SHORT), or nil.
+function C.GetItemStats(link)
+    if type(GetItemStats) ~= "function" or not link then
+        return nil
+    end
+    local ok, stats = pcall(GetItemStats, link)
+    if ok and type(stats) == "table" then
+        return stats
+    end
+    return nil
+end
+
+-- Item ID inside a link, or nil.
+function C.ItemIdFromLink(link)
+    local id = link and tostring(link):match("item:(%d+)")
+    return tonumber(id)
+end
+
+-- Link of the equipped item in an inventory slot, or nil.
+function C.GetEquippedLink(slotID)
+    if type(GetInventoryItemLink) ~= "function" or not slotID then
+        return nil
+    end
+    local ok, link = pcall(GetInventoryItemLink, "player", slotID)
+    if ok then
+        return link
+    end
+    return nil
+end
+
+-- Number of quest reward choices on the open quest frame.
+function C.GetNumQuestChoices()
+    return call2(GetNumQuestChoices) or 0
+end
+
+-- Link of quest reward choice i, or nil.
+function C.GetQuestChoiceLink(i)
+    if type(GetQuestItemLink) ~= "function" then
+        return nil
+    end
+    local ok, link = pcall(GetQuestItemLink, "choice", i)
+    if ok then
+        return link
+    end
+    return nil
+end
+
+-- ID of the quest whose reward frame is open, or nil.
+function C.GetOpenQuestID()
+    return call2(GetQuestID)
+end
+
+-- Trainer service i as {name, category, cost}. cost is copper; category is available,
+-- unavailable, used or header. Returns nil when the trainer window has no such row.
+function C.GetTrainerService(i)
+    if type(GetTrainerServiceInfo) ~= "function" then
+        return nil
+    end
+    local ok, name, _, category = pcall(GetTrainerServiceInfo, i)
+    if not ok or not name then
+        return nil
+    end
+    local okCost, cost = pcall(GetTrainerServiceCost, i)
+    return { name = name, category = category, cost = (okCost and tonumber(cost)) or 0 }
+end
+
+-- Cooldown of an item as start, duration (seconds), or nil when unknown.
+function C.GetItemCooldown(itemID)
+    if type(GetItemCooldown) ~= "function" then
+        return nil
+    end
+    local ok, start, duration = pcall(GetItemCooldown, itemID)
+    if ok and type(start) == "number" then
+        return start, duration or 0
+    end
+    return nil
+end
+
+-- Taxi nodes known to the character: {name, known} list, read while the taxi map is open.
+function C.ReadTaxiNodes()
+    local nodes = {}
+    local count = (call2(NumTaxiNodes) or 0)
+    for n = 1, count do
+        local ok, name = pcall(TaxiNodeName, n)
+        local okKind, kind = pcall(TaxiNodeGetType, n)
+        if ok and name then
+            nodes[#nodes + 1] = { name = name, known = okKind and kind ~= nil and kind ~= "NONE" }
+        end
+    end
+    return nodes
+end
+
+-- Copper in the character's bags and purse.
+function C.GetMoney()
+    return call2(GetMoney) or 0
+end
+
 function C.GetWorldPos(mapID, x, y)
     if not (C_Map and type(C_Map.GetWorldPosFromMapPos) == "function" and type(CreateVector2D) == "function") then
         return nil

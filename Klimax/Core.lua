@@ -187,6 +187,8 @@ function K.Command(msg)
             K.Print(string.format(L.UNKNOWN_BAND, rest))
             K.Log("band jump failed", reason)
         end
+    elseif cmd == "dev" then
+        K.DevCommand(rest)
     else
         K.Print(L.HELP)
     end
@@ -196,6 +198,25 @@ SlashCmdList["KLIMAX"] = function(msg)
     K.Command(msg)
 end
 
+-- Dev-only helpers (phase 08). "dev level N" fakes the level for the engine and the elite module,
+-- so the elite reminder can be tested without leveling. The character's real level is unchanged,
+-- and the next login reads it again.
+function K.DevCommand(rest)
+    local sub, arg = (rest or ""):match("^%s*(%S*)%s*(.-)%s*$")
+    local n = tonumber(arg)
+    if (sub or ""):lower() ~= "level" or not n or n < 1 or n > 60 then
+        K.Print(L.DEV_USAGE)
+        return
+    end
+    K.player = K.player or {}
+    K.player.level = math.floor(n)
+    K.Engine:Recompute()
+    if K.Elite then
+        K.Elite.Check()
+    end
+    K.Print(string.format(L.DEV_LEVEL, K.player.level))
+end
+
 -- Prints the detected player, route, cursor step and the last debug lines.
 function K.DebugDump()
     local p = K.player or {}
@@ -203,6 +224,12 @@ function K.DebugDump()
         tostring(p.class), tostring(p.level)))
     local E = K.Engine
     K.Print("route: " .. tostring(E.routeId))
+    if K.Arrow and K.UI then
+        local a = K.Arrow.Read()
+        K.Print(string.format("arrow: %s rot %s dist %s facing %s window %s",
+            tostring(a.kind), tostring(a.rot), tostring(a.dist), tostring(K.Compat.GetFacing()),
+            K.UI.frame and tostring(K.UI.frame:IsShown()) or "not built"))
+    end
     local i, step, state = E:Current()
     if step then
         K.Print(string.format("step %d/%d [%s] %s %s", i, #E.steps, step.t, tostring(step.n or step.note), state))

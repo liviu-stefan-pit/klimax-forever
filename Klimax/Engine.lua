@@ -385,6 +385,9 @@ function E:Skip(i)
     end
     local before = countEff(self, "cascade")
     charState(self.routeId)[s.k] = "skipped"
+    if K.Elite then
+        K.Elite.OnSkip(s, self.routeId)
+    end
     self:Recompute()
     return countEff(self, "cascade") - before
 end

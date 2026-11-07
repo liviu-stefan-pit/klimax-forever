@@ -8,6 +8,10 @@
 Locale\enUS.lua
 Compat.lua
 Data\Zones.lua
+Data\ClassWeights.lua
+Data\TrainerFilters.lua
+Data\Rares.lua
+Data\Chests.lua
 Routes\Horde\Index.lua
 Routes\Horde\horde_durotar_01-05.lua
 Routes\Horde\horde_durotar_05-10.lua
@@ -32,3 +36,9 @@ Engine.lua
 Sync.lua
 Arrow.lua
 UI.lua
+Toast.lua
+Helpers.lua
+Rewards.lua
+Trainer.lua
+Opportunities.lua
+Elite.lua
