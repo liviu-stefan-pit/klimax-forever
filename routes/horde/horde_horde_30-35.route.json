@@ -1,0 +1,3655 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_horde_35-40a is written in a later phase. This band ends at Kargath in the Badlands at level 35; 35-40a must enter there or the entry hub must be changed.",
+    "W_XP_RANGE: quest XP is about 58% of the 274100 budget. The remaining solo pool (about 260k) is mostly Undercity, Thunder Bluff, Dustwallow-far and Badlands chains that need three or more extra legs, or quests with no DB position or no XP row. Not padded with dungeon, rep or higher-level mob quests; class XP is not counted.",
+    "Handed on from 25-30: 1366 and 676/677 are routed here. 6628, 1152, 1154, 6627 and 1159 (Test of Lore) are not routed (see dropped[]); the chain needs Stonetalon, Ashenvale and Undercity legs.",
+    "Elite blockers (E_ELITE_DROPPED, 4 errors): 1113 (prerequisite 1109 has no DB source), 6521 (prerequisite 6522 is an item start with no position), 6983 (Winter Veil chain, prerequisite 6963 is level 60), 97985 (Undercity, no XP row). The validator does not allow an elite drop when the prerequisite is blocked. Needs a decision in the main session.",
+    "Flight paths discovered on the route: Urda (Hammerfall), Thalon (Shadowprey), Shardi (Brackenwall), Thysta (Grom'gol), Shyn (Camp Mojache), Gringer (Booty Bay), Breyk (Stonard), Gorrik (Kargath). FLY steps from Hammerfall to Shadowprey, Ratchet and Booty Bay boats, and Booty Bay to Stonard are not verified in the DB; check in game.",
+    "Trainers: Orgrimmar at 32 (most Horde classes), Camp Mojache (druid) and Booty Bay (rogue) at 34, Stonard at 34-35 (warlock, warrior, shaman, hunter). Paladin trainers are off the path; Undercity and Thunder Bluff are not visited.",
+    "Hunter pet mastery (185-187, 190-191, 194-195) is class-limited with classes HUNTER. The DB has no class mask, so the validator does not require it. Class XP is not counted."
+  ],
+  "band": [
+    30,
+    35
+  ],
+  "branch": "horde",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 188,
+      "reason": "Tiger Mastery part 4: Sin'Dall (lv 37) is 3+ above the expected level here."
+    },
+    {
+      "quest": 503,
+      "reason": "Gol'dir chain: Rusted Iron Key drops from Jailor Borhuin (lv 37), 3+ above the expected level here."
+    },
+    {
+      "quest": 506,
+      "reason": "Gol'dir chain: Rusted Iron Key drops from Jailor Borhuin (lv 37), 3+ above the expected level here."
+    },
+    {
+      "quest": 577,
+      "reason": "Some Assembly Required: Snapjaw crocolisks (lv 35-36) need a second walk north after the 575 turn-in at Booty Bay. Not routed."
+    },
+    {
+      "quest": 635,
+      "reason": "Crystal in the Mountains: starter is an item in Dustwallow with no map position; 275 XP."
+    },
+    {
+      "quest": 638,
+      "reason": "Trollbane: starter in Stranglethorn, turn-in at Zengu in Arathi. Route does not pass both ends in order."
+    },
+    {
+      "quest": 642,
+      "reason": "The Princess Trapped: Mote of Myzrael from Drywhisker kobolds (lv 35-38), 3+ above the expected level."
+    },
+    {
+      "quest": 663,
+      "reason": "Land Ho!: requires level 35 and is a talk-only quest; not worth a trip."
+    },
+    {
+      "quest": 705,
+      "reason": "Pearl Diving: starts in Badlands, blue pearls in Stranglethorn. Two-zone round trip; not routed."
+    },
+    {
+      "quest": 713,
+      "reason": "Coolant Heads Prevail: Frost Oil has no DB source position."
+    },
+    {
+      "quest": 714,
+      "reason": "Gyro... What?: Gyrochronatom has no DB source position."
+    },
+    {
+      "quest": 715,
+      "reason": "Liquid Stone: needs 714 (no DB source) and is off the route."
+    },
+    {
+      "quest": 1051,
+      "reason": "Vorrel's Revenge: starter Vorrel has no map position (instanced). Dungeon elite, unplaceable."
+    },
+    {
+      "quest": 1102,
+      "reason": "A Vengeful Fate: Razorflank's Heart has no DB source position; turn-in in Thunder Bluff."
+    },
+    {
+      "quest": 1106,
+      "reason": "Martek the Exiled: finisher in the Badlands, starter in Thousand Needles. Off route."
+    },
+    {
+      "quest": 1109,
+      "reason": "Going, Going, Guano!: Kraul Guano has no DB source position; cannot be completed."
+    },
+    {
+      "quest": 1113,
+      "reason": "Elite, unroutable: prerequisite 1109 Kraul Guano has no DB source, so the chain cannot be started.",
+      "unroutable": true
+    },
+    {
+      "quest": 1116,
+      "reason": "Dream Dust and Rumors for Kravel: Swamp of Sorrows and a return to Kravel in Thousand Needles."
+    },
+    {
+      "quest": 1117,
+      "reason": "Dream Dust and Rumors for Kravel: Swamp of Sorrows and a return to Kravel in Thousand Needles."
+    },
+    {
+      "quest": 1136,
+      "reason": "Frostmaw: boss lv 37, 3+ above the expected level here. Turn-in in Thunder Bluff."
+    },
+    {
+      "quest": 1144,
+      "reason": "Escort from a dungeon-side zone with no coordinates in the DB. Not routed."
+    },
+    {
+      "quest": 1148,
+      "reason": "Carapace and silithid parts: second legs back to Korran (Barrens) and Belgrom (Orgrimmar). Not routed."
+    },
+    {
+      "quest": 1152,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "quest": 1154,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "quest": 1159,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "quest": 1160,
+      "reason": "Test of Lore: Parqual's item (Beginnings of the Undead Threat) is a dungeon-side objective. Chain not routed."
+    },
+    {
+      "quest": 1164,
+      "reason": "To Steal From Thieves: Undercity turn-in with Dabyrie heads in Arathi. Two far legs."
+    },
+    {
+      "quest": 1183,
+      "reason": "Goblin Sponsorship end: turn-in back in Thousand Needles after the Stranglethorn legs."
+    },
+    {
+      "quest": 1184,
+      "reason": "Carapace and silithid parts: second legs back to Korran (Barrens) and Belgrom (Orgrimmar). Not routed."
+    },
+    {
+      "quest": 1186,
+      "reason": "Goblin Sponsorship end: turn-in back in Thousand Needles after the Stranglethorn legs."
+    },
+    {
+      "quest": 1203,
+      "reason": "Jarl Needs a Blade: Moonsteel Broadsword has no DB source position."
+    },
+    {
+      "quest": 1276,
+      "reason": "The Black Shield: turn-in is Mosarn in Thunder Bluff (far north)."
+    },
+    {
+      "quest": 1367,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1368,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1369,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1370,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1371,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1373,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1374,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1375,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "quest": 1394,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "quest": 1531,
+      "reason": "Shaman Call of Air: Orgrimmar and Thunder Bluff legs; class-only. Not on route."
+    },
+    {
+      "quest": 1532,
+      "reason": "Shaman Call of Air: Orgrimmar and Thunder Bluff legs; class-only. Not on route."
+    },
+    {
+      "quest": 1559,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 1714,
+      "reason": "Warrior Essence of the Exile: no XP row, class-only, Alterac cauldron."
+    },
+    {
+      "quest": 1718,
+      "reason": "Warrior Klannoc chain: Thunder Bluff and Barrens legs; class-only. Not on route."
+    },
+    {
+      "quest": 1719,
+      "reason": "Warrior Klannoc chain: Thunder Bluff and Barrens legs; class-only. Not on route."
+    },
+    {
+      "quest": 1791,
+      "reason": "Warrior Klannoc chain: Thunder Bluff and Barrens legs; class-only. Not on route."
+    },
+    {
+      "quest": 1795,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "quest": 1796,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 1801,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "quest": 1803,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "quest": 1805,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "quest": 1838,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1839,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1840,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1841,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1842,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1843,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1844,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1845,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1846,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1847,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1848,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "quest": 1950,
+      "reason": "Mage Get the Scoop: needs 1949 (outside this pack), starter in Thousand Needles. Not routed."
+    },
+    {
+      "quest": 2751,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 2752,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 2753,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 2754,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 2755,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 2841,
+      "reason": "Rig Wars: Rig Blueprints and the Safe Combination are in Gnomeregan (instanced), no DB position."
+    },
+    {
+      "quest": 2904,
+      "reason": "A Fine Mess: escort with starter Kernobee and no coordinates in the DB."
+    },
+    {
+      "quest": 2945,
+      "reason": "Sparklematic ring chain: starter item and Sparklematic object have no map position; 2950 needs 2949."
+    },
+    {
+      "quest": 2949,
+      "reason": "Sparklematic ring chain: starter item and Sparklematic object have no map position; 2950 needs 2949."
+    },
+    {
+      "quest": 2950,
+      "reason": "Sparklematic ring chain: starter item and Sparklematic object have no map position; 2950 needs 2949."
+    },
+    {
+      "quest": 2951,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "quest": 2952,
+      "reason": "Gnomeregan Sparklematic 5200 chain: instanced object, no map position. Dropped in 25-30 too."
+    },
+    {
+      "quest": 2953,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "quest": 2996,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 3001,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 3523,
+      "reason": "Scourge of the Downs chain: Belnistrasz has no map position (Razorfen Downs dungeon)."
+    },
+    {
+      "quest": 3525,
+      "reason": "Scourge of the Downs chain: Belnistrasz has no map position (Razorfen Downs dungeon)."
+    },
+    {
+      "quest": 4601,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "quest": 4602,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "quest": 4603,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "quest": 4604,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "quest": 4605,
+      "reason": "Gnomeregan Sparklematic 5200 chain: instanced object, no map position. Dropped in 25-30 too."
+    },
+    {
+      "quest": 4606,
+      "reason": "Gnomeregan Sparklematic 5200 chain: instanced object, no map position. Dropped in 25-30 too."
+    },
+    {
+      "quest": 4737,
+      "reason": "Warlock Menara breadcrumb: Orgrimmar and Undercity legs; class-only."
+    },
+    {
+      "quest": 4739,
+      "reason": "Warlock Menara breadcrumb: Orgrimmar and Undercity legs; class-only."
+    },
+    {
+      "quest": 4781,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 4782,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 4783,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 4784,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 4785,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 4967,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 4969,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "quest": 5361,
+      "reason": "Family Tree starts in Thousand Needles and turns in in Desolace; the route visits Desolace once."
+    },
+    {
+      "quest": 6521,
+      "reason": "Elite, unroutable: prerequisite 6522 Small Scroll is an item start with no map position.",
+      "unroutable": true
+    },
+    {
+      "quest": 6522,
+      "reason": "An Unholy Alliance: Small Scroll (6522) has no DB position, so 6521 cannot be reached. 6521 is elite and blocked; see the route _review."
+    },
+    {
+      "quest": 6627,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "quest": 6628,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "quest": 6922,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 6983,
+      "reason": "Elite, unroutable: prerequisite 6963 is a level 60 holiday quest.",
+      "unroutable": true
+    },
+    {
+      "quest": 7321,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "quest": 7866,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8170,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8263,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8370,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8390,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8426,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8431,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 8852,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "quest": 78676,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 79360,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 79364,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 79535,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79536,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79947,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79948,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79949,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79950,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79951,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79952,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79953,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79974,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79975,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 79976,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 92434,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 93176,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 93663,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 93680,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 95663,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 95664,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 95682,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 95697,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 96241,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 96259,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 96260,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 96294,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 96781,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 96783,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 96784,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 96785,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "quest": 96984,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 96986,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 96988,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "quest": 97265,
+      "reason": "Hate the Hatefury: no XP row; Desolace errand not routed."
+    },
+    {
+      "quest": 97287,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 97328,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 97539,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 97985,
+      "reason": "Elite, left out: Undercity detour (two visits) to kill Stormheart for a quest with no XP row. Revisit in phase 05.",
+      "unroutable": true
+    },
+    {
+      "quest": 98069,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 98070,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "quest": 98823,
+      "reason": "Dungeon quest: not soloable for this profile."
+    }
+  ],
+  "entry": {
+    "hub": "Tarren Mill",
+    "level": 30,
+    "x": 62.8,
+    "y": 19.0,
+    "zone": "Hillsbrad Foothills"
+  },
+  "exitPoint": {
+    "hub": "Kargath",
+    "level": 35,
+    "x": 2.8,
+    "y": 45.9,
+    "zone": "Badlands"
+  },
+  "faction": "horde",
+  "id": "horde_horde_30-35",
+  "next": "horde_horde_35-40a",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Hearth to Innkeeper Shay at Tarren Mill. The Alterac and Dalaran legs return here.",
+      "type": "HEARTH_BIND",
+      "x": 62.8,
+      "y": 19.0,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Krusk at Tarren Mill: Infiltration. The thieves are in Alterac (58, 68).",
+      "npc": 2229,
+      "quest": 533,
+      "tag": "main",
+      "title": "Infiltration",
+      "type": "ACCEPT",
+      "x": 63.2,
+      "y": 20.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Novice Thaivand at Tarren Mill: Helcular's Revenge. Yetis in Hillsbrad come first.",
+      "npc": 2429,
+      "quest": 552,
+      "tag": "main",
+      "title": "Helcular's Revenge",
+      "type": "ACCEPT",
+      "x": 63.9,
+      "y": 19.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Voidglar at Tarren Mill: Prison Break In. The Bloodstone pieces are in the Dalaran ruins.",
+      "npc": 2410,
+      "quest": 544,
+      "tag": "main",
+      "title": "Prison Break In",
+      "type": "ACCEPT",
+      "x": 61.6,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Keeper Bel'varil at Tarren Mill: Stone Tokens, Dalaran ruins (lv 31-36 mobs).",
+      "npc": 2437,
+      "quest": 556,
+      "tag": "main",
+      "title": "Stone Tokens",
+      "type": "ACCEPT",
+      "x": 61.5,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Tallow at Tarren Mill: The Hammer May Fall. Boulderfist ogres are in west Arathi.",
+      "npc": 2770,
+      "quest": 676,
+      "tag": "main",
+      "title": "The Hammer May Fall",
+      "type": "ACCEPT",
+      "x": 61.9,
+      "y": 19.6,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Helcular's Rod from yetis around (44, 30) in north-west Hillsbrad.",
+      "quest": 552,
+      "tag": "main",
+      "title": "Helcular's Revenge",
+      "type": "COMPLETE",
+      "x": 44.4,
+      "y": 29.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Novice Thaivand at Tarren Mill.",
+      "npc": 2429,
+      "quest": 552,
+      "tag": "main",
+      "title": "Helcular's Revenge",
+      "type": "TURNIN",
+      "x": 63.9,
+      "y": 19.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Thaivand: Helcular's Revenge part 2. Flames of Azel and Veraz are in Hillsbrad.",
+      "npc": 2429,
+      "quest": 553,
+      "tag": "main",
+      "title": "Helcular's Revenge",
+      "type": "ACCEPT",
+      "x": 63.9,
+      "y": 19.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Into Alterac: Syndicate thieves at (58, 68), Valik at (57, 70). Then west to the Dalaran ruins.",
+      "to": "Alterac Mountains (Syndicate camp, 58 68)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Syndicate Missive from thieves at (58, 68) and (48, 82) in Alterac.",
+      "quest": 533,
+      "tag": "main",
+      "title": "Infiltration",
+      "type": "COMPLETE",
+      "x": 58.3,
+      "y": 68.0,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Henchman Valik in Alterac: Southshore Stout from the drunken footpads.",
+      "npc": 2333,
+      "quest": 535,
+      "tag": "optional",
+      "title": "Valik",
+      "type": "ACCEPT",
+      "x": 57.2,
+      "y": 69.5,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Southshore Stout from drunken footpads next to Valik (59, 68).",
+      "quest": 535,
+      "tag": "optional",
+      "title": "Valik",
+      "type": "COMPLETE",
+      "x": 59.0,
+      "y": 68.5,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Turn in to Henchman Valik in Alterac.",
+      "npc": 2333,
+      "quest": 535,
+      "tag": "optional",
+      "title": "Valik",
+      "type": "TURNIN",
+      "x": 57.2,
+      "y": 69.5,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Flames of Azel and Veraz in Hillsbrad (44, 27) are done; the Flame of Uzel is here at (37, 66).",
+      "quest": 553,
+      "tag": "main",
+      "title": "Helcular's Revenge",
+      "type": "COMPLETE",
+      "x": 37.5,
+      "y": 66.2,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Bloodstone pieces from Dermot, Ricter, Alina and Kegan Darkmar in the Dalaran ruins (17-20, 83-86).",
+      "quest": 544,
+      "tag": "main",
+      "title": "Prison Break In",
+      "type": "COMPLETE",
+      "x": 20.0,
+      "y": 85.0,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Worn Stone Tokens from Dalaran Summoners and Shields in the ruins (15-19, 76-85).",
+      "quest": 556,
+      "tag": "main",
+      "title": "Stone Tokens",
+      "type": "COMPLETE",
+      "x": 15.4,
+      "y": 76.2,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Hearth back to Innkeeper Shay at Tarren Mill.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Turn in to Krusk at Tarren Mill.",
+      "npc": 2229,
+      "quest": 533,
+      "tag": "main",
+      "title": "Infiltration",
+      "type": "TURNIN",
+      "x": 63.2,
+      "y": 20.7,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Voidglar at Tarren Mill.",
+      "npc": 2410,
+      "quest": 544,
+      "tag": "main",
+      "title": "Prison Break In",
+      "type": "TURNIN",
+      "x": 61.6,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Voidglar: Dalaran Patrols, now that the Bloodstone pieces are turned in.",
+      "npc": 2410,
+      "quest": 545,
+      "tag": "main",
+      "title": "Dalaran Patrols",
+      "type": "ACCEPT",
+      "x": 61.6,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Keeper Bel'varil at Tarren Mill.",
+      "npc": 2437,
+      "quest": 556,
+      "tag": "main",
+      "title": "Stone Tokens",
+      "type": "TURNIN",
+      "x": 61.5,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Bel'varil: Bracers of Binding, after the Stone Tokens turn-in.",
+      "npc": 2437,
+      "quest": 557,
+      "tag": "main",
+      "title": "Bracers of Binding",
+      "type": "ACCEPT",
+      "x": 61.5,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Back west to the Dalaran ruins for the summoners, elementals and bracer mobs.",
+      "to": "Dalaran ruins (Alterac, west)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Dalaran Summoners and Elemental Slaves at (16, 76) and (21, 58).",
+      "quest": 545,
+      "tag": "main",
+      "title": "Dalaran Patrols",
+      "type": "COMPLETE",
+      "x": 15.9,
+      "y": 76.3,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Bracers of Earth from the summoners and slaves around (21, 58).",
+      "quest": 557,
+      "tag": "main",
+      "title": "Bracers of Binding",
+      "type": "COMPLETE",
+      "x": 21.0,
+      "y": 58.5,
+      "zone": "Alterac Mountains"
+    },
+    {
+      "note": "Hearth back to Innkeeper Shay at Tarren Mill.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Turn in to Voidglar at Tarren Mill.",
+      "npc": 2410,
+      "quest": 545,
+      "tag": "main",
+      "title": "Dalaran Patrols",
+      "type": "TURNIN",
+      "x": 61.6,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "Turn in to Keeper Bel'varil at Tarren Mill.",
+      "npc": 2437,
+      "quest": 557,
+      "tag": "main",
+      "title": "Bracers of Binding",
+      "type": "TURNIN",
+      "x": 61.5,
+      "y": 20.9,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "South-west of Tarren Mill to the grave for the Helcular's Revenge turn-in.",
+      "to": "Helcular's Grave (Hillsbrad, 53 53)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in at Helcular's Grave in Hillsbrad.",
+      "quest": 553,
+      "tag": "main",
+      "title": "Helcular's Revenge",
+      "type": "TURNIN",
+      "x": 52.8,
+      "y": 53.4,
+      "zone": "Hillsbrad Foothills"
+    },
+    {
+      "note": "South from Hillsbrad into west Arathi for the Boulderfist ogres.",
+      "to": "Boulderfist camp, west Arathi (34, 45)",
+      "type": "TRAVEL"
+    },
+    {
+      "_review": "Boulderfist enforcers are lv 33 and the XP-only estimate says 30 here; the Alterac block brings the player to about 31-32. Accepted.",
+      "note": "Boulderfist ogres and enforcers around (33, 45) in west Arathi.",
+      "quest": 676,
+      "tag": "main",
+      "title": "The Hammer May Fall",
+      "type": "COMPLETE",
+      "x": 34.4,
+      "y": 45.0,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "East to Hammerfall to turn in Drum Fel.",
+      "to": "Hammerfall (Arathi)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Urda at Hammerfall: discover the wind rider on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 73.0,
+      "y": 32.7,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Hearth to Innkeeper Adegwa at Hammerfall. Tor'gan and Gor'mul are beside the inn.",
+      "type": "HEARTH_BIND",
+      "x": 73.8,
+      "y": 32.5,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Drum Fel at Hammerfall.",
+      "npc": 2771,
+      "quest": 676,
+      "tag": "main",
+      "title": "The Hammer May Fall",
+      "type": "TURNIN",
+      "x": 74.2,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Drum Fel: Call to Arms. The Witherbark trolls are south of Hammerfall.",
+      "npc": 2771,
+      "quest": 677,
+      "tag": "main",
+      "title": "Call to Arms",
+      "type": "ACCEPT",
+      "x": 74.2,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "South to the Witherbark camps.",
+      "to": "Witherbark camps, south Arathi (67, 72)",
+      "type": "TRAVEL"
+    },
+    {
+      "_review": "Witherbark headhunters are lv 34; same estimate gap as 676 (XP-only level runs 1-2 low). Accepted.",
+      "note": "Witherbark axe throwers, headhunters and witches around (66-74, 66-75).",
+      "quest": 677,
+      "tag": "main",
+      "title": "Call to Arms",
+      "type": "COMPLETE",
+      "x": 67.5,
+      "y": 72.0,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Back north to Hammerfall.",
+      "to": "Hammerfall",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Drum Fel at Hammerfall. The chain continues in 35-40a (678).",
+      "npc": 2771,
+      "quest": 677,
+      "tag": "main",
+      "title": "Call to Arms",
+      "type": "TURNIN",
+      "x": 74.2,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Gor'mul at Hammerfall: Hammerfall, 270 XP. Start of the Tor'gan chain.",
+      "npc": 2792,
+      "quest": 655,
+      "tag": "optional",
+      "title": "Hammerfall",
+      "type": "ACCEPT",
+      "x": 72.6,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Tor'gan at Hammerfall.",
+      "npc": 2706,
+      "quest": 655,
+      "tag": "optional",
+      "title": "Hammerfall",
+      "type": "TURNIN",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Tor'gan: Raising Spirits. Raptors and thrashers around Arathi.",
+      "npc": 2706,
+      "quest": 672,
+      "tag": "main",
+      "title": "Raising Spirits",
+      "type": "ACCEPT",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Highland Raptors around (51, 42) in central Arathi.",
+      "quest": 672,
+      "tag": "main",
+      "title": "Raising Spirits",
+      "type": "COMPLETE",
+      "x": 50.9,
+      "y": 41.5,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Tor'gan at Hammerfall.",
+      "npc": 2706,
+      "quest": 672,
+      "tag": "main",
+      "title": "Raising Spirits",
+      "type": "TURNIN",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Tor'gan: Raising Spirits part 2.",
+      "npc": 2706,
+      "quest": 674,
+      "tag": "optional",
+      "title": "Raising Spirits",
+      "type": "ACCEPT",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Gor'mul at Hammerfall.",
+      "npc": 2792,
+      "quest": 674,
+      "tag": "optional",
+      "title": "Raising Spirits",
+      "type": "TURNIN",
+      "x": 72.6,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Gor'mul: Raising Spirits part 3.",
+      "npc": 2792,
+      "quest": 675,
+      "tag": "optional",
+      "title": "Raising Spirits",
+      "type": "ACCEPT",
+      "x": 72.6,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Tor'gan at Hammerfall.",
+      "npc": 2706,
+      "quest": 675,
+      "tag": "optional",
+      "title": "Raising Spirits",
+      "type": "TURNIN",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Tor'gan: Guile of the Raptor. Raptor hearts in south-centre Arathi.",
+      "npc": 2706,
+      "quest": 701,
+      "tag": "main",
+      "title": "Guile of the Raptor",
+      "type": "ACCEPT",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Highland Raptor hearts at (47-52, 67-79) in south-centre Arathi.",
+      "quest": 701,
+      "tag": "main",
+      "title": "Guile of the Raptor",
+      "type": "COMPLETE",
+      "x": 51.9,
+      "y": 67.1,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Tor'gan at Hammerfall.",
+      "npc": 2706,
+      "quest": 701,
+      "tag": "main",
+      "title": "Guile of the Raptor",
+      "type": "TURNIN",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Tor'gan: Guile of the Raptor part 2.",
+      "npc": 2706,
+      "quest": 702,
+      "tag": "optional",
+      "title": "Guile of the Raptor",
+      "type": "ACCEPT",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Gor'mul at Hammerfall.",
+      "npc": 2792,
+      "quest": 702,
+      "tag": "optional",
+      "title": "Guile of the Raptor",
+      "type": "TURNIN",
+      "x": 72.6,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Gor'mul: Call of the Raptor. No objectives; turn in to Tor'gan.",
+      "npc": 2792,
+      "quest": 847,
+      "tag": "main",
+      "title": "Guile of the Raptor",
+      "type": "ACCEPT",
+      "x": 72.6,
+      "y": 33.9,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Tor'gan at Hammerfall.",
+      "npc": 2706,
+      "quest": 847,
+      "tag": "main",
+      "title": "Guile of the Raptor",
+      "type": "TURNIN",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Tor'gan: Foul Magics. Bloodstone amulets from Syndicate in west Arathi.",
+      "npc": 2706,
+      "quest": 671,
+      "tag": "main",
+      "title": "Foul Magics",
+      "type": "ACCEPT",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Bloodstone Amulets from Syndicate mercenaries and priests at (32, 29) in west Arathi.",
+      "quest": 671,
+      "tag": "main",
+      "title": "Foul Magics",
+      "type": "COMPLETE",
+      "x": 32.3,
+      "y": 28.7,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Tor'gan at Hammerfall.",
+      "npc": 2706,
+      "quest": 671,
+      "tag": "main",
+      "title": "Foul Magics",
+      "type": "TURNIN",
+      "x": 74.7,
+      "y": 36.3,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Zengu at Hammerfall: Sigil of Strom (elite talk). Breadcrumb 638 is not on this route.",
+      "npc": 2703,
+      "quest": 639,
+      "revisitAt": 37,
+      "tag": "optional-elite",
+      "title": "Sigil of Strom",
+      "type": "ACCEPT",
+      "x": 73.8,
+      "y": 34.0,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "note": "Turn in to Zengu at Hammerfall. If the offer is missing, skip; come back at 37.",
+      "npc": 2703,
+      "quest": 639,
+      "revisitAt": 37,
+      "tag": "optional-elite",
+      "title": "Sigil of Strom",
+      "type": "TURNIN",
+      "x": 73.8,
+      "y": 34.0,
+      "zone": "Arathi Highlands"
+    },
+    {
+      "bagCheck": true,
+      "note": "Urda's wind rider to Thalon at Shadowprey Village. Flight path is not in the DB; check in game.",
+      "to": "Shadowprey Village (Desolace)",
+      "type": "FLY"
+    },
+    {
+      "note": "Thalon at Shadowprey Village: discover the wind rider.",
+      "type": "FP_DISCOVER",
+      "x": 21.6,
+      "y": 74.1,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Hearth to Innkeeper Sikewa at Shadowprey Village.",
+      "type": "HEARTH_BIND",
+      "x": 24.1,
+      "y": 68.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Mai'Lahii at Shadowprey Village: Clam Bait.",
+      "npc": 12031,
+      "quest": 6142,
+      "tag": "main",
+      "title": "Clam Bait",
+      "type": "ACCEPT",
+      "x": 22.6,
+      "y": 72.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Soft-shelled clams around (25, 46) and (33, 30) in west Desolace.",
+      "quest": 6142,
+      "tag": "main",
+      "title": "Clam Bait",
+      "type": "COMPLETE",
+      "x": 25.0,
+      "y": 46.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Mai'Lahii at Shadowprey Village.",
+      "npc": 12031,
+      "quest": 6142,
+      "tag": "main",
+      "title": "Clam Bait",
+      "type": "TURNIN",
+      "x": 22.6,
+      "y": 72.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Drulzegar Skraghook at Shadowprey Village: Other Fish to Fry.",
+      "npc": 12340,
+      "quest": 6143,
+      "tag": "main",
+      "title": "Other Fish to Fry",
+      "type": "ACCEPT",
+      "x": 23.3,
+      "y": 72.9,
+      "zone": "Desolace"
+    },
+    {
+      "_review": "Slitherblade mobs at (33, 23) are 51 from Shadowprey; hearth back after the turn-in. Mobs lv 32-35 with the real level near 33. Accepted.",
+      "note": "Slitherblade myrmidons, nagas and sorcerers around (31-37, 14-23).",
+      "quest": 6143,
+      "tag": "main",
+      "title": "Other Fish to Fry",
+      "type": "COMPLETE",
+      "x": 33.5,
+      "y": 23.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Drulzegar at Shadowprey Village.",
+      "npc": 12340,
+      "quest": 6143,
+      "tag": "main",
+      "title": "Other Fish to Fry",
+      "type": "TURNIN",
+      "x": 23.3,
+      "y": 72.9,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Hearth back to Innkeeper Sikewa at Shadowprey Village.",
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Roon Wildmane at Shadowprey Village: Hunting in Stranglethorn. Turn-in is Hemet in Stranglethorn.",
+      "npc": 11877,
+      "quest": 5763,
+      "tag": "optional",
+      "title": "Hunting in Stranglethorn",
+      "type": "ACCEPT",
+      "x": 25.1,
+      "y": 72.3,
+      "zone": "Desolace"
+    },
+    {
+      "note": "North-east to Nataka Longhorn for Catch of the Day.",
+      "to": "Nataka Longhorn (Desolace, 55 56)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Nataka Longhorn: Catch of the Day. The Bloodbelly Fish are on the west shore (22, 73).",
+      "npc": 11259,
+      "quest": 5386,
+      "tag": "main",
+      "title": "Catch of the Day",
+      "type": "ACCEPT",
+      "x": 55.4,
+      "y": 55.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Back south-west to the fishing shore.",
+      "to": "Bloodbelly shore (22, 73), next to Shadowprey",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Bloodbelly Fish at (22, 73) next to Shadowprey Village.",
+      "quest": 5386,
+      "tag": "main",
+      "title": "Catch of the Day",
+      "type": "COMPLETE",
+      "x": 22.4,
+      "y": 73.1,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Back to Nataka Longhorn to turn in.",
+      "to": "Nataka Longhorn (Desolace)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Nataka Longhorn in Desolace.",
+      "npc": 11259,
+      "quest": 5386,
+      "tag": "main",
+      "title": "Catch of the Day",
+      "type": "TURNIN",
+      "x": 55.4,
+      "y": 55.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "North-east to the Ghost Walker Post for the centaur chain.",
+      "to": "Felgur Twocuts, Ghost Walker Post (56, 60)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Felgur Twocuts: Khan Dez'hepah. Chain head for Centaur Bounty (1366).",
+      "npc": 5395,
+      "quest": 1365,
+      "tag": "main",
+      "title": "Khan Dez'hepah",
+      "type": "ACCEPT",
+      "x": 56.2,
+      "y": 59.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Khan Dez'hepah's Head from Khan Dez'hepah in north-east Desolace (74, 45).",
+      "quest": 1365,
+      "tag": "main",
+      "title": "Khan Dez'hepah",
+      "type": "COMPLETE",
+      "x": 73.7,
+      "y": 45.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Felgur Twocuts at Ghost Walker Post.",
+      "npc": 5395,
+      "quest": 1365,
+      "tag": "main",
+      "title": "Khan Dez'hepah",
+      "type": "TURNIN",
+      "x": 56.2,
+      "y": 59.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Felgur Twocuts: Centaur Bounty, handed over from 25-30.",
+      "npc": 5395,
+      "quest": 1366,
+      "tag": "main",
+      "title": "Centaur Bounty",
+      "type": "ACCEPT",
+      "x": 56.2,
+      "y": 59.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Centaur ears from the centaurs at (71, 46) and (37, 88). Fifteen ears.",
+      "quest": 1366,
+      "tag": "main",
+      "title": "Centaur Bounty",
+      "type": "COMPLETE",
+      "x": 71.3,
+      "y": 45.9,
+      "zone": "Desolace"
+    },
+    {
+      "_review": "Centaur Bounty needs 1365 turned in first, so three Felgur visits are forced. Accepted.",
+      "note": "Turn in to Felgur Twocuts at Ghost Walker Post.",
+      "npc": 5395,
+      "quest": 1366,
+      "reward": {
+        "preferItem": 6784,
+        "why": "Braced Handguards: level 36 hands upgrade. The DB does not mark the reward as a choice."
+      },
+      "tag": "main",
+      "title": "Centaur Bounty",
+      "type": "TURNIN",
+      "x": 56.2,
+      "y": 59.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Takata Steelblade: Alliance Relations part 3. Turn in to Maurin next door.",
+      "npc": 5641,
+      "quest": 1433,
+      "tag": "optional",
+      "title": "Alliance Relations",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Maurin Bonesplitter in Desolace.",
+      "npc": 4498,
+      "quest": 1433,
+      "tag": "optional",
+      "title": "Alliance Relations",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Maurin Bonesplitter: The Burning of Spirits.",
+      "npc": 4498,
+      "quest": 1435,
+      "tag": "main",
+      "title": "The Burning of Spirits",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Infused Burning Blade Essence around (55, 28) in north-central Desolace.",
+      "quest": 1435,
+      "tag": "main",
+      "title": "The Burning of Spirits",
+      "type": "COMPLETE",
+      "x": 54.9,
+      "y": 27.6,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Takata Steelblade: Befouled by Satyr. Hatefury mobs in north-east Desolace.",
+      "npc": 5641,
+      "quest": 1434,
+      "tag": "main",
+      "title": "Befouled by Satyr",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Hatefury rogues, felsworn and betrayers around (75, 19) in north-east Desolace.",
+      "quest": 1434,
+      "tag": "main",
+      "title": "Befouled by Satyr",
+      "type": "COMPLETE",
+      "x": 75.0,
+      "y": 19.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Takata Steelblade in Desolace.",
+      "npc": 5641,
+      "quest": 1434,
+      "tag": "main",
+      "title": "Befouled by Satyr",
+      "type": "TURNIN",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Maurin Bonesplitter in Desolace.",
+      "npc": 4498,
+      "quest": 1435,
+      "tag": "main",
+      "title": "The Burning of Spirits",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Takata Steelblade: Alliance Relations finale. Turn in to Keldran in Orgrimmar.",
+      "npc": 5641,
+      "quest": 1436,
+      "tag": "main",
+      "title": "Alliance Relations",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Flayed Demon Skin on the ground at (50, 77): The Corrupter. Turn in to Maurin.",
+      "quest": 1480,
+      "tag": "optional",
+      "title": "The Corrupter",
+      "type": "ACCEPT",
+      "x": 49.6,
+      "y": 77.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Maurin Bonesplitter in Desolace.",
+      "npc": 4498,
+      "quest": 1480,
+      "tag": "optional",
+      "title": "The Corrupter",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Maurin Bonesplitter: The Corrupter part 2.",
+      "npc": 4498,
+      "quest": 1481,
+      "tag": "main",
+      "title": "The Corrupter",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "_review": "Hatefury shadowstalkers at (77, 22) are 75 from Shadowprey and about 40 from the Maurin hub. Walk; no bind in the north-east. Accepted.",
+      "note": "Shadowstalker Scales from Hatefury shadowstalkers in north-east Desolace (71-77, 14-22).",
+      "quest": 1481,
+      "tag": "main",
+      "title": "The Corrupter",
+      "type": "COMPLETE",
+      "x": 77.1,
+      "y": 21.8,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Maurin Bonesplitter in Desolace.",
+      "npc": 4498,
+      "quest": 1481,
+      "tag": "main",
+      "title": "The Corrupter",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Maurin Bonesplitter: The Corrupter part 3. Oracle Crystals are in the far north-west.",
+      "npc": 4498,
+      "quest": 1482,
+      "tag": "main",
+      "title": "The Corrupter",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Oracle Crystals from Slitherblade mobs in the far north-west (28-32, 7-16).",
+      "quest": 1482,
+      "tag": "main",
+      "title": "The Corrupter",
+      "type": "COMPLETE",
+      "x": 28.1,
+      "y": 7.3,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Maurin Bonesplitter in Desolace.",
+      "npc": 4498,
+      "quest": 1482,
+      "tag": "main",
+      "title": "The Corrupter",
+      "type": "TURNIN",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Maurin Bonesplitter: The Corrupter finale.",
+      "npc": 4498,
+      "quest": 1484,
+      "tag": "optional",
+      "title": "The Corrupter",
+      "type": "ACCEPT",
+      "x": 52.2,
+      "y": 53.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Takata Steelblade in Desolace.",
+      "npc": 5641,
+      "quest": 1484,
+      "tag": "optional",
+      "title": "The Corrupter",
+      "type": "TURNIN",
+      "x": 52.6,
+      "y": 54.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Smeed Scrabblescrew: Kodo Roundup. Lure the kodos to his camp (60, 62).",
+      "npc": 11596,
+      "quest": 5561,
+      "tag": "main",
+      "title": "Kodo Roundup",
+      "type": "ACCEPT",
+      "x": 60.9,
+      "y": 61.9,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Lure the kodos to Smeed's camp at (60, 62) and collect five tamed kodos.",
+      "quest": 5561,
+      "tag": "main",
+      "title": "Kodo Roundup",
+      "type": "COMPLETE",
+      "x": 60.6,
+      "y": 62.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Smeed Scrabblescrew at his camp in Desolace.",
+      "npc": 11596,
+      "quest": 5561,
+      "reward": {
+        "preferItem": 15697,
+        "why": "Kodo Rustler Boots: level 34 feet upgrade. The DB does not mark the reward as a choice."
+      },
+      "tag": "main",
+      "title": "Kodo Roundup",
+      "type": "TURNIN",
+      "x": 60.9,
+      "y": 61.9,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Azore Aldamort: Sceptre of Light. The item is at the Burning Blade camp (55, 30).",
+      "npc": 11863,
+      "quest": 5741,
+      "tag": "main",
+      "title": "Sceptre of Light",
+      "type": "ACCEPT",
+      "x": 38.9,
+      "y": 27.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Sceptre of Light from the Burning Blade camp at (55, 30).",
+      "quest": 5741,
+      "tag": "main",
+      "title": "Sceptre of Light",
+      "type": "COMPLETE",
+      "x": 55.2,
+      "y": 30.1,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Azore Aldamort in Desolace.",
+      "npc": 11863,
+      "quest": 5741,
+      "tag": "main",
+      "title": "Sceptre of Light",
+      "type": "TURNIN",
+      "x": 38.9,
+      "y": 27.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Cork Gizelton: Bodyguard for Hire. Short escort past the Kolkar centaurs to Smeed.",
+      "npc": 11625,
+      "quest": 5821,
+      "tag": "optional",
+      "title": "Bodyguard for Hire",
+      "type": "ACCEPT",
+      "x": 66.5,
+      "y": 37.5,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Escort Gizelton's caravan past the Kolkar centaur village toward Smeed.",
+      "quest": 5821,
+      "tag": "optional",
+      "title": "Bodyguard for Hire",
+      "type": "COMPLETE",
+      "x": 64.0,
+      "y": 50.0,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in to Smeed Scrabblescrew at his camp in Desolace.",
+      "npc": 11596,
+      "quest": 5821,
+      "tag": "optional",
+      "title": "Bodyguard for Hire",
+      "type": "TURNIN",
+      "x": 60.9,
+      "y": 61.9,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Rackmore's Log in north-west Desolace: Claim Rackmore's Treasure.",
+      "quest": 6161,
+      "tag": "main",
+      "title": "Claim Rackmore's Treasure!",
+      "type": "ACCEPT",
+      "x": 36.1,
+      "y": 30.4,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Rackmore's Silver and Golden Keys from Slitherblade and Drysnap mobs around (32, 16).",
+      "quest": 6161,
+      "tag": "main",
+      "title": "Claim Rackmore's Treasure!",
+      "type": "COMPLETE",
+      "x": 32.7,
+      "y": 16.2,
+      "zone": "Desolace"
+    },
+    {
+      "note": "Turn in at Rackmore's Chest in north-west Desolace.",
+      "quest": 6161,
+      "tag": "main",
+      "title": "Claim Rackmore's Treasure!",
+      "type": "TURNIN",
+      "x": 30.0,
+      "y": 8.7,
+      "zone": "Desolace"
+    },
+    {
+      "note": "East into Feralas to Camp Mojache for the druid trainer, then west to Thousand Needles.",
+      "to": "Camp Mojache (Feralas)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Shyn at Camp Mojache: discover the wind rider on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 75.5,
+      "y": 44.4,
+      "zone": "Feralas"
+    },
+    {
+      "note": "Camp Mojache druid trainer, the only Feralas trainer. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 76.0,
+      "y": 42.3,
+      "zone": "Feralas"
+    },
+    {
+      "note": "West through Feralas to Freewind Post.",
+      "to": "Freewind Post (Thousand Needles)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Kravel Koalbeard in Thousand Needles: Wharfmaster Dizzywig. Turn in at Dizzywig in the Barrens.",
+      "npc": 4452,
+      "quest": 1111,
+      "tag": "main",
+      "title": "Wharfmaster Dizzywig",
+      "type": "ACCEPT",
+      "x": 77.8,
+      "y": 77.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Pozzik at Thousand Needles: Goblin Sponsorship. Turn in to Gazlowe in the Barrens.",
+      "npc": 4630,
+      "quest": 1178,
+      "tag": "optional",
+      "title": "Goblin Sponsorship",
+      "type": "ACCEPT",
+      "x": 80.2,
+      "y": 75.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Zherin at Thousand Needles: A Bump in the Road.",
+      "npc": 4629,
+      "quest": 1175,
+      "tag": "main",
+      "title": "A Bump in the Road",
+      "type": "ACCEPT",
+      "x": 81.6,
+      "y": 78.0,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Saltstone basilisks, crystals and gazers around (75-83, 57-88) in south-east Thousand Needles.",
+      "quest": 1175,
+      "tag": "main",
+      "title": "A Bump in the Road",
+      "type": "COMPLETE",
+      "x": 78.4,
+      "y": 87.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Trackmaster Zherin at Thousand Needles.",
+      "npc": 4629,
+      "quest": 1175,
+      "tag": "main",
+      "title": "A Bump in the Road",
+      "type": "TURNIN",
+      "x": 81.6,
+      "y": 78.0,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Wizzle Brassbolts: Encrusted Tail Fins. Elite item drops; come back at 37.",
+      "npc": 4453,
+      "quest": 1107,
+      "revisitAt": 37,
+      "tag": "optional-elite",
+      "title": "Encrusted Tail Fins",
+      "type": "ACCEPT",
+      "x": 78.1,
+      "y": 77.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Encrusted Tail Fins are elite item drops around Thousand Needles. Come back at 37.",
+      "quest": 1107,
+      "revisitAt": 37,
+      "tag": "optional-elite",
+      "title": "Encrusted Tail Fins",
+      "type": "COMPLETE",
+      "x": 78.1,
+      "y": 77.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Wizzle Brassbolts at Thousand Needles.",
+      "npc": 4453,
+      "quest": 1107,
+      "revisitAt": 37,
+      "tag": "optional-elite",
+      "title": "Encrusted Tail Fins",
+      "type": "TURNIN",
+      "x": 78.1,
+      "y": 77.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Kravel Koalbeard: Hemet Nesingwary. Turn in to Hemet in Stranglethorn.",
+      "npc": 4452,
+      "quest": 5762,
+      "tag": "optional",
+      "title": "Hemet Nesingwary",
+      "type": "ACCEPT",
+      "x": 77.8,
+      "y": 77.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "North-west to Ratchet, Dizzywig's camp and Gazlowe.",
+      "to": "Ratchet (Barrens)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Wharfmaster Dizzywig in the Barrens.",
+      "npc": 3453,
+      "quest": 1111,
+      "tag": "main",
+      "title": "Wharfmaster Dizzywig",
+      "type": "TURNIN",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wharfmaster Dizzywig: Parts for Kravel. Back to Kravel in Thousand Needles.",
+      "npc": 3453,
+      "quest": 1112,
+      "tag": "main",
+      "title": "Parts for Kravel",
+      "type": "ACCEPT",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazlowe at Ratchet.",
+      "npc": 3391,
+      "quest": 1178,
+      "tag": "optional",
+      "title": "Goblin Sponsorship",
+      "type": "TURNIN",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gazlowe at Ratchet: Goblin Sponsorship part 2, Lozgil in Stranglethorn.",
+      "npc": 3391,
+      "quest": 1180,
+      "tag": "optional",
+      "title": "Goblin Sponsorship",
+      "type": "ACCEPT",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Hearth to Innkeeper Wiley at Ratchet.",
+      "type": "HEARTH_BIND",
+      "x": 62.0,
+      "y": 39.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Korran in the Barrens: The Swarm Grows. Turn in to Belgrom in Orgrimmar.",
+      "npc": 3428,
+      "quest": 1145,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "ACCEPT",
+      "x": 51.1,
+      "y": 29.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "North by the Crossroads to Orgrimmar. Doras' wind rider is already known.",
+      "to": "Orgrimmar",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Belgrom Rockmaul in Orgrimmar.",
+      "npc": 4485,
+      "quest": 1145,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "TURNIN",
+      "x": 75.2,
+      "y": 34.2,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Belgrom Rockmaul: The Swarm Grows part 2. Moktar Krin is in Thousand Needles.",
+      "npc": 4485,
+      "quest": 1146,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "ACCEPT",
+      "x": 75.2,
+      "y": 34.2,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Keldran in Orgrimmar. Alliance Relations finale.",
+      "npc": 5640,
+      "quest": 1436,
+      "tag": "main",
+      "title": "Alliance Relations",
+      "type": "TURNIN",
+      "x": 22.6,
+      "y": 52.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Sovik in Orgrimmar: Chief Engineer Scooty. Turn in to Scooty in Booty Bay.",
+      "npc": 3413,
+      "quest": 2842,
+      "tag": "optional",
+      "title": "Chief Engineer Scooty",
+      "type": "ACCEPT",
+      "x": 75.5,
+      "y": 25.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Orgrimmar class trainers at level 32. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 48.0,
+      "y": 45.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "South back through the Crossroads and Camp Taurajo to Thousand Needles.",
+      "to": "Crossroads, then the road to Thousand Needles",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Moktar Krin at Thousand Needles.",
+      "npc": 4483,
+      "quest": 1146,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "TURNIN",
+      "x": 67.6,
+      "y": 63.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Moktar Krin: The Swarm Grows part 3. The silithid hive is in south Thousand Needles.",
+      "npc": 4483,
+      "quest": 1147,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "ACCEPT",
+      "x": 67.6,
+      "y": 63.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Silithid hive drones and invaders around (64-70, 83-86) in south Thousand Needles.",
+      "quest": 1147,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "COMPLETE",
+      "x": 68.1,
+      "y": 85.7,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Moktar Krin at Thousand Needles.",
+      "npc": 4483,
+      "quest": 1147,
+      "tag": "main",
+      "title": "The Swarm Grows",
+      "type": "TURNIN",
+      "x": 67.6,
+      "y": 63.9,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Kravel Koalbeard at Thousand Needles.",
+      "npc": 4452,
+      "quest": 1112,
+      "tag": "main",
+      "title": "Parts for Kravel",
+      "type": "TURNIN",
+      "x": 77.8,
+      "y": 77.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Kravel Koalbeard: Delivery to the Gnomes. Turn in to Fizzle Brassbolts next door.",
+      "npc": 4452,
+      "quest": 1114,
+      "tag": "optional",
+      "title": "Delivery to the Gnomes",
+      "type": "ACCEPT",
+      "x": 77.8,
+      "y": 77.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Turn in to Fizzle Brassbolts at Thousand Needles.",
+      "npc": 4454,
+      "quest": 1114,
+      "tag": "optional",
+      "title": "Delivery to the Gnomes",
+      "type": "TURNIN",
+      "x": 78.1,
+      "y": 77.1,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Kravel Koalbeard: The Rumormonger. Turn in to Krazek in Stranglethorn.",
+      "npc": 4452,
+      "quest": 1115,
+      "tag": "main",
+      "title": "The Rumormonger",
+      "type": "ACCEPT",
+      "x": 77.8,
+      "y": 77.3,
+      "zone": "Thousand Needles"
+    },
+    {
+      "note": "Into the Barrens south to Myriam Moonsinger's camp at (49, 95).",
+      "to": "Myriam Moonsinger, south Barrens (49, 95)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Myriam Moonsinger: A Host of Evil. Group elite in Razorfen Downs. Revisit at 36 with a group.",
+      "npc": 12866,
+      "quest": 6626,
+      "revisitAt": 36,
+      "tag": "optional-elite",
+      "title": "A Host of Evil",
+      "type": "ACCEPT",
+      "x": 49.0,
+      "y": 94.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Group quest in Razorfen Downs (instance): Battleguards, Thornweavers and Cultists. Coords are Myriam's camp.",
+      "quest": 6626,
+      "revisitAt": 36,
+      "tag": "optional-elite",
+      "title": "A Host of Evil",
+      "type": "COMPLETE",
+      "x": 49.0,
+      "y": 94.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Myriam Moonsinger. Revisit at 36 with a group.",
+      "npc": 12866,
+      "quest": 6626,
+      "revisitAt": 36,
+      "tag": "optional-elite",
+      "title": "A Host of Evil",
+      "type": "TURNIN",
+      "x": 49.0,
+      "y": 94.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "East and south-east into Dustwallow Marsh to Brackenwall.",
+      "to": "Brackenwall Village (Dustwallow Marsh)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Shardi at Brackenwall Village: discover the wind rider.",
+      "type": "FP_DISCOVER",
+      "x": 35.6,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Swamp Eye Jarl: Soothing Spices. Start of the Jarl chain.",
+      "npc": 4792,
+      "quest": 1218,
+      "tag": "optional",
+      "title": "Soothing Spices",
+      "type": "ACCEPT",
+      "x": 55.4,
+      "y": 26.3,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Swamp Eye Jarl at Brackenwall.",
+      "npc": 4792,
+      "quest": 1218,
+      "tag": "optional",
+      "title": "Soothing Spices",
+      "type": "TURNIN",
+      "x": 55.4,
+      "y": 26.3,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Swamp Eye Jarl: Jarl Needs Eyes. The Darkmist spiders are at (32, 22), lv 35-40.",
+      "npc": 4792,
+      "quest": 1206,
+      "tag": "main",
+      "title": "Jarl Needs Eyes",
+      "type": "ACCEPT",
+      "x": 55.4,
+      "y": 26.3,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Unpopped Darkmist eggs from the spiders at (32, 22). Spiders are lv 35-40.",
+      "quest": 1206,
+      "tag": "main",
+      "title": "Jarl Needs Eyes",
+      "type": "COMPLETE",
+      "x": 32.6,
+      "y": 22.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Swamp Eye Jarl at Brackenwall.",
+      "npc": 4792,
+      "quest": 1206,
+      "tag": "main",
+      "title": "Jarl Needs Eyes",
+      "type": "TURNIN",
+      "x": 55.4,
+      "y": 26.3,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Nazeer Bloodpike at Brackenwall: Theramore Spies.",
+      "npc": 4791,
+      "quest": 1201,
+      "tag": "main",
+      "title": "Theramore Spies",
+      "type": "ACCEPT",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Theramore Infiltrators at (40, 25) and (39, 35) near Brackenwall.",
+      "quest": 1201,
+      "tag": "main",
+      "title": "Theramore Spies",
+      "type": "COMPLETE",
+      "x": 40.1,
+      "y": 25.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Nazeer Bloodpike at Brackenwall.",
+      "npc": 4791,
+      "quest": 1201,
+      "tag": "main",
+      "title": "Theramore Spies",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Nazeer Bloodpike: The Theramore Docks. Captain's Document in south-east Dustwallow.",
+      "npc": 4791,
+      "quest": 1202,
+      "tag": "optional",
+      "title": "The Theramore Docks",
+      "type": "ACCEPT",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Captain's Document at (71, 51) in south-east Dustwallow.",
+      "quest": 1202,
+      "tag": "optional",
+      "title": "The Theramore Docks",
+      "type": "COMPLETE",
+      "x": 71.5,
+      "y": 51.2,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Nazeer Bloodpike at Brackenwall.",
+      "npc": 4791,
+      "quest": 1202,
+      "tag": "optional",
+      "title": "The Theramore Docks",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Loose dirt at (55, 26): The Lost Report. Turn in to Nazeer Bloodpike.",
+      "quest": 1238,
+      "tag": "main",
+      "title": "The Lost Report",
+      "type": "ACCEPT",
+      "x": 55.4,
+      "y": 25.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Nazeer Bloodpike at Brackenwall.",
+      "npc": 4791,
+      "quest": 1238,
+      "tag": "main",
+      "title": "The Lost Report",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Loose dirt again: The Severed Head.",
+      "quest": 1239,
+      "tag": "main",
+      "title": "The Severed Head",
+      "type": "ACCEPT",
+      "x": 55.4,
+      "y": 25.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "_review": "Loose Dirt at (55, 26) is out of the Brackenwall hub; the 1238 and 1239 chain needs a Nazeer turn-in each time. Accepted.",
+      "note": "Turn in to Nazeer Bloodpike at Brackenwall.",
+      "npc": 4791,
+      "quest": 1239,
+      "tag": "main",
+      "title": "The Severed Head",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Nazeer Bloodpike: The Troll Witchdoctor. Turn in to Kin'weelay at Grom'gol.",
+      "npc": 4791,
+      "quest": 1240,
+      "tag": "main",
+      "title": "The Troll Witchdoctor",
+      "type": "ACCEPT",
+      "x": 35.2,
+      "y": 30.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Black Shield at (30, 49): The Black Shield. Krog is at Brackenwall.",
+      "quest": 1251,
+      "tag": "optional",
+      "title": "The Black Shield",
+      "type": "ACCEPT",
+      "x": 29.6,
+      "y": 48.6,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Hoofprints at (30, 48): Suspicious Hoofprints. Accept all three here before going back.",
+      "quest": 1268,
+      "tag": "optional",
+      "title": "Suspicious Hoofprints",
+      "type": "ACCEPT",
+      "x": 29.7,
+      "y": 47.6,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Theramore Guard Badge at (30, 48): Lieutenant Paval Reethe.",
+      "quest": 1269,
+      "tag": "optional",
+      "title": "Lieutenant Paval Reethe",
+      "type": "ACCEPT",
+      "x": 29.8,
+      "y": 48.2,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Back to Krog with the three quests from the Black Shield spot.",
+      "to": "Krog at Brackenwall (36, 32)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Krog at Brackenwall.",
+      "npc": 4926,
+      "quest": 1251,
+      "tag": "optional",
+      "title": "The Black Shield",
+      "type": "TURNIN",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Krog at Brackenwall.",
+      "npc": 4926,
+      "quest": 1268,
+      "tag": "optional",
+      "title": "Suspicious Hoofprints",
+      "type": "TURNIN",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Krog at Brackenwall.",
+      "npc": 4926,
+      "quest": 1269,
+      "tag": "optional",
+      "title": "Lieutenant Paval Reethe",
+      "type": "TURNIN",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Krog at Brackenwall: The Black Shield part 2.",
+      "npc": 4926,
+      "quest": 1321,
+      "tag": "optional",
+      "title": "The Black Shield",
+      "type": "ACCEPT",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Do'gol at Brackenwall.",
+      "npc": 5087,
+      "quest": 1321,
+      "tag": "optional",
+      "title": "The Black Shield",
+      "type": "TURNIN",
+      "x": 36.5,
+      "y": 30.8,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Do'gol: The Black Shield part 3. Acidic Venom Sacs in south Dustwallow.",
+      "npc": 5087,
+      "quest": 1322,
+      "tag": "main",
+      "title": "The Black Shield",
+      "type": "ACCEPT",
+      "x": 36.5,
+      "y": 30.8,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Acidic Venom Sacs from the Darkfang spiders at (45, 51) in south Dustwallow.",
+      "quest": 1322,
+      "tag": "main",
+      "title": "The Black Shield",
+      "type": "COMPLETE",
+      "x": 45.2,
+      "y": 50.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Do'gol at Brackenwall.",
+      "npc": 5087,
+      "quest": 1322,
+      "tag": "main",
+      "title": "The Black Shield",
+      "type": "TURNIN",
+      "x": 36.5,
+      "y": 30.8,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Do'gol: The Black Shield finale.",
+      "npc": 5087,
+      "quest": 1323,
+      "tag": "optional",
+      "title": "The Black Shield",
+      "type": "ACCEPT",
+      "x": 36.5,
+      "y": 30.8,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Krog at Brackenwall.",
+      "npc": 4926,
+      "quest": 1323,
+      "tag": "optional",
+      "title": "The Black Shield",
+      "type": "TURNIN",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Ogron at Brackenwall: Questioning Reethe. Optional escort, 3.6k XP.",
+      "npc": 4983,
+      "quest": 1273,
+      "tag": "optional",
+      "title": "Questioning Reethe",
+      "type": "ACCEPT",
+      "x": 41.0,
+      "y": 36.7,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Escort Ogron while he questions Reethe. Short escort near Brackenwall.",
+      "quest": 1273,
+      "tag": "optional",
+      "title": "Questioning Reethe",
+      "type": "COMPLETE",
+      "x": 42.6,
+      "y": 38.1,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Krog at Brackenwall.",
+      "npc": 4926,
+      "quest": 1273,
+      "tag": "optional",
+      "title": "Questioning Reethe",
+      "type": "TURNIN",
+      "x": 36.4,
+      "y": 31.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Mudcrush Durtfeet at Brackenwall: Hungry! Mirefin murlocs are lv 35-38.",
+      "npc": 4503,
+      "quest": 1177,
+      "tag": "main",
+      "title": "Hungry!",
+      "type": "ACCEPT",
+      "x": 35.1,
+      "y": 38.3,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Mirefin heads from murlocs north-east of Brackenwall (58-64, 14-28). Level 35-38.",
+      "quest": 1177,
+      "tag": "main",
+      "title": "Hungry!",
+      "type": "COMPLETE",
+      "x": 58.7,
+      "y": 13.9,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Turn in to Mudcrush Durtfeet at Brackenwall.",
+      "npc": 4503,
+      "quest": 1177,
+      "tag": "main",
+      "title": "Hungry!",
+      "type": "TURNIN",
+      "x": 35.1,
+      "y": 38.3,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Stinky Ignatz: escort to Mebok at Ratchet. Optional.",
+      "npc": 4880,
+      "quest": 1270,
+      "tag": "optional",
+      "title": "Stinky's Escape",
+      "type": "ACCEPT",
+      "x": 46.9,
+      "y": 17.5,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "Escort Stinky while he looks for Bogbean Leaves, then on to Ratchet.",
+      "quest": 1270,
+      "tag": "optional",
+      "title": "Stinky's Escape",
+      "type": "COMPLETE",
+      "x": 46.9,
+      "y": 17.5,
+      "zone": "Dustwallow Marsh"
+    },
+    {
+      "note": "North-west to Ratchet for Mebok Mizzyrix and the boat.",
+      "to": "Ratchet (Barrens)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Turn in to Mebok Mizzyrix at Ratchet.",
+      "npc": 3446,
+      "quest": 1270,
+      "tag": "optional",
+      "title": "Stinky's Escape",
+      "type": "TURNIN",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "note": "Ratchet boat to Booty Bay. The boat is not in the DB; check in game.",
+      "to": "Booty Bay (Stranglethorn)",
+      "type": "FLY"
+    },
+    {
+      "note": "Gringer at Booty Bay: discover the wind rider on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 26.9,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Hearth to Innkeeper Skindle at Booty Bay.",
+      "type": "HEARTH_BIND",
+      "x": 27.0,
+      "y": 77.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Booty Bay rogue trainer at level 34. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 26.8,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Krazek at Booty Bay.",
+      "npc": 773,
+      "quest": 1115,
+      "tag": "main",
+      "title": "The Rumormonger",
+      "type": "TURNIN",
+      "x": 26.9,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Krazek at Booty Bay: Investigate the Camp. A short errand.",
+      "npc": 773,
+      "quest": 201,
+      "tag": "optional",
+      "title": "Investigate the Camp",
+      "type": "ACCEPT",
+      "x": 26.9,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Krazek at Booty Bay.",
+      "npc": 773,
+      "quest": 201,
+      "tag": "optional",
+      "title": "Investigate the Camp",
+      "type": "TURNIN",
+      "x": 26.9,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Wharfmaster Lozgil at Booty Bay.",
+      "npc": 4631,
+      "quest": 1180,
+      "tag": "optional",
+      "title": "Goblin Sponsorship",
+      "type": "TURNIN",
+      "x": 26.4,
+      "y": 73.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Wharfmaster Lozgil: Goblin Sponsorship part 3, to Baron Revilgaz.",
+      "npc": 4631,
+      "quest": 1181,
+      "tag": "optional",
+      "title": "Goblin Sponsorship",
+      "type": "ACCEPT",
+      "x": 26.4,
+      "y": 73.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Baron Revilgaz at Booty Bay.",
+      "npc": 2496,
+      "quest": 1181,
+      "tag": "optional",
+      "title": "Goblin Sponsorship",
+      "type": "TURNIN",
+      "x": 27.2,
+      "y": 76.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Baron Revilgaz: Goblin Sponsorship part 4. The Fuel Regulator is in the north (43, 20).",
+      "npc": 2496,
+      "quest": 1182,
+      "tag": "main",
+      "title": "Goblin Sponsorship",
+      "type": "ACCEPT",
+      "x": 27.2,
+      "y": 76.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kebok at Booty Bay: Bloodscalp Ears.",
+      "npc": 737,
+      "quest": 189,
+      "tag": "main",
+      "title": "Bloodscalp Ears",
+      "type": "ACCEPT",
+      "x": 27.0,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kebok at Booty Bay: Hostile Takeover.",
+      "npc": 737,
+      "quest": 213,
+      "tag": "main",
+      "title": "Hostile Takeover",
+      "type": "ACCEPT",
+      "x": 27.0,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Drizzlik at Booty Bay: Supply and Demand. Crocolisks in north Stranglethorn.",
+      "npc": 2495,
+      "quest": 575,
+      "tag": "main",
+      "title": "Supply and Demand",
+      "type": "ACCEPT",
+      "x": 28.3,
+      "y": 77.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Crank Fizzlebub at Booty Bay: Singing Blue Shards.",
+      "npc": 2498,
+      "quest": 605,
+      "tag": "main",
+      "title": "Singing Blue Shards",
+      "type": "ACCEPT",
+      "x": 27.1,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Scooty at Booty Bay.",
+      "npc": 7853,
+      "quest": 2842,
+      "tag": "optional",
+      "title": "Chief Engineer Scooty",
+      "type": "TURNIN",
+      "x": 27.6,
+      "y": 77.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Scooty at Booty Bay: Gnomer-gooooone!",
+      "npc": 7853,
+      "quest": 2843,
+      "tag": "optional",
+      "title": "Gnomer-gooooone!",
+      "type": "ACCEPT",
+      "x": 27.6,
+      "y": 77.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Scooty at Booty Bay.",
+      "npc": 7853,
+      "quest": 2843,
+      "tag": "optional",
+      "title": "Gnomer-gooooone!",
+      "type": "TURNIN",
+      "x": 27.6,
+      "y": 77.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "North by road to Grom'gol. The crocolisk, Bloodscalp and Venture Co. spots are on the way.",
+      "to": "North Stranglethorn: Grom'gol and the camps",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "River crocolisks at (37, 11) in north Stranglethorn.",
+      "quest": 575,
+      "tag": "main",
+      "title": "Supply and Demand",
+      "type": "COMPLETE",
+      "x": 37.3,
+      "y": 10.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Bloodscalp ears from Bloodscalp mystics and scouts around (25, 12).",
+      "quest": 189,
+      "tag": "main",
+      "title": "Bloodscalp Ears",
+      "type": "COMPLETE",
+      "x": 25.4,
+      "y": 12.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Venture Co. tumbled crystals at (44, 20) and (28, 8) in north Stranglethorn.",
+      "quest": 213,
+      "tag": "main",
+      "title": "Hostile Takeover",
+      "type": "COMPLETE",
+      "x": 44.5,
+      "y": 20.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Fuel Regulator B at (43, 20) in north Stranglethorn.",
+      "quest": 1182,
+      "tag": "main",
+      "title": "Goblin Sponsorship",
+      "type": "COMPLETE",
+      "x": 43.3,
+      "y": 20.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Thysta at Grom'gol: discover the wind rider on the way through.",
+      "type": "FP_DISCOVER",
+      "x": 32.5,
+      "y": 29.4,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Commander Aggro'gosh at Grom'gol: The Defense of Grom'gol.",
+      "npc": 2464,
+      "quest": 568,
+      "tag": "main",
+      "title": "The Defense of Grom'gol",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 28.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Lashtail raptors at (35, 23) near Grom'gol.",
+      "quest": 568,
+      "tag": "main",
+      "title": "The Defense of Grom'gol",
+      "type": "COMPLETE",
+      "x": 35.1,
+      "y": 23.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Commander Aggro'gosh at Grom'gol.",
+      "npc": 2464,
+      "quest": 568,
+      "tag": "main",
+      "title": "The Defense of Grom'gol",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 28.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Commander Aggro'gosh: The Defense of Grom'gol part 2.",
+      "npc": 2464,
+      "quest": 569,
+      "tag": "main",
+      "title": "The Defense of Grom'gol",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 28.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Mosh'Ogg brutes and witch doctors at (37, 31), lv 36-37.",
+      "quest": 569,
+      "tag": "main",
+      "title": "The Defense of Grom'gol",
+      "type": "COMPLETE",
+      "x": 37.0,
+      "y": 31.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Commander Aggro'gosh at Grom'gol.",
+      "npc": 2464,
+      "quest": 569,
+      "tag": "main",
+      "title": "The Defense of Grom'gol",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 28.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Nimboya at Grom'gol: Hunt for Yenniku.",
+      "npc": 2497,
+      "quest": 581,
+      "tag": "main",
+      "title": "Hunt for Yenniku",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Bloodscalp tusks at (25, 12) in north Stranglethorn.",
+      "quest": 581,
+      "tag": "main",
+      "title": "Hunt for Yenniku",
+      "type": "COMPLETE",
+      "x": 25.4,
+      "y": 12.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Nimboya at Grom'gol.",
+      "npc": 2497,
+      "quest": 581,
+      "tag": "main",
+      "title": "Hunt for Yenniku",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Nimboya: Headhunting. Shrunken heads are lv 36-37, a stretch above the expected level.",
+      "npc": 2497,
+      "quest": 582,
+      "tag": "optional",
+      "title": "Headhunting",
+      "type": "ACCEPT",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Shrunken heads from Bloodscalp headhunters at (23, 10), lv 36-37.",
+      "quest": 582,
+      "tag": "optional",
+      "title": "Headhunting",
+      "type": "COMPLETE",
+      "x": 23.0,
+      "y": 10.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "_review": "Nimboya, Aggro'gosh and Kin'weelay all sit at Grom'gol; the north stops (25, 12) are on the way. Chained prerequisites force the visits. Accepted.",
+      "note": "Turn in to Nimboya at Grom'gol.",
+      "npc": 2497,
+      "quest": 582,
+      "tag": "optional",
+      "title": "Headhunting",
+      "type": "TURNIN",
+      "x": 32.2,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Kin'weelay at Grom'gol.",
+      "npc": 2519,
+      "quest": 1240,
+      "tag": "main",
+      "title": "The Troll Witchdoctor",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kin'weelay at Grom'gol: Bloody Bone Necklaces.",
+      "npc": 2519,
+      "quest": 596,
+      "tag": "main",
+      "title": "Bloody Bone Necklaces",
+      "type": "ACCEPT",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Bloodscalp trolls at (25, 12) for the bone necklaces.",
+      "quest": 596,
+      "tag": "main",
+      "title": "Bloody Bone Necklaces",
+      "type": "COMPLETE",
+      "x": 25.4,
+      "y": 12.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Kin'weelay at Grom'gol.",
+      "npc": 2519,
+      "quest": 596,
+      "tag": "main",
+      "title": "Bloody Bone Necklaces",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Kin'weelay at Grom'gol: The Vile Reef.",
+      "npc": 2519,
+      "quest": 629,
+      "tag": "main",
+      "title": "The Vile Reef",
+      "type": "ACCEPT",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Tablet shards at (25, 23) in north Stranglethorn.",
+      "quest": 629,
+      "tag": "main",
+      "title": "The Vile Reef",
+      "type": "COMPLETE",
+      "x": 24.8,
+      "y": 23.0,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Kin'weelay at Grom'gol.",
+      "npc": 2519,
+      "quest": 629,
+      "tag": "main",
+      "title": "The Vile Reef",
+      "type": "TURNIN",
+      "x": 32.3,
+      "y": 27.7,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "North to Hemet Nesingwary's camp.",
+      "to": "Nesingwary camp (35, 11)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Barnil Stonepot at the Nesingwary camp: Welcome to the Jungle.",
+      "npc": 716,
+      "quest": 583,
+      "tag": "optional",
+      "title": "Welcome to the Jungle",
+      "type": "ACCEPT",
+      "x": 35.7,
+      "y": 10.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Hemet Nesingwary at the camp.",
+      "npc": 715,
+      "quest": 583,
+      "tag": "optional",
+      "title": "Welcome to the Jungle",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Ajeck Rouack: Tiger Mastery (Hunter-only in game).",
+      "npc": 717,
+      "quest": 185,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "ACCEPT",
+      "x": 35.6,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Young Stranglethorn Tigers at (36, 12).",
+      "quest": 185,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "COMPLETE",
+      "x": 35.7,
+      "y": 11.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Ajeck Rouack at the Nesingwary camp.",
+      "npc": 717,
+      "quest": 185,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "TURNIN",
+      "x": 35.6,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Ajeck Rouack: Tiger Mastery part 2.",
+      "npc": 717,
+      "quest": 186,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "ACCEPT",
+      "x": 35.6,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Stranglethorn Tigers at (46, 15) and (30, 12).",
+      "quest": 186,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "COMPLETE",
+      "x": 46.2,
+      "y": 14.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Ajeck Rouack at the Nesingwary camp.",
+      "npc": 717,
+      "quest": 186,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "TURNIN",
+      "x": 35.6,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Ajeck Rouack: Tiger Mastery part 3.",
+      "npc": 717,
+      "quest": 187,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "ACCEPT",
+      "x": 35.6,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Elder Stranglethorn Tigers at (33, 18).",
+      "quest": 187,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "COMPLETE",
+      "x": 33.4,
+      "y": 18.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Ajeck Rouack at the Nesingwary camp.",
+      "npc": 717,
+      "quest": 187,
+      "tag": "optional",
+      "title": "Tiger Mastery",
+      "type": "TURNIN",
+      "x": 35.6,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Sir S. J. Erlgadin: Panther Mastery (Hunter-only in game).",
+      "npc": 718,
+      "quest": 190,
+      "tag": "optional",
+      "title": "Panther Mastery",
+      "type": "ACCEPT",
+      "x": 35.5,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Young Panthers at (40, 12).",
+      "quest": 190,
+      "tag": "optional",
+      "title": "Panther Mastery",
+      "type": "COMPLETE",
+      "x": 40.1,
+      "y": 11.5,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Sir S. J. Erlgadin at the Nesingwary camp.",
+      "npc": 718,
+      "quest": 190,
+      "tag": "optional",
+      "title": "Panther Mastery",
+      "type": "TURNIN",
+      "x": 35.5,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Sir S. J. Erlgadin: Panther Mastery part 2.",
+      "npc": 718,
+      "quest": 191,
+      "tag": "optional",
+      "title": "Panther Mastery",
+      "type": "ACCEPT",
+      "x": 35.5,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Panthers at (29, 13) and (38, 35).",
+      "quest": 191,
+      "tag": "optional",
+      "title": "Panther Mastery",
+      "type": "COMPLETE",
+      "x": 29.4,
+      "y": 12.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Sir S. J. Erlgadin at the Nesingwary camp.",
+      "npc": 718,
+      "quest": 191,
+      "tag": "optional",
+      "title": "Panther Mastery",
+      "type": "TURNIN",
+      "x": 35.5,
+      "y": 10.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hemet Nesingwary: Raptor Mastery (Hunter-only in game).",
+      "npc": 715,
+      "quest": 194,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "ACCEPT",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Stranglethorn Raptors at (26, 16).",
+      "quest": 194,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "COMPLETE",
+      "x": 25.8,
+      "y": 16.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Hemet Nesingwary at the camp.",
+      "npc": 715,
+      "quest": 194,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Hemet Nesingwary: Raptor Mastery part 2.",
+      "npc": 715,
+      "quest": 195,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "ACCEPT",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Lashtail raptors at (35, 23).",
+      "quest": 195,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "COMPLETE",
+      "x": 35.1,
+      "y": 23.3,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "classes": [
+        "HUNTER"
+      ],
+      "note": "Turn in to Hemet Nesingwary at the camp.",
+      "npc": 715,
+      "quest": 195,
+      "tag": "optional",
+      "title": "Raptor Mastery",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Hemet Nesingwary at the camp.",
+      "npc": 715,
+      "quest": 5762,
+      "tag": "optional",
+      "title": "Hemet Nesingwary",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Hemet Nesingwary at the camp.",
+      "npc": 715,
+      "quest": 5763,
+      "tag": "optional",
+      "title": "Hunting in Stranglethorn",
+      "type": "TURNIN",
+      "x": 35.7,
+      "y": 10.8,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "South to Booty Bay for the Crank, Drizzlik and Kebok turn-ins.",
+      "to": "Booty Bay",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Singing Crystal Shards at (41, 47) and (29, 39) in mid-Stranglethorn.",
+      "quest": 605,
+      "tag": "main",
+      "title": "Singing Blue Shards",
+      "type": "COMPLETE",
+      "x": 40.7,
+      "y": 47.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Crank Fizzlebub at Booty Bay.",
+      "npc": 2498,
+      "quest": 605,
+      "tag": "main",
+      "title": "Singing Blue Shards",
+      "type": "TURNIN",
+      "x": 27.1,
+      "y": 77.2,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Drizzlik at Booty Bay.",
+      "npc": 2495,
+      "quest": 575,
+      "tag": "main",
+      "title": "Supply and Demand",
+      "type": "TURNIN",
+      "x": 28.3,
+      "y": 77.6,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Kebok at Booty Bay.",
+      "npc": 737,
+      "quest": 189,
+      "tag": "main",
+      "title": "Bloodscalp Ears",
+      "type": "TURNIN",
+      "x": 27.0,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Kebok at Booty Bay.",
+      "npc": 737,
+      "quest": 213,
+      "tag": "main",
+      "title": "Hostile Takeover",
+      "type": "TURNIN",
+      "x": 27.0,
+      "y": 77.1,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "note": "Turn in to Baron Revilgaz at Booty Bay.",
+      "npc": 2496,
+      "quest": 1182,
+      "tag": "main",
+      "title": "Goblin Sponsorship",
+      "type": "TURNIN",
+      "x": 27.2,
+      "y": 76.9,
+      "zone": "Stranglethorn Vale"
+    },
+    {
+      "bagCheck": true,
+      "note": "Gringer to Breyk by wind rider from Booty Bay. Flight path is not in the DB; check in game.",
+      "to": "Stonard (Swamp of Sorrows)",
+      "type": "FLY"
+    },
+    {
+      "note": "Breyk at Stonard: discover the wind rider on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 46.1,
+      "y": 54.8,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Hearth to Innkeeper Karakul at Stonard.",
+      "type": "HEARTH_BIND",
+      "x": 45.2,
+      "y": 56.7,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Stonard class trainers at level 34-35. Learn what your level allows.",
+      "type": "TRAINER",
+      "x": 48.6,
+      "y": 55.6,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Magtoor at Stonard: Draenethyst Crystals to the east of the Swamp.",
+      "npc": 1776,
+      "quest": 1389,
+      "tag": "main",
+      "title": "Draenethyst Crystals",
+      "type": "ACCEPT",
+      "x": 26.0,
+      "y": 31.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Draenethyst Crystals at (62, 23) and (55, 30) in the Swamp of Sorrows.",
+      "quest": 1389,
+      "tag": "main",
+      "title": "Draenethyst Crystals",
+      "type": "COMPLETE",
+      "x": 62.4,
+      "y": 22.7,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Turn in to Magtoor at Stonard.",
+      "npc": 1776,
+      "quest": 1389,
+      "tag": "main",
+      "title": "Draenethyst Crystals",
+      "type": "TURNIN",
+      "x": 26.0,
+      "y": 31.4,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "Helgrum the Swift at Stonard: Neeka Bloodscar breadcrumb. Turn in at Kargath.",
+      "npc": 1442,
+      "quest": 1418,
+      "tag": "optional",
+      "title": "Neeka Bloodscar",
+      "type": "ACCEPT",
+      "x": 47.7,
+      "y": 55.2,
+      "zone": "Swamp of Sorrows"
+    },
+    {
+      "note": "South-west to Kargath in the Badlands. Rigglefuzz and Neeka are both in the Badlands.",
+      "to": "Kargath (Badlands)",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Gorrik at Kargath: discover the wind rider on arrival.",
+      "type": "FP_DISCOVER",
+      "x": 4.0,
+      "y": 44.8,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Lotwil Veriatus in the Badlands: Study of the Elements. Elementals are lv 37-39 at the end of the band.",
+      "npc": 2921,
+      "quest": 710,
+      "tag": "optional",
+      "title": "Study of the Elements: Rock",
+      "type": "ACCEPT",
+      "x": 25.9,
+      "y": 44.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Small Stone Shards from Lesser Rock Elementals near Lotwil (19, 43).",
+      "quest": 710,
+      "tag": "optional",
+      "title": "Study of the Elements: Rock",
+      "type": "COMPLETE",
+      "x": 18.8,
+      "y": 43.0,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Turn in to Lotwil Veriatus in the Badlands.",
+      "npc": 2921,
+      "quest": 710,
+      "tag": "optional",
+      "title": "Study of the Elements: Rock",
+      "type": "TURNIN",
+      "x": 25.9,
+      "y": 44.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Rigglefuzz at (42, 53): Power Stones. Elite item drops. Come back at 38 unless grouped.",
+      "npc": 2817,
+      "quest": 2418,
+      "revisitAt": 38,
+      "tag": "optional-elite",
+      "title": "Power Stones",
+      "type": "ACCEPT",
+      "x": 42.4,
+      "y": 52.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Dentrium and An'Alleum Power Stones from elite mobs. Come back at 38 unless grouped.",
+      "quest": 2418,
+      "revisitAt": 38,
+      "tag": "optional-elite",
+      "title": "Power Stones",
+      "type": "COMPLETE",
+      "x": 42.4,
+      "y": 52.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Turn in to Rigglefuzz in the Badlands.",
+      "npc": 2817,
+      "quest": 2418,
+      "revisitAt": 38,
+      "tag": "optional-elite",
+      "title": "Power Stones",
+      "type": "TURNIN",
+      "x": 42.4,
+      "y": 52.9,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Turn in to Neeka Bloodscar in the Badlands.",
+      "npc": 5394,
+      "quest": 1418,
+      "tag": "optional",
+      "title": "Neeka Bloodscar",
+      "type": "TURNIN",
+      "x": 6.5,
+      "y": 47.2,
+      "zone": "Badlands"
+    },
+    {
+      "note": "Hearth to Innkeeper Shul'kar at Kargath. The route ends here at level 35.",
+      "type": "HEARTH_BIND",
+      "x": 2.8,
+      "y": 45.9,
+      "zone": "Badlands"
+    }
+  ]
+}

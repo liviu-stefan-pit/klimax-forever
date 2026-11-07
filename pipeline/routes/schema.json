@@ -44,7 +44,8 @@
         "required": ["quest", "reason"],
         "properties": {
           "quest": {"type": "integer", "minimum": 1},
-          "reason": {"type": "string", "minLength": 3, "maxLength": 200}
+          "reason": {"type": "string", "minLength": 3, "maxLength": 200},
+          "unroutable": {"type": "boolean", "description": "true if an elite quest cannot or should not be routed (blocked prerequisite, no position); the reason says why"}
         }
       }
     },

@@ -21,7 +21,8 @@
         "decision": {"enum": ["main", "optional", "optional-elite", "class", "drop"]},
         "reason": {"type": "string", "minLength": 3, "maxLength": 200},
         "keyReward": {"type": "boolean"},
-        "revisitAt": {"type": "integer", "minimum": 1, "maximum": 60}
+        "revisitAt": {"type": "integer", "minimum": 1, "maximum": 60},
+        "unroutable": {"type": "boolean"}
       },
       "allOf": [
         {

@@ -449,7 +449,7 @@ class RouteValidator:
                     "E_DROPPED_AND_USED",
                     f"quest {qid} is both in dropped[] and used by a step; delete one of them.",
                 )
-            if qid in elite:
+            if qid in elite and not entry.get("unroutable"):
                 self._add(
                     report,
                     ERROR,
@@ -1612,9 +1612,11 @@ def validate_curated(data: dict[str, Any], world: World | None = None) -> list[I
             )
         for q in pack["quests"]:
             decisions = {r["quest"]: r["decision"] for r in data["decisions"]}
+            unroutable = {r["quest"]: r.get("unroutable") for r in data["decisions"]}
             if (
                 "elite" in q.get("fl", [])
                 and decisions.get(q["i"]) == "drop"
+                and not unroutable.get(q["i"])
                 and not world.unplaceable(q["i"])
             ):
                 issues.append(

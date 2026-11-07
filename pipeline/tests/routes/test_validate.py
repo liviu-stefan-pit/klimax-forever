@@ -352,3 +352,9 @@ def test_unplaceable_quest_has_no_usable_starter_position() -> None:
     }
     assert world.unplaceable(77)
     assert not world.unplaceable(1)  # Kaltunk has a real spawn
+
+
+def test_schema_accepts_the_unroutable_flag_on_dropped_entries() -> None:
+    route = load("stitch_prev")
+    route["dropped"].append({"quest": 10, "reason": "elite with a blocked prerequisite", "unroutable": True})
+    assert "E_SCHEMA" not in codes(validate_route(route, build_world()))

@@ -1,0 +1,1469 @@
+{
+  "decisions": [
+    {
+      "decision": "drop",
+      "quest": 2,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "class",
+      "quest": 185,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "class",
+      "quest": 186,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "class",
+      "quest": 187,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "drop",
+      "quest": 188,
+      "reason": "Tiger Mastery part 4: Sin'Dall (lv 37) is 3+ above the expected level here."
+    },
+    {
+      "decision": "main",
+      "quest": 189,
+      "reason": "Bloodscalp Ears from Bloodscalp trolls in north Stranglethorn. Turn-in at Kebok."
+    },
+    {
+      "decision": "class",
+      "quest": 190,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "class",
+      "quest": 191,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "class",
+      "quest": 194,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "class",
+      "quest": 195,
+      "reason": "Nesingwary pet mastery: Hunter-only in game (DB has no class mask). Class XP is not counted."
+    },
+    {
+      "decision": "optional",
+      "quest": 201,
+      "reason": "Investigate the Camp: Krazek's errand, 255 XP. Cheap on the Booty Bay visit."
+    },
+    {
+      "decision": "main",
+      "quest": 213,
+      "reason": "Hostile Takeover: Venture Co. tumbled crystals north Stranglethorn. 2.8k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 247,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 503,
+      "reason": "Gol'dir chain: Rusted Iron Key drops from Jailor Borhuin (lv 37), 3+ above the expected level here."
+    },
+    {
+      "decision": "drop",
+      "quest": 506,
+      "reason": "Gol'dir chain: Rusted Iron Key drops from Jailor Borhuin (lv 37), 3+ above the expected level here."
+    },
+    {
+      "decision": "drop",
+      "quest": 509,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 513,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 515,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 517,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 524,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 533,
+      "reason": "Syndicate Missive thieves in Alterac (58, 68), turned in at Krusk: 2.7k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 535,
+      "reason": "Valik in Alterac next to the 533 thieves: Southshore Stout. Cheap, on the way."
+    },
+    {
+      "decision": "drop",
+      "quest": 539,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 541,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 544,
+      "reason": "Prison Break In: Bloodstone pieces in the Dalaran ruins, lv 33-34. 3.4k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 545,
+      "reason": "Dalaran Patrols: summoners and elementals in the Dalaran ruins, after 544."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 547,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 550,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 552,
+      "reason": "Helcular's Rod from yetis in Hillsbrad (44, 30): 2.6k XP at the hub."
+    },
+    {
+      "decision": "main",
+      "quest": 553,
+      "reason": "Helcular's Revenge: flames in Hillsbrad and Alterac (Uzel), turned in at the grave."
+    },
+    {
+      "decision": "main",
+      "quest": 556,
+      "reason": "Stone Tokens in the Dalaran ruins (lv 31-36 mobs), at the end of the Alterac trip."
+    },
+    {
+      "decision": "main",
+      "quest": 557,
+      "reason": "Bracers of Binding after 556, same Dalaran ruins: 2.7k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 567,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 568,
+      "reason": "The Defense of Grom'gol: Lashtail raptors near Grom'gol. 2.8k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 569,
+      "reason": "The Defense of Grom'gol part 2: Mosh'Ogg mobs, lv 36-37 (the edge of range)."
+    },
+    {
+      "decision": "main",
+      "quest": 575,
+      "reason": "Supply and Demand: crocolisks in north Stranglethorn, turned in at Drizzlik."
+    },
+    {
+      "decision": "drop",
+      "quest": 577,
+      "reason": "Some Assembly Required: Snapjaw crocolisks (lv 35-36) need a second walk north after the 575 turn-in at Booty Bay. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 581,
+      "reason": "Hunt for Yenniku: Bloodscalp tusks north Stranglethorn. 2.0k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 582,
+      "reason": "Headhunting: Bloodscalp shrunken heads (lv 36-37), a stretch above the expected level."
+    },
+    {
+      "decision": "optional",
+      "quest": 583,
+      "reason": "Welcome to the Jungle: Barnil Stonepot to Hemet, gate for the Nesingwary chains."
+    },
+    {
+      "decision": "main",
+      "quest": 596,
+      "reason": "Bloody Bone Necklaces: Bloodscalp in north Stranglethorn. 2.1k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 605,
+      "reason": "Singing Blue Shards: crystals in the central Stranglethorn, turned in at Crank."
+    },
+    {
+      "decision": "main",
+      "quest": 629,
+      "reason": "The Vile Reef: tablet shards at Grom'gol. 2.9k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 635,
+      "reason": "Crystal in the Mountains: starter is an item in Dustwallow with no map position; 275 XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 638,
+      "reason": "Trollbane: starter in Stranglethorn, turn-in at Zengu in Arathi. Route does not pass both ends in order."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 639,
+      "reason": "Sigil of Strom (talk elite). Breadcrumb 638 is not routed, so check the offer in game.",
+      "revisitAt": 37
+    },
+    {
+      "decision": "drop",
+      "quest": 642,
+      "reason": "The Princess Trapped: Mote of Myzrael from Drywhisker kobolds (lv 35-38), 3+ above the expected level."
+    },
+    {
+      "decision": "optional",
+      "quest": 655,
+      "reason": "Hammerfall Tor'gan chain start, 270 XP, same hub as the raptor chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 663,
+      "reason": "Land Ho!: requires level 35 and is a talk-only quest; not worth a trip."
+    },
+    {
+      "decision": "main",
+      "quest": 671,
+      "reason": "Foul Magics: Bloodstone Amulets from Syndicate in west Arathi (32, 29). 2.6k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 672,
+      "reason": "Raising Spirits: raptors around Arathi, 2.7k XP at the same hub."
+    },
+    {
+      "decision": "optional",
+      "quest": 674,
+      "reason": "Raising Spirits part 2, Gor'mul and Tor'gan, same hub."
+    },
+    {
+      "decision": "optional",
+      "quest": 675,
+      "reason": "Raising Spirits part 3, same hub."
+    },
+    {
+      "decision": "main",
+      "quest": 676,
+      "reason": "Boulderfist ogres (32-34) in west Arathi; handed over from 25-30, now in range."
+    },
+    {
+      "decision": "main",
+      "quest": 677,
+      "reason": "Witherbark trolls (32-35) south Arathi; handed over from 25-30. Chain continues in 35-40a (678)."
+    },
+    {
+      "decision": "main",
+      "quest": 701,
+      "reason": "Guile of the Raptor: raptor hearts in Arathi (47-52, 67-79), 2.9k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 702,
+      "reason": "Guile of the Raptor part 2, same hub."
+    },
+    {
+      "decision": "drop",
+      "quest": 705,
+      "reason": "Pearl Diving: starts in Badlands, blue pearls in Stranglethorn. Two-zone round trip; not routed."
+    },
+    {
+      "decision": "optional",
+      "quest": 710,
+      "reason": "Study of the Elements: Lesser Rock Elementals at the Badlands end (lv 37-39, the edge of range at 35)."
+    },
+    {
+      "decision": "drop",
+      "quest": 713,
+      "reason": "Coolant Heads Prevail: Frost Oil has no DB source position."
+    },
+    {
+      "decision": "drop",
+      "quest": 714,
+      "reason": "Gyro... What?: Gyrochronatom has no DB source position."
+    },
+    {
+      "decision": "drop",
+      "quest": 715,
+      "reason": "Liquid Stone: needs 714 (no DB source) and is off the route."
+    },
+    {
+      "decision": "main",
+      "quest": 847,
+      "reason": "Call of the Raptor: 2.9k XP at the Hammerfall hub, no objectives."
+    },
+    {
+      "decision": "drop",
+      "quest": 857,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1051,
+      "reason": "Vorrel's Revenge: starter Vorrel has no map position (instanced). Dungeon elite, unplaceable."
+    },
+    {
+      "decision": "drop",
+      "quest": 1088,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1089,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1102,
+      "reason": "A Vengeful Fate: Razorflank's Heart has no DB source position; turn-in in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 1104,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1105,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1106,
+      "reason": "Martek the Exiled: finisher in the Badlands, starter in Thousand Needles. Off route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1107,
+      "reason": "Encrusted Tail Fins (elite item drops) for Wizzle in Thousand Needles. Come back at 37.",
+      "revisitAt": 37
+    },
+    {
+      "decision": "drop",
+      "quest": 1109,
+      "reason": "Going, Going, Guano!: Kraul Guano has no DB source position; cannot be completed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1110,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 1111,
+      "reason": "Wharfmaster Dizzywig: Kravel's gnome chain. Turn-in at Dizzywig in the Barrens."
+    },
+    {
+      "decision": "main",
+      "quest": 1112,
+      "reason": "Parts for Kravel: back to Kravel in Thousand Needles."
+    },
+    {
+      "decision": "drop",
+      "quest": 1113,
+      "reason": "Elite, unroutable: prerequisite 1109 Kraul Guano has no DB source, so the chain cannot be started.",
+      "unroutable": true
+    },
+    {
+      "decision": "optional",
+      "quest": 1114,
+      "reason": "Delivery to the Gnomes: Kravel to Fizzle, Thousand Needles."
+    },
+    {
+      "decision": "main",
+      "quest": 1115,
+      "reason": "The Rumormonger: Kravel to Krazek in Stranglethorn. Turn-in at Booty Bay."
+    },
+    {
+      "decision": "drop",
+      "quest": 1116,
+      "reason": "Dream Dust and Rumors for Kravel: Swamp of Sorrows and a return to Kravel in Thousand Needles."
+    },
+    {
+      "decision": "drop",
+      "quest": 1117,
+      "reason": "Dream Dust and Rumors for Kravel: Swamp of Sorrows and a return to Kravel in Thousand Needles."
+    },
+    {
+      "decision": "drop",
+      "quest": 1130,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1131,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1136,
+      "reason": "Frostmaw: boss lv 37, 3+ above the expected level here. Turn-in in Thunder Bluff."
+    },
+    {
+      "decision": "drop",
+      "quest": 1144,
+      "reason": "Escort from a dungeon-side zone with no coordinates in the DB. Not routed."
+    },
+    {
+      "decision": "main",
+      "quest": 1145,
+      "reason": "The Swarm Grows: Korran in the Barrens to Belgrom in Orgrimmar."
+    },
+    {
+      "decision": "main",
+      "quest": 1146,
+      "reason": "The Swarm Grows part 2: Belgrom to Moktar Krin in Thousand Needles."
+    },
+    {
+      "decision": "main",
+      "quest": 1147,
+      "reason": "The Swarm Grows part 3: silithid hive in south Thousand Needles. 2.8k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 1148,
+      "reason": "Carapace and silithid parts: second legs back to Korran (Barrens) and Belgrom (Orgrimmar). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1150,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1151,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1152,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1153,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1154,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1159,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1160,
+      "reason": "Test of Lore: Parqual's item (Beginnings of the Undead Threat) is a dungeon-side objective. Chain not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1164,
+      "reason": "To Steal From Thieves: Undercity turn-in with Dabyrie heads in Arathi. Two far legs."
+    },
+    {
+      "decision": "main",
+      "quest": 1175,
+      "reason": "A Bump in the Road: Saltstone basilisks and gazers in south-east Thousand Needles. 2.7k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 1176,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 1177,
+      "reason": "Hungry!: Mirefin murlocs north-east of Brackenwall (lv 35-38, the edge of range). 2.8k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 1178,
+      "reason": "Goblin Sponsorship: Pozzik to Gazlowe, Barrens. Chain runs to Stranglethorn."
+    },
+    {
+      "decision": "optional",
+      "quest": 1180,
+      "reason": "Goblin Sponsorship part 2: Gazlowe to Lozgil in Stranglethorn."
+    },
+    {
+      "decision": "optional",
+      "quest": 1181,
+      "reason": "Goblin Sponsorship part 3: Lozgil to Revilgaz in Stranglethorn."
+    },
+    {
+      "decision": "main",
+      "quest": 1182,
+      "reason": "Goblin Sponsorship part 4: Fuel Regulator from north Stranglethorn. 2.9k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 1183,
+      "reason": "Goblin Sponsorship end: turn-in back in Thousand Needles after the Stranglethorn legs."
+    },
+    {
+      "decision": "drop",
+      "quest": 1184,
+      "reason": "Carapace and silithid parts: second legs back to Korran (Barrens) and Belgrom (Orgrimmar). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1186,
+      "reason": "Goblin Sponsorship end: turn-in back in Thousand Needles after the Stranglethorn legs."
+    },
+    {
+      "decision": "drop",
+      "quest": 1196,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1197,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 1201,
+      "reason": "Theramore Spies: Nazeer Bloodpike in Dustwallow, Brackenwall hub. 2.8k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 1202,
+      "reason": "The Theramore Docks: Captain's Document at (71, 51), after 1201."
+    },
+    {
+      "decision": "drop",
+      "quest": 1203,
+      "reason": "Jarl Needs a Blade: Moonsteel Broadsword has no DB source position."
+    },
+    {
+      "decision": "main",
+      "quest": 1206,
+      "reason": "Jarl Needs Eyes: Darkmist eggs (spiders lv 35-40). Turn-in at Jarl."
+    },
+    {
+      "decision": "optional",
+      "quest": 1218,
+      "reason": "Soothing Spices from Swamp Eye Jarl in Dustwallow. Start of the Jarl chain."
+    },
+    {
+      "decision": "main",
+      "quest": 1238,
+      "reason": "The Lost Report: loose dirt at (55, 26) in Dustwallow, turned in to Nazeer."
+    },
+    {
+      "decision": "main",
+      "quest": 1239,
+      "reason": "The Severed Head: loose dirt again, after 1238."
+    },
+    {
+      "decision": "main",
+      "quest": 1240,
+      "reason": "The Troll Witchdoctor: Nazeer to Kin'weelay in Stranglethorn. Turn-in is at Grom'gol."
+    },
+    {
+      "decision": "optional",
+      "quest": 1251,
+      "reason": "The Black Shield: Krog chain start at Brackenwall (30, 49)."
+    },
+    {
+      "decision": "optional",
+      "quest": 1268,
+      "reason": "Suspicious Hoofprints: Krog, Brackenwall. 1.4k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 1269,
+      "reason": "Lieutenant Paval Reethe: Theramore Guard Badge, Brackenwall."
+    },
+    {
+      "decision": "optional",
+      "quest": 1270,
+      "reason": "Stinky's Escape: escort to Mebok at Ratchet. Optional."
+    },
+    {
+      "decision": "optional",
+      "quest": 1273,
+      "reason": "Questioning Reethe: escort with Ogron, 3.6k XP. Optional, Brackenwall."
+    },
+    {
+      "decision": "drop",
+      "quest": 1276,
+      "reason": "The Black Shield: turn-in is Mosarn in Thunder Bluff (far north)."
+    },
+    {
+      "decision": "optional",
+      "quest": 1321,
+      "reason": "The Black Shield part 2: Krog to Do'gol."
+    },
+    {
+      "decision": "main",
+      "quest": 1322,
+      "reason": "The Black Shield part 3: Acidic Venom Sacs at (45, 51). 2.9k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 1323,
+      "reason": "The Black Shield finale: back to Krog."
+    },
+    {
+      "decision": "drop",
+      "quest": 1361,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1362,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 1365,
+      "reason": "Khan Dez'hepah's Head from Khan Dez'hepah in north-east Desolace; chain head for 1366."
+    },
+    {
+      "decision": "main",
+      "quest": 1366,
+      "reason": "Centaur Bounty, handed over from 25-30 (needs 1365). Upgrades: Lilac Sash, Braced Handguards."
+    },
+    {
+      "decision": "drop",
+      "quest": 1367,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1368,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1369,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1370,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1371,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1373,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1374,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "drop",
+      "quest": 1375,
+      "reason": "Gelkis and Magram reputation chain (rep-gated, Desolace). Not padded in."
+    },
+    {
+      "decision": "main",
+      "quest": 1389,
+      "reason": "Draenethyst Crystals from the Swamp of Sorrows (62, 23) and (55, 30). 2.8k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 1394,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "decision": "optional",
+      "quest": 1418,
+      "reason": "Neeka Bloodscar breadcrumb: Helgrum in the Swamp, turn-in in Badlands."
+    },
+    {
+      "decision": "drop",
+      "quest": 1431,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 1432,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "optional",
+      "quest": 1433,
+      "reason": "Alliance Relations part 3, Takata to Maurin: 265 XP, unlocks 1435."
+    },
+    {
+      "decision": "main",
+      "quest": 1434,
+      "reason": "Befouled by Satyr: Hatefury rogues and felsworn in north-east Desolace. Needed for 1436."
+    },
+    {
+      "decision": "main",
+      "quest": 1435,
+      "reason": "The Burning of Spirits: Infused Burning Blade Essence, Desolace north-centre."
+    },
+    {
+      "decision": "main",
+      "quest": 1436,
+      "reason": "Alliance Relations finale: turn-in is Keldran in Orgrimmar on the Orgrimmar stop."
+    },
+    {
+      "decision": "optional",
+      "quest": 1480,
+      "reason": "The Corrupter start: item Flayed Demon Skin at Desolace (50, 77). Turn-in Maurin."
+    },
+    {
+      "decision": "main",
+      "quest": 1481,
+      "reason": "The Corrupter part 2: Shadowstalker scales from Hatefury, north-east Desolace."
+    },
+    {
+      "decision": "main",
+      "quest": 1482,
+      "reason": "The Corrupter part 3: Oracle Crystals in the far north-west of Desolace. 2.8k XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 1484,
+      "reason": "The Corrupter finale: turn-in to Takata at Desolace hub."
+    },
+    {
+      "decision": "drop",
+      "quest": 1531,
+      "reason": "Shaman Call of Air: Orgrimmar and Thunder Bluff legs; class-only. Not on route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1532,
+      "reason": "Shaman Call of Air: Orgrimmar and Thunder Bluff legs; class-only. Not on route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1559,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1714,
+      "reason": "Warrior Essence of the Exile: no XP row, class-only, Alterac cauldron."
+    },
+    {
+      "decision": "drop",
+      "quest": 1718,
+      "reason": "Warrior Klannoc chain: Thunder Bluff and Barrens legs; class-only. Not on route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1719,
+      "reason": "Warrior Klannoc chain: Thunder Bluff and Barrens legs; class-only. Not on route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1791,
+      "reason": "Warrior Klannoc chain: Thunder Bluff and Barrens legs; class-only. Not on route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1795,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1796,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 1801,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1803,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1805,
+      "reason": "Warlock Tome of the Cabal: Undercity and Ratchet legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1838,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1839,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1840,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1841,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1842,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1843,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1844,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1845,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1846,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1847,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1848,
+      "reason": "Warrior Brutal Armor chain: Durotar, Thunder Bluff and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 1950,
+      "reason": "Mage Get the Scoop: needs 1949 (outside this pack), starter in Thousand Needles. Not routed."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 2418,
+      "reason": "Power Stones (elite item drops): Rigglefuzz at Kargath. Come back at 38.",
+      "revisitAt": 38
+    },
+    {
+      "decision": "drop",
+      "quest": 2751,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2752,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2753,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2754,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2755,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 2841,
+      "reason": "Rig Wars: Rig Blueprints and the Safe Combination are in Gnomeregan (instanced), no DB position."
+    },
+    {
+      "decision": "optional",
+      "quest": 2842,
+      "reason": "Chief Engineer Scooty: accepted at Sovik in Orgrimmar, turned in at Scooty in Booty Bay."
+    },
+    {
+      "decision": "optional",
+      "quest": 2843,
+      "reason": "Gnomer-gooooone!: Scooty follow-up, Booty Bay."
+    },
+    {
+      "decision": "drop",
+      "quest": 2904,
+      "reason": "A Fine Mess: escort with starter Kernobee and no coordinates in the DB."
+    },
+    {
+      "decision": "drop",
+      "quest": 2945,
+      "reason": "Sparklematic ring chain: starter item and Sparklematic object have no map position; 2950 needs 2949."
+    },
+    {
+      "decision": "drop",
+      "quest": 2949,
+      "reason": "Sparklematic ring chain: starter item and Sparklematic object have no map position; 2950 needs 2949."
+    },
+    {
+      "decision": "drop",
+      "quest": 2950,
+      "reason": "Sparklematic ring chain: starter item and Sparklematic object have no map position; 2950 needs 2949."
+    },
+    {
+      "decision": "drop",
+      "quest": 2951,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2952,
+      "reason": "Gnomeregan Sparklematic 5200 chain: instanced object, no map position. Dropped in 25-30 too."
+    },
+    {
+      "decision": "drop",
+      "quest": 2953,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 2996,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 3001,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 3514,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 3523,
+      "reason": "Scourge of the Downs chain: Belnistrasz has no map position (Razorfen Downs dungeon)."
+    },
+    {
+      "decision": "drop",
+      "quest": 3525,
+      "reason": "Scourge of the Downs chain: Belnistrasz has no map position (Razorfen Downs dungeon)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4601,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4602,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4603,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4604,
+      "reason": "Gnomeregan Sparklematic 5200 machine: instanced object with no map position, so no ACCEPT can be placed (dungeon elite)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4605,
+      "reason": "Gnomeregan Sparklematic 5200 chain: instanced object, no map position. Dropped in 25-30 too."
+    },
+    {
+      "decision": "drop",
+      "quest": 4606,
+      "reason": "Gnomeregan Sparklematic 5200 chain: instanced object, no map position. Dropped in 25-30 too."
+    },
+    {
+      "decision": "drop",
+      "quest": 4737,
+      "reason": "Warlock Menara breadcrumb: Orgrimmar and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 4739,
+      "reason": "Warlock Menara breadcrumb: Orgrimmar and Undercity legs; class-only."
+    },
+    {
+      "decision": "drop",
+      "quest": 4767,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4770,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4781,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4782,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4783,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4784,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4785,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4881,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4904,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4966,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 4967,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 4969,
+      "reason": "Warlock Menara and Orb chain: Orgrimmar and Undercity breadcrumbs first; class-only. Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 5064,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5088,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 5147,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5151,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 5361,
+      "reason": "Family Tree starts in Thousand Needles and turns in in Desolace; the route visits Desolace once."
+    },
+    {
+      "decision": "main",
+      "quest": 5386,
+      "reason": "Catch of the Day: Bloodbelly Fish near Shadowprey Village (22, 73). 2.1k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 5561,
+      "reason": "Kodo Roundup: lure kodos at Smeed's camp (60, 62). Upgrades: Kodo Rustler Boots, Wrangling Spaulders."
+    },
+    {
+      "decision": "main",
+      "quest": 5741,
+      "reason": "Sceptre of Light: the item is at the Burning Blade camp (55, 30). Chain continues at 6027."
+    },
+    {
+      "decision": "optional",
+      "quest": 5762,
+      "reason": "Hemet Nesingwary: accept at Kravel in Thousand Needles, turn in at Hemet."
+    },
+    {
+      "decision": "optional",
+      "quest": 5763,
+      "reason": "Hunting in Stranglethorn: accept at Roon, turn in at Hemet in Stranglethorn."
+    },
+    {
+      "decision": "optional",
+      "quest": 5821,
+      "reason": "Bodyguard for Hire: short escort past the Kolkar centaurs to Smeed. Optional."
+    },
+    {
+      "decision": "drop",
+      "quest": 5881,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "main",
+      "quest": 6142,
+      "reason": "Clam Bait: soft-shelled clams in west Desolace. 2.8k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 6143,
+      "reason": "Other Fish to Fry: Slitherblade mobs in north Desolace. 2.8k XP."
+    },
+    {
+      "decision": "main",
+      "quest": 6161,
+      "reason": "Claim Rackmore's Treasure: keys in north-west Desolace. 2.8k XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 6504,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6521,
+      "reason": "Elite, unroutable: prerequisite 6522 Small Scroll is an item start with no map position.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 6522,
+      "reason": "An Unholy Alliance: Small Scroll (6522) has no DB position, so 6521 cannot be reached. 6521 is elite and blocked; see the route _review."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6626,
+      "reason": "A Host of Evil: Razorfen Downs group elite, accepted at Myriam. Revisit at 36 with a group.",
+      "revisitAt": 36
+    },
+    {
+      "decision": "drop",
+      "quest": 6627,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 6628,
+      "reason": "Test of Lore chain: Dorn (Thousand Needles), Braug (Stonetalon), Ashenvale, Parqual (Undercity). Four far legs; not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 6922,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 6983,
+      "reason": "Elite, unroutable: prerequisite 6963 is a level 60 holiday quest.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 7321,
+      "reason": "Profession-gated quest (Cooking, Blacksmithing or Engineering). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 7866,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8170,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8263,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8370,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8390,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8426,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8431,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 8852,
+      "reason": "Battleground or rep or holiday token quest, not a leveling quest for this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78676,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79360,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79364,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 79535,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79536,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79947,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79948,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79949,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79950,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79951,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79952,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79953,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79974,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79975,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 79976,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 92434,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 93176,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 93663,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 93680,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 95663,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 95664,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 95682,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 95697,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 96241,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96259,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96260,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 96261,
+      "reason": "Already done in horde_horde_25-30 (not repeated here)."
+    },
+    {
+      "decision": "drop",
+      "quest": 96294,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 96781,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 96783,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 96784,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 96785,
+      "reason": "Class quest with no XP row (Silverpine, Alterac or Thousand Needles). Not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 96984,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 96986,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 96988,
+      "reason": "Dungeon quest: not soloable for this profile."
+    },
+    {
+      "decision": "drop",
+      "quest": 97265,
+      "reason": "Hate the Hatefury: no XP row; Desolace errand not routed."
+    },
+    {
+      "decision": "drop",
+      "quest": 97287,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97328,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97539,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97985,
+      "reason": "Elite, left out: Undercity detour (two visits) to kill Stormheart for a quest with no XP row. Revisit in phase 05.",
+      "unroutable": true
+    },
+    {
+      "decision": "drop",
+      "quest": 98069,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98070,
+      "reason": "Forever side quest with no XP row, off route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98823,
+      "reason": "Dungeon quest: not soloable for this profile."
+    }
+  ],
+  "id": "horde_horde_30-35",
+  "schemaVersion": 1
+}
