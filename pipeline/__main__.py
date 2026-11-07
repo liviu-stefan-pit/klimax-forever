@@ -8,6 +8,9 @@ from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
+
+from pipeline.extract.run import DEFAULT_OUT, DEFAULT_QUESTIEDB
 
 # name -> (help text, phase that implements it)
 COMMANDS: dict[str, tuple[str, str]] = {
@@ -27,8 +30,36 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sub = parser.add_subparsers(dest="command", metavar="<command>")
     for name, (help_text, _phase) in COMMANDS.items():
-        sub.add_parser(name, help=help_text, description=help_text)
+        sub_parser = sub.add_parser(name, help=help_text, description=help_text)
+        if name == "extract":
+            sub_parser.add_argument(
+                "--questiedb",
+                type=Path,
+                default=DEFAULT_QUESTIEDB,
+                help="path to the QuestieDB folder (default: %(default)s)",
+            )
+            sub_parser.add_argument(
+                "--out",
+                type=Path,
+                default=DEFAULT_OUT,
+                help="output folder for data/raw (default: %(default)s)",
+            )
     return parser
+
+
+def _run_extract(questiedb: Path, out_dir: Path) -> int:
+    from pipeline.extract.run import format_summary, run_extract
+
+    def progress(message: str) -> None:
+        print(f"[extract] {message}", file=sys.stderr)
+
+    try:
+        result = run_extract(questiedb=questiedb, out_dir=out_dir, progress=progress)
+    except FileNotFoundError as exc:
+        print(f"extract: {exc}", file=sys.stderr)
+        return 1
+    print(format_summary(result))
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -37,6 +68,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.command is None:
         parser.print_help()
         return 0
+    if args.command == "extract":
+        return _run_extract(args.questiedb, args.out)
     _help, phase = COMMANDS[args.command]
     print(f"'{args.command}' is not implemented yet (phase {phase}).", file=sys.stderr)
     return 2
