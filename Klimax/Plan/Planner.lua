@@ -60,6 +60,17 @@ function P.World()
         local n = DB.Npc(id)
         return n and n.p
     end
+    function W.npc(id)
+        return DB.Npc(id)
+    end
+    function W.zoneServices(m)
+        local zone = DB.Zone(m)
+        return zone and zone.services
+    end
+    function W.zoneHubs(m)
+        local zone = DB.Zone(m)
+        return zone and zone.hubs
+    end
     function W.objectPoints(id)
         local o = DB.Object(id)
         return o and o.p
@@ -147,6 +158,17 @@ function P:Replan(why)
             steps = P.Build(W, state, snap, wt, old.q)
         end
     end
+    -- Phase 23: service stops (repair, sell, supplies, trainers, flight paths, hearth, hints).
+    if K.Services and K.Services.Apply then
+        local from = { m = snap.mapID, x = snap.x or 50, y = snap.y or 50 }
+        local ok, res = pcall(K.Services.Apply, steps, K.Services.Read(), W, wt,
+            K.Plan.Transitions.Cache(W.travel, wt), from, profile())
+        if ok then
+            steps = res
+        else
+            K.Log("services failed", tostring(res))
+        end
+    end
     self.plan = { steps = steps, built = why or "replan", level = snap.level, ms = clock() - t0,
         at = { m = snap.mapID, x = snap.x, y = snap.y } }
     self.dirty = false
@@ -169,7 +191,7 @@ end
 
 -- ---- Explanations -----------------------------------------------------------------------------------
 
-local KIND = { A = "PLAN_ACCEPT", C = "PLAN_COMPLETE", T = "PLAN_TURNIN", V = "PLAN_TRAVEL" }
+local KIND = { A = "PLAN_ACCEPT", C = "PLAN_COMPLETE", T = "PLAN_TURNIN", V = "PLAN_TRAVEL", S = "PLAN_SERVICE" }
 
 local function yards(seconds, wt)
     return math.floor(seconds / wt.speed * 10 + 0.5)
@@ -179,6 +201,9 @@ end
 function P.Why(step)
     local wt = Wt.DEFAULT
     local w = step.why or {}
+    if step.t == "S" then
+        return step.note or ""
+    end
     if step.t == "V" then
         return string.format(L.PLAN_WHY_TRAVEL, L["PLAN_VIA_" .. (w.via or "walk")] or w.via or "")
     end
@@ -209,7 +234,9 @@ end
 function P.Breakdown(step)
     local w = step.why or {}
     local lines = { string.format(L.PLAN_WHY_HEAD, L[KIND[step.t]] or step.t, step.n or "", step.q or 0, P.Why(step)) }
-    if step.t ~= "V" then
+    if step.t == "S" then
+        lines[#lines + 1] = string.format(L.PLAN_WHY_SERVICE, w.urgency or 0, w.detour or 0)
+    elseif step.t ~= "V" then
         lines[#lines + 1] = string.format(L.PLAN_WHY_TERMS, w.xp or 0, w.colour or "?", w.risk or 1, w.class or 1,
             w.upgrade or 1, w.chain or 1, w.value or 0)
         lines[#lines + 1] = string.format(L.PLAN_WHY_COST, w.obligation or 1, w.travel or 0, w.time or 0,

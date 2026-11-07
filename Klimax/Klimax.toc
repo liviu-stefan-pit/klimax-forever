@@ -54,6 +54,10 @@ Plan\Candidates.lua
 Plan\Sequence.lua
 Plan\Planner.lua
 Profile.lua
+Class\Class.lua
+Class\Hunter.lua
+Services\Rules.lua
+Services\Services.lua
 Engine.lua
 Sync.lua
 Arrow.lua

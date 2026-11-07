@@ -65,6 +65,9 @@ read_globals = {
     "ExpandQuestHeader", "CollapseQuestHeader", "QuestLogFrame",
     -- phase 21 planner
     "debugprofilestop", "UnitAffectingCombat",
+    -- phase 23 services
+    "GetInventoryItemDurability", "UnitExists", "GetPetHappiness", "HasNewMail", "IsTradeskillTrainer",
+    "GetBindLocation",
 }
 
 -- Files that are generated or vendored are not linted.

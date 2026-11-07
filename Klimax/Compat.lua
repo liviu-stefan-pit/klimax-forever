@@ -400,6 +400,60 @@ function C.GetItemStats(link)
     return nil
 end
 
+-- ---- Phase 23 services readings -----------------------------------------------------------------
+
+-- Lowest durability of the equipped items as a fraction (0 to 1), or nil when nothing has
+-- durability (or the API is missing). Slots 1 to 18.
+function C.GetDurability()
+    if type(GetInventoryItemDurability) ~= "function" then
+        return nil
+    end
+    local low
+    for slot = 1, 18 do
+        local ok, cur, max = pcall(GetInventoryItemDurability, slot)
+        if ok and cur and max and max > 0 then
+            local f = cur / max
+            if not low or f < low then
+                low = f
+            end
+        end
+    end
+    return low
+end
+
+function C.HasPet()
+    if type(UnitExists) ~= "function" then
+        return nil
+    end
+    local ok, exists = pcall(UnitExists, "pet")
+    return ok and exists and true or false
+end
+
+-- Pet happiness: 1 unhappy, 2 content, 3 happy; nil without a pet or the API.
+function C.PetHappiness()
+    if type(GetPetHappiness) ~= "function" then
+        return nil
+    end
+    local ok, h = pcall(GetPetHappiness)
+    return ok and h or nil
+end
+
+function C.HasNewMail()
+    if type(HasNewMail) ~= "function" then
+        return false
+    end
+    local ok, mail = pcall(HasNewMail)
+    return ok and mail and true or false
+end
+
+function C.IsTradeskillTrainer()
+    if type(IsTradeskillTrainer) ~= "function" then
+        return false
+    end
+    local ok, yes = pcall(IsTradeskillTrainer)
+    return ok and yes and true or false
+end
+
 -- Item ID inside a link, or nil.
 function C.ItemIdFromLink(link)
     local id = link and tostring(link):match("item:(%d+)")
