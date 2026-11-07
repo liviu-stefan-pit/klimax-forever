@@ -86,6 +86,26 @@ def derive_quest_reward_items(items: dict[str, dict[str, Any]]) -> dict[str, lis
     return {str(quest_id): sorted(item_ids) for quest_id, item_ids in inverse.items()}
 
 
+PLACEHOLDER_NAME = "REUSE ME"
+
+
+def mark_placeholders(entities: dict[str, dict[str, dict[str, Any]]]) -> dict[str, int]:
+    """Flag QuestieDB's ``REUSE ME`` placeholder rows with ``placeholder: true``.
+
+    The rows stay in the output (their IDs are real and the ID counts must match the
+    header); consumers skip anything with ``placeholder`` set. Returns counts per entity.
+    """
+    counts: dict[str, int] = {}
+    for entity, records in entities.items():
+        flagged = 0
+        for record in records.values():
+            if record.get("name") == PLACEHOLDER_NAME:
+                record["placeholder"] = True
+                flagged += 1
+        counts[entity] = flagged
+    return counts
+
+
 def git_head(repo: Path) -> str:
     """Current commit of the extractor, or ``unknown`` outside a git checkout."""
     try:
@@ -131,6 +151,8 @@ def run_extract(
         stats[entity] = entity_stats
         entities[entity] = decode_entity(store, schema, ids.ids, entity_stats)
         _check_id_count(entity, ids.ids, entities[entity])
+
+    placeholder_counts = mark_placeholders(entities)
 
     progress("deriving quest reward items")
     rewards = derive_quest_reward_items(entities["Item"])
@@ -205,6 +227,7 @@ def run_extract(
             }
             for entity, schema in schemas.items()
         },
+        "placeholders": placeholder_counts,
         "corrections": correction_report.to_manifest(),
         "support": {
             "skipped": support_report.skipped,
