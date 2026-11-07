@@ -1294,6 +1294,7 @@
       "note": "Fizzule: Mission Possible. Elite Venture Co. camp. Rogues only.",
       "npc": 7233,
       "quest": 2478,
+      "revisitAt": 28,
       "tag": "optional-elite",
       "title": "Mission: Possible But Not Probable",
       "type": "ACCEPT",

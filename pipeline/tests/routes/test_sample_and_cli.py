@@ -73,3 +73,11 @@ def test_cli_compile_refuses_invalid_routes(tmp_path: Path, capsys: pytest.Captu
     assert code == 1
     assert not addon.exists()
     assert "compile refused" in capsys.readouterr().err
+
+
+def test_overview_command_writes_a_markdown_file(tmp_path: Path) -> None:
+    out = tmp_path / "overview.md"
+    assert main(["overview", "--through", "10", "--out", str(out)]) == 0
+    text = out.read_text(encoding="utf-8")
+    assert text.startswith("# Klimax route overview")
+    assert "## Review findings" in text

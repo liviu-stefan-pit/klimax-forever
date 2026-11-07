@@ -20,6 +20,7 @@ COMMANDS: dict[str, tuple[str, str]] = {
     "shape": ("Build Horde band packs and travel candidates", "02"),
     "validate": ("Validate route JSON (hard gate)", "03"),
     "compile": ("Compile validated routes into Klimax/Routes/*.lua", "03"),
+    "overview": ("Write docs/ROUTE_OVERVIEW.md from the stitched routes", "05"),
     "refresh": ("extract + shape + diff + validate in one go", "90"),
     "diff-db": ("Diff two raw extracts and list affected bands", "90"),
 }
@@ -87,8 +88,21 @@ def build_parser() -> argparse.ArgumentParser:
                 action="store_true",
                 help="also check the whole path: next links, band continuity, entry/exit",
             )
+            sub_parser.add_argument(
+                "--through",
+                type=int,
+                default=None,
+                help="with --stitched: check the path only up to this level and ignore "
+                "routes that start at or above it (partial route sets)",
+            )
             sub_parser.add_argument("--json", action="store_true", help="machine-readable output")
             sub_parser.add_argument("--no-stats", action="store_true", help="hide the stats block")
+            _add_route_paths(sub_parser)
+        if name == "overview":
+            sub_parser.add_argument("--out", type=Path, default=Path("docs/ROUTE_OVERVIEW.md"))
+            sub_parser.add_argument(
+                "--through", type=int, default=None, help="only describe levels below this one"
+            )
             _add_route_paths(sub_parser)
         if name == "compile":
             sub_parser.add_argument("--addon", type=Path, default=Path("Klimax"))
@@ -123,6 +137,20 @@ def _run_validate(args: argparse.Namespace) -> int:
         data=args.data,
         routes_dir=args.routes_dir or Path("routes") / args.faction,
         show_stats=not args.no_stats,
+        through=args.through,
+    )
+
+
+def _run_overview(args: argparse.Namespace) -> int:
+    from pipeline.routes.cli import run_overview
+
+    return run_overview(
+        faction=args.faction,
+        raw=args.raw,
+        data=args.data,
+        routes_dir=args.routes_dir or Path("routes") / args.faction,
+        out=args.out,
+        through=args.through,
     )
 
 
@@ -214,6 +242,8 @@ def main(argv: list[str] | None = None) -> int:
         return _run_validate(args)
     if args.command == "compile":
         return _run_compile(args)
+    if args.command == "overview":
+        return _run_overview(args)
     _help, phase = COMMANDS[args.command]
     print(f"'{args.command}' is not implemented yet (phase {phase}).", file=sys.stderr)
     return 2

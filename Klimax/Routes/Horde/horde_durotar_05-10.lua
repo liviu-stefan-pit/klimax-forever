@@ -105,7 +105,7 @@ Klimax_RegisterRoute({
     {k="horde_durotar_05-10:A:99051:0", t="A", q=99051, n="Threat from Below", g="o", z=1411, x=52.2, y=43.1, npc=3142, note="Collect 9 Naga Spinefins from the Spitelash naga north of Razor Hill."},
     {k="horde_durotar_05-10:C:99051:0", t="C", q=99051, n="Threat from Below", g="o", z=1411, x=58.8, y=26.2, note="Spitelash Scouts and Attendants (lvl 9-11) at (59,26). Collect 9 spinefins."},
     {k="horde_durotar_05-10:T:99051:0", t="T", q=99051, n="Threat from Below", g="o", z=1411, x=52.2, y=43.1, npc=3142, note="Orgnil takes the spinefins."},
-    {k="horde_durotar_05-10:A:99052:0", t="A", q=99052, n="Threat from Below", g="e", z=1411, x=52.2, y=43.1, npc=3142, note="Aggor the Young is an elite sea giant (lvl 11) on the north coast. Revisit at level 14 if needed."},
+    {k="horde_durotar_05-10:A:99052:0", t="A", q=99052, n="Threat from Below", g="e", z=1411, x=52.2, y=43.1, npc=3142, note="Aggor the Young is an elite sea giant (lvl 11) on the north coast. Revisit at level 14 if needed.", rv=14},
     {k="horde_durotar_05-10:C:99052:0", t="C", q=99052, n="Threat from Below", g="e", z=1411, x=59.2, y=17.6, note="Aggor the Young (elite, lvl 11) on the north coast. Fight only with a buddy, or come back at level 14."},
     {k="horde_durotar_05-10:T:99052:0", t="T", q=99052, n="Threat from Below", g="e", z=1411, x=52.2, y=43.1, npc=3142, note="Orgnil takes Aggor's belt. The belt and dagger are gear for the next band."},
     {k="horde_durotar_05-10:R:h8a034e94", t="R", z=1411, x=54.2, y=42.5, note="Level 10 now. Learn your spells before the Orgrimmar and Crossroads leg."},

@@ -367,3 +367,14 @@ def test_part_routes_use_their_own_entry_and_exit_as_the_level_span() -> None:
     assert RouteValidator._span(part) == (35, 37)
     whole = {"id": "horde_horde_35-40", "band": [35, 40], "entry": {"level": 35}, "exitPoint": {"level": 37}}
     assert RouteValidator._span(whole) == (35, 40)
+
+
+def test_stitched_through_level_does_not_require_later_bands() -> None:
+    from pipeline.routes.validate_route import RouteValidator
+
+    route = load("stitch_prev")  # band 1-5 with a `next` that is not loaded
+    world = build_world()
+    full = RouteValidator(world, {route["id"]: route}, stitched=True).validate(route)
+    assert "E_STITCH_NEXT_MISSING" in codes(full, ERROR)
+    partial = RouteValidator(world, {route["id"]: route}, stitched=True, through=5).validate(route)
+    assert "E_STITCH_NEXT_MISSING" not in codes(partial, ERROR)

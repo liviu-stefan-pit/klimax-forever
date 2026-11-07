@@ -61,7 +61,7 @@ Klimax_RegisterRoute({
     {k="horde_horde_20-25:F:h0814cff2", t="F", to="The Crossroads", note="Orgrimmar flight back to the Crossroads, then walk north to the Venture Co. camp.", bag=true},
     {k="horde_horde_20-25:V:h357c5efc", t="V", to="Venture Co. camp", note="North of the Crossroads: Taskmaster Fizzule's Venture Co. tower (north Barrens)."},
     {k="horde_horde_20-25:T:2458:0", t="T", q=2458, n="Deep Cover", g="o", z=1413, x=55.4, y=5.6, npc=7233, note="Turn in to Taskmaster Fizzule in the north Barrens. Rogues only.", cl={"ROGUE"}},
-    {k="horde_horde_20-25:A:2478:0", t="A", q=2478, n="Mission: Possible But Not Probable", g="e", z=1413, x=55.4, y=5.6, npc=7233, note="Fizzule: Mission Possible. Elite Venture Co. camp. Rogues only.", cl={"ROGUE"}},
+    {k="horde_horde_20-25:A:2478:0", t="A", q=2478, n="Mission: Possible But Not Probable", g="e", z=1413, x=55.4, y=5.6, npc=7233, note="Fizzule: Mission Possible. Elite Venture Co. camp. Rogues only.", cl={"ROGUE"}, rv=28},
     {k="horde_horde_20-25:C:2478:0", t="C", q=2478, n="Mission: Possible But Not Probable", g="e", z=1413, x=55.0, y=6.0, note="Silixiz's Tower Key, two drones and two patrols at the Venture Co. camp (54-55, 5-6).", cl={"ROGUE"}},
     {k="horde_horde_20-25:V:h42b151de", t="V", to="Kadrak", note="Short walk to Kadrak at the north watch tower with the Runed Scroll."},
     {k="horde_horde_20-25:T:3513:0", t="T", q=3513, n="The Runed Scroll", g="o", z=1413, x=48.1, y=5.4, npc=8582, note="Kadrak at the north watch tower: the Runed Scroll."},

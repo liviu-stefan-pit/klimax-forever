@@ -145,8 +145,10 @@ class RouteValidator:
         routes: dict[str, dict[str, Any]] | None = None,
         *,
         stitched: bool = False,
+        through: int | None = None,
     ) -> None:
         self.world = world
+        self.through = through  # stitched checks stop at this level (partial route sets)
         self.routes = routes or {}
         self.stitched = stitched
         self._schema = Draft202012Validator(json.loads(SCHEMA_PATH.read_text(encoding="utf-8")))
@@ -1118,6 +1120,8 @@ class RouteValidator:
                 "generate or point the previous band's `next` here.",
             )
         nxt = route.get("next")
+        if self.through is not None and route["band"][1] >= self.through:
+            return  # the path is only checked up to `through`
         if nxt:
             target = self.routes.get(nxt)
             if target is None:
@@ -1502,8 +1506,11 @@ def validate_set(
     return reports
 
 
-def global_stitch_reports(routes: dict[str, dict[str, Any]], world: World) -> list[Report]:
+def global_stitch_reports(
+    routes: dict[str, dict[str, Any]], world: World, through: int | None = None
+) -> list[Report]:
     report = Report(route_id="(stitched path)")
+    goal = through if through is not None else world.faction.levels[1]
     shared = world.faction.shared_track
     branches = {r["branch"] for r in routes.values()} - {shared}
     for branch in sorted(branches):
@@ -1520,13 +1527,13 @@ def global_stitch_reports(routes: dict[str, dict[str, Any]], world: World) -> li
                 seen.add(current["id"])
                 current = routes.get(current.get("next") or "")
             top = max(routes[i]["band"][1] for i in seen)
-            if top < world.faction.levels[1]:
+            if top < goal:
                 report.issues.append(
                     Issue(
                         ERROR,
                         "E_STITCH_NO_END",
                         f"following `next` from {root['id']} stops at level {top}, never reaching "
-                        f"level {world.faction.levels[1]}.",
+                        f"level {goal}.",
                     )
                 )
     return [report] if report.issues else []

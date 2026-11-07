@@ -56,6 +56,7 @@ def run_validate(
     data: Path,
     routes_dir: Path,
     show_stats: bool = True,
+    through: int | None = None,
 ) -> int:
     world = _load_world(faction, raw, data)
     if world is None:
@@ -104,11 +105,14 @@ def run_validate(
         routes[str(rid)] = payload
         by_file[str(rid)] = str(path)
 
+    if through is not None:
+        # partial path: routes that start at or above `through` are out of scope
+        routes = {rid: r for rid, r in routes.items() if r["band"][0] < through}
     store = dict(routes)
     if not stitched:
         for rid, route in load_route_dir(routes_dir).items():
             store.setdefault(rid, route)
-    reports.extend(_validate_selected(routes, store, world, by_file, stitched))
+    reports.extend(_validate_selected(routes, store, world, by_file, stitched, through))
 
     if as_json:
         print(
@@ -141,12 +145,13 @@ def _validate_selected(
     world: World,
     by_file: dict[str, str],
     stitched: bool,
+    through: int | None = None,
 ) -> list[Report]:
     """Validate the selected routes against the wider store (siblings for stitching)."""
-    validator = RouteValidator(world, store, stitched=stitched)
+    validator = RouteValidator(world, store, stitched=stitched, through=through)
     reports = [validator.validate(route, by_file.get(rid, "")) for rid, route in selected.items()]
     if stitched:
-        reports.extend(global_stitch_reports(store, world))
+        reports.extend(global_stitch_reports(store, world, through))
     return reports
 
 
@@ -180,4 +185,29 @@ def run_compile(
     for path in result.removed:
         print(f"removed stale {path.as_posix()}")
     print(f"compiled {len(result.reports)} route(s); {warnings} warning(s).")
+    return 0
+
+
+def run_overview(
+    *,
+    faction: str,
+    raw: Path,
+    data: Path,
+    routes_dir: Path,
+    out: Path,
+    through: int | None = None,
+) -> int:
+    from pipeline.routes.overview import build_overview
+
+    world = _load_world(faction, raw, data)
+    if world is None:
+        return 2
+    routes = load_route_dir(routes_dir)
+    if not routes:
+        print(f"no route files found (looked in {routes_dir})", file=sys.stderr)
+        return 2
+    text = build_overview(routes, world, raw, data, through)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(text + chr(10), encoding="utf-8")
+    print(f"wrote {out.as_posix()}")
     return 0

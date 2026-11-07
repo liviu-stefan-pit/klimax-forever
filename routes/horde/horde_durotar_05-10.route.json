@@ -1249,6 +1249,7 @@
       "note": "Aggor the Young is an elite sea giant (lvl 11) on the north coast. Revisit at level 14 if needed.",
       "npc": 3142,
       "quest": 99052,
+      "revisitAt": 14,
       "tag": "optional-elite",
       "title": "Threat from Below",
       "type": "ACCEPT",
