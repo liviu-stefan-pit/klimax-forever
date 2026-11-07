@@ -1,0 +1,4566 @@
+{
+  "_review": [
+    "W_NEXT_NOT_LOADED: horde_horde_20-25 is written in a later phase; this band exits at Sun Rock Retreat for it.",
+    "W_NOT_IN_PACK: 421, 422, 356, 5726 and 5727 are outside this pack but are DB quests on the route. 421/422 are the Arugal's Folly prerequisites of elite 99; 356 is the prerequisite of elite 99156; 5726/5727 are the Hidden Enemies start for elite 5728. Each is needed so that an elite is not dropped.",
+    "W_XP_RANGE: 95% (83,955 of 88,800). Structural: the Orc/Troll Jorn chain (3261, 882, 907, 913, about 5,600 XP) was dropped because the Zephra path is all races and cannot be scoped out by race. The Hillsbrad and Tarren Mill block (493, 494, 496, 498, 499, 549, 1065) and the Silverpine/Brill/Undercity leg (440, 441, 444, 446, 448, 450, 451, 460, 461, 491, 530) are left for the next band, which has the Hillsbrad flight path."
+  ],
+  "band": [
+    15,
+    20
+  ],
+  "branch": "horde",
+  "db": {
+    "buildCommit": "80866960788084ae1592abf66a08f0d306458a95",
+    "questieDbVersion": "1.0.11"
+  },
+  "dropped": [
+    {
+      "quest": 103,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 104,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 136,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 138,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 139,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 140,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 152,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 235,
+      "reason": "Ashenvale Hunt breadcrumb: Splintertree Post, off this route."
+    },
+    {
+      "quest": 264,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 408,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 440,
+      "reason": "Engraved Ring: Magistrate Sevren in Brill (Tirisfal). Next band."
+    },
+    {
+      "quest": 441,
+      "reason": "Raleigh in the Undercity. Next band."
+    },
+    {
+      "quest": 444,
+      "reason": "Bethor Iceshard in the Undercity. Next band."
+    },
+    {
+      "quest": 446,
+      "reason": "Thule Ravenclaw: Undercity and Silverpine legs. Next band."
+    },
+    {
+      "quest": 448,
+      "reason": "Report to Hadrec: follows the Undercity leg. Next band."
+    },
+    {
+      "quest": 450,
+      "reason": "Starts from 447, which is not in this pack."
+    },
+    {
+      "quest": 451,
+      "reason": "Follows 450 (a 447 chain not in this pack)."
+    },
+    {
+      "quest": 460,
+      "reason": "Alaric's head: item starter with no NPC (data gap)."
+    },
+    {
+      "quest": 461,
+      "reason": "Follows 460 (item starter with no NPC)."
+    },
+    {
+      "quest": 491,
+      "reason": "Wand to Bethor in the Undercity (follows 461)."
+    },
+    {
+      "quest": 493,
+      "reason": "Hillsbrad escort: Tarren Mill, next band."
+    },
+    {
+      "quest": 494,
+      "reason": "Hillsbrad: Tarren Mill, next band."
+    },
+    {
+      "quest": 496,
+      "reason": "Hillsbrad: Tarren Mill, next band."
+    },
+    {
+      "quest": 498,
+      "reason": "The Rescue: Durnholde Keep in Hillsbrad, next band (2200 XP)."
+    },
+    {
+      "quest": 499,
+      "reason": "Hillsbrad: Tarren Mill, next band."
+    },
+    {
+      "quest": 530,
+      "reason": "Husband's Revenge: Undercity Raleigh, follows the Undercity leg."
+    },
+    {
+      "quest": 549,
+      "reason": "WANTED: Syndicate in Hillsbrad (Tarren Mill), next band."
+    },
+    {
+      "quest": 742,
+      "reason": "Ashenvale Hunt breadcrumb: Splintertree Post, off this route."
+    },
+    {
+      "quest": 776,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 809,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 845,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 853,
+      "reason": "Apothecary Zamah in Thunder Bluff: a one-off trip for 800 XP."
+    },
+    {
+      "quest": 866,
+      "reason": "Profession-gated (skill 182 at 1)."
+    },
+    {
+      "quest": 868,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 872,
+      "reason": "Done in an earlier band on Durotar, Mulgore; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 881,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 882,
+      "reason": "Orc/Troll Jorn chain (Ishamuhale), needs 3261; same Zephra path limit."
+    },
+    {
+      "quest": 889,
+      "reason": "Spirit of the Wind: Mangletooth boon with no text and no XP row."
+    },
+    {
+      "quest": 903,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 905,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 907,
+      "reason": "Orc/Troll Jorn chain (Thunder Lizards), needs 882; same Zephra path limit."
+    },
+    {
+      "quest": 913,
+      "reason": "Orc/Troll Jorn chain (Thunderhawk), needs 907; same Zephra path limit."
+    },
+    {
+      "quest": 914,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 924,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 926,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 962,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 972,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1065,
+      "reason": "Escort to Tarren Mill (Hillsbrad): next band, with the Hillsbrad flight path."
+    },
+    {
+      "quest": 1069,
+      "reason": "Deepmoss eggs: Stonetalon eggs, but the turn-in is at Mebok in Ratchet (a second Ratchet visit)."
+    },
+    {
+      "quest": 1094,
+      "reason": "Final turn-in is Sputtervalve in Ratchet, a return trip after the Sun Rock exit. 830 XP."
+    },
+    {
+      "quest": 1358,
+      "reason": "Undercity leg (Zinge), Undead Tirisfal chain done earlier."
+    },
+    {
+      "quest": 1359,
+      "reason": "Undercity leg (Zinge), Undead Tirisfal chain done earlier."
+    },
+    {
+      "quest": 1464,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1472,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1474,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1476,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1483,
+      "reason": "Breadcrumb from Sputtervalve in Ratchet to Ziz; the chain is already covered by 1093."
+    },
+    {
+      "quest": 1489,
+      "reason": "Done in an earlier band on Durotar, Mulgore; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1490,
+      "reason": "Done in an earlier band on Durotar, Mulgore; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1507,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1508,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1509,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1510,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1511,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1512,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1513,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1515,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 1526,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1527,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1528,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1529,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1530,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1535,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1536,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 1823,
+      "reason": "Warrior-only quest outside this band's route."
+    },
+    {
+      "quest": 1886,
+      "reason": "Undead rogue chain (Mennet Carkad), Undercity."
+    },
+    {
+      "quest": 1898,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1899,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1959,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1960,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1961,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1962,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1978,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "quest": 1998,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 1999,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 2378,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 2379,
+      "reason": "Rogue chain split between Orgrimmar and Ratchet; class-limited."
+    },
+    {
+      "quest": 2380,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 2381,
+      "reason": "Rogue chain split between Orgrimmar and Ratchet; class-limited."
+    },
+    {
+      "quest": 2382,
+      "reason": "Rogue chain split between Orgrimmar and Ratchet; class-limited."
+    },
+    {
+      "quest": 2458,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 2460,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 2480,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "quest": 2985,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 2986,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "quest": 3261,
+      "reason": "Orc/Troll Jorn chain: needs Durotar 905, which the Zephra path never has. Zephra is all races here, so race limits cannot exclude it."
+    },
+    {
+      "quest": 3301,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 3741,
+      "reason": "Redridge Mountains is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 5042,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "quest": 5043,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "quest": 5044,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "quest": 5045,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "quest": 5046,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "quest": 5642,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "quest": 5643,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "quest": 5644,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "quest": 5646,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "quest": 5679,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "quest": 5680,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "quest": 5725,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 6126,
+      "reason": "Druid Moonglade chain: second Moonglade trip, Barrens side quests."
+    },
+    {
+      "quest": 6127,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "quest": 6128,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "quest": 6129,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "quest": 6130,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "quest": 6382,
+      "reason": "Ashenvale Hunt: Splintertree Post in Ashenvale, off this route. Low XP."
+    },
+    {
+      "quest": 6383,
+      "reason": "Ashenvale Hunt: Splintertree Post in Ashenvale, off this route. Low XP."
+    },
+    {
+      "quest": 6442,
+      "reason": "Naga at the Zoram Strand: Ashenvale, next band."
+    },
+    {
+      "quest": 6541,
+      "reason": "Warsong Reports breadcrumb: the runners are in Ashenvale."
+    },
+    {
+      "quest": 6542,
+      "reason": "Warsong Reports breadcrumb: the runners are in Ashenvale."
+    },
+    {
+      "quest": 6543,
+      "reason": "Warsong Reports: runners in Ashenvale, next band."
+    },
+    {
+      "quest": 6545,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 6547,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 6562,
+      "reason": "Trouble in the Deeps: Ashenvale Aku'Mai dungeon chain."
+    },
+    {
+      "quest": 6563,
+      "reason": "Aku'Mai dungeon chain (Ashenvale)."
+    },
+    {
+      "quest": 6564,
+      "reason": "Aku'Mai dungeon chain (Ashenvale)."
+    },
+    {
+      "quest": 8368,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 8389,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 8768,
+      "reason": "Ironforge is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 8851,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 65593,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 65597,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 65601,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 65604,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "quest": 78124,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78127,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78142,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78143,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78145,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78146,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78147,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78148,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78149,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 78150,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79007,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79091,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79092,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79093,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79094,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79095,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79096,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 79097,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 91858,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "quest": 91859,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "quest": 91860,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "quest": 91861,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "quest": 91862,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "quest": 92401,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 92421,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 92422,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 93090,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 93159,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 93160,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 93165,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 93172,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 93459,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 95204,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 95216,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 95349,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "quest": 95494,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 95495,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 95507,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 95508,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 95621,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 95981,
+      "reason": "Watching the Roads: Dalaran watchers in the Sepulcher (lvl 18-20), a second Silverpine leg."
+    },
+    {
+      "quest": 96204,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "quest": 97242,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 97246,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 97249,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 97275,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 97286,
+      "reason": "Mage-only quest outside this band's route."
+    },
+    {
+      "quest": 97288,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 97289,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 97290,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 97291,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 97292,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "quest": 97326,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 97891,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 98024,
+      "reason": "Forever intro escort (Thrall to Thork): no XP row."
+    },
+    {
+      "quest": 98251,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 98252,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 98299,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "quest": 98340,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "quest": 98341,
+      "reason": "Moonglade is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 98342,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "quest": 98362,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "quest": 98404,
+      "reason": "Moonglade is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 98405,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "quest": 98738,
+      "reason": "Moonglade is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "quest": 98739,
+      "reason": "Druid-only quest outside this band's route."
+    }
+  ],
+  "entry": {
+    "hub": "The Crossroads",
+    "level": 15,
+    "x": 52.0,
+    "y": 30.0,
+    "zone": "The Barrens"
+  },
+  "exitPoint": {
+    "hub": "Sun Rock Retreat",
+    "level": 20,
+    "x": 47.3,
+    "y": 62.0,
+    "zone": "Stonetalon Mountains"
+  },
+  "faction": "horde",
+  "id": "horde_horde_15-20",
+  "next": "horde_horde_20-25",
+  "schemaVersion": 1,
+  "steps": [
+    {
+      "note": "Barg and Uthrok at the Crossroads: food, water and ammo for the western loop.",
+      "type": "BUY",
+      "x": 51.7,
+      "y": 29.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Regthar Deathgate, west of the Crossroads: Barak's Head from the Kolkar leader. Level 14+.",
+      "npc": 3389,
+      "quest": 850,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Kolkar Leaders",
+      "type": "ACCEPT",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Regthar Deathgate: 15 Centaur Bracers from the centaurs on the plains (lvl 12-17).",
+      "npc": 3389,
+      "quest": 855,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Centaur Bracers",
+      "type": "ACCEPT",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Barak's Head (lvl 16-16) around (43, 24).",
+      "quest": 850,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Kolkar Leaders",
+      "type": "COMPLETE",
+      "x": 42.8,
+      "y": 23.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Centaur Bracers (lvl 12-17) around (51, 41).",
+      "quest": 855,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Centaur Bracers",
+      "type": "COMPLETE",
+      "x": 50.6,
+      "y": 40.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Regthar Deathgate.",
+      "npc": 3389,
+      "quest": 850,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Kolkar Leaders",
+      "type": "TURNIN",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Regthar Deathgate.",
+      "npc": 3389,
+      "quest": 855,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Centaur Bracers",
+      "type": "TURNIN",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Apothecary Helbrim: four Fungal Spores from the Barrens fungus at the Crossroads and west.",
+      "npc": 3390,
+      "quest": 848,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Fungal Spores",
+      "type": "ACCEPT",
+      "x": 51.4,
+      "y": 30.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Fungal Spores around (47, 39).",
+      "quest": 848,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Fungal Spores",
+      "type": "COMPLETE",
+      "x": 46.6,
+      "y": 39.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Apothecary Helbrim.",
+      "npc": 3390,
+      "quest": 848,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Fungal Spores",
+      "type": "TURNIN",
+      "x": 51.4,
+      "y": 30.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Nalpak in Wailing Caverns: 20 Deviate Hides. Elite-level mobs; come back at 18.",
+      "npc": 5767,
+      "quest": 1486,
+      "races": [
+        "Undead"
+      ],
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Deviate Hides",
+      "type": "ACCEPT",
+      "x": 46.0,
+      "y": 35.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Deviate Hide (lvl 15-17) around (47, 34).",
+      "quest": 1486,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional-elite",
+      "title": "Deviate Hides",
+      "type": "COMPLETE",
+      "x": 47.3,
+      "y": 34.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Nalpak.",
+      "npc": 5767,
+      "quest": 1486,
+      "races": [
+        "Undead"
+      ],
+      "reward": {
+        "preferItem": 918,
+        "why": "Bag from the Deviate Hides: a real slot upgrade at this level."
+      },
+      "tag": "optional-elite",
+      "title": "Deviate Hides",
+      "type": "TURNIN",
+      "x": 46.0,
+      "y": 35.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Ebru in Wailing Caverns: elite Deviates. Only at 20 or with a friend.",
+      "npc": 5768,
+      "quest": 1487,
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Deviate Eradication",
+      "type": "ACCEPT",
+      "x": 46.0,
+      "y": 35.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Ebru.",
+      "npc": 5768,
+      "quest": 1487,
+      "tag": "optional-elite",
+      "title": "Deviate Eradication",
+      "type": "TURNIN",
+      "x": 46.0,
+      "y": 35.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Regthar Deathgate: Verog's head, after Kolkar Leaders. Mobs are lvl 18.",
+      "npc": 3389,
+      "quest": 851,
+      "tag": "optional",
+      "title": "Verog the Dervish",
+      "type": "ACCEPT",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Verog's Head (lvl 18-18) around (53, 42).",
+      "quest": 851,
+      "tag": "optional",
+      "title": "Verog the Dervish",
+      "type": "COMPLETE",
+      "x": 53.1,
+      "y": 41.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Regthar Deathgate.",
+      "npc": 3389,
+      "quest": 851,
+      "tag": "optional",
+      "title": "Verog the Dervish",
+      "type": "TURNIN",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Regthar Deathgate: Hezrul's head, lvl 19 mobs. Do it at 17 or above.",
+      "npc": 3389,
+      "quest": 852,
+      "tag": "optional",
+      "title": "Hezrul Bloodmark",
+      "type": "ACCEPT",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Hezrul's Head (lvl 19-19) around (46, 41).",
+      "quest": 852,
+      "tag": "optional",
+      "title": "Hezrul Bloodmark",
+      "type": "COMPLETE",
+      "x": 46.0,
+      "y": 41.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Regthar Deathgate.",
+      "npc": 3389,
+      "quest": 852,
+      "tag": "optional",
+      "title": "Hezrul Bloodmark",
+      "type": "TURNIN",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Regthar Deathgate: Warlord Krom'zar is an elite (lvl 20). Optional, come back at 20.",
+      "npc": 3389,
+      "quest": 4021,
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Counterattack!",
+      "type": "ACCEPT",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Warlord Krom'zar (lvl 20-20) around (44, 28).",
+      "quest": 4021,
+      "tag": "optional-elite",
+      "title": "Counterattack!",
+      "type": "COMPLETE",
+      "x": 44.5,
+      "y": 28.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Regthar Deathgate.",
+      "npc": 3389,
+      "quest": 4021,
+      "tag": "optional-elite",
+      "title": "Counterattack!",
+      "type": "TURNIN",
+      "x": 45.3,
+      "y": 28.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mankrik at the Crossroads: 60 Bristleback Quilboar Tusks. Big XP, lvl 16-20 quilboar.",
+      "npc": 3432,
+      "quest": 899,
+      "tag": "main",
+      "title": "Consumed by Hatred",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 31.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mankrik at the Crossroads: find his wife's corpse at (49, 50), then return to him.",
+      "npc": 3432,
+      "quest": 4921,
+      "tag": "main",
+      "title": "Lost in Battle",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 31.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mankrik: Slay quilboars and collect 4 of Olgra's Adornments for Mankrik's memorial..",
+      "npc": 3432,
+      "quest": 95774,
+      "tag": "optional",
+      "title": "Her Name Is Olgra",
+      "type": "ACCEPT",
+      "x": 52.0,
+      "y": 31.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Bristleback Quilboar Tusk (lvl 16-20) around (48, 52).",
+      "quest": 899,
+      "tag": "main",
+      "title": "Consumed by Hatred",
+      "type": "COMPLETE",
+      "x": 47.7,
+      "y": 52.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Beaten Corpse (lvl 16-16) around (49, 50).",
+      "quest": 4921,
+      "tag": "main",
+      "title": "Lost in Battle",
+      "type": "COMPLETE",
+      "x": 49.3,
+      "y": 50.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Olgra's Adornments (lvl 16-19) around (50, 51).",
+      "quest": 95774,
+      "tag": "optional",
+      "title": "Her Name Is Olgra",
+      "type": "COMPLETE",
+      "x": 49.8,
+      "y": 51.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mankrik.",
+      "npc": 3432,
+      "quest": 899,
+      "tag": "main",
+      "title": "Consumed by Hatred",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 31.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mankrik.",
+      "npc": 3432,
+      "quest": 4921,
+      "tag": "main",
+      "title": "Lost in Battle",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 31.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mankrik.",
+      "npc": 3432,
+      "quest": 95774,
+      "tag": "optional",
+      "title": "Her Name Is Olgra",
+      "type": "TURNIN",
+      "x": 52.0,
+      "y": 31.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gur'ak in the Barrens: Chol'aruk is an elite. Optional, revisit at 20.",
+      "npc": 267310,
+      "quest": 97003,
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Chol'aruk the Ravener",
+      "type": "ACCEPT",
+      "x": 52.6,
+      "y": 29.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Chol'aruk's Head (lvl 20-20) around (58, 26).",
+      "quest": 97003,
+      "tag": "optional-elite",
+      "title": "Chol'aruk the Ravener",
+      "type": "COMPLETE",
+      "x": 57.9,
+      "y": 26.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gur'ak.",
+      "npc": 267310,
+      "quest": 97003,
+      "reward": {
+        "preferItem": 276887,
+        "why": "Melee weapon at item level 24, an upgrade at level 15-20 for melee classes."
+      },
+      "tag": "optional-elite",
+      "title": "Chol'aruk the Ravener",
+      "type": "TURNIN",
+      "x": 52.6,
+      "y": 29.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Ratchet: Mebok, Wizzlecrank, Gazlowe and Dizzywig are all here. Run the north side first.",
+      "type": "NOTE",
+      "x": 62.8,
+      "y": 37.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mebok Mizzyrix in Ratchet: 5 Intact Raptor Horns from the Sunscale Scytheclaws.",
+      "npc": 3446,
+      "quest": 865,
+      "tag": "main",
+      "title": "Raptor Horns",
+      "type": "ACCEPT",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wizzlecrank's Shredder in the north Barrens: get the Ignition Key at (56, 9).",
+      "npc": 3439,
+      "quest": 858,
+      "tag": "main",
+      "title": "Ignition",
+      "type": "ACCEPT",
+      "x": 56.5,
+      "y": 7.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Intact Raptor Horn (lvl 16-19) around (53, 49).",
+      "quest": 865,
+      "tag": "main",
+      "title": "Raptor Horns",
+      "type": "COMPLETE",
+      "x": 52.8,
+      "y": 49.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Ignition Key (lvl 18-18) around (56, 9).",
+      "quest": 858,
+      "tag": "main",
+      "title": "Ignition",
+      "type": "COMPLETE",
+      "x": 56.3,
+      "y": 8.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mebok Mizzyrix.",
+      "npc": 3446,
+      "quest": 865,
+      "tag": "main",
+      "title": "Raptor Horns",
+      "type": "TURNIN",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Wizzlecrank's Shredder.",
+      "npc": 3439,
+      "quest": 858,
+      "tag": "main",
+      "title": "Ignition",
+      "type": "TURNIN",
+      "x": 56.5,
+      "y": 7.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wizzlecrank's Shredder: Protect Wizzlecrank and the stolen goblin shredder on the way to Sputtervalve in Ratchet..",
+      "npc": 3439,
+      "quest": 863,
+      "tag": "optional",
+      "title": "The Escape",
+      "type": "ACCEPT",
+      "x": 56.5,
+      "y": 7.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Do The Escape around (55, 8).",
+      "quest": 863,
+      "tag": "optional",
+      "title": "The Escape",
+      "type": "COMPLETE",
+      "x": 55.4,
+      "y": 7.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Sputtervalve.",
+      "npc": 3442,
+      "quest": 863,
+      "tag": "optional",
+      "title": "The Escape",
+      "type": "TURNIN",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gilthares Firebough: Safely escort Gilthares Firebough back to Captain Brightsun in Ratchet..",
+      "npc": 3465,
+      "quest": 898,
+      "tag": "optional",
+      "title": "Free From the Hold",
+      "type": "ACCEPT",
+      "x": 62.0,
+      "y": 55.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Do Free From the Hold around (62, 39).",
+      "quest": 898,
+      "tag": "optional",
+      "title": "Free From the Hold",
+      "type": "COMPLETE",
+      "x": 62.3,
+      "y": 39.1,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Captain Thalo'thas Brightsun.",
+      "npc": 3339,
+      "quest": 898,
+      "tag": "optional",
+      "title": "Free From the Hold",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 39.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Captain Thalo'thas Brightsun: Captain Thalo'thas Brightsun of Ratchet wants you to collect 10 Theramore Medals and slay Captain...",
+      "npc": 3339,
+      "quest": 891,
+      "tag": "optional",
+      "title": "The Guns of Northwatch",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 39.0,
+      "zone": "The Barrens"
+    },
+    {
+      "_review": "W_MOB_LEVEL: Captain Fairmount is lvl 20 while the route is at about 16 here. Optional; skip the captain or come back at 18.",
+      "note": "Kill Captain Fairmount (lvl 20-20) around (62, 55).",
+      "quest": 891,
+      "tag": "optional",
+      "title": "The Guns of Northwatch",
+      "type": "COMPLETE",
+      "x": 61.9,
+      "y": 54.6,
+      "zone": "The Barrens"
+    },
+    {
+      "_review": "W_BACKTRACK: Gilthares (898) and the cannoneers (891) are both south of Ratchet at about (62, 55). The route returns to Ratchet between them; a single sweep would avoid one visit, but both are optional.",
+      "note": "Turn in to Captain Thalo'thas Brightsun.",
+      "npc": 3339,
+      "quest": 891,
+      "tag": "optional",
+      "title": "The Guns of Northwatch",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 39.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wharfmaster Dizzywig in Ratchet: Cats Eye Emerald from a Venture Co. Overseer (north Barrens).",
+      "npc": 3453,
+      "quest": 896,
+      "tag": "main",
+      "title": "Miner's Fortune",
+      "type": "ACCEPT",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "WANTED board in Ratchet: Bruuz is an elite (lvl 20). Optional, revisit at 20.",
+      "quest": 92706,
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "WANTED: Bruuz",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 37.5,
+      "zone": "The Barrens"
+    },
+    {
+      "_review": "W_BACKTRACK: Wizzlecrank (858, 863) and Venture Co. (896) are in the same north-Barrens pocket. The chain 858 > 863 needs a turn-in each, so these visits follow the chain's own order.",
+      "note": "Collect Cats Eye Emerald (lvl 14-19) around (61, 4).",
+      "quest": 896,
+      "tag": "main",
+      "title": "Miner's Fortune",
+      "type": "COMPLETE",
+      "x": 60.8,
+      "y": 4.0,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Bruuz's Dorsal Fin (lvl 20-20) around (64, 40).",
+      "quest": 92706,
+      "tag": "optional-elite",
+      "title": "WANTED: Bruuz",
+      "type": "COMPLETE",
+      "x": 64.3,
+      "y": 39.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Wharfmaster Dizzywig.",
+      "npc": 3453,
+      "quest": 896,
+      "tag": "main",
+      "title": "Miner's Fortune",
+      "type": "TURNIN",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazlowe.",
+      "npc": 3391,
+      "quest": 92706,
+      "tag": "optional-elite",
+      "title": "WANTED: Bruuz",
+      "type": "TURNIN",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mebok in Ratchet: Wailing Essence from the Wailing Caverns. Elite-level mobs, revisit at 18.",
+      "npc": 3446,
+      "quest": 1491,
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Smart Drinks",
+      "type": "ACCEPT",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Wailing Essence (lvl 16-17) around (48, 33).",
+      "quest": 1491,
+      "tag": "optional-elite",
+      "title": "Smart Drinks",
+      "type": "COMPLETE",
+      "x": 47.8,
+      "y": 33.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mebok Mizzyrix.",
+      "npc": 3446,
+      "quest": 1491,
+      "tag": "optional-elite",
+      "title": "Smart Drinks",
+      "type": "TURNIN",
+      "x": 62.4,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Crane Operator Bigglefuzz in Ratchet: the 99-Year-Old Port. Elite rank on the mob, revisit at 18.",
+      "npc": 3665,
+      "quest": 959,
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Trouble at the Docks",
+      "type": "ACCEPT",
+      "x": 63.1,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect 99-Year-Old Port (lvl 18-18) around (46, 35).",
+      "quest": 959,
+      "tag": "optional-elite",
+      "title": "Trouble at the Docks",
+      "type": "COMPLETE",
+      "x": 46.3,
+      "y": 34.6,
+      "zone": "The Barrens"
+    },
+    {
+      "_review": "W_BACKTRACK: 1491 (Wailing Essence at about (48, 33), beside the Crossroads) and 959 (Ratchet) are both optional-elite. Left in this order; the Ratchet turn-in is the cheapest place.",
+      "note": "Turn in to Crane Operator Bigglefuzz.",
+      "npc": 3665,
+      "quest": 959,
+      "tag": "optional-elite",
+      "title": "Trouble at the Docks",
+      "type": "TURNIN",
+      "x": 63.1,
+      "y": 37.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "WANTED: Bring the head of Baron Longshore to Gazlowe in Ratchet..",
+      "quest": 895,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "WANTED: Baron Longshore",
+      "type": "ACCEPT",
+      "x": 62.6,
+      "y": 37.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Baron Longshore's Head (lvl 16-16) around (63, 49).",
+      "quest": 895,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "WANTED: Baron Longshore",
+      "type": "COMPLETE",
+      "x": 63.4,
+      "y": 48.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazlowe.",
+      "npc": 3391,
+      "quest": 895,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "WANTED: Baron Longshore",
+      "type": "TURNIN",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gazlowe: Kill 12 Southsea Brigands and 6 Southsea Cannoneers for Gazlowe in Ratchet..",
+      "npc": 3391,
+      "quest": 887,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Southsea Freebooters",
+      "type": "ACCEPT",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Southsea Brigand (lvl 12-13) around (64, 46).",
+      "quest": 887,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Southsea Freebooters",
+      "type": "COMPLETE",
+      "x": 63.8,
+      "y": 46.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazlowe.",
+      "npc": 3391,
+      "quest": 887,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Southsea Freebooters",
+      "type": "TURNIN",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gazlowe: Bring Gazlowe's Ledger to Wharfmaster Dizzywig..",
+      "npc": 3391,
+      "quest": 890,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Missing Shipment",
+      "type": "ACCEPT",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Wharfmaster Dizzywig.",
+      "npc": 3453,
+      "quest": 890,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Missing Shipment",
+      "type": "TURNIN",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wharfmaster Dizzywig: Return Gazlowe's Ledger to Gazlowe in Ratchet..",
+      "npc": 3453,
+      "quest": 892,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Missing Shipment",
+      "type": "ACCEPT",
+      "x": 63.4,
+      "y": 38.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazlowe.",
+      "npc": 3391,
+      "quest": 892,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Missing Shipment",
+      "type": "TURNIN",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gazlowe: Retrieve the Shipment of Boots and Telescopic Lens for Gazlowe in Ratchet..",
+      "npc": 3391,
+      "quest": 888,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Stolen Booty",
+      "type": "ACCEPT",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Shipment of Boots around (63, 50).",
+      "quest": 888,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Stolen Booty",
+      "type": "COMPLETE",
+      "x": 62.6,
+      "y": 49.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazlowe.",
+      "npc": 3391,
+      "quest": 888,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Stolen Booty",
+      "type": "TURNIN",
+      "x": 62.7,
+      "y": 36.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wrenix the Wretched: Collect 5 Handfuls of Complicated Parts from the upper pirate camp south of Ratchet, then return to Wrenix the...",
+      "npc": 7161,
+      "quest": 97253,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "Parts and Pieces",
+      "type": "ACCEPT",
+      "x": 63.1,
+      "y": 36.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Handful of Complicated Parts around (62, 46).",
+      "quest": 97253,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "Parts and Pieces",
+      "type": "COMPLETE",
+      "x": 61.9,
+      "y": 46.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Wrenix the Wretched.",
+      "npc": 7161,
+      "quest": 97253,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "Parts and Pieces",
+      "type": "TURNIN",
+      "x": 63.1,
+      "y": 36.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Chen's Empty Keg: Find someone who knows about Chen's Empty Keg..",
+      "quest": 819,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Chen's Empty Keg",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 38.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Brewmaster Drohn.",
+      "npc": 3292,
+      "quest": 819,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Chen's Empty Keg",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 38.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Brewmaster Drohn: Bring 5 Savannah Lion Tusks, 5 Plainstrider Kidneys, and 1 Thunder Lizard Horn to Brewmaster Drohn in Ratchet..",
+      "npc": 3292,
+      "quest": 821,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Chen's Empty Keg",
+      "type": "ACCEPT",
+      "x": 62.3,
+      "y": 38.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Savannah Lion Tusk (lvl 11-23) around (42, 30).",
+      "quest": 821,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Chen's Empty Keg",
+      "type": "COMPLETE",
+      "x": 42.3,
+      "y": 29.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Brewmaster Drohn.",
+      "npc": 3292,
+      "quest": 821,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Chen's Empty Keg",
+      "type": "TURNIN",
+      "x": 62.3,
+      "y": 38.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sputtervalve: Access the control console at the Venture Company research site..",
+      "npc": 3442,
+      "quest": 894,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "ACCEPT",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Control Console.",
+      "quest": 894,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "TURNIN",
+      "x": 52.4,
+      "y": 11.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Control Console: Close off the Fuel Control Valve, the Regulator Valve and the Main Control Valve then use the control console again..",
+      "quest": 900,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "ACCEPT",
+      "x": 52.4,
+      "y": 11.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Use or search Main Control Valve around (52, 12).",
+      "quest": 900,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "COMPLETE",
+      "x": 52.3,
+      "y": 11.6,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Control Console.",
+      "quest": 900,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "TURNIN",
+      "x": 52.4,
+      "y": 11.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Control Console: Get the Console Key from Tinkerer Sniggles to use on the control console..",
+      "quest": 901,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "ACCEPT",
+      "x": 52.4,
+      "y": 11.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Console Key (lvl 16-16) around (53, 10).",
+      "quest": 901,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "COMPLETE",
+      "x": 52.8,
+      "y": 10.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Control Console.",
+      "quest": 901,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "TURNIN",
+      "x": 52.4,
+      "y": 11.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Control Console: Return the Samophlange to Sputtervalve in Ratchet..",
+      "quest": 902,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "ACCEPT",
+      "x": 52.4,
+      "y": 11.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Sputtervalve.",
+      "npc": 3442,
+      "quest": 902,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Samophlange",
+      "type": "TURNIN",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Sputtervalve: Bring the Broken Samophlange to Wenikee Boltbucket..",
+      "npc": 3442,
+      "quest": 3921,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Wenikee Boltbucket",
+      "type": "ACCEPT",
+      "x": 63.0,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Wenikee Boltbucket.",
+      "npc": 9316,
+      "quest": 3921,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Wenikee Boltbucket",
+      "type": "TURNIN",
+      "x": 49.0,
+      "y": 11.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Wenikee Boltbucket: Bring 15 Nugget Slugs to Wenikee Boltbucket in the Barrens..",
+      "npc": 9316,
+      "quest": 3922,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Nugget Slugs",
+      "type": "ACCEPT",
+      "x": 49.0,
+      "y": 11.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Nugget Slug around (56, 8).",
+      "quest": 3922,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Nugget Slugs",
+      "type": "COMPLETE",
+      "x": 56.3,
+      "y": 8.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Wenikee Boltbucket.",
+      "npc": 9316,
+      "quest": 3922,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Nugget Slugs",
+      "type": "TURNIN",
+      "x": 49.0,
+      "y": 11.2,
+      "zone": "The Barrens"
+    },
+    {
+      "type": "FP_DISCOVER",
+      "x": 63.1,
+      "y": 37.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Ratchet repair before the northern run.",
+      "type": "VENDOR_REPAIR",
+      "x": 62.8,
+      "y": 37.4,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "note": "North-east road from Ratchet to Orgrimmar. Wenikee's Samophlange goes to Rilli in the city.",
+      "to": "Orgrimmar",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Wenikee Boltbucket: Broken and Battered Samophlange to Rilli Greasygob in Orgrimmar.",
+      "npc": 9316,
+      "quest": 3923,
+      "tag": "main",
+      "title": "Rilli Greasygob",
+      "type": "ACCEPT",
+      "x": 49.0,
+      "y": 11.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Rilli Greasygob.",
+      "npc": 9317,
+      "quest": 3923,
+      "tag": "main",
+      "title": "Rilli Greasygob",
+      "type": "TURNIN",
+      "x": 76.5,
+      "y": 24.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Rilli Greasygob: Bring the Samophlange Manual to Rilli Greasygob in Orgrimmar..",
+      "npc": 9317,
+      "quest": 3924,
+      "tag": "main",
+      "title": "Samophlange Manual",
+      "type": "ACCEPT",
+      "x": 76.5,
+      "y": 24.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Rilli Greasygob.",
+      "npc": 9317,
+      "quest": 3924,
+      "tag": "main",
+      "title": "Samophlange Manual",
+      "type": "TURNIN",
+      "x": 76.5,
+      "y": 24.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Orgrimmar class trainers are spread through the city. Learn what your level allows.",
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "type": "TRAINER",
+      "x": 48.0,
+      "y": 45.9,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Therzok in Orgrimmar: Tazan's Satchel from Tazan in the Barrens. Rogues, Orc and Troll.",
+      "npc": 6446,
+      "quest": 1963,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "optional",
+      "title": "The Shattered Hand",
+      "type": "ACCEPT",
+      "x": 42.7,
+      "y": 53.5,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Collect Tazan's Satchel (lvl 13-13) around (63, 44).",
+      "quest": 1963,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "optional",
+      "title": "The Shattered Hand",
+      "type": "COMPLETE",
+      "x": 63.1,
+      "y": 44.3,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Turn in to Therzok.",
+      "npc": 6446,
+      "quest": 1963,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "optional",
+      "title": "The Shattered Hand",
+      "type": "TURNIN",
+      "x": 42.7,
+      "y": 53.5,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Therzok in Orgrimmar: Tazan's Logbook after the satchel. Rogues, Orc and Troll.",
+      "npc": 6446,
+      "quest": 1858,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "optional",
+      "title": "The Shattered Hand",
+      "type": "ACCEPT",
+      "x": 42.7,
+      "y": 53.5,
+      "zone": "Orgrimmar"
+    },
+    {
+      "classes": [
+        "ROGUE"
+      ],
+      "note": "Turn in to Therzok.",
+      "npc": 6446,
+      "quest": 1858,
+      "races": [
+        "Orc",
+        "Troll"
+      ],
+      "tag": "optional",
+      "title": "The Shattered Hand",
+      "type": "TURNIN",
+      "x": 42.7,
+      "y": 53.5,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Zor Lonetree in Orgrimmar: the Spirits of Stonetalon breadcrumb, turned in at Seereth.",
+      "npc": 4047,
+      "quest": 1061,
+      "tag": "main",
+      "title": "The Spirits of Stonetalon",
+      "type": "ACCEPT",
+      "x": 38.9,
+      "y": 38.4,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Seereth Stonebreak.",
+      "npc": 4049,
+      "quest": 1061,
+      "tag": "main",
+      "title": "The Spirits of Stonetalon",
+      "type": "TURNIN",
+      "x": 35.3,
+      "y": 27.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Alaana Stormwalker in Mulgore: Welcome to Azeroth. Undead only, this is the start of the Horde intro.",
+      "npc": 259119,
+      "quest": 95350,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "Welcome to Azeroth",
+      "type": "ACCEPT",
+      "x": 33.4,
+      "y": 22.6,
+      "zone": "Mulgore"
+    },
+    {
+      "note": "Turn in to Thrall.",
+      "npc": 4949,
+      "quest": 95350,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional",
+      "title": "Welcome to Azeroth",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Thrall in Orgrimmar: a talk-only tour of the Horde leaders. Flagged elite by a heuristic; optional.",
+      "npc": 4949,
+      "quest": 93739,
+      "races": [
+        "Undead"
+      ],
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Exploring the Horde",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Kill Nazgrel (lvl 62-62) around (32, 36).",
+      "quest": 93739,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional-elite",
+      "title": "Exploring the Horde",
+      "type": "COMPLETE",
+      "x": 32.3,
+      "y": 35.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Thrall.",
+      "npc": 4949,
+      "quest": 93739,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional-elite",
+      "title": "Exploring the Horde",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Thrall in Orgrimmar: Hidden Enemies. Tauren and Undead; the Orc and Troll chain was done in Durotar.",
+      "npc": 4949,
+      "quest": 5726,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Thrall.",
+      "npc": 4949,
+      "quest": 5726,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Thrall: Hidden Enemies.",
+      "npc": 4949,
+      "quest": 5727,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Thrall.",
+      "npc": 4949,
+      "quest": 5727,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Thrall in Orgrimmar: Bazzalan and Jergosh are lvl 16 elites. Skip until 18.",
+      "npc": 4949,
+      "quest": 5728,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Thrall.",
+      "npc": 4949,
+      "quest": 5728,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "optional-elite",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Thrall in Orgrimmar: speak to Neeru Fireblade with what you learned.",
+      "npc": 4949,
+      "quest": 5729,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Neeru Fireblade.",
+      "npc": 3216,
+      "quest": 5729,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Neeru Fireblade in Orgrimmar: Orgrimmaril weapons are a real upgrade. Pick one for your class.",
+      "npc": 3216,
+      "quest": 5730,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "ACCEPT",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Thrall.",
+      "npc": 4949,
+      "quest": 5730,
+      "races": [
+        "Tauren",
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Hidden Enemies",
+      "type": "TURNIN",
+      "x": 31.7,
+      "y": 37.8,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Neeru Fireblade: Enter Ragefire Chasm and slay Taragaman the Hungerer, then bring his heart back to Neeru Fireblade in Orgrimmar..",
+      "npc": 3216,
+      "quest": 5761,
+      "tag": "optional",
+      "title": "Slaying the Beast",
+      "type": "ACCEPT",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Turn in to Neeru Fireblade.",
+      "npc": 3216,
+      "quest": 5761,
+      "tag": "optional",
+      "title": "Slaying the Beast",
+      "type": "TURNIN",
+      "x": 49.5,
+      "y": 50.6,
+      "zone": "Orgrimmar"
+    },
+    {
+      "note": "Repair and sell greys before the Sepulcher trip.",
+      "type": "VENDOR_REPAIR",
+      "x": 49.0,
+      "y": 48.0,
+      "zone": "Orgrimmar"
+    },
+    {
+      "bagCheck": true,
+      "note": "Orgrimmar zeppelin to Undercity. Bind your hearthstone at the Undercity inn first.",
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "to": "Undercity",
+      "type": "FLY"
+    },
+    {
+      "note": "Innkeeper Norman. Hearth here before the Silverpine trip.",
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "type": "HEARTH_BIND",
+      "x": 67.7,
+      "y": 37.9,
+      "zone": "Undercity"
+    },
+    {
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "type": "FP_DISCOVER",
+      "x": 63.2,
+      "y": 48.6,
+      "zone": "Undercity"
+    },
+    {
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "type": "FP_DISCOVER",
+      "x": 45.6,
+      "y": 42.6,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver at the Sepulcher: Prove Your Worth. Not in this pack; Silverpine trip for the non-Undead races.",
+      "npc": 1938,
+      "quest": 421,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Prove Your Worth",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver: Worgen Bits from the Sepulcher area, optional.",
+      "npc": 1938,
+      "quest": 98298,
+      "tag": "optional",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Worgen Bits (lvl 15-16) around (50, 79).",
+      "quest": 98298,
+      "tag": "optional",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 50.2,
+      "y": 79.0,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 421,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Prove Your Worth",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 98298,
+      "tag": "optional",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver: Arugal's Folly.",
+      "npc": 1938,
+      "quest": 422,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "High Executor Hadrec at the Sepulcher: kill rot hide gnolls, then Nightlash.",
+      "npc": 1952,
+      "quest": 437,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Dead Fields",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Essence of Nightlash (lvl 14-14) around (45, 21).",
+      "quest": 437,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Dead Fields",
+      "type": "COMPLETE",
+      "x": 44.7,
+      "y": 20.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 422,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to High Executor Hadrec.",
+      "npc": 1952,
+      "quest": 437,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Dead Fields",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver: Bring 6 Glutton Shackles and 3 Darksoul Shackles to Dalar Dawnweaver at the Sepulcher..",
+      "npc": 1938,
+      "quest": 423,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "High Executor Hadrec: Go to the Decrepit Ferry. Search for the reason the Scourge are there..",
+      "npc": 1952,
+      "quest": 438,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Decrepit Ferry",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Glutton Shackle (lvl 12-13) around (42, 28).",
+      "quest": 423,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 42.4,
+      "y": 27.7,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "_review": "W_BACKTRACK: Arugal's Folly is a strict chain 421 > 422 > 423 > 424 > 99 in the Sepulcher. Each link needs its own turn-in, so the trips are forced by the chain.",
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 423,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Corpse Laden Boat.",
+      "quest": 438,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "The Decrepit Ferry",
+      "type": "TURNIN",
+      "x": 58.4,
+      "y": 34.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver: Kill Grimson the Pale and bring his head to Dalar Dawnweaver at the Sepulcher..",
+      "npc": 1938,
+      "quest": 424,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Corpse Laden Boat: Bring Deliah's Ring to High Executor Hadrec at the Sepulcher..",
+      "quest": 439,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Rot Hide Clues",
+      "type": "ACCEPT",
+      "x": 58.4,
+      "y": 34.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Head of Grimson (lvl 15-15) around (59, 45).",
+      "quest": 424,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 58.6,
+      "y": 44.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 424,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to High Executor Hadrec.",
+      "npc": 1952,
+      "quest": 439,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Rot Hide Clues",
+      "type": "TURNIN",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver: Arugal's Folly ends at the Pyrewood elites (lvl 13-15). Optional-elite, revisit at 20.",
+      "npc": 1938,
+      "quest": 99,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Arugal's Folly",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "High Executor Hadrec: Bring 8 bottles of rot hide ichor to Apothecary Renferrel at the Sepulcher..",
+      "npc": 1952,
+      "quest": 443,
+      "tag": "main",
+      "title": "Rot Hide Ichor",
+      "type": "ACCEPT",
+      "x": 43.4,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Pyrewood Shackle (lvl 13-15) around (46, 73).",
+      "quest": 99,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "optional-elite",
+      "title": "Arugal's Folly",
+      "type": "COMPLETE",
+      "x": 45.5,
+      "y": 73.2,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Rot Hide Ichor (lvl 16-22) around (66, 26).",
+      "quest": 443,
+      "tag": "main",
+      "title": "Rot Hide Ichor",
+      "type": "COMPLETE",
+      "x": 66.2,
+      "y": 26.2,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 99,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "optional-elite",
+      "title": "Arugal's Folly",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Apothecary Renferrel.",
+      "npc": 1937,
+      "quest": 443,
+      "tag": "main",
+      "title": "Rot Hide Ichor",
+      "type": "TURNIN",
+      "x": 42.8,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister: Retrieve the contents of one of the Dalaran wizards' crates. You will find Pyrewood Village to the south..",
+      "npc": 2121,
+      "quest": 477,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Border Crossings",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Deathstalker Faerleia: Help Deathstalker Faerleia kill the Pyrewood Council..",
+      "npc": 2058,
+      "quest": 452,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Pyrewood Ambush",
+      "type": "ACCEPT",
+      "x": 46.5,
+      "y": 74.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalaran Crate.",
+      "quest": 477,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Border Crossings",
+      "type": "TURNIN",
+      "x": 49.9,
+      "y": 60.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Deathstalker Faerleia.",
+      "npc": 2058,
+      "quest": 452,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Pyrewood Ambush",
+      "type": "TURNIN",
+      "x": 46.5,
+      "y": 74.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalaran Crate: Bring the strange pendant to Shadow Priest Allister at the Sepulcher..",
+      "quest": 478,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Maps and Runes",
+      "type": "ACCEPT",
+      "x": 49.9,
+      "y": 60.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Shadow Priest Allister.",
+      "npc": 2121,
+      "quest": 478,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Maps and Runes",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister: Take the rune-inscribed pendant to Dalar Dawnweaver at the Sepulcher..",
+      "npc": 2121,
+      "quest": 481,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Dalar's Analysis",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Dalar Dawnweaver.",
+      "npc": 1938,
+      "quest": 481,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Dalar's Analysis",
+      "type": "TURNIN",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Dalar Dawnweaver: Speak with Shadow Priest Allister at the Sepulcher..",
+      "npc": 1938,
+      "quest": 482,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Dalaran's Intentions",
+      "type": "ACCEPT",
+      "x": 44.2,
+      "y": 39.8,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Shadow Priest Allister.",
+      "npc": 2121,
+      "quest": 482,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Dalaran's Intentions",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister: Obtain 8 Dalaran Pendants for Shadow Priest Allister at the Sepulcher..",
+      "npc": 2121,
+      "quest": 479,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Ambermill Investigations",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Dalaran Pendant (lvl 14-18) around (60, 64).",
+      "quest": 479,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Ambermill Investigations",
+      "type": "COMPLETE",
+      "x": 59.9,
+      "y": 64.1,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Shadow Priest Allister.",
+      "npc": 2121,
+      "quest": 479,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Ambermill Investigations",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister: Kill the Dalaran archmage, then retrieve his staff for Shadow Priest Allister at the Sepulcher..",
+      "npc": 2121,
+      "quest": 480,
+      "tag": "main",
+      "title": "The Weaver",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Shadow Priest Allister: Locate Beren's Peril, then kill 6 Ravenclaw Drudgers and 6 Ravenclaw Guardians, then return to Shadow Priest...",
+      "npc": 2121,
+      "quest": 516,
+      "tag": "optional",
+      "title": "Beren's Peril",
+      "type": "ACCEPT",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Collect Ataeric's Staff (lvl 22-22) around (63, 64).",
+      "quest": 480,
+      "tag": "main",
+      "title": "The Weaver",
+      "type": "COMPLETE",
+      "x": 63.4,
+      "y": 64.3,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "_review": "W_MOB_LEVEL: Beren's Peril, Ravenclaw Guardians are lvl 20 while the route reaches the Sepulcher at about 17-18. Optional; skip the guardians if they are too hard.",
+      "note": "Kill Ravenclaw Drudger (lvl 19-20) around (59, 71).",
+      "quest": 516,
+      "tag": "optional",
+      "title": "Beren's Peril",
+      "type": "COMPLETE",
+      "x": 59.0,
+      "y": 71.4,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Shadow Priest Allister.",
+      "npc": 2121,
+      "quest": 480,
+      "tag": "main",
+      "title": "The Weaver",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Turn in to Shadow Priest Allister.",
+      "npc": 2121,
+      "quest": 516,
+      "tag": "optional",
+      "title": "Beren's Peril",
+      "type": "TURNIN",
+      "x": 44.0,
+      "y": 40.9,
+      "zone": "Silverpine Forest"
+    },
+    {
+      "note": "Whispering Horror Residue: the elite is in Tirisfal. Optional-elite, turn in at Undercity.",
+      "quest": 95328,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Whispering Horror Residue",
+      "type": "ACCEPT",
+      "x": 8.8,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Collect Whispering Horror Residue (lvl 13-13) around (10, 61).",
+      "quest": 95328,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "optional-elite",
+      "title": "Whispering Horror Residue",
+      "type": "COMPLETE",
+      "x": 9.5,
+      "y": 61.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Turn in to Father Lankester.",
+      "npc": 4607,
+      "quest": 95328,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "optional-elite",
+      "title": "Whispering Horror Residue",
+      "type": "TURNIN",
+      "x": 49.1,
+      "y": 14.6,
+      "zone": "Undercity"
+    },
+    {
+      "note": "Deathguard Linnea in Tirisfal: Rear Guard Patrol. Not in this pack, needed for 99156.",
+      "npc": 1495,
+      "quest": 356,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Rear Guard Patrol",
+      "type": "ACCEPT",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Turn in to Deathguard Linnea.",
+      "npc": 1495,
+      "quest": 356,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Rear Guard Patrol",
+      "type": "TURNIN",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Deathguard Linnea (Tirisfal): Riptear's Heart is an elite. Optional, come back at 20.",
+      "npc": 1495,
+      "quest": 99156,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Rear Guard Patrol",
+      "type": "ACCEPT",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Collect Riptear's Heart (lvl 13-13) around (83, 45).",
+      "quest": 99156,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "optional-elite",
+      "title": "Rear Guard Patrol",
+      "type": "COMPLETE",
+      "x": 83.2,
+      "y": 45.4,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "note": "Turn in to Deathguard Linnea.",
+      "npc": 1495,
+      "quest": 99156,
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "tag": "optional-elite",
+      "title": "Rear Guard Patrol",
+      "type": "TURNIN",
+      "x": 65.5,
+      "y": 60.2,
+      "zone": "Tirisfal Glades"
+    },
+    {
+      "bagCheck": true,
+      "note": "Hearth back to Undercity, then the zeppelin to Orgrimmar.",
+      "races": [
+        "Orc",
+        "Troll",
+        "Tauren"
+      ],
+      "type": "HEARTH_USE"
+    },
+    {
+      "note": "Seereth Stonebreak on the Barrens border: Goblin Invaders. Venture Co. Loggers at Stonetalon (67, 52).",
+      "npc": 4049,
+      "quest": 1062,
+      "tag": "main",
+      "title": "Goblin Invaders",
+      "type": "ACCEPT",
+      "x": 35.3,
+      "y": 27.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Venture Co. Logger (lvl 18-19) around (67, 52).",
+      "quest": 1062,
+      "tag": "main",
+      "title": "Goblin Invaders",
+      "type": "COMPLETE",
+      "x": 67.0,
+      "y": 52.3,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Seereth Stonebreak.",
+      "npc": 4049,
+      "quest": 1062,
+      "tag": "main",
+      "title": "Goblin Invaders",
+      "type": "TURNIN",
+      "x": 35.3,
+      "y": 27.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Seereth Stonebreak: The Elder Crone. Turn in to Magatha in Thunder Bluff.",
+      "npc": 4049,
+      "quest": 1063,
+      "tag": "main",
+      "title": "The Elder Crone",
+      "type": "ACCEPT",
+      "x": 35.3,
+      "y": 27.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Magatha Grimtotem.",
+      "npc": 4046,
+      "quest": 1063,
+      "tag": "main",
+      "title": "The Elder Crone",
+      "type": "TURNIN",
+      "x": 69.8,
+      "y": 30.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Road north from Seereth to Thunder Bluff. Magatha and Zamah are on the Elder Rise.",
+      "to": "Thunder Bluff",
+      "type": "TRAVEL"
+    },
+    {
+      "type": "FP_DISCOVER",
+      "x": 47.0,
+      "y": 49.8,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Thunder Bluff class trainers. Tauren druids: the Moonglade portal is also here.",
+      "races": [
+        "Tauren"
+      ],
+      "type": "TRAINER",
+      "x": 47.2,
+      "y": 63.1,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Magatha in Thunder Bluff: Forsaken Aid, turn in to Apothecary Zamah in the Pools of Vision.",
+      "npc": 4046,
+      "quest": 1064,
+      "tag": "main",
+      "title": "Forsaken Aid",
+      "type": "ACCEPT",
+      "x": 69.8,
+      "y": 30.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Turn in to Apothecary Zamah.",
+      "npc": 3419,
+      "quest": 1064,
+      "tag": "main",
+      "title": "Forsaken Aid",
+      "type": "TURNIN",
+      "x": 22.8,
+      "y": 20.9,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Rahauro: Search Ragefire Chasm for Maur Grimtotem's corpse and search it for any items of interest..",
+      "npc": 11833,
+      "quest": 5722,
+      "tag": "optional",
+      "title": "Searching for the Lost Satchel",
+      "type": "ACCEPT",
+      "x": 70.1,
+      "y": 29.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Maur Grimtotem's corpse is inside Ragefire Chasm (instance, no coordinates). Then return to Rahauro in Thunder Bluff.",
+      "quest": 5722,
+      "tag": "optional",
+      "title": "Searching for the Lost Satchel",
+      "type": "TURNIN",
+      "x": 70.1,
+      "y": 29.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Returning the Lost Satchel: Take the Grimtotem Satchel to Rahauro in Thunder Bluff..",
+      "quest": 5724,
+      "tag": "optional",
+      "title": "Returning the Lost Satchel",
+      "type": "ACCEPT",
+      "x": 70.1,
+      "y": 29.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Turn in to Rahauro.",
+      "npc": 11833,
+      "quest": 5724,
+      "tag": "optional",
+      "title": "Returning the Lost Satchel",
+      "type": "TURNIN",
+      "x": 70.1,
+      "y": 29.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Rahauro in Thunder Bluff: Ragefire Chasm troggs and shamans are elite-rank. Optional, revisit at 18.",
+      "npc": 11833,
+      "quest": 5723,
+      "races": [
+        "Undead"
+      ],
+      "revisitAt": 18,
+      "tag": "optional-elite",
+      "title": "Testing an Enemy's Strength",
+      "type": "ACCEPT",
+      "x": 70.1,
+      "y": 29.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "note": "Turn in to Rahauro.",
+      "npc": 11833,
+      "quest": 5723,
+      "races": [
+        "Undead"
+      ],
+      "tag": "optional-elite",
+      "title": "Testing an Enemy's Strength",
+      "type": "TURNIN",
+      "x": 70.1,
+      "y": 29.5,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Druid portal from Thunder Bluff to Moonglade for the trials.",
+      "races": [
+        "Tauren"
+      ],
+      "to": "Moonglade",
+      "type": "FLY"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Turak Runetotem on the Elder Rise: Lesson to Learn. Tauren druids, then Moonglade.",
+      "npc": 3033,
+      "quest": 27,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "A Lesson to Learn",
+      "type": "ACCEPT",
+      "x": 76.5,
+      "y": 27.2,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Turn in to Dendrite Starblaze.",
+      "npc": 11802,
+      "quest": 27,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "A Lesson to Learn",
+      "type": "TURNIN",
+      "x": 56.2,
+      "y": 30.6,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Dendrite Starblaze in Moonglade: Trial of the Lake. Tauren druids.",
+      "npc": 11802,
+      "quest": 28,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Trial of the Lake",
+      "type": "ACCEPT",
+      "x": 56.2,
+      "y": 30.6,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Use or search Shrine Of Remulos around (36, 41).",
+      "quest": 28,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Trial of the Lake",
+      "type": "COMPLETE",
+      "x": 36.0,
+      "y": 41.4,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Turn in to Tajarri.",
+      "npc": 11799,
+      "quest": 28,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Trial of the Lake",
+      "type": "TURNIN",
+      "x": 36.5,
+      "y": 40.1,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Tajarri at the Shrine of Remulos: Trial of the Sea Lion. Tauren druids.",
+      "npc": 11799,
+      "quest": 30,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Trial of the Sea Lion",
+      "type": "ACCEPT",
+      "x": 36.5,
+      "y": 40.1,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Collect Pendant of the Sea Lion around (36, 41).",
+      "quest": 30,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Trial of the Sea Lion",
+      "type": "COMPLETE",
+      "x": 36.0,
+      "y": 41.4,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Turn in to Dendrite Starblaze.",
+      "npc": 11802,
+      "quest": 30,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Trial of the Sea Lion",
+      "type": "TURNIN",
+      "x": 56.2,
+      "y": 30.6,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Dendrite Starblaze in Moonglade: Aquatic Form. Tauren druids, turn in at Turak in Thunder Bluff.",
+      "npc": 11802,
+      "quest": 31,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Aquatic Form",
+      "type": "ACCEPT",
+      "x": 56.2,
+      "y": 30.6,
+      "zone": "Moonglade"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Turn in to Turak Runetotem.",
+      "npc": 3033,
+      "quest": 31,
+      "races": [
+        "Tauren"
+      ],
+      "tag": "main",
+      "title": "Aquatic Form",
+      "type": "TURNIN",
+      "x": 76.5,
+      "y": 27.2,
+      "zone": "Thunder Bluff"
+    },
+    {
+      "classes": [
+        "DRUID"
+      ],
+      "note": "Druid portal back to Thunder Bluff, then Turak Runetotem.",
+      "races": [
+        "Tauren"
+      ],
+      "to": "Thunder Bluff",
+      "type": "FLY"
+    },
+    {
+      "bagCheck": true,
+      "note": "South down the road from Thunder Bluff to the Crossroads.",
+      "to": "The Crossroads",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Gazrog: Bring 12 Raptor Heads to Gazrog at the Crossroads..",
+      "npc": 3464,
+      "quest": 869,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Raptor Thieves",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Thork: Find and return Crossroads' Supply Crates to Thork in the Barrens..",
+      "npc": 3429,
+      "quest": 5041,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Supplies for the Crossroads",
+      "type": "ACCEPT",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Tonga Runetotem: Report back to Tonga Runetotem with your findings..",
+      "npc": 3448,
+      "quest": 870,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Forgotten Pools",
+      "type": "ACCEPT",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Darsok Swiftdagger: Collect 8 Witchwing talons. Return them to Darsok Swiftdagger at the Crossroads..",
+      "npc": 3449,
+      "quest": 867,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Harpy Raiders",
+      "type": "ACCEPT",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Raptor Head (lvl 11-19) around (53, 31).",
+      "quest": 869,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Raptor Thieves",
+      "type": "COMPLETE",
+      "x": 53.3,
+      "y": 31.2,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Crossroads' Supply Crates around (59, 26).",
+      "quest": 5041,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Supplies for the Crossroads",
+      "type": "COMPLETE",
+      "x": 59.0,
+      "y": 25.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Do The Forgotten Pools around (45, 22).",
+      "quest": 870,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Forgotten Pools",
+      "type": "COMPLETE",
+      "x": 45.1,
+      "y": 22.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Witchwing Talon (lvl 14-20) around (40, 15).",
+      "quest": 867,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Harpy Raiders",
+      "type": "COMPLETE",
+      "x": 39.6,
+      "y": 15.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazrog.",
+      "npc": 3464,
+      "quest": 869,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Raptor Thieves",
+      "type": "TURNIN",
+      "x": 51.9,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Thork.",
+      "npc": 3429,
+      "quest": 5041,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Supplies for the Crossroads",
+      "type": "TURNIN",
+      "x": 51.5,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Tonga Runetotem.",
+      "npc": 3448,
+      "quest": 870,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Forgotten Pools",
+      "type": "TURNIN",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Darsok Swiftdagger.",
+      "npc": 3449,
+      "quest": 867,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Harpy Raiders",
+      "type": "TURNIN",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Tonga Runetotem: Return to Tonga at The Crossroads, after investigating the Stagnant Oasis..",
+      "npc": 3448,
+      "quest": 877,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Stagnant Oasis",
+      "type": "ACCEPT",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Use or search Bubbling Fissure around (56, 43).",
+      "quest": 877,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Stagnant Oasis",
+      "type": "COMPLETE",
+      "x": 55.6,
+      "y": 42.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Tonga Runetotem.",
+      "npc": 3448,
+      "quest": 877,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "The Stagnant Oasis",
+      "type": "TURNIN",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Tonga Runetotem: Bring 8 Altered Snapjaw Shells to Tonga Runetotem at the Crossroads..",
+      "npc": 3448,
+      "quest": 880,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Altered Beings",
+      "type": "ACCEPT",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Altered Snapjaw Shell (lvl 15-16) around (47, 40).",
+      "quest": 880,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Altered Beings",
+      "type": "COMPLETE",
+      "x": 46.8,
+      "y": 39.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Tonga Runetotem.",
+      "npc": 3448,
+      "quest": 880,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Altered Beings",
+      "type": "TURNIN",
+      "x": 52.3,
+      "y": 31.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Darsok Swiftdagger: Collect 6 Harpy Lieutenant Rings from Witchwing Slayers and return them to Darsok Swiftdagger at the Crossroads..",
+      "npc": 3449,
+      "quest": 875,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Harpy Lieutenants",
+      "type": "ACCEPT",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Harpy Lieutenant Ring (lvl 16-17) around (39, 14).",
+      "quest": 875,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Harpy Lieutenants",
+      "type": "COMPLETE",
+      "x": 38.9,
+      "y": 14.5,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Darsok Swiftdagger.",
+      "npc": 3449,
+      "quest": 875,
+      "races": [
+        "Undead"
+      ],
+      "tag": "main",
+      "title": "Harpy Lieutenants",
+      "type": "TURNIN",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Darsok at the Crossroads: slay Serena Bloodfeather, lvl 20, and bring her head back.",
+      "npc": 3449,
+      "quest": 876,
+      "tag": "main",
+      "title": "Serena Bloodfeather",
+      "type": "ACCEPT",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Serena's Head (lvl 20-20) around (39, 12).",
+      "quest": 876,
+      "tag": "main",
+      "title": "Serena Bloodfeather",
+      "type": "COMPLETE",
+      "x": 39.2,
+      "y": 12.2,
+      "zone": "The Barrens"
+    },
+    {
+      "_review": "W_BACKTRACK: Serena Bloodfeather follows 867 > 875 in the Harpy line. Each link needs a turn-in at Darsok, so the Crossroads visits are forced by the chain.",
+      "note": "Turn in to Darsok Swiftdagger.",
+      "npc": 3449,
+      "quest": 876,
+      "tag": "main",
+      "title": "Serena Bloodfeather",
+      "type": "TURNIN",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Gazrog at the Crossroads: Stolen Silver from the Barrens road.",
+      "npc": 3464,
+      "quest": 3281,
+      "tag": "main",
+      "title": "Stolen Silver",
+      "type": "ACCEPT",
+      "x": 51.9,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Stolen Silver around (58, 54).",
+      "quest": 3281,
+      "tag": "main",
+      "title": "Stolen Silver",
+      "type": "COMPLETE",
+      "x": 58.0,
+      "y": 53.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Gazrog.",
+      "npc": 3464,
+      "quest": 3281,
+      "tag": "main",
+      "title": "Stolen Silver",
+      "type": "TURNIN",
+      "x": 51.9,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Darsok at the Crossroads: deliver the letter to Jin'Zil in Malaka'jin, Stonetalon.",
+      "npc": 3449,
+      "quest": 1060,
+      "tag": "main",
+      "title": "Letter to Jin'Zil",
+      "type": "ACCEPT",
+      "x": 51.6,
+      "y": 30.9,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Witch Doctor Jin'Zil.",
+      "npc": 3995,
+      "quest": 1060,
+      "tag": "main",
+      "title": "Letter to Jin'Zil",
+      "type": "TURNIN",
+      "x": 74.5,
+      "y": 97.9,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "type": "FP_DISCOVER",
+      "x": 44.7,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mangletooth at Camp Taurajo: Bristleback Water Seekers, Thornweavers and Geomancers.",
+      "npc": 3430,
+      "quest": 878,
+      "tag": "main",
+      "title": "Tribes at War",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Bristleback Water Seeker (lvl 16-17) around (48, 54).",
+      "quest": 878,
+      "tag": "main",
+      "title": "Tribes at War",
+      "type": "COMPLETE",
+      "x": 47.5,
+      "y": 54.4,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mangletooth.",
+      "npc": 3430,
+      "quest": 878,
+      "tag": "main",
+      "title": "Tribes at War",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Mangletooth: Blood Shards of Agamaggan. Collect shards from the Bristlebacks and Blood Shard spawns.",
+      "npc": 3430,
+      "quest": 5052,
+      "tag": "main",
+      "title": "Blood Shards of Agamaggan",
+      "type": "ACCEPT",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Collect Blood Shard (lvl 15-25) around (47, 52).",
+      "quest": 5052,
+      "tag": "main",
+      "title": "Blood Shards of Agamaggan",
+      "type": "COMPLETE",
+      "x": 46.8,
+      "y": 52.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Mangletooth.",
+      "npc": 3430,
+      "quest": 5052,
+      "tag": "main",
+      "title": "Blood Shards of Agamaggan",
+      "type": "TURNIN",
+      "x": 44.5,
+      "y": 59.3,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Hoof of Lakota'mani on the ground at (45, 53), then Jorn Skyseer at Camp Taurajo.",
+      "quest": 883,
+      "tag": "optional",
+      "title": "Lakota'mani",
+      "type": "ACCEPT",
+      "x": 45.1,
+      "y": 52.7,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Jorn Skyseer.",
+      "npc": 3387,
+      "quest": 883,
+      "tag": "optional",
+      "title": "Lakota'mani",
+      "type": "TURNIN",
+      "x": 44.9,
+      "y": 59.1,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Ruga Ragetotem at Camp Taurajo: Trial at the Field of Giants. Warriors only.",
+      "npc": 6394,
+      "quest": 1824,
+      "tag": "main",
+      "title": "Trial at the Field of Giants",
+      "type": "ACCEPT",
+      "x": 44.7,
+      "y": 59.4,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Collect Twitching Antenna (lvl 18-24) around (45, 71).",
+      "quest": 1824,
+      "tag": "main",
+      "title": "Trial at the Field of Giants",
+      "type": "COMPLETE",
+      "x": 45.0,
+      "y": 70.7,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Turn in to Ruga Ragetotem.",
+      "npc": 6394,
+      "quest": 1824,
+      "tag": "main",
+      "title": "Trial at the Field of Giants",
+      "type": "TURNIN",
+      "x": 44.7,
+      "y": 59.4,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Ruga Ragetotem: Thun'grim Firegaze in the Barrens. Warriors only.",
+      "npc": 6394,
+      "quest": 1825,
+      "tag": "main",
+      "title": "Speak with Thun'grim",
+      "type": "ACCEPT",
+      "x": 44.7,
+      "y": 59.4,
+      "zone": "The Barrens"
+    },
+    {
+      "classes": [
+        "WARRIOR"
+      ],
+      "note": "Turn in to Thun'grim Firegaze.",
+      "npc": 5878,
+      "quest": 1825,
+      "tag": "main",
+      "title": "Speak with Thun'grim",
+      "type": "TURNIN",
+      "x": 57.2,
+      "y": 30.3,
+      "zone": "The Barrens"
+    },
+    {
+      "bagCheck": true,
+      "note": "South-east to the Grimtotem camps and Kaya in Stonetalon, back to Makaba, then Sun Rock.",
+      "to": "Sun Rock Retreat",
+      "type": "TRAVEL"
+    },
+    {
+      "note": "Makaba Flathoof: Kill 8 Grimtotem Ruffians and 6 Grimtotem Mercenaries, and then return to Makaba Flathoof near the southeastern edge of...",
+      "npc": 11857,
+      "quest": 6548,
+      "tag": "main",
+      "title": "Avenge My Village",
+      "type": "ACCEPT",
+      "x": 35.2,
+      "y": 27.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Grimtotem Ruffian (lvl 14-15) around (82, 87).",
+      "quest": 6548,
+      "tag": "main",
+      "title": "Avenge My Village",
+      "type": "COMPLETE",
+      "x": 82.0,
+      "y": 87.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Makaba Flathoof.",
+      "npc": 11857,
+      "quest": 6548,
+      "tag": "main",
+      "title": "Avenge My Village",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 27.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Makaba Flathoof: Kill Grundig Darkcloud and 6 Grimtotem Brutes, and return to Makaba Flathoof near the southeastern edge of Stonetalon..",
+      "npc": 11857,
+      "quest": 6629,
+      "tag": "main",
+      "title": "Kill Grundig Darkcloud",
+      "type": "ACCEPT",
+      "x": 35.2,
+      "y": 27.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kill Grundig Darkcloud (lvl 18-18) around (74, 86).",
+      "quest": 6629,
+      "tag": "main",
+      "title": "Kill Grundig Darkcloud",
+      "type": "COMPLETE",
+      "x": 73.7,
+      "y": 86.1,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Makaba Flathoof.",
+      "npc": 11857,
+      "quest": 6629,
+      "tag": "main",
+      "title": "Kill Grundig Darkcloud",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 27.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Kaya Flathoof: Escort Kaya Flathoof to Camp Aparaje, and then return to Makaba Flathoof near the southeastern edge of Stonetalon..",
+      "npc": 11856,
+      "quest": 6523,
+      "tag": "optional",
+      "title": "Protect Kaya",
+      "type": "ACCEPT",
+      "x": 73.5,
+      "y": 85.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Do Protect Kaya around (77, 91).",
+      "quest": 6523,
+      "tag": "optional",
+      "title": "Protect Kaya",
+      "type": "COMPLETE",
+      "x": 77.1,
+      "y": 90.8,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Makaba Flathoof.",
+      "npc": 11857,
+      "quest": 6523,
+      "tag": "optional",
+      "title": "Protect Kaya",
+      "type": "TURNIN",
+      "x": 35.2,
+      "y": 27.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Makaba Flathoof: Tell Tammra Windfield in Sun Rock Retreat the good news..",
+      "npc": 11857,
+      "quest": 6401,
+      "tag": "main",
+      "title": "Kaya's Alive",
+      "type": "ACCEPT",
+      "x": 35.2,
+      "y": 27.8,
+      "zone": "The Barrens"
+    },
+    {
+      "note": "Turn in to Tammra Windfield.",
+      "npc": 11864,
+      "quest": 6401,
+      "tag": "main",
+      "title": "Kaya's Alive",
+      "type": "TURNIN",
+      "x": 47.5,
+      "y": 58.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Mor'rogal at Sun Rock Retreat: Resonite Crystals from the Boulderslide cave.",
+      "npc": 11861,
+      "quest": 6421,
+      "tag": "main",
+      "title": "Boulderslide Ravine",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 64.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Collect Resonite Crystal around (60, 91).",
+      "quest": 6421,
+      "tag": "main",
+      "title": "Boulderslide Ravine",
+      "type": "COMPLETE",
+      "x": 59.5,
+      "y": 91.3,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Mor'rogal.",
+      "npc": 11861,
+      "quest": 6421,
+      "tag": "main",
+      "title": "Boulderslide Ravine",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 64.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Mor'rogal at Sun Rock Retreat: Goggeroc is an elite. Optional-elite, revisit at 20.",
+      "npc": 11861,
+      "quest": 6481,
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Earthen Arise",
+      "type": "ACCEPT",
+      "x": 47.2,
+      "y": 64.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Kill Goggeroc (lvl 20-20) around (57, 89).",
+      "quest": 6481,
+      "tag": "optional-elite",
+      "title": "Earthen Arise",
+      "type": "COMPLETE",
+      "x": 57.4,
+      "y": 89.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Mor'rogal.",
+      "npc": 11861,
+      "quest": 6481,
+      "tag": "optional-elite",
+      "title": "Earthen Arise",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 64.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Xen'Zilla at Malaka'jin: Deepmoss Creepers and Venomspitters around the Stonetalon south.",
+      "npc": 12816,
+      "quest": 6461,
+      "tag": "main",
+      "title": "Blood Feeders",
+      "type": "ACCEPT",
+      "x": 71.2,
+      "y": 95.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Kill Deepmoss Creeper (lvl 16-17) around (57, 75).",
+      "quest": 6461,
+      "tag": "main",
+      "title": "Blood Feeders",
+      "type": "COMPLETE",
+      "x": 57.0,
+      "y": 75.4,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Xen'Zilla.",
+      "npc": 12816,
+      "quest": 6461,
+      "tag": "main",
+      "title": "Blood Feeders",
+      "type": "TURNIN",
+      "x": 71.2,
+      "y": 95.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Wanted poster in Stonetalon: Besseleth is an elite. Optional-elite, turn in at Sun Rock.",
+      "quest": 6284,
+      "revisitAt": 20,
+      "tag": "optional-elite",
+      "title": "Arachnophobia",
+      "type": "ACCEPT",
+      "x": 59.1,
+      "y": 75.7,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Collect Besseleth's Fang (lvl 21-21) around (53, 72).",
+      "quest": 6284,
+      "tag": "optional-elite",
+      "title": "Arachnophobia",
+      "type": "COMPLETE",
+      "x": 53.2,
+      "y": 72.5,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Maggran Earthbinder.",
+      "npc": 11860,
+      "quest": 6284,
+      "tag": "optional-elite",
+      "title": "Arachnophobia",
+      "type": "TURNIN",
+      "x": 47.2,
+      "y": 61.2,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Piznik in Stonetalon: Gerenzo's Orders, mine the unidentified ore.",
+      "npc": 4276,
+      "quest": 1090,
+      "tag": "main",
+      "title": "Gerenzo's Orders",
+      "type": "ACCEPT",
+      "x": 71.9,
+      "y": 60.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Kill Piznik (lvl 20-20) around (72, 60).",
+      "quest": 1090,
+      "tag": "main",
+      "title": "Gerenzo's Orders",
+      "type": "COMPLETE",
+      "x": 71.9,
+      "y": 60.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Piznik.",
+      "npc": 4276,
+      "quest": 1090,
+      "tag": "main",
+      "title": "Gerenzo's Orders",
+      "type": "TURNIN",
+      "x": 71.9,
+      "y": 60.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Piznik: deliver the unidentified ore to Ziz Fizziks at Windshear Crag.",
+      "npc": 4276,
+      "quest": 1092,
+      "tag": "main",
+      "title": "Gerenzo's Orders",
+      "type": "ACCEPT",
+      "x": 71.9,
+      "y": 60.0,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Ziz Fizziks.",
+      "npc": 4201,
+      "quest": 1092,
+      "tag": "main",
+      "title": "Gerenzo's Orders",
+      "type": "TURNIN",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Ziz Fizziks at Windshear Crag: Super Reaper 6000 blueprints from the Reaper spawns.",
+      "npc": 4201,
+      "quest": 1093,
+      "tag": "main",
+      "title": "Super Reaper 6000",
+      "type": "ACCEPT",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Collect Super Reaper 6000 Blueprints (lvl 19-20) around (64, 53).",
+      "quest": 1093,
+      "tag": "main",
+      "title": "Super Reaper 6000",
+      "type": "COMPLETE",
+      "x": 63.7,
+      "y": 52.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "note": "Turn in to Ziz Fizziks.",
+      "npc": 4201,
+      "quest": 1093,
+      "tag": "main",
+      "title": "Super Reaper 6000",
+      "type": "TURNIN",
+      "x": 59.0,
+      "y": 62.6,
+      "zone": "Stonetalon Mountains"
+    },
+    {
+      "type": "FP_DISCOVER",
+      "x": 45.1,
+      "y": 59.8,
+      "zone": "Stonetalon Mountains"
+    }
+  ]
+}

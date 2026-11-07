@@ -1,0 +1,1521 @@
+{
+  "decisions": [
+    {
+      "decision": "class",
+      "quest": 27,
+      "reason": "Class quest (DRUID); kept, filtered at runtime. Races: Tauren."
+    },
+    {
+      "decision": "class",
+      "quest": 28,
+      "reason": "Class quest (DRUID); kept, filtered at runtime. Races: Tauren."
+    },
+    {
+      "decision": "class",
+      "quest": 30,
+      "reason": "Class quest (DRUID); kept, filtered at runtime. Races: Tauren."
+    },
+    {
+      "decision": "class",
+      "quest": 31,
+      "reason": "Class quest (DRUID); kept, filtered at runtime. Races: Tauren."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 99,
+      "reason": "Elite mobs; optional, revisit at 20. Races: Orc, Troll, Tauren.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 103,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 104,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 136,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 138,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 139,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 140,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 152,
+      "reason": "Westfall is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 235,
+      "reason": "Ashenvale Hunt breadcrumb: Splintertree Post, off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 264,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 408,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "main",
+      "quest": 423,
+      "reason": "Main: 980 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 424,
+      "reason": "Main: 1050 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 437,
+      "reason": "Main: 980 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 438,
+      "reason": "Main: 880 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 439,
+      "reason": "Main: 290 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "drop",
+      "quest": 440,
+      "reason": "Engraved Ring: Magistrate Sevren in Brill (Tirisfal). Next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 441,
+      "reason": "Raleigh in the Undercity. Next band."
+    },
+    {
+      "decision": "main",
+      "quest": 443,
+      "reason": "Main: 1250 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 444,
+      "reason": "Bethor Iceshard in the Undercity. Next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 446,
+      "reason": "Thule Ravenclaw: Undercity and Silverpine legs. Next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 448,
+      "reason": "Report to Hadrec: follows the Undercity leg. Next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 450,
+      "reason": "Starts from 447, which is not in this pack."
+    },
+    {
+      "decision": "drop",
+      "quest": 451,
+      "reason": "Follows 450 (a 447 chain not in this pack)."
+    },
+    {
+      "decision": "main",
+      "quest": 452,
+      "reason": "Main: 1350 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "drop",
+      "quest": 460,
+      "reason": "Alaric's head: item starter with no NPC (data gap)."
+    },
+    {
+      "decision": "drop",
+      "quest": 461,
+      "reason": "Follows 460 (item starter with no NPC)."
+    },
+    {
+      "decision": "main",
+      "quest": 477,
+      "reason": "Main: 980 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 478,
+      "reason": "Main: 740 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 479,
+      "reason": "Main: 1150 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 480,
+      "reason": "Main: 1750 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 481,
+      "reason": "Main: 100 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "main",
+      "quest": 482,
+      "reason": "Main: 100 XP, on this band's loop. Races: Orc, Troll, Tauren."
+    },
+    {
+      "decision": "drop",
+      "quest": 491,
+      "reason": "Wand to Bethor in the Undercity (follows 461)."
+    },
+    {
+      "decision": "drop",
+      "quest": 493,
+      "reason": "Hillsbrad escort: Tarren Mill, next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 494,
+      "reason": "Hillsbrad: Tarren Mill, next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 496,
+      "reason": "Hillsbrad: Tarren Mill, next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 498,
+      "reason": "The Rescue: Durnholde Keep in Hillsbrad, next band (2200 XP)."
+    },
+    {
+      "decision": "drop",
+      "quest": 499,
+      "reason": "Hillsbrad: Tarren Mill, next band."
+    },
+    {
+      "decision": "optional",
+      "quest": 516,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 530,
+      "reason": "Husband's Revenge: Undercity Raleigh, follows the Undercity leg."
+    },
+    {
+      "decision": "drop",
+      "quest": 549,
+      "reason": "WANTED: Syndicate in Hillsbrad (Tarren Mill), next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 742,
+      "reason": "Ashenvale Hunt breadcrumb: Splintertree Post, off this route."
+    },
+    {
+      "decision": "drop",
+      "quest": 776,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 809,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "main",
+      "quest": 819,
+      "reason": "Main: 1050 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 821,
+      "reason": "Main: 1350 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 845,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "main",
+      "quest": 848,
+      "reason": "Main: 1050 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 850,
+      "reason": "Main: 880 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "optional",
+      "quest": 851,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "optional",
+      "quest": 852,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 853,
+      "reason": "Apothecary Zamah in Thunder Bluff: a one-off trip for 800 XP."
+    },
+    {
+      "decision": "main",
+      "quest": 855,
+      "reason": "Main: 1250 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 858,
+      "reason": "Main: 1350 XP, on this band's loop."
+    },
+    {
+      "decision": "optional",
+      "quest": 863,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "main",
+      "quest": 865,
+      "reason": "Main: 1350 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 866,
+      "reason": "Profession-gated (skill 182 at 1)."
+    },
+    {
+      "decision": "main",
+      "quest": 867,
+      "reason": "Main: 1050 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 868,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "main",
+      "quest": 869,
+      "reason": "Main: 910 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 870,
+      "reason": "Main: 680 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 872,
+      "reason": "Done in an earlier band on Durotar, Mulgore; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "main",
+      "quest": 875,
+      "reason": "Main: 1150 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 876,
+      "reason": "Main: 1950 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 877,
+      "reason": "Main: 1150 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 878,
+      "reason": "Main: 1650 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 880,
+      "reason": "Main: 1150 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 881,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 882,
+      "reason": "Orc/Troll Jorn chain (Ishamuhale), needs 3261; same Zephra path limit."
+    },
+    {
+      "decision": "optional",
+      "quest": 883,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "main",
+      "quest": 887,
+      "reason": "Main: 740 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 888,
+      "reason": "Main: 1150 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 889,
+      "reason": "Spirit of the Wind: Mangletooth boon with no text and no XP row."
+    },
+    {
+      "decision": "main",
+      "quest": 890,
+      "reason": "Main: 100 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "optional",
+      "quest": 891,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "main",
+      "quest": 892,
+      "reason": "Main: 100 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 894,
+      "reason": "Main: 740 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "optional",
+      "quest": 895,
+      "reason": "Optional: on the way, or a short turn-in near the loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 896,
+      "reason": "Main: 1700 XP, on this band's loop."
+    },
+    {
+      "decision": "optional",
+      "quest": 898,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "main",
+      "quest": 899,
+      "reason": "Main: 1950 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 900,
+      "reason": "Main: 490 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 901,
+      "reason": "Main: 740 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 902,
+      "reason": "Main: 1150 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 903,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 905,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 907,
+      "reason": "Orc/Troll Jorn chain (Thunder Lizards), needs 882; same Zephra path limit."
+    },
+    {
+      "decision": "drop",
+      "quest": 913,
+      "reason": "Orc/Troll Jorn chain (Thunderhawk), needs 907; same Zephra path limit."
+    },
+    {
+      "decision": "drop",
+      "quest": 914,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 924,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 926,
+      "reason": "Done in an earlier band on Durotar; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 959,
+      "reason": "Elite mobs; optional, revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 962,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 972,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "main",
+      "quest": 1060,
+      "reason": "Main: 1550 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 1061,
+      "reason": "Main: 315 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 1062,
+      "reason": "Main: 1450 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 1063,
+      "reason": "Main: 680 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 1064,
+      "reason": "Main: 340 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 1065,
+      "reason": "Escort to Tarren Mill (Hillsbrad): next band, with the Hillsbrad flight path."
+    },
+    {
+      "decision": "drop",
+      "quest": 1069,
+      "reason": "Deepmoss eggs: Stonetalon eggs, but the turn-in is at Mebok in Ratchet (a second Ratchet visit)."
+    },
+    {
+      "decision": "main",
+      "quest": 1090,
+      "reason": "Main: 2200 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 1092,
+      "reason": "Main: 1300 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 1093,
+      "reason": "Main: 1650 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 1094,
+      "reason": "Final turn-in is Sputtervalve in Ratchet, a return trip after the Sun Rock exit. 830 XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 1358,
+      "reason": "Undercity leg (Zinge), Undead Tirisfal chain done earlier."
+    },
+    {
+      "decision": "drop",
+      "quest": 1359,
+      "reason": "Undercity leg (Zinge), Undead Tirisfal chain done earlier."
+    },
+    {
+      "decision": "drop",
+      "quest": 1464,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1472,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1474,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1476,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1483,
+      "reason": "Breadcrumb from Sputtervalve in Ratchet to Ziz; the chain is already covered by 1093."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1486,
+      "reason": "Elite mobs; optional, revisit at 18. Races: Undead.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1487,
+      "reason": "Elite mobs; optional, revisit at 20.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 1489,
+      "reason": "Done in an earlier band on Durotar, Mulgore; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1490,
+      "reason": "Done in an earlier band on Durotar, Mulgore; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 1491,
+      "reason": "Elite mobs; optional, revisit at 18.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "drop",
+      "quest": 1507,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1508,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1509,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1510,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1511,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1512,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1513,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1515,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1526,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1527,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1528,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1529,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1530,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1535,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1536,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1823,
+      "reason": "Warrior-only quest outside this band's route."
+    },
+    {
+      "decision": "class",
+      "quest": 1824,
+      "reason": "Class quest (WARRIOR); kept, filtered at runtime."
+    },
+    {
+      "decision": "class",
+      "quest": 1825,
+      "reason": "Class quest (WARRIOR); kept, filtered at runtime."
+    },
+    {
+      "decision": "class",
+      "quest": 1858,
+      "reason": "Class quest (ROGUE); kept, filtered at runtime. Races: Orc, Troll."
+    },
+    {
+      "decision": "drop",
+      "quest": 1886,
+      "reason": "Undead rogue chain (Mennet Carkad), Undercity."
+    },
+    {
+      "decision": "drop",
+      "quest": 1898,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1899,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1959,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1960,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1961,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1962,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "class",
+      "quest": 1963,
+      "reason": "Class quest (ROGUE); kept, filtered at runtime. Races: Orc, Troll."
+    },
+    {
+      "decision": "drop",
+      "quest": 1978,
+      "reason": "Done in an earlier band on Tirisfal; not part of this band's loop for the other branches."
+    },
+    {
+      "decision": "drop",
+      "quest": 1998,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 1999,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2378,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2379,
+      "reason": "Rogue chain split between Orgrimmar and Ratchet; class-limited."
+    },
+    {
+      "decision": "drop",
+      "quest": 2380,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2381,
+      "reason": "Rogue chain split between Orgrimmar and Ratchet; class-limited."
+    },
+    {
+      "decision": "drop",
+      "quest": 2382,
+      "reason": "Rogue chain split between Orgrimmar and Ratchet; class-limited."
+    },
+    {
+      "decision": "drop",
+      "quest": 2458,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2460,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2480,
+      "reason": "Rogue-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2985,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 2986,
+      "reason": "Shaman-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 3261,
+      "reason": "Orc/Troll Jorn chain: needs Durotar 905, which the Zephra path never has. Zephra is all races here, so race limits cannot exclude it."
+    },
+    {
+      "decision": "main",
+      "quest": 3281,
+      "reason": "Main: 1350 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 3301,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 3741,
+      "reason": "Redridge Mountains is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "main",
+      "quest": 3921,
+      "reason": "Main: 490 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 3922,
+      "reason": "Main: 1050 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 3923,
+      "reason": "Main: 340 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 3924,
+      "reason": "Main: 1800 XP, on this band's loop."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 4021,
+      "reason": "Elite mobs; optional, revisit at 20.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "main",
+      "quest": 4921,
+      "reason": "Main: 1150 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 5041,
+      "reason": "Main: 980 XP, on this band's loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 5042,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "decision": "drop",
+      "quest": 5043,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "decision": "drop",
+      "quest": 5044,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "decision": "drop",
+      "quest": 5045,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "decision": "drop",
+      "quest": 5046,
+      "reason": "Mangletooth boon: pick one of five buffs, no XP rows and no text."
+    },
+    {
+      "decision": "main",
+      "quest": 5052,
+      "reason": "Main: 1250 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 5642,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5643,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5644,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5646,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5679,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 5680,
+      "reason": "Priest-only quest outside this band's route."
+    },
+    {
+      "decision": "optional",
+      "quest": 5722,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5723,
+      "reason": "Elite mobs; optional, revisit at 18. Races: Undead.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "optional",
+      "quest": 5724,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 5725,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 5728,
+      "reason": "Elite mobs; optional, revisit at 18. Races: Tauren, Undead.",
+      "revisitAt": 18
+    },
+    {
+      "decision": "main",
+      "quest": 5729,
+      "reason": "Main: 105 XP, on this band's loop. Races: Tauren, Undead."
+    },
+    {
+      "decision": "main",
+      "quest": 5730,
+      "reason": "Main: 1450 XP, on this band's loop. Races: Tauren, Undead."
+    },
+    {
+      "decision": "optional",
+      "quest": 5761,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 6126,
+      "reason": "Druid Moonglade chain: second Moonglade trip, Barrens side quests."
+    },
+    {
+      "decision": "drop",
+      "quest": 6127,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 6128,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 6129,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "decision": "drop",
+      "quest": 6130,
+      "reason": "Druid Moonglade chain: second Moonglade trip."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6284,
+      "reason": "Elite mobs; optional, revisit at 20.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 6382,
+      "reason": "Ashenvale Hunt: Splintertree Post in Ashenvale, off this route. Low XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 6383,
+      "reason": "Ashenvale Hunt: Splintertree Post in Ashenvale, off this route. Low XP."
+    },
+    {
+      "decision": "main",
+      "quest": 6401,
+      "reason": "Main: 1000 XP, on this band's loop."
+    },
+    {
+      "decision": "main",
+      "quest": 6421,
+      "reason": "Main: 1350 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 6442,
+      "reason": "Naga at the Zoram Strand: Ashenvale, next band."
+    },
+    {
+      "decision": "main",
+      "quest": 6461,
+      "reason": "Main: 1450 XP, on this band's loop."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 6481,
+      "reason": "Elite mobs; optional, revisit at 20.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "optional",
+      "quest": 6523,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 6541,
+      "reason": "Warsong Reports breadcrumb: the runners are in Ashenvale."
+    },
+    {
+      "decision": "drop",
+      "quest": 6542,
+      "reason": "Warsong Reports breadcrumb: the runners are in Ashenvale."
+    },
+    {
+      "decision": "drop",
+      "quest": 6543,
+      "reason": "Warsong Reports: runners in Ashenvale, next band."
+    },
+    {
+      "decision": "drop",
+      "quest": 6545,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 6547,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "main",
+      "quest": 6548,
+      "reason": "Main: 1350 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 6562,
+      "reason": "Trouble in the Deeps: Ashenvale Aku'Mai dungeon chain."
+    },
+    {
+      "decision": "drop",
+      "quest": 6563,
+      "reason": "Aku'Mai dungeon chain (Ashenvale)."
+    },
+    {
+      "decision": "drop",
+      "quest": 6564,
+      "reason": "Aku'Mai dungeon chain (Ashenvale)."
+    },
+    {
+      "decision": "main",
+      "quest": 6629,
+      "reason": "Main: 1350 XP, on this band's loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 8368,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 8389,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 8768,
+      "reason": "Ironforge is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 8851,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 65593,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 65597,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 65601,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 65604,
+      "reason": "Warlock-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 78124,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78127,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78142,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78143,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78145,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78146,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78147,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78148,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78149,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 78150,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79007,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79091,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79092,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79093,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79094,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79095,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79096,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 79097,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 91858,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 91859,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 91860,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 91861,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 91862,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 92401,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92421,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 92422,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 92706,
+      "reason": "Elite mobs; optional, revisit at 20.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 93090,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "drop",
+      "quest": 93159,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "drop",
+      "quest": 93160,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "drop",
+      "quest": 93165,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "drop",
+      "quest": 93172,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "drop",
+      "quest": 93459,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 93739,
+      "reason": "Elite mobs; optional, revisit at 20. Races: Undead.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 95204,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 95216,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 95328,
+      "reason": "Elite mobs; optional, revisit at 20. Races: Orc, Troll, Tauren.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 95349,
+      "reason": "Zephra's Isle branch quest, finished on that branch; the shared track cannot exclude that branch."
+    },
+    {
+      "decision": "optional",
+      "quest": 95350,
+      "reason": "Optional: on the way, or a short turn-in near the loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 95494,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 95495,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 95507,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 95508,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 95621,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 95774,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 95981,
+      "reason": "Watching the Roads: Dalaran watchers in the Sepulcher (lvl 18-20), a second Silverpine leg."
+    },
+    {
+      "decision": "drop",
+      "quest": 96204,
+      "reason": "Paladin-only quest outside this band's route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 97003,
+      "reason": "Elite mobs; optional, revisit at 20.",
+      "revisitAt": 20
+    },
+    {
+      "decision": "drop",
+      "quest": 97242,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 97246,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 97249,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "optional",
+      "quest": 97253,
+      "reason": "Optional: on the way, or a short turn-in near the loop. Races: Undead."
+    },
+    {
+      "decision": "drop",
+      "quest": 97275,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 97286,
+      "reason": "Mage-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 97288,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97289,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97290,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 97291,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97292,
+      "reason": "Dungeon quest; not in this band's route (note only if famous)."
+    },
+    {
+      "decision": "drop",
+      "quest": 97326,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 97891,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 98024,
+      "reason": "Forever intro escort (Thrall to Thork): no XP row."
+    },
+    {
+      "decision": "drop",
+      "quest": 98251,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 98252,
+      "reason": "Ashenvale is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "optional",
+      "quest": 98298,
+      "reason": "Optional: on the way, or a short turn-in near the loop."
+    },
+    {
+      "decision": "drop",
+      "quest": 98299,
+      "reason": "Errand or low-value quest on this route: no XP row or a long walk for little XP."
+    },
+    {
+      "decision": "drop",
+      "quest": 98340,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98341,
+      "reason": "Moonglade is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 98342,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98362,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98404,
+      "reason": "Moonglade is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 98405,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "decision": "drop",
+      "quest": 98738,
+      "reason": "Moonglade is off this band's path; the next band (with its flight path) can take it."
+    },
+    {
+      "decision": "drop",
+      "quest": 98739,
+      "reason": "Druid-only quest outside this band's route."
+    },
+    {
+      "decision": "optional-elite",
+      "quest": 99156,
+      "reason": "Elite mobs; optional, revisit at 20. Races: Orc, Troll, Tauren.",
+      "revisitAt": 20
+    }
+  ],
+  "id": "horde_horde_15-20",
+  "schemaVersion": 1
+}
