@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Generated / large
+data/raw/
+dist/
+*.zip
+
+# Local input (vendored, not committed; see README)
+QuestieDB/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build metadata
+*.egg-info/
+build/

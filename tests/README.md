@@ -1,0 +1,1 @@
+Test assets for the add-on. `tests/lua/` will hold the busted specs and `wowstubs.lua`, which stubs the WoW API for the step engine, reward scorer and bag check (phase 06 onward). Python tests live in `pipeline/tests/`.

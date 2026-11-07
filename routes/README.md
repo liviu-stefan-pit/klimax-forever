@@ -1,0 +1,1 @@
+Route source of truth. `routes/horde/*.route.json` holds one file per band, written in the phase 04 prompt and checked by `python -m pipeline validate`. These files are reviewed and versioned in git. Never hand-edit the Lua output under `Klimax/Routes/`. It is generated from these files.

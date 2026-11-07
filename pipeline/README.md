@@ -1,0 +1,1 @@
+The offline Python 3.11+ pipeline. It decodes QuestieDB (`extract`), builds faction band packs (`shape`), validates route JSON (`validate`), compiles routes into Lua (`compile`), and handles data refreshes (`refresh`, `diff-db`). Run it as `python -m pipeline <command>` from the repo root.

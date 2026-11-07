@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "klimax-pipeline"
+version = "0.1.0"
+description = "Offline data pipeline for Klimax, a leveling guide for WoW Forever"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "GPL-3.0-only"
+dependencies = [
+    "cbor2",
+    "lupa",
+    "jsonschema",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools]
+# Explicit list: the repo root also holds data/, routes/, Klimax/ and QuestieDB/,
+# which setuptools' auto-discovery would otherwise reject.
+packages = [
+    "pipeline",
+    "pipeline.extract",
+    "pipeline.shape",
+    "pipeline.routes",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["pipeline/tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["QuestieDB", "Klimax", "data", "routes", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
