@@ -21,3 +21,7 @@ Thumbs.db
 *.egg-info/
 build/
 .scratch/
+
+# Local only: plans, notes and research sources (not shared)
+docs/
+leveling-resources/
