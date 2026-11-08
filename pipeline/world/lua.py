@@ -116,6 +116,8 @@ def index_lua(model: WorldModel) -> str:
     for name in ("zones", "quests", "npcs", "objects", "ex", "eq", "dungeons"):
         lines.extend(_section(name, model.index[name], "    "))
     lines.append(f"    xpl = {lua_value(model.index['xpl'])},")
+    if "spine" in model.index:
+        lines.append(f"    spine = {lua_value(model.index['spine'])},")
     lines.append("})")
     return "\n".join(lines) + "\n"
 

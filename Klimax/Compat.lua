@@ -1,30 +1,13 @@
 -- Compatibility layer and registration bootstrap.
 --
--- Loaded before Data and Routes, so the registration functions that the generated files call
--- exist before those files run. Every API wrapper degrades to nil (or a safe default) when the
+-- Loaded before the Data files, so the registration functions that the generated files call exist
+-- before those files run. Every API wrapper degrades to nil (or a safe default) when the
 -- client does not provide the function, and never raises an error.
 local _, K = ...
 
-K.routes = K.routes or {}
 K.zones = K.zones or {}
-K.index = K.index or { routes = {}, start = {}, quests = {} }
 
 -- ---- Registration (called by the generated Lua files) ----------------------------------------
-
-function Klimax_RegisterRoute(route)
-    if type(route) == "table" and route.id then
-        K.routes[route.id] = route
-    end
-end
-
-function Klimax_RegisterIndex(index)
-    if type(index) == "table" then
-        K.index = index
-        K.index.routes = index.routes or {}
-        K.index.start = index.start or {}
-        K.index.quests = index.quests or {}
-    end
-end
 
 function Klimax_RegisterZones(zones)
     if type(zones) == "table" then
@@ -419,6 +402,48 @@ function C.GetDurability()
         end
     end
     return low
+end
+
+-- Phase 28 telemetry: the NPC the player is talking to (creature id from its GUID) and the titles of
+-- the quests that NPC offers. Both are nil/empty when the client cannot tell.
+function C.TalkingNpcId()
+    if type(UnitGUID) ~= "function" then
+        return nil
+    end
+    for _, unit in ipairs({ "npc", "target" }) do
+        local ok, guid = pcall(UnitGUID, unit)
+        if ok and type(guid) == "string" then
+            local id = guid:match("^Creature%-%d+%-%d+%-%d+%-%d+%-(%d+)")
+            if id then
+                return tonumber(id)
+            end
+        end
+    end
+    return nil
+end
+
+function C.OfferedQuestTitles()
+    local out = {}
+    if C_GossipInfo and C_GossipInfo.GetAvailableQuests then
+        local ok, list = pcall(C_GossipInfo.GetAvailableQuests)
+        for _, q in ipairs(ok and list or {}) do
+            out[#out + 1] = q.title
+        end
+    elseif type(GetGossipAvailableQuests) == "function" then
+        -- the old API returns seven values per quest, the title first
+        local packed = { pcall(GetGossipAvailableQuests) }
+        if packed[1] then
+            for i = 2, #packed, 7 do
+                out[#out + 1] = packed[i]
+            end
+        end
+    end
+    if type(GetNumAvailableQuests) == "function" and type(GetAvailableTitle) == "function" then
+        for i = 1, GetNumAvailableQuests() do
+            out[#out + 1] = GetAvailableTitle(i)
+        end
+    end
+    return out
 end
 
 function C.HasPet()

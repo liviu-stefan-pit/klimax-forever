@@ -40,9 +40,9 @@ U.lastCursor = nil
 -- ---- Options (account-wide, KlimaxDB.options) ----------------------------------------------
 
 local DEFAULTS = {
-    showOptional = true, showElite = true, autoAdvance = true, arrow = true, arrowScale = 1,
+    arrow = true, arrowScale = 1,
     hideInCombat = false, locked = false,
-    bagThreshold = 3, fontScale = 1, scale = 1, alpha = 0.85, opportunities = true,
+    bagThreshold = 3, fontScale = 1, scale = 1, alpha = 0.85, opportunities = true, toasts = true,
 }
 
 -- Reads an option with its default. Safe before SavedVariables are loaded.
@@ -64,9 +64,6 @@ end
 
 -- Option rows of the options page. Bool rows toggle; cycle rows step through values.
 U.OPTION_ROWS = {
-    { key = "showOptional", kind = "bool", label = "OPT_SHOW_OPTIONAL" },
-    { key = "showElite", kind = "bool", label = "OPT_SHOW_ELITE" },
-    { key = "autoAdvance", kind = "bool", label = "OPT_AUTO" },
     { key = "arrow", kind = "bool", label = "OPT_ARROW" },
     { key = "arrowScale", kind = "cycle", label = "OPT_ARROW_SCALE", values = { 0.75, 1, 1.25, 1.5 } },
     { key = "hideInCombat", kind = "bool", label = "OPT_HIDE_COMBAT" },
@@ -76,6 +73,7 @@ U.OPTION_ROWS = {
     { key = "scale", kind = "cycle", label = "OPT_SCALE", values = { 0.8, 0.9, 1, 1.1, 1.25 } },
     { key = "alpha", kind = "cycle", label = "OPT_ALPHA", values = { 0.4, 0.6, 0.85, 1 } },
     { key = "opportunities", kind = "bool", label = "OPT_OPPORTUNITIES" },
+    { key = "toasts", kind = "bool", label = "OPT_TOASTS" },
 }
 
 -- The value after current in values; the first value when current is not in the list.
@@ -143,7 +141,7 @@ end
 local ACTION_KEY = {
     A = "ACT_ACCEPT", C = "ACT_COLLECT", T = "ACT_TURNIN", V = "ACT_TRAVEL", F = "ACT_FLY",
     D = "ACT_DISCOVER", B = "ACT_BUY", R = "ACT_TRAINER", H = "ACT_BIND", U = "ACT_HEARTH",
-    P = "ACT_REPAIR", N = "ACT_NOTE",
+    P = "ACT_REPAIR", N = "ACT_NOTE", S = "ACT_STOP",
 }
 local TAG_KEY = { m = "TAG_MAIN", o = "TAG_OPTIONAL", e = "TAG_ELITE" }
 local TAG_COLOR = { m = { 1, 0.82, 0 }, o = { 0.62, 0.62, 0.62 }, e = { 1, 0.27, 0.27 } }
@@ -226,6 +224,8 @@ function U.Model(E)
     m.tag = s.g
     m.tagText = s.g and L[TAG_KEY[s.g]] or nil
     m.note = s.note or ""
+    m.planStep = U.PlanStepFor(s)
+    m.why = m.planStep and K.Planner.Why(m.planStep) or ""
     m.stepNo = i
     m.total = #E.steps
     local batch = E:Batch(i)
@@ -243,6 +243,21 @@ function U.Model(E)
         m.hubTotal = #batch
     end
     return m
+end
+
+-- The planner's step for the same task as a displayed step (same kind and quest), or nil. Reads the
+-- plan already built; it never forces a replan (phase 27: the "why" of a step card).
+function U.PlanStepFor(step)
+    local plan = K.Planner and K.Planner.plan
+    if not (plan and step and step.q) then
+        return nil
+    end
+    for _, ps in ipairs(plan.steps) do
+        if ps.q == step.q and ps.t == step.t then
+            return ps
+        end
+    end
+    return nil
 end
 
 -- Rows of the step list for the loaded route: { index, key, state, mark, text, color }.
@@ -269,42 +284,33 @@ function U.ZoneName(z)
     return zone and zone[1] or "?"
 end
 
--- "Lvl 10–15 · The Barrens" for a loaded route id.
-function U.BandLabel(routeId)
-    local r = K.routes[routeId]
-    if not r then
-        return routeId
+-- "Level 12 · The Barrens": the character's level and the zone of the first step of the plan.
+function U.PlanLabel()
+    local level = (K.player and K.player.level) or 1
+    local _, step = K.Engine:Current()
+    local z = step and (step.z or step.to)
+    if z then
+        return string.format(L.PLAN_LABEL, level, U.ZoneName(z))
     end
-    local z = r.entry and r.entry.z
-    return string.format(L.BAND_LABEL, r.lo or 0, r.hi or 0, U.ZoneName(z))
+    return string.format(L.PLAN_LABEL_BARE, level)
 end
 
--- Band ids the character can pick: its own branch and the shared horde bands, in level order.
-function U.BandChoices(currentId)
-    local cur = currentId and K.routes[currentId]
-    local branch = cur and cur.branch or "horde"
-    local out = {}
-    for id, r in pairs(K.routes) do
-        if r.branch == branch or r.branch == "horde" then
-            out[#out + 1] = id
-        end
+-- Rows of the Plan tab: the stops coming up and the zone changes (phase 27 forecast).
+function U.PlanRows()
+    local plan = K.Engine.plan
+    if not (plan and K.Planner and K.Plan.Explain) then
+        return {}
     end
-    table.sort(out, function(a, b)
-        local ra, rb = K.routes[a], K.routes[b]
-        if ra.lo ~= rb.lo then
-            return ra.lo < rb.lo
-        end
-        return a < b
-    end)
-    return out
+    local env = K.Planner.ExplainEnv()
+    return K.Plan.Explain.ForecastLines(K.Plan.Explain.Forecast(plan, env), env)
 end
 
--- The reset and audit actions, in page order: reset band, reset guide, audit.
+-- The reset and resync actions, in page order: clear skipped steps, reset guide, resync.
 function U.ResetItems()
     return {
         { text = L.MENU_RESET_BAND, fn = function() StaticPopup_Show("KLIMAX_RESET_BAND") end },
         { text = L.MENU_RESET_ALL, fn = function() StaticPopup_Show("KLIMAX_RESET_ALL") end },
-        { text = L.MENU_AUDIT, fn = function() K.Audit.Run(true) end },
+        { text = L.MENU_RESYNC, fn = function() K.Resync() end },
     }
 end
 
@@ -553,27 +559,13 @@ function U.DoNext()
     U.Refresh()
 end
 
--- Skips the displayed step; reports how many dependent steps went with it.
+-- Skips the displayed step.
 function U.DoSkip()
     local m = U.Model(K.Engine)
     U.focusKey = nil
     if m.index then
-        local n = K.Engine:Skip(m.index)
-        if n > 0 then
-            K.Print(string.format(L.SKIPPED, n))
-        end
+        K.Engine:Skip(m.index)
     end
-    U.Refresh()
-end
-
-function U.JumpBand(routeId)
-    U.focusKey = nil
-    U.lastCursor = nil
-    local ok = K.Engine:JumpToBand(routeId)
-    if not ok then
-        K.Print(string.format(L.UNKNOWN_BAND, routeId))
-    end
-    U.ShowTab("guide")
     U.Refresh()
 end
 
@@ -640,6 +632,8 @@ local function refreshGuide(m)
         local c = TAG_COLOR[m.tag] or { 1, 1, 1 }
         g.chip:SetTextColor(c[1], c[2], c[3])
         g.note:SetText(m.note)
+        g.why:SetText(m.why or "")
+        g.planStep = m.planStep
         if m.checklist then
             g.list:SetText(checklistText(m.checklist))
             g.status:SetText(string.format(L.HUB_PROGRESS, m.hubDone, m.hubTotal))
@@ -658,6 +652,8 @@ local function refreshGuide(m)
         g.title:SetText(text)
         g.chip:SetText("")
         g.note:SetText("")
+        g.why:SetText("")
+        g.planStep = nil
         g.list:SetText("")
         g.status:SetText("")
     end
@@ -692,8 +688,33 @@ local function buildGuide(parent)
     g.note:SetWidth(PAGE_W)
     g.note:SetTextColor(0.85, 0.85, 0.85)
 
+    -- why the planner put this step here (phase 27); hover the card for the score breakdown
+    g.why = fontString(g, 11)
+    g.why:SetPoint("TOPLEFT", g.note, "BOTTOMLEFT", 0, -6)
+    g.why:SetWidth(PAGE_W)
+    g.why:SetTextColor(0.55, 0.75, 0.55)
+    g:EnableMouse(true)
+    g:SetScript("OnEnter", function(self)
+        if self.planStep and GameTooltip then
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            for i, line in ipairs(K.Planner.Breakdown(self.planStep)) do
+                if i == 1 then
+                    GameTooltip:SetText(line, 1, 1, 1, 1, true)
+                else
+                    GameTooltip:AddLine(line, 0.8, 0.8, 0.8, true)
+                end
+            end
+            GameTooltip:Show()
+        end
+    end)
+    g:SetScript("OnLeave", function()
+        if GameTooltip then
+            GameTooltip:Hide()
+        end
+    end)
+
     g.list = fontString(g, 12)
-    g.list:SetPoint("TOPLEFT", g.note, "BOTTOMLEFT", 0, -12)
+    g.list:SetPoint("TOPLEFT", g.why, "BOTTOMLEFT", 0, -8)
     g.list:SetWidth(PAGE_W)
 
     g.status = fontString(g, 11)
@@ -703,7 +724,7 @@ local function buildGuide(parent)
 
     g.next = U.Button(g, L.BTN_NEXT, 110, function() U.DoNext() end, L.TIP_NEXT)
     g.skip = U.Button(g, L.BTN_SKIP, 80, function() U.DoSkip() end, L.TIP_SKIP)
-    g.sync = U.Button(g, L.BTN_SYNC, 80, function() K.Sync:RunAndReport() end, L.TIP_SYNC)
+    g.sync = U.Button(g, L.BTN_SYNC, 80, function() K.Resync() end, L.TIP_SYNC)
     U.guideButtons = { g.next, g.skip, g.sync }
     return g
 end
@@ -842,41 +863,33 @@ end
 
 -- ---- Bands page -------------------------------------------------------------------------------
 
-local function onBandClick(row)
-    if row.id then
-        U.JumpBand(row.id)
-    end
-end
-
 function U.RefreshBands()
     local pg = U.pages.bands
     if not pg or U.tab ~= "bands" then
         return
     end
-    local cur = K.Engine.routeId
-    local y, curTop = 0, nil
-    local ids = U.BandChoices(cur)
-    for n, id in ipairs(ids) do
+    local lines = U.PlanRows()
+    local y = 0
+    for n, text in ipairs(lines) do
         local r = pg.rows[n]
         if not r then
-            r = newRow(pg.scroll, onBandClick)
+            r = newRow(pg.scroll, function() end)
             pg.rows[n] = r
         end
-        r.id = id
-        local shade, color = SHADE[n % 2 + 1], { 1, 1, 1 }
-        if id == cur then
-            shade, color, curTop = SHADE_CURRENT, { 1, 0.82, 0 }, y
-        end
-        y = y + fillRow(r, y, U.BandLabel(id), color, shade)
+        y = y + fillRow(r, y, text, { 1, 1, 1 }, SHADE[n % 2 + 1])
     end
-    for n = #ids + 1, #pg.rows do
-        pg.rows[n].id = false
+    for n = #lines + 1, #pg.rows do
         pg.rows[n]:Hide()
     end
-    pg.scroll:SetContentHeight(y)
-    if curTop and pg.follow then
-        pg.scroll:ScrollTo(U.ScrollTarget(curTop, y, pg.scroll.viewH))
+    if #lines == 0 then
+        local r = pg.rows[1]
+        if not r then
+            r = newRow(pg.scroll, function() end)
+            pg.rows[1] = r
+        end
+        y = fillRow(r, 0, L.VIEW_EMPTY, { 0.7, 0.7, 0.7 }, SHADE[1])
     end
+    pg.scroll:SetContentHeight(y)
     pg.follow = false
 end
 
@@ -972,7 +985,7 @@ function U.Refresh()
         return
     end
     local m = U.Model(K.Engine)
-    f.band:SetText(K.Engine.routeId and U.BandLabel(K.Engine.routeId) or "")
+    f.band:SetText(K.Engine.routeId and U.PlanLabel() or "")
     refreshGuide(m)
     U.RefreshSteps()
     U.RefreshBands()
@@ -989,7 +1002,7 @@ local function registerPopups()
         button2 = L.NO,
         OnAccept = function()
             K.Engine:Reset("band")
-            K.Print(string.format(L.RESET_BAND, K.Engine.routeId or "?"))
+            K.Print(L.RESET_BAND)
             U.focusKey = nil
             U.Refresh()
         end,

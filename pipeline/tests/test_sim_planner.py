@@ -10,7 +10,7 @@ import pytest
 from pipeline.sim import planner as pl
 
 VECTORS = Path("tests/vectors/planner")
-NAMES = ["hub", "ready_here", "zone_change", "chain", "tie_break"]
+NAMES = ["hub", "ready_here", "zone_change", "chain", "tie_break", "equivalent"]
 
 
 def _vector(name: str) -> dict:
@@ -68,3 +68,26 @@ def test_plan_is_deterministic() -> None:
         pl.world_from_vector(v), pl.state_from_vector(v), v["snapshot"], wt, level_xp=level_xp
     )
     assert a == b
+
+
+def test_spine_factor_matches_the_lua_rules() -> None:
+    from pipeline.sim.planner import spine_factor
+
+    wt = {
+        "spine": {
+            "rows": [[1411, 1, 12], [1413, 10, 24]],
+            "on": 1.15,
+            "off": 0.6,
+            "boost": {840: 1.3},
+            "dungeons": [{"m": 1413, "lo": 17, "hi": 24}],
+            "window": 1.5,
+        }
+    }
+    assert spine_factor({"q": 1, "m": 1411}, 5, {}) == 1.0
+    assert spine_factor({"q": 1, "m": 1411}, 5, wt) == 1.15
+    assert spine_factor({"q": 1, "m": 1411}, 14, wt) == 0.6
+    assert spine_factor({"q": 1, "m": 1412}, 5, wt) == 0.6
+    assert abs(spine_factor({"q": 840, "m": 1411}, 5, wt) - 1.15 * 1.3) < 1e-9
+    dungeon = {"q": 2, "m": 1413, "flags": ["dungeon"]}
+    assert abs(spine_factor(dungeon, 20, wt) - 1.15 * 1.5) < 1e-9
+    assert spine_factor(dungeon, 12, wt) == 1.15

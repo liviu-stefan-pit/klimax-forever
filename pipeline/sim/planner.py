@@ -166,6 +166,27 @@ def risk(flags: list[str] | None, wt: dict[str, Any]) -> float:
     return m
 
 
+def spine_factor(p: dict[str, Any], level: int, wt: dict[str, Any]) -> float:
+    """Curated spine factor, as ``Score.Spine`` in Lua (1.0 without ``wt['spine']``)."""
+    sp = wt.get("spine")
+    if not sp:
+        return 1.0
+    f = sp["off"]
+    for m, lo, hi in sp.get("rows") or []:
+        if m == p.get("m") and lo <= level <= hi:
+            f = sp["on"]
+            break
+    boost = (sp.get("boost") or {}).get(p["q"])
+    if boost:
+        f = f * boost
+    for d in sp.get("dungeons") or []:
+        if d["m"] == p.get("m") and d["lo"] <= level <= d["hi"]:
+            if "dungeon" in (p.get("flags") or []):
+                f = f * sp["window"]
+            break
+    return f
+
+
 def value(p: dict[str, Any], level: int, wt: dict[str, Any]) -> tuple[float, dict[str, Any]]:
     col = colour(p.get("lv"), level, wt["levelSlack"])
     lv = p.get("lv") if p.get("lv") is not None else level
@@ -185,6 +206,9 @@ def value(p: dict[str, Any], level: int, wt: dict[str, Any]) -> tuple[float, dic
         terms["upgrade"] = wt["upgrade"]
     if p.get("chain"):
         terms["chain"] = 1.0 + wt["chain"]
+    spine = spine_factor(p, level, wt)
+    if spine != 1.0:
+        terms["spine"] = spine
     v = (
         xp
         * terms["colourMult"]
@@ -192,6 +216,7 @@ def value(p: dict[str, Any], level: int, wt: dict[str, Any]) -> tuple[float, dic
         * terms["class"]
         * terms["upgrade"]
         * terms["chain"]
+        * spine
     )
     return v, terms
 
@@ -380,10 +405,14 @@ def packet(
         "q": q,
         "n": rec.get("n"),
         "lv": lv,
+        "m": W.quest_zone(q),
         "stage": stage,
         "locked": locked,
         "pa": rec.get("pa"),
         "po": rec.get("po"),
+        "pv": rec.get("pv"),
+        "ex": rec.get("ex"),
+        "eq": rec.get("eq"),
         "rl": max(rec.get("rl") or 1, rec.get("re") or 1),
         "xp": base_xp,
         "flags": rec.get("f"),
@@ -433,7 +462,9 @@ def collect(W: World, state: StateFn, snap: dict[str, Any], wt: dict[str, Any], 
 
 def candidates(W: World, state: StateFn, snap: dict[str, Any], wt: dict[str, Any]):
     pool = collect(W, state, snap, wt, False)
-    if len(pool) < wt["localMin"]:
+    level = snap.get("level") or 1
+    live = sum(1 for p in pool if not p["locked"] and value(p, level, wt)[0] > 0)
+    if live < wt["localMin"]:
         pool = collect(W, state, snap, wt, True)
     return pool
 
@@ -564,6 +595,12 @@ def prepare(pool, wt, pathf):
     return cache
 
 
+def _value_at(cache, i, p, level, wt):
+    if level not in cache[i]["value"]:
+        cache[i]["value"][level] = value(p, level, wt)
+    return cache[i]["value"][level]
+
+
 def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
     opened = []
     nearest_c = None
@@ -573,7 +610,8 @@ def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
         if st != "done" and (not p["locked"] or sim["open"].get(i) or unlocked(p, sim, is_done)):
             task = cache[i]["task"][st]
             opened.append((i, p, st, task))
-            if st == "C" and task["m"] == sim["m"]:
+            worth = _value_at(cache, i, p, sim["level"], wt)[0] > 0
+            if st == "C" and task["m"] == sim["m"] and worth:
                 d = dist(sim["x"], sim["y"], task["x"], task["y"])
                 if nearest_c is None or d < nearest_c:
                     nearest_c = d
@@ -591,9 +629,13 @@ def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
             cache[i]["value"][sim["level"]] = value(p, sim["level"], wt)
         v, terms = cache[i]["value"][sim["level"]]
         ob = obligation(st, wt)
+        if v <= 0 and st == "T":
+            v = terms["xp"] * wt["greyTurnin"]
         if v <= 0:
             continue
         rest = cache[i]["rest"][st]
+        if rest >= wt["unreachable"]:
+            continue
         cost = max(travel + task["time"] + rest, wt["minCost"])
         score = v * ob / cost
         leave = near = False
@@ -643,6 +685,31 @@ def _level_up(sim: dict[str, Any], level_xp: list[int]) -> None:
         sim["level"] = sim["level"] + 1
 
 
+def _drop_implied(pool, stages, sim, by_q, p) -> None:
+    """Handing in ``p`` completes its chain predecessors and all-of prerequisites too (Lua
+    ``dropImplied``): a breadcrumb or earlier link still to accept, or already in the log, goes."""
+    stack: list[int] = []
+    seen: set[int] = set()
+
+    def push(ids) -> None:
+        for ident in ids or []:
+            if ident not in seen:
+                seen.add(ident)
+                stack.append(ident)
+
+    push(p.get("pv"))
+    push(p.get("pa"))
+    while stack:
+        ident = stack.pop()
+        i = by_q.get(ident)
+        if i is not None:
+            if stages[i] != "done":
+                stages[i] = "done"
+                sim["done"][ident] = True
+            push(pool[i].get("pv"))
+            push(pool[i].get("pa"))
+
+
 def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
     is_done = is_done or (lambda q: False)
     if level_xp is None:
@@ -658,6 +725,7 @@ def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
     }
     stages = [p["stage"] for p in pool]
     cache = prepare(pool, wt, pathf)
+    by_q = {p["q"]: i for i, p in enumerate(pool)}
     steps: list[dict[str, Any]] = []
     while len(steps) < wt["lookahead"]:
         best = None
@@ -704,9 +772,22 @@ def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
         sim["m"], sim["x"], sim["y"] = task["m"], task["x"], task["y"]
         if p["locked"]:
             sim["open"][best["i"]] = True
+        if task["kind"] == "A" and p.get("ex"):
+            for j, other in enumerate(pool):
+                if j != best["i"] and other.get("ex") == p["ex"] and stages[j] == "A":
+                    stages[j] = "done"
+        if p.get("eq"):
+            for j, other in enumerate(pool):
+                if (
+                    j != best["i"]
+                    and other.get("eq") == p["eq"]
+                    and (stages[j] == "A" or (task["kind"] == "T" and stages[j] != "done"))
+                ):
+                    stages[j] = "done"
         stages[best["i"]] = next_stage(p, stages[best["i"]])
         if stages[best["i"]] == "done":
             sim["done"][p["q"]] = True
+            _drop_implied(pool, stages, sim, by_q, p)
             sim["xp"] = sim["xp"] + xp_at(
                 p["xp"] or 0, p["lv"] if p["lv"] is not None else sim["level"], sim["level"]
             )
@@ -772,7 +853,26 @@ def build(
     def is_done(q: int) -> bool:
         return state(q)[0] == "completed"
 
-    return run(pool, snap, wt, pathf, is_done, first, level_xp)
+    steps = run(pool, snap, wt, pathf, is_done, first, level_xp)
+    if not steps:
+        # nothing doable near the player: look at every zone in the level band (phase 26)
+        wide = collect(W, state, snap, wt, True)
+        if len(wide) > len(pool):
+            steps = run(wide, snap, wt, pathf, is_done, first, level_xp)
+    return steps
+
+
+def weights_for_profile(
+    profile: dict[str, str] | None = None,
+) -> tuple[dict[str, Any], list[int]]:
+    """Weights for a profile (``Weights.For`` in Lua); settings apply in the file's fixed order."""
+    data = json.loads(WEIGHTS_FILE.read_text(encoding="utf-8"))
+    wt = copy.deepcopy(data["default"])
+    for key in data["order"]:
+        preset = data["profile"].get(key, {}).get((profile or {}).get(key, ""))
+        if preset:
+            merge(wt, preset)
+    return wt, list(data["levelXp"])
 
 
 def weights_for(overrides: dict[str, Any] | None = None) -> tuple[dict[str, Any], list[int]]:

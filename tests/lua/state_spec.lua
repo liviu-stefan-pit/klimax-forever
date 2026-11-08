@@ -140,7 +140,7 @@ end)
 describe("snapshot and K.State", function()
     local function login(opts)
         K = W.start(W.merge({ skipRoutes = true }, opts))
-        W.registerIndex({ routes = {}, start = {}, quests = { [10] = { "x" }, [11] = { "x" }, [12] = { "x" } } })
+        W.setUniverse(K, { 10, 11, 12 })
         W.fire("PLAYER_LOGIN")
         W.flushTimers()
         return K
@@ -149,7 +149,11 @@ describe("snapshot and K.State", function()
     it("scans the completed flags in slices across frames", function()
         K = W.start({ skipRoutes = true })
         K.Snapshot.BATCH = 100
-        W.registerIndex({ routes = {}, start = {}, quests = { [10] = { "x" } } })
+        local ids = {}
+        for id = 1, 300 do
+            ids[id] = id
+        end
+        W.setUniverse(K, ids)
         W.state.completed[10] = true
         local done
         K.Snapshot.ScanCompleted(function(set, known)
@@ -210,87 +214,5 @@ describe("snapshot and K.State", function()
         login()
         local rec = K.State.Info(788)
         assert.equal("Cutting Teeth", rec.n)
-    end)
-end)
-
-describe("resync report", function()
-    it("counts completed, hidden and newly available steps", function()
-        K = W.start({ skipRoutes = true })
-        local changed, completed, hidden, available = K.Sync.ChangeReport(
-            { a = "pending", b = "pending", c = "done", d = "blocked", e = "pending" },
-            { a = "done", b = "blocked", c = "done", d = "pending", e = "pending" })
-        assert.equal(3, changed)
-        assert.equal(1, completed)
-        assert.equal(1, hidden)
-        assert.equal(1, available)
-    end)
-
-    it("/klimax resync prints the report", function()
-        K = W.start({ skipRoutes = true })
-        W.registerRoute({ id = "rs", faction = "horde", branch = "horde", lo = 1, hi = 5, steps = {
-            { t = "A", k = "A1", q = 10, n = "Ten", g = "m", z = 1, x = 1, y = 1, npc = 1 },
-            { t = "T", k = "T1", q = 10, n = "Ten", g = "m", z = 1, x = 1, y = 1, npc = 1 },
-        } })
-        W.registerIndex({ routes = {}, start = {}, quests = { [10] = { "rs" } } })
-        K.Detect()
-        K.Engine:Load("rs")
-        W.state.completed[10] = true
-        K.Command("resync")
-        W.flushTimers()
-        local found
-        for _, line in ipairs(W.printed or {}) do
-            if line:find("Resync", 1, true) then
-                found = line
-            end
-        end
-        assert.is_truthy(found)
-        assert.is_truthy(found:find("2 completed", 1, true))
-    end)
-end)
-
-describe("level sync on the state API (migrated from sync_spec)", function()
-    local function setup()
-        K = W.start({ skipRoutes = true })
-        W.registerRoute({ id = "ls", faction = "horde", branch = "horde", lo = 1, hi = 20, steps = {
-            { t = "A", k = "Agrey", q = 20, ql = 3, n = "Grey", g = "m", z = 1, x = 1, y = 1, npc = 1 },
-            { t = "A", k = "Alog", q = 21, ql = 3, n = "Grey in log", g = "m", z = 1, x = 1, y = 1, npc = 1 },
-            { t = "T", k = "Tlog", q = 21, ql = 3, n = "Grey in log", g = "m", z = 1, x = 1, y = 1, npc = 1 },
-            { t = "A", k = "Anew", q = 22, ql = 15, n = "Yellow", g = "m", z = 1, x = 1, y = 1, npc = 1 },
-        } })
-        W.registerIndex({ routes = {}, start = {}, quests = { [20] = { "ls" }, [21] = { "ls" }, [22] = { "ls" } } })
-        W.state.level = 15
-        W.setQuestLog(21, true)
-        W.fire("PLAYER_LOGIN")
-        K.Engine:Load("ls")
-        K.cdb.routeId = "ls"
-        W.flushTimers()
-        return K
-    end
-
-    it("shows a grey quest as archived without storing anything", function()
-        setup()
-        K.Sync:Run()
-        W.flushTimers()
-        assert.equal("archived", K.Engine.eff[K.Engine.byKey.Agrey])
-        assert.is_nil(K.cdb.stepState.ls.Agrey)
-    end)
-
-    it("never archives a grey quest that is in the log", function()
-        setup()
-        K.Sync:Run()
-        W.flushTimers()
-        assert.equal("done", K.Engine.eff[K.Engine.byKey.Alog])
-        assert.equal("pending", K.Engine.eff[K.Engine.byKey.Tlog])
-        assert.equal("Tlog", K.Engine.steps[K.Engine.cursor].k)
-    end)
-
-    it("Next on an ACCEPT the game does not show hides it instead of claiming it done", function()
-        setup()
-        local i = K.Engine.byKey.Anew
-        K.Engine:MarkDone(i)
-        assert.equal("hidden", K.cdb.stepState.ls.Anew)
-        assert.equal("skipped", K.Engine.eff[i])
-        assert.is_true(K.Engine:Unskip("Anew"))
-        assert.equal("pending", K.Engine.eff[i])
     end)
 end)

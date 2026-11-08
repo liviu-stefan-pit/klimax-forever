@@ -1,11 +1,12 @@
 # Klimax — agent instructions
 
-Klimax is a relaxed, solo-friendly leveling guide add-on for WoW Forever (Horde first, levels 1–60, Alliance later). It is built from an offline Python pipeline that turns QuestieDB data into route JSON, which is then compiled into a self-contained Lua add-on. Read `docs/PRD.md` and `docs/PLAYBOOK.md` before making design decisions.
+Klimax is a relaxed, solo-friendly leveling guide add-on for WoW Forever (Horde first, levels 1–60, Alliance later). It is built from an offline Python pipeline that turns QuestieDB data into a quest graph, which is compiled into a self-contained Lua add-on whose planner decides the next steps from the game state. Read `docs/PRD.md` and `docs/PLAYBOOK.md` before making design decisions.
 
 ## Rules
 
-- **The quest graph plus the curated layer is the source of truth** (approved 2026-11-07, `docs/DYNAMIC_GUIDE_PLAN.md` §3). The graph is built from QuestieDB by `python -m pipeline compile-world`; the curated layer is `data/<faction>/world/corrections.json` (and, from phase 25, the curated spine). The band routes in `routes/<faction>/*.route.json` are now **seed knowledge and test references**, still validated. Everything under `Klimax/Routes/` and `Klimax/World/` is generated. Never hand-edit it.
+- **The quest graph plus the curated layer is the source of truth** (approved 2026-11-07, `docs/DYNAMIC_GUIDE_PLAN.md` §3). The graph is built from QuestieDB by `python -m pipeline compile-world`; the curated layer is `data/<faction>/world/corrections.json` (and, from phase 25, the curated spine). The band routes in `routes/<faction>/*.route.json` are **seed knowledge and test references**, still validated, and are no longer shipped in the add-on (phase 29: the band engine, `Sync` and `Audit` are gone). Everything under `Klimax/World/` is generated. Never hand-edit it.
 - **Never modify `QuestieDB/`.** It is read-only input. It is git-ignored and must not be committed.
+- **A planner change touches both sides**: edit `Klimax/Plan/*` and `pipeline/sim/planner.py` together, then run busted and pytest; the vectors and golden plans must agree.
 - **Always run the validators after touching data**: `python -m pipeline validate <file>` for routes, `python -m pipeline validate --world` for the world graph (also fails when `Klimax/World` is stale; rebuild with `python -m pipeline compile-world`).
 - **Keep the add-on dependency-free and taint-free.** No libraries, no external add-on dependencies, no network, and no calls to protected functions.
 - **Update `docs/PROGRESS.md` at the end of each phase**, including decisions in its Decisions log.
@@ -13,10 +14,10 @@ Klimax is a relaxed, solo-friendly leveling guide add-on for WoW Forever (Horde 
 
 ## Layout
 
-- `pipeline/`: Python 3.11+ package (`extract`, `shape`, `routes`, `world`, `diagnose`, `tests`).
+- `pipeline/`: Python 3.11+ package (`extract`, `shape`, `routes`, `world`, `diagnose`, `sim`, `tests`). `pipeline/sim/` holds the Python mirror of the planner and the simulator; keep it equal to `Klimax/Plan/*` (shared vectors and golden plans enforce it).
 - `data/raw/` (generated, git-ignored), `data/horde/` (travel graph, bands, curated decisions, `world/corrections.json`).
-- `routes/horde/`: band route JSON (seed knowledge and test references).
-- `Klimax/`: the shippable add-on folder.
+- `routes/horde/`: band route JSON (seed knowledge and test references). `data/horde/world/spine.json` is the curated spine; `tests/golden/plans.json` the golden plans (`python -m pipeline.sim.harness --golden`, review the diff).
+- `Klimax/`: the shippable add-on folder (`State/` game truth, `Plan/` planner, `Services/` and `Class/`, `Engine.lua` the step engine over the plan).
 - `tests/lua/`: busted specs and WoW API stubs.
 
 ## Commands

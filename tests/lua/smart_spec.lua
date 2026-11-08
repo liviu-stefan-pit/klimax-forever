@@ -1,6 +1,5 @@
 -- Phase 08 smart features: reward scoring (upgrade against the sell-price fallback), trainer plan,
--- bag threshold, resupply, hearthstone and flight hints, opportunity cooldown, nameplate rares and
--- the elite reminder trigger. Decisions are tested as pure functions; the reminder and the
+-- bag threshold, resupply, hearthstone and flight hints, opportunity cooldown and nameplate rares. Decisions are tested as pure functions; the reminder and the
 -- opportunity scan are tested through the add-on's events, with a spy on K.Toast.Show.
 package.path = "tests/lua/?.lua;" .. package.path
 local W = require("wowstubs")
@@ -12,19 +11,6 @@ local function spyToasts(K)
         shown[#shown + 1] = { text = text, seconds = seconds, actions = actions }
     end
     return shown
-end
-
-local function route(id, steps)
-    return { id = id, faction = "horde", branch = "horde", lo = 1, hi = 5, steps = steps,
-        entry = { z = 1413, x = 52, y = 30, lv = 1 } }
-end
-
-local function loadRoute(K, r)
-    W.registerRoute(r)
-    K.Detect()
-    local ok, err = K.Engine:Load(r.id)
-    assert.is_true(ok, err)
-    return K
 end
 
 -- Equipment used by the reward specs.
@@ -228,62 +214,17 @@ describe("opportunity cooldown", function()
     end)
 end)
 
-describe("elite reminder", function()
-    it("reminds only at or past revisitAt, in the stored zone, and only while waiting", function()
-        local K = W.start({ skipRoutes = true })
-        local entry = { state = K.Elite.WAITING, revisitAt = 18, z = 1413 }
-        assert.is_false(K.Elite.ShouldRemind(entry, 17, 1413))
-        assert.is_true(K.Elite.ShouldRemind(entry, 18, 1413))
-        assert.is_false(K.Elite.ShouldRemind(entry, 18, 1420))
-        entry.state = K.Elite.REMINDED
-        assert.is_false(K.Elite.ShouldRemind(entry, 25, 1413))
-    end)
-
-    it("stores a skipped elite, then reminds once and can put it back in the route", function()
-        local K = W.start({ skipRoutes = true })
-        local shown = spyToasts(K)
-        local steps = {
-            { t = "A", k = "E1", q = 2001, n = "Ceasing Operations", g = "e", z = 1413, x = 10, y = 10,
-              npc = 2001, note = "Elite mobs.", rv = 18, rw = { why = "a bow" } },
-        }
-        loadRoute(K, route("elite_route", steps))
-        assert.is_true(K.Engine:Skip(1) >= 0)
-        local stored = K.cdb.elitePending["elite_route|E1"]
-        assert.is_not_nil(stored)
-        assert.equals(18, stored.revisitAt)
-
-        W.state.mapID = 1413
-        W.fire("PLAYER_LEVEL_UP", 18)
-        assert.equals(1, #shown)
-        assert.matches("Ceasing Operations", shown[1].text, 1, true)
-        W.fire("ZONE_CHANGED_NEW_AREA")
-        assert.equals(1, #shown)
-
-        shown[1].actions[1].fn()
-        assert.equals(K.Elite.ADDED, stored.state)
-        assert.equals("pending", K.Engine.eff[1])
-    end)
-end)
-
-describe("compiled routes", function()
-    it("loads the real Durotar band and stores a skipped elite with its revisit level", function()
+describe("compiled world", function()
+    it("the hint for the current step does not throw, whatever step is current", function()
         local K = W.start({})
-        K.Detect()
-        local ok, err = K.Engine:Load("horde_durotar_05-10")
-        assert.is_true(ok, err)
-        local idx
-        for i, s in ipairs(K.Engine.steps) do
-            if s.g == "e" and s.rv and not s.cl and not s.ra then
-                idx = i
-                break
-            end
-        end
-        assert.is_not_nil(idx, "the Durotar 05-10 band has an optional-elite step with rv")
-        K.Engine:Skip(idx)
-        local key = "horde_durotar_05-10|" .. K.Engine.steps[idx].k
-        assert.is_not_nil(K.cdb.elitePending[key])
-        -- The hint for the cursor step must not throw, whatever step is current.
+        W.fire("PLAYER_LOGIN")
+        W.flushTimers()
+        K.Engine:Recompute()
         assert.is_true(pcall(K.Helpers.CurrentHint))
+        for _, s in ipairs(K.Engine.steps) do
+            W.showSteps(K, { s })
+            assert.is_true(pcall(K.Helpers.CurrentHint), s.k)
+        end
     end)
 end)
 

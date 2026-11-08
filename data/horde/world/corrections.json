@@ -2,104 +2,319 @@
   "_note": "Curated corrections for the Horde world compile (phase 19). Hand-reviewed; part of the source of truth with the quest graph (see pipeline/world/corrections.py for the format). Sources: the phase 18 diagnosis (python -m pipeline diagnose: shadowed_ids, npc_positions) and the phase 19 graph validator (W_SAME_NAME, W_ITEM_START_UNPLACED, W_NO_FINISHER). Phase 18 found no bad NPC position on any route step (npc_positions: 0 findings), so npcPositions is empty until the in-game checks (PROGRESS.md phase 18 checklist item 7) report one. Nothing here is verified in game yet (verified: false).",
   "equivalents": [
     {
-      "ids": [854, 98024],
+      "ids": [
+        854,
+        98024
+      ],
       "name": "Journey to the Crossroads",
       "note": "854 is the classic Tauren-only breadcrumb from Kirge Sternhorn; 98024 is Forever's Horde-wide one from Thrall. Both end at Thork. The route uses 854. Which one the server flags is open (phase 18 checklist item 8).",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
       "verified": false
     },
     {
-      "ids": [1462, 1463],
+      "ids": [
+        1462,
+        1463
+      ],
       "name": "Earth Sapta",
       "note": "Shaman Earth Sapta, Mulgore (1462) and Durotar (1463) copies; each follows its own Call of Earth chain.",
       "source": "phase 19 graph validator W_SAME_NAME",
       "verified": false
     },
     {
-      "ids": [1474, 1513, 65597, 65604],
+      "ids": [
+        1474,
+        1513,
+        65597,
+        65604
+      ],
       "name": "The Binding (level 20)",
       "note": "Warlock level 20 summoning quest: Undercity (1474, 65597) and Orgrimmar (1513, 65604) copies. 65597 and 65604 share the exclusive partners of 1474 and 1513; treat any one as done.",
       "source": "phase 19 graph validator W_SAME_NAME",
       "verified": false
     },
     {
-      "ids": [1522, 1523, 2983, 2984, 97243],
+      "ids": [
+        1522,
+        1523,
+        2983,
+        2984,
+        97243
+      ],
       "name": "Call of Fire (start)",
       "note": "Shaman Call of Fire starts. The four classic starts are exclusive in the DB and lead to 1524; 97243 is Forever's Zephra's Isle start of its own chain (97244, 97245, 97257).",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
       "verified": false
     },
     {
-      "ids": [1527, 97257],
+      "ids": [
+        1527,
+        97257
+      ],
       "name": "Call of Fire (end)",
       "note": "Last step of the classic chain (1527) and of the Forever chain (97257); either gives the Fire Totem.",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
       "verified": false
     },
     {
-      "ids": [2996, 3001],
+      "ids": [
+        2996,
+        3001
+      ],
       "name": "Seeking Strahad",
       "note": "Warlock level 30: Orgrimmar (2996) and Undercity (3001) starts, both lead to 1801.",
       "source": "phase 19 graph validator W_SAME_NAME",
       "verified": false
     },
     {
-      "ids": [5922, 94913],
+      "ids": [
+        5922,
+        94913
+      ],
       "name": "Moonglade",
       "note": "Druid level 10 from Turak Runetotem: classic Tauren-only (5922) and Forever Horde-wide (94913).",
       "source": "phase 19 graph validator W_SAME_NAME",
       "verified": false
     },
     {
-      "ids": [6061, 6062, 94978],
+      "ids": [
+        6061,
+        6062,
+        94978
+      ],
       "name": "Taming the Beast (first)",
       "note": "Hunter level 10 pet chain starts: Mulgore (6061), Durotar (6062), Zephra's Isle (94978). Phase 18 asks which one the server flags.",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
       "verified": false
     },
     {
-      "ids": [6081, 6089, 94050],
+      "ids": [
+        6081,
+        6089,
+        94050
+      ],
       "name": "Training the Beast",
       "note": "Last step of the hunter pet chain per start zone: Durotar (6081), Mulgore (6089), Zephra's Isle (94050).",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
       "verified": false
     },
     {
-      "ids": [1380, 1381, 96222],
+      "ids": [
+        1380,
+        1381,
+        96222
+      ],
       "name": "Khan Hratha",
       "note": "Desolace level 42: Magram (1380) and Gelkis (1381) versions, and Forever's 96222 (no turn-in NPC in the DB). Outside the compiled zones for now.",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
+      "verified": false
+    },
+    {
+      "ids": [
+        6382,
+        6383
+      ],
+      "name": "The Ashenvale Hunt",
+      "note": "Two givers of the same breadcrumb to the Ashenvale Hunt (Barrens and Orgrimmar); treat either as done.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)",
+      "verified": false
+    },
+    {
+      "ids": [
+        1471,
+        1504
+      ],
+      "name": "The Binding (level 10)",
+      "note": "Warlock Voidwalker quest: Undercity (1471) and Orgrimmar (1504) copies.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)",
       "verified": false
     }
   ],
   "notDuplicates": [
     {
-      "ids": [99, 422, 423, 424, 98298],
+      "ids": [
+        99,
+        422,
+        423,
+        424,
+        98298
+      ],
       "note": "Arugal's Folly: the classic chain 422-423-424-99 and Forever's separate 98298 (other objective item)."
     },
     {
-      "ids": [356, 99156],
+      "ids": [
+        356,
+        99156
+      ],
       "note": "Rear Guard Patrol: 99156 is Forever's follow-up to 356 (prerequisite 356)."
     },
     {
-      "ids": [1516, 1517, 1518, 1519, 1520, 1521, 92466, 92467, 92468],
+      "ids": [
+        1516,
+        1517,
+        1518,
+        1519,
+        1520,
+        1521,
+        92466,
+        92467,
+        92468
+      ],
       "note": "Call of Earth: three parallel chains (Durotar, Mulgore, Zephra's Isle); the starts 1516, 1519 and 92466 are exclusive in the DB, so only one chain opens."
     },
     {
-      "ids": [1522, 1523, 1524, 1525, 1526, 1527, 2983, 2984, 97243, 97244, 97245, 97257],
+      "ids": [
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        2983,
+        2984,
+        97243,
+        97244,
+        97245,
+        97257
+      ],
       "note": "Call of Fire: the classic chain and the Forever chain are different quests; the equivalent starts make sure only one chain opens."
     },
     {
-      "ids": [1471, 1474, 1504, 1513, 65597, 65604],
+      "ids": [
+        1471,
+        1474,
+        1504,
+        1513,
+        65597,
+        65604
+      ],
       "note": "The Binding: level 10 (1471 Undercity, 1504 Orgrimmar) and level 20 (the rest) are different summoning quests."
     },
     {
-      "ids": [6061, 6062, 6082, 6083, 6087, 6088, 94007, 94013, 94978, 94979],
+      "ids": [
+        6061,
+        6062,
+        6082,
+        6083,
+        6087,
+        6088,
+        94007,
+        94013,
+        94978,
+        94979
+      ],
       "note": "Taming the Beast: three steps per start zone, plus Forever's breadcrumb 94007 to Quel'ana Quickgale. The equivalent first steps make sure only one chain opens."
     },
     {
-      "ids": [97288, 97289, 97290, 97291, 97292],
+      "ids": [
+        97288,
+        97289,
+        97290,
+        97291,
+        97292
+      ],
       "note": "Unending Torment: five parts of a Forever series by Master Apothecary Faranell; the DB has no chain links between them."
+    },
+    {
+      "ids": [
+        63,
+        96,
+        100,
+        220,
+        1103,
+        1528,
+        1529,
+        1530,
+        1534,
+        1535,
+        1536,
+        2985,
+        2986
+      ],
+      "note": "Call of Water: the Shaman level 20 chains share one name for every step (per start city and Forever copies)."
+    },
+    {
+      "ids": [
+        1471,
+        1474,
+        1504,
+        1513,
+        1795,
+        65597,
+        65604
+      ],
+      "note": "The Binding: Warlock quests of levels 10 (Voidwalker), 20 (Succubus) and 30 (Felhunter) share one name."
+    },
+    {
+      "ids": [
+        98887,
+        98888
+      ],
+      "note": "Conflict at Darkspear Islands: two Forever quests with one name; kept apart until checked in game."
+    },
+    {
+      "ids": [
+        8389,
+        8390,
+        8426,
+        8427,
+        8428,
+        8431,
+        8432,
+        8433,
+        8436,
+        8437,
+        8440,
+        8441
+      ],
+      "note": "Battleground quests per level bracket (Warsong Gulch, Arathi Basin)."
+    },
+    {
+      "ids": [
+        348,
+        349
+      ],
+      "note": "Stranglethorn Fever: two parts of one chain (349 follows 348)."
+    },
+    {
+      "ids": [
+        1111,
+        1492
+      ],
+      "note": "Wharfmaster Dizzywig: Thousand Needles and Ratchet copies for different races."
+    },
+    {
+      "ids": [
+        1251,
+        1276,
+        1321,
+        1322
+      ],
+      "note": "The Black Shield: Dustwallow chain steps and per-faction copies."
+    },
+    {
+      "ids": [
+        1374,
+        93196
+      ],
+      "note": "Khan Jehn: classic (1374) and Forever (93196) quests with different objectives."
+    },
+    {
+      "ids": [
+        1431,
+        1432,
+        1433,
+        1436
+      ],
+      "note": "Alliance Relations: Alliance-flavoured chain starts for different races; separate quests."
+    },
+    {
+      "ids": [
+        3644,
+        3645,
+        3646
+      ],
+      "note": "Membership Card Renewal: separate steps of the Booty Bay card chain (Tanaris, Stranglethorn)."
     }
   ],
   "npcPositions": [],
@@ -121,6 +336,78 @@
       "note": "Welcome! (Undead): the starter item is in a new character's bags, it has no drop source.",
       "source": "phase 19 graph validator W_ITEM_START_UNPLACED",
       "status": "review"
+    },
+    {
+      "id": 8389,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8390,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8426,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8427,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8428,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8431,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8432,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8433,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8436,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8437,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8440,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
+    },
+    {
+      "id": 8441,
+      "status": "skip",
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 25 graph validator W_SAME_NAME (levels 1-20 zones)"
     },
     {
       "id": 81951,
@@ -153,10 +440,112 @@
       "status": "review"
     },
     {
+      "id": 98093,
+      "status": "broken",
+      "note": "Field to Clear: its NPC (Sulhasa, 14242) has no spawn in the data, so the quest cannot be found. Check in game.",
+      "source": "phase 25 graph validator E_UNREACHABLE"
+    },
+    {
       "id": 98298,
       "note": "Arugal's Folly (Forever): same name as the classic chain end 99, with its own objective item. Check in game whether both are offered.",
       "source": "phase 18 diagnose shadowed_ids (classic-and-custom)",
       "status": "review"
+    },
+    {
+      "id": 8182,
+      "status": "broken",
+      "note": "Prerequisite 8181 is not available to the Horde (other-faction or removed step).",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 94873,
+      "status": "broken",
+      "note": "Turn-in NPC 253140 has no position in the data; cannot be pointed at.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 95663,
+      "status": "broken",
+      "note": "Turn-in NPC 13155 has no position in the data; cannot be pointed at.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 617,
+      "status": "review",
+      "note": "Next quest 623 belongs to another faction's chain.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 652,
+      "status": "review",
+      "note": "Next quest 653 belongs to another faction's chain.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 4788,
+      "status": "review",
+      "note": "Next quest 8181 is not available to the Horde.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 2876,
+      "status": "review",
+      "note": "Starter item drops from a mob the data does not place.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 2882,
+      "status": "review",
+      "note": "Starter item drops from a mob the data does not place.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 93196,
+      "status": "review",
+      "note": "Forever Desolace quest, starter item and turn-in unplaced in the data.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 93678,
+      "status": "review",
+      "note": "Forever Desolace quest, starter item and turn-in unplaced in the data.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 79229,
+      "status": "review",
+      "note": "No turn-in listed; likely a scripted or auto-complete quest.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 96222,
+      "status": "review",
+      "note": "No turn-in listed; likely a scripted or auto-complete quest.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 97265,
+      "status": "review",
+      "note": "No turn-in listed; likely a scripted or auto-complete quest.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 97328,
+      "status": "review",
+      "note": "No turn-in listed; likely a scripted or auto-complete quest.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 97539,
+      "status": "review",
+      "note": "No turn-in listed; likely a scripted or auto-complete quest.",
+      "source": "phase 26 graph validator"
+    },
+    {
+      "id": 1560,
+      "status": "review",
+      "note": "Spawn spread is a wandering NPC; keep.",
+      "source": "phase 26 graph validator"
     }
   ]
 }

@@ -228,8 +228,7 @@ function SM.Open(i, anchor)
     end
     local f = SM.frame or build()
     SM.frame = f
-    local stored = E.routeId and K.cdb.stepState and K.cdb.stepState[E.routeId]
-        and K.cdb.stepState[E.routeId][step.k] or nil
+    local stored = K.cdb.hiddenSteps and K.cdb.hiddenSteps[step.k] and "hidden" or nil
     local pin = K.cdb.pin
     local items = SM.Items(step, E.eff[i], stored, E.QuestSkipped(step.q), pin ~= nil and pin.k == step.k)
     items[#items + 1] = "close"

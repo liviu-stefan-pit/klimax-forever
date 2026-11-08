@@ -10,7 +10,9 @@
 --   scanned        true once the chunked flag scan has finished at least once,
 --   seen           {[questID] = true}: quests this character has had in its log (saved, for
 --                  "abandoned"),
---   skipped        {[questID] = true}: quests the player chose to skip (saved, phase 22 menu).
+--   skipped        {[questID] = true}: quests the player chose to skip (saved, phase 22 menu),
+--   broken         {[questID] = true}: quests whose target was not where the guide said (saved, phase
+--                  28 self-healing); hidden for this character until restored.
 --
 -- The completed set is built from the flag API over every quest the add-on knows (route quests and
 -- compiled world quests), chunked across frames, and cached. QUEST_TURNED_IN adds to it at once; a
@@ -30,7 +32,7 @@ Snap.scanning = false
 
 -- ---- Quest universe -----------------------------------------------------------------------------
 
--- Every quest id the add-on can reason about: route quests, compiled world quests, equivalents.
+-- Every quest id the add-on can reason about: compiled world quests and equivalents.
 function Snap.QuestIds()
     local seen, ids = {}, {}
     local function add(id)
@@ -39,9 +41,6 @@ function Snap.QuestIds()
             seen[id] = true
             ids[#ids + 1] = id
         end
-    end
-    for id in pairs((K.index and K.index.quests) or {}) do
-        add(id)
     end
     local wi = K.WorldDB and K.WorldDB.index
     for id in pairs((wi and wi.quests) or {}) do
@@ -158,6 +157,10 @@ function Snap.Skipped()
     return charSet("skipQuests")
 end
 
+function Snap.Broken()
+    return charSet("brokenQuests")
+end
+
 -- ---- Build ----------------------------------------------------------------------------------------
 
 -- Builds a snapshot from the live client and the cache. Every quest in the log is recorded as seen.
@@ -187,5 +190,6 @@ function Snap.Build()
         scanned = Snap.scanned,
         seen = seen,
         skipped = Snap.Skipped(),
+        broken = Snap.Broken(),
     }
 end

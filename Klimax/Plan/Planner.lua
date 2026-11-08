@@ -88,14 +88,14 @@ end
 -- the client has not cached yet counts as no upgrade until it is.
 P.upgradeCache = {}
 function P.RewardUpgrade(rec)
-    if not (rec and rec.rw and K.Audit and K.Audit.Useful) then
+    if not (rec and rec.rw and K.Rewards and K.Rewards.Useful) then
         return false
     end
     local p = K.player or {}
     for _, item in ipairs(rec.rw) do
         local known = P.upgradeCache[item]
         if known == nil then
-            local ok, useful = pcall(K.Audit.Useful, item, p.class, p.level or 1, 99)
+            local ok, useful = pcall(K.Rewards.Useful, item, p.class, p.level or 1, 99)
             known = ok and useful and true or false
             local data = K.Rewards and K.Rewards.ReadItem and K.Rewards.ReadItem(item)
             if data then
@@ -125,6 +125,17 @@ local function profile()
     return (K.cdb and K.cdb.profile) or {}
 end
 
+-- The curated spine (phase 25) for one branch: the rows of its zones and the shared factors, or nil
+-- when the world has no spine or the branch is unknown. Pure.
+function P.SpineFor(spine, branch)
+    local rows = spine and branch and spine.branches and spine.branches[branch]
+    if not rows then
+        return nil
+    end
+    return { rows = rows, on = spine.onPath, off = spine.offPath, boost = spine.boost,
+        dungeons = spine.dungeons, window = spine.dungeonWindow }
+end
+
 -- Pure build: a plan for a world, a state function, a snapshot and weights. first: quest id whose
 -- next task is forced first (stability). Exposed for specs and the vectors.
 function P.Build(W, state, snap, wt, first)
@@ -133,7 +144,16 @@ function P.Build(W, state, snap, wt, first)
     local function isDone(q)
         return state(q) == "completed"
     end
-    return Sq.Run(pool, snap, wt, path, isDone, first), pool
+    local steps = Sq.Run(pool, snap, wt, path, isDone, first)
+    if #steps == 0 then
+        -- nothing doable near the player: look at every zone in the level band (phase 26)
+        local wide = Ca.Collect(W, state, snap, wt, true)
+        if #wide > #pool then
+            pool = wide
+            steps = Sq.Run(pool, snap, wt, path, isDone, first)
+        end
+    end
+    return steps, pool
 end
 
 local function clock()
@@ -171,6 +191,8 @@ function P:Replan(why)
     local t0 = clock()
     local snap = K.State.snap
     local wt = Wt.For(profile(), snap.class)
+    local branch = K.Engine and K.Engine.BranchForPlayer and K.Engine.BranchForPlayer(K.player)
+    wt.spine = P.SpineFor(K.WorldDB.index.spine, branch)
     local W = P.World()
     local state = stateFn()
     local pin = K.cdb and K.cdb.pin
@@ -205,8 +227,12 @@ function P:Replan(why)
             K.Log("services failed", tostring(res))
         end
     end
+    local previous = self.plan
     self.plan = { steps = steps, built = why or "replan", level = snap.level, ms = clock() - t0,
         at = { m = snap.mapID, x = snap.x, y = snap.y } }
+    if previous then
+        pcall(P.NoteReplan, previous, self.plan)
+    end
     self.dirty = false
     for _, fn in ipairs(self.observers) do
         pcall(fn, self.plan)
@@ -263,6 +289,11 @@ function P.Why(step)
     if w.leave then
         parts[#parts + 1] = L.PLAN_WHY_LEAVE
     end
+    if w.spine and w.spine > 1 then
+        parts[#parts + 1] = L.PLAN_WHY_ONROUTE
+    elseif w.spine and w.spine < 1 then
+        parts[#parts + 1] = L.PLAN_WHY_OFFROUTE
+    end
     return table.concat(parts, ", ")
 end
 
@@ -307,6 +338,113 @@ function P.PrintWhy(n)
     for _, line in ipairs(P.Breakdown(step)) do
         K.Print(line)
     end
+end
+
+-- ---- Phase 27: forecast, "why not" and replan notes -------------------------------------------------
+
+local Ex = K.Plan.Explain
+
+-- The environment the pure explain functions read: locale, names, quest state and the plan.
+function P.ExplainEnv()
+    local W = P.World()
+    local snap = K.State and K.State.snap or {}
+    local wt = Wt.For(profile(), snap.class)
+    local branch = K.Engine and K.Engine.BranchForPlayer and K.Engine.BranchForPlayer(K.player)
+    wt.spine = K.WorldDB and K.WorldDB.index and P.SpineFor(K.WorldDB.index.spine, branch) or nil
+    return {
+        L = L, W = W, snap = snap, wt = wt, plan = P.plan,
+        zoneName = function(m)
+            local zone = K.zones and K.zones[m]
+            return zone and zone[1] or nil
+        end,
+        hubs = W.zoneHubs,
+        state = function(q)
+            if K.State and K.State.Get then
+                return K.State:Get(q)
+            end
+            return nil
+        end,
+        rec = W.quest,
+    }
+end
+
+function P.PrintForecast()
+    local plan = P:Get()
+    if not plan or #plan.steps == 0 then
+        K.Print(L.VIEW_EMPTY)
+        return
+    end
+    local env = P.ExplainEnv()
+    for _, line in ipairs(Ex.ForecastLines(Ex.Forecast(plan, env), env)) do
+        K.Print(line)
+    end
+end
+
+-- Quest ids matching a user's text: the number itself, or compiled quests whose name contains it.
+function P.FindQuests(text, limit)
+    local id = tonumber(text)
+    if id then
+        return { id }
+    end
+    local needle = (text or ""):lower()
+    local out = {}
+    if needle == "" or not K.WorldDB then
+        return out
+    end
+    for _, m in ipairs(K.WorldDB.ZoneIds()) do
+        for _, q in ipairs(P.World().zoneQuests(m)) do
+            local rec = K.WorldDB.Quest(q)
+            if rec and rec.n and rec.n:lower():find(needle, 1, true) then
+                out[#out + 1] = q
+            end
+        end
+    end
+    table.sort(out)
+    while limit and #out > limit do
+        table.remove(out)
+    end
+    return out
+end
+
+function P.PrintWhyNot(text)
+    text = (text or ""):match("^%s*(.-)%s*$")
+    if text == "" then
+        K.Print(L.WHYNOT_USAGE)
+        return
+    end
+    if not (K.State and K.State:Ready()) then
+        K.Print(L.PLAN_EMPTY)
+        return
+    end
+    P:Get()
+    local found = P.FindQuests(text, 6)
+    if #found == 0 then
+        K.Print(string.format(L.WHYNOT_NONE, text))
+        return
+    end
+    local env = P.ExplainEnv()
+    if #found > 1 then
+        K.Print(string.format(L.WHYNOT_MANY, #found, text, #found))
+    end
+    for _, q in ipairs(found) do
+        for _, line in ipairs(Ex.WhyNot(q, env)) do
+            K.Print(line)
+        end
+    end
+end
+
+-- Replan toast: only for moves worth telling (a new zone for good, an urgent stop first).
+P.lastToast = nil
+function P.NoteReplan(old, new)
+    if K.Option and K.Option("toasts") == false then
+        return nil
+    end
+    local text = Ex.ReplanNote(old, new, P.ExplainEnv())
+    if text and text ~= P.lastToast and K.Toast and K.Toast.Show then
+        P.lastToast = text
+        K.Toast.Show(text, 8)
+    end
+    return text
 end
 
 -- ---- Events -----------------------------------------------------------------------------------------

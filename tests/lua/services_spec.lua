@@ -91,6 +91,26 @@ describe("service rules", function()
         assert.equal("ct_WARRIOR", needs[1].role)
     end)
 
+    it("riding: save from 36, learn at 40 when the gold is there (phase 26)", function()
+        local Ru = K.Services.Rules
+        assert.are.same({}, reasons(Ru.Needs(x({ level = 35 }))))
+        local needs = Ru.Needs(x({ level = 37, money = 1000 }))
+        assert.are.same({ "riding_save" }, reasons(needs))
+        assert.is_true(needs[1].hint)
+        local function riding(level, money)
+            local out = {}
+            for _, r in ipairs(reasons(Ru.Needs(x({ level = level, money = money })))) do
+                if r:find("riding", 1, true) then
+                    out[#out + 1] = r
+                end
+            end
+            return out
+        end
+        assert.are.same({ "riding_save" }, riding(40, 1000))
+        assert.are.same({ "riding" }, riding(40, Ru.RIDING_COST))
+        assert.are.same({}, riding(41, Ru.RIDING_COST))
+    end)
+
     it("professions from the profile, and the hints (mail, bank, auction house)", function()
         local Ru = K.Services.Rules
         local needs = Ru.Needs(x({ hasMail = true, freeSlots = 3, money = 20000, trainedAt = 12 }),

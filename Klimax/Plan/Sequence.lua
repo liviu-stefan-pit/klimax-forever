@@ -167,7 +167,7 @@ function Sq.Best(pool, stages, sim, wt, path, isDone, cache)
         if st ~= "done" and (not p.locked or sim.open[i] or unlocked(p, sim, isDone)) then
             local task = cache[i].task[st]
             open[#open + 1] = { i = i, p = p, st = st, task = task }
-            if st == "C" and task.m == sim.m then
+            if st == "C" and task.m == sim.m and valueAt(cache[i], p, sim.level, wt) > 0 then
                 local d = Sc.Dist(sim.x, sim.y, task.x, task.y)
                 if not nearestC or d < nearestC then
                     nearestC = d
@@ -186,8 +186,13 @@ function Sq.Best(pool, stages, sim, wt, path, isDone, cache)
             if travel then
                 local value, terms = valueAt(cache[i], p, sim.level, wt)
                 local obligation = Sc.Obligation(st, wt)
-                if value > 0 then
-                    local rest = cache[i].rest[st]
+                if value <= 0 and st == "T" then
+                    -- a hand-in is still worth the walk once the quest has turned grey (phase 26)
+                    value = terms.xp * wt.greyTurnin
+                end
+                local rest = value > 0 and cache[i].rest[st]
+                -- a quest whose hand-in the travel graph cannot reach is never started (phase 26)
+                if value > 0 and rest < wt.unreachable then
                     local cost = math.max(travel + task.time + rest, wt.minCost)
                     local score = value * obligation / cost
                     local leave, near = false, false
@@ -202,7 +207,7 @@ function Sq.Best(pool, stages, sim, wt, path, isDone, cache)
                         why = { value = value, obligation = obligation, travel = travel, time = task.time,
                             rest = rest, cost = cost, leave = leave, near = near, here = here or nil,
                             xp = terms.xp, colour = terms.colour, risk = terms.risk, class = terms.class,
-                            upgrade = terms.upgrade, chain = terms.chain, score = score } }
+                            upgrade = terms.upgrade, chain = terms.chain, spine = terms.spine, score = score } }
                     if here then
                         if better(c, bestHere) then
                             bestHere = c
@@ -224,6 +229,35 @@ local function levelUp(sim)
     end
 end
 
+-- Handing in quest p completes its chain predecessors and all-of prerequisites too (the
+-- reconciler's "implied" rule, phase 20): a breadcrumb or earlier link still to accept, or already in
+-- the log, is dropped.
+local function dropImplied(pool, stages, sim, byQ, p)
+    local stack, seen = {}, {}
+    local function push(list)
+        for _, id in ipairs(list or {}) do
+            if not seen[id] then
+                seen[id] = true
+                stack[#stack + 1] = id
+            end
+        end
+    end
+    push(p.pv)
+    push(p.pa)
+    while #stack > 0 do
+        local id = table.remove(stack)
+        local i = byQ[id]
+        if i then
+            if stages[i] ~= "done" then
+                stages[i] = "done"
+                sim.done[id] = true
+            end
+            push(pool[i].pv)
+            push(pool[i].pa)
+        end
+    end
+end
+
 -- Plan steps from pool. snap: {level, xp, mapID, x, y}. path: Transitions.Cache. isDone(q): the
 -- game state says q is handed in. first: optional quest id whose next task must come first (plan
 -- stability). Returns the step list.
@@ -236,6 +270,10 @@ function Sq.Run(pool, snap, wt, path, isDone, first)
         stages[i] = p.stage
     end
     local cache = prepare(pool, wt, path)
+    local byQ = {}
+    for i, p in ipairs(pool) do
+        byQ[p.q] = i
+    end
     local steps = {}
     while #steps < wt.lookahead do
         local best
@@ -278,9 +316,28 @@ function Sq.Run(pool, snap, wt, path, isDone, first)
         if p.locked then
             sim.open[best.i] = true
         end
+        if task.kind == "A" and p.ex then
+            -- taking one quest of an exclusive group shuts out the others (reconciler rule 5)
+            for j, other in ipairs(pool) do
+                if j ~= best.i and other.ex == p.ex and stages[j] == "A" then
+                    stages[j] = "done"
+                end
+            end
+        end
+        if p.eq then
+            -- an equivalent quest (same purpose, another id): taking one shuts out the others still
+            -- to accept; handing one in completes the others at any stage (phase 26)
+            for j, other in ipairs(pool) do
+                local shut = stages[j] == "A" or (task.kind == "T" and stages[j] ~= "done")
+                if j ~= best.i and other.eq == p.eq and shut then
+                    stages[j] = "done"
+                end
+            end
+        end
         stages[best.i] = nextStage(p, stages[best.i])
         if stages[best.i] == "done" then
             sim.done[p.q] = true
+            dropImplied(pool, stages, sim, byQ, p)
             sim.xp = sim.xp + Sc.XpAt(p.xp or 0, p.lv or sim.level, sim.level)
             levelUp(sim)
         end

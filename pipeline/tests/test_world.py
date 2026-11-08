@@ -209,3 +209,26 @@ def test_corrections_file_is_valid_json_with_sorted_ids() -> None:
     Corrections.from_dict(data)
     for group in data.get("equivalents", []):
         assert group["ids"] == sorted(group["ids"])
+
+
+def test_spine_compiles_into_the_index_and_rejects_bad_input() -> None:
+    import pytest
+
+    from pipeline.shape.data import load_raw
+    from pipeline.world.spine import SpineError, compile_spine, load_spine, spine_path
+
+    if not (RAW / "quests.json").exists():
+        pytest.skip("data/raw is not extracted")
+    raw = load_raw(RAW)
+    spine = compile_spine(load_spine(spine_path(DATA, "horde")), raw)
+    assert spine is not None
+    assert set(spine["branches"]) == {"durotar", "mulgore", "tirisfal", "zephras"}
+    for rows in spine["branches"].values():
+        assert all(len(row) == 3 and row[1] <= row[2] for row in rows)
+    assert spine["boost"] and all(isinstance(k, int) for k in spine["boost"])
+    assert spine["offPath"] < 1.0 < spine["onPath"]
+    assert compile_spine(None, raw) is None
+    with pytest.raises(SpineError):
+        compile_spine({"branches": {"x": [{"zone": "NOT_A_ZONE", "from": 1, "to": 5}]}}, raw)
+    with pytest.raises(SpineError):
+        compile_spine({"branches": {"x": [{"zone": "DUROTAR", "from": 9, "to": 5}]}}, raw)

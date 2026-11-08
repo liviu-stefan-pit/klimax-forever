@@ -309,8 +309,12 @@ def compile_faction(
     world: World,
     *,
     stitched: bool = False,
+    routes_out: Path | None = None,
 ) -> CompileResult:
-    """Validate every route in ``routes_dir`` and build the Lua files (nothing is written)."""
+    """Validate every route in ``routes_dir`` and build the Lua files (nothing is written).
+
+    The route files go to ``routes_out`` (default ``<addon>/Routes/<Faction>``); the add-on only
+    ships ``Data/Zones.lua`` from this compile since phase 29."""
     routes = load_route_dir(routes_dir)
     if not routes:
         raise CompileError(f"no *.route.json files in {routes_dir}")
@@ -319,7 +323,7 @@ def compile_faction(
     if any(not r.ok for r in reports):
         raise CompileRefused(reports)
     ui_maps = resolve_zones(routes, world)
-    out = addon_dir / "Routes" / faction.capitalize()
+    out = routes_out or addon_dir / "Routes" / faction.capitalize()
     for rid, route in routes.items():
         result.files[out / f"{rid}.lua"] = compile_route(route, world, ui_maps)
     result.files[out / "Index.lua"] = compile_index(routes, world)
@@ -327,12 +331,14 @@ def compile_faction(
     return result
 
 
-def write_result(result: CompileResult, faction: str, addon_dir: Path) -> None:
+def write_result(
+    result: CompileResult, faction: str, addon_dir: Path, routes_out: Path | None = None
+) -> None:
     """Write the files and delete stale generated route files (only ones we generated)."""
     for path, text in result.files.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8", newline="\n")
-    out = addon_dir / "Routes" / faction.capitalize()
+    out = routes_out or addon_dir / "Routes" / faction.capitalize()
     for path in sorted(out.glob("*.lua")):
         if path in result.files:
             continue

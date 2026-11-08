@@ -7,8 +7,7 @@
 --
 -- Refreshes come from the game: login, QUEST_LOG_UPDATE (throttled), QUEST_ACCEPTED,
 -- QUEST_TURNED_IN (the flag cache learns the quest at once), QUEST_REMOVED and level ups.
--- Quest records come from the compiled world (K.WorldDB); a quest outside the compiled zones falls
--- back to what the band routes know about it (prerequisites and required level of its ACCEPT).
+-- Quest records come from the compiled world (K.WorldDB).
 local _, K = ...
 local Snap = K.Snapshot
 local R = K.Reconciler
@@ -23,24 +22,7 @@ St.THROTTLE = 0.5
 
 -- ---- Lookups --------------------------------------------------------------------------------------
 
-local routeMeta -- q -> {pa, po, rl, lv}, built from the band routes once
 local eqOf      -- q -> equivalent group (Index.eq)
-
-local function buildRouteMeta()
-    routeMeta = {}
-    local ids = {}
-    for id in pairs(K.routes or {}) do
-        ids[#ids + 1] = id
-    end
-    table.sort(ids)
-    for _, id in ipairs(ids) do
-        for _, s in ipairs(K.routes[id].steps or {}) do
-            if s.q and s.t == "A" and not routeMeta[s.q] then
-                routeMeta[s.q] = { pa = s.pa, po = s.po, rl = s.ml, lv = s.ql }
-            end
-        end
-    end
-end
 
 local function buildEq()
     eqOf = {}
@@ -52,16 +34,9 @@ local function buildEq()
     end
 end
 
--- Quest record: the compiled world record, else the route meta, else nil.
+-- Quest record: the compiled world record, or nil.
 function St.Info(q)
-    local rec = K.WorldDB and K.WorldDB.Quest and K.WorldDB.Quest(q)
-    if rec then
-        return rec
-    end
-    if not routeMeta then
-        buildRouteMeta()
-    end
-    return routeMeta[q]
+    return K.WorldDB and K.WorldDB.Quest and K.WorldDB.Quest(q) or nil
 end
 
 local function exGroup(id)
@@ -86,34 +61,16 @@ local function knownSet()
     return St.universe
 end
 
--- Quests the legacy guide believes accepted: an ACCEPT step stored as done in any band.
-local function believedSet()
-    local out = {}
-    for _, states in pairs((K.cdb and K.cdb.stepState) or {}) do
-        for key, v in pairs(states) do
-            if v == "done" then
-                local q = key:match(":A:(%d+):")
-                if q then
-                    out[tonumber(q)] = true
-                end
-            end
-        end
-    end
-    return out
-end
-
 -- ---- Context ----------------------------------------------------------------------------------------
 
 -- A reconciler context for a snapshot (exposed for specs and the planner).
 function St.Context(snap)
-    local believed = believedSet()
     local known = knownSet()
     return R.New(snap, {
         info = St.Info,
         exGroup = exGroup,
         eqGroup = eqGroup,
         known = function(q) return known[q] == true end,
-        believed = function(q) return believed[q] == true end,
     })
 end
 
@@ -156,7 +113,6 @@ end
 -- Rescans every completed flag (chunked across frames), then refreshes. onDone(snap) runs after.
 function St:Resync(onDone)
     St.universe = nil
-    routeMeta = nil
     eqOf = nil
     Snap.ScanCompleted(function()
         St:Refresh("resync")

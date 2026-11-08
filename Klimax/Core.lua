@@ -6,28 +6,6 @@ K.name = ADDON
 K.SCHEMA = 1
 K.player = K.player or {}
 
--- Phase 18: which step engine runs. "legacy" is the band engine (Engine.lua with Sync and Audit).
--- A later engine registers itself in K.engines; until then any other value falls back to legacy.
--- The choice is KlimaxDB.options.engine, set with /klimax engine <name> and applied on /reload.
-K.engines = K.engines or {}
-
-function K.EngineMode()
-    local want = K.db and K.db.options and K.db.options.engine
-    if want and K.engines[want] then
-        return want
-    end
-    return "legacy"
-end
-
-local function engineNames()
-    local names = {}
-    for name in pairs(K.engines) do
-        names[#names + 1] = name
-    end
-    table.sort(names)
-    return table.concat(names, ", ")
-end
-
 -- ---- Event frame and dispatcher -------------------------------------------------------------
 
 K.frame = CreateFrame("Frame")
@@ -128,6 +106,16 @@ local function migrateAccount(db)
         db.options = db.options or {}
         db.version = 1
     end
+    if db.version < 2 then
+        -- Phase 29: the band engine is gone. Its engine choice and the options that only steered it
+        -- (optional/elite steps, auto-advance) are dropped; every other option stays.
+        db.options = db.options or {}
+        db.options.engine = nil
+        db.options.showOptional = nil
+        db.options.showElite = nil
+        db.options.autoAdvance = nil
+        db.version = 2
+    end
     db.options = db.options or {}
     return db
 end
@@ -152,10 +140,21 @@ local function migrateCharacter(cdb)
         end
         cdb.version = 2
     end
+    if cdb.version < 3 then
+        -- Phase 29: the plan engine. The game is the truth, so the stored band progress is no longer
+        -- read: it stays in the file (the old add-on version can still use it) and is cleared by
+        -- "Reset whole guide". What carries over is every skipped quest (above) and the pin; the
+        -- audit and elite leftovers are dropped.
+        cdb.legacyRoute = cdb.legacyRoute or cdb.routeId
+        cdb.routeId = nil
+        cdb.ignoredSuggestions = nil
+        cdb.elitePending = nil
+        cdb.version = 3
+    end
     cdb.stepState = cdb.stepState or {}
     cdb.skipQuests = cdb.skipQuests or {}
-    cdb.ignoredSuggestions = cdb.ignoredSuggestions or {}
-    cdb.elitePending = cdb.elitePending or {}
+    cdb.hiddenSteps = cdb.hiddenSteps or {}
+    cdb.brokenQuests = cdb.brokenQuests or {}
     return cdb
 end
 
@@ -209,39 +208,36 @@ function K.Command(msg)
     elseif cmd == "debug" then
         K.DebugDump()
     elseif cmd == "sync" or cmd == "resync" then
-        K.Sync:RunAndReport()
+        K.Resync()
     elseif cmd == "profile" then
         K.Profile.Command(rest)
     elseif cmd == "plan" then
         K.Planner.PrintPlan(tonumber(rest))
     elseif cmd == "why" then
         K.Planner.PrintWhy(rest)
+    elseif cmd == "whynot" then
+        K.Planner.PrintWhyNot(rest)
+    elseif cmd == "forecast" then
+        K.Planner.PrintForecast()
+    elseif cmd == "report" then
+        K.Telemetry.Command(rest)
+    elseif cmd == "view" then
+        K.PlanView.Toggle()
     elseif cmd == "reset" then
         if rest:lower() == "all" then
             K.Engine:Reset("all")
             K.Print(L.RESET_ALL)
+        elseif rest:lower() == "guide" then
+            K.Engine:Reset("guide")
+            K.Print(L.RESET_GUIDE)
         else
             K.Engine:Reset("band")
-            K.Print(string.format(L.RESET_BAND, K.Engine.routeId or "?"))
-        end
-    elseif cmd == "band" then
-        local ok, reason = K.Engine:JumpToBand(rest)
-        if not ok then
-            K.Print(string.format(L.UNKNOWN_BAND, rest))
-            K.Log("band jump failed", reason)
+            K.Print(L.RESET_BAND)
         end
     elseif cmd == "dev" then
         K.DevCommand(rest)
     elseif cmd == "dump" then
         K.Diag.Dump()
-    elseif cmd == "audit" then
-        if rest:lower() == "state" then
-            K.Diag.ReportState()
-        else
-            K.Audit.Run(true)
-        end
-    elseif cmd == "engine" then
-        K.EngineCommand(rest)
     else
         K.Print(L.HELP)
     end
@@ -251,18 +247,17 @@ SlashCmdList["KLIMAX"] = function(msg)
     K.Command(msg)
 end
 
--- "/klimax engine" prints the selected engine; "/klimax engine <name>" selects a registered one.
-function K.EngineCommand(rest)
-    local name = (rest or ""):lower()
-    if name == "" then
-        K.Print(string.format(L.ENGINE_CURRENT, K.EngineMode(), engineNames()))
-    elseif K.engines[name] then
-        K.db.options = K.db.options or {}
-        K.db.options.engine = name
-        K.Print(string.format(L.ENGINE_SET, name))
-    else
-        K.Print(string.format(L.ENGINE_UNKNOWN, name, engineNames()))
+-- Re-reads the quest flags and the log from the game and rebuilds the plan (the old "Sync").
+function K.Resync()
+    if not (K.State and K.State.Resync) then
+        return
     end
+    K.State:Resync(function()
+        if K.Engine then
+            K.Engine:Recompute()
+        end
+        K.Print(L.RESYNCED)
+    end)
 end
 
 -- Dev-only helpers (phase 08). "dev level N" fakes the level for the engine and the elite module,
@@ -277,10 +272,13 @@ function K.DevCommand(rest)
     end
     K.player = K.player or {}
     K.player.level = math.floor(n)
-    K.Engine:Recompute()
-    if K.Elite then
-        K.Elite.Check()
+    if K.State and K.State.snap then
+        K.State.snap.level = K.player.level
     end
+    if K.Planner then
+        K.Planner.dirty = true
+    end
+    K.Engine:Recompute()
     K.Print(string.format(L.DEV_LEVEL, K.player.level))
 end
 

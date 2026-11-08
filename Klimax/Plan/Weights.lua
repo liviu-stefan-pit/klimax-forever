@@ -22,6 +22,7 @@ Wt.DEFAULT = {
     -- difficulty colour multipliers (grey and red are never planned with 0)
     colour = { grey = 0, green = 0.75, yellow = 1.0, orange = 0.9, red = 0 },
     obligationActive = 1.3,  -- quest in the log, objectives not done: finish before walking away
+    greyTurnin = 0.5,        -- value factor (of its XP) for handing in a quest that has turned grey
     obligationReady = 1.8,   -- quest in the log, ready to hand in
     here = 1.0,              -- map-%: accepts and turn-ins this close are taken before moving on
     near = 6.0,              -- map-%: a task this close is a pickup on the way

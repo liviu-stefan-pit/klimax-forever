@@ -130,7 +130,8 @@ function Ca.Packet(W, q, rec, stage, locked, snap, wt)
     local pos = { m = snap.mapID, x = snap.x or 50, y = snap.y or 50 }
     local p = {
         q = q, n = rec.n, lv = rec.lv or snap.level, stage = stage, locked = locked or nil,
-        pa = rec.pa, po = rec.po, rl = math.max(rec.rl or 1, rec.re or 1),
+        m = W.questZone and W.questZone(q),
+        pa = rec.pa, po = rec.po, pv = rec.pv, ex = rec.ex, eq = rec.eq, rl = math.max(rec.rl or 1, rec.re or 1),
         xp = rec.xp or (W.xpl and W.xpl[rec.lv or 1]) or 0,
         flags = rec.f, classQuest = rec.cl ~= nil,
         upgrade = (W.upgrade and W.upgrade(q, rec)) or (rec.ru ~= nil and #rec.ru > 0),
@@ -166,7 +167,15 @@ end
 -- widens to the whole level band when fewer than wt.localMin packets are found.
 function Ca.Build(W, state, snap, wt)
     local pool = Ca.Collect(W, state, snap, wt, false)
-    if #pool < wt.localMin then
+    -- count the packets worth doing now (not locked, not grey or red), so a log full of finished
+    -- or outgrown quests does not keep the scan local (phase 26)
+    local live, level = 0, snap.level or 1
+    for _, p in ipairs(pool) do
+        if not p.locked and Sc.Value(p, level, wt) > 0 then
+            live = live + 1
+        end
+    end
+    if live < wt.localMin then
         pool = Ca.Collect(W, state, snap, wt, true)
     end
     return pool

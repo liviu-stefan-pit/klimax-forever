@@ -1,0 +1,400 @@
+{
+  "_note": "Curated spine for the Horde planner (phase 25, DYNAMIC_GUIDE_PLAN s4.1 and s7). Hand-reviewed; part of the source of truth with the quest graph and corrections.json. branches: the zones each start branch should be leveling in, with the levels they suit; the planner multiplies a quest's value by onPath inside its branch's zones at those levels and by offPath elsewhere (another race's start zone, a zone the branch has outgrown). boost: quests worth extra (key breadcrumbs and chain starts). dungeons: windows when a dungeon's quests are worth it, if the profile allows dungeons. Phase 26 added the level 20 to 40 zones and the RFK, SM, RFD and ULD windows. Rows above about level 24 are a first pass from the usual Horde order, to be tuned with the simulator.",
+  "branches": {
+    "durotar": [
+      {
+        "zone": "DUROTAR",
+        "from": 1,
+        "to": 12
+      },
+      {
+        "zone": "ORGRIMMAR",
+        "from": 8,
+        "to": 45
+      },
+      {
+        "zone": "THE_BARRENS",
+        "from": 10,
+        "to": 24
+      },
+      {
+        "zone": "STONETALON_MOUNTAINS",
+        "from": 15,
+        "to": 27
+      },
+      {
+        "zone": "ASHENVALE",
+        "from": 18,
+        "to": 32
+      },
+      {
+        "zone": "HILLSBRAD_FOOTHILLS",
+        "from": 22,
+        "to": 32
+      },
+      {
+        "zone": "ARATHI_HIGHLANDS",
+        "from": 28,
+        "to": 40
+      },
+      {
+        "zone": "STRANGLETHORN_VALE",
+        "from": 30,
+        "to": 45
+      },
+      {
+        "zone": "THOUSAND_NEEDLES",
+        "from": 24,
+        "to": 36
+      },
+      {
+        "zone": "DESOLACE",
+        "from": 28,
+        "to": 38
+      },
+      {
+        "zone": "DUSTWALLOW_MARSH",
+        "from": 34,
+        "to": 42
+      },
+      {
+        "zone": "SWAMP_OF_SORROWS",
+        "from": 36,
+        "to": 44
+      },
+      {
+        "zone": "BADLANDS",
+        "from": 36,
+        "to": 46
+      },
+      {
+        "zone": "TANARIS",
+        "from": 40,
+        "to": 50
+      },
+      {
+        "zone": "THE_HINTERLANDS",
+        "from": 40,
+        "to": 50
+      }
+    ],
+    "mulgore": [
+      {
+        "zone": "MULGORE",
+        "from": 1,
+        "to": 12
+      },
+      {
+        "zone": "THUNDER_BLUFF",
+        "from": 8,
+        "to": 45
+      },
+      {
+        "zone": "THE_BARRENS",
+        "from": 10,
+        "to": 24
+      },
+      {
+        "zone": "ORGRIMMAR",
+        "from": 12,
+        "to": 45
+      },
+      {
+        "zone": "STONETALON_MOUNTAINS",
+        "from": 15,
+        "to": 27
+      },
+      {
+        "zone": "ASHENVALE",
+        "from": 18,
+        "to": 32
+      },
+      {
+        "zone": "HILLSBRAD_FOOTHILLS",
+        "from": 22,
+        "to": 32
+      },
+      {
+        "zone": "ARATHI_HIGHLANDS",
+        "from": 28,
+        "to": 40
+      },
+      {
+        "zone": "STRANGLETHORN_VALE",
+        "from": 30,
+        "to": 45
+      },
+      {
+        "zone": "THOUSAND_NEEDLES",
+        "from": 24,
+        "to": 36
+      },
+      {
+        "zone": "DESOLACE",
+        "from": 28,
+        "to": 38
+      },
+      {
+        "zone": "DUSTWALLOW_MARSH",
+        "from": 34,
+        "to": 42
+      },
+      {
+        "zone": "SWAMP_OF_SORROWS",
+        "from": 36,
+        "to": 44
+      },
+      {
+        "zone": "BADLANDS",
+        "from": 36,
+        "to": 46
+      },
+      {
+        "zone": "TANARIS",
+        "from": 40,
+        "to": 50
+      },
+      {
+        "zone": "THE_HINTERLANDS",
+        "from": 40,
+        "to": 50
+      }
+    ],
+    "tirisfal": [
+      {
+        "zone": "TIRISFAL_GLADES",
+        "from": 1,
+        "to": 12
+      },
+      {
+        "zone": "UNDERCITY",
+        "from": 8,
+        "to": 45
+      },
+      {
+        "zone": "SILVERPINE_FOREST",
+        "from": 10,
+        "to": 20
+      },
+      {
+        "zone": "ORGRIMMAR",
+        "from": 14,
+        "to": 45
+      },
+      {
+        "zone": "THE_BARRENS",
+        "from": 14,
+        "to": 24
+      },
+      {
+        "zone": "STONETALON_MOUNTAINS",
+        "from": 16,
+        "to": 27
+      },
+      {
+        "zone": "ASHENVALE",
+        "from": 18,
+        "to": 32
+      },
+      {
+        "zone": "HILLSBRAD_FOOTHILLS",
+        "from": 20,
+        "to": 32
+      },
+      {
+        "zone": "ARATHI_HIGHLANDS",
+        "from": 28,
+        "to": 40
+      },
+      {
+        "zone": "STRANGLETHORN_VALE",
+        "from": 30,
+        "to": 45
+      },
+      {
+        "zone": "THOUSAND_NEEDLES",
+        "from": 24,
+        "to": 36
+      },
+      {
+        "zone": "DESOLACE",
+        "from": 28,
+        "to": 38
+      },
+      {
+        "zone": "DUSTWALLOW_MARSH",
+        "from": 34,
+        "to": 42
+      },
+      {
+        "zone": "SWAMP_OF_SORROWS",
+        "from": 36,
+        "to": 44
+      },
+      {
+        "zone": "BADLANDS",
+        "from": 36,
+        "to": 46
+      },
+      {
+        "zone": "TANARIS",
+        "from": 40,
+        "to": 50
+      },
+      {
+        "zone": "THE_HINTERLANDS",
+        "from": 40,
+        "to": 50
+      }
+    ],
+    "zephras": [
+      {
+        "zone": "ZEPHRAS_ISLE",
+        "from": 1,
+        "to": 13
+      },
+      {
+        "zone": "THUNDER_BLUFF",
+        "from": 10,
+        "to": 45
+      },
+      {
+        "zone": "ORGRIMMAR",
+        "from": 12,
+        "to": 45
+      },
+      {
+        "zone": "THE_BARRENS",
+        "from": 12,
+        "to": 24
+      },
+      {
+        "zone": "STONETALON_MOUNTAINS",
+        "from": 15,
+        "to": 27
+      },
+      {
+        "zone": "ASHENVALE",
+        "from": 18,
+        "to": 32
+      },
+      {
+        "zone": "HILLSBRAD_FOOTHILLS",
+        "from": 22,
+        "to": 32
+      },
+      {
+        "zone": "ARATHI_HIGHLANDS",
+        "from": 28,
+        "to": 40
+      },
+      {
+        "zone": "STRANGLETHORN_VALE",
+        "from": 30,
+        "to": 45
+      },
+      {
+        "zone": "THOUSAND_NEEDLES",
+        "from": 24,
+        "to": 36
+      },
+      {
+        "zone": "DESOLACE",
+        "from": 28,
+        "to": 38
+      },
+      {
+        "zone": "DUSTWALLOW_MARSH",
+        "from": 34,
+        "to": 42
+      },
+      {
+        "zone": "SWAMP_OF_SORROWS",
+        "from": 36,
+        "to": 44
+      },
+      {
+        "zone": "BADLANDS",
+        "from": 36,
+        "to": 46
+      },
+      {
+        "zone": "TANARIS",
+        "from": 40,
+        "to": 50
+      },
+      {
+        "zone": "THE_HINTERLANDS",
+        "from": 40,
+        "to": 50
+      }
+    ]
+  },
+  "boost": [
+    {
+      "id": 840,
+      "factor": 1.3,
+      "note": "Conscript of the Horde: Durotar's road to the Crossroads."
+    },
+    {
+      "id": 842,
+      "factor": 1.3,
+      "note": "Crossroads Conscription: opens the Crossroads hub."
+    }
+  ],
+  "dungeons": [
+    {
+      "name": "Ragefire Chasm",
+      "zone": "ORGRIMMAR",
+      "from": 13,
+      "to": 18
+    },
+    {
+      "name": "Wailing Caverns",
+      "zone": "THE_BARRENS",
+      "from": 17,
+      "to": 24
+    },
+    {
+      "name": "Shadowfang Keep",
+      "zone": "SILVERPINE_FOREST",
+      "from": 22,
+      "to": 30
+    },
+    {
+      "name": "Blackfathom Deeps",
+      "zone": "ASHENVALE",
+      "from": 24,
+      "to": 32
+    },
+    {
+      "name": "Razorfen Kraul",
+      "zone": "THE_BARRENS",
+      "from": 29,
+      "to": 38
+    },
+    {
+      "name": "Scarlet Monastery",
+      "zone": "TIRISFAL_GLADES",
+      "from": 32,
+      "to": 42
+    },
+    {
+      "name": "Razorfen Downs",
+      "zone": "THE_BARRENS",
+      "from": 37,
+      "to": 46
+    },
+    {
+      "name": "Uldaman",
+      "zone": "BADLANDS",
+      "from": 38,
+      "to": 47
+    }
+  ],
+  "weights": {
+    "onPath": 1.15,
+    "offPath": 0.6,
+    "dungeonWindow": 1.5
+  }
+}

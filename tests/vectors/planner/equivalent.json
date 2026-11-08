@@ -1,0 +1,16 @@
+{
+  "name": "equivalent quests: taking one drops the other id of the same purpose",
+  "snapshot": {"level": 20, "xp": 0, "mapID": 1, "x": 50.0, "y": 50.0},
+  "states": {},
+  "world": {
+    "zones": {"1": {"lv": [18, 20, 24], "quests": [1, 2]}},
+    "quests": {
+      "1": {"n": "Hunt", "lv": 20, "rl": 18, "xp": 900, "sn": [10], "en": [10], "eq": 1},
+      "2": {"n": "Hunt", "lv": 20, "rl": 18, "xp": 900, "sn": [10], "en": [10], "eq": 1}
+    },
+    "npcs": {"10": [[1, 50.5, 50.0]]},
+    "objects": {},
+    "travel": {"adj": [], "links": [], "nodes": {}, "cost": {}}
+  },
+  "expect": ["plan:A:1", "plan:T:1"]
+}

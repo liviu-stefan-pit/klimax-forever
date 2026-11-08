@@ -19,7 +19,7 @@ COMMANDS: dict[str, tuple[str, str]] = {
     "rxp-crosscheck": ("Write docs/reports/rxp_crosscheck.md (ids and counts only)", "03b"),
     "shape": ("Build Horde band packs and travel candidates", "02"),
     "validate": ("Validate route JSON (hard gate)", "03"),
-    "compile": ("Compile validated routes into Klimax/Routes/*.lua", "03"),
+    "compile": ("Compile the band routes (test seeds, not shipped) and Data/Zones.lua", "03"),
     "overview": ("Write docs/ROUTE_OVERVIEW.md from the stitched routes", "05"),
     "gen-rares": ("Write Klimax/Data/Rares.lua (rare NPCs in Horde zones)", "08"),
     "gen-chests": ("Write Klimax/Data/Chests.lua (chest spawns in Horde zones)", "08"),
@@ -160,6 +160,12 @@ def build_parser() -> argparse.ArgumentParser:
         if name == "compile":
             sub_parser.add_argument("--addon", type=Path, default=Path("Klimax"))
             sub_parser.add_argument(
+                "--routes-out",
+                type=Path,
+                default=Path("build/routes"),
+                help="where the compiled band routes go, not shipped (default: %(default)s)",
+            )
+            sub_parser.add_argument(
                 "--stitched", action="store_true", help="validate with the stitched-path checks"
             )
             _add_route_paths(sub_parser)
@@ -240,6 +246,7 @@ def _run_compile(args: argparse.Namespace) -> int:
         routes_dir=args.routes_dir or Path("routes") / args.faction,
         addon_dir=args.addon,
         stitched=args.stitched,
+        routes_out=args.routes_out,
     )
 
 

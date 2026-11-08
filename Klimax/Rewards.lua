@@ -184,18 +184,36 @@ function R.ReadItem(link)
     return { name = data.name, sellPrice = data.sellPrice, info = info }
 end
 
--- The route's reward hint for the quest whose reward frame is open, or nil.
+-- The reward the guide suggests for the quest whose reward frame is open, or nil: the first item of
+-- the compiled quest's upgrade list (record `ru`, phase 24 gear advisor).
 function R.HintFor(questID)
-    local E = K.Engine
-    if not questID or not E or not E.steps then
-        return nil
+    local rec = questID and K.WorldDB and K.WorldDB.Quest and K.WorldDB.Quest(questID)
+    return rec and rec.ru and rec.ru[1] or nil
+end
+
+local function equippedInfo(slot)
+    local link = C.GetEquippedLink(slot)
+    local data = link and R.ReadItem(link)
+    return data and data.info or nil
+end
+
+-- Whether an item is useful now: a bag while there are free slots, or an upgrade over the equipped
+-- item. Returns useful, score, name. Uncached items are not useful yet. (Phase 29: moved here from
+-- the Audit module; the planner's gear advisor calls it.)
+function R.Useful(itemID, class, level, freeSlots)
+    local data = R.ReadItem(itemID)
+    if not data then
+        return false, 0, nil
     end
-    for _, s in ipairs(E.steps) do
-        if s.q == questID and s.rw and s.rw.item then
-            return s.rw.item
-        end
+    local info = data.info
+    if info.classID == 1 then
+        return (freeSlots or 0) > 0, 1, data.name
     end
-    return nil
+    local score = R.Score(info, class, level) or 0
+    local rec = R.Evaluate({
+        { index = 1, id = itemID, name = data.name, sellPrice = data.sellPrice, info = info },
+    }, class, level, equippedInfo, nil)
+    return rec ~= nil and rec.kind == "upgrade", score, data.name
 end
 
 local glow = {}   -- index -> texture on the reward button

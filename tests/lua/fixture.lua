@@ -3,7 +3,7 @@
 -- A fixture is the JSON written by `python -m pipeline fixture` from a `/klimax dump` (or a
 -- hand-built file with the same shape, see tests/README.md). Fx.start(fx) installs it in
 -- the WoW stubs (player, position, quest log, completed quests, saved variables), loads the whole
--- add-on with the real compiled routes, logs in and runs the login sync to the end, so a spec can
+-- add-on, logs in and lets the state scan finish, so a spec can
 -- replay what the character saw. JSON is read with dkjson, which ships with busted.
 package.path = "tests/lua/?.lua;" .. package.path
 local W = require("wowstubs")
@@ -64,24 +64,20 @@ function Fx.logList(fx)
     return out
 end
 
--- The character's SavedVariables rebuilt from the fixture's engine block.
+-- The character's SavedVariables rebuilt from the fixture's engine block. Phase 29: only the
+-- player's choices carry over (skipped quests); the old band progress is not read any more.
 function Fx.charDB(fx)
     local e = fx.engine or {}
     return {
-        version = 1,
-        routeId = e.routeId,
-        stepState = deepCopy(e.stepState or {}),
-        detours = deepCopy(e.detours),
-        declined = deepCopy(e.declined),
-        gearChoice = deepCopy(e.gearChoice),
-        ignoredSuggestions = numberKeys(e.ignoredSuggestions),
-        elitePending = deepCopy(e.elitePending or {}),
-        auditDone = e.auditDone,
+        version = 3,
+        skipQuests = numberKeys(e.skipQuests),
+        hiddenSteps = deepCopy(e.hiddenSteps or {}),
+        brokenQuests = numberKeys(e.brokenQuests),
     }
 end
 
 -- Installs the fixture in fresh stubs and loads the add-on. opts.login = false stops before
--- PLAYER_LOGIN (the caller then fires it); opts.skipRoutes = true leaves the real routes out.
+-- PLAYER_LOGIN (the caller then fires it); opts.skipRoutes is passed to the loader.
 -- Returns the add-on table K.
 function Fx.start(fx, opts)
     opts = opts or {}
@@ -137,15 +133,9 @@ function Fx.login()
     W.flushTimers()
 end
 
--- Index of the step with stable key k in the loaded route, or nil.
+-- Index of the plan step with stable key k, or nil.
 function Fx.indexOf(K, k)
     return K.Engine.byKey[k]
-end
-
--- Effective engine state of the step with key k ("pending", "done", ...), or nil.
-function Fx.stateOf(K, k)
-    local i = K.Engine.byKey[k]
-    return i and K.Engine.eff[i] or nil
 end
 
 Fx.W = W

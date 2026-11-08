@@ -7,7 +7,7 @@ local Fx = require("fixture")
 local json = require("dkjson")
 
 local VECTORS = "tests/vectors/planner/"
-local VECTOR_NAMES = { "hub", "ready_here", "zone_change", "chain", "tie_break" }
+local VECTOR_NAMES = { "hub", "ready_here", "zone_change", "chain", "tie_break", "equivalent" }
 
 local function readJson(path)
     local f = assert(io.open(path, "r"), path)
@@ -104,6 +104,8 @@ describe("planner vectors (shared with the Python mirror)", function()
         local file = readJson(VECTORS .. "weights.json")
         assert.are.same(K.Plan.Weights.DEFAULT, file.default)
         assert.are.same(K.Plan.Weights.LEVEL_XP, file.levelXp)
+        assert.are.same(K.Plan.Weights.PROFILE, file.profile)
+        assert.are.same(K.Plan.Weights.ORDER, file.order)
     end)
 end)
 
@@ -134,6 +136,58 @@ describe("scoring", function()
         assert.equal(1.0, wt.colour.green)       -- completionist overrides the pace preset
         assert.equal(1.6, wt.leaveZone)
         assert.equal(0.6, K.Plan.Weights.DEFAULT.risk.elite)   -- the defaults are untouched
+    end)
+end)
+
+describe("the curated spine (phase 25)", function()
+    local Sc = function() return K.Plan.Score end
+    local spine = { onPath = 1.15, offPath = 0.6, dungeonWindow = 1.5, boost = { [840] = 1.3 },
+        branches = { durotar = { { 1411, 1, 12 }, { 1413, 10, 24 } } },
+        dungeons = { { n = "Wailing Caverns", m = 1413, lo = 17, hi = 24 } } }
+
+    it("builds the branch table, or nothing for an unknown branch or world", function()
+        local sp = K.Planner.SpineFor(spine, "durotar")
+        assert.equal(2, #sp.rows)
+        assert.equal(1.15, sp.on)
+        assert.is_nil(K.Planner.SpineFor(spine, "elf"))
+        assert.is_nil(K.Planner.SpineFor(nil, "durotar"))
+    end)
+
+    it("is neutral without a spine", function()
+        assert.equal(1.0, Sc().Spine({ q = 1, m = 1411 }, 5, {}))
+    end)
+
+    it("prefers the home zone at its levels, then the next zone once the level fits", function()
+        local wt = { spine = K.Planner.SpineFor(spine, "durotar") }
+        assert.equal(1.15, Sc().Spine({ q = 1, m = 1411 }, 5, wt))
+        assert.equal(0.6, Sc().Spine({ q = 1, m = 1411 }, 14, wt))   -- outgrown
+        assert.equal(0.6, Sc().Spine({ q = 1, m = 1412 }, 5, wt))    -- another race's zone
+        assert.equal(1.15, Sc().Spine({ q = 1, m = 1413 }, 14, wt))
+        assert.near(1.15 * 1.3, Sc().Spine({ q = 840, m = 1411 }, 5, wt), 1e-9)
+    end)
+
+    it("boosts dungeon quests inside the window only", function()
+        local wt = { spine = K.Planner.SpineFor(spine, "durotar") }
+        local p = { q = 2, m = 1413, flags = { "dungeon" } }
+        assert.near(1.15 * 1.5, Sc().Spine(p, 20, wt), 1e-9)
+        assert.equal(1.15, Sc().Spine(p, 12, wt))
+        assert.equal(1.15, Sc().Spine({ q = 2, m = 1413, flags = {} }, 20, wt))
+    end)
+
+    it("shows in the value terms and moves the value", function()
+        local wt = K.Plan.Weights.For()
+        local base = Sc().Value({ xp = 1000, lv = 5, m = 1411 }, 5, wt)
+        wt.spine = K.Planner.SpineFor(spine, "durotar")
+        local v, terms = Sc().Value({ xp = 1000, lv = 5, m = 1411 }, 5, wt)
+        assert.equal(1.15, terms.spine)
+        assert.near(base * 1.15, v, 1e-6)
+    end)
+
+    it("compiles into the world index", function()
+        local sp = K.WorldDB.index.spine
+        assert.is_table(sp)
+        assert.is_table(sp.branches.zephras)
+        assert.equal(1.15, sp.onPath)
     end)
 end)
 

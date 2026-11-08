@@ -163,12 +163,15 @@ def run_compile(
     routes_dir: Path,
     addon_dir: Path,
     stitched: bool,
+    routes_out: Path | None = None,
 ) -> int:
     world = _load_world(faction, raw, data)
     if world is None:
         return 2
     try:
-        result = compile_faction(faction, routes_dir, addon_dir, world, stitched=stitched)
+        result = compile_faction(
+            faction, routes_dir, addon_dir, world, stitched=stitched, routes_out=routes_out
+        )
     except CompileRefused as exc:
         for report in exc.reports:
             if not report.ok:
@@ -178,7 +181,7 @@ def run_compile(
     except CompileError as exc:
         print(f"compile error: {exc}", file=sys.stderr)
         return 1
-    write_result(result, faction, addon_dir)
+    write_result(result, faction, addon_dir, routes_out)
     warnings = sum(len(r.warnings) for r in result.reports)
     for path in sorted(result.files):
         print(f"wrote {path.as_posix()}")

@@ -15,6 +15,22 @@ DEFAULT_ZONES: tuple[str, ...] = (
     "ORGRIMMAR",
     "THUNDER_BLUFF",
     "UNDERCITY",
+    # Phase 25: levels 1 to 20 beyond the start zones.
+    "SILVERPINE_FOREST",
+    "THE_BARRENS",
+    "STONETALON_MOUNTAINS",
+    "ASHENVALE",
+    # Phase 26: levels 20 to 40.
+    "THOUSAND_NEEDLES",
+    "HILLSBRAD_FOOTHILLS",
+    "ARATHI_HIGHLANDS",
+    "DESOLACE",
+    "DUSTWALLOW_MARSH",
+    "STRANGLETHORN_VALE",
+    "SWAMP_OF_SORROWS",
+    "BADLANDS",
+    "TANARIS",
+    "THE_HINTERLANDS",
 )
 
 # Plan scope is levels 1 to 40 (DYNAMIC_GUIDE_PLAN s2). A quest is compiled when a character of

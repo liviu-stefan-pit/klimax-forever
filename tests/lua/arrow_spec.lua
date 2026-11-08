@@ -57,22 +57,17 @@ describe("arrow geometry", function()
 end)
 
 describe("arrow read-out", function()
-    local function demoRoute(z)
-        W.registerRoute({ id = "arrow_route", faction = "horde", branch = "horde", lo = 1, hi = 5,
-            entry = { z = z, x = 1, y = 1, lv = 1 },
-            steps = { { t = "A", k = "AR1", q = 101, n = "Arrow quest", g = "m", z = z, x = 10, y = 10, npc = 500 } } })
-    end
-
     local function started(zone)
         local K = W.start({ skipRoutes = true })
-        demoRoute(zone or 1413)
         W.fire("PLAYER_LOGIN")
+        W.showSteps(K, { { t = "A", k = "plan:A:101", q = 101, n = "Arrow quest", z = zone or 1413, x = 10, y = 10,
+            npc = 500 } })
         return K
     end
 
     it("points at the displayed step with the distance from the stubbed positions", function()
         local K = started()
-        assert.equals("arrow_route", K.Engine.routeId)
+        assert.equals("plan", K.Engine.routeId)
         local r = K.Arrow.Read()
         assert.equals("arrow", r.kind)
         -- Player (500, 500); target percent (10, 10) gives world (100, 100). dx = dy = -400.
@@ -116,7 +111,7 @@ describe("arrow read-out", function()
         K.Arrow.allowed = true
     end)
 
-    it("is hidden when no route is loaded", function()
+    it("is hidden when there is no plan", function()
         local K = W.start({ skipRoutes = true })
         assert.equals("hidden", K.Arrow.Read().kind)
     end)

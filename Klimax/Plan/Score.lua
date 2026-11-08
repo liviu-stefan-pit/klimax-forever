@@ -67,6 +67,42 @@ function Sc.Risk(flags, wt)
     return m
 end
 
+-- Curated spine factor (phase 25): wt.spine = {rows = {{map, lo, hi}, ...}, on, off, boost = {[q]},
+-- dungeons = {{m, lo, hi}, ...}, window}. A quest in a zone of the character's branch at its level
+-- is on path; any other zone is off path; key quests get their boost; a dungeon's quests inside its
+-- window get the window factor. 1.0 without a spine.
+function Sc.Spine(packet, level, wt)
+    local sp = wt.spine
+    if not sp then
+        return 1.0
+    end
+    local f = sp.off
+    for _, row in ipairs(sp.rows or {}) do
+        if row[1] == packet.m and level >= row[2] and level <= row[3] then
+            f = sp.on
+            break
+        end
+    end
+    local boost = sp.boost and sp.boost[packet.q]
+    if boost then
+        f = f * boost
+    end
+    if sp.dungeons then
+        for _, d in ipairs(sp.dungeons) do
+            if d.m == packet.m and level >= d.lo and level <= d.hi then
+                for _, flag in ipairs(packet.flags or {}) do
+                    if flag == "dungeon" then
+                        f = f * sp.window
+                        break
+                    end
+                end
+                break
+            end
+        end
+    end
+    return f
+end
+
 -- Value of finishing a quest at `level`, before obligations and distance. Returns value and the
 -- terms (for /klimax why). packet: {xp, lv, flags, classQuest, upgrade, chain}.
 function Sc.Value(packet, level, wt)
@@ -83,7 +119,11 @@ function Sc.Value(packet, level, wt)
     if packet.chain then
         terms.chain = 1.0 + wt.chain
     end
-    local value = xp * terms.colourMult * terms.risk * terms.class * terms.upgrade * terms.chain
+    local spine = Sc.Spine(packet, level, wt)
+    if spine ~= 1.0 then
+        terms.spine = spine
+    end
+    local value = xp * terms.colourMult * terms.risk * terms.class * terms.upgrade * terms.chain * spine
     return value, terms
 end
 

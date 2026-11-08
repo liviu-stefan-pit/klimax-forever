@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Klimax
 ## Notes: Relaxed solo leveling guide for WoW Forever (Horde first). Route data is derived from QuestieDB (GPL-3.0); credit to the QuestieDB authors.
-## Version: 0.7.0
+## Version: 0.8.0
 ## SavedVariables: KlimaxDB
 ## SavedVariablesPerCharacter: KlimaxCharDB
 
@@ -18,31 +18,26 @@ World\Index.lua
 World\Travel.lua
 World\Durotar.lua
 World\Mulgore.lua
+World\TheBarrens.lua
+World\ArathiHighlands.lua
+World\Badlands.lua
 World\TirisfalGlades.lua
+World\SilverpineForest.lua
+World\HillsbradFoothills.lua
+World\TheHinterlands.lua
+World\StranglethornVale.lua
+World\SwampOfSorrows.lua
+World\Ashenvale.lua
+World\ThousandNeedles.lua
+World\StonetalonMountains.lua
+World\Desolace.lua
+World\DustwallowMarsh.lua
+World\Tanaris.lua
 World\Orgrimmar.lua
 World\ThunderBluff.lua
 World\Undercity.lua
 World\ZephrasIsle.lua
 World\Outside.lua
-Routes\Horde\Index.lua
-Routes\Horde\horde_durotar_01-05.lua
-Routes\Horde\horde_durotar_05-10.lua
-Routes\Horde\horde_horde_10-15.lua
-Routes\Horde\horde_horde_15-20.lua
-Routes\Horde\horde_horde_20-25.lua
-Routes\Horde\horde_horde_25-30.lua
-Routes\Horde\horde_horde_30-35.lua
-Routes\Horde\horde_horde_35-40a.lua
-Routes\Horde\horde_horde_35-40b.lua
-Routes\Horde\horde_horde_40-45a.lua
-Routes\Horde\horde_mulgore_01-05.lua
-Routes\Horde\horde_mulgore_05-10.lua
-Routes\Horde\horde_tirisfal_01-05.lua
-Routes\Horde\horde_tirisfal_05-10.lua
-Routes\Horde\horde_tirisfal_10-15.lua
-Routes\Horde\horde_zephras_01-05.lua
-Routes\Horde\horde_zephras_05-10.lua
-Routes\Horde\horde_zephras_10-15.lua
 Core.lua
 State\Snapshot.lua
 State\Reconciler.lua
@@ -53,6 +48,7 @@ Plan\Transitions.lua
 Plan\Candidates.lua
 Plan\Sequence.lua
 Plan\Planner.lua
+Plan\Explain.lua
 Profile.lua
 Class\Class.lua
 Class\Hunter.lua
@@ -60,7 +56,6 @@ Class\Classes.lua
 Services\Rules.lua
 Services\Services.lua
 Engine.lua
-Sync.lua
 Arrow.lua
 UI.lua
 Toast.lua
@@ -68,8 +63,8 @@ Helpers.lua
 Rewards.lua
 Trainer.lua
 Opportunities.lua
-Elite.lua
-Audit.lua
 Diag.lua
 StepMenu.lua
 Wizard.lua
+PlanView.lua
+Telemetry.lua

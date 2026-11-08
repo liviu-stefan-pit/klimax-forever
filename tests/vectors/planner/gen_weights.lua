@@ -27,4 +27,4 @@ local function enc(v, ind)
     return string.format("%q", v)
   end
 end
-io.write(enc({ default = Wt.DEFAULT, levelXp = Wt.LEVEL_XP, _note = "Generated from Klimax/Plan/Weights.lua (planner_spec checks it). Read by pipeline/sim/planner.py." }), "\n")
+io.write(enc({ default = Wt.DEFAULT, levelXp = Wt.LEVEL_XP, profile = Wt.PROFILE, order = Wt.ORDER, _note = "Generated from Klimax/Plan/Weights.lua (planner_spec checks it). Read by pipeline/sim/planner.py." }), "\n")

@@ -399,14 +399,26 @@ function W.merge(a, b)
     return out
 end
 
--- Registers a route table the way the generated files do.
-function W.registerRoute(route)
-    Klimax_RegisterRoute(route)
+-- Makes the add-on's quest universe (the ids whose completed flag is scanned) a fixed list.
+function W.setUniverse(K, ids)
+    K.Snapshot.QuestIds = function()
+        return ids
+    end
 end
 
--- Registers an index the way Index.lua does.
-function W.registerIndex(index)
-    Klimax_RegisterIndex(index)
+-- Shows plan steps in the window without building a real plan: the planner is replaced by one that
+-- returns this list, and the step engine rebuilds from it (so hiding, skipping and pinning work).
+-- Steps are plan steps ({t, k, q, n, z, x, y, npc ...}); returns the engine.
+function W.showSteps(K, steps)
+    local plan = { steps = steps }
+    K.Planner.Get = function()
+        return plan
+    end
+    K.Planner.plan = plan
+    local E = K.Engine
+    E.routeId = "plan"
+    E:Recompute()
+    return E
 end
 
 -- Loads the add-on, then runs ADDON_LOADED so SavedVariables are initialised.

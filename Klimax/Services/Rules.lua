@@ -20,6 +20,9 @@ Ru.MANA = { PALADIN = true, HUNTER = true, PRIEST = true, SHAMAN = true, MAGE = 
     DRUID = true }
 
 -- Food and water stacks worth carrying at a level (phase 24): one early, two from level 20.
+-- Riding: start saving at 36, learn it at 40 (copper).
+Ru.RIDING_SAVE_FROM, Ru.RIDING_LEVEL, Ru.RIDING_COST = 36, 40, 900000
+
 function Ru.Stacks(level)
     return (level or 1) >= 20 and 2 or 1
 end
@@ -70,6 +73,12 @@ function Ru.Base(x, profile)
         if level >= 5 and not (x.profTrained and x.profTrained[prof]) then
             add(out, { role = "pt_" .. prof, reason = "profession", urgency = 0.4, maxDetour = 120, arg = prof })
         end
+    end
+    -- The 40 transition (phase 26): save gold for the riding skill and mount, then go and learn it.
+    -- REVIEW: the cost is the classic one (about 90 gold for riding, mount included on this server).
+    if level >= Ru.RIDING_SAVE_FROM and level <= Ru.RIDING_LEVEL then
+        local ready = level >= Ru.RIDING_LEVEL and (x.money or 0) >= Ru.RIDING_COST
+        add(out, { reason = ready and "riding" or "riding_save", urgency = ready and 0.7 or 0.15, hint = true })
     end
     if x.hasMail then
         add(out, { role = "mail", reason = "mail", urgency = 0.2, maxDetour = 30, hint = true })

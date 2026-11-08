@@ -192,22 +192,18 @@ function H.CurrentHint()
     if not step then
         return nil
     end
-    if step.t == "U" then
+    if step.t == "S" and step.reason == "hearth" then
         local start, duration = C.GetItemCooldown(H.HEARTH_ITEM)
         local left = H.CooldownLeft(start, duration, GetTime and GetTime() or 0)
         if left > 0 then
             return string.format(L.HINT_HEARTH_CD, H.Minutes(left))
         end
-        local bind = GetBindLocation and GetBindLocation()
-        if step.to and bind and bind ~= step.to then
-            return string.format(L.HINT_HEARTH_BIND, bind, step.to)
-        end
         return nil
     end
-    if step.t == "R" and K.Trainer then
+    if step.t == "S" and step.reason == "trainer" and K.Trainer then
         return K.Trainer.Hint()
     end
-    if step.t == "V" or step.t == "F" or step.bag then
+    if step.t == "V" then
         local threshold = K.Option("bagThreshold") or 3
         local free = H.FreeSlots()
         if H.BagWarning(free, threshold) then
@@ -224,7 +220,7 @@ function H.CurrentHint()
             return string.format(L.HINT_FLY, node)
         end
     end
-    if step.t == "V" or step.t == "F" then
+    if step.t == "V" then
         local low = H.Resupply(H.CountSupplies(), K.player and K.player.class)
         if #low > 0 then
             return string.format(L.HINT_LOW, table.concat(low, ", "))

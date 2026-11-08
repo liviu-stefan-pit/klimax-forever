@@ -36,6 +36,8 @@ class Corrections:
     not_duplicates: list[dict[str, Any]] = field(default_factory=list)
     npc_positions: list[dict[str, Any]] = field(default_factory=list)
     quests: list[dict[str, Any]] = field(default_factory=list)
+    # curated spine (spine.json beside corrections.json), compiled by pipeline.world.spine
+    spine: dict[str, Any] | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> Corrections:
@@ -53,9 +55,15 @@ class Corrections:
 
     @classmethod
     def load(cls, path: Path) -> Corrections:
-        if not path.exists():
-            return cls()
-        return cls.from_dict(json.loads(path.read_text(encoding="utf-8")))
+        from pipeline.world.spine import load_spine
+
+        out = (
+            cls.from_dict(json.loads(path.read_text(encoding="utf-8")))
+            if path.exists()
+            else cls()
+        )
+        out.spine = load_spine(path.with_name("spine.json"))
+        return out
 
     def _check(self) -> None:
         for group in (*self.equivalents, *self.not_duplicates):

@@ -21,6 +21,7 @@ from pipeline.world.corrections import Corrections
 from pipeline.world.hubs import HubMember, cluster_hubs
 from pipeline.world.quests import QuestGraph, is_event
 from pipeline.world.services import ALL_ROLES, HUB_SERVICE_ROLES, ServiceIndex
+from pipeline.world.spine import compile_spine
 from pipeline.world.travel import build_travel, neighbours
 from pipeline.world.zones import Zone, level_range, level_weight, resolve_zones
 
@@ -214,6 +215,9 @@ def build_world(
     index = _index(zones, tables, quest_zone, entity_zone, graph, equivalents)
     index["xpl"] = [xp_by_level[level] for level in range(1, 61)]
     index["dungeons"] = dungeon_entrances(raw, instances)
+    spine = compile_spine(corrections.spine, raw)
+    if spine is not None:
+        index["spine"] = spine
     stamp = raw.manifest.get("questiedb", {})
     db = {
         "questieDbVersion": str(stamp.get("version", "")),

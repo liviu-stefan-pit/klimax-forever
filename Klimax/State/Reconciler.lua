@@ -13,8 +13,9 @@
 --   unknown:     "no-completed-api" | "log-partial" | "not-scanned" | "untracked"
 --   unavailable: "race" | "class" | "level" | "maxlevel" | "exclusive" | "prereq"
 --   ignored:     "skipped" | "curated"
+--   broken:      "curated" | "reported"
 -- Rules, in order (each one is a spec in tests/lua/state_spec.lua):
---   1. curated broken -> broken;
+--   1. curated broken, or reported broken by this character (phase 28) -> broken;
 --   2. completed: the flag, an equivalent's flag, or implied by a completed later link
 --      (chain predecessors `pv` and all-of prerequisites `pa` of a completed quest are completed);
 --   3. in the log: failed, objectives-done or active (the game always wins over skips);
@@ -185,6 +186,9 @@ local function compute(ctx, q)
     local rec = ctx.info(q)
     if rec and rec.cx == "broken" then
         return "broken", "curated"
+    end
+    if snap.broken and snap.broken[q] then
+        return "broken", "reported"
     end
     if R.Completed(ctx, q) then
         return "completed"

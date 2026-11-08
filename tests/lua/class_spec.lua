@@ -146,7 +146,7 @@ describe("gear advisor", function()
 
     it("the planner asks the reward advisor and caches its answer", function()
         local calls = 0
-        K.Audit.Useful = function(item)
+        K.Rewards.Useful = function(item)
             calls = calls + 1
             return item == 4914, 1, "item"
         end

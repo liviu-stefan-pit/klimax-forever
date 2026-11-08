@@ -11,8 +11,6 @@ ignore = {
 globals = {
     "KlimaxDB",
     "KlimaxCharDB",
-    "Klimax_RegisterRoute",
-    "Klimax_RegisterIndex",
     "Klimax_RegisterZones",
     "SLASH_KLIMAX1",
     "SLASH_KLIMAX2",
@@ -68,6 +66,8 @@ read_globals = {
     -- phase 23 services
     "GetInventoryItemDurability", "UnitExists", "GetPetHappiness", "HasNewMail", "IsTradeskillTrainer",
     "GetBindLocation", "UnitCharacterPoints",
+    -- phase 28 telemetry
+    "UnitGUID", "C_GossipInfo", "GetGossipAvailableQuests", "GetNumAvailableQuests", "GetAvailableTitle",
 }
 
 -- Files that are generated or vendored are not linted.
