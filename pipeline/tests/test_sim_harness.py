@@ -48,15 +48,17 @@ def test_the_simulation_is_deterministic(sw: h.SimWorld) -> None:
 
 
 def test_check_flags_dead_ends_thin_curves_and_stuck_levels() -> None:
-    ok = h.Result("orc", "WARRIOR", "relaxed", level=40, turned=300, per_level={10: 20})
+    ok = h.Result("orc", "WARRIOR", "relaxed", level=h.TARGET, turned=300, per_level={10: 20})
     assert h.check(ok) == []
     stuck = h.Result("orc", "WARRIOR", "relaxed", level=31, turned=200)
     assert any("stopped at level 31" in p for p in h.check(stuck))
-    grinding = h.Result("orc", "WARRIOR", "relaxed", level=40, grinds=h.MAX_GRINDS + 1)
+    grinding = h.Result("orc", "WARRIOR", "relaxed", level=h.TARGET, grinds=h.MAX_GRINDS + 1)
     assert any("dead-end" in p for p in h.check(grinding))
-    heavy = h.Result("orc", "WARRIOR", "relaxed", level=40, per_level={20: 41})
+    heavy = h.Result("orc", "WARRIOR", "relaxed", level=h.TARGET, per_level={20: 41})
     assert any("41 quests" in p for p in h.check(heavy))
-    long_run = h.Result("orc", "WARRIOR", "relaxed", level=40, seconds=(h.MAX_HOURS + 1) * 3600)
+    long_run = h.Result(
+        "orc", "WARRIOR", "relaxed", level=h.TARGET, seconds=(h.MAX_HOURS + 1) * 3600
+    )
     assert any("h of steps" in p for p in h.check(long_run))
 
 

@@ -84,6 +84,13 @@ RAID_NAMES = frozenset(
 )  # fmt: skip
 
 
+# Quest sort ids (``zoneOrSort``) that QuestieDB uses for a dungeon whose ``dungeons.lua`` row has
+# another area id: Zul'Farrak quests are sorted under 978 (the row is 1176) and Sunken Temple
+# quests under 1417 (the row is 1477, The Temple of Atal'Hakkar). No NPC or object spawns in
+# either alias, so they only make those quests count as dungeon quests (phase 31).
+DUNGEON_SORT_ALIASES: dict[int, int] = {978: 1176, 1417: 1477}
+
+
 def _dungeon_info(dungeons: dict[str, Any]) -> tuple[set[int], dict[int, str]]:
     """``dungeons.lua`` rows are either ``{"1": name, ...}`` or ``[name, ...]``."""
     ids: set[int] = set()
@@ -99,6 +106,11 @@ def _dungeon_info(dungeons: dict[str, Any]) -> tuple[set[int], dict[int, str]]:
             name = None
         if isinstance(name, str):
             names[zid] = name
+    for alias, zid in DUNGEON_SORT_ALIASES.items():
+        if zid in ids:
+            ids.add(alias)
+            if zid in names:
+                names.setdefault(alias, names[zid])
     return ids, names
 
 

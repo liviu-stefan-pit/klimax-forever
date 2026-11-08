@@ -69,6 +69,48 @@
       "plan:A:191",
       "plan:C:191",
       "plan:T:191"
+    ],
+    "45": [
+      "plan:V:1458:521",
+      "plan:T:521",
+      "plan:V:1417:665",
+      "plan:A:664",
+      "plan:A:665",
+      "plan:C:665",
+      "plan:T:665",
+      "plan:A:666",
+      "plan:C:664",
+      "plan:C:666",
+      "plan:T:664",
+      "plan:T:666"
+    ],
+    "50": [
+      "plan:C:4145",
+      "plan:T:4145",
+      "plan:A:4147",
+      "plan:V:1413:4147",
+      "plan:T:4147",
+      "plan:V:1446:4504",
+      "plan:A:4504",
+      "plan:V:1449:4504",
+      "plan:C:4504",
+      "plan:V:1446:4504",
+      "plan:T:4504",
+      "plan:V:1449:4284"
+    ],
+    "55": [
+      "plan:V:1447:6804",
+      "plan:T:6804",
+      "plan:V:1423:5543",
+      "plan:A:5543",
+      "plan:A:5544",
+      "plan:A:5542",
+      "plan:C:5543",
+      "plan:C:5544",
+      "plan:V:1422:5058",
+      "plan:A:5058",
+      "plan:T:5058",
+      "plan:A:5060"
     ]
   },
   "tauren-druid-relaxed": {
@@ -141,6 +183,48 @@
       "plan:C:606",
       "plan:T:606",
       "plan:T:2932"
+    ],
+    "45": [
+      "plan:T:82",
+      "plan:A:10",
+      "plan:A:2605",
+      "plan:C:10",
+      "plan:C:2605",
+      "plan:C:6610",
+      "plan:T:6610",
+      "plan:T:2605",
+      "plan:A:2606",
+      "plan:T:10",
+      "plan:A:110",
+      "plan:T:110"
+    ],
+    "50": [
+      "plan:V:1458:4293",
+      "plan:A:4293",
+      "plan:A:4561",
+      "plan:C:4293",
+      "plan:A:4661",
+      "plan:T:4293",
+      "plan:A:8273",
+      "plan:T:8273",
+      "plan:A:81947",
+      "plan:A:81949",
+      "plan:A:81952",
+      "plan:A:81953"
+    ],
+    "55": [
+      "plan:C:4385",
+      "plan:T:4381",
+      "plan:T:4385",
+      "plan:V:1451:8280",
+      "plan:A:8280",
+      "plan:A:8277",
+      "plan:A:8307",
+      "plan:T:8307",
+      "plan:A:8313",
+      "plan:C:8280",
+      "plan:T:8280",
+      "plan:T:8313"
     ]
   },
   "troll-hunter-speed": {
@@ -213,6 +297,48 @@
       "plan:A:703",
       "plan:V:1434:705",
       "plan:C:705"
+    ],
+    "45": [
+      "plan:V:1458:81956",
+      "plan:T:81956",
+      "plan:V:1435:1428",
+      "plan:A:1428",
+      "plan:C:1428",
+      "plan:T:1428",
+      "plan:V:1458:232",
+      "plan:A:232",
+      "plan:T:232",
+      "plan:A:238",
+      "plan:T:238",
+      "plan:A:243"
+    ],
+    "50": [
+      "plan:T:3881",
+      "plan:V:1446:4504",
+      "plan:A:4504",
+      "plan:V:1449:4504",
+      "plan:C:4504",
+      "plan:V:1446:4504",
+      "plan:T:4504",
+      "plan:V:1449:4284",
+      "plan:A:4284",
+      "plan:C:4284",
+      "plan:T:4284",
+      "plan:A:4285"
+    ],
+    "55": [
+      "plan:C:5163",
+      "plan:A:6030",
+      "plan:A:6029",
+      "plan:T:5163",
+      "plan:V:1448:4741",
+      "plan:T:4741",
+      "plan:A:4721",
+      "plan:V:1452:4721",
+      "plan:C:4721",
+      "plan:V:1448:4721",
+      "plan:T:4721",
+      "plan:V:1423:6030"
     ]
   },
   "undead-mage-completionist": {
@@ -281,10 +407,52 @@
       "plan:C:2342",
       "plan:V:1458:2342",
       "plan:T:2342",
-      "plan:V:1424:520",
-      "plan:A:520",
-      "plan:T:517",
-      "plan:A:524"
+      "plan:V:1444:2987",
+      "plan:A:2987",
+      "plan:A:2975",
+      "plan:C:2987"
+    ],
+    "45": [
+      "plan:C:7839",
+      "plan:A:2742",
+      "plan:C:2742",
+      "plan:T:7839",
+      "plan:A:7840",
+      "plan:T:2742",
+      "plan:A:2782",
+      "plan:C:7840",
+      "plan:T:7840",
+      "plan:A:7844",
+      "plan:C:7844",
+      "plan:T:7844"
+    ],
+    "50": [
+      "plan:A:10",
+      "plan:T:5863",
+      "plan:T:1691",
+      "plan:C:10",
+      "plan:T:10",
+      "plan:A:110",
+      "plan:T:110",
+      "plan:A:113",
+      "plan:T:113",
+      "plan:A:32",
+      "plan:A:4504",
+      "plan:V:1425:2641"
+    ],
+    "55": [
+      "plan:T:2702",
+      "plan:A:2701",
+      "plan:T:2701",
+      "plan:A:2721",
+      "plan:C:1430",
+      "plan:T:1420",
+      "plan:V:1456:1000",
+      "plan:A:1000",
+      "plan:V:1419:2721",
+      "plan:T:2721",
+      "plan:V:1435:1430",
+      "plan:T:1430"
     ]
   },
   "zephras-shaman-relaxed": {
@@ -357,6 +525,48 @@
       "plan:C:652",
       "plan:T:701",
       "plan:A:702"
+    ],
+    "45": [
+      "plan:T:8365",
+      "plan:C:8366",
+      "plan:C:2873",
+      "plan:A:992",
+      "plan:C:992",
+      "plan:T:992",
+      "plan:A:82",
+      "plan:C:82",
+      "plan:A:2605",
+      "plan:T:82",
+      "plan:A:10",
+      "plan:C:2605"
+    ],
+    "50": [
+      "plan:T:4321",
+      "plan:T:3883",
+      "plan:A:4382",
+      "plan:A:4386",
+      "plan:C:4382",
+      "plan:C:4386",
+      "plan:T:4382",
+      "plan:T:4386",
+      "plan:A:4381",
+      "plan:A:4385",
+      "plan:C:4381",
+      "plan:C:4385"
+    ],
+    "55": [
+      "plan:V:1448:4109",
+      "plan:T:4109",
+      "plan:A:4721",
+      "plan:V:1452:4721",
+      "plan:C:4721",
+      "plan:V:1448:5155",
+      "plan:T:4721",
+      "plan:C:5155",
+      "plan:T:5155",
+      "plan:A:5157",
+      "plan:C:5157",
+      "plan:T:5157"
     ]
   }
 }

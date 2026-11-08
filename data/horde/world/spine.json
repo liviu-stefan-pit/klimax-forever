@@ -1,5 +1,5 @@
 {
-  "_note": "Curated spine for the Horde planner (phase 25, DYNAMIC_GUIDE_PLAN s4.1 and s7). Hand-reviewed; part of the source of truth with the quest graph and corrections.json. branches: the zones each start branch should be leveling in, with the levels they suit; the planner multiplies a quest's value by onPath inside its branch's zones at those levels and by offPath elsewhere (another race's start zone, a zone the branch has outgrown). boost: quests worth extra (key breadcrumbs and chain starts). dungeons: windows when a dungeon's quests are worth it, if the profile allows dungeons. Phase 26 added the level 20 to 40 zones and the RFK, SM, RFD and ULD windows. Rows above about level 24 are a first pass from the usual Horde order, to be tuned with the simulator. Phase 30 (2026-11-08, from leveling-resources/): windows for the Forever dungeons in QuestieDB (Ruins of Lordaeron 15-20, Excavation Site 24-30, City of Dalaran 28-33; Blizzard's ranges), one row per quest-giver zone because a window matches the giver's zone; Ragefire Chasm and Wailing Caverns gained their Thunder Bluff and Undercity givers; the Dalaran attunement quests are boosted. The Drowned City and Krol'dok Stronghold have no quests in QuestieDB yet.",
+  "_note": "Curated spine for the Horde planner (phase 25, DYNAMIC_GUIDE_PLAN s4.1 and s7). Hand-reviewed; part of the source of truth with the quest graph and corrections.json. branches: the zones each start branch should be leveling in, with the levels they suit; the planner multiplies a quest's value by onPath inside its branch's zones at those levels and by offPath elsewhere (another race's start zone, a zone the branch has outgrown). boost: quests worth extra (key breadcrumbs and chain starts). dungeons: windows when a dungeon's quests are worth it, if the profile allows dungeons. Phase 26 added the level 20 to 40 zones and the RFK, SM, RFD and ULD windows. Rows above about level 24 are a first pass from the usual Horde order, to be tuned with the simulator. Phase 30 (2026-11-08, from leveling-resources/): windows for the Forever dungeons in QuestieDB (Ruins of Lordaeron 15-20, Excavation Site 24-30, City of Dalaran 28-33; Blizzard's ranges), one row per quest-giver zone because a window matches the giver's zone; Ragefire Chasm and Wailing Caverns gained their Thunder Bluff and Undercity givers; the Dalaran attunement quests are boosted. The Drowned City and Krol'dok Stronghold have no quests in QuestieDB yet. Phase 31 (2026-11-08): rows for levels 40 to 60 from the consensus order in leveling-resources/ (wow-classic README s1, wow-forever README s4): Feralas and Searing Gorge in the 40s, then Azshara, Un'Goro, Felwood, Blasted Lands, Burning Steppes, the Plaguelands, Winterspring and Silithus; the capitals run to 60. Windows for Zul'Farrak 44-54, Maraudon 46-55, Sunken Temple 50-56 and Blackrock Depths 52-60, one row per quest-giver zone found in the compiled graph.",
   "branches": {
     "durotar": [
       {
@@ -10,7 +10,7 @@
       {
         "zone": "ORGRIMMAR",
         "from": 8,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "THE_BARRENS",
@@ -40,7 +40,7 @@
       {
         "zone": "STRANGLETHORN_VALE",
         "from": 30,
-        "to": 45
+        "to": 46
       },
       {
         "zone": "THOUSAND_NEEDLES",
@@ -55,27 +55,87 @@
       {
         "zone": "DUSTWALLOW_MARSH",
         "from": 34,
-        "to": 42
+        "to": 44
       },
       {
         "zone": "SWAMP_OF_SORROWS",
         "from": 36,
-        "to": 44
+        "to": 46
       },
       {
         "zone": "BADLANDS",
         "from": 36,
-        "to": 46
+        "to": 48
       },
       {
         "zone": "TANARIS",
-        "from": 40,
-        "to": 50
+        "from": 42,
+        "to": 52
       },
       {
         "zone": "THE_HINTERLANDS",
-        "from": 40,
+        "from": 44,
+        "to": 52
+      },
+      {
+        "zone": "UNDERCITY",
+        "from": 50,
+        "to": 60
+      },
+      {
+        "zone": "FERALAS",
+        "from": 42,
         "to": 50
+      },
+      {
+        "zone": "SEARING_GORGE",
+        "from": 45,
+        "to": 52
+      },
+      {
+        "zone": "AZSHARA",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "UN_GORO_CRATER",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "FELWOOD",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "BLASTED_LANDS",
+        "from": 50,
+        "to": 56
+      },
+      {
+        "zone": "BURNING_STEPPES",
+        "from": 50,
+        "to": 58
+      },
+      {
+        "zone": "WESTERN_PLAGUELANDS",
+        "from": 51,
+        "to": 60
+      },
+      {
+        "zone": "EASTERN_PLAGUELANDS",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "WINTERSPRING",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "SILITHUS",
+        "from": 55,
+        "to": 60
       }
     ],
     "mulgore": [
@@ -87,7 +147,7 @@
       {
         "zone": "THUNDER_BLUFF",
         "from": 8,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "THE_BARRENS",
@@ -97,7 +157,7 @@
       {
         "zone": "ORGRIMMAR",
         "from": 12,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "STONETALON_MOUNTAINS",
@@ -122,7 +182,7 @@
       {
         "zone": "STRANGLETHORN_VALE",
         "from": 30,
-        "to": 45
+        "to": 46
       },
       {
         "zone": "THOUSAND_NEEDLES",
@@ -137,27 +197,87 @@
       {
         "zone": "DUSTWALLOW_MARSH",
         "from": 34,
-        "to": 42
+        "to": 44
       },
       {
         "zone": "SWAMP_OF_SORROWS",
         "from": 36,
-        "to": 44
+        "to": 46
       },
       {
         "zone": "BADLANDS",
         "from": 36,
-        "to": 46
+        "to": 48
       },
       {
         "zone": "TANARIS",
-        "from": 40,
-        "to": 50
+        "from": 42,
+        "to": 52
       },
       {
         "zone": "THE_HINTERLANDS",
-        "from": 40,
+        "from": 44,
+        "to": 52
+      },
+      {
+        "zone": "UNDERCITY",
+        "from": 50,
+        "to": 60
+      },
+      {
+        "zone": "FERALAS",
+        "from": 42,
         "to": 50
+      },
+      {
+        "zone": "SEARING_GORGE",
+        "from": 45,
+        "to": 52
+      },
+      {
+        "zone": "AZSHARA",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "UN_GORO_CRATER",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "FELWOOD",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "BLASTED_LANDS",
+        "from": 50,
+        "to": 56
+      },
+      {
+        "zone": "BURNING_STEPPES",
+        "from": 50,
+        "to": 58
+      },
+      {
+        "zone": "WESTERN_PLAGUELANDS",
+        "from": 51,
+        "to": 60
+      },
+      {
+        "zone": "EASTERN_PLAGUELANDS",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "WINTERSPRING",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "SILITHUS",
+        "from": 55,
+        "to": 60
       }
     ],
     "tirisfal": [
@@ -169,7 +289,7 @@
       {
         "zone": "UNDERCITY",
         "from": 8,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "SILVERPINE_FOREST",
@@ -179,7 +299,7 @@
       {
         "zone": "ORGRIMMAR",
         "from": 14,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "THE_BARRENS",
@@ -209,7 +329,7 @@
       {
         "zone": "STRANGLETHORN_VALE",
         "from": 30,
-        "to": 45
+        "to": 46
       },
       {
         "zone": "THOUSAND_NEEDLES",
@@ -224,27 +344,82 @@
       {
         "zone": "DUSTWALLOW_MARSH",
         "from": 34,
-        "to": 42
+        "to": 44
       },
       {
         "zone": "SWAMP_OF_SORROWS",
         "from": 36,
-        "to": 44
+        "to": 46
       },
       {
         "zone": "BADLANDS",
         "from": 36,
-        "to": 46
+        "to": 48
       },
       {
         "zone": "TANARIS",
-        "from": 40,
-        "to": 50
+        "from": 42,
+        "to": 52
       },
       {
         "zone": "THE_HINTERLANDS",
-        "from": 40,
+        "from": 44,
+        "to": 52
+      },
+      {
+        "zone": "FERALAS",
+        "from": 42,
         "to": 50
+      },
+      {
+        "zone": "SEARING_GORGE",
+        "from": 45,
+        "to": 52
+      },
+      {
+        "zone": "AZSHARA",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "UN_GORO_CRATER",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "FELWOOD",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "BLASTED_LANDS",
+        "from": 50,
+        "to": 56
+      },
+      {
+        "zone": "BURNING_STEPPES",
+        "from": 50,
+        "to": 58
+      },
+      {
+        "zone": "WESTERN_PLAGUELANDS",
+        "from": 51,
+        "to": 60
+      },
+      {
+        "zone": "EASTERN_PLAGUELANDS",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "WINTERSPRING",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "SILITHUS",
+        "from": 55,
+        "to": 60
       }
     ],
     "zephras": [
@@ -256,12 +431,12 @@
       {
         "zone": "THUNDER_BLUFF",
         "from": 10,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "ORGRIMMAR",
         "from": 12,
-        "to": 45
+        "to": 60
       },
       {
         "zone": "THE_BARRENS",
@@ -291,7 +466,7 @@
       {
         "zone": "STRANGLETHORN_VALE",
         "from": 30,
-        "to": 45
+        "to": 46
       },
       {
         "zone": "THOUSAND_NEEDLES",
@@ -306,27 +481,87 @@
       {
         "zone": "DUSTWALLOW_MARSH",
         "from": 34,
-        "to": 42
+        "to": 44
       },
       {
         "zone": "SWAMP_OF_SORROWS",
         "from": 36,
-        "to": 44
+        "to": 46
       },
       {
         "zone": "BADLANDS",
         "from": 36,
-        "to": 46
+        "to": 48
       },
       {
         "zone": "TANARIS",
-        "from": 40,
-        "to": 50
+        "from": 42,
+        "to": 52
       },
       {
         "zone": "THE_HINTERLANDS",
-        "from": 40,
+        "from": 44,
+        "to": 52
+      },
+      {
+        "zone": "UNDERCITY",
+        "from": 50,
+        "to": 60
+      },
+      {
+        "zone": "FERALAS",
+        "from": 42,
         "to": 50
+      },
+      {
+        "zone": "SEARING_GORGE",
+        "from": 45,
+        "to": 52
+      },
+      {
+        "zone": "AZSHARA",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "UN_GORO_CRATER",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "FELWOOD",
+        "from": 48,
+        "to": 56
+      },
+      {
+        "zone": "BLASTED_LANDS",
+        "from": 50,
+        "to": 56
+      },
+      {
+        "zone": "BURNING_STEPPES",
+        "from": 50,
+        "to": 58
+      },
+      {
+        "zone": "WESTERN_PLAGUELANDS",
+        "from": 51,
+        "to": 60
+      },
+      {
+        "zone": "EASTERN_PLAGUELANDS",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "WINTERSPRING",
+        "from": 53,
+        "to": 60
+      },
+      {
+        "zone": "SILITHUS",
+        "from": 55,
+        "to": 60
       }
     ]
   },
@@ -466,6 +701,102 @@
       "zone": "BADLANDS",
       "from": 38,
       "to": 47
+    },
+    {
+      "name": "Zul'Farrak",
+      "zone": "TANARIS",
+      "from": 44,
+      "to": 54
+    },
+    {
+      "name": "Zul'Farrak",
+      "zone": "THOUSAND_NEEDLES",
+      "from": 44,
+      "to": 54
+    },
+    {
+      "name": "Zul'Farrak",
+      "zone": "DUSTWALLOW_MARSH",
+      "from": 44,
+      "to": 54
+    },
+    {
+      "name": "Zul'Farrak",
+      "zone": "STRANGLETHORN_VALE",
+      "from": 44,
+      "to": 54
+    },
+    {
+      "name": "Zul'Farrak",
+      "zone": "DUROTAR",
+      "from": 44,
+      "to": 54
+    },
+    {
+      "name": "Zul'Farrak",
+      "zone": "UNDERCITY",
+      "from": 44,
+      "to": 54
+    },
+    {
+      "name": "Maraudon",
+      "zone": "DESOLACE",
+      "from": 46,
+      "to": 55
+    },
+    {
+      "name": "Maraudon",
+      "zone": "ORGRIMMAR",
+      "from": 46,
+      "to": 55
+    },
+    {
+      "name": "Sunken Temple",
+      "zone": "SWAMP_OF_SORROWS",
+      "from": 50,
+      "to": 56
+    },
+    {
+      "name": "Sunken Temple",
+      "zone": "THE_HINTERLANDS",
+      "from": 50,
+      "to": 56
+    },
+    {
+      "name": "Sunken Temple",
+      "zone": "TANARIS",
+      "from": 50,
+      "to": 56
+    },
+    {
+      "name": "Sunken Temple",
+      "zone": "FERALAS",
+      "from": 50,
+      "to": 56
+    },
+    {
+      "name": "Blackrock Depths",
+      "zone": "BADLANDS",
+      "from": 52,
+      "to": 60
+    },
+    {
+      "name": "Blackrock Depths",
+      "zone": "BURNING_STEPPES",
+      "from": 52,
+      "to": 60
+    },
+    {
+      "name": "Blackrock Depths",
+      "zone": "UNDERCITY",
+      "from": 52,
+      "to": 60
+    },
+    {
+      "name": "Blackrock Depths",
+      "zone": "TANARIS",
+      "from": 52,
+      "to": 60
     }
   ],
   "weights": {

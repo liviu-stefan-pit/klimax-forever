@@ -17,10 +17,10 @@ local BRANCHES = {
     { name = "zephras", race = "Orc", token = "Orc", map = 2521, x = 40, y = 40 },
 }
 local CLASSES = { "WARRIOR", "HUNTER", "MAGE", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "DRUID", "PALADIN" }
-local TARGET = 40
--- Levels 1 to 40 (phase 26): with the 21 compiled zones every branch reaches 40 on quests alone,
--- and the harness allows at most MAX_GRINDS rounds with no quest worth doing (a dead end).
-local FLOOR = 40
+local TARGET = 60
+-- Levels 1 to 60 (phase 31; 40 in phase 26): with the 32 compiled zones every branch reaches 60 on
+-- quests alone, and the harness allows at most MAX_GRINDS rounds with no quest worth doing (a dead end).
+local FLOOR = 60
 local MAX_ROUNDS = 400
 local MAX_GRINDS = 2
 local GRIND_SHARE = 0.3
@@ -140,7 +140,7 @@ local function run(branch, class, profile, goldenLevels)
     return { level = snap.level, turned = turned, grinds = grinds, golden = golden, problems = problems, rounds = rounds }
 end
 
-describe("simulated characters, levels 1 to 40 (phases 25 and 26)", function()
+describe("simulated characters, levels 1 to 60 (phases 25, 26 and 31)", function()
     setup(function()
         K = W.start()
         R, Sc, Wt = K.Reconciler, K.Plan.Score, K.Plan.Weights
@@ -152,14 +152,15 @@ describe("simulated characters, levels 1 to 40 (phases 25 and 26)", function()
                 local res = run(branch, class)
                 assert.is_true(#res.problems == 0, table.concat(res.problems, "; "))
                 assert.is_true(res.turned > 100, "turned in only " .. res.turned)
-                assert.is_true(res.turned < 500, "turned in " .. res.turned .. " quests: a curve that thin on XP")
+                assert.is_true(res.turned < 900, "turned in " .. res.turned .. " quests: a curve that thin on XP")
                 assert.is_true(res.level >= FLOOR, string.format("stopped at level %d after %d quests (%d grinds)", res.level, res.turned, res.grinds))
             end)
         end
     end
 end)
 
--- Golden plans (phase 28): the default characters' first plan steps at levels 1, 10, 20, 30 and 39,
+-- Golden plans (phase 28): the default characters' first plan steps at levels 1, 10, 20, 30, 39 and
+-- (phase 31) 45, 50 and 55,
 -- written by `python -m pipeline.sim.harness --golden` from the Python mirror. The Lua planner must
 -- build the very same plans: a change to either side shows up as a reviewed diff of the file.
 describe("golden plans", function()
@@ -188,8 +189,8 @@ describe("golden plans", function()
         it(name, function()
             local branch, class, profile = name:match("^(%a+)%-(%a+)%-(%a+)$")
             local want = golden[name]
-            local res = run(BY_NAME[branch], class:upper(), PROFILES[profile], { 1, 10, 20, 30, 39 })
-            for _, level in ipairs({ "1", "10", "20", "30", "39" }) do
+            local res = run(BY_NAME[branch], class:upper(), PROFILES[profile], { 1, 10, 20, 30, 39, 45, 50, 55 })
+            for _, level in ipairs({ "1", "10", "20", "30", "39", "45", "50", "55" }) do
                 assert.are.same(want[level], res.golden[level], name .. " at level " .. level)
             end
         end)

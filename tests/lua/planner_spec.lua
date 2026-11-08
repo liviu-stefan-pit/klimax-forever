@@ -227,6 +227,27 @@ describe("transitions", function()
     end)
 end)
 
+-- Phase 31: a hand-in that completes another quest (its breadcrumb) keeps that quest in step.imp;
+-- the improvement passes never move the accept of that quest after it. Same test in Python
+-- (test_improvement_never_moves_an_accept_after_the_hand_in_that_implies_it).
+describe("improvement passes and implied quests", function()
+    it("never move an accept after the hand-in that implies its quest", function()
+        local Sq = K.Plan.Sequence
+        local wt = K.Plan.Weights.For()
+        local path = K.Plan.Transitions.Cache({ cost = { zoneBorder = 60 }, adj = {}, links = {}, nodes = {} }, wt)
+        local snap = { mapID = 1, x = 52, y = 50 }
+        local function steps(imp)
+            return {
+                { t = "A", k = "plan:A:1", q = 1, z = 1, x = 20, y = 50 },
+                { t = "T", k = "plan:T:2", q = 2, z = 1, x = 52, y = 50, imp = imp },
+            }
+        end
+        assert.same({ "plan:T:2", "plan:A:1" }, keys(Sq.Improve(steps(nil), snap, wt, path)))
+        assert.same({ "plan:A:1", "plan:T:2" }, keys(Sq.Improve(steps({ [1] = true }), snap, wt, path)))
+        assert.same({ "plan:A:1", "plan:T:2" }, keys(Sq.Relocate(steps({ [1] = true }), snap, wt, path)))
+    end)
+end)
+
 describe("the compiled world", function()
     local function login(level, mapID, x, y, race, class)
         K = W.start()

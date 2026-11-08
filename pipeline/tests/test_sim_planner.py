@@ -69,6 +69,31 @@ def test_path_prefers_the_boat_and_flies_between_flight_masters() -> None:
     assert pl.path(g, 2, 99) == (None, None)
 
 
+def test_improvement_never_moves_an_accept_after_the_hand_in_that_implies_it() -> None:
+    """Phase 31 (an Undead Mage at 53 in the 1 to 60 simulation): the walk is shorter with the
+    hand-in of 5082 first, but that hand-in completes its breadcrumb 6603, so accepting 6603
+    afterwards is impossible. Same rule in Lua (planner_spec.lua)."""
+    wt, _ = pl.weights_for()
+    pathf = pl.path_cache({"cost": {"zoneBorder": 60}, "adj": [], "links": [], "nodes": {}}, wt)
+    snap = {"mapID": 1, "x": 52.0, "y": 50.0}
+    accept = {"t": "A", "k": "plan:A:1", "q": 1, "z": 1, "x": 20.0, "y": 50.0}
+    hand_in = {"t": "T", "k": "plan:T:2", "q": 2, "z": 1, "x": 52.0, "y": 50.0}
+    free = dict(hand_in)
+    assert [s["k"] for s in pl.improve([accept, free], snap, wt, pathf)] == [
+        "plan:T:2",
+        "plan:A:1",
+    ]
+    implied = dict(hand_in, imp={1})
+    assert [s["k"] for s in pl.improve([accept, implied], snap, wt, pathf)] == [
+        "plan:A:1",
+        "plan:T:2",
+    ]
+    assert [s["k"] for s in pl.relocate([accept, implied], snap, wt, pathf)] == [
+        "plan:A:1",
+        "plan:T:2",
+    ]
+
+
 def test_plan_is_deterministic() -> None:
     v = _vector("hub")
     wt, level_xp = pl.weights_for()

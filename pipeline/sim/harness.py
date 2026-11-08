@@ -1,5 +1,6 @@
 """Simulator (phase 28, DYNAMIC_GUIDE_PLAN s8): virtual characters walk the planner over the
-compiled world from level 1 to 40, applying quest XP; the harness checks what each plan promised.
+compiled world from level 1 to 60 (phase 31; 40 before), applying quest XP; the harness checks
+what each plan promised.
 
 A character is a race (start branch), a class and a profile. Every round it takes the plan the
 add-on would build (the Python mirror in :mod:`pipeline.sim.planner`) and does every step: accept,
@@ -25,17 +26,19 @@ from typing import Any
 from pipeline.sim import planner as pl
 from pipeline.sim.reconciler import Reconciler
 
-TARGET = 40
+TARGET = 60
 KILL_BONUS = 1.0  # kill XP on the way, as a share of quest XP (the harness has no mobs)
 MAX_ROUNDS = 400
 MAX_GRINDS = 2
 GRIND_SHARE = 0.3
 # Level curve tolerance: quests handed in at one level (Completionist finishes the greens).
-MAX_QUESTS_PER_LEVEL = {"relaxed": 40, "speed": 40, "completionist": 90}
-MAX_HOURS = 60.0  # sane total for 1 to 40 on quests alone (the cost model, not measured)
+# Phase 31 (1 to 60): Completionist sweeps old greens at 47 to 50 and Speed hands in a last batch
+# at 59, so their tolerances grew (relaxed stays 40).
+MAX_QUESTS_PER_LEVEL = {"relaxed": 40, "speed": 45, "completionist": 120}
+MAX_HOURS = 160.0  # sane total for 1 to 60 on quests alone (the cost model, not measured)
 
 GOLDEN_FILE = Path("tests/golden/plans.json")
-GOLDEN_LEVELS = (1, 10, 20, 30, 39)
+GOLDEN_LEVELS = (1, 10, 20, 30, 39, 45, 50, 55)
 GOLDEN_STEPS = 12
 
 BRANCHES: dict[str, dict[str, Any]] = {

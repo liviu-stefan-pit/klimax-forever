@@ -245,7 +245,8 @@ end
 
 -- Handing in quest p completes its chain predecessors and all-of prerequisites too (the
 -- reconciler's "implied" rule, phase 20): a breadcrumb or earlier link still to accept, or already in
--- the log, is dropped.
+-- the log, is dropped. Returns the implied quest ids as a set; the hand-in step keeps them (imp) so
+-- Improve and Relocate never move an accept of one of them after it (phase 31).
 local function dropImplied(pool, stages, sim, byQ, p)
     local stack, seen = {}, {}
     local function push(list)
@@ -270,6 +271,7 @@ local function dropImplied(pool, stages, sim, byQ, p)
             push(pool[i].pa)
         end
     end
+    return seen
 end
 
 -- Plan steps from pool. snap: {level, xp, mapID, x, y}. path: Transitions.Cache. isDone(q): the
@@ -352,7 +354,10 @@ function Sq.Run(pool, snap, wt, path, isDone, first, prior)
         stages[best.i] = nextStage(p, stages[best.i])
         if stages[best.i] == "done" then
             sim.done[p.q] = true
-            dropImplied(pool, stages, sim, byQ, p)
+            local implied = dropImplied(pool, stages, sim, byQ, p)
+            if task.kind == "T" and next(implied) then
+                step.imp = implied
+            end
             sim.xp = sim.xp + Sc.XpAt(p.xp or 0, p.lv or sim.level, sim.level)
             levelUp(sim)
         end
@@ -381,6 +386,7 @@ function Sq.Improve(steps, snap, wt, path)
             local a, b = steps[i], steps[i + 1]
             local movable = a.t ~= "V" and b.t ~= "V" and a.q ~= b.q and a.z == b.z
                 and not (a.t == "T" and b.t == "A")
+                and not (a.t == "A" and b.imp and b.imp[a.q])
             if movable then
                 local prev, nxt = pt(i - 1), steps[i + 2] and pt(i + 2) or nil
                 local pa, pb = pt(i), pt(i + 1)
@@ -418,6 +424,13 @@ function Sq.Relocate(steps, snap, wt, path)
     local function allowed(s, u, before)
         -- s moves from before u to after u (before = true) or from after u to before u
         if s.q == u.q then
+            return false
+        end
+        -- an accept never ends up after a hand-in that implies its quest (phase 31)
+        if before and s.t == "A" and u.imp and u.imp[s.q] then
+            return false
+        end
+        if not before and u.t == "A" and s.imp and s.imp[u.q] then
             return false
         end
         if before then

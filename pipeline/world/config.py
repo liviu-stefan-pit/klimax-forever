@@ -31,11 +31,24 @@ DEFAULT_ZONES: tuple[str, ...] = (
     "BADLANDS",
     "TANARIS",
     "THE_HINTERLANDS",
+    # Phase 31: levels 40 to 60. QuestieDB has no Shen'dralas zone (only the Shen'dralar
+    # faction), and Riverglades, The Drowned City and Krol'dok have almost no quests yet.
+    "FERALAS",
+    "AZSHARA",
+    "FELWOOD",
+    "UN_GORO_CRATER",
+    "WINTERSPRING",
+    "WESTERN_PLAGUELANDS",
+    "EASTERN_PLAGUELANDS",
+    "BURNING_STEPPES",
+    "SEARING_GORGE",
+    "BLASTED_LANDS",
+    "SILITHUS",
 )
 
-# Plan scope is levels 1 to 40 (DYNAMIC_GUIDE_PLAN s2). A quest is compiled when a character of
-# this level or lower can accept it (requiredLevel), so the yellow quests of a level 40 are in.
-MAX_REQUIRED_LEVEL = 40
+# Plan scope is levels 1 to 60 (DYNAMIC_GUIDE_PLAN s2; phase 31 raised it from 40). A quest is
+# compiled when a character of this level or lower can accept it (requiredLevel).
+MAX_REQUIRED_LEVEL = 60
 
 # Hub clustering (map-%): quest givers and turn-ins closer than this chain into one hub. Every
 # giver belongs to a hub (min samples 1), so a lone camp is a one-NPC hub, never lost as noise.
@@ -52,7 +65,9 @@ MAX_OBJECTIVE_POINTS = 3
 # Per-file size budget for the generated Lua (bytes). The largest compiled band route is 60 KB;
 # a zone file holds the zone's whole quest graph, so it gets a little more. A warning first.
 SIZE_BUDGET = 160 * 1024
-SIZE_WARN = 128 * 1024
+# Phase 31 raised the warning from 128 KB: with 32 zones `Index.lua` (where every quest, NPC and
+# object lives) is about 141 KB. Zone files stay far below it; the hard budget is unchanged.
+SIZE_WARN = 148 * 1024
 
 # Rough travel costs in seconds for the planner (phase 21 tunes them). Not measured in game.
 TRAVEL_COSTS: dict[str, int] = {

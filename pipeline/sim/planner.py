@@ -706,9 +706,11 @@ def _level_up(sim: dict[str, Any], level_xp: list[int]) -> None:
         sim["level"] = sim["level"] + 1
 
 
-def _drop_implied(pool, stages, sim, by_q, p) -> None:
+def _drop_implied(pool, stages, sim, by_q, p) -> set[int]:
     """Handing in ``p`` completes its chain predecessors and all-of prerequisites too (Lua
-    ``dropImplied``): a breadcrumb or earlier link still to accept, or already in the log, goes."""
+    ``dropImplied``): a breadcrumb or earlier link still to accept, or already in the log, goes.
+    Returns the implied quest ids; the hand-in step keeps them (``imp``) so the improvement passes
+    never move an accept of one of them after it (phase 31)."""
     stack: list[int] = []
     seen: set[int] = set()
 
@@ -729,6 +731,7 @@ def _drop_implied(pool, stages, sim, by_q, p) -> None:
                 sim["done"][ident] = True
             push(pool[i].get("pv"))
             push(pool[i].get("pa"))
+    return seen
 
 
 def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None, prior=None):
@@ -811,7 +814,9 @@ def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None, prior=No
         stages[best["i"]] = next_stage(p, stages[best["i"]])
         if stages[best["i"]] == "done":
             sim["done"][p["q"]] = True
-            _drop_implied(pool, stages, sim, by_q, p)
+            implied = _drop_implied(pool, stages, sim, by_q, p)
+            if task["kind"] == "T" and implied:
+                step["imp"] = implied
             sim["xp"] = sim["xp"] + xp_at(
                 p["xp"] or 0, p["lv"] if p["lv"] is not None else sim["level"], sim["level"]
             )
@@ -838,6 +843,7 @@ def improve(steps, snap, wt, pathf):
                 and a["q"] != b["q"]
                 and a["z"] == b["z"]
                 and not (a["t"] == "T" and b["t"] == "A")
+                and not (a["t"] == "A" and a["q"] in (b.get("imp") or ()))
             )
             if not movable:
                 continue
@@ -877,6 +883,11 @@ def relocate(steps, snap, wt, pathf):
 
     def allowed(s, u, before: bool) -> bool:
         if s["q"] == u["q"]:
+            return False
+        # an accept never ends up after a hand-in that implies its quest (phase 31)
+        if before and s["t"] == "A" and s["q"] in (u.get("imp") or ()):
+            return False
+        if not before and u["t"] == "A" and u["q"] in (s.get("imp") or ()):
             return False
         if before:
             return s["t"] != "T"

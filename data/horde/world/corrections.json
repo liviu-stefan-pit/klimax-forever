@@ -1,5 +1,5 @@
 {
-  "_note": "Curated corrections for the Horde world compile (phase 19). Hand-reviewed; part of the source of truth with the quest graph (see pipeline/world/corrections.py for the format). Sources: the phase 18 diagnosis (python -m pipeline diagnose: shadowed_ids, npc_positions) and the phase 19 graph validator (W_SAME_NAME, W_ITEM_START_UNPLACED, W_NO_FINISHER). Phase 18 found no bad NPC position on any route step (npc_positions: 0 findings), so npcPositions is empty until the in-game checks (PROGRESS.md phase 18 checklist item 7) report one. Nothing here is verified in game yet (verified: false). Phase 30 (2026-11-08) added the tips section and the Vorsha status from leveling-resources/ (WoW Forever guides, Blizzard's Known Issues of 2026-11-05).",
+  "_note": "Curated corrections for the Horde world compile (phase 19). Hand-reviewed; part of the source of truth with the quest graph (see pipeline/world/corrections.py for the format). Sources: the phase 18 diagnosis (python -m pipeline diagnose: shadowed_ids, npc_positions) and the phase 19 graph validator (W_SAME_NAME, W_ITEM_START_UNPLACED, W_NO_FINISHER). Phase 18 found no bad NPC position on any route step (npc_positions: 0 findings), so npcPositions is empty until the in-game checks (PROGRESS.md phase 18 checklist item 7) report one. Nothing here is verified in game yet (verified: false). Phase 30 (2026-11-08) added the tips section and the Vorsha status from leveling-resources/ (WoW Forever guides, Blizzard's Known Issues of 2026-11-05). Phase 31 (2026-11-08) added the levels 40 to 60 zones: Felwood plant, Scourgestone and Runecloth repeatables, battleground quests, the Blackrock Depths chains with unplaced NPCs and the level 60 endgame (Ahn'Qiraj, Naxxramas, Craftsman's Writs) are skipped.",
   "equivalents": [
     {
       "ids": [
@@ -315,6 +315,27 @@
         3646
       ],
       "note": "Membership Card Renewal: separate steps of the Booty Bay card chain (Tanaris, Stranglethorn)."
+    },
+    {
+      "ids": [
+        1067,
+        2967
+      ],
+      "note": "Return to Thunder Bluff: two different chains (Hillsbrad level 23, 1066-1067-1086; Feralas level 50, 2954-2967-2968)."
+    },
+    {
+      "ids": [
+        3909,
+        4041
+      ],
+      "note": "The Videre Elixir: 3909 is a step of the Un'Goro chain (3908-3909-3912); 4041 is Gregan Brewspewer's own quest in Feralas."
+    },
+    {
+      "ids": [
+        5059,
+        5060
+      ],
+      "note": "Locked Away: two different lockboxes (objects 175925 and 175924) in Western Plaguelands. Check in game whether both are offered."
     }
   ],
   "npcPositions": [],
@@ -552,6 +573,756 @@
       "note": "Vorsha the Lasher (Ashenvale escort): Blizzard disabled it until a crash bug is fixed. Remove this entry once the Known Issues list drops it.",
       "source": "Blizzard Known Issues 2026-11-05, via leveling-resources/wow-forever/text/timesaver-beta-leveling.txt",
       "status": "broken"
+    },
+    {
+      "id": 8429,
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8430,
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8434,
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8438,
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8439,
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8442,
+      "note": "Battleground (PvP) quest, not part of leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 996,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 998,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 1514,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 2523,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 2878,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 3363,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4113,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4114,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4115,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4116,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4117,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4118,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4119,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4221,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4222,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4343,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4401,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4403,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4443,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4444,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4445,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4446,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4447,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4448,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4461,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4462,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4464,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4465,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4466,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4467,
+      "note": "Felwood corrupted plant: needs Cenarion Plant Salve and rewards a fruit or buff, not leveling XP.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5402,
+      "note": "Argent Dawn Scourgestone turn-in: a reputation repeatable, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5403,
+      "note": "Argent Dawn Scourgestone turn-in: a reputation repeatable, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5404,
+      "note": "Argent Dawn Scourgestone turn-in: a reputation repeatable, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5406,
+      "note": "Argent Dawn Scourgestone turn-in: a reputation repeatable, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5407,
+      "note": "Argent Dawn Scourgestone turn-in: a reputation repeatable, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5408,
+      "note": "Argent Dawn Scourgestone turn-in: a reputation repeatable, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7818,
+      "note": "Runecloth reputation turn-in: needs cloth the plan does not track; not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7819,
+      "note": "Runecloth reputation turn-in: needs cloth the plan does not track; not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7823,
+      "note": "Runecloth reputation turn-in: needs cloth the plan does not track; not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7824,
+      "note": "Runecloth reputation turn-in: needs cloth the plan does not track; not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7825,
+      "note": "Runecloth reputation turn-in: needs cloth the plan does not track; not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7832,
+      "note": "Runecloth reputation turn-in: needs cloth the plan does not track; not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 3802,
+      "note": "Blackrock Depths: the turn-in (Franclorn's altar, object 164689) is inside the instance and has no position.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 3981,
+      "note": "Commander Gor'shak / Royal Rescue chain: its NPCs are inside Blackrock Depths and have no position; a group dungeon chain.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 3982,
+      "note": "Commander Gor'shak / Royal Rescue chain: its NPCs are inside Blackrock Depths and have no position; a group dungeon chain.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4001,
+      "note": "Commander Gor'shak / Royal Rescue chain: its NPCs are inside Blackrock Depths and have no position; a group dungeon chain.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4002,
+      "note": "Commander Gor'shak / Royal Rescue chain: its NPCs are inside Blackrock Depths and have no position; a group dungeon chain.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4003,
+      "note": "Commander Gor'shak / Royal Rescue chain: its NPCs are inside Blackrock Depths and have no position; a group dungeon chain.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 4004,
+      "note": "Commander Gor'shak / Royal Rescue chain: its NPCs are inside Blackrock Depths and have no position; a group dungeon chain.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9178,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9179,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9181,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9182,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9183,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9184,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9185,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9186,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9187,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9188,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9190,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9191,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9194,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9195,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9196,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9197,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9198,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9200,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9201,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9202,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9203,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9204,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9205,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9206,
+      "note": "Craftsman's Writ (Light's Hope, Naxxramas war effort): the starter is a crafted item; profession endgame, not leveling.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 7787,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8286,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8301,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8498,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8501,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8502,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8534,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8535,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8536,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8537,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8538,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8539,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8577,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8687,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8728,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8737,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8738,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8739,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8740,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8742,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8770,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8771,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8772,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8773,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8774,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8775,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8776,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8777,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8785,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8786,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8787,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8804,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8805,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8806,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8807,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8808,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8809,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8810,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8829,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 8856,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9121,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9122,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9123,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 9250,
+      "note": "Level 60 endgame (Ahn'Qiraj war effort and scepter chain, raid attunements, Naxxramas, legendaries): not leveling content.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "skip"
+    },
+    {
+      "id": 5236,
+      "note": "Next quest 5237 belongs to the Alliance chain (Ashlam Valorfist); the Horde chain ends here.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "review"
+    },
+    {
+      "id": 7704,
+      "note": "Starter item drops from a mob the data does not place (Searing Gorge). Check in game.",
+      "source": "phase 31 graph validator (levels 40-60 zones)",
+      "status": "review"
     }
   ],
   "tips": [
