@@ -47,7 +47,8 @@ read_globals = {
     "strsplit", "strtrim", "wipe", "tinsert", "tremove", "format", "floor", "abs", "sqrt",
     "atan2", "min", "max", "random", "pairs", "ipairs", "select", "type",
     "tostring", "tonumber", "unpack", "print", "geterrorhandler", "debugstack",
-    "hooksecurefunc", "InterfaceOptionsFrame_OpenToCategory", "Settings",
+    "hooksecurefunc", "InterfaceOptionsFrame_OpenToCategory", "InterfaceOptions_AddCategory", "Settings",
+    "UISpecialFrames",
     -- events and frames for the step engine
     "C_Timer",
     -- phase 07 UI and arrow: world positions, popups, combat and tooltips

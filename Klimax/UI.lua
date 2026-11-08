@@ -1,107 +1,46 @@
--- Main window (PRD 7.4): one tabbed window with Guide, Steps, Bands and Options pages. Every frame
--- here is ours: no secure frames and no protected calls, so nothing can taint. Frames are built on
--- PLAYER_LOGIN, never at load time. The helpers (U.DisplayIndex, U.Model, U.ListRows, U.BandChoices,
--- U.ResetItems, U.NextValue, U.ButtonWidth, U.ClampScroll, U.ScrollTarget) are plain functions so the
--- busted specs can test them without a client.
+-- Main window (UI overhaul phases 12 and 13). One resizable, scrollable window in the Klimax theme:
+--
+--   header   title, level and zone, menu / collapse / close
+--   hero     the current step as a card: badge, action, title, note, live objectives, why, NPC link,
+--            Done and Skip. It fades in when the step changes (the "dialogue" card)
+--   tabs     Steps | Ahead | Skipped
+--   list     the plan as cards, virtualised (only the visible rows have frames), current step
+--            highlighted, auto-scrolled to, right-click for the step menu
+--   footer   progress bar, step count, resize grip
+--
+-- Every frame is ours (no secure frames, no protected calls). Frames are built on PLAYER_LOGIN, never
+-- at load time. The helpers (DisplayIndex, Model, ListRows, RowHeight, ObjectiveText, ResetItems...)
+-- are plain functions so the busted specs test them without a client.
 local _, K = ...
 local L = K.L
 local A = K.Arrow
+local T = K.Theme
+local c = T.c
 
 local U = {}
 K.UI = U
 
-local FONT = "Fonts\\FRIZQT__.TTF"
-local WHITE = "Interface\\Buttons\\WHITE8X8"
-local WIDTH, HEIGHT = 380, 470
-local PAD = 8
-local PAGE_W = WIDTH - 2 * PAD
-local PAGE_TOP = 62
-local PAGE_H = HEIGHT - PAGE_TOP - PAD
-local BAR_W = 10
-local BTN_H = 26
-local BTN_PAD = 14        -- horizontal padding inside a button, each side
-local ROW_MIN = 24
-local STATUS_MAX = 80     -- bytes; one hint line on the Guide page
-local CHECKLIST_MAX = 10
+local DEFAULT_W, DEFAULT_H = 400, 580
+local MIN_W, MIN_H, MAX_W, MAX_H = 340, 300, 720, 1000
+local HEAD_H, FOOT_H, PAD = 46, 30, 12
+local HERO_PAD = 14
+local ROW_GAP = 4
+local ROW_TEXT_L, ROW_TEXT_R = 46, 40
+local OVERSCAN = 160
 
-local TABS = { "guide", "steps", "bands", "options" }
-local TAB_LABEL = { guide = "TAB_GUIDE", steps = "TAB_STEPS", bands = "TAB_BANDS", options = "TAB_OPTIONS" }
-
-local BASE, HOVER, ACTIVE = { 0.16, 0.16, 0.16, 0.95 }, { 0.3, 0.3, 0.3, 0.95 }, { 0.55, 0.42, 0.05, 0.95 }
-
-U.fonts = {}          -- font strings with a base size, rescaled by the font option
-U.buttons = {}        -- auto-sized buttons, re-measured when the font scale changes
 U.focusKey = nil      -- stable key of a pending step the user picked in the step list
 U.combatHidden = false
-U.tab = "guide"
-U.pages = {}
+U.tab = "steps"
+U.collapsed = false
 U.lastCursor = nil
+U.userScrollAt = -100
 
--- ---- Options (account-wide, KlimaxDB.options) ----------------------------------------------
+U.TABS = { "steps", "ahead", "skipped" }
 
-local DEFAULTS = {
-    arrow = true, arrowScale = 1,
-    hideInCombat = false, locked = false,
-    bagThreshold = 3, fontScale = 1, scale = 1, alpha = 0.85, opportunities = true, toasts = true,
-}
-
--- Reads an option with its default. Safe before SavedVariables are loaded.
-function K.Option(key)
-    local db = K.db
-    local v = db and db.options and db.options[key]
-    if v == nil then
-        return DEFAULTS[key]
-    end
-    return v
-end
-
-function K.SetOption(key, value)
-    if K.db then
-        K.db.options = K.db.options or {}
-        K.db.options[key] = value
-    end
-end
-
--- Option rows of the options page. Bool rows toggle; cycle rows step through values.
-U.OPTION_ROWS = {
-    { key = "arrow", kind = "bool", label = "OPT_ARROW" },
-    { key = "arrowScale", kind = "cycle", label = "OPT_ARROW_SCALE", values = { 0.75, 1, 1.25, 1.5 } },
-    { key = "hideInCombat", kind = "bool", label = "OPT_HIDE_COMBAT" },
-    { key = "locked", kind = "bool", label = "OPT_LOCK" },
-    { key = "bagThreshold", kind = "cycle", label = "OPT_BAG", values = { 1, 2, 3, 4, 5, 6 } },
-    { key = "fontScale", kind = "cycle", label = "OPT_FONT", values = { 0.85, 1, 1.15, 1.3 } },
-    { key = "scale", kind = "cycle", label = "OPT_SCALE", values = { 0.8, 0.9, 1, 1.1, 1.25 } },
-    { key = "alpha", kind = "cycle", label = "OPT_ALPHA", values = { 0.4, 0.6, 0.85, 1 } },
-    { key = "opportunities", kind = "bool", label = "OPT_OPPORTUNITIES" },
-    { key = "toasts", kind = "bool", label = "OPT_TOASTS" },
-}
-
--- The value after current in values; the first value when current is not in the list.
-function U.NextValue(values, current)
-    for i = 1, #values do
-        if values[i] == current then
-            return values[i % #values + 1]
-        end
-    end
-    return values[1]
-end
-
--- The value a row would switch to.
-function U.ToggledValue(row)
-    local current = K.Option(row.key)
-    if row.kind == "bool" then
-        return not current
-    end
-    return U.NextValue(row.values, current)
-end
-
-function U.OptionText(row)
-    local v = K.Option(row.key)
-    if row.kind == "bool" then
-        return string.format("[%s] %s", v and "x" or " ", L[row.label])
-    end
-    return string.format("%s: %s", L[row.label], tostring(v))
-end
+-- Pure aliases kept for the specs and the other windows.
+U.ClampScroll = T.ClampScroll
+U.ScrollTarget = T.ScrollTarget
+U.ButtonWidth = T.ButtonWidth
 
 -- ---- Pure view logic --------------------------------------------------------------------------
 
@@ -122,34 +61,13 @@ function U.Clip(text, max)
     return text:sub(1, cut) .. "..."
 end
 
--- Width of a button for a label: the text plus padding on both sides, never below min.
--- Buttons size themselves from their text so a label is never cut off.
-function U.ButtonWidth(textWidth, min)
-    return math.max(min or 0, math.ceil(textWidth or 0) + 2 * BTN_PAD)
-end
-
--- Scroll offset kept inside the content: 0 up to (content height - view height).
-function U.ClampScroll(offset, contentH, viewH)
-    return math.max(0, math.min(offset, math.max(0, contentH - viewH)))
-end
-
--- Offset that puts a row near the top third of the view, so the current step has context above it.
-function U.ScrollTarget(rowTop, contentH, viewH)
-    return U.ClampScroll(rowTop - viewH / 3, contentH, viewH)
-end
-
 local ACTION_KEY = {
     A = "ACT_ACCEPT", C = "ACT_COLLECT", T = "ACT_TURNIN", V = "ACT_TRAVEL", F = "ACT_FLY",
     D = "ACT_DISCOVER", B = "ACT_BUY", R = "ACT_TRAINER", H = "ACT_BIND", U = "ACT_HEARTH",
     P = "ACT_REPAIR", N = "ACT_NOTE", S = "ACT_STOP",
 }
 local TAG_KEY = { m = "TAG_MAIN", o = "TAG_OPTIONAL", e = "TAG_ELITE" }
-local TAG_COLOR = { m = { 1, 0.82, 0 }, o = { 0.62, 0.62, 0.62 }, e = { 1, 0.27, 0.27 } }
-local STATE_MARK = { done = "[x]", skipped = "[-]", archived = "[a]", cascade = "[~]", pending = "[ ]" }
-local STATE_COLOR = {
-    done = { 0.5, 0.5, 0.5 }, skipped = { 0.9, 0.35, 0.35 }, archived = { 0.5, 0.5, 0.5 },
-    cascade = { 0.7, 0.55, 0.3 }, pending = { 1, 1, 1 },
-}
+local TAG_COLOUR = { m = c.accent, o = c.sub, e = c.mob }
 
 function U.ActionLabel(step)
     return L[ACTION_KEY[step.t] or "ACT_NONE"]
@@ -181,11 +99,11 @@ function U.DisplayIndex(E)
             return i
         end
     end
-    local c = E.cursor
-    if not c then
+    local cur = E.cursor
+    if not cur then
         return nil
     end
-    for i = c, #steps do
+    for i = cur, #steps do
         if E.eff[i] == "pending" and not gatedNow(steps[i]) and U.StepShown(steps[i]) then
             return i
         end
@@ -193,56 +111,54 @@ function U.DisplayIndex(E)
     return nil
 end
 
--- The view model of the Guide page. kind is one of: none, done, gated, hidden, step.
-function U.Model(E)
-    local m = { kind = "none" }
-    if not E.routeId then
-        return m
+-- Zone name for a uiMapID, or "?".
+function U.ZoneName(z)
+    local zone = z and K.zones and K.zones[z]
+    return zone and zone[1] or "?"
+end
+
+-- The name of the NPC of a step, or nil.
+function U.NpcName(step)
+    local npc = step and step.npc and K.WorldDB and K.WorldDB.Npc(step.npc)
+    return npc and npc.n or nil
+end
+
+-- The quest's objective lines from the quest log: {text, finished}. Empty when the quest is not in
+-- the log (an Accept step) or the step has no quest.
+function U.Objectives(step)
+    local out = {}
+    if not (step and step.q and K.Compat and K.Compat.GetQuestLogLines) then
+        return out
     end
-    if not E.cursor then
-        m.kind = "done"
-        for i, s in ipairs(E.steps) do
-            if E.eff[i] == "pending" and gatedNow(s) then
-                m.kind = "gated"
-                m.level = s.ml
-                break
+    for _, line in ipairs((K.Compat.GetQuestLogLines(true))) do
+        if line.questID == step.q then
+            for _, o in ipairs(line.objectives or {}) do
+                if o.text and o.text ~= "" then
+                    out[#out + 1] = { text = o.text, finished = o.finished and true or false }
+                end
             end
+            break
         end
-        return m
     end
-    local i = U.DisplayIndex(E)
-    if not i then
-        m.kind = "hidden"
-        return m
-    end
-    local s = E.steps[i]
-    m.kind = "step"
-    m.index = i
-    m.step = s
-    m.action = U.ActionLabel(s)
-    m.title = s.n or ""
-    m.tag = s.g
-    m.tagText = s.g and L[TAG_KEY[s.g]] or nil
-    m.note = s.note or ""
-    m.planStep = U.PlanStepFor(s)
-    m.why = m.planStep and K.Planner.Why(m.planStep) or ""
-    m.stepNo = i
-    m.total = #E.steps
-    local batch = E:Batch(i)
-    if #batch > 1 then
-        m.checklist = {}
-        local done = 0
-        for _, j in ipairs(batch) do
-            local state = E.eff[j] or "pending"
-            if state == "done" then
-                done = done + 1
-            end
-            m.checklist[#m.checklist + 1] = { index = j, text = E.steps[j].n or "", state = state }
+    return out
+end
+
+local function hex(col)
+    return string.format("%02x%02x%02x", math.floor(col[1] * 255 + 0.5), math.floor(col[2] * 255 + 0.5),
+        math.floor(col[3] * 255 + 0.5))
+end
+
+-- Objective lines as one coloured string: finished ones green with a check, open ones white.
+function U.ObjectiveText(list)
+    local lines = {}
+    for _, o in ipairs(list or {}) do
+        if o.finished then
+            lines[#lines + 1] = string.format("|cff%s+ %s|r", hex(c.good), o.text)
+        else
+            lines[#lines + 1] = string.format("|cff%s- |r%s", hex(c.dim), o.text)
         end
-        m.hubDone = done
-        m.hubTotal = #batch
     end
-    return m
+    return table.concat(lines, "\n")
 end
 
 -- The planner's step for the same task as a displayed step (same kind and quest), or nil. Reads the
@@ -260,28 +176,121 @@ function U.PlanStepFor(step)
     return nil
 end
 
--- Rows of the step list for the loaded route: { index, key, state, mark, text, color }.
+-- The view model of the hero card. kind is one of: none, done, gated, hidden, step.
+function U.Model(E)
+    local m = { kind = "none" }
+    if not E.routeId then
+        return m
+    end
+    if not E.cursor then
+        m.kind = "done"
+        for _, s in ipairs(E.steps) do
+            if gatedNow(s) then
+                m.kind = "gated"
+                m.level = s.ml
+                break
+            end
+        end
+        return m
+    end
+    local i = U.DisplayIndex(E)
+    if not i then
+        m.kind = "hidden"
+        return m
+    end
+    local s = E.steps[i]
+    m.kind = "step"
+    m.index = i
+    m.key = s.k
+    m.step = s
+    m.stepType = s.t
+    m.action = U.ActionLabel(s)
+    m.title = s.n or ""
+    m.tag = s.g
+    m.tagText = s.g and L[TAG_KEY[s.g]] or nil
+    m.note = s.note or ""
+    if m.note == m.title then
+        m.note = ""
+    end
+    m.planStep = U.PlanStepFor(s)
+    m.why = m.planStep and K.Planner.Why(m.planStep) or ""
+    m.stepNo = i
+    m.total = #E.steps
+    m.npc = U.NpcName(s)
+    m.zone = (s.z or s.to) and U.ZoneName(s.z or s.to) or nil
+    m.objectives = U.Objectives(s)
+    m.progress = (i - 1) / math.max(1, #E.steps)
+    local batch = E:Batch(i)
+    if #batch > 1 then
+        m.checklist = {}
+        local done = 0
+        for _, j in ipairs(batch) do
+            local state = E.eff[j] or "pending"
+            if state == "done" then
+                done = done + 1
+            end
+            m.checklist[#m.checklist + 1] = { index = j, text = E.steps[j].n or "", state = state }
+        end
+        m.hubDone = done
+        m.hubTotal = #batch
+        m.progress = (i - 1 + done / #batch) / math.max(1, #E.steps)
+    end
+    return m
+end
+
+-- Rows of the Steps list for the loaded route. Each row: index, key, state, kind (step type), badge
+-- glyph, title, sub (NPC and zone), num, current, text (plain one-liner for tooltips and specs).
 function U.ListRows(E)
     local rows = {}
     for i, s in ipairs(E.steps) do
         local state = E.eff[i] or "pending"
-        local mark = STATE_MARK[state] or "[ ]"
-        if i == E.cursor then
-            mark = "[>]"
+        local badge = T.Badge(s.t)
+        local sub = {}
+        local npc = U.NpcName(s)
+        if npc then
+            sub[#sub + 1] = npc
+        end
+        if s.z or s.to then
+            sub[#sub + 1] = U.ZoneName(s.z or s.to)
         end
         rows[#rows + 1] = {
-            index = i, key = s.k, state = state, mark = mark,
+            index = i, key = s.k, state = state, kind = s.t, glyph = badge[1], tint = badge[2],
+            action = U.ActionLabel(s), title = s.n or s.note or "", sub = table.concat(sub, " · "),
+            npc = npc, num = tostring(i), current = (i == E.cursor),
             text = string.format("%d. %s  %s", i, U.ActionLabel(s), s.n or s.note or ""),
-            color = (i == E.cursor) and { 1, 0.82, 0 } or STATE_COLOR[state] or { 1, 1, 1 },
         }
     end
     return rows
 end
 
--- Zone name for a uiMapID, or "?".
-function U.ZoneName(z)
-    local zone = z and K.zones and K.zones[z]
-    return zone and zone[1] or "?"
+-- The height of a list row at a pixel width: padding, the title lines, and the sub line.
+function U.RowHeight(d, width)
+    local textW = width - (d.plain and 24 or (ROW_TEXT_L + ROW_TEXT_R))
+    local lines = math.max(1, T.TextLines(d.title, textW, 12))
+    local h = 16 + lines * 15
+    if d.sub and d.sub ~= "" then
+        h = h + 14
+    end
+    return math.max(d.plain and 30 or 42, h)
+end
+
+-- Rows of the Ahead tab: the stops coming up and the zone changes (phase 27 forecast).
+function U.PlanRows()
+    local plan = K.Engine.plan
+    if not (plan and K.Planner and K.Plan.Explain) then
+        return {}
+    end
+    local env = K.Planner.ExplainEnv()
+    return K.Plan.Explain.ForecastLines(K.Plan.Explain.Forecast(plan, env), env)
+end
+
+-- Rows of the "Skipped" tab (phase 22): one per skipped quest, click to restore.
+function U.SkippedRows()
+    local rows = {}
+    for _, item in ipairs(K.StepMenu and K.StepMenu.SkippedQuests() or {}) do
+        rows[#rows + 1] = { q = item.q, text = string.format(L.SKIPPED_ROW, item.name, item.q) }
+    end
+    return rows
 end
 
 -- "Level 12 · The Barrens": the character's level and the zone of the first step of the plan.
@@ -295,16 +304,6 @@ function U.PlanLabel()
     return string.format(L.PLAN_LABEL_BARE, level)
 end
 
--- Rows of the Plan tab: the stops coming up and the zone changes (phase 27 forecast).
-function U.PlanRows()
-    local plan = K.Engine.plan
-    if not (plan and K.Planner and K.Plan.Explain) then
-        return {}
-    end
-    local env = K.Planner.ExplainEnv()
-    return K.Plan.Explain.ForecastLines(K.Plan.Explain.Forecast(plan, env), env)
-end
-
 -- The reset and resync actions, in page order: clear skipped steps, reset guide, resync.
 function U.ResetItems()
     return {
@@ -314,7 +313,7 @@ function U.ResetItems()
     }
 end
 
--- Wanted visibility: the saved flag, shown by default.
+-- Saved window state (per character): shown, pos, size, tab, collapsed, arrowPos.
 local function uiState()
     K.cdb = K.cdb or {}
     K.cdb.ui = K.cdb.ui or {}
@@ -325,227 +324,11 @@ function U.Wanted()
     return uiState().shown ~= false
 end
 
--- ---- Frame helpers ----------------------------------------------------------------------------
-
-local function fontString(parent, size, justify)
-    local fs = parent:CreateFontString(nil, "OVERLAY")
-    fs:SetFont(FONT, size * (K.Option("fontScale") or 1), "")
-    fs:SetJustifyH(justify or "LEFT")
-    fs:SetJustifyV("TOP")
-    U.fonts[#U.fonts + 1] = { fs = fs, base = size }
-    return fs
+-- Window size kept inside the allowed bounds.
+function U.ClampSize(w, h)
+    return T.Clamp(math.floor((w or DEFAULT_W) + 0.5), MIN_W, MAX_W),
+        T.Clamp(math.floor((h or DEFAULT_H) + 0.5), MIN_H, MAX_H)
 end
-
-local function backdrop(frame, r, g, b, a)
-    local t = frame:CreateTexture(nil, "BACKGROUND")
-    t:SetAllPoints()
-    t:SetTexture(WHITE)
-    t:SetVertexColor(r, g, b, a)
-    return t
-end
-
-local function paint(b)
-    local c = b.active and ACTIVE or (b.hover and not b.off and HOVER) or BASE
-    b.bg:SetVertexColor(c[1], c[2], c[3], c[4])
-end
-
--- A button that sizes itself from its label. tip is optional tooltip text.
-function U.Button(parent, text, minW, onClick, tip)
-    local b = CreateFrame("Button", nil, parent)
-    b:SetHeight(BTN_H)
-    b.bg = backdrop(b, BASE[1], BASE[2], BASE[3], BASE[4])
-    b.text = fontString(b, 12, "CENTER")
-    b.text:SetPoint("CENTER", b, "CENTER", 0, 0)
-    b.minW, b.w, b.active, b.hover, b.off = minW or 0, minW or 0, false, false, false
-    b:SetScript("OnClick", onClick)
-    b:SetScript("OnEnter", function(self)
-        self.hover = true
-        paint(self)
-        if tip then
-            GameTooltip:SetOwner(self, "ANCHOR_TOP")
-            GameTooltip:SetText(tip, 1, 1, 1, 1, true)
-            GameTooltip:Show()
-        end
-    end)
-    b:SetScript("OnLeave", function(self)
-        self.hover = false
-        paint(self)
-        GameTooltip:Hide()
-    end)
-    function b:SetLabel(label)
-        self.label = label
-        self.text:SetText(label)
-        self.w = U.ButtonWidth(self.text:GetStringWidth(), self.minW)
-        self:SetWidth(self.w)
-    end
-    b:SetLabel(text)
-    U.buttons[#U.buttons + 1] = b
-    return b
-end
-
-function U.SetButtonEnabled(b, on)
-    b:SetEnabled(on)
-    b.off = not on
-    if on then
-        b.text:SetTextColor(1, 1, 1)
-    else
-        b.text:SetTextColor(0.5, 0.5, 0.5)
-    end
-    paint(b)
-end
-
--- Lays buttons out left to right from the bottom-left of parent.
-local function layoutRow(list, parent, gap, y)
-    local x = 0
-    for _, b in ipairs(list) do
-        b:ClearAllPoints()
-        b:SetPoint("BOTTOMLEFT", parent, "BOTTOMLEFT", x, y)
-        x = x + b.w + gap
-    end
-end
-
--- Re-measures every button for the current font scale and re-lays the rows that hold them.
-function U.Relayout()
-    for _, b in ipairs(U.buttons) do
-        b:SetLabel(b.label)
-    end
-    if U.tabButtons then
-        local x = 0
-        for _, b in ipairs(U.tabButtons) do
-            b:ClearAllPoints()
-            b:SetPoint("TOPLEFT", U.frame, "TOPLEFT", PAD + x, -34)
-            x = x + b.w + 4
-        end
-    end
-    if U.guideButtons then
-        layoutRow(U.guideButtons, U.pages.guide, 6, 0)
-    end
-    if U.bandButtons then
-        layoutRow(U.bandButtons, U.pages.bands, 6, 0)
-    end
-end
-
--- Saves a frame's position (relative to UIParent) under key in the character's ui table.
-local function savePos(frame, key)
-    local point, _, rel, x, y = frame:GetPoint()
-    uiState()[key] = { point = point, rel = rel, x = x, y = y }
-end
-
-local function placeMain(frame)
-    frame:ClearAllPoints()
-    local p = uiState().pos
-    if p and p.point then
-        frame:SetPoint(p.point, UIParent, p.rel, p.x, p.y)
-    else
-        frame:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
-    end
-end
-
--- A scroll area of the given size inside parent, with a draggable thumb and mouse-wheel support.
--- Put children on s.content; call s:SetContentHeight(h) after laying them out.
-local function scroller(parent, w, h)
-    local viewW = w - BAR_W - 4
-    local s = CreateFrame("ScrollFrame", nil, parent)
-    s:SetSize(viewW, h)
-    local content = CreateFrame("Frame", nil, s)
-    content:SetSize(viewW, h)
-    s:SetScrollChild(content)
-    s.content, s.viewW, s.viewH, s.contentH, s.offset, s.thumbH = content, viewW, h, h, 0, h
-
-    local bar = CreateFrame("Frame", nil, parent)
-    bar:SetSize(BAR_W, h)
-    bar:SetPoint("TOPLEFT", s, "TOPRIGHT", 4, 0)
-    backdrop(bar, 0.08, 0.08, 0.08, 0.9)
-    local thumb = bar:CreateTexture(nil, "OVERLAY")
-    thumb:SetTexture(WHITE)
-    thumb:SetVertexColor(0.65, 0.52, 0.15, 0.95)
-    bar.drag = false
-    bar:EnableMouse(true)
-
-    local function paintThumb()
-        local range = s.contentH - s.viewH
-        if range <= 0 then
-            thumb:Hide()
-            return
-        end
-        s.thumbH = math.max(24, s.viewH * s.viewH / s.contentH)
-        local y = (s.viewH - s.thumbH) * s.offset / range
-        thumb:ClearAllPoints()
-        thumb:SetSize(BAR_W, s.thumbH)
-        thumb:SetPoint("TOP", bar, "TOP", 0, -y)
-        thumb:Show()
-    end
-
-    function s:ScrollTo(y)
-        self.offset = U.ClampScroll(y, self.contentH, self.viewH)
-        self:SetVerticalScroll(self.offset)
-        paintThumb()
-    end
-
-    function s:SetContentHeight(ch)
-        self.contentH = math.max(ch, self.viewH)
-        content:SetHeight(self.contentH)
-        self:ScrollTo(self.offset)
-    end
-
-    function s:Wheel(delta)
-        self:ScrollTo(self.offset - delta * 48)
-    end
-
-    s:EnableMouseWheel(true)
-    s:SetScript("OnMouseWheel", function(self, delta) self:Wheel(delta) end)
-    bar:SetScript("OnMouseDown", function(self) self.drag = true end)
-    bar:SetScript("OnMouseUp", function(self) self.drag = false end)
-    bar:SetScript("OnUpdate", function(self)
-        if not self.drag then
-            return
-        end
-        local _, cy = GetCursorPosition()
-        local top = self:GetTop()
-        if not cy or not top then
-            return
-        end
-        local y = top - cy / self:GetEffectiveScale() - s.thumbH / 2
-        local travel = s.viewH - s.thumbH
-        if travel > 0 then
-            s:ScrollTo(y / travel * (s.contentH - s.viewH))
-        end
-    end)
-    paintThumb()
-    return s
-end
-
--- A pooled list row inside a scroller: a full-width button with a wrapped label and a highlight.
-local function newRow(s, onClick)
-    local r = CreateFrame("Button", nil, s.content)
-    r:SetWidth(s.viewW)
-    r.hl = backdrop(r, 1, 1, 1, 0.04)
-    r.text = fontString(r, 12)
-    r.text:SetPoint("TOPLEFT", r, "TOPLEFT", 6, -5)
-    r.text:SetWidth(s.viewW - 12)
-    r.index, r.id = false, false
-    r:RegisterForClicks("LeftButtonUp", "RightButtonUp")
-    r:EnableMouseWheel(true)
-    r:SetScript("OnMouseWheel", function(_, delta) s:Wheel(delta) end)
-    r:SetScript("OnClick", function(self, mouseButton) onClick(self, mouseButton) end)
-    return r
-end
-
--- Sets a row's label and colour, stacks it at y, and returns the height it took.
-local function fillRow(r, y, text, color, shade)
-    r.text:SetText(text)
-    r.text:SetTextColor(color[1], color[2], color[3])
-    r.hl:SetVertexColor(shade[1], shade[2], shade[3], shade[4])
-    local h = math.max(ROW_MIN, math.ceil(r.text:GetStringHeight() or 14) + 10)
-    r:SetHeight(h)
-    r:ClearAllPoints()
-    r:SetPoint("TOPLEFT", r:GetParent(), "TOPLEFT", 0, -y)
-    r:Show()
-    return h
-end
-
-local SHADE = { { 1, 1, 1, 0.03 }, { 1, 1, 1, 0.08 } }
-local SHADE_CURRENT, SHADE_FOCUS = { 0.6, 0.45, 0.05, 0.45 }, { 0.2, 0.4, 0.6, 0.45 }
 
 -- ---- Actions ----------------------------------------------------------------------------------
 
@@ -574,13 +357,24 @@ function U.Toggle()
     U.ApplyVisibility()
 end
 
+function U.Show()
+    uiState().shown = true
+    U.ApplyVisibility()
+end
+
 -- Shows the main window or hides it. The arrow is its own frame: only combat hides it.
 function U.ApplyVisibility()
     if not U.frame then
         return
     end
     if U.Wanted() and not U.combatHidden then
-        U.frame:Show()
+        if not U.frame:IsShown() then
+            U.frame:Show()
+            U.frame:SetAlpha(0)
+            T.Animate("window", 0.2, function(p)
+                U.frame:SetAlpha(T.Ease(p) * K.Option("alpha"))
+            end)
+        end
     else
         U.frame:Hide()
     end
@@ -588,396 +382,616 @@ function U.ApplyVisibility()
     A.Update()
 end
 
--- Re-applies every appearance option (scale, opacity, font size, arrow size).
-function U.ApplyAll()
-    if not U.frame then
+local function savePos(frame)
+    local point, _, rel, x, y = frame:GetPoint()
+    uiState().pos = { point = point, rel = rel, x = x, y = y }
+end
+
+local function saveSize(frame)
+    local w, h = frame:GetWidth(), frame:GetHeight()
+    if w and h and not U.collapsed then
+        local cw, ch = U.ClampSize(w, h)
+        uiState().size = { w = cw, h = ch }
+    end
+end
+
+local function placeMain(frame)
+    frame:ClearAllPoints()
+    local p = uiState().pos
+    if p and p.point then
+        frame:SetPoint(p.point, UIParent, p.rel, p.x, p.y)
+    else
+        frame:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+    end
+    local sz = uiState().size
+    local w, h = U.ClampSize(sz and sz.w, sz and sz.h)
+    frame:SetSize(w, h)
+end
+
+-- Forgets the saved positions and sizes of the window and the arrow.
+function U.ResetPlacement()
+    local st = uiState()
+    st.pos, st.size, st.arrowPos = nil, nil, nil
+    U.collapsed = false
+    st.collapsed = false
+    if U.frame then
+        placeMain(U.frame)
+        U.Relayout()
+    end
+    A.Place()
+end
+
+-- ---- Row pool ---------------------------------------------------------------------------------
+
+local function newRow(scroll)
+    local r = CreateFrame("Button", nil, scroll.content)
+    r.data, r.hover = false, false
+    r:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    r.surface = T.Surface(r, c.card, { 1, 1, 1, 0 })
+    r.stripe = r:CreateTexture(nil, "ARTWORK")
+    r.stripe:SetTexture(T.WHITE)
+    r.stripe:SetWidth(3)
+    r.stripe:SetPoint("TOPLEFT", r, "TOPLEFT", 0, 0)
+    r.stripe:SetPoint("BOTTOMLEFT", r, "BOTTOMLEFT", 0, 0)
+    r.badgeBox = CreateFrame("Frame", nil, r)
+    r.badgeBox:SetSize(24, 24)
+    r.badgeBox:SetPoint("TOPLEFT", r, "TOPLEFT", 12, -9)
+    r.badgeBg = r.badgeBox:CreateTexture(nil, "ARTWORK")
+    r.badgeBg:SetAllPoints(r.badgeBox)
+    r.badgeBg:SetTexture(T.WHITE)
+    r.glyph = T.Text(r.badgeBox, 14, c.text, "CENTER", true)
+    r.glyph:SetPoint("CENTER", r.badgeBox, "CENTER", 0, -1)
+    r.check = T.Glyph(r.badgeBox, "check", 14, c.good)
+    r.title = T.Text(r, 12, c.text)
+    r.title:SetPoint("TOPLEFT", r, "TOPLEFT", ROW_TEXT_L, -8)
+    r.sub = T.Text(r, 11, c.sub)
+    r.num = T.Text(r, 10, c.dim, "RIGHT")
+    r.num:SetPoint("TOPRIGHT", r, "TOPRIGHT", -10, -10)
+    r:EnableMouseWheel(true)
+    r:SetScript("OnMouseWheel", function(_, delta)
+        scroll:Wheel(delta)
+    end)
+    r:SetScript("OnEnter", function(self)
+        self.hover = true
+        U.PaintRow(self)
+        local d = self.data
+        if d and d.index and K.Engine.steps[d.index] then
+            local ps = U.PlanStepFor(K.Engine.steps[d.index])
+            if ps then
+                T.ShowTip(self, K.Planner.Breakdown(ps), "ANCHOR_RIGHT")
+            end
+        end
+    end)
+    r:SetScript("OnLeave", function(self)
+        self.hover = false
+        U.PaintRow(self)
+        T.HideTip()
+    end)
+    r:SetScript("OnClick", function(self, mouseButton)
+        U.OnRowClick(self, mouseButton)
+    end)
+    return r
+end
+
+-- State look of a row: fill, stripe, title colour and badge tint.
+local function rowLook(d)
+    if d.plain then
+        return c.card, c.edge, d.muted and c.sub or c.text
+    end
+    if d.current then
+        return c.cardActive, c.accent, c.text
+    end
+    if d.focus then
+        return { 0.10, 0.16, 0.24, 1 }, c.info, c.text
+    end
+    if d.state == "done" or d.state == "archived" then
+        return c.card, c.dim, c.dim
+    end
+    if d.state == "skipped" then
+        return c.card, c.bad, c.dim
+    end
+    if d.state == "cascade" then
+        return c.card, c.warn, c.sub
+    end
+    return c.card, d.tint or c.sub, c.text
+end
+
+function U.PaintRow(r)
+    local d = r.data
+    if not d then
         return
     end
-    U.frame:SetScale(K.Option("scale"))
-    U.frame:SetAlpha(K.Option("alpha"))
-    for _, e in ipairs(U.fonts) do
-        e.fs:SetFont(FONT, e.base * K.Option("fontScale"), "")
+    local fill, stripe, text = rowLook(d)
+    if r.hover then
+        fill = d.current and c.cardActive or c.cardHover
     end
-    U.frame:EnableMouse(not K.Option("locked"))
-    U.Relayout()
-    A.Place()
-    U.ApplyVisibility()
+    r.surface:SetFill(fill)
+    r.surface:SetEdge(d.current and { c.accent[1], c.accent[2], c.accent[3], 0.35 } or { 1, 1, 1, 0 })
+    r.stripe:SetVertexColor(stripe[1], stripe[2], stripe[3], d.plain and 0 or 1)
+    r.title:SetTextColor(text[1], text[2], text[3])
+end
+
+local function bindRow(r, d, top, h, width)
+    r.data = d
+    r:ClearAllPoints()
+    r:SetPoint("TOPLEFT", U.listFrame.content, "TOPLEFT", 0, -top)
+    r:SetSize(width, h)
+    r.title:ClearAllPoints()
+    r.sub:ClearAllPoints()
+    if d.plain then
+        r.badgeBox:Hide()
+        r.num:SetText("")
+        r.title:SetPoint("TOPLEFT", r, "TOPLEFT", 12, -8)
+        r.title:SetWidth(width - 24)
+    else
+        r.badgeBox:Show()
+        r.title:SetPoint("TOPLEFT", r, "TOPLEFT", ROW_TEXT_L, -8)
+        r.title:SetWidth(width - ROW_TEXT_L - ROW_TEXT_R)
+        r.num:SetText(d.num or "")
+        local fill = d.tint or c.sub
+        local finished = d.state == "done" or d.state == "archived"
+        r.badgeBg:SetVertexColor(fill[1], fill[2], fill[3], finished and 0.08 or 0.18)
+        r.glyph:SetText(d.glyph or "")
+        r.glyph:SetTextColor(fill[1], fill[2], fill[3])
+        r.glyph:SetShown(not finished)
+        r.check:SetShown(finished)
+    end
+    r.title:SetText(d.title or "")
+    if d.sub and d.sub ~= "" then
+        r.sub:SetPoint("TOPLEFT", r.title, "BOTTOMLEFT", 0, -3)
+        r.sub:SetWidth(width - ROW_TEXT_L - ROW_TEXT_R)
+        r.sub:SetText(d.sub)
+        r.sub:Show()
+    else
+        r.sub:SetText("")
+        r.sub:Hide()
+    end
+    U.PaintRow(r)
+    r:Show()
+end
+
+function U.OnRowClick(row, mouseButton)
+    local d = row.data
+    if not d then
+        return
+    end
+    if d.skippedQuest then
+        K.Engine:RestoreQuest(d.skippedQuest)
+        U.Refresh()
+        return
+    end
+    local idx = d.index
+    if not idx then
+        return
+    end
+    local E = K.Engine
+    if mouseButton == "RightButton" then
+        if K.StepMenu then
+            K.StepMenu.Open(idx, row)
+        end
+        return
+    elseif E.eff[idx] == "pending" then
+        U.focusKey = E.steps[idx].k
+    end
     U.Refresh()
 end
 
--- ---- Guide page -------------------------------------------------------------------------------
+-- ---- Virtualised list -------------------------------------------------------------------------
+
+-- Row data of the active tab.
+function U.TabRows()
+    local E = K.Engine
+    if U.tab == "ahead" then
+        local rows = {}
+        for _, line in ipairs(U.PlanRows()) do
+            rows[#rows + 1] = { plain = true, title = line }
+        end
+        if #rows == 0 then
+            rows[1] = { plain = true, muted = true, title = L.VIEW_EMPTY }
+        end
+        return rows
+    elseif U.tab == "skipped" then
+        local rows = {}
+        for _, item in ipairs(U.SkippedRows()) do
+            rows[#rows + 1] = { plain = true, title = item.text, skippedQuest = item.q }
+        end
+        if #rows == 0 then
+            rows[1] = { plain = true, muted = true, title = L.SKIPPED_NONE }
+        end
+        return rows
+    end
+    if not E.routeId then
+        return { { plain = true, muted = true, title = L.UI_NO_ROUTE } }
+    end
+    local rows = U.ListRows(E)
+    local focusIdx = U.focusKey and E.byKey[U.focusKey]
+    for _, d in ipairs(rows) do
+        d.focus = (d.index == focusIdx) and not d.current
+    end
+    return rows
+end
+
+-- Binds the pooled rows to the part of the list in view.
+function U.BindRows()
+    local pg, list = U.listFrame, U.list
+    if not (pg and list) then
+        return
+    end
+    local scroll = pg
+    local first, last = T.VisibleRange(list.tops, list.heights, scroll.offset, scroll.viewH, OVERSCAN)
+    local used = 0
+    for i = first, last do
+        used = used + 1
+        local r = U.pool[used]
+        if not r then
+            r = newRow(scroll)
+            U.pool[used] = r
+        end
+        bindRow(r, list.rows[i], list.tops[i], list.heights[i], scroll.viewW)
+    end
+    for n = used + 1, #U.pool do
+        U.pool[n].data = nil
+        U.pool[n]:Hide()
+    end
+end
+
+-- Lays the active tab out (row heights, tops, content height) and binds the visible rows. When the
+-- current step changed (or the tab just opened) the list scrolls so it sits in the top third.
+function U.RefreshList()
+    local scroll = U.listFrame
+    if not scroll then
+        return
+    end
+    local rows = U.TabRows()
+    local heights = {}
+    for i, d in ipairs(rows) do
+        heights[i] = U.RowHeight(d, scroll.viewW)
+    end
+    local tops, total = T.Layout(heights, ROW_GAP)
+    U.list = { rows = rows, heights = heights, tops = tops }
+    scroll:SetContentHeight(total)
+    local E = K.Engine
+    if U.tab == "steps" and (U.follow or E.cursor ~= U.lastCursor) then
+        local recent = (GetTime and GetTime() or 0) - U.userScrollAt < 3
+        if U.follow or not recent then
+            for i, d in ipairs(rows) do
+                if d.current then
+                    scroll:ScrollTo(T.ScrollTarget(tops[i], total, scroll.viewH))
+                    break
+                end
+            end
+        end
+    end
+    U.follow = false
+    U.lastCursor = E.cursor
+    U.BindRows()
+end
+
+-- ---- Hero card --------------------------------------------------------------------------------
 
 local EMPTY_TEXT = { none = "UI_NO_ROUTE", done = "UI_DONE", hidden = "UI_HIDDEN" }
 
-local function checklistText(list)
-    local lines = {}
-    for n = 1, math.min(#list, CHECKLIST_MAX) do
-        lines[#lines + 1] = string.format("%s %s", STATE_MARK[list[n].state] or "[ ]", list[n].text)
+-- Height of a font string holding text at a width: measured when the client can, else estimated.
+local function textHeight(fs, text, width, size)
+    fs:SetWidth(width)
+    fs:SetText(text)
+    if not text or text == "" then
+        fs:Hide()
+        return 0
     end
-    if #list > CHECKLIST_MAX then
-        lines[#lines + 1] = string.format(L.MORE_STEPS, #list - CHECKLIST_MAX)
+    fs:Show()
+    local h = fs:GetStringHeight()
+    if h and h > 0 then
+        return h
     end
-    return table.concat(lines, "\n")
+    return T.TextLines(text, width, size) * (size + 3)
 end
 
-local function refreshGuide(m)
-    local g = U.pages.guide
+local function heroWidth()
+    local w = U.frame and U.frame:GetWidth()
+    return (w or DEFAULT_W) - 2 * PAD
+end
+
+-- Fills the hero card from the model and sizes it. Returns its height.
+function U.LayoutHero(m)
+    local h = U.hero
+    local innerW = heroWidth() - 2 * HERO_PAD
     local ready = m.kind == "step"
-    U.SetButtonEnabled(g.next, ready)
-    U.SetButtonEnabled(g.skip, ready)
-    if ready then
-        g.action:SetText(m.action)
-        g.title:SetText(m.title)
-        g.chip:SetText(m.tagText or "")
-        local c = TAG_COLOR[m.tag] or { 1, 1, 1 }
-        g.chip:SetTextColor(c[1], c[2], c[3])
-        g.note:SetText(m.note)
-        g.why:SetText(m.why or "")
-        g.planStep = m.planStep
-        if m.checklist then
-            g.list:SetText(checklistText(m.checklist))
-            g.status:SetText(string.format(L.HUB_PROGRESS, m.hubDone, m.hubTotal))
-        else
-            g.list:SetText("")
-            g.status:SetText(string.format(L.STEP_COUNT, m.stepNo, m.total))
-        end
-    else
+    h.done:SetDisabled(not ready)
+    h.skip:SetDisabled(not ready)
+    local y = 12
+    local function place(el, gap, height)
+        el:ClearAllPoints()
+        el:SetPoint("TOPLEFT", h.body, "TOPLEFT", HERO_PAD, -y)
+        y = y + height + (gap or 0)
+    end
+    if not ready then
         local text
         if m.kind == "gated" then
             text = string.format(L.UI_GATED, m.level)
         else
             text = L[EMPTY_TEXT[m.kind] or "UI_DONE"]
         end
-        g.action:SetText("")
-        g.title:SetText(text)
-        g.chip:SetText("")
-        g.note:SetText("")
-        g.why:SetText("")
-        g.planStep = nil
-        g.list:SetText("")
-        g.status:SetText("")
+        h.badge:Hide()
+        h.action:SetText("")
+        h.chip:Hide()
+        h.count:SetText("")
+        for _, el in ipairs({ h.note, h.objectives, h.why, h.hint, h.npc, h.zone }) do
+            el:Hide()
+        end
+        local th = textHeight(h.title, text, innerW, 15)
+        place(h.title, 0, th)
+        h.title:SetTextColor(c.sub[1], c.sub[2], c.sub[3])
+        h.done:Hide()
+        h.skip:Hide()
+        h.stripe:SetVertexColor(c.dim[1], c.dim[2], c.dim[3], 1)
+        return y + 14
     end
-    -- A cursor-step hint (bags, flight path, hearthstone, trainer, supplies) takes the status line.
-    local hint = ready and K.Helpers and K.Helpers.CurrentHint()
-    if hint then
-        g.status:SetText(U.Clip(hint, STATUS_MAX))
-        g.status:SetTextColor(1, 0.7, 0.3)
+    h.done:Show()
+    h.skip:Show()
+    h.badge:Show()
+    local badge = T.Badge(m.stepType)
+    h.badgeBg:SetVertexColor(badge[2][1], badge[2][2], badge[2][3], 0.2)
+    h.glyph:SetText(badge[1])
+    h.glyph:SetTextColor(badge[2][1], badge[2][2], badge[2][3])
+    h.stripe:SetVertexColor(badge[2][1], badge[2][2], badge[2][3], 1)
+    h.action:SetText(string.upper(m.action or ""))
+    h.action:SetTextColor(badge[2][1], badge[2][2], badge[2][3])
+    h.chip:Set(m.tagText, TAG_COLOUR[m.tag])
+    h.count:SetText(m.checklist and string.format(L.HUB_COUNT, m.hubDone, m.hubTotal)
+        or string.format(L.STEP_COUNT_SHORT, m.stepNo, m.total))
+    y = y + 34
+
+    h.title:SetTextColor(c.text[1], c.text[2], c.text[3])
+    place(h.title, 8, textHeight(h.title, m.title, innerW, 17))
+    place(h.note, 8, textHeight(h.note, m.note, innerW, 12))
+    local objText = U.ObjectiveText(m.objectives)
+    if m.checklist then
+        local lines = {}
+        for _, item in ipairs(m.checklist) do
+            local done = item.state == "done"
+            lines[#lines + 1] = { text = item.text, finished = done }
+        end
+        objText = U.ObjectiveText(lines)
+    end
+    place(h.objectives, 8, textHeight(h.objectives, objText, innerW, 12))
+    place(h.why, 6, textHeight(h.why, m.why or "", innerW, 11))
+    local hint = K.Helpers and K.Helpers.CurrentHint()
+    place(h.hint, 6, textHeight(h.hint, hint and U.Clip(hint, 120) or "", innerW, 11))
+
+    -- NPC link and zone
+    h.npcName = m.npc
+    if m.npc then
+        h.npc:SetLabel(m.npc .. "  >")
+        h.npc:Show()
+        h.npc:ClearAllPoints()
+        h.npc:SetPoint("TOPLEFT", h.body, "TOPLEFT", HERO_PAD, -y)
     else
-        g.status:SetTextColor(0.6, 0.6, 0.6)
+        h.npc:Hide()
     end
+    if m.zone then
+        h.zone:SetText(m.zone)
+        h.zone:Show()
+        h.zone:ClearAllPoints()
+        if m.npc then
+            h.zone:SetPoint("LEFT", h.npc, "RIGHT", 10, 0)
+        else
+            h.zone:SetPoint("TOPLEFT", h.body, "TOPLEFT", HERO_PAD, -(y + 4))
+        end
+    else
+        h.zone:Hide()
+    end
+    if m.npc or m.zone then
+        y = y + 28
+    end
+
+    y = y + 4
+    h.done:ClearAllPoints()
+    h.done:SetPoint("TOPLEFT", h.body, "TOPLEFT", HERO_PAD, -y)
+    h.skip:ClearAllPoints()
+    h.skip:SetPoint("LEFT", h.done, "RIGHT", 8, 0)
+    y = y + 32
+    return y + 14
 end
 
-local function buildGuide(parent)
-    local g = CreateFrame("Frame", nil, parent)
-    g:SetSize(PAGE_W, PAGE_H)
-    g:SetPoint("TOPLEFT", parent, "TOPLEFT", PAD, -PAGE_TOP)
+-- Redraws the hero card and moves the list below it. Animates when the step changed.
+function U.RefreshHero(m)
+    local h = U.hero
+    if not h then
+        return
+    end
+    m = m or U.Model(K.Engine)
+    h.planStep = m.planStep
+    local height = U.LayoutHero(m)
+    h:SetHeight(height)
+    U.heroH = height
+    if m.key ~= U.heroKey then
+        U.heroKey = m.key
+        h.body:SetAlpha(0)
+        T.Animate("hero", 0.28, function(p)
+            local e = T.Ease(p)
+            h.body:SetAlpha(e)
+            h.body:ClearAllPoints()
+            h.body:SetPoint("TOPLEFT", h, "TOPLEFT", 0, -(1 - e) * 8)
+            h.body:SetPoint("BOTTOMRIGHT", h, "BOTTOMRIGHT", 0, -(1 - e) * 8)
+        end)
+    end
+    U.LayoutBody()
+    return m
+end
 
-    g.action = fontString(g, 12)
-    g.action:SetPoint("TOPLEFT", g, "TOPLEFT", 0, 0)
-    g.action:SetTextColor(0.6, 0.8, 1)
+local function buildHero(f)
+    local h = CreateFrame("Frame", nil, f)
+    T.Surface(h, c.card, c.edge)
+    h:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -HEAD_H)
+    h:SetPoint("TOPRIGHT", f, "TOPRIGHT", -PAD, -HEAD_H)
+    h:SetHeight(200)
+    h.stripe = h:CreateTexture(nil, "ARTWORK")
+    h.stripe:SetTexture(T.WHITE)
+    h.stripe:SetWidth(3)
+    h.stripe:SetPoint("TOPLEFT", h, "TOPLEFT", 0, 0)
+    h.stripe:SetPoint("BOTTOMLEFT", h, "BOTTOMLEFT", 0, 0)
+    local body = CreateFrame("Frame", nil, h)
+    body:SetAllPoints(h)
+    h.body = body
 
-    g.chip = fontString(g, 12, "RIGHT")
-    g.chip:SetPoint("TOPRIGHT", g, "TOPRIGHT", 0, 0)
+    h.badge = CreateFrame("Frame", nil, body)
+    h.badge:SetSize(26, 26)
+    h.badge:SetPoint("TOPLEFT", body, "TOPLEFT", HERO_PAD, -12)
+    h.badgeBg = h.badge:CreateTexture(nil, "ARTWORK")
+    h.badgeBg:SetAllPoints(h.badge)
+    h.badgeBg:SetTexture(T.WHITE)
+    h.glyph = T.Text(h.badge, 16, c.text, "CENTER", true)
+    h.glyph:SetPoint("CENTER", h.badge, "CENTER", 0, -1)
 
-    g.title = fontString(g, 17)
-    g.title:SetPoint("TOPLEFT", g, "TOPLEFT", 0, -22)
-    g.title:SetWidth(PAGE_W)
+    h.action = T.Text(body, 11, c.accent, "LEFT", true)
+    h.action:SetPoint("LEFT", h.badge, "RIGHT", 10, 0)
+    h.count = T.Text(body, 10, c.dim, "RIGHT")
+    h.count:SetPoint("TOPRIGHT", body, "TOPRIGHT", -HERO_PAD, -18)
+    h.chip = T.Chip(body, 10)
+    h.chip:SetPoint("RIGHT", h.count, "LEFT", -8, 0)
 
-    g.note = fontString(g, 12)
-    g.note:SetPoint("TOPLEFT", g.title, "BOTTOMLEFT", 0, -10)
-    g.note:SetWidth(PAGE_W)
-    g.note:SetTextColor(0.85, 0.85, 0.85)
+    h.title = T.Text(body, 17, c.text, "LEFT", true)
+    h.note = T.Text(body, 12, c.sub)
+    h.objectives = T.Text(body, 12, c.text)
+    h.why = T.Text(body, 11, { c.good[1], c.good[2], c.good[3] })
+    h.hint = T.Text(body, 11, c.warn)
+    h.zone = T.Text(body, 11, c.sub)
 
-    -- why the planner put this step here (phase 27); hover the card for the score breakdown
-    g.why = fontString(g, 11)
-    g.why:SetPoint("TOPLEFT", g.note, "BOTTOMLEFT", 0, -6)
-    g.why:SetWidth(PAGE_W)
-    g.why:SetTextColor(0.55, 0.75, 0.55)
-    g:EnableMouse(true)
-    g:SetScript("OnEnter", function(self)
-        if self.planStep and GameTooltip then
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            for i, line in ipairs(K.Planner.Breakdown(self.planStep)) do
-                if i == 1 then
-                    GameTooltip:SetText(line, 1, 1, 1, 1, true)
-                else
-                    GameTooltip:AddLine(line, 0.8, 0.8, 0.8, true)
-                end
-            end
-            GameTooltip:Show()
+    h.npc = T.Button(body, "", 0, 22, function()
+        local i = U.DisplayIndex(K.Engine)
+        local step = i and K.Engine.steps[i]
+        if step and K.NpcInfo then
+            K.NpcInfo.Open(step, i)
+        end
+    end, "quiet")
+    h.npc.textColour = c.npc
+    h.npc:SetStyle("quiet")
+    h.npc.tip = L.TIP_NPC
+
+    h.done = T.Button(body, L.BTN_DONE, 130, 28, function() U.DoNext() end, "primary")
+    h.done.tip = L.TIP_NEXT
+    h.skip = T.Button(body, L.BTN_SKIP, 80, 28, function() U.DoSkip() end, "ghost")
+    h.skip.tip = L.TIP_SKIP
+
+    h:EnableMouse(true)
+    h:SetScript("OnEnter", function(self)
+        if self.planStep then
+            T.ShowTip(self, K.Planner.Breakdown(self.planStep), "ANCHOR_RIGHT")
         end
     end)
-    g:SetScript("OnLeave", function()
-        if GameTooltip then
-            GameTooltip:Hide()
-        end
-    end)
-
-    g.list = fontString(g, 12)
-    g.list:SetPoint("TOPLEFT", g.why, "BOTTOMLEFT", 0, -8)
-    g.list:SetWidth(PAGE_W)
-
-    g.status = fontString(g, 11)
-    g.status:SetPoint("BOTTOMLEFT", g, "BOTTOMLEFT", 0, BTN_H + 10)
-    g.status:SetWidth(PAGE_W)
-    g.status:SetTextColor(0.6, 0.6, 0.6)
-
-    g.next = U.Button(g, L.BTN_NEXT, 110, function() U.DoNext() end, L.TIP_NEXT)
-    g.skip = U.Button(g, L.BTN_SKIP, 80, function() U.DoSkip() end, L.TIP_SKIP)
-    g.sync = U.Button(g, L.BTN_SYNC, 80, function() K.Resync() end, L.TIP_SYNC)
-    U.guideButtons = { g.next, g.skip, g.sync }
-    return g
+    h:SetScript("OnLeave", T.HideTip)
+    return h
 end
 
--- ---- Steps page -------------------------------------------------------------------------------
+-- ---- Header, tabs, footer ---------------------------------------------------------------------
 
--- Rows of the "Skipped" list (phase 22): one per skipped quest, click to restore.
-function U.SkippedRows()
-    local rows = {}
-    for _, item in ipairs(K.StepMenu and K.StepMenu.SkippedQuests() or {}) do
-        rows[#rows + 1] = { q = item.q, text = string.format(L.SKIPPED_ROW, item.name, item.q) }
-    end
-    return rows
+-- Opens the window menu below the menu button.
+function U.OpenMenu(anchor)
+    local reset = U.ResetItems()
+    local skippedN = #U.SkippedRows()
+    local items = {
+        { label = L.MENU_PLAN_AHEAD, fn = function() U.SetTab("ahead") end },
+        { label = string.format(L.MENU_SKIPPED_LIST, skippedN), fn = function() U.SetTab("skipped") end },
+        { label = L.MENU_PROFILE, fn = function() K.Profile.Command("") end },
+        { label = reset[3].text, fn = reset[3].fn },
+        { label = reset[1].text, fn = reset[1].fn },
+        { label = reset[2].text, fn = reset[2].fn },
+        { label = L.OPT_LOCK, checked = K.Option("locked"), fn = function()
+            K.SetOption("locked", not K.Option("locked"))
+        end },
+        { label = L.MENU_OPTIONS, fn = function() K.Options.Open() end },
+    }
+    return T.OpenMenu(anchor, L.ADDON_NAME, items)
 end
 
-local function onStepClick(row, mouseButton)
-    if row.skippedQuest then
-        K.Engine:RestoreQuest(row.skippedQuest)
-        U.Refresh()
-        return
-    end
-    local idx = row.index
-    if not idx then
-        return
-    end
-    local E = K.Engine
-    local state = E.eff[idx]
-    if mouseButton == "RightButton" then
-        -- Phase 22: the step menu (skip quest or step, mark done, restore, pin, why, NPC, arrow).
-        if K.StepMenu then
-            K.StepMenu.Open(idx, row)
-        end
-        return
-    elseif state == "pending" then
-        U.focusKey = E.steps[idx].k
-    end
-    U.Refresh()
-end
-
--- Toggles the Steps page between the band's steps and the list of skipped quests.
-function U.ToggleSkipped()
-    U.showSkipped = not U.showSkipped
-    U.Refresh()
-end
-
-local function refreshSkipped(pg)
-    local rows = U.SkippedRows()
-    local y = 0
-    for n, data in ipairs(rows) do
-        local r = pg.rows[n]
-        if not r then
-            r = newRow(pg.scroll, onStepClick)
-            pg.rows[n] = r
-        end
-        r.index, r.skippedQuest = false, data.q
-        y = y + fillRow(r, y, data.text, { 0.9, 0.35, 0.35 }, SHADE[n % 2 + 1])
-    end
-    if #rows == 0 then
-        local r = pg.rows[1] or newRow(pg.scroll, onStepClick)
-        pg.rows[1] = r
-        r.index, r.skippedQuest = false, false
-        y = fillRow(r, 0, L.SKIPPED_NONE, { 0.6, 0.6, 0.6 }, SHADE[1])
-        rows = { false }
-    end
-    for n = #rows + 1, #pg.rows do
-        pg.rows[n].index, pg.rows[n].skippedQuest = false, false
-        pg.rows[n]:Hide()
-    end
-    pg.scroll:SetContentHeight(y)
-end
-
-function U.RefreshSteps()
-    local pg = U.pages.steps
-    local E = K.Engine
-    if not pg or U.tab ~= "steps" or not E.routeId then
-        return
-    end
-    if pg.skipped then
-        local n = #U.SkippedRows()
-        pg.skipped.label:SetText(U.showSkipped and L.BTN_STEPS or string.format(L.BTN_SKIPPED, n))
-    end
-    if U.showSkipped then
-        refreshSkipped(pg)
-        return
-    end
-    local rows = U.ListRows(E)
-    local focusIdx = U.focusKey and E.byKey[U.focusKey]
-    local y, cursorTop = 0, nil
-    for n, data in ipairs(rows) do
-        local r = pg.rows[n]
-        if not r then
-            r = newRow(pg.scroll, onStepClick)
-            pg.rows[n] = r
-        end
-        r.index, r.skippedQuest = data.index, false
-        local shade = SHADE[n % 2 + 1]
-        if data.index == E.cursor then
-            shade = SHADE_CURRENT
-            cursorTop = y
-        elseif data.index == focusIdx then
-            shade = SHADE_FOCUS
-        end
-        y = y + fillRow(r, y, data.mark .. " " .. data.text, data.color, shade)
-    end
-    for n = #rows + 1, #pg.rows do
-        pg.rows[n].index = false
-        pg.rows[n]:Hide()
-    end
-    pg.scroll:SetContentHeight(y)
-    if cursorTop and (pg.follow or E.cursor ~= U.lastCursor) then
-        pg.scroll:ScrollTo(U.ScrollTarget(cursorTop, y, pg.scroll.viewH))
-    end
-    pg.follow = false
-    U.lastCursor = E.cursor
-end
-
-local function buildSteps(parent)
-    local pg = CreateFrame("Frame", nil, parent)
-    pg:SetSize(PAGE_W, PAGE_H)
-    pg:SetPoint("TOPLEFT", parent, "TOPLEFT", PAD, -PAGE_TOP)
-    pg.hint = fontString(pg, 11)
-    pg.hint:SetPoint("TOPLEFT", pg, "TOPLEFT", 0, 0)
-    pg.hint:SetWidth(PAGE_W)
-    pg.hint:SetTextColor(0.6, 0.6, 0.6)
-    pg.hint:SetText(L.LIST_HINT)
-    pg.hint:SetWidth(PAGE_W - 130)
-    if K.Theme then
-        pg.skipped = K.Theme.Button(pg, "", 120, 20, function() U.ToggleSkipped() end)
-        pg.skipped:SetPoint("TOPRIGHT", pg, "TOPRIGHT", 0, 0)
-    end
-    pg.scroll = scroller(pg, PAGE_W, PAGE_H - 36)
-    pg.scroll:SetPoint("TOPLEFT", pg, "TOPLEFT", 0, -36)
-    pg.rows, pg.follow = {}, true
-    return pg
-end
-
--- ---- Bands page -------------------------------------------------------------------------------
-
-function U.RefreshBands()
-    local pg = U.pages.bands
-    if not pg or U.tab ~= "bands" then
-        return
-    end
-    local lines = U.PlanRows()
-    local y = 0
-    for n, text in ipairs(lines) do
-        local r = pg.rows[n]
-        if not r then
-            r = newRow(pg.scroll, function() end)
-            pg.rows[n] = r
-        end
-        y = y + fillRow(r, y, text, { 1, 1, 1 }, SHADE[n % 2 + 1])
-    end
-    for n = #lines + 1, #pg.rows do
-        pg.rows[n]:Hide()
-    end
-    if #lines == 0 then
-        local r = pg.rows[1]
-        if not r then
-            r = newRow(pg.scroll, function() end)
-            pg.rows[1] = r
-        end
-        y = fillRow(r, 0, L.VIEW_EMPTY, { 0.7, 0.7, 0.7 }, SHADE[1])
-    end
-    pg.scroll:SetContentHeight(y)
-    pg.follow = false
-end
-
-local function buildBands(parent)
-    local pg = CreateFrame("Frame", nil, parent)
-    pg:SetSize(PAGE_W, PAGE_H)
-    pg:SetPoint("TOPLEFT", parent, "TOPLEFT", PAD, -PAGE_TOP)
-    pg.scroll = scroller(pg, PAGE_W, PAGE_H - BTN_H - 10)
-    pg.scroll:SetPoint("TOPLEFT", pg, "TOPLEFT", 0, 0)
-    pg.rows, pg.follow = {}, true
-    local items = U.ResetItems()
-    pg.resetBand = U.Button(pg, items[1].text, 0, items[1].fn)
-    pg.resetAll = U.Button(pg, items[2].text, 0, items[2].fn)
-    U.bandButtons = { pg.resetBand, pg.resetAll }
-    return pg
-end
-
--- ---- Options page -----------------------------------------------------------------------------
-
-local function onOptionClick(row)
-    local def = row.index and U.OPTION_ROWS[row.index]
-    if def then
-        K.SetOption(def.key, U.ToggledValue(def))
-        U.ApplyAll()
-    end
-end
-
-function U.RefreshOptions()
-    local pg = U.pages.options
-    if not pg or U.tab ~= "options" then
-        return
-    end
-    local y = 0
-    for n, def in ipairs(U.OPTION_ROWS) do
-        local r = pg.rows[n]
-        if not r then
-            r = newRow(pg.scroll, onOptionClick)
-            pg.rows[n] = r
-        end
-        r.index = n
-        y = y + fillRow(r, y, U.OptionText(def), { 1, 1, 1 }, SHADE[n % 2 + 1])
-    end
-    pg.scroll:SetContentHeight(y)
-end
-
-local function buildOptions(parent)
-    local pg = CreateFrame("Frame", nil, parent)
-    pg:SetSize(PAGE_W, PAGE_H)
-    pg:SetPoint("TOPLEFT", parent, "TOPLEFT", PAD, -PAGE_TOP)
-    pg.scroll = scroller(pg, PAGE_W, PAGE_H - BTN_H - 10)
-    pg.scroll:SetPoint("TOPLEFT", pg, "TOPLEFT", 0, 0)
-    pg.rows = {}
-    local audit = U.ResetItems()[3]
-    pg.audit = U.Button(pg, audit.text, 0, audit.fn)
-    pg.audit:SetPoint("BOTTOMLEFT", pg, "BOTTOMLEFT", 0, 0)
-    return pg
-end
-
--- ---- Tabs and refresh -------------------------------------------------------------------------
-
-function U.ShowTab(name)
+function U.SetTab(name)
     local valid = false
-    for _, t in ipairs(TABS) do
+    for _, t in ipairs(U.TABS) do
         valid = valid or t == name
     end
     if not valid then
-        name = "guide"
+        name = "steps"
     end
     U.tab = name
     uiState().tab = name
-    for _, t in ipairs(TABS) do
-        local pg = U.pages[t]
-        if pg then
-            pg:SetShown(t == name)
-        end
+    if U.collapsed then
+        U.SetCollapsed(false)
     end
-    for i, b in ipairs(U.tabButtons or {}) do
-        b.active = TABS[i] == name
-        paint(b)
-    end
-    if U.pages.steps then
-        U.pages.steps.follow = true
-    end
-    if U.pages.bands then
-        U.pages.bands.follow = true
+    U.follow = true
+    if U.tabs then
+        U.tabs:SetValue(name)
     end
     U.Refresh()
 end
+
+function U.SetCollapsed(on)
+    U.collapsed = on and true or false
+    uiState().collapsed = U.collapsed
+    if not U.frame then
+        return
+    end
+    if U.collapsed then
+        saveSize(U.frame)
+    else
+        local sz = uiState().size
+        local _, h = U.ClampSize(sz and sz.w, sz and sz.h)
+        U.frame:SetHeight(h)
+    end
+    U.Relayout()
+end
+
+-- Positions the tabs, list and footer below the hero and sets the window height when collapsed.
+function U.LayoutBody()
+    local f = U.frame
+    if not (f and U.hero and U.tabs) then
+        return
+    end
+    local top = HEAD_H + (U.heroH or 200) + 10
+    if U.collapsed then
+        U.tabs:Hide()
+        U.listFrame:Hide()
+        U.footer:Hide()
+        U.grip:Hide()
+        f:SetHeight(top + 6)
+        f.collapse.glyph:SetColour(c.accent)
+        return
+    end
+    f.collapse.glyph:SetColour(c.sub)
+    U.tabs:Show()
+    U.listFrame:Show()
+    U.footer:Show()
+    U.grip:Show()
+    U.tabs:ClearAllPoints()
+    U.tabs:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -top)
+    U.listFrame:ClearAllPoints()
+    U.listFrame:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -(top + 32))
+    U.listFrame:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -PAD, FOOT_H + 4)
+    U.listFrame:Measure()
+end
+
+-- Re-flows everything after a resize, a collapse or a font change.
+function U.Relayout()
+    if not U.frame then
+        return
+    end
+    U.RefreshHero()
+    U.RefreshList()
+end
+
+local function updateFooter(m)
+    local ft = U.footer
+    if m.kind == "step" then
+        ft.text:SetText(m.checklist and string.format(L.HUB_PROGRESS, m.hubDone, m.hubTotal)
+            or string.format(L.STEP_COUNT, m.stepNo, m.total))
+        ft.bar:SetFraction(m.progress or 0, true)
+    else
+        ft.text:SetText("")
+        ft.bar:SetFraction(m.kind == "done" and 1 or 0, true)
+    end
+end
+
+-- ---- Refresh ----------------------------------------------------------------------------------
 
 function U.Refresh()
     local f = U.frame
@@ -985,12 +999,30 @@ function U.Refresh()
         return
     end
     local m = U.Model(K.Engine)
-    f.band:SetText(K.Engine.routeId and U.PlanLabel() or "")
-    refreshGuide(m)
-    U.RefreshSteps()
-    U.RefreshBands()
-    U.RefreshOptions()
+    f.sub:SetText(K.Engine.routeId and U.PlanLabel() or "")
+    U.RefreshHero(m)
+    if U.tabs then
+        U.tabs.pills[3]:SetLabel(string.format(L.TAB_SKIPPED_N, #U.SkippedRows()))
+        U.tabs:Layout()
+        U.tabs:SetValue(U.tab)
+    end
+    U.RefreshList()
+    updateFooter(m)
     A.Update()
+end
+
+-- Re-applies every appearance option (scale, opacity, font size, lock, arrow).
+function U.ApplyAll()
+    if not U.frame then
+        return
+    end
+    U.frame:SetScale(K.Option("scale"))
+    U.frame:SetAlpha(K.Option("alpha"))
+    T.ApplyFontScale()
+    U.frame:EnableMouse(true)
+    A.Place()
+    U.ApplyVisibility()
+    U.Refresh()
 end
 
 -- ---- Main frame -------------------------------------------------------------------------------
@@ -1030,43 +1062,58 @@ end
 
 local function buildMain()
     local f = CreateFrame("Frame", nil, UIParent)
-    f:SetSize(WIDTH, HEIGHT)
     f:SetFrameStrata("MEDIUM")
     f:SetClampedToScreen(true)
     f:SetMovable(true)
-    backdrop(f, 0, 0, 0, 0.85)
+    f:EnableMouse(true)
+    T.SetResizeBounds(f, MIN_W, MIN_H, MAX_W, MAX_H)
+    T.Window(f)
 
-    -- Drag: left-drag anywhere on the window that is not a button. Locked windows ignore drags.
-    -- The window takes mouse input only while unlocked, so a locked window does not block the world.
-    f:EnableMouse(not K.Option("locked"))
-    f:RegisterForDrag("LeftButton")
-    f:SetScript("OnDragStart", function()
+    -- Drag by the header; a locked window ignores it.
+    local head = CreateFrame("Frame", nil, f)
+    head:SetPoint("TOPLEFT", f, "TOPLEFT", 0, 0)
+    head:SetPoint("TOPRIGHT", f, "TOPRIGHT", 0, 0)
+    head:SetHeight(HEAD_H)
+    head:EnableMouse(true)
+    head:RegisterForDrag("LeftButton")
+    head:SetScript("OnDragStart", function()
         if not K.Option("locked") then
             f:StartMoving()
         end
     end)
-    f:SetScript("OnDragStop", function()
+    head:SetScript("OnDragStop", function()
         f:StopMovingOrSizing()
-        savePos(f, "pos")
+        savePos(f)
     end)
 
-    -- Header: name, band label, close button, and a rule under it.
-    f.name = fontString(f, 15)
-    f.name:SetPoint("TOPLEFT", f, "TOPLEFT", PAD + 2, -10)
+    local mark = f:CreateTexture(nil, "ARTWORK")
+    mark:SetTexture(T.WHITE)
+    mark:SetSize(4, 22)
+    mark:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -12)
+    T.Paint(mark, c.accent)
+    f.name = T.Text(head, 15, c.text, "LEFT", true)
+    f.name:SetPoint("TOPLEFT", f, "TOPLEFT", PAD + 12, -9)
     f.name:SetText(L.ADDON_NAME)
-    f.name:SetTextColor(1, 0.82, 0)
-    f.band = fontString(f, 11)
-    f.band:SetPoint("LEFT", f.name, "RIGHT", 12, 0)
-    f.band:SetWidth(WIDTH - 130)
-    f.band:SetTextColor(0.75, 0.75, 0.75)
-    f.close = U.Button(f, "X", 26, function() U.Toggle() end, L.TIP_CLOSE)
-    f.close:SetPoint("TOPRIGHT", f, "TOPRIGHT", -PAD, -6)
-    local rule = f:CreateTexture(nil, "ARTWORK")
-    rule:SetTexture(WHITE)
-    rule:SetVertexColor(0.6, 0.5, 0.2, 0.8)
-    rule:SetHeight(1)
-    rule:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -32)
-    rule:SetPoint("TOPRIGHT", f, "TOPRIGHT", -PAD, -32)
+    f.sub = T.Text(head, 11, c.sub)
+    f.sub:SetPoint("TOPLEFT", f.name, "BOTTOMLEFT", 0, -2)
+    f.sub:SetPoint("RIGHT", f, "RIGHT", -110, 0)
+
+    f.close = T.IconButton(head, "close", 26, function() U.Toggle() end, L.TIP_CLOSE)
+    f.close:SetPoint("TOPRIGHT", f, "TOPRIGHT", -PAD + 4, -10)
+    f.collapse = T.IconButton(head, "chevron_up", 26, function()
+        U.SetCollapsed(not U.collapsed)
+    end, L.TIP_COLLAPSE)
+    f.collapse:SetPoint("RIGHT", f.close, "LEFT", -2, 0)
+    f.menu = T.IconButton(head, "menu", 26, function(self) U.OpenMenu(self) end, L.TIP_MENU)
+    f.menu:SetPoint("RIGHT", f.collapse, "LEFT", -2, 0)
+
+    f:SetScript("OnSizeChanged", function()
+        if U.hero and not U.resizing then
+            U.resizing = true
+            U.Relayout()
+            U.resizing = false
+        end
+    end)
     return f
 end
 
@@ -1078,19 +1125,54 @@ function U.Build()
     local f = buildMain()
     U.frame = f
     placeMain(f)
-    U.tabButtons = {}
-    for i, t in ipairs(TABS) do
-        U.tabButtons[i] = U.Button(f, L[TAB_LABEL[t]], 70, function() U.ShowTab(t) end)
+    U.pool = {}
+    U.hero = buildHero(f)
+
+    U.tabs = T.Segmented(f, {
+        { value = "steps", text = L.TAB_STEPS },
+        { value = "ahead", text = L.TAB_AHEAD },
+        { value = "skipped", text = string.format(L.TAB_SKIPPED_N, 0) },
+    }, function(v) U.SetTab(v) end)
+
+    local scroll = T.Scroll(f)
+    scroll.onScroll = function() U.BindRows() end
+    scroll.onUserScroll = function() U.userScrollAt = GetTime and GetTime() or 0 end
+    scroll.onResize = function()
+        if U.list then
+            U.RefreshList()
+        end
     end
-    U.pages.guide = buildGuide(f)
-    U.pages.steps = buildSteps(f)
-    U.pages.bands = buildBands(f)
-    U.pages.options = buildOptions(f)
+    U.listFrame = scroll
+
+    local ft = CreateFrame("Frame", nil, f)
+    ft:SetPoint("BOTTOMLEFT", f, "BOTTOMLEFT", 0, 0)
+    ft:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", 0, 0)
+    ft:SetHeight(FOOT_H)
+    ft.text = T.Text(ft, 11, c.sub)
+    ft.text:SetPoint("BOTTOMLEFT", ft, "BOTTOMLEFT", PAD, 10)
+    ft.bar = T.Progress(ft, 3)
+    ft.bar:SetPoint("BOTTOMLEFT", ft, "BOTTOMLEFT", 0, 0)
+    ft.bar:SetPoint("BOTTOMRIGHT", ft, "BOTTOMRIGHT", 0, 0)
+    U.footer = ft
+    U.grip = T.Grip(f, function()
+        saveSize(f)
+        U.Relayout()
+    end)
+    U.grip:SetFrameLevel((f:GetFrameLevel() or 1) + 10)
+
+    U.collapsed = uiState().collapsed and true or false
+    U.tab = uiState().tab or "steps"
+    if U.tab ~= "steps" and U.tab ~= "ahead" and U.tab ~= "skipped" then
+        U.tab = "steps"
+    end
     A.Build()
     K.Engine:OnChange(function()
         U.Refresh()
     end)
-    U.ShowTab(uiState().tab or "guide")
+    K.Options.OnChange(function()
+        U.ApplyAll()
+    end)
+    U.follow = true
     U.ApplyAll()
 end
 
@@ -1099,6 +1181,20 @@ end
 K.On("PLAYER_LOGIN", function()
     U.Build()
     U.Refresh()
+end)
+
+-- Objective counters change with the quest log: redraw the hero card (throttled by the ticker).
+K.On("QUEST_LOG_UPDATE", function()
+    U.objDirty = true
+end)
+K.On("UNIT_QUEST_LOG_CHANGED", function()
+    U.objDirty = true
+end)
+K.Every(0.5, function()
+    if U.objDirty and U.frame and U.frame:IsShown() then
+        U.objDirty = false
+        U.RefreshHero()
+    end
 end)
 
 K.On("PLAYER_REGEN_DISABLED", function()

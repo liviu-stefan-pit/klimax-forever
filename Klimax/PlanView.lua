@@ -35,7 +35,8 @@ function V.Model(plan, env)
     return m
 end
 
-local WIDTH, ROW = 420, 30
+local WIDTH, ROW = 440, 38
+local c = T.c
 
 local function build()
     local f = CreateFrame("Frame", nil, UIParent)
@@ -48,18 +49,19 @@ local function build()
     f:RegisterForDrag("LeftButton")
     f:SetScript("OnDragStart", function(self) self:StartMoving() end)
     f:SetScript("OnDragStop", function(self) self:StopMovingOrSizing() end)
-    T.Backdrop(f, T.colour.panel)
-    f.title = T.Text(f, 15, T.colour.gold)
-    f.title:SetPoint("TOPLEFT", f, "TOPLEFT", 10, -8)
+    T.Window(f)
+    T.CloseOnEscape(f, "KlimaxPlanViewFrame")
+    f.title = T.Text(f, 17, c.text, "LEFT", true)
+    f.title:SetPoint("TOPLEFT", f, "TOPLEFT", 14, -12)
     f.title:SetText(L.VIEW_TITLE)
-    f.close = T.Button(f, L.VIEW_CLOSE, 60, 18, function() f:Hide() end)
-    f.close:SetPoint("TOPRIGHT", f, "TOPRIGHT", -8, -6)
+    f.close = T.IconButton(f, "close", 24, function() f:Hide() end, L.VIEW_CLOSE)
+    f.close:SetPoint("TOPRIGHT", f, "TOPRIGHT", -8, -8)
     f.rows = {}
-    f.aheadHead = T.Text(f, 12, T.colour.gold)
-    f.aheadHead:SetText(L.VIEW_AHEAD)
+    f.aheadHead = T.Text(f, 11, c.accent, "LEFT", true)
+    f.aheadHead:SetText(string.upper(L.VIEW_AHEAD))
     f.aheadLines = {}
-    f.empty = T.Text(f, 11, T.colour.muted)
-    f.empty:SetWidth(WIDTH - 20)
+    f.empty = T.Text(f, 12, c.sub)
+    f.empty:SetWidth(WIDTH - 28)
     f.empty:SetText(L.VIEW_EMPTY)
     f:Hide()
     return f
@@ -71,30 +73,26 @@ local function row(f, n)
         return r
     end
     r = CreateFrame("Button", nil, f)
-    r:SetSize(WIDTH - 20, ROW)
-    r.bg = T.Backdrop(r, T.colour.row)
-    r.text = T.Text(r, 12)
-    r.text:SetPoint("TOPLEFT", r, "TOPLEFT", 6, -3)
-    r.why = T.Text(r, 10, T.colour.muted)
-    r.why:SetPoint("TOPLEFT", r, "TOPLEFT", 6, -16)
-    r.why:SetWidth(WIDTH - 32)
+    r:SetSize(WIDTH - 28, ROW)
+    r.surface = T.Surface(r, c.card, { 1, 1, 1, 0 })
+    r.stripe = r:CreateTexture(nil, "ARTWORK")
+    r.stripe:SetTexture(T.WHITE)
+    T.Paint(r.stripe, c.accent)
+    r.stripe:SetWidth(3)
+    r.stripe:SetPoint("TOPLEFT", r, "TOPLEFT", 0, 0)
+    r.stripe:SetPoint("BOTTOMLEFT", r, "BOTTOMLEFT", 0, 0)
+    r.text = T.Text(r, 12, c.text)
+    r.text:SetPoint("TOPLEFT", r, "TOPLEFT", 12, -5)
+    r.why = T.Text(r, 10, c.sub)
+    r.why:SetPoint("TOPLEFT", r, "TOPLEFT", 12, -20)
+    r.why:SetWidth(WIDTH - 52)
     r:SetScript("OnEnter", function(self)
-        if self.tip and GameTooltip then
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            for i, line in ipairs(self.tip) do
-                if i == 1 then
-                    GameTooltip:SetText(line, 1, 1, 1, 1, true)
-                else
-                    GameTooltip:AddLine(line, 0.8, 0.8, 0.8, true)
-                end
-            end
-            GameTooltip:Show()
-        end
+        self.surface:SetFill(c.cardHover)
+        T.ShowTip(self, self.tip, "ANCHOR_RIGHT")
     end)
-    r:SetScript("OnLeave", function()
-        if GameTooltip then
-            GameTooltip:Hide()
-        end
+    r:SetScript("OnLeave", function(self)
+        self.surface:SetFill(c.card)
+        T.HideTip()
     end)
     f.rows[n] = r
     return r
@@ -107,7 +105,7 @@ function V.Refresh()
     end
     local plan = K.Planner and K.Planner:Get()
     local m = V.Model(plan, K.Planner.ExplainEnv())
-    local y = -30
+    local y = -46
     for n = 1, #f.rows do
         f.rows[n]:Hide()
     end
@@ -118,14 +116,14 @@ function V.Refresh()
     end
     if m.empty then
         f.empty:ClearAllPoints()
-        f.empty:SetPoint("TOPLEFT", f, "TOPLEFT", 10, y)
+        f.empty:SetPoint("TOPLEFT", f, "TOPLEFT", 14, y)
         f.empty:Show()
         y = y - 40
     end
     for n, item in ipairs(m.steps) do
         local r = row(f, n)
         r:ClearAllPoints()
-        r:SetPoint("TOPLEFT", f, "TOPLEFT", 10, y)
+        r:SetPoint("TOPLEFT", f, "TOPLEFT", 14, y)
         r.text:SetText(item.text)
         r.why:SetText(item.why)
         r.tip = item.tip
@@ -134,24 +132,24 @@ function V.Refresh()
     end
     if #m.ahead > 0 then
         f.aheadHead:ClearAllPoints()
-        f.aheadHead:SetPoint("TOPLEFT", f, "TOPLEFT", 10, y - 4)
+        f.aheadHead:SetPoint("TOPLEFT", f, "TOPLEFT", 14, y - 4)
         f.aheadHead:Show()
         y = y - 22
         for n, line in ipairs(m.ahead) do
             local fs = f.aheadLines[n]
             if not fs then
-                fs = T.Text(f, 11, T.colour.muted)
-                fs:SetWidth(WIDTH - 20)
+                fs = T.Text(f, 11, c.sub)
+                fs:SetWidth(WIDTH - 28)
                 f.aheadLines[n] = fs
             end
             fs:ClearAllPoints()
-            fs:SetPoint("TOPLEFT", f, "TOPLEFT", 10, y)
+            fs:SetPoint("TOPLEFT", f, "TOPLEFT", 14, y)
             fs:SetText(line)
             fs:Show()
             y = y - 16
         end
     end
-    f:SetHeight(-y + 10)
+    f:SetHeight(-y + 14)
 end
 
 function V.Toggle()

@@ -85,15 +85,24 @@ function A.Read()
     return res
 end
 
--- ---- Frame -----------------------------------------------------------------------------------
+-- ---- Pointer ---------------------------------------------------------------------------------
 
 A.frame = nil
 A.allowed = true          -- set by the main window: false while it is hidden by combat
 
-local FONT = "Fonts\\FRIZQT__.TTF"
-local NEAR = 20           -- yards; the arrow turns green inside this distance
+local NEAR = 20           -- yards; the pointer turns green inside this distance
+local T = K.Theme
+local W, H = 168, 86
 
--- Places the arrow at its saved position, or top-centre of the screen. It is its own frame, so it
+-- Eight-way direction word for a relative angle (0 ahead, positive to the left). Used as the text
+-- fallback when the client cannot rotate textures, and in the tooltip. Pure.
+local SECTORS = { "AHEAD", "AHEAD_LEFT", "LEFT", "BEHIND_LEFT", "BEHIND", "BEHIND_RIGHT", "RIGHT", "AHEAD_RIGHT" }
+function A.Compass(rot)
+    local n = math.floor((rot / (math.pi / 4)) + 0.5) % 8
+    return SECTORS[n + 1]
+end
+
+-- Places the pointer at its saved position, or top-centre of the screen. It is its own frame, so it
 -- stays put whether the main window is open or not.
 function A.Place()
     local f = A.frame
@@ -106,21 +115,24 @@ function A.Place()
     if pos and pos.point then
         f:SetPoint(pos.point, UIParent, pos.rel, pos.x, pos.y)
     else
-        f:SetPoint("TOP", UIParent, "TOP", 0, -60)
+        f:SetPoint("TOP", UIParent, "TOP", 0, -70)
     end
     local draggable = not K.Option("locked")
     f:SetMovable(draggable)
     f:EnableMouse(draggable)
     f:SetScale((K.Option("scale") or 1) * (K.Option("arrowScale") or 1))
+    if f.label then
+        f.label:SetShown(K.Option("arrowLabel") ~= false)
+    end
 end
 
--- Builds the arrow frame once.
+-- Builds the pointer frame once: a dark chip with the arrowhead above the distance and the target.
 function A.Build()
     if A.frame then
         return
     end
     local f = CreateFrame("Frame", nil, UIParent)
-    f:SetSize(260, A.SIZE + 66)
+    f:SetSize(W, H)
     f:SetFrameStrata("MEDIUM")
     f:SetClampedToScreen(true)
     f:RegisterForDrag("LeftButton")
@@ -136,31 +148,41 @@ function A.Build()
         K.cdb.ui = K.cdb.ui or {}
         K.cdb.ui.arrowPos = { point = point, rel = rel, x = x, y = y }
     end)
+    f.surface = T.Surface(f, { 0.05, 0.06, 0.075, 0.82 }, T.c.edge)
 
     local tex = f:CreateTexture(nil, "ARTWORK")
     tex:SetSize(A.SIZE, A.SIZE)
-    tex:SetPoint("TOP", f, "TOP", 0, 0)
+    tex:SetPoint("TOP", f, "TOP", 0, -6)
     tex:SetTexture(A.TEXTURE)
     f.tex = tex
 
-    local dist = f:CreateFontString(nil, "OVERLAY")
-    dist:SetFont(FONT, 24, "OUTLINE")
-    dist:SetPoint("TOP", tex, "BOTTOM", 0, -2)
-    dist:SetTextColor(1, 1, 1)
-    f.text = dist
+    -- text fallback when textures cannot rotate
+    f.compass = T.Text(f, 12, T.c.accent, "CENTER", true)
+    f.compass:SetPoint("CENTER", tex, "CENTER", 0, 0)
+    f.compass:SetWidth(W - 16)
 
-    local label = f:CreateFontString(nil, "OVERLAY")
-    label:SetFont(FONT, 13, "OUTLINE")
-    label:SetPoint("TOP", dist, "BOTTOM", 0, -2)
-    label:SetWidth(250)
-    label:SetJustifyH("CENTER")
-    label:SetTextColor(0.9, 0.9, 0.9)
-    f.label = label
+    f.text = T.Text(f, 15, T.c.text, "CENTER", true)
+    f.text:SetPoint("TOP", tex, "BOTTOM", 0, -2)
+    f.text:SetWidth(W - 16)
+    f.label = T.Text(f, 10, T.c.sub, "CENTER")
+    f.label:SetPoint("TOP", f.text, "BOTTOM", 0, -1)
+    f.label:SetWidth(W - 16)
+    f.rotates = tex.SetRotation ~= nil
+    f.arrived = false
 
     A.frame = f
     A.Place()
     f:Hide()
     return f
+end
+
+-- Colours the pointer: accent while walking, green on arrival.
+local function tint(f, near)
+    local col = near and T.c.good or T.c.accent
+    f.tex:SetVertexColor(col[1], col[2], col[3])
+    f.surface:SetEdge(near and { col[1], col[2], col[3], 0.55 } or T.c.edge)
+    f.text:SetTextColor(near and col[1] or T.c.text[1], near and col[2] or T.c.text[2],
+        near and col[3] or T.c.text[3])
 end
 
 -- Draws A.Read() on the frame. Called at 10 Hz from the core ticker and after window changes.
@@ -171,22 +193,36 @@ function A.Update()
     end
     local r = A.Read()
     if r.kind == "arrow" then
-        f.tex:SetRotation(r.rot)
-        if r.dist < NEAR then
-            f.tex:SetVertexColor(0.3, 1, 0.3)
+        local near = r.dist < NEAR
+        if f.rotates then
+            f.tex:SetRotation(r.rot)
+            f.tex:Show()
+            f.compass:SetText("")
         else
-            f.tex:SetVertexColor(1, 1, 1)
+            f.tex:Hide()
+            f.compass:SetText(L["ARROW_" .. A.Compass(r.rot)])
         end
-        f.tex:Show()
+        tint(f, near)
+        if near and not f.arrived then
+            T.Animate("arrow-pulse", 0.4, function(p)
+                local base = (K.Option("scale") or 1) * (K.Option("arrowScale") or 1)
+                f:SetScale(base * (1 + 0.08 * math.sin(p * math.pi)))
+            end)
+        end
+        f.arrived = near
         f.text:SetText(string.format(L.ARROW_YARDS, math.floor(r.dist + 0.5)))
         f.label:SetText(r.name ~= "" and r.name or r.zone)
         f:Show()
     elseif r.kind == "travel" then
         f.tex:Hide()
+        f.compass:SetText("")
+        tint(f, false)
+        f.arrived = false
         f.text:SetText(string.format(L.ARROW_TRAVEL, r.zone))
         f.label:SetText(r.name)
         f:Show()
     else
+        f.arrived = false
         f:Hide()
     end
 end

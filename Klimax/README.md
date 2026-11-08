@@ -8,4 +8,4 @@ How it works (version 0.8, `docs/DYNAMIC_GUIDE_PLAN.md`):
 - `Engine.lua` hands the plan to the window (`UI.lua`), the arrow, the step menu and the Plan view. The player's choices (skips, hidden steps, pin) are saved per character.
 - `Telemetry.lua` records steps whose target was not where the data said, locally only (`/klimax report`).
 
-Commands: `/klimax` (window), `plan`, `why [n]`, `whynot <quest>`, `forecast`, `view`, `report`, `profile`, `resync`, `reset [guide|all]`, `dump`, `debug`.
+Commands: `/klimax` (window), `plan`, `why [n]`, `whynot <quest>`, `forecast`, `view`, `report`, `profile`, `resync`, `reset [guide|all]`, `options`, `dump`, `debug`.

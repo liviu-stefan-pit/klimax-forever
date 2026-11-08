@@ -66,6 +66,11 @@ local function fakeFrame()
     return frame
 end
 
+-- Sets or clears a global the add-on reads (for example a client API a spec adds or removes).
+function W.setGlobal(name, value)
+    _G[name] = value
+end
+
 -- Quest log helpers used by tests.
 function W.setQuestLog(questID, isComplete)
     for _, entry in ipairs(W.state.logList) do

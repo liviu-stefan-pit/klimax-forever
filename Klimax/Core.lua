@@ -223,6 +223,8 @@ function K.Command(msg)
         K.Telemetry.Command(rest)
     elseif cmd == "view" then
         K.PlanView.Toggle()
+    elseif cmd == "options" or cmd == "config" then
+        K.Options.Open()
     elseif cmd == "reset" then
         if rest:lower() == "all" then
             K.Engine:Reset("all")

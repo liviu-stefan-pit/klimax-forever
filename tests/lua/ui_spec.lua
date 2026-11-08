@@ -1,6 +1,6 @@
--- UI state logic and options (phase 07, updated in phase 29 for the plan engine): what the window
--- shows, the step list rows, the plan tab, the menu pages and option cycling. Frames are not inspected; the fake
--- widgets only need to accept the calls (see wowstubs.lua).
+-- UI state logic (phase 07, updated for the plan engine and the UI overhaul): what the window shows,
+-- the step list rows, the plan tab and the lifecycle. Option specs live in options_spec.lua. Frames are
+-- not inspected; the fake widgets only need to accept the calls (see wowstubs.lua).
 package.path = "tests/lua/?.lua;" .. package.path
 local W = require("wowstubs")
 
@@ -100,7 +100,9 @@ describe("step list", function()
         local K = W.start({ skipRoutes = true })
         show(K, { accept(101), accept(102), accept(103) })
         local rows = K.UI.ListRows(K.Engine)
-        assert.equals("[>]", rows[1].mark)
+        assert.is_true(rows[1].current)
+        assert.is_false(rows[2].current)
+        assert.equals("!", rows[1].glyph)
         assert.equals(3, #rows)
         assert.equals("1. Accept  Quest 101", rows[1].text)
         K.Engine:Skip(1)
@@ -172,50 +174,6 @@ describe("sizing and scrolling helpers", function()
         assert.equals(300 - 60, K.UI.ScrollTarget(300, 1000, 180))
         assert.equals(0, K.UI.ScrollTarget(10, 1000, 180))
         assert.equals(820, K.UI.ScrollTarget(990, 1000, 180))
-    end)
-end)
-
-describe("options", function()
-    it("NextValue steps through a list and wraps; an unknown value gives the first", function()
-        local K = W.start({ skipRoutes = true })
-        local values = { 0.8, 1, 1.25 }
-        assert.equals(1, K.UI.NextValue(values, 0.8))
-        assert.equals(1.25, K.UI.NextValue(values, 1))
-        assert.equals(0.8, K.UI.NextValue(values, 1.25))
-        assert.equals(0.8, K.UI.NextValue(values, 42))
-    end)
-
-    it("bool rows flip and cycle rows move to the next value", function()
-        local K = W.start({ skipRoutes = true })
-        local rows = K.UI.OPTION_ROWS
-        local byKey = {}
-        for _, row in ipairs(rows) do
-            byKey[row.key] = row
-        end
-        assert.is_false(K.UI.ToggledValue(byKey.arrow))
-        assert.equals(4, K.UI.ToggledValue(byKey.bagThreshold))
-        K.SetOption("fontScale", 1.15)
-        assert.equals(1.3, K.UI.ToggledValue(byKey.fontScale))
-    end)
-
-    it("options default when nothing is stored, and a stored value wins", function()
-        local K = W.start({ skipRoutes = true })
-        assert.is_true(K.Option("arrow"))
-        assert.is_true(K.Option("toasts"))
-        assert.equals(3, K.Option("bagThreshold"))
-        K.SetOption("arrow", false)
-        assert.is_false(K.Option("arrow"))
-    end)
-
-    it("the options text shows the state of a bool row and the value of a cycle row", function()
-        local K = W.start({ skipRoutes = true })
-        local rows = K.UI.OPTION_ROWS
-        assert.equals("[x] " .. K.L.OPT_ARROW, K.UI.OptionText(rows[1]))
-        for _, row in ipairs(rows) do
-            if row.key == "bagThreshold" then
-                assert.equals(K.L.OPT_BAG .. ": 3", K.UI.OptionText(row))
-            end
-        end
     end)
 end)
 

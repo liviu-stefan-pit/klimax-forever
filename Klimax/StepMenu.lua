@@ -190,7 +190,11 @@ function SM.Do(key, i)
     elseif key == "why" then
         printLines(SM.WhyLines(step, E.eff[i]))
     elseif key == "npc" then
-        printLines(SM.NpcLines(step))
+        if K.NpcInfo then
+            K.NpcInfo.Open(step)
+        else
+            printLines(SM.NpcLines(step))
+        end
     elseif key == "arrow" then
         if K.UI then
             K.UI.focusKey = step.k
@@ -201,74 +205,32 @@ end
 
 -- ---- Frame --------------------------------------------------------------------------------------
 
-SM.frame = nil
-local ROW_H, MENU_W = 20, 190
-
-local function build()
-    local f = CreateFrame("Frame", nil, UIParent)
-    f:SetFrameStrata("DIALOG")
-    f:SetClampedToScreen(true)
-    f:SetSize(MENU_W, ROW_H)
-    T.Backdrop(f, T.colour.panel)
-    f.title = T.Text(f, 12, T.colour.gold)
-    f.title:SetPoint("TOPLEFT", f, "TOPLEFT", 6, -4)
-    f.title:SetWidth(MENU_W - 12)
-    f.buttons = {}
-    f:EnableMouse(true)
-    f:Hide()
-    return f
-end
-
--- Opens the menu for step i next to `anchor` (a list row).
+-- Opens the menu for step i below `anchor` (a list row) using the shared themed pop-up menu. Returns
+-- the item keys, with "close" last (the menu itself closes on a click anywhere else).
 function SM.Open(i, anchor)
     local E = K.Engine
     local step = E.steps[i]
     if not step then
         return
     end
-    local f = SM.frame or build()
-    SM.frame = f
     local stored = K.cdb.hiddenSteps and K.cdb.hiddenSteps[step.k] and "hidden" or nil
     local pin = K.cdb.pin
     local items = SM.Items(step, E.eff[i], stored, E.QuestSkipped(step.q), pin ~= nil and pin.k == step.k)
+    local entries = {}
+    for _, key in ipairs(items) do
+        entries[#entries + 1] = {
+            label = L["MENU_" .. key] or key,
+            fn = function() SM.Do(key, i) end,
+        }
+    end
+    T.OpenMenu(anchor, step.n or step.note or "", entries)
     items[#items + 1] = "close"
-    f.title:SetText(step.n or step.note or "")
-    for n, key in ipairs(items) do
-        local b = f.buttons[n]
-        if not b then
-            b = T.Button(f, "", MENU_W - 8, ROW_H - 2)
-            f.buttons[n] = b
-        end
-        b.label:SetText(L["MENU_" .. key] or key)
-        b:SetScript("OnClick", function()
-            f:Hide()
-            if key ~= "close" then
-                SM.Do(key, i)
-            end
-        end)
-        b:ClearAllPoints()
-        b:SetPoint("TOPLEFT", f, "TOPLEFT", 4, -(ROW_H + (n - 1) * ROW_H))
-        b:Show()
-    end
-    for n = #items + 1, #f.buttons do
-        f.buttons[n]:Hide()
-    end
-    f:SetHeight(ROW_H * (#items + 1) + 6)
-    f:ClearAllPoints()
-    if anchor then
-        f:SetPoint("TOPLEFT", anchor, "TOPRIGHT", 4, 0)
-    else
-        f:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
-    end
-    f:Show()
     SM.openItems = items
     return items
 end
 
 function SM.Close()
-    if SM.frame then
-        SM.frame:Hide()
-    end
+    T.CloseMenu()
 end
 
 -- The "Keep it hidden?" confirmation for Mark done.

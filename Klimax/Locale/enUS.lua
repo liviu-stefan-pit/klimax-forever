@@ -8,7 +8,7 @@ K.L = {
     RESET_GUIDE = "Guide reset: hidden steps, reported quests and service memory cleared. Skipped quests stay.",
     RESET_ALL = "All Klimax progress reset.",
     HELP = "Commands: /klimax (show or hide) | debug | resync | reset [guide|all] | dev level <1-60> | dump"
-        .. " | plan | why [n] | whynot <quest> | forecast | view | report | profile [preset]",
+        .. " | plan | why [n] | whynot <quest> | forecast | view | report | profile [preset] | options",
     -- phase 21 planner
     -- phase 24: class services and level beats (docs/CLASS_BEATS.md is generated from these)
     SVC_talents = "Spend your talent points.",
@@ -127,8 +127,6 @@ K.L = {
     MENU_NPC_ROLES = "  Roles: %s",
     MENU_NPC_AT = "  %s %.1f, %.1f",
     CONFIRM_NOT_DONE = "The game does not show this as done. Keep it hidden?",
-    BTN_SKIPPED = "Skipped (%d)",
-    BTN_STEPS = "Back to steps",
     SKIPPED_ROW = "[-] %s (quest %d). Click to restore.",
     SKIPPED_NONE = "No skipped quests.",
     QSTATE_completed = "turned in",
@@ -336,18 +334,60 @@ K.L = {
     TAG_ELITE = "Optional · Elite",
 
     -- main window
-    BTN_NEXT = "Next",
     BTN_SKIP = "Skip",
-    BTN_SYNC = "Sync",
     TIP_NEXT = "Mark this step done. A hub batch is marked done together.",
     TIP_SKIP = "Skip this step. Later steps that depend on it are skipped too.",
-    TIP_SYNC = "Re-read your completed quests from the game.",
-    TAB_GUIDE = "Guide",
     TAB_STEPS = "Steps",
-    TAB_BANDS = "Plan",
-    TAB_OPTIONS = "Options",
     TIP_CLOSE = "Hide the window. /klimax shows it again.",
-    MORE_STEPS = "+ %d more",
+    TIP_COLLAPSE = "Collapse to the current step, or expand.",
+    TIP_MENU = "Menu: plan ahead, skipped quests, profile, resync, options.",
+    TIP_NPC = "Who is this? Click for what it does and where it stands.",
+    TAB_AHEAD = "Ahead",
+    TAB_SKIPPED_N = "Skipped (%d)",
+    BTN_DONE = "Done",
+    STEP_COUNT_SHORT = "%d / %d",
+    HUB_COUNT = "Hub %d / %d",
+    MENU_PLAN_AHEAD = "Plan ahead",
+    MENU_SKIPPED_LIST = "Skipped quests (%d)",
+    MENU_PROFILE = "How I level (profile)",
+    MENU_OPTIONS = "Options",
+
+    -- NPC card
+    NPC_POINT = "Point arrow here",
+    NPC_AT = "%s  %.1f, %.1f",
+    ROLE_TRAINER = "%s trainer",
+    ROLE_vendor = "Vendor",
+    ROLE_repair = "Repairs",
+    ROLE_food = "Food",
+    ROLE_water = "Water",
+    ROLE_fm = "Flight master",
+    ROLE_inn = "Innkeeper",
+    ROLE_bank = "Bank",
+    ROLE_ah = "Auction house",
+    ROLE_mail = "Mailbox",
+    ROLE_stable = "Stable master",
+    ROLE_arrow = "Ammo (arrows)",
+    ROLE_bullet = "Ammo (bullets)",
+    ROLE_pettrainer = "Pet trainer",
+
+    -- options panel
+    SEC_WINDOW = "Window",
+    SEC_ARROW = "Arrow",
+    SEC_HELPERS = "Helpers",
+    OPT_VERSION = "version %s",
+    OPT_ANIMATIONS = "Animations",
+    OPT_ARROW_LABEL = "Show the target name under the arrow",
+    OPT_BTN_GUIDE = "Open guide",
+    OPT_BTN_PROFILE = "How I level",
+    OPT_BTN_RESET_POS = "Reset positions",
+    OPT_BTN_DEFAULTS = "Defaults",
+    OPT_LOCK_TIP = "Stops the window and the arrow from being dragged.",
+    OPT_HIDE_COMBAT_TIP = "Hides the window and the arrow while you are in combat.",
+    OPT_ANIMATIONS_TIP = "Short fades and slides when the step changes. Off shows changes at once.",
+    OPT_ARROW_TIP = "The small pointer at the top of the screen.",
+    OPT_ARROW_LABEL_TIP = "The name of the target under the distance.",
+    OPT_TOASTS_TIP = "Notices about moving on and the next stop.",
+    OPT_OPPORTUNITIES_TIP = "Notices about rare mobs and chests near your route.",
     STEP_COUNT = "Step %d of %d",
     HUB_PROGRESS = "Hub: %d of %d done",
     UI_NO_ROUTE = "No route for this character yet.",
@@ -358,6 +398,14 @@ K.L = {
     -- arrow
     ARROW_YARDS = "%d yd",
     ARROW_TRAVEL = "Travel to %s",
+    ARROW_AHEAD = "Ahead",
+    ARROW_AHEAD_LEFT = "Ahead left",
+    ARROW_LEFT = "Left",
+    ARROW_BEHIND_LEFT = "Behind left",
+    ARROW_BEHIND = "Behind",
+    ARROW_BEHIND_RIGHT = "Behind right",
+    ARROW_RIGHT = "Right",
+    ARROW_AHEAD_RIGHT = "Ahead right",
 
     -- menu
     MENU_RESET_BAND = "Clear skipped steps",
@@ -374,7 +422,6 @@ K.L = {
     NO = "No",
 
     -- step list
-    LIST_HINT = "Click a pending step to focus it. Right-click any step for its menu (skip, restore, pin, why).",
 
     -- options
     OPT_ARROW = "Arrow",

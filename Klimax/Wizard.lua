@@ -26,7 +26,9 @@ end
 -- The working copy edited by the window (saved on every change).
 Wz.draft = nil
 
-local W_W, ROW_H = 380, 20
+local c = T.c
+local W_W, ROW_H, PAD = 460, 30, 18
+local VALUE_W = 210
 
 local function build()
     local f = CreateFrame("Frame", nil, UIParent)
@@ -39,43 +41,48 @@ local function build()
     f:RegisterForDrag("LeftButton")
     f:SetScript("OnDragStart", function(self) self:StartMoving() end)
     f:SetScript("OnDragStop", function(self) self:StopMovingOrSizing() end)
-    T.Backdrop(f, T.colour.panel)
-    f.title = T.Text(f, 15, T.colour.gold)
-    f.title:SetPoint("TOPLEFT", f, "TOPLEFT", 10, -8)
+    T.Window(f)
+    T.CloseOnEscape(f, "KlimaxWizardFrame")
+    f.title = T.Text(f, 18, c.text, "LEFT", true)
+    f.title:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -PAD)
     f.title:SetText(L.WIZARD_TITLE)
-    f.intro = T.Text(f, 11, T.colour.muted)
-    f.intro:SetPoint("TOPLEFT", f, "TOPLEFT", 10, -28)
-    f.intro:SetWidth(W_W - 20)
+    f.title:SetWidth(W_W - 2 * PAD - 24)
+    f.intro = T.Text(f, 12, c.sub)
+    f.intro:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -(PAD + 28))
+    f.intro:SetWidth(W_W - 2 * PAD)
     f.intro:SetText(L.WIZARD_INTRO)
-    f.presets, f.rows = {}, {}
-    local x = 10
-    for n, preset in ipairs(Pr.PRESETS) do
-        local b = T.Button(f, L["PRESET_" .. preset.id] or preset.id, 70, ROW_H, function()
-            Wz.draft = Pr.ApplyPreset(preset.id)
-            Wz.Refresh()
-        end)
-        b:SetPoint("TOPLEFT", f, "TOPLEFT", x, -52)
-        f.presets[n] = b
-        x = x + 72
+
+    local choices = {}
+    for _, preset in ipairs(Pr.PRESETS) do
+        choices[#choices + 1] = { value = preset.id, text = L["PRESET_" .. preset.id] or preset.id }
     end
+    f.presets = T.Segmented(f, choices, function(id)
+        Wz.draft = Pr.ApplyPreset(id)
+        Wz.Refresh()
+    end)
+    f.presets:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -(PAD + 62))
+
+    f.rows, f.labels = {}, {}
     for n, field in ipairs(Pr.FIELDS) do
-        local b = T.Button(f, "", W_W - 20, ROW_H - 2, function()
+        local y = PAD + 100 + (n - 1) * ROW_H
+        local lbl = T.Text(f, 12, c.sub)
+        lbl:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -(y + 6))
+        f.labels[n] = lbl
+        local b = T.Button(f, "", VALUE_W, ROW_H - 4, function()
             local p = Pr.Normalize(Wz.draft)
             Wz.draft = Pr.Set(field.key, Pr.NextChoice(field.key, p[field.key]))
             Wz.Refresh()
-        end)
-        b:SetPoint("TOPLEFT", f, "TOPLEFT", 10, -(78 + (n - 1) * ROW_H))
+        end, "ghost")
+        b:SetPoint("TOPRIGHT", f, "TOPRIGHT", -PAD, -y)
         f.rows[n] = b
     end
-    local top = 78 + #Pr.FIELDS * ROW_H + 6
-    f.preview = T.Text(f, 11, T.colour.good)
-    f.preview:SetPoint("TOPLEFT", f, "TOPLEFT", 10, -top)
-    f.preview:SetWidth(W_W - 20)
-    f.done = T.Button(f, L.WIZARD_DONE, 80, ROW_H + 2, function()
+    f.preview = T.Text(f, 12, c.good)
+    f.preview:SetWidth(W_W - 2 * PAD)
+    f.done = T.Button(f, L.WIZARD_DONE, 110, 30, function()
         Pr.Save(Pr.Normalize(Wz.draft))
         f:Hide()
-    end)
-    f.done:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -10, 8)
+    end, "primary")
+    f.done:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -PAD, PAD)
     f:Hide()
     return f
 end
@@ -85,14 +92,26 @@ function Wz.Refresh()
     if not f then
         return
     end
-    local rows = Wz.Rows(Wz.draft)
+    local p = Pr.Normalize(Wz.draft)
+    f.presets:SetValue(p.preset)
+    local rows = Wz.Rows(p)
     for n, row in ipairs(rows) do
-        f.rows[n].label:SetText(row.text)
+        local field = Pr.FIELDS[n]
+        f.labels[n]:SetText(L["PROFILE_" .. field.key] or field.key)
+        f.rows[n]:SetLabel(L["PROFILE_" .. field.key .. "_" .. p[field.key]] or p[field.key])
+        f.rows[n]:SetWidth(VALUE_W)
+        f.rows[n].tip = row.text
     end
     local lines = Pr.Preview(Wz.draft)
+    local top = PAD + 100 + #rows * ROW_H + 10
+    f.preview:ClearAllPoints()
+    f.preview:SetPoint("TOPLEFT", f, "TOPLEFT", PAD, -top)
     f.preview:SetText(table.concat(lines, "\n"))
-    local h = 78 + #rows * ROW_H + 14 + #lines * 14 + 36
-    f:SetHeight(h)
+    local ph = f.preview:GetStringHeight()
+    if not ph or ph <= 0 then
+        ph = #lines * 15
+    end
+    f:SetHeight(top + ph + 16 + 30 + PAD)
 end
 
 function Wz.Open()
@@ -103,6 +122,10 @@ function Wz.Open()
     end
     Wz.Refresh()
     Wz.frame:Show()
+    Wz.frame:SetAlpha(0)
+    T.Animate("wizard", 0.22, function(p)
+        Wz.frame:SetAlpha(T.Ease(p))
+    end)
 end
 
 -- First login of a character without a profile: open the wizard once the world has loaded.
