@@ -542,6 +542,8 @@ function T.Toggle(parent, label, get, set, tip)
     b.text = T.Text(b, 12, c.text)
     b.text:SetPoint("LEFT", track, "RIGHT", 10, 0)
     b.text:SetText(label or "")
+    -- Give the button an explicit size (track + gap + label) instead of leaving it at zero width.
+    b:SetWidth(TRACK_W + 10 + math.ceil(b.text:GetStringWidth() or 0) + 4)
     b.pos = 0
     local function place(p)
         b.pos = p

@@ -136,8 +136,39 @@ describe("Hunter module", function()
         local needs = Ru.Needs(x({ class = "HUNTER", level = 10, hasPet = true, petHappiness = 1 }))
         assert.are.same({ "feedpet", "beat", "pettrainer", "stable" }, reasons(needs))
         needs = Ru.Needs(x({ class = "HUNTER", level = 11, hasPet = true, petHappiness = 3,
-            visited = { stable10 = true, pettrainer = true, weapon10 = true } }))
+            visited = { stable10 = true, weapon10 = true }, trainNext = { pet = 20 } }))
         assert.are.same({}, reasons(needs))
+    end)
+
+    it("never sends a hunter to the pet trainer while every row is still locked", function()
+        local Ru = K.Services.Rules
+        -- first visit only from level 10; afterwards only from the level the window showed
+        assert.are.same({}, reasons(Ru.Needs(x({ class = "HUNTER", level = 9, hasPet = true,
+            visited = { stable10 = true, weapon10 = true } }))))
+        local at17 = Ru.Needs(x({ class = "HUNTER", level = 17, hasPet = true, trainNext = { pet = 18 },
+            visited = { stable10 = true, weapon10 = true } }))
+        assert.are.same({}, reasons(at17))
+        local at18 = Ru.Needs(x({ class = "HUNTER", level = 18, hasPet = true, trainNext = { pet = 18 },
+            visited = { stable10 = true, weapon10 = true } }))
+        assert.are.same({ "pettrainer" }, reasons(at18))
+    end)
+
+    it("takes the next unlock level from the trainer rows", function()
+        local Sv = K.Services
+        local rows = { { category = "unavailable", req = 20 }, { category = "unavailable", req = 18 },
+            { category = "available", req = 10 }, { category = "used" } }
+        assert.equal(18, Sv.NextUnlock(rows, 17))
+        assert.equal(20, Sv.NextUnlock(rows, 18))
+        assert.equal(99, Sv.NextUnlock({ { category = "used" } }, 17))
+        assert.equal(19, Sv.NextUnlock({}, 17))
+    end)
+
+    it("a class trainer visit waits for the level the window showed", function()
+        local Ru = K.Services.Rules
+        local at = Ru.Needs(x({ level = 14, trainedAt = 8, money = 5000, trainNext = { class = 16 } }))
+        assert.are.same({}, reasons(at))
+        at = Ru.Needs(x({ level = 16, trainedAt = 8, money = 5000, trainNext = { class = 16 } }))
+        assert.are.same({ "trainer" }, reasons(at))
     end)
 end)
 
@@ -215,7 +246,7 @@ describe("insertion", function()
 
     it("a place-less reminder (Feed Pet) comes first without a target", function()
         local out = apply(x({ class = "HUNTER", hasPet = true, petHappiness = 1, level = 12,
-            visited = { pettrainer = true }, taxiKnown = { ["Hilltop, Plains"] = true } }))
+            trainNext = { pet = 99 }, taxiKnown = { ["Hilltop, Plains"] = true } }))
         assert.equal("feedpet", out[1].reason)
         assert.is_nil(out[1].z)
     end)

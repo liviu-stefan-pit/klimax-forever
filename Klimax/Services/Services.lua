@@ -37,7 +37,8 @@ function Sv.Read()
         supplies = supplies,
         hasPet = C.HasPet(), petHappiness = C.PetHappiness(),
         hasMail = C.HasNewMail(),
-        trainedAt = cdb.trainedAt, profTrained = cdb.profTrained or {}, visited = cdb.visited or {},
+        trainedAt = cdb.trainedAt, trainNext = cdb.trainNext or {},
+        profTrained = cdb.profTrained or {}, visited = cdb.visited or {},
         rangedSubclass = cls and cls.classID == 2 and cls.subclassID or nil,
         talentPoints = C.GetTalentPoints(),
         items = Sv.CountItems(K.Class.Items(p.class)),
@@ -309,15 +310,48 @@ local function visited(key)
 end
 Sv.MarkVisited = visited
 
+-- The level at which a trainer next has something new, from its rows: the lowest level requirement above
+-- the player's among the rows still locked ("unavailable"). Rows without a requirement, or a window with
+-- no locked rows, give level + 2 / 99 so the stop is not planned again until it can pay off. Pure.
+function Sv.NextUnlock(services, level)
+    local nextAt
+    for _, s in ipairs(services or {}) do
+        if s.category == "unavailable" and s.req and s.req > level and (not nextAt or s.req < nextAt) then
+            nextAt = s.req
+        end
+    end
+    if nextAt then
+        return nextAt
+    end
+    return (#(services or {}) > 0) and 99 or level + 2
+end
+
+-- Which trainer the open window belongs to: "pet" (a pet trainer NPC), "prof" or "class".
+local function trainerKind()
+    if C.IsTradeskillTrainer() then
+        return "prof"
+    end
+    local id = C.TalkingNpcId and C.TalkingNpcId()
+    local npc = id and K.WorldDB and K.WorldDB.Npc and K.WorldDB.Npc(id)
+    for _, r in ipairs((npc and npc.r) or {}) do
+        if r == "pettrainer" then
+            return "pet"
+        end
+    end
+    return "class"
+end
+
 K.On("TRAINER_SHOW", function()
     local level = (K.player and K.player.level) or 1
-    if C.IsTradeskillTrainer() then
+    local kind = trainerKind()
+    K.cdb.trainNext = K.cdb.trainNext or {}
+    local services = K.Trainer and K.Trainer.ReadServices and K.Trainer.ReadServices() or {}
+    if kind == "prof" then
         K.cdb.profVisitAt = level
     else
-        K.cdb.trainedAt = level
-        local pet = K.player and K.player.class == "HUNTER" and UnitExists and UnitExists("pet")
-        if pet then
-            visited("pettrainer")
+        K.cdb.trainNext[kind] = Sv.NextUnlock(services, level)
+        if kind == "class" then
+            K.cdb.trainedAt = level
         end
     end
     if K.Planner then

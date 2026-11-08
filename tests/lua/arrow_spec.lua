@@ -72,8 +72,9 @@ describe("arrow read-out", function()
         assert.equals("arrow", r.kind)
         -- Player (500, 500); target percent (10, 10) gives world (100, 100). dx = dy = -400.
         near(400 * math.sqrt(2), r.dist, 1e-6)
-        -- Bearing atan2(400, -400) = 3pi/4 measured from north, facing 0.
-        near(3 * math.pi / 4, r.rot, 1e-6)
+        -- The stub returns Blizzard axes (x north, y west); Compat turns them into east/north, so
+        -- the target is 400 east and 400 south: bearing -3pi/4 from north, facing 0.
+        near(-3 * math.pi / 4, r.rot, 1e-6)
     end)
 
     it("turning changes the relative angle by the same amount", function()

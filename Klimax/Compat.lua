@@ -295,7 +295,9 @@ local function worldPos(mapID, x, y)
     if type(wx) ~= "number" or type(wy) ~= "number" then
         return nil
     end
-    return cont, wx, wy
+    -- Blizzard's world vector has x = north and y = west. Return x = east, y = north, which is
+    -- what Arrow.Compute expects.
+    return cont, -wy, wx
 end
 
 -- ---- Phase 08 wrappers: bags, items, trainers, reward choices, hearthstone ------------------
@@ -548,7 +550,12 @@ function C.GetTrainerService(i)
         return nil
     end
     local okCost, cost = pcall(GetTrainerServiceCost, i)
-    return { name = name, category = category, cost = (okCost and tonumber(cost)) or 0 }
+    local req
+    if type(GetTrainerServiceLevelReq) == "function" then
+        local okReq, level = pcall(GetTrainerServiceLevelReq, i)
+        req = okReq and tonumber(level) or nil
+    end
+    return { name = name, category = category, cost = (okCost and tonumber(cost)) or 0, req = req }
 end
 
 -- Cooldown of an item as start, duration (seconds), or nil when unknown.

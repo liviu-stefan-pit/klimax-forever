@@ -140,6 +140,10 @@ def _check_corrections(model: WorldModel, out: _Collector) -> None:
     for qid in sorted(model.corrections.referenced_quest_ids()):
         if qid not in raw.quests:
             out.add(ERROR, "E_CORRECTION", f"corrections name quest {qid}, which is not in the DB")
+    compiled = {qid for table in model.tables.values() for qid in table.get("quests", {})}
+    for qid in sorted(model.corrections.quest_tips()):
+        if qid in raw.quests and qid not in compiled:
+            out.add(WARNING, "W_TIP_UNUSED", f"tip for quest {qid}, which is not compiled", qid)
     for row in model.corrections.npc_positions:
         if int(row["npc"]) not in raw.npcs:
             out.add(ERROR, "E_CORRECTION", f"npcPositions names NPC {row['npc']}, not in the DB")

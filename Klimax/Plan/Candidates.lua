@@ -39,17 +39,32 @@ local function nearest(W, npcs, objects, pos)
 end
 Ca.Nearest = nearest
 
--- Objective spots: the first spawn cluster of each placed objective, in record order.
-local function objectiveSpots(rec)
+-- Objective spots: for each placed objective (record order) the spawn cluster nearest to ref, a point
+-- {m, x, y}. The walk chains: the next objective is measured from the cluster just chosen. A cluster
+-- on another map counts as infinitely far; ties keep the first (the densest) cluster. ref may be nil.
+local function objectiveSpots(rec, ref)
     local out = {}
+    local from = ref
     for _, o in ipairs(rec.o or {}) do
-        local at = o.at and o.at[1]
-        if at then
-            out[#out + 1] = { m = at[1], x = at[2], y = at[3], r = at[4] or 0 }
+        local pick
+        local bestD
+        for _, at in ipairs(o.at or {}) do
+            local d = 0
+            if from then
+                d = (at[1] == from.m) and Sc.Dist(at[2], at[3], from.x, from.y) or INF
+            end
+            if not pick or d < bestD then
+                pick, bestD = at, d
+            end
+        end
+        if pick then
+            out[#out + 1] = { m = pick[1], x = pick[2], y = pick[3], r = pick[4] or 0 }
+            from = out[#out]
         end
     end
     return out
 end
+Ca.ObjectiveSpots = objectiveSpots
 
 local function hasFlag(rec, flag)
     for _, f in ipairs(rec.f or {}) do
@@ -143,7 +158,7 @@ function Ca.Packet(W, q, rec, stage, locked, snap, wt)
             return nil
         end
     end
-    local spots = objectiveSpots(rec)
+    local spots = objectiveSpots(rec, (stage == "A") and p.giver or pos)
     if stage == "A" or stage == "C" then
         if #(rec.o or {}) > 0 and #spots == 0 then
             return nil

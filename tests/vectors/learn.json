@@ -1,0 +1,13 @@
+{
+  "name": "learning: running mean of the objective time and how it reaches the weights",
+  "default": 100,
+  "samples": [60, 60, 60, 60],
+  "means": [93.33333333333333, 88.57142857142857, 85.0, 82.22222222222222],
+  "apply": [
+    {"name": "no samples: default", "learned": {}, "objective": 100},
+    {"name": "too few samples: default", "learned": {"objective": {"m": 40, "n": 2}}, "objective": 100},
+    {"name": "enough samples: the mean", "learned": {"objective": {"m": 74, "n": 3}}, "objective": 74},
+    {"name": "clamped low", "learned": {"objective": {"m": 5, "n": 9}}, "objective": 30},
+    {"name": "clamped high", "learned": {"objective": {"m": 900, "n": 9}}, "objective": 300}
+  ]
+}

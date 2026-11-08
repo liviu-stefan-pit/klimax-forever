@@ -79,6 +79,7 @@ def build_world(
     zones = resolve_zones(raw, config.zones)
     by_area = {z.area: z for z in zones}
     status = corrections.quest_status()
+    tips = corrections.quest_tips()
     equivalents = corrections.equivalent_groups()
     eq_of = {qid: group[0] for group in equivalents for qid in group}
     overrides: dict[int, list[Any]] = {}
@@ -117,6 +118,8 @@ def build_world(
                 record["eq"] = eq_of[qid]
             if qid in status:
                 record["cx"] = status[qid]
+            if qid in tips:
+                record["tip"] = tips[qid]
             tables[ui_map]["quests"][qid] = record
             quest_zone[qid] = ui_map
             info = ctx.quests[qid]

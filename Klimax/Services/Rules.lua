@@ -7,7 +7,8 @@
 --
 -- The services snapshot x: level, class, money (copper), freeSlots, durability (0..1 or nil),
 -- supplies {food, water, ammo}, hasPet, petHappiness, hasMail, trainedAt (level of the last class
--- trainer visit), profTrained {[profession] = true}, visited {[key] = true}, rangedSubclass.
+-- trainer visit), trainNext {class, pet: level where that trainer next has something new},
+-- profTrained {[profession] = true}, visited {[key] = true}, rangedSubclass.
 local _, K = ...
 
 local Ru = {}
@@ -65,7 +66,11 @@ function Ru.Base(x, profile)
             maxDetour = 60 })
     end
     local trained = x.trainedAt or 1
-    if x.class and level >= 4 and level % 2 == 0 and trained < level and (x.money or 0) >= Ru.TrainCost(level) then
+    -- trainNext: the level at which the last visited class trainer showed something new (taken from its
+    -- window), so a visit is never planned while every row is still locked.
+    local nextAt = x.trainNext and x.trainNext.class or 0
+    if x.class and level >= 4 and level % 2 == 0 and trained < level and level >= nextAt
+        and (x.money or 0) >= Ru.TrainCost(level) then
         add(out, { role = "ct_" .. x.class, reason = "trainer", urgency = (level - trained >= 4) and 0.8 or 0.5,
             maxDetour = (level - trained >= 4) and 900 or 300 })
     end

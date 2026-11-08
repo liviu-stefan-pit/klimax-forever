@@ -84,6 +84,22 @@ def test_corrections_reject_bad_input() -> None:
         Corrections.from_dict({"equivalents": [{"ids": [1]}]})
 
 
+def test_tips_map_each_quest_and_reject_bad_input() -> None:
+    from pipeline.world.corrections import TIP_MAX
+
+    tips = Corrections.from_dict({"tips": [{"ids": [2, 1], "tip": "Go around it."}]})
+    assert tips.quest_tips() == {1: "Go around it.", 2: "Go around it."}
+    assert {1, 2} <= tips.referenced_quest_ids()
+    for bad in (
+        [{"ids": [], "tip": "a"}],
+        [{"ids": [1], "tip": ""}],
+        [{"ids": [1], "tip": "x" * (TIP_MAX + 1)}],
+        [{"ids": [1], "tip": "a"}, {"ids": [1], "tip": "b"}],
+    ):
+        with pytest.raises(CorrectionsError):
+            Corrections.from_dict({"tips": bad})
+
+
 def test_sync_toc_inserts_world_block_once(tmp_path: Path) -> None:
     toc = tmp_path / "Klimax.toc"
     toc.write_text(
@@ -151,6 +167,20 @@ def test_known_quests_resolve(world) -> None:  # type: ignore[no-untyped-def]
     assert cutting["sn"] == [3143] and cutting["en"] == [3143]
     assert 788 in quests[789]["po"]  # Sting of the Scorpid needs Cutting Teeth
     assert world.index["quests"][788] == durotar.ui_map
+
+
+@needs_raw
+def test_curated_tips_and_forever_windows_compile(world) -> None:  # type: ignore[no-untyped-def]
+    tips = world.corrections.quest_tips()
+    assert tips  # phase 30: tips from leveling-resources/
+    for qid, tip in tips.items():
+        record = world.tables[world.index["quests"][qid]]["quests"][qid]
+        assert record["tip"] == tip
+    vorsha = world.tables[world.index["quests"][6641]]["quests"][6641]
+    assert vorsha["cx"] == "broken"
+    names = {d["n"] for d in world.index["spine"]["dungeons"]}
+    assert {"Ruins of Lordaeron", "Excavation Site", "City of Dalaran"} <= names
+    assert {544, 93680} <= set(world.index["spine"]["boost"])
 
 
 @needs_raw

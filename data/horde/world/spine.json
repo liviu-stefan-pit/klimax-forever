@@ -1,5 +1,5 @@
 {
-  "_note": "Curated spine for the Horde planner (phase 25, DYNAMIC_GUIDE_PLAN s4.1 and s7). Hand-reviewed; part of the source of truth with the quest graph and corrections.json. branches: the zones each start branch should be leveling in, with the levels they suit; the planner multiplies a quest's value by onPath inside its branch's zones at those levels and by offPath elsewhere (another race's start zone, a zone the branch has outgrown). boost: quests worth extra (key breadcrumbs and chain starts). dungeons: windows when a dungeon's quests are worth it, if the profile allows dungeons. Phase 26 added the level 20 to 40 zones and the RFK, SM, RFD and ULD windows. Rows above about level 24 are a first pass from the usual Horde order, to be tuned with the simulator.",
+  "_note": "Curated spine for the Horde planner (phase 25, DYNAMIC_GUIDE_PLAN s4.1 and s7). Hand-reviewed; part of the source of truth with the quest graph and corrections.json. branches: the zones each start branch should be leveling in, with the levels they suit; the planner multiplies a quest's value by onPath inside its branch's zones at those levels and by offPath elsewhere (another race's start zone, a zone the branch has outgrown). boost: quests worth extra (key breadcrumbs and chain starts). dungeons: windows when a dungeon's quests are worth it, if the profile allows dungeons. Phase 26 added the level 20 to 40 zones and the RFK, SM, RFD and ULD windows. Rows above about level 24 are a first pass from the usual Horde order, to be tuned with the simulator. Phase 30 (2026-11-08, from leveling-resources/): windows for the Forever dungeons in QuestieDB (Ruins of Lordaeron 15-20, Excavation Site 24-30, City of Dalaran 28-33; Blizzard's ranges), one row per quest-giver zone because a window matches the giver's zone; Ragefire Chasm and Wailing Caverns gained their Thunder Bluff and Undercity givers; the Dalaran attunement quests are boosted. The Drowned City and Krol'dok Stronghold have no quests in QuestieDB yet.",
   "branches": {
     "durotar": [
       {
@@ -340,6 +340,16 @@
       "id": 842,
       "factor": 1.3,
       "note": "Crossroads Conscription: opens the Crossroads hub."
+    },
+    {
+      "id": 544,
+      "factor": 1.2,
+      "note": "Prison Break In: half of the City of Dalaran attunement (Magus Wordeen Voidglare, Tarren Mill). Phase 30, from the Blizzard dungeon article."
+    },
+    {
+      "id": 93680,
+      "factor": 1.2,
+      "note": "Key to the City: the other half of the City of Dalaran attunement. Phase 30."
     }
   ],
   "dungeons": [
@@ -350,10 +360,76 @@
       "to": 18
     },
     {
+      "name": "Ragefire Chasm",
+      "zone": "THUNDER_BLUFF",
+      "from": 13,
+      "to": 18
+    },
+    {
+      "name": "Ragefire Chasm",
+      "zone": "UNDERCITY",
+      "from": 13,
+      "to": 18
+    },
+    {
+      "name": "Ruins of Lordaeron",
+      "zone": "UNDERCITY",
+      "from": 15,
+      "to": 20
+    },
+    {
+      "name": "Ruins of Lordaeron",
+      "zone": "TIRISFAL_GLADES",
+      "from": 15,
+      "to": 20
+    },
+    {
+      "name": "Ruins of Lordaeron",
+      "zone": "SILVERPINE_FOREST",
+      "from": 15,
+      "to": 20
+    },
+    {
       "name": "Wailing Caverns",
       "zone": "THE_BARRENS",
       "from": 17,
       "to": 24
+    },
+    {
+      "name": "Wailing Caverns",
+      "zone": "THUNDER_BLUFF",
+      "from": 17,
+      "to": 24
+    },
+    {
+      "name": "Excavation Site",
+      "zone": "ORGRIMMAR",
+      "from": 24,
+      "to": 30
+    },
+    {
+      "name": "Excavation Site",
+      "zone": "THUNDER_BLUFF",
+      "from": 24,
+      "to": 30
+    },
+    {
+      "name": "Excavation Site",
+      "zone": "ARATHI_HIGHLANDS",
+      "from": 24,
+      "to": 30
+    },
+    {
+      "name": "City of Dalaran",
+      "zone": "HILLSBRAD_FOOTHILLS",
+      "from": 28,
+      "to": 33
+    },
+    {
+      "name": "City of Dalaran",
+      "zone": "UNDERCITY",
+      "from": 28,
+      "to": 33
     },
     {
       "name": "Shadowfang Keep",

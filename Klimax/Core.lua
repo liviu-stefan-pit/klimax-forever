@@ -221,6 +221,8 @@ function K.Command(msg)
         K.Planner.PrintForecast()
     elseif cmd == "report" then
         K.Telemetry.Command(rest)
+    elseif cmd == "learn" then
+        K.Learner.Command(rest)
     elseif cmd == "view" then
         K.PlanView.Toggle()
     elseif cmd == "options" or cmd == "config" then

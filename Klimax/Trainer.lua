@@ -1,6 +1,6 @@
 -- Trainer budget filter (PRD 7.7). On TRAINER steps the window text says what to learn and what can
--- wait. While a trainer window is open, a small list of the essentials it offers is shown with the
--- money check. Klimax only reads the trainer window; it never buys or clicks anything.
+-- wait. While a trainer window is open the plan of the visit (essentials, money check) is kept in
+-- K.trainerPlan. Klimax only reads the trainer window; it never buys or clicks anything.
 local _, K = ...
 local L = K.L
 local C = K.Compat
@@ -10,7 +10,6 @@ K.Trainer = T
 
 local SHOW_TEXT = 4     -- essentials named in the window hint
 local SHOW_SKIP = 2
-local LIST_ROWS = 9
 
 -- The filter in force for a class at a level. Bands accumulate (phase 24 review): every band with
 -- from <= level adds its essentials (earlier bands first, so the buying order keeps the basics
@@ -127,51 +126,7 @@ function T.MoneyLine(plan)
     return string.format(L.TRAIN_MONEY, K.Rewards.Money(plan.money), K.Rewards.Money(plan.cost))
 end
 
--- ---- Trainer window frame ---------------------------------------------------------------------
-
-local frame
-
-local function build()
-    local f = CreateFrame("Frame", nil, UIParent)
-    f:SetSize(260, 40 + LIST_ROWS * 14 + 16)
-    f:SetFrameStrata("DIALOG")
-    f:SetClampedToScreen(true)
-    f:SetPoint("LEFT", UIParent, "LEFT", 20, 0)
-    local bg = f:CreateTexture(nil, "BACKGROUND")
-    bg:SetAllPoints()
-    bg:SetTexture("Interface\\Buttons\\WHITE8X8")
-    bg:SetVertexColor(0, 0, 0, 0.88)
-    f.title = f:CreateFontString(nil, "OVERLAY")
-    f.title:SetFont("Fonts\\FRIZQT__.TTF", 11, "")
-    f.title:SetPoint("TOPLEFT", f, "TOPLEFT", 8, -8)
-    f.title:SetText(L.TRAIN_TITLE)
-    f.money = f:CreateFontString(nil, "OVERLAY")
-    f.money:SetFont("Fonts\\FRIZQT__.TTF", 9, "")
-    f.money:SetPoint("TOPLEFT", f, "TOPLEFT", 8, -24)
-    f.money:SetWidth(244)
-    f.money:SetJustifyH("LEFT")
-    f.rows = {}
-    for n = 1, LIST_ROWS do
-        local fs = f:CreateFontString(nil, "OVERLAY")
-        fs:SetFont("Fonts\\FRIZQT__.TTF", 9, "")
-        fs:SetPoint("TOPLEFT", f, "TOPLEFT", 8, -40 - (n - 1) * 14)
-        fs:SetWidth(244)
-        fs:SetJustifyH("LEFT")
-        f.rows[n] = fs
-    end
-    local x = CreateFrame("Button", nil, f)
-    x:SetSize(16, 14)
-    x:SetPoint("TOPRIGHT", f, "TOPRIGHT", -4, -4)
-    x.text = x:CreateFontString(nil, "OVERLAY")
-    x.text:SetFont("Fonts\\FRIZQT__.TTF", 10, "")
-    x.text:SetAllPoints()
-    x.text:SetText("X")
-    x:SetScript("OnClick", function()
-        f:Hide()
-    end)
-    f:Hide()
-    return f
-end
+-- ---- Trainer window ---------------------------------------------------------------------------
 
 -- Reads every trainer row and returns the list of services.
 function T.ReadServices()
@@ -186,32 +141,18 @@ function T.ReadServices()
     return services
 end
 
--- Opens the list for the window that is showing now.
+-- Plans the visit for the trainer window that is showing now (no window of our own: the money check
+-- and the essentials live in the step text and /klimax). Returns the plan.
 function T.Open()
     local class = K.player and K.player.class
     local band = T.Band(class, (K.player and K.player.level) or 1)
     local plan = T.Plan(T.ReadServices(), band, C.GetMoney())
     K.trainerPlan = plan
-    frame = frame or build()
-    frame.money:SetText(T.MoneyLine(plan))
-    local rows = {}
-    for _, e in ipairs(plan.essential) do
-        rows[#rows + 1] = string.format("+ %s  (%s)", e.name, K.Rewards.Money(e.cost))
-    end
-    for _, name in ipairs(plan.skip) do
-        rows[#rows + 1] = string.format("- %s  (skip for now)", name)
-    end
-    for n = 1, LIST_ROWS do
-        frame.rows[n]:SetText(rows[n] or "")
-    end
-    frame:Show()
     return plan
 end
 
 function T.Close()
-    if frame then
-        frame:Hide()
-    end
+    K.trainerPlan = nil
 end
 
 K.On("TRAINER_SHOW", function()

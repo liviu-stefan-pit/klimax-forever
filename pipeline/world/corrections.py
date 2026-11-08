@@ -13,6 +13,10 @@ File: ``data/<faction>/world/corrections.json``. Sections (all lists, all option
 * ``quests``: per-quest status. ``{"id", "status", "note", "source"}`` where status is
   ``broken`` (does not work on this server: never planned), ``skip`` (works, curated out) or
   ``review`` (kept, needs an in-game check).
+* ``tips``: curated player advice for a quest, from the leveling guides and Blizzard's known
+  issues (``leveling-resources/``). ``{"ids": [...], "tip": str, "source": str}``. The tip is
+  compiled into each quest record (``tip``) and shown on that quest's steps as the hint line, so
+  it is at most ``TIP_MAX`` characters. A quest has at most one tip.
 """
 
 from __future__ import annotations
@@ -23,7 +27,10 @@ from pathlib import Path
 from typing import Any
 
 QUEST_STATUSES = ("broken", "review", "skip")
-SECTIONS = ("equivalents", "notDuplicates", "npcPositions", "quests")
+SECTIONS = ("equivalents", "notDuplicates", "npcPositions", "quests", "tips")
+# The step card clips its hint line at 120 characters (UI.lua, U.Clip(hint, 120)) and the hint
+# reads "Tip: <tip>" (Locale HINT_TIP), so a tip fits in 120 - 5.
+TIP_MAX = 115
 
 
 class CorrectionsError(ValueError):
@@ -36,6 +43,7 @@ class Corrections:
     not_duplicates: list[dict[str, Any]] = field(default_factory=list)
     npc_positions: list[dict[str, Any]] = field(default_factory=list)
     quests: list[dict[str, Any]] = field(default_factory=list)
+    tips: list[dict[str, Any]] = field(default_factory=list)
     # curated spine (spine.json beside corrections.json), compiled by pipeline.world.spine
     spine: dict[str, Any] | None = None
 
@@ -49,6 +57,7 @@ class Corrections:
             not_duplicates=list(data.get("notDuplicates", [])),
             npc_positions=list(data.get("npcPositions", [])),
             quests=list(data.get("quests", [])),
+            tips=list(data.get("tips", [])),
         )
         out._check()
         return out
@@ -82,11 +91,25 @@ class Corrections:
                 raise CorrectionsError(f"npcPositions entry needs npc and zone: {row}")
             if not all(isinstance(row.get(k), (int, float)) for k in ("x", "y")):
                 raise CorrectionsError(f"npcPositions entry needs x and y: {row}")
+        seen: set[int] = set()
+        for row in self.tips:
+            ids = row.get("ids")
+            tip = row.get("tip")
+            if not isinstance(ids, list) or not ids or not all(isinstance(i, int) for i in ids):
+                raise CorrectionsError(f"tip needs one or more integer ids: {row}")
+            if not isinstance(tip, str) or not tip.strip() or len(tip) > TIP_MAX:
+                raise CorrectionsError(f"tip text must be 1 to {TIP_MAX} characters: {row}")
+            if seen & set(ids):
+                raise CorrectionsError(f"quest {sorted(seen & set(ids))} has more than one tip")
+            seen.update(ids)
 
     # ---- lookups -----------------------------------------------------------------------------
 
     def quest_status(self) -> dict[int, str]:
         return {int(r["id"]): str(r["status"]) for r in self.quests}
+
+    def quest_tips(self) -> dict[int, str]:
+        return {int(i): str(row["tip"]) for row in self.tips for i in row["ids"]}
 
     def equivalent_groups(self) -> list[list[int]]:
         """Sorted id lists, sorted by their first id."""
@@ -97,6 +120,6 @@ class Corrections:
 
     def referenced_quest_ids(self) -> set[int]:
         ids = {int(r["id"]) for r in self.quests}
-        for group in (*self.equivalents, *self.not_duplicates):
+        for group in (*self.equivalents, *self.not_duplicates, *self.tips):
             ids.update(int(i) for i in group["ids"])
         return ids

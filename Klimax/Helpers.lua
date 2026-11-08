@@ -226,6 +226,19 @@ function H.CurrentHint()
             return string.format(L.HINT_LOW, table.concat(low, ", "))
         end
     end
+    return H.QuestTip(step)
+end
+
+-- Curated advice for a quest step (corrections.json "tips", compiled as the quest's `tip`), or nil.
+function H.QuestTip(step)
+    if not (step and step.q and K.WorldDB and K.WorldDB.Quest) then
+        return nil
+    end
+    local rec = K.WorldDB.Quest(step.q)
+    local tip = rec and rec.tip
+    if type(tip) == "string" and tip ~= "" then
+        return string.format(L.HINT_TIP, tip)
+    end
     return nil
 end
 

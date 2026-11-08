@@ -7,7 +7,8 @@ local Fx = require("fixture")
 local json = require("dkjson")
 
 local VECTORS = "tests/vectors/planner/"
-local VECTOR_NAMES = { "hub", "ready_here", "zone_change", "chain", "tie_break", "equivalent" }
+local VECTOR_NAMES = { "hub", "ready_here", "zone_change", "chain", "tie_break", "equivalent", "cluster", "relocate",
+    "stable" }
 
 local function readJson(path)
     local f = assert(io.open(path, "r"), path)
@@ -88,15 +89,29 @@ local function runVector(name)
     if v.weights then
         K.Plan.Weights.Merge(wt, v.weights)
     end
-    local steps = K.Planner.Build(vectorWorld(v), vectorState(v), v.snapshot, wt)
-    return keys(steps), v
+    local prior
+    if v.prior then
+        prior = {}
+        for _, k in ipairs(v.prior) do
+            prior[k] = true
+        end
+    end
+    local steps = K.Planner.Build(vectorWorld(v), vectorState(v), v.snapshot, wt, nil, prior)
+    return keys(steps), v, steps
 end
 
 describe("planner vectors (shared with the Python mirror)", function()
     for _, name in ipairs(VECTOR_NAMES) do
         it(name, function()
-            local got, v = runVector(name)
+            local got, v, steps = runVector(name)
             assert.are.same(v.expect, got, v.name)
+            for k, at in pairs(v.expectAt or {}) do
+                for _, step in ipairs(steps) do
+                    if step.k == k then
+                        assert.are.same(at, { step.x, step.y }, k)
+                    end
+                end
+            end
         end)
     end
 

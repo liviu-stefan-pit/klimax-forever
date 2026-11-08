@@ -11,6 +11,11 @@
 --     (the whole hub is picked up or handed in at once);
 --   * turn in on the way back: a turn-in waits while an open objective on the same map is closer
 --     than its NPC.
+-- Two more rules come from the smart engine research (docs/SMART_ENGINE_RESEARCH.md s4.6, s4.7):
+--   * shared camps: an objective within `shareRadius` of the camp the player is already working
+--     takes `shareTime` of its time (the same mobs count for both quests);
+--   * stability: a task that the previous plan already had (the `prior` key set) scores `keep` times
+--     more, so the later steps do not reshuffle on every replan.
 local _, K = ...
 K.Plan = K.Plan or {}
 
@@ -158,7 +163,7 @@ local function valueAt(c, p, level, wt)
 end
 
 -- Scores every open task from the simulated state. Returns the best candidate or nil.
-function Sq.Best(pool, stages, sim, wt, path, isDone, cache)
+function Sq.Best(pool, stages, sim, wt, path, isDone, cache, prior)
     cache = cache or prepare(pool, wt, path)
     local open = {}
     local nearestC
@@ -190,11 +195,19 @@ function Sq.Best(pool, stages, sim, wt, path, isDone, cache)
                     -- a hand-in is still worth the walk once the quest has turned grey (phase 26)
                     value = terms.xp * wt.greyTurnin
                 end
+                local time, shared = task.time, false
+                if st == "C" and sim.work and d ~= nil and d <= wt.shareRadius then
+                    time, shared = time * wt.shareTime, true
+                end
                 local rest = value > 0 and cache[i].rest[st]
                 -- a quest whose hand-in the travel graph cannot reach is never started (phase 26)
                 if value > 0 and rest < wt.unreachable then
-                    local cost = math.max(travel + task.time + rest, wt.minCost)
+                    local cost = math.max(travel + time + rest, wt.minCost)
                     local score = value * obligation / cost
+                    local kept = prior ~= nil and prior["plan:" .. task.kind .. ":" .. p.q] == true
+                    if kept then
+                        score = score * wt.keep
+                    end
                     local leave, near = false, false
                     if task.m ~= sim.m then
                         score = score / wt.leaveZone
@@ -204,10 +217,11 @@ function Sq.Best(pool, stages, sim, wt, path, isDone, cache)
                         near = true
                     end
                     local c = { i = i, p = p, task = task, travel = travel, edge = edge, score = score,
-                        why = { value = value, obligation = obligation, travel = travel, time = task.time,
+                        why = { value = value, obligation = obligation, travel = travel, time = time,
                             rest = rest, cost = cost, leave = leave, near = near, here = here or nil,
                             xp = terms.xp, colour = terms.colour, risk = terms.risk, class = terms.class,
-                            upgrade = terms.upgrade, chain = terms.chain, spine = terms.spine, score = score } }
+                            upgrade = terms.upgrade, chain = terms.chain, spine = terms.spine, score = score,
+                            shared = shared or nil, kept = kept or nil } }
                     if here then
                         if better(c, bestHere) then
                             bestHere = c
@@ -261,10 +275,10 @@ end
 -- Plan steps from pool. snap: {level, xp, mapID, x, y}. path: Transitions.Cache. isDone(q): the
 -- game state says q is handed in. first: optional quest id whose next task must come first (plan
 -- stability). Returns the step list.
-function Sq.Run(pool, snap, wt, path, isDone, first)
+function Sq.Run(pool, snap, wt, path, isDone, first, prior)
     isDone = isDone or function() return false end
     local sim = { m = snap.mapID, x = snap.x or 50, y = snap.y or 50, level = snap.level or 1,
-        xp = snap.xp or 0, done = {}, open = {} }
+        xp = snap.xp or 0, done = {}, open = {}, work = false }
     local stages = {}
     for i, p in ipairs(pool) do
         stages[i] = p.stage
@@ -281,7 +295,7 @@ function Sq.Run(pool, snap, wt, path, isDone, first)
             for i, p in ipairs(pool) do
                 if p.q == first and stages[i] ~= "done" then
                     local only = { p }
-                    local c = Sq.Best(only, { stages[i] }, sim, wt, path, isDone, { cache[i] })
+                    local c = Sq.Best(only, { stages[i] }, sim, wt, path, isDone, { cache[i] }, prior)
                     if c then
                         c.i = i
                         best = c
@@ -290,7 +304,7 @@ function Sq.Run(pool, snap, wt, path, isDone, first)
             end
             first = nil
         end
-        best = best or Sq.Best(pool, stages, sim, wt, path, isDone, cache)
+        best = best or Sq.Best(pool, stages, sim, wt, path, isDone, cache, prior)
         if not best then
             break
         end
@@ -313,6 +327,7 @@ function Sq.Run(pool, snap, wt, path, isDone, first)
         end
         steps[#steps + 1] = step
         sim.m, sim.x, sim.y = task.m, task.x, task.y
+        sim.work = task.kind == "C"
         if p.locked then
             sim.open[best.i] = true
         end
@@ -376,6 +391,81 @@ function Sq.Improve(steps, snap, wt, path)
                     changed = true
                 end
             end
+        end
+        if not changed then
+            break
+        end
+    end
+    return Sq.Relocate(steps, snap, wt, path)
+end
+
+-- Or-opt (research s4.3): moves one step to the place in the same stretch that shortens the whole
+-- walk. A stretch is a run of steps on one map without a travel step. A step never passes another
+-- step of its own quest (A before C before T), and a hand-in is never delayed (neither moved later nor
+-- passed by another step), because its XP and its unlocks come sooner. First improvement, scanning
+-- steps and targets in order; up to wt.relocatePasses passes.
+function Sq.Relocate(steps, snap, wt, path)
+    local start = { m = snap.mapID, x = snap.x or 50, y = snap.y or 50 }
+    local function total(list)
+        local t, prev = 0, start
+        for _, s in ipairs(list) do
+            local here = { m = s.z, x = s.x, y = s.y }
+            t = t + (between(prev, here, wt, path) or wt.unreachable)
+            prev = here
+        end
+        return t
+    end
+    local function allowed(s, u, before)
+        -- s moves from before u to after u (before = true) or from after u to before u
+        if s.q == u.q then
+            return false
+        end
+        if before then
+            return s.t ~= "T"
+        end
+        return u.t ~= "T"
+    end
+    for _ = 1, wt.relocatePasses do
+        local changed = false
+        local i = 1
+        while i <= #steps do
+            local s = steps[i]
+            if s.t ~= "V" then
+                local lo, hi = i, i
+                while lo > 1 and steps[lo - 1].t ~= "V" and steps[lo - 1].z == s.z do
+                    lo = lo - 1
+                end
+                while hi < #steps and steps[hi + 1].t ~= "V" and steps[hi + 1].z == s.z do
+                    hi = hi + 1
+                end
+                local now = total(steps)
+                for j = lo, hi do
+                    if j ~= i then
+                        local ok = true
+                        local from, to = math.min(i, j), math.max(i, j)
+                        for k = from, to do
+                            if k ~= i and not allowed(s, steps[k], j > i) then
+                                ok = false
+                                break
+                            end
+                        end
+                        if ok then
+                            local try = {}
+                            for k, v in ipairs(steps) do
+                                try[k] = v
+                            end
+                            table.remove(try, i)
+                            table.insert(try, j, s)
+                            if total(try) < now - 1e-9 then
+                                steps = try
+                                changed = true
+                                break
+                            end
+                        end
+                    end
+                end
+            end
+            i = i + 1
         end
         if not changed then
             break

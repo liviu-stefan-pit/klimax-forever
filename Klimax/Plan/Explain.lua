@@ -275,5 +275,9 @@ function Ex.Tip(step, env)
     if step.z then
         lines[#lines + 1] = zoneName(env, step.z)
     end
+    local tip = K.Helpers and K.Helpers.QuestTip and K.Helpers.QuestTip(step)
+    if tip then
+        lines[#lines + 1] = tip
+    end
     return lines
 end

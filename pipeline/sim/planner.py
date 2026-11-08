@@ -333,12 +333,25 @@ def nearest(W: World, npcs: list[int] | None, objects: list[int] | None, pos: di
     return best
 
 
-def objective_spots(rec: dict[str, Any]) -> list[dict[str, Any]]:
-    out = []
+def objective_spots(
+    rec: dict[str, Any], ref: dict[str, Any] | None = None
+) -> list[dict[str, Any]]:
+    """Per objective the spawn cluster nearest to ``ref`` (chained), as Lua ``objectiveSpots``."""
+    out: list[dict[str, Any]] = []
+    frm = ref
     for o in rec.get("o") or []:
-        at = (o.get("at") or [None])[0]
-        if at:
-            out.append({"m": at[0], "x": at[1], "y": at[2], "r": at[3] if len(at) > 3 else 0})
+        pick = None
+        best_d = INF
+        for at in o.get("at") or []:
+            d = 0.0
+            if frm is not None:
+                d = dist(at[1], at[2], frm["x"], frm["y"]) if at[0] == frm["m"] else INF
+            if pick is None or d < best_d:
+                pick, best_d = at, d
+        if pick:
+            r = pick[3] if len(pick) > 3 else 0
+            out.append({"m": pick[0], "x": pick[1], "y": pick[2], "r": r})
+            frm = out[-1]
     return out
 
 
@@ -425,7 +438,7 @@ def packet(
         p["giver"] = nearest(W, rec.get("sn"), rec.get("so"), pos)
         if not p["giver"]:
             return None
-    spots = objective_spots(rec)
+    spots = objective_spots(rec, p.get("giver") if stage == "A" else pos)
     if stage in ("A", "C"):
         if rec.get("o") and not spots:
             return None
@@ -601,7 +614,7 @@ def _value_at(cache, i, p, level, wt):
     return cache[i]["value"][level]
 
 
-def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
+def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None, prior=None):
     opened = []
     nearest_c = None
     for i in indices if indices is not None else range(len(pool)):
@@ -633,11 +646,17 @@ def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
             v = terms["xp"] * wt["greyTurnin"]
         if v <= 0:
             continue
+        t_time, shared = task["time"], False
+        if st == "C" and sim.get("work") and d is not None and d <= wt["shareRadius"]:
+            t_time, shared = t_time * wt["shareTime"], True
         rest = cache[i]["rest"][st]
         if rest >= wt["unreachable"]:
             continue
-        cost = max(travel + task["time"] + rest, wt["minCost"])
+        cost = max(travel + t_time + rest, wt["minCost"])
         score = v * ob / cost
+        kept = bool(prior) and f"plan:{task['kind']}:{p['q']}" in prior
+        if kept:
+            score = score * wt["keep"]
         leave = near = False
         if task["m"] != sim["m"]:
             score = score / wt["leaveZone"]
@@ -656,7 +675,7 @@ def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
                 "value": v,
                 "obligation": ob,
                 "travel": travel,
-                "time": task["time"],
+                "time": t_time,
                 "rest": rest,
                 "cost": cost,
                 "leave": leave,
@@ -665,6 +684,8 @@ def best_task(pool, stages, sim, wt, pathf, is_done, cache, indices=None):
                 "xp": terms["xp"],
                 "colour": terms["colour"],
                 "score": score,
+                "shared": shared or None,
+                "kept": kept or None,
             },
         }
         if here:
@@ -710,7 +731,7 @@ def _drop_implied(pool, stages, sim, by_q, p) -> None:
             push(pool[i].get("pa"))
 
 
-def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
+def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None, prior=None):
     is_done = is_done or (lambda q: False)
     if level_xp is None:
         _, level_xp = load_weights()
@@ -722,6 +743,7 @@ def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
         "xp": snap.get("xp") or 0,
         "done": {},
         "open": {},
+        "work": False,
     }
     stages = [p["stage"] for p in pool]
     cache = prepare(pool, wt, pathf)
@@ -732,9 +754,10 @@ def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
         if first is not None:
             for i, p in enumerate(pool):
                 if p["q"] == first and stages[i] != "done":
-                    best = best_task(pool, stages, sim, wt, pathf, is_done, cache, [i]) or best
+                    found = best_task(pool, stages, sim, wt, pathf, is_done, cache, [i], prior)
+                    best = found or best
             first = None
-        best = best or best_task(pool, stages, sim, wt, pathf, is_done, cache)
+        best = best or best_task(pool, stages, sim, wt, pathf, is_done, cache, None, prior)
         if not best:
             break
         p, task = best["p"], best["task"]
@@ -770,6 +793,7 @@ def run(pool, snap, wt, pathf, is_done=None, first=None, level_xp=None):
         }
         steps.append(step)
         sim["m"], sim["x"], sim["y"] = task["m"], task["x"], task["y"]
+        sim["work"] = task["kind"] == "C"
         if p["locked"]:
             sim["open"][best["i"]] = True
         if task["kind"] == "A" and p.get("ex"):
@@ -835,6 +859,62 @@ def improve(steps, snap, wt, pathf):
                 changed = True
         if not changed:
             break
+    return relocate(steps, snap, wt, pathf)
+
+
+def relocate(steps, snap, wt, pathf):
+    """Or-opt, same as Lua ``Sq.Relocate``: one step moves inside its same-map stretch when that
+    shortens the whole walk; it never passes a step of its own quest or reorders a T over an A."""
+    start = {"m": snap.get("mapID"), "x": snap.get("x") or 50, "y": snap.get("y") or 50}
+
+    def total(lst) -> float:
+        t, prev = 0.0, start
+        for s in lst:
+            here = {"m": s["z"], "x": s["x"], "y": s["y"]}
+            t += _leg(prev, here, wt, pathf)
+            prev = here
+        return t
+
+    def allowed(s, u, before: bool) -> bool:
+        if s["q"] == u["q"]:
+            return False
+        if before:
+            return s["t"] != "T"
+        return u["t"] != "T"
+
+    for _ in range(wt["relocatePasses"]):
+        changed = False
+        i = 0
+        while i < len(steps):
+            s = steps[i]
+            if s["t"] != "V":
+                lo = hi = i
+                while lo > 0 and steps[lo - 1]["t"] != "V" and steps[lo - 1]["z"] == s["z"]:
+                    lo -= 1
+                while (
+                    hi < len(steps) - 1
+                    and steps[hi + 1]["t"] != "V"
+                    and steps[hi + 1]["z"] == s["z"]
+                ):
+                    hi += 1
+                now = total(steps)
+                for j in range(lo, hi + 1):
+                    if j == i:
+                        continue
+                    lo2, hi2 = min(i, j), max(i, j)
+                    if not all(
+                        allowed(s, steps[k], j > i) for k in range(lo2, hi2 + 1) if k != i
+                    ):
+                        continue
+                    trial = steps[:i] + steps[i + 1 :]
+                    trial.insert(j, s)
+                    if total(trial) < now - 1e-9:
+                        steps = trial
+                        changed = True
+                        break
+            i += 1
+        if not changed:
+            break
     return steps
 
 
@@ -845,6 +925,7 @@ def build(
     wt: dict[str, Any],
     first: int | None = None,
     level_xp: list[int] | None = None,
+    prior: set[str] | None = None,
 ):
     """A plan: the list of steps (``k``, ``t``, ``q``, ``z``, ``x``, ``y`` ...)."""
     pool = candidates(W, state, snap, wt)
@@ -853,17 +934,37 @@ def build(
     def is_done(q: int) -> bool:
         return state(q)[0] == "completed"
 
-    steps = run(pool, snap, wt, pathf, is_done, first, level_xp)
+    steps = run(pool, snap, wt, pathf, is_done, first, level_xp, prior)
     if not steps:
         # nothing doable near the player: look at every zone in the level band (phase 26)
         wide = collect(W, state, snap, wt, True)
         if len(wide) > len(pool):
-            steps = run(wide, snap, wt, pathf, is_done, first, level_xp)
+            steps = run(wide, snap, wt, pathf, is_done, first, level_xp, prior)
     return steps
+
+
+LEARN = {"prior": 5, "min": 3, "floor": 0.1, "lo": 0.3, "hi": 3.0}
+
+
+def learn_update(entry: dict[str, Any] | None, x: float, default: float) -> dict[str, Any]:
+    """New ``{m, n}`` after one observation (Lua ``Weights.LearnUpdate``)."""
+    e = entry or {"m": default, "n": 0}
+    w = max(1 / (e["n"] + LEARN["prior"] + 1), LEARN["floor"])
+    return {"m": e["m"] + w * (x - e["m"]), "n": e["n"] + 1}
+
+
+def apply_learned(wt: dict[str, Any], learned: dict[str, Any] | None) -> dict[str, Any]:
+    """Learned values into the weights, in place (Lua ``Weights.ApplyLearned``)."""
+    e = (learned or {}).get("objective")
+    if e and e.get("n", 0) >= LEARN["min"] and e.get("m") is not None:
+        base = load_weights()[0]["objective"]
+        wt["objective"] = min(max(e["m"], base * LEARN["lo"]), base * LEARN["hi"])
+    return wt
 
 
 def weights_for_profile(
     profile: dict[str, str] | None = None,
+    learned: dict[str, Any] | None = None,
 ) -> tuple[dict[str, Any], list[int]]:
     """Weights for a profile (``Weights.For`` in Lua); settings apply in the file's fixed order."""
     data = json.loads(WEIGHTS_FILE.read_text(encoding="utf-8"))
@@ -872,7 +973,7 @@ def weights_for_profile(
         preset = data["profile"].get(key, {}).get((profile or {}).get(key, ""))
         if preset:
             merge(wt, preset)
-    return wt, list(data["levelXp"])
+    return apply_learned(wt, learned), list(data["levelXp"])
 
 
 def weights_for(overrides: dict[str, Any] | None = None) -> tuple[dict[str, Any], list[int]]:

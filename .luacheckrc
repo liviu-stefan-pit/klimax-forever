@@ -57,6 +57,7 @@ read_globals = {
     "IsQuestFlaggedCompleted", "C_AddOns", "GetAddOnMetadata",
     -- phase 08 smart features (Klimax/Compat.lua wrappers, helpers, rewards, trainer, elites)
     "GetContainerNumSlots", "GetNumQuestChoices", "GetQuestID", "GetTrainerServiceCost",
+    "GetTrainerServiceLevelReq",
     -- phase 18 diagnostics (Klimax/Compat.lua, Klimax/Diag.lua)
     "UnitXP", "UnitXPMax", "GetXPExhaustion", "GetRealZoneText", "GetSubZoneText", "GetRealmName",
     "GetNumQuestLeaderBoards", "GetQuestLogLeaderBoard",

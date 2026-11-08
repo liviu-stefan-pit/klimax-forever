@@ -44,9 +44,11 @@ function H.needs(x)
     if (level == 10 or level == 20) and not (x.visited and x.visited["stable" .. level]) then
         out[#out + 1] = { role = "stable", reason = "stable", urgency = 0.2, maxDetour = 45, once = "stable" .. level }
     end
-    if level >= 10 and x.hasPet and not (x.visited and x.visited.pettrainer) then
-        out[#out + 1] = { role = "pettrainer", reason = "pettrainer", urgency = 0.3, maxDetour = 90,
-            once = "pettrainer" }
+    -- The pet trainer only when it has something new: from level 10 on the first time, afterwards from
+    -- the level its window showed on the last visit (trainNext.pet), never while every row is locked.
+    local petNext = (x.trainNext and x.trainNext.pet) or 10
+    if x.hasPet and level >= petNext then
+        out[#out + 1] = { role = "pettrainer", reason = "pettrainer", urgency = 0.3, maxDetour = 90 }
     end
     return out
 end

@@ -1,0 +1,149 @@
+{
+  "name": "stable: tasks of the previous plan keep their place against a slightly better newcomer",
+  "snapshot": {
+    "level": 2,
+    "xp": 0,
+    "mapID": 1,
+    "x": 50.0,
+    "y": 50.0
+  },
+  "world": {
+    "zones": {
+      "1": {
+        "lv": [
+          1,
+          3,
+          6
+        ],
+        "quests": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "quests": {
+      "1": {
+        "n": "One",
+        "lv": 2,
+        "rl": 1,
+        "xp": 100,
+        "sn": [
+          10
+        ],
+        "en": [
+          10
+        ],
+        "o": [
+          {
+            "k": "c",
+            "at": [
+              [
+                1,
+                52.0,
+                50.0,
+                2.0,
+                8
+              ]
+            ]
+          }
+        ]
+      },
+      "2": {
+        "n": "Two",
+        "lv": 2,
+        "rl": 1,
+        "xp": 100,
+        "sn": [
+          10
+        ],
+        "en": [
+          10
+        ],
+        "o": [
+          {
+            "k": "c",
+            "at": [
+              [
+                1,
+                55.0,
+                50.0,
+                2.0,
+                8
+              ]
+            ]
+          }
+        ]
+      },
+      "3": {
+        "n": "Three",
+        "lv": 2,
+        "rl": 1,
+        "xp": 108,
+        "sn": [
+          10
+        ],
+        "en": [
+          10
+        ],
+        "o": [
+          {
+            "k": "c",
+            "at": [
+              [
+                1,
+                44.0,
+                50.0,
+                2.0,
+                8
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "npcs": {
+      "10": [
+        [
+          1,
+          50.0,
+          50.0
+        ]
+      ]
+    },
+    "objects": {},
+    "travel": {
+      "adj": [],
+      "links": [],
+      "nodes": {},
+      "cost": {
+        "zoneBorder": 60
+      }
+    }
+  },
+  "states": {
+    "1": [
+      "active"
+    ],
+    "2": [
+      "active"
+    ],
+    "3": [
+      "active"
+    ]
+  },
+  "prior": [
+    "plan:C:1",
+    "plan:C:2",
+    "plan:T:1",
+    "plan:T:2"
+  ],
+  "expect": [
+    "plan:C:1",
+    "plan:C:2",
+    "plan:T:1",
+    "plan:T:2",
+    "plan:C:3",
+    "plan:T:3"
+  ]
+}

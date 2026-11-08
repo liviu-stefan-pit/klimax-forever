@@ -70,3 +70,4 @@ NpcInfo.lua
 Wizard.lua
 PlanView.lua
 Telemetry.lua
+Learner.lua

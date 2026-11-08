@@ -137,20 +137,21 @@ function P.SpineFor(spine, branch)
 end
 
 -- Pure build: a plan for a world, a state function, a snapshot and weights. first: quest id whose
--- next task is forced first (stability). Exposed for specs and the vectors.
-function P.Build(W, state, snap, wt, first)
+-- next task is forced first (stability). prior: optional set of step keys of the previous plan, which
+-- score `wt.keep` times more (plan stability, research s4.7). Exposed for specs and the vectors.
+function P.Build(W, state, snap, wt, first, prior)
     local pool = Ca.Build(W, state, snap, wt)
     local path = Tr.Cache(W.travel, wt)
     local function isDone(q)
         return state(q) == "completed"
     end
-    local steps = Sq.Run(pool, snap, wt, path, isDone, first)
+    local steps = Sq.Run(pool, snap, wt, path, isDone, first, prior)
     if #steps == 0 then
         -- nothing doable near the player: look at every zone in the level band (phase 26)
         local wide = Ca.Collect(W, state, snap, wt, true)
         if #wide > #pool then
             pool = wide
-            steps = Sq.Run(pool, snap, wt, path, isDone, first)
+            steps = Sq.Run(pool, snap, wt, path, isDone, first, prior)
         end
     end
     return steps, pool
@@ -184,27 +185,48 @@ function P.Locked(step, snap)
     return false
 end
 
+-- The learned values of this character (K.Learner keeps them in KlimaxCharDB.learned), or nil.
+function P.Learned()
+    return K.cdb and K.cdb.learned or nil
+end
+
+-- Set of the keys of a plan's steps (travel steps left out), or nil when there is no plan. Pure.
+function P.PriorKeys(plan)
+    if not (plan and plan.steps) then
+        return nil
+    end
+    local out
+    for _, s in ipairs(plan.steps) do
+        if s.t ~= "V" and s.k then
+            out = out or {}
+            out[s.k] = true
+        end
+    end
+    return out
+end
+
 function P:Replan(why)
     if not (K.State and K.State:Ready() and K.WorldDB and K.WorldDB.index) then
         return nil
     end
     local t0 = clock()
     local snap = K.State.snap
-    local wt = Wt.For(profile(), snap.class)
+    local wt = Wt.For(profile(), snap.class, P.Learned())
     local branch = K.Engine and K.Engine.BranchForPlayer and K.Engine.BranchForPlayer(K.player)
     wt.spine = P.SpineFor(K.WorldDB.index.spine, branch)
     local W = P.World()
+    local prior = P.PriorKeys(self.plan)
     local state = stateFn()
     local pin = K.cdb and K.cdb.pin
     local pinned = pin and pin.q and state(pin.q) ~= "completed" and pin.q or nil
-    local steps = P.Build(W, state, snap, wt, pinned)
+    local steps = P.Build(W, state, snap, wt, pinned, prior)
     -- Stability: keep the old first step unless the new one beats it clearly, or it is locked.
     local old = self.plan and self.plan.steps[1]
     local new = steps[1]
     if not pinned and old and new and old.k ~= new.k and old.q and old.t ~= "V" then
         local keep = P.Locked(old, snap)
         if not keep then
-            local forced = P.Build(W, state, snap, wt, old.q)
+            local forced = P.Build(W, state, snap, wt, old.q, prior)
             local f1 = forced[1]
             if f1 and f1.k == old.k and (new.score or 0) < (f1.score or 0) * wt.stable then
                 keep = true
@@ -213,7 +235,7 @@ function P:Replan(why)
                 steps = forced
             end
         elseif K.State:Get(old.q) ~= "completed" then
-            steps = P.Build(W, state, snap, wt, old.q)
+            steps = P.Build(W, state, snap, wt, old.q, prior)
         end
     end
     -- Phase 23: service stops (repair, sell, supplies, trainers, flight paths, hearth, hints).
@@ -348,7 +370,7 @@ local Ex = K.Plan.Explain
 function P.ExplainEnv()
     local W = P.World()
     local snap = K.State and K.State.snap or {}
-    local wt = Wt.For(profile(), snap.class)
+    local wt = Wt.For(profile(), snap.class, P.Learned())
     local branch = K.Engine and K.Engine.BranchForPlayer and K.Engine.BranchForPlayer(K.player)
     wt.spine = K.WorldDB and K.WorldDB.index and P.SpineFor(K.WorldDB.index.spine, branch) or nil
     return {

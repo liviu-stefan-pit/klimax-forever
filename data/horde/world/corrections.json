@@ -1,5 +1,5 @@
 {
-  "_note": "Curated corrections for the Horde world compile (phase 19). Hand-reviewed; part of the source of truth with the quest graph (see pipeline/world/corrections.py for the format). Sources: the phase 18 diagnosis (python -m pipeline diagnose: shadowed_ids, npc_positions) and the phase 19 graph validator (W_SAME_NAME, W_ITEM_START_UNPLACED, W_NO_FINISHER). Phase 18 found no bad NPC position on any route step (npc_positions: 0 findings), so npcPositions is empty until the in-game checks (PROGRESS.md phase 18 checklist item 7) report one. Nothing here is verified in game yet (verified: false).",
+  "_note": "Curated corrections for the Horde world compile (phase 19). Hand-reviewed; part of the source of truth with the quest graph (see pipeline/world/corrections.py for the format). Sources: the phase 18 diagnosis (python -m pipeline diagnose: shadowed_ids, npc_positions) and the phase 19 graph validator (W_SAME_NAME, W_ITEM_START_UNPLACED, W_NO_FINISHER). Phase 18 found no bad NPC position on any route step (npc_positions: 0 findings), so npcPositions is empty until the in-game checks (PROGRESS.md phase 18 checklist item 7) report one. Nothing here is verified in game yet (verified: false). Phase 30 (2026-11-08) added the tips section and the Vorsha status from leveling-resources/ (WoW Forever guides, Blizzard's Known Issues of 2026-11-05).",
   "equivalents": [
     {
       "ids": [
@@ -546,6 +546,126 @@
       "status": "review",
       "note": "Spawn spread is a wandering NPC; keep.",
       "source": "phase 26 graph validator"
+    },
+    {
+      "id": 6641,
+      "note": "Vorsha the Lasher (Ashenvale escort): Blizzard disabled it until a crash bug is fixed. Remove this entry once the Known Issues list drops it.",
+      "source": "Blizzard Known Issues 2026-11-05, via leveling-resources/wow-forever/text/timesaver-beta-leveling.txt",
+      "status": "broken"
+    }
+  ],
+  "tips": [
+    {
+      "ids": [
+        2
+      ],
+      "source": "leveling-resources/text/warcrafttavern-horde.txt (Nightfall, Classic Horde)",
+      "tip": "Pull Sharptalon toward the nearby Forsaken camp: the guards help you kill it."
+    },
+    {
+      "ids": [
+        435
+      ],
+      "source": "leveling-resources/wow-forever/text/foreverchanges-patch.txt",
+      "tip": "Erland respawns quickly on this server: if he is not there, wait a moment."
+    },
+    {
+      "ids": [
+        544,
+        93680
+      ],
+      "source": "Blizzard new-dungeons article, via leveling-resources/wow-forever/README.md s3",
+      "tip": "City of Dalaran attunement: do both quests in Tarren Mill so the dungeon (28-33) is open."
+    },
+    {
+      "ids": [
+        851
+      ],
+      "source": "leveling-resources/text/warcrafttavern-horde.txt (Nightfall, Classic Horde)",
+      "tip": "Verog only appears after enough Kolkar die at the hilltop camp: keep killing until one shouts."
+    },
+    {
+      "ids": [
+        852
+      ],
+      "source": "leveling-resources/text/warcrafttavern-horde.txt (Nightfall, Classic Horde)",
+      "tip": "Hezrul patrols the oasis with two bodyguards: pull them apart and fight him alone."
+    },
+    {
+      "ids": [
+        863
+      ],
+      "source": "leveling-resources/text/warcrafttavern-horde.txt (Nightfall, Classic Horde)",
+      "tip": "The shredder takes a few minutes to set off; two Venture Co. attackers come at the ramp."
+    },
+    {
+      "ids": [
+        883
+      ],
+      "source": "leveling-resources/text/warcrafttavern-horde.txt (Nightfall, Classic Horde)",
+      "tip": "Lakota'mani is a grey kodo just west of the road north of Camp Taurajo; his hoof starts this."
+    },
+    {
+      "ids": [
+        914
+      ],
+      "source": "leveling-resources/fetched-summaries.md (conquestcapped Forever dungeon route)",
+      "tip": "After the Disciple's escort, loot Mutanus the Devourer: The Glowing Shard starts a bonus quest."
+    },
+    {
+      "ids": [
+        962
+      ],
+      "source": "leveling-resources/fetched-summaries.md (conquestcapped Forever dungeon route)",
+      "tip": "Take it before your Wailing Caverns run: the Serpentbloom grows inside the cave."
+    },
+    {
+      "ids": [
+        1102,
+        1109
+      ],
+      "source": "Blizzard Known Issues 2026-11-05, via leveling-resources/wow-forever/text/timesaver-beta-leveling.txt",
+      "tip": "Razorfen Kraul known issue: you can fall into the cauldron near Roogug and get stuck. Go around it."
+    },
+    {
+      "ids": [
+        1486
+      ],
+      "source": "leveling-resources/fetched-summaries.md (conquestcapped Forever dungeon route)",
+      "tip": "Hides drop slowly: if they are not done after one run, drop it. A second run costs more than it pays."
+    },
+    {
+      "ids": [
+        92401,
+        92421,
+        92422,
+        95204,
+        95216,
+        97288,
+        97289,
+        97291,
+        97292
+      ],
+      "source": "leveling-resources/wow-forever/text/foreverchanges-patch.txt",
+      "tip": "Ruins of Lordaeron dungeon (15-20), entered above the Undercity. Its quests need level 15 on live."
+    },
+    {
+      "ids": [
+        95663,
+        95664,
+        95697,
+        98823
+      ],
+      "source": "Blizzard new-dungeons article, via leveling-resources/wow-forever/README.md s3",
+      "tip": "Excavation Site dungeon (24-29), above Whelgar's Excavation in the Wetlands."
+    },
+    {
+      "ids": [
+        96986,
+        96988
+      ],
+      "source": "Blizzard new-dungeons article, via leveling-resources/wow-forever/README.md s3",
+      "tip": "City of Dalaran dungeon (28-33): needs the attunement from Magus Wordeen Voidglare in Tarren Mill."
     }
   ]
 }

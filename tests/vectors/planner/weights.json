@@ -17,6 +17,7 @@
     "here": 1,
     "hop": 90,
     "improvePasses": 3,
+    "keep": 1.08,
     "leaveZone": 1.3,
     "levelSlack": 4,
     "localMin": 6,
@@ -27,6 +28,7 @@
     "objective": 100,
     "obligationActive": 1.3,
     "obligationReady": 1.8,
+    "relocatePasses": 2,
     "risk": {
       "dungeon": 0,
       "elite": 0.6,
@@ -36,6 +38,8 @@
       "raid": 0,
       "timed": 0.9
     },
+    "shareRadius": 4,
+    "shareTime": 0.6,
     "speed": 1.4,
     "stable": 1.15,
     "turnin": 8,
